@@ -1,0 +1,162 @@
+uuid: ab18f753-11fc-4ce4-b162-3fd20c6136cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_oa_event.default
+    - field.field.node.oa_event.body
+    - field.field.node.oa_event.comment_node_oa_event
+    - field.field.node.oa_event.field_city
+    - field.field.node.oa_event.field_contact
+    - field.field.node.oa_event.field_dial_in_meeting
+    - field.field.node.oa_event.field_host
+    - field.field.node.oa_event.field_info_private
+    - field.field.node.oa_event.field_legacy_publish
+    - field.field.node.oa_event.field_meeting_agendas
+    - field.field.node.oa_event.field_meeting_notes
+    - field.field.node.oa_event.field_oa_date
+    - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_venue
+    - field.field.node.oa_event.oa_other_spaces_ref
+    - field.field.node.oa_event.oa_section_ref
+    - field.field.node.oa_event.og_group_ref
+    - field.field.node.oa_event.og_vocabulary
+    - node.type.oa_event
+  module:
+    - comment
+    - field_layout
+    - layout_discovery
+    - options
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_event.default
+targetEntityType: node
+bundle: oa_event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_oa_event:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_city:
+    label: above
+    weight: 23
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_contact:
+    label: above
+    weight: 16
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_dial_in_meeting:
+    label: above
+    weight: 27
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_host:
+    label: above
+    weight: 10
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_info_private:
+    label: above
+    weight: 11
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_legacy_publish:
+    label: above
+    weight: 22
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_meeting_agendas:
+    label: above
+    weight: 17
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_meeting_notes:
+    label: above
+    weight: 15
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_room:
+    label: above
+    weight: 21
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_venue:
+    label: above
+    weight: 20
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  oa_other_spaces_ref:
+    label: above
+    weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  oa_section_ref:
+    label: above
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_oa_date: true
+  og_group_ref: true
+  og_vocabulary: true

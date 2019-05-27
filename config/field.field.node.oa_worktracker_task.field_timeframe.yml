@@ -1,0 +1,21 @@
+uuid: 180e00b8-a9f8-4301-8511-fa04d8188e4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timeframe
+    - node.type.oa_worktracker_task
+  module:
+    - options
+id: node.oa_worktracker_task.field_timeframe
+field_name: field_timeframe
+entity_type: node
+bundle: oa_worktracker_task
+label: Timeframe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,8 @@
+uuid: 3e7d95b3-e73f-473b-97aa-ae4991a9cac9
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_oa_discussion_post
+label: 'Discussion Post comment'
+target_entity_type_id: node
+description: null

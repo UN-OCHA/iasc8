@@ -1,0 +1,61 @@
+uuid: 1fe91340-e4f6-412e-a4e1-d518f761fea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.space_type.field_oa_clone_enabled
+    - field.field.taxonomy_term.space_type.field_oa_clone_space
+    - field.field.taxonomy_term.space_type.field_oa_node_types
+    - field.field.taxonomy_term.space_type.field_oa_section_layout
+    - taxonomy.vocabulary.space_type
+  module:
+    - field_layout
+    - layout_discovery
+    - options
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: taxonomy_term.space_type.default
+targetEntityType: taxonomy_term
+bundle: space_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oa_clone_enabled:
+    label: inline
+    weight: 3
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_clone_space:
+    label: inline
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_oa_node_types:
+    label: above
+    weight: 1
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_section_layout:
+    label: above
+    weight: 0
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

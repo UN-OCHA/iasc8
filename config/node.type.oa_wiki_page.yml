@@ -1,0 +1,16 @@
+uuid: 0cc239c9-ddfd-4e0c-9657-a76637c07ad0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'og-menu-single:0:'
+name: 'Document Page'
+type: oa_wiki_page
+description: 'An Open Atrium Document/Wiki page'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

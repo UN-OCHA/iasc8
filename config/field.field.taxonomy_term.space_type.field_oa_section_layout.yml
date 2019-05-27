@@ -1,0 +1,21 @@
+uuid: 0b7179e4-88a6-4029-8a89-5bf3aa1427e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_section_layout
+    - taxonomy.vocabulary.space_type
+  module:
+    - options
+id: taxonomy_term.space_type.field_oa_section_layout
+field_name: field_oa_section_layout
+entity_type: taxonomy_term
+bundle: space_type
+label: 'Space Layout'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

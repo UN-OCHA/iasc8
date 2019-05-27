@@ -1,0 +1,23 @@
+uuid: 359a58d2-2d8d-4d86-b381-5587d7687abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_content_access
+    - node.type.action_point
+  module:
+    - options
+id: node.action_point.group_content_access
+field_name: group_content_access
+entity_type: node
+bundle: action_point
+label: 'Group content visibility'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

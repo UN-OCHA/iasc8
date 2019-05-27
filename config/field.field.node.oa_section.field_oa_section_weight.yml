@@ -1,0 +1,25 @@
+uuid: b1b83427-2852-42cc-b79e-ad35894963d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_section_weight
+    - node.type.oa_section
+id: node.oa_section.field_oa_section_weight
+field_name: field_oa_section_weight
+entity_type: node
+bundle: oa_section
+label: Weight
+description: 'Determines order of Section in lists.  Higher value moves the section later in the list.  Lower value moves section earlier in the list.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

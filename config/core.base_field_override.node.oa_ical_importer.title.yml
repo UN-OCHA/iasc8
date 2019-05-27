@@ -1,0 +1,18 @@
+uuid: 8c9162c3-f0bd-45af-b3c5-08a9f47407a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_ical_importer
+id: node.oa_ical_importer.title
+field_name: title
+entity_type: node
+bundle: oa_ical_importer
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

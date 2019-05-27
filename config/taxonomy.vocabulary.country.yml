@@ -1,0 +1,8 @@
+uuid: 6ee425e6-cf52-4204-abf2-8e5d7266d136
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+vid: country
+description: 'Countries of the world'
+weight: 0

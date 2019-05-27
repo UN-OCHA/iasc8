@@ -1,0 +1,19 @@
+uuid: 5f69b5fb-61a4-477a-a34f-20124b3acd31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_icon_class
+    - taxonomy.vocabulary.section_type
+id: taxonomy_term.section_type.field_oa_icon_class
+field_name: field_oa_icon_class
+entity_type: taxonomy_term
+bundle: section_type
+label: 'Icon class'
+description: 'Enter the optional bootstrap icon class name (e.g. icon-calendar)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 470d2b41-9e55-47f3-8b8e-c9d236283bf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.contact
+  module:
+    - text
+id: node.contact.body
+field_name: body
+entity_type: node
+bundle: contact
+label: Biography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

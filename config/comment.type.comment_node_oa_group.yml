@@ -1,0 +1,8 @@
+uuid: d056ec51-b2cd-47ea-a419-07f87e816232
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_oa_group
+label: 'Group comment'
+target_entity_type_id: node
+description: null

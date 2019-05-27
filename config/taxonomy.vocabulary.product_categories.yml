@@ -1,0 +1,8 @@
+uuid: 2c2b475f-ae11-4512-9dbc-8854c64bcbb2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Categories'
+vid: product_categories
+description: 'A list of terms that a user can associate with a particular Product (document).'
+weight: 0

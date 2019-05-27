@@ -1,0 +1,21 @@
+uuid: 29e86404-7fe9-43fb-bb3e-3bf4d0343916
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_type
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_document_type
+field_name: field_document_type
+entity_type: node
+bundle: oa_wiki_page
+label: 'Document Type'
+description: 'Please select the type of Document you are creating.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

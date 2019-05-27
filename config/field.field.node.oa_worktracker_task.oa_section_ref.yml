@@ -1,0 +1,30 @@
+uuid: 3f6f57d2-e72c-4274-ab33-5c7c2656ce73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.oa_section_ref
+    - node.type.oa_section
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.oa_section_ref
+field_name: oa_section_ref
+entity_type: node
+bundle: oa_worktracker_task
+label: Section
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 1
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_section: oa_section
+field_type: entity_reference

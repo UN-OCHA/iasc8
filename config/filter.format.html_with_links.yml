@@ -1,0 +1,15 @@
+uuid: ceef0afb-1c98-4c96-9f26-0d0962e1db88
+langcode: en
+status: true
+dependencies: {  }
+name: 'HTML with links'
+format: html_with_links
+weight: 0
+filters:
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72

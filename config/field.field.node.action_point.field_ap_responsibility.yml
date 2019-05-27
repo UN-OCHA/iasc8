@@ -1,0 +1,30 @@
+uuid: de573894-99a2-4aea-a8c2-5d49f5329904
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ap_responsibility
+    - node.type.action_point
+    - taxonomy.vocabulary.ap_responsibility
+id: node.action_point.field_ap_responsibility
+field_name: field_ap_responsibility
+entity_type: node
+bundle: action_point
+label: Lead
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      ap_responsibility: ap_responsibility
+field_type: entity_reference

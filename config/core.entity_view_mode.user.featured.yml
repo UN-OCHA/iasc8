@@ -1,0 +1,10 @@
+uuid: 1b759983-221c-438e-a794-b8909b7c09ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.featured
+label: featured
+targetEntityType: user
+cache: true

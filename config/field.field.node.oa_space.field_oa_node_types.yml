@@ -1,0 +1,21 @@
+uuid: a0740199-3473-43f6-89c1-ed5d58f857b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_node_types
+    - node.type.oa_space
+  module:
+    - options
+id: node.oa_space.field_oa_node_types
+field_name: field_oa_node_types
+entity_type: node
+bundle: oa_space
+label: 'Node Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

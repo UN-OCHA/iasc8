@@ -1,0 +1,23 @@
+uuid: e43b8219-6522-4e5d-a2ae-c1731fa7be7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_user_inheritance
+    - node.type.oa_group
+id: node.oa_group.og_user_inheritance
+field_name: og_user_inheritance
+entity_type: node
+bundle: oa_group
+label: 'Group user inheritance'
+description: 'Set whether or not the subgroups of this group inherit this group''s users.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

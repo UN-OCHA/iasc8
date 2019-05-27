@@ -1,0 +1,23 @@
+uuid: 72e760ec-f448-466c-9e41-bdbef03a6a1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_clone_enabled
+    - taxonomy.vocabulary.space_type
+id: taxonomy_term.space_type.field_oa_clone_enabled
+field_name: field_oa_clone_enabled
+entity_type: taxonomy_term
+bundle: space_type
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

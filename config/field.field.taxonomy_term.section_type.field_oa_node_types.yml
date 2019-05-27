@@ -1,0 +1,21 @@
+uuid: bfd3c1a8-5885-4594-9975-5443beecab8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_node_types
+    - taxonomy.vocabulary.section_type
+  module:
+    - options
+id: taxonomy_term.section_type.field_oa_node_types
+field_name: field_oa_node_types
+entity_type: taxonomy_term
+bundle: section_type
+label: 'Node Types'
+description: 'Select node types which can be created in this section by default'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

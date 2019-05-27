@@ -1,0 +1,21 @@
+uuid: 839e1937-ee86-4428-83cc-8ccda3192aa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_categories
+    - node.type.panopoly_page
+id: node.panopoly_page.field_featured_categories
+field_name: field_featured_categories
+entity_type: node
+bundle: panopoly_page
+label: Categories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

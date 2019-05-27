@@ -1,0 +1,18 @@
+uuid: 5365f12b-1f0b-4bb1-ad12-f73f69d4a6ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Section Page'
+type: oa_section
+description: 'A landing page and collection of content within a Space.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

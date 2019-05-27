@@ -1,0 +1,70 @@
+uuid: 21c33c29-6bb9-4f15-abf4-b0abe5591bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_worktracker_task.body
+    - field.field.node.oa_worktracker_task.comment_node_oa_worktracker_task
+    - field.field.node.oa_worktracker_task.field_addressee
+    - field.field.node.oa_worktracker_task.field_date
+    - field.field.node.oa_worktracker_task.field_description_implementation
+    - field.field.node.oa_worktracker_task.field_evaluation_title
+    - field.field.node.oa_worktracker_task.field_oa_media
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_task_status
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_task_type
+    - field.field.node.oa_worktracker_task.field_recomendation
+    - field.field.node.oa_worktracker_task.field_summary_of_recommendat
+    - field.field.node.oa_worktracker_task.field_timeframe
+    - field.field.node.oa_worktracker_task.field_worktracker_country
+    - field.field.node.oa_worktracker_task.oa_section_ref
+    - field.field.node.oa_worktracker_task.og_group_ref
+    - field.field.node.oa_worktracker_task.og_vocabulary
+    - node.type.oa_worktracker_task
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_worktracker_task.teaser
+targetEntityType: node
+bundle: oa_worktracker_task
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_worktracker_task: true
+  field_addressee: true
+  field_date: true
+  field_description_implementation: true
+  field_evaluation_title: true
+  field_oa_media: true
+  field_oa_worktracker_assigned_to: true
+  field_oa_worktracker_priority: true
+  field_oa_worktracker_task_status: true
+  field_oa_worktracker_task_type: true
+  field_recomendation: true
+  field_summary_of_recommendat: true
+  field_timeframe: true
+  field_worktracker_country: true
+  oa_section_ref: true
+  og_group_ref: true
+  og_vocabulary: true

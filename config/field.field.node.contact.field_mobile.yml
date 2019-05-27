@@ -1,0 +1,19 @@
+uuid: c4f527bd-4225-4152-b9fa-4fb093561919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile
+    - node.type.contact
+id: node.contact.field_mobile
+field_name: field_mobile
+entity_type: node
+bundle: contact
+label: 'Mobile Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

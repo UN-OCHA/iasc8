@@ -1,0 +1,33 @@
+uuid: 62e56e84-41eb-4a18-936d-8ab1f1c40725
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.oa_section
+    - node.type.oa_space
+id: node.oa_section.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: oa_section
+label: 'Space ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+      views-select-list:
+        status: 1
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+field_type: entity_reference

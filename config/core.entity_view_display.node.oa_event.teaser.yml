@@ -1,0 +1,105 @@
+uuid: 2862c392-475e-40f9-9056-faf75e416ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_event.body
+    - field.field.node.oa_event.comment_node_oa_event
+    - field.field.node.oa_event.field_city
+    - field.field.node.oa_event.field_contact
+    - field.field.node.oa_event.field_dial_in_meeting
+    - field.field.node.oa_event.field_host
+    - field.field.node.oa_event.field_info_private
+    - field.field.node.oa_event.field_legacy_publish
+    - field.field.node.oa_event.field_meeting_agendas
+    - field.field.node.oa_event.field_meeting_notes
+    - field.field.node.oa_event.field_oa_date
+    - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_venue
+    - field.field.node.oa_event.oa_other_spaces_ref
+    - field.field.node.oa_event.oa_section_ref
+    - field.field.node.oa_event.og_group_ref
+    - field.field.node.oa_event.og_vocabulary
+    - node.type.oa_event
+  module:
+    - datetime
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_event.teaser
+targetEntityType: node
+bundle: oa_event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_city:
+    label: hidden
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_oa_date:
+    label: hidden
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_room:
+    label: hidden
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_venue:
+    label: hidden
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  og_group_ref:
+    label: hidden
+    weight: 5
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_event: true
+  field_contact: true
+  field_dial_in_meeting: true
+  field_host: true
+  field_info_private: true
+  field_legacy_publish: true
+  field_meeting_agendas: true
+  field_meeting_notes: true
+  oa_other_spaces_ref: true
+  oa_section_ref: true
+  og_vocabulary: true

@@ -1,0 +1,36 @@
+uuid: d0f5269c-8ba2-4753-bb62-8806f69bcd67
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ap_status
+field_name: field_ap_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Outstanding
+      label: Outstanding
+    -
+      value: 'In Progress'
+      label: 'In Progress'
+    -
+      value: 'Open ended'
+      label: 'Open ended'
+    -
+      value: Completed
+      label: Completed
+    -
+      value: Archived
+      label: Archived
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

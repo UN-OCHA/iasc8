@@ -1,0 +1,33 @@
+uuid: d1297ac3-4a0e-4303-b7fa-1924430e450a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_action_point
+    - field.field.comment.comment_node_action_point.comment_body
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: comment.comment_node_action_point.default
+targetEntityType: comment
+bundle: comment_node_action_point
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

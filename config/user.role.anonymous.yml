@@ -1,0 +1,25 @@
+uuid: 16a7a86e-1e61-46b9-8a72-16b2cf1be39a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'create event registration'
+  - 'create event registration self'
+  - 'create messages'
+  - 'diff view changes'
+  - 'search content'
+  - 'use hybridauth'
+  - 'view comment alterations in oa_worktracker_task'
+  - 'view field_ap_progress_overview'
+  - 'view field_ap_status'
+  - 'view files'
+  - 'view media'
+  - 'view own field_ap_progress_overview'
+  - 'view own field_ap_status'

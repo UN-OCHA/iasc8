@@ -1,0 +1,33 @@
+uuid: ef14beba-556b-4b8b-8602-f3f7249a7bd9
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_timeframe
+field_name: field_timeframe
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: Short-term
+    -
+      value: 2
+      label: Medium-term
+    -
+      value: 3
+      label: Long-term
+    -
+      value: 4
+      label: Immediate
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

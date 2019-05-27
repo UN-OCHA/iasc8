@@ -1,0 +1,21 @@
+uuid: 2298b71b-1c17-4b2b-8325-e3db701a8906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_section
+    - node.type.oa_section
+id: node.oa_section.field_oa_section
+field_name: field_oa_section
+entity_type: node
+bundle: oa_section
+label: 'Section Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

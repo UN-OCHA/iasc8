@@ -1,0 +1,10 @@
+uuid: d2da52cf-8a82-4900-ac87-0271417936a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.bio_long
+label: bio_long
+targetEntityType: node
+cache: true

@@ -1,0 +1,30 @@
+uuid: da706a07-51a3-421b-9856-f64a2bf72059
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_agendas
+    - node.type.oa_event
+    - node.type.oa_wiki_page
+id: node.oa_event.field_meeting_agendas
+field_name: field_meeting_agendas
+entity_type: node
+bundle: oa_event
+label: 'Meeting Agendas'
+description: 'Add an existing or Create a new meeting agenda Document that should be associated with this Meeting.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_wiki_page: oa_wiki_page
+field_type: entity_reference

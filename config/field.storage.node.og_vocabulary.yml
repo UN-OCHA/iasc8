@@ -1,0 +1,20 @@
+uuid: 7bae9060-b935-47a0-8b24-cb0ef247ee1c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.og_vocabulary
+field_name: og_vocabulary
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

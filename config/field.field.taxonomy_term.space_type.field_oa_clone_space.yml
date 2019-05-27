@@ -1,0 +1,30 @@
+uuid: 658247d7-1218-4578-891c-71d5b15108c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_clone_space
+    - node.type.oa_space
+    - taxonomy.vocabulary.space_type
+id: taxonomy_term.space_type.field_oa_clone_space
+field_name: field_oa_clone_space
+entity_type: taxonomy_term
+bundle: space_type
+label: 'Space to clone'
+description: 'Rather than specifying a layout and node types, insteady you can specify a Space to clone.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: title
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+field_type: entity_reference

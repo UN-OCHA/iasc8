@@ -1,0 +1,23 @@
+uuid: 5484c039-76e2-44f3-853f-2536c7ea48cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_worktracker_priority
+    - node.type.oa_worktracker_task
+  module:
+    - options
+id: node.oa_worktracker_task.field_oa_worktracker_priority
+field_name: field_oa_worktracker_priority
+entity_type: node
+bundle: oa_worktracker_task
+label: Priority
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

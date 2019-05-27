@@ -1,0 +1,19 @@
+uuid: b2ad4c7b-5bab-43e5-80c4-c72de871daf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_implementation
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.field_description_implementation
+field_name: field_description_implementation
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Activities Undertaken to Implement '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: dbf9a44a-2876-4fc1-8131-df0c82e6e5ac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Document Types'
+vid: document_types
+description: 'Types of Documents.'
+weight: 0

@@ -1,0 +1,30 @@
+uuid: cd924f4b-ea39-4e67-ae3a-065b08d3b4d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_notes
+    - node.type.oa_event
+    - node.type.oa_wiki_page
+id: node.oa_event.field_meeting_notes
+field_name: field_meeting_notes
+entity_type: node
+bundle: oa_event
+label: 'Meeting Notes'
+description: 'Add an existing or Create a new meeting note Document that should be associated with this Meeting.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_wiki_page: oa_wiki_page
+field_type: entity_reference

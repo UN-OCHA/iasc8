@@ -1,0 +1,21 @@
+uuid: b30f8c8b-35c4-41fb-9f95-dc41b7ad861b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_membership_level
+    - taxonomy.vocabulary.hosts
+  module:
+    - options
+id: taxonomy_term.hosts.field_membership_level
+field_name: field_membership_level
+entity_type: taxonomy_term
+bundle: hosts
+label: Membership
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

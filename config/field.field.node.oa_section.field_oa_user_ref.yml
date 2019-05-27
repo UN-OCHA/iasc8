@@ -1,0 +1,34 @@
+uuid: 0aa095e6-2b28-497b-86a3-da5ebd3c467d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_user_ref
+    - node.type.oa_section
+id: node.oa_section.field_oa_user_ref
+field_name: field_oa_user_ref
+entity_type: node
+bundle: oa_section
+label: Users
+description: 'Leave empty for public access, otherwise select Space Members that can view this Section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 0
+    view:
+      args: {  }
+      display_name: entityreference_1
+      view_name: open_atrium_user_filters
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

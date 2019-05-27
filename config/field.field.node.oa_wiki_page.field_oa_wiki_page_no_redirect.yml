@@ -1,0 +1,23 @@
+uuid: 0a52cc6d-2ac1-4f28-8181-de87a19b4dec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_wiki_page_no_redirect
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_oa_wiki_page_no_redirect
+field_name: field_oa_wiki_page_no_redirect
+entity_type: node
+bundle: oa_wiki_page
+label: 'Show page instead of file?'
+description: 'If checked, show the node detail page (Drupal default behavior).  If unchecked, show the first file attachment.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

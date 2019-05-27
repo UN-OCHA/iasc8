@@ -1,0 +1,26 @@
+uuid: a2eb1770-4e72-48ee-a427-0cc9f7687805
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - taxonomy
+id: taxonomy_term.field_logo
+field_name: field_logo
+entity_type: taxonomy_term
+type: image
+settings:
+  default_image:
+    uuid: ''
+  uri_scheme: private
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

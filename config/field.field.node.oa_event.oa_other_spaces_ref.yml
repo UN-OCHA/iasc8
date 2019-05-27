@@ -1,0 +1,33 @@
+uuid: bdbb233d-5153-4252-88d9-6e1f0c3556ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.oa_other_spaces_ref
+    - node.type.oa_event
+    - node.type.oa_space
+id: node.oa_event.oa_other_spaces_ref
+field_name: oa_other_spaces_ref
+entity_type: node
+bundle: oa_event
+label: 'Visible in other Spaces'
+description: 'Select a list of additional Spaces that this piece of content should be visible in. This <em>doesn''t</em> affect access control - users in the other Spaces must have access to see this content in it''s main Space for it to be visible to them at all.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: false
+      views-select-list:
+        status: 1
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+field_type: entity_reference

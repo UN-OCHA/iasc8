@@ -1,0 +1,22 @@
+uuid: 070d6dff-e425-4dfb-bbd0-67cf07e2da7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_about
+  module:
+    - text
+    - user
+id: user.user.field_user_about
+field_name: field_user_about
+entity_type: user
+bundle: user
+label: About
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

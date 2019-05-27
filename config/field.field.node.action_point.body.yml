@@ -1,0 +1,22 @@
+uuid: db15c80c-5617-451f-996f-d7124dfde926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.action_point
+  module:
+    - text
+id: node.action_point.body
+field_name: body
+entity_type: node
+bundle: action_point
+label: 'Action Point'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

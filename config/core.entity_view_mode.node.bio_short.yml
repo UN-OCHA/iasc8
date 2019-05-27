@@ -1,0 +1,10 @@
+uuid: 0ad64eb5-92f6-4618-8dba-bb40f19df897
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.bio_short
+label: bio_short
+targetEntityType: node
+cache: true

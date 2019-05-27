@@ -1,0 +1,30 @@
+uuid: e5b08caf-60ac-4f81-a65d-d352a1bd870f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_oa_worktracker_priority
+field_name: field_oa_worktracker_priority
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 2
+      label: Low
+    -
+      value: 5
+      label: Normal
+    -
+      value: 8
+      label: High
+  allowed_values_function: oa_worktracker_allowed_values_callback
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 39ef2304-3785-4f79-8b0a-ae16f7730c72
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.recommendations_editor
+  module:
+    - user
+id: user_add_role_action.recommendations_editor
+label: 'Add the recommendations editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: recommendations_editor

@@ -1,0 +1,22 @@
+uuid: 5ecd73d7-9457-4dab-a024-5e04bda42b27
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.wysiwyg
+    - field.field.file.document.field_file_title
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.document.wysiwyg
+targetEntityType: file
+bundle: document
+mode: wysiwyg
+content: {  }
+hidden:
+  field_file_title: true

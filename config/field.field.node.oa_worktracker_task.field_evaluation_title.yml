@@ -1,0 +1,19 @@
+uuid: ede73abf-f953-4328-821d-ff785d45b96e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evaluation_title
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.field_evaluation_title
+field_name: field_evaluation_title
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Evaluation Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

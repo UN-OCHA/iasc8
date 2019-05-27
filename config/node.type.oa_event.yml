@@ -1,0 +1,16 @@
+uuid: 6238e944-f52d-40ce-be61-04f55d98daf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Event
+type: oa_event
+description: 'An Open Atrium Event'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

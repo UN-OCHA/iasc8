@@ -1,0 +1,8 @@
+uuid: 76098fd4-663e-43c2-9f12-d4ea700e9221
+langcode: en
+status: true
+dependencies: {  }
+name: 'Action Point Responsibility'
+vid: ap_responsibility
+description: ''
+weight: 0

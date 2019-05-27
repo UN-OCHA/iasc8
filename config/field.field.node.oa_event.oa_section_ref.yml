@@ -1,0 +1,30 @@
+uuid: eba9b985-a8a0-4744-b199-5d6300399306
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.oa_section_ref
+    - node.type.oa_event
+    - node.type.oa_section
+id: node.oa_event.oa_section_ref
+field_name: oa_section_ref
+entity_type: node
+bundle: oa_event
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 1
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_section: oa_section
+field_type: entity_reference

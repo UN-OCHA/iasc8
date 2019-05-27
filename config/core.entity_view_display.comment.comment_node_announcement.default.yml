@@ -1,0 +1,33 @@
+uuid: 6d9814b0-9d22-4107-9da4-bd53be6ee49e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_announcement
+    - field.field.comment.comment_node_announcement.comment_body
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: comment.comment_node_announcement.default
+targetEntityType: comment
+bundle: comment_node_announcement
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

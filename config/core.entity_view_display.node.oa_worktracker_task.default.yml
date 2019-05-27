@@ -1,0 +1,174 @@
+uuid: e970373c-4a7b-46e7-ad9f-92f34872f6d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_oa_worktracker_task.default
+    - field.field.node.oa_worktracker_task.body
+    - field.field.node.oa_worktracker_task.comment_node_oa_worktracker_task
+    - field.field.node.oa_worktracker_task.field_addressee
+    - field.field.node.oa_worktracker_task.field_date
+    - field.field.node.oa_worktracker_task.field_description_implementation
+    - field.field.node.oa_worktracker_task.field_evaluation_title
+    - field.field.node.oa_worktracker_task.field_oa_media
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_task_status
+    - field.field.node.oa_worktracker_task.field_oa_worktracker_task_type
+    - field.field.node.oa_worktracker_task.field_recomendation
+    - field.field.node.oa_worktracker_task.field_summary_of_recommendat
+    - field.field.node.oa_worktracker_task.field_timeframe
+    - field.field.node.oa_worktracker_task.field_worktracker_country
+    - field.field.node.oa_worktracker_task.oa_section_ref
+    - field.field.node.oa_worktracker_task.og_group_ref
+    - field.field.node.oa_worktracker_task.og_vocabulary
+    - node.type.oa_worktracker_task
+  module:
+    - comment
+    - datetime
+    - field_layout
+    - file
+    - layout_discovery
+    - options
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_worktracker_task.default
+targetEntityType: node
+bundle: oa_worktracker_task
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_oa_worktracker_task:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_addressee:
+    label: above
+    weight: 29
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    label: above
+    weight: 14
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_description_implementation:
+    label: above
+    weight: 22
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_evaluation_title:
+    label: above
+    weight: 27
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_oa_media:
+    label: above
+    weight: 2
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_oa_worktracker_assigned_to:
+    label: inline
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_oa_worktracker_priority:
+    label: inline
+    weight: 11
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_worktracker_task_status:
+    label: inline
+    weight: 10
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_worktracker_task_type:
+    label: inline
+    weight: 12
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_recomendation:
+    label: above
+    weight: 13
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_summary_of_recommendat:
+    label: above
+    weight: 25
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_timeframe:
+    label: above
+    weight: 28
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_worktracker_country:
+    label: above
+    weight: 24
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  oa_section_ref:
+    label: inline
+    weight: 8
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  og_group_ref: true
+  og_vocabulary: true

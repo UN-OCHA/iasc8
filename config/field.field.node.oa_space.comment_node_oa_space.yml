@@ -1,0 +1,33 @@
+uuid: 19e664db-4d2b-4e88-ba5f-d1084c786db0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_oa_space
+    - node.type.oa_space
+  module:
+    - comment
+id: node.oa_space.comment_node_oa_space
+field_name: comment_node_oa_space
+entity_type: node
+bundle: oa_space
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 0
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

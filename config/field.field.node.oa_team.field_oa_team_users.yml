@@ -1,0 +1,34 @@
+uuid: 2d70f2b3-a98d-4222-9804-8ebfead641c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_team_users
+    - node.type.oa_team
+id: node.oa_team.field_oa_team_users
+field_name: field_oa_team_users
+entity_type: node
+bundle: oa_team
+label: Members
+description: 'Select the members of the space that are a member of this team.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 0
+    view:
+      args: {  }
+      display_name: entityreference_1
+      view_name: open_atrium_user_filters
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

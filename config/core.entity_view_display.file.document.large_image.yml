@@ -1,0 +1,22 @@
+uuid: ea092730-0e92-4982-a5d2-d9096c591918
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.large_image
+    - field.field.file.document.field_file_title
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.document.large_image
+targetEntityType: file
+bundle: document
+mode: large_image
+content: {  }
+hidden:
+  field_file_title: true

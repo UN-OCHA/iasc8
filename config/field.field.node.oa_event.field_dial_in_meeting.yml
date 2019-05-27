@@ -1,0 +1,21 @@
+uuid: 32dbaa71-9c0b-4118-a58a-f316f26ed461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dial_in_meeting
+    - node.type.oa_event
+id: node.oa_event.field_dial_in_meeting
+field_name: field_dial_in_meeting
+entity_type: node
+bundle: oa_event
+label: 'Dial-in meeting?'
+description: 'Check if the meeting also has a Dial-in call. You can add the dial-in details in the <strong>Private Details</strong> field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,10 @@
+uuid: 901fbd89-2f1f-4fb5-a807-19996e78489a
+langcode: en
+status: true
+dependencies: {  }
+id: space_super_admin
+label: 'space super admin'
+weight: 7
+is_admin: null
+permissions:
+  - 'access IPE revert button'

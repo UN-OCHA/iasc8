@@ -1,0 +1,27 @@
+uuid: b87898dc-4e48-4077-a869-7eb89c3dd6c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_file_file
+    - node.type.oa_ical_importer
+  module:
+    - file
+id: node.oa_ical_importer.field_basic_file_file
+field_name: field_basic_file_file
+entity_type: node
+bundle: oa_ical_importer
+label: 'iCal File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: ''
+  file_extensions: ics
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

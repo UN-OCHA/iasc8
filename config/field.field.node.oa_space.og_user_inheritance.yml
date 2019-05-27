@@ -1,0 +1,23 @@
+uuid: b07b36c9-d0e8-49c4-afee-3ae163c09376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_user_inheritance
+    - node.type.oa_space
+id: node.oa_space.og_user_inheritance
+field_name: og_user_inheritance
+entity_type: node
+bundle: oa_space
+label: 'Group user inheritance'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

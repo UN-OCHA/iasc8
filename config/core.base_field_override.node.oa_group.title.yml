@@ -1,0 +1,18 @@
+uuid: e484dc5f-2c89-40e7-a234-a82e99e395e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_group
+id: node.oa_group.title
+field_name: title
+entity_type: node
+bundle: oa_group
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

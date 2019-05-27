@@ -1,0 +1,23 @@
+uuid: 19733807-bb59-4d87-a7e6-1f59d188f68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_access
+    - node.type.oa_space
+id: node.oa_space.group_access
+field_name: group_access
+entity_type: node
+bundle: oa_space
+label: 'Group visibility'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

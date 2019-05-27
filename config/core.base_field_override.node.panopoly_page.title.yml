@@ -1,0 +1,18 @@
+uuid: a8672715-42e4-4b76-b3aa-f00974715cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.panopoly_page
+id: node.panopoly_page.title
+field_name: title
+entity_type: node
+bundle: panopoly_page
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

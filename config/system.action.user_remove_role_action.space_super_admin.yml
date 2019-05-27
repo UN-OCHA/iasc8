@@ -1,0 +1,14 @@
+uuid: b315281c-6371-4abf-a131-c9cfbcbecde6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.space_super_admin
+  module:
+    - user
+id: user_remove_role_action.space_super_admin
+label: 'Remove the space super admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: space_super_admin

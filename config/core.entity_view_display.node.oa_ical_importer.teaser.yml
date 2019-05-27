@@ -1,0 +1,44 @@
+uuid: ff03e2f4-48e9-458c-a723-a0da5dbe5521
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_ical_importer.body
+    - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
+    - field.field.node.oa_ical_importer.field_basic_file_file
+    - field.field.node.oa_ical_importer.oa_section_ref
+    - field.field.node.oa_ical_importer.og_group_ref
+    - node.type.oa_ical_importer
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_ical_importer.teaser
+targetEntityType: node
+bundle: oa_ical_importer
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_ical_importer: true
+  field_basic_file_file: true
+  oa_section_ref: true
+  og_group_ref: true

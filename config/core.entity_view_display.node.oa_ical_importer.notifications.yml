@@ -1,0 +1,36 @@
+uuid: daacb8fa-687b-490a-9bf2-6b7e2ce6d36b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.notifications
+    - field.field.node.oa_ical_importer.body
+    - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
+    - field.field.node.oa_ical_importer.field_basic_file_file
+    - field.field.node.oa_ical_importer.oa_section_ref
+    - field.field.node.oa_ical_importer.og_group_ref
+    - node.type.oa_ical_importer
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_ical_importer.notifications
+targetEntityType: node
+bundle: oa_ical_importer
+mode: notifications
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_oa_ical_importer: true
+  field_basic_file_file: true
+  oa_section_ref: true
+  og_group_ref: true

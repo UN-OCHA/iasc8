@@ -1,0 +1,38 @@
+uuid: c7ab2166-6c94-4649-b534-7fb41fb96a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_image
+    - node.type.panopoly_page
+  module:
+    - image
+id: node.panopoly_page.field_featured_image
+field_name: field_featured_image
+entity_type: node
+bundle: panopoly_page
+label: 'Primary Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  alt_field: true
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  file_directory: pages
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 300x200
+  title_field: false
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

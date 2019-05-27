@@ -1,0 +1,30 @@
+uuid: 5dfb33bd-40a4-4458-82d8-2bb2a5f91f16
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_membership_level
+field_name: field_membership_level
+entity_type: taxonomy_term
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: 'Full Members'
+    -
+      value: 2
+      label: 'Standing Invitees'
+    -
+      value: 3
+      label: Observers
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

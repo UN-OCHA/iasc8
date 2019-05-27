@@ -1,0 +1,34 @@
+uuid: f37d242c-7535-4fa3-a070-cf36db5746cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.announcement
+    - node.type.contact
+id: node.announcement.field_contact
+field_name: field_contact
+entity_type: node
+bundle: announcement
+label: Contact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 1
+    lock_revision: 0
+    reference_revisions: 0
+    sort:
+      field: title
+      direction: ASC
+    target_bundles:
+      contact: contact
+field_type: entity_reference

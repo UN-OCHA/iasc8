@@ -1,0 +1,54 @@
+uuid: 5c280d91-5759-402d-aaf2-bd6681d062c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.link_to_document
+    - field.field.node.oa_wiki_page.body
+    - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
+    - field.field.node.oa_wiki_page.field_category
+    - field.field.node.oa_wiki_page.field_document_no
+    - field.field.node.oa_wiki_page.field_document_type
+    - field.field.node.oa_wiki_page.field_legacy_publish
+    - field.field.node.oa_wiki_page.field_oa_media
+    - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
+    - field.field.node.oa_wiki_page.field_product_thumbnail
+    - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.oa_other_spaces_ref
+    - field.field.node.oa_wiki_page.oa_section_ref
+    - field.field.node.oa_wiki_page.og_group_ref
+    - field.field.node.oa_wiki_page.og_vocabulary
+    - node.type.oa_wiki_page
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_wiki_page.link_to_document
+targetEntityType: node
+bundle: oa_wiki_page
+mode: link_to_document
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_oa_wiki_page: true
+  field_category: true
+  field_document_no: true
+  field_document_type: true
+  field_legacy_publish: true
+  field_oa_media: true
+  field_oa_wiki_page_no_redirect: true
+  field_product_thumbnail: true
+  field_published_date: true
+  oa_other_spaces_ref: true
+  oa_section_ref: true
+  og_group_ref: true
+  og_vocabulary: true

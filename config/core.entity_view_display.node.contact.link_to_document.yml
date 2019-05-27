@@ -1,0 +1,58 @@
+uuid: cd4fbffd-8e4f-46db-b47a-61d33d0e9b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.link_to_document
+    - field.field.node.contact.body
+    - field.field.node.contact.comment_node_contact
+    - field.field.node.contact.field_branch
+    - field.field.node.contact.field_department
+    - field.field.node.contact.field_email
+    - field.field.node.contact.field_fax
+    - field.field.node.contact.field_first_name
+    - field.field.node.contact.field_homepage
+    - field.field.node.contact.field_last_name
+    - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_mobile
+    - field.field.node.contact.field_organisation
+    - field.field.node.contact.field_phone
+    - field.field.node.contact.field_photo
+    - field.field.node.contact.field_position
+    - field.field.node.contact.field_title
+    - node.type.contact
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.contact.link_to_document
+targetEntityType: node
+bundle: contact
+mode: link_to_document
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_contact: true
+  field_branch: true
+  field_department: true
+  field_email: true
+  field_fax: true
+  field_first_name: true
+  field_homepage: true
+  field_last_name: true
+  field_legacy_id: true
+  field_mobile: true
+  field_organisation: true
+  field_phone: true
+  field_photo: true
+  field_position: true
+  field_title: true

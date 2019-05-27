@@ -1,0 +1,11 @@
+uuid: 70784a10-4489-4c02-b32d-a6f2360e4f58
+langcode: en
+status: true
+dependencies: {  }
+id: viewer
+label: viewer
+weight: 5
+is_admin: null
+permissions:
+  - 'change own username'
+  - 'view private files'

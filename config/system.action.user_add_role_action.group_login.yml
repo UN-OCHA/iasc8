@@ -1,0 +1,14 @@
+uuid: 07a2f1f2-278c-4459-ae3e-18046cc521f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.group_login
+  module:
+    - user
+id: user_add_role_action.group_login
+label: 'Add the group login role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: group_login

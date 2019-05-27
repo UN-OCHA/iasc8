@@ -1,0 +1,8 @@
+uuid: 170242ac-1f00-4d50-a347-e8be6e6c85ce
+langcode: en
+status: true
+dependencies: {  }
+name: Organizations
+vid: hosts
+description: 'The name of the organization hosting a Meeting or associated with a Contact.'
+weight: 0

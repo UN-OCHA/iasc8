@@ -1,0 +1,18 @@
+uuid: 2ce04f4f-bffe-492c-872a-33d6b74b295e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact
+id: node.contact.title
+field_name: title
+entity_type: node
+bundle: contact
+label: 'Full Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

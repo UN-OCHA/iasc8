@@ -1,0 +1,22 @@
+uuid: 886529a0-131b-42c3-b3e2-9b0920f7a19e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.oa_discussion_post
+  module:
+    - text
+id: node.oa_discussion_post.body
+field_name: body
+entity_type: node
+bundle: oa_discussion_post
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

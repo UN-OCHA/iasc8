@@ -1,0 +1,21 @@
+uuid: f9875ce8-7fbf-4454-b21d-509c5ac7dad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisation
+    - node.type.contact
+id: node.contact.field_organisation
+field_name: field_organisation
+entity_type: node
+bundle: contact
+label: Organization
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: c9af65b3-c826-4112-bbb9-7f03566db508
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_addressee
+field_name: field_addressee
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

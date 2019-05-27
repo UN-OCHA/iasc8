@@ -1,0 +1,18 @@
+uuid: 0ad8ec3a-ac25-410b-80b0-416b47f61e1a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_oa_section_override
+field_name: field_oa_section_override
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

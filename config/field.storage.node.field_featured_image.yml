@@ -1,0 +1,26 @@
+uuid: 5baa1aeb-dd3f-4b84-8d36-14ce0282470b
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_featured_image
+field_name: field_featured_image
+entity_type: node
+type: image
+settings:
+  default_image:
+    uuid: ''
+  uri_scheme: public
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: f00ffdb6-b5aa-48cc-9942-c8ffbb9db928
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_publish
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_legacy_publish
+field_name: field_legacy_publish
+entity_type: node
+bundle: oa_wiki_page
+label: 'Legacy Publish'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

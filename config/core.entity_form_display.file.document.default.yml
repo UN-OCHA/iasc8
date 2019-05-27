@@ -1,0 +1,28 @@
+uuid: d82745cf-345f-4eaa-8b22-f2cf0b76f2e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.document.field_file_title
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.document.default
+targetEntityType: file
+bundle: document
+mode: default
+content:
+  field_file_title:
+    weight: -4
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

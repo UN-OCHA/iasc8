@@ -1,0 +1,8 @@
+uuid: 319922f3-a806-4edb-89ce-64274582c3d7
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_panopoly_page
+label: 'Content Page comment'
+target_entity_type_id: node
+description: null

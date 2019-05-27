@@ -1,0 +1,21 @@
+uuid: a6ab2d67-d235-47b5-91bc-884f5ab5cf47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.action_point
+  module:
+    - datetime
+id: node.action_point.field_date
+field_name: field_date
+entity_type: node
+bundle: action_point
+label: Deadline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

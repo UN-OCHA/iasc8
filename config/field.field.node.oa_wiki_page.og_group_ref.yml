@@ -1,0 +1,33 @@
+uuid: 99ac54e2-bdd4-4954-8c0b-eadbb52fb3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.oa_space
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: oa_wiki_page
+label: 'Authoring Bodies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+      views-select-list:
+        status: 1
+    membership_type: og_membership_type_default
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+field_type: entity_reference

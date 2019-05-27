@@ -1,0 +1,19 @@
+uuid: 2ecf9ec6-600b-4286-b7a3-0e2ecd305b40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addressee
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.field_addressee
+field_name: field_addressee
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Responsibility for Implementation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

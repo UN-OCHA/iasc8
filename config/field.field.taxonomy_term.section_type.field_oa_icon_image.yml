@@ -1,0 +1,33 @@
+uuid: 43ffc0fe-85c6-446f-b659-3a6caef595d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_icon_image
+    - taxonomy.vocabulary.section_type
+  module:
+    - image
+id: taxonomy_term.section_type.field_oa_icon_image
+field_name: field_oa_icon_image
+entity_type: taxonomy_term
+bundle: section_type
+label: 'Icon image'
+description: 'Image file to use in place of icon'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  alt_field: false
+  default_image: 0
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  title_field: false
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

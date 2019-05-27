@@ -1,0 +1,94 @@
+uuid: 2d2c52e7-b5fb-4fdb-8d18-cd38f1a8403b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_wiki_page.body
+    - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
+    - field.field.node.oa_wiki_page.field_category
+    - field.field.node.oa_wiki_page.field_document_no
+    - field.field.node.oa_wiki_page.field_document_type
+    - field.field.node.oa_wiki_page.field_legacy_publish
+    - field.field.node.oa_wiki_page.field_oa_media
+    - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
+    - field.field.node.oa_wiki_page.field_product_thumbnail
+    - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.oa_other_spaces_ref
+    - field.field.node.oa_wiki_page.oa_section_ref
+    - field.field.node.oa_wiki_page.og_group_ref
+    - field.field.node.oa_wiki_page.og_vocabulary
+    - node.type.oa_wiki_page
+  module:
+    - datetime
+    - field_layout
+    - image
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_wiki_page.teaser
+targetEntityType: node
+bundle: oa_wiki_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_document_no:
+    label: inline
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_product_thumbnail:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_published_date:
+    label: inline
+    weight: 5
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  og_group_ref:
+    label: inline
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_wiki_page: true
+  field_category: true
+  field_document_type: true
+  field_legacy_publish: true
+  field_oa_media: true
+  field_oa_wiki_page_no_redirect: true
+  oa_other_spaces_ref: true
+  oa_section_ref: true
+  og_vocabulary: true

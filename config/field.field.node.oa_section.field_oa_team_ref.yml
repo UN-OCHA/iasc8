@@ -1,0 +1,30 @@
+uuid: 9a8e90c3-7a4e-4ec3-bf99-96578a1814d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_team_ref
+    - node.type.oa_section
+id: node.oa_section.field_oa_team_ref
+field_name: field_oa_team_ref
+entity_type: node
+bundle: oa_section
+label: Teams
+description: 'Leave empty for public access, otherwise select Teams that can view this Section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 0
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

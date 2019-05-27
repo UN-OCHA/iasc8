@@ -1,0 +1,37 @@
+uuid: c2ba5a03-00c6-428f-b111-7c38754fae2f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - flag_bookmark
+  module:
+    - node
+_core:
+  default_config_hash: vuzrLaRZ3xV-FmT127t2gLy_p8JDLMWtsKsnCwdWR2Y
+id: bookmark
+label: Bookmark
+bundles:
+  - article
+  - page
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Bookmark this'
+flag_long: 'Add this post to your bookmarks'
+flag_message: 'This post has been added to your bookmarks'
+unflag_short: 'Remove bookmark'
+unflag_long: 'Remove this post from your bookmarks'
+unflag_message: 'This post has been removed from your bookmarks'
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    - full
+    - teaser
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions: {  }
+linkTypeConfig: {  }

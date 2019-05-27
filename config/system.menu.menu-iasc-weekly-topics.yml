@@ -1,0 +1,8 @@
+uuid: d5d84ba0-05cf-4f9a-81b8-10109781fd95
+langcode: en
+status: true
+dependencies: {  }
+id: menu-iasc-weekly-topics
+label: 'Topic Summaries'
+description: 'Summary of the weekly / events in Geneva and New York.'
+locked: false

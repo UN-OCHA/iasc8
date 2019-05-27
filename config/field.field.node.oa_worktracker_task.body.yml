@@ -1,0 +1,22 @@
+uuid: 353d7521-9420-4266-a8dc-a58e65575f4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.oa_worktracker_task
+  module:
+    - text
+id: node.oa_worktracker_task.body
+field_name: body
+entity_type: node
+bundle: oa_worktracker_task
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

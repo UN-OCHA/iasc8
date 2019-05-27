@@ -1,0 +1,19 @@
+uuid: 1211e312-ba61-47eb-8594-8c71ae8109ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ap_topic
+    - node.type.action_point
+id: node.action_point.field_ap_topic
+field_name: field_ap_topic
+entity_type: node
+bundle: action_point
+label: Topic/Theme/Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 0da06cc6-2b66-4d6d-af84-12fb8d2c415c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Space Blueprint'
+vid: space_type
+description: ''
+weight: 0

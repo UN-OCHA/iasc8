@@ -1,0 +1,18 @@
+uuid: 64eec3e9-ae8a-4a9a-a873-c30794aef56b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dial_in_meeting
+field_name: field_dial_in_meeting
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

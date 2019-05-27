@@ -1,0 +1,61 @@
+uuid: 8857dfe5-b5ac-40df-b3a1-12f860bdf34c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.announcement.body
+    - field.field.node.announcement.comment_node_announcement
+    - field.field.node.announcement.field_contact
+    - field.field.node.announcement.field_legacy_publish
+    - field.field.node.announcement.field_links
+    - field.field.node.announcement.field_published_date
+    - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.oa_section_ref
+    - field.field.node.announcement.og_group_ref
+    - node.type.announcement
+  module:
+    - datetime
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.announcement.teaser
+targetEntityType: node
+bundle: announcement
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_published_date:
+    label: hidden
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_announcement: true
+  field_contact: true
+  field_legacy_publish: true
+  field_links: true
+  field_referenced_docs: true
+  oa_section_ref: true
+  og_group_ref: true

@@ -1,0 +1,21 @@
+uuid: 3f83058b-bf1e-486f-90bc-e8488f8975ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_node_types
+    - taxonomy.vocabulary.space_type
+  module:
+    - options
+id: taxonomy_term.space_type.field_oa_node_types
+field_name: field_oa_node_types
+entity_type: taxonomy_term
+bundle: space_type
+label: 'Node Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

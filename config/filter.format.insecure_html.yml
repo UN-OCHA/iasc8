@@ -1,0 +1,8 @@
+uuid: d84dcdd6-c671-439b-bc79-489e23034e94
+langcode: en
+status: true
+dependencies: {  }
+name: 'Insecure HTML'
+format: insecure_html
+weight: 0
+filters: {  }

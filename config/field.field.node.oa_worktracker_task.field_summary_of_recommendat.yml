@@ -1,0 +1,19 @@
+uuid: 4c988269-963d-41ea-b0c7-bbbf95b0d7aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_of_recommendat
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.field_summary_of_recommendat
+field_name: field_summary_of_recommendat
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Summary of the Recommendation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

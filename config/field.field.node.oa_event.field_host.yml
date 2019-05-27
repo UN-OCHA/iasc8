@@ -1,0 +1,21 @@
+uuid: 155d8d5b-9207-4283-9a42-e8ad09dea114
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_host
+    - node.type.oa_event
+id: node.oa_event.field_host
+field_name: field_host
+entity_type: node
+bundle: oa_event
+label: 'Meeting Host(s)'
+description: 'Please select the host(s) for this meeting.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

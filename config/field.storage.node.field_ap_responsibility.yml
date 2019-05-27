@@ -1,0 +1,20 @@
+uuid: 4863831f-8b88-430a-9de0-32b082c6e000
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ap_responsibility
+field_name: field_ap_responsibility
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

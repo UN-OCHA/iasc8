@@ -1,0 +1,28 @@
+uuid: 9b230e3c-73a9-48b4-8e41-240ebfdcaeba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_worktracker_assigned_to
+    - node.type.oa_worktracker_task
+id: node.oa_worktracker_task.field_oa_worktracker_assigned_to
+field_name: field_oa_worktracker_assigned_to
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Assigned to'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

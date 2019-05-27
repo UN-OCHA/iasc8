@@ -1,0 +1,18 @@
+uuid: b4edac8e-b400-48a8-ac9d-5a1417804928
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_discussion_post
+id: node.oa_discussion_post.title
+field_name: title
+entity_type: node
+bundle: oa_discussion_post
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

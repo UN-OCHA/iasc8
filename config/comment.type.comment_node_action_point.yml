@@ -1,0 +1,8 @@
+uuid: 9d86b323-c600-42b3-a477-e4185b75c680
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_action_point
+label: 'Action Point comment'
+target_entity_type_id: node
+description: null

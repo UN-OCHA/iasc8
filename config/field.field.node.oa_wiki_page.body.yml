@@ -1,0 +1,22 @@
+uuid: 3e5f999a-d66e-49bd-b139-56c5ec04ec3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.oa_wiki_page
+  module:
+    - text
+id: node.oa_wiki_page.body
+field_name: body
+entity_type: node
+bundle: oa_wiki_page
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

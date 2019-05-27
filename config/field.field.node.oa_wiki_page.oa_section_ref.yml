@@ -1,0 +1,30 @@
+uuid: 0bc47d81-48c6-4a5a-88e7-7b1efcc59741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.oa_section_ref
+    - node.type.oa_section
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.oa_section_ref
+field_name: oa_section_ref
+entity_type: node
+bundle: oa_wiki_page
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 1
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_section: oa_section
+field_type: entity_reference

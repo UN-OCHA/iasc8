@@ -1,0 +1,21 @@
+uuid: 92551196-dc7c-4ecc-b5c6-389857939d22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ap_date
+    - node.type.action_point
+  module:
+    - datetime
+id: node.action_point.field_ap_date
+field_name: field_ap_date
+entity_type: node
+bundle: action_point
+label: 'Meeting date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

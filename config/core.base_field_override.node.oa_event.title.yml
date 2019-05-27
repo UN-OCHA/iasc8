@@ -1,0 +1,18 @@
+uuid: ef826321-7293-4a62-94e6-d1fd68cad39e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_event
+id: node.oa_event.title
+field_name: title
+entity_type: node
+bundle: oa_event
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

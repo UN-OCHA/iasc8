@@ -1,0 +1,22 @@
+uuid: 16724b80-94cb-4e9f-ad9b-9ad20d6ca448
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.link
+    - field.field.file.document.field_file_title
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.document.link
+targetEntityType: file
+bundle: document
+mode: link
+content: {  }
+hidden:
+  field_file_title: true

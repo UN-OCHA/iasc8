@@ -1,0 +1,8 @@
+uuid: 6a1189d0-80ac-4c97-9677-07bf75df98b9
+langcode: en
+status: true
+dependencies: {  }
+id: menu-product-catalogue
+label: 'Product Catalog'
+description: 'A list of categories for the IASC and non-IASC Products.'
+locked: false

@@ -1,0 +1,36 @@
+uuid: 50974367-f62a-40de-a73e-9ebe4b3c0dba
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_oa_banner_position
+field_name: field_oa_banner_position
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Hidden
+    -
+      value: 1
+      label: 'Above toolbar (stretched)'
+    -
+      value: 2
+      label: 'Below toolbar (stretched)'
+    -
+      value: 3
+      label: 'Next to Main menu'
+    -
+      value: 4
+      label: 'Next to Space menu'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

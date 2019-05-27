@@ -1,0 +1,21 @@
+uuid: 3085895a-8392-4992-860e-ed1fbc14f295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_category
+field_name: field_category
+entity_type: node
+bundle: oa_wiki_page
+label: 'Product Category'
+description: 'Please select one or more terms for the categories for the Product.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

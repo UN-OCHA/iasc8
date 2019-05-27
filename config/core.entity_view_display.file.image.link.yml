@@ -1,0 +1,24 @@
+uuid: 69904e2a-fb4b-4cc8-b9e8-9752f966ddbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.link
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.image.link
+targetEntityType: file
+bundle: image
+mode: link
+content: {  }
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true

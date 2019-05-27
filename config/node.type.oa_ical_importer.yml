@@ -1,0 +1,16 @@
+uuid: bd89f7db-7002-4a1e-84e1-266627dd4b67
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'iCal Importer'
+type: oa_ical_importer
+description: 'A feeds node to import event from an iCal feed.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

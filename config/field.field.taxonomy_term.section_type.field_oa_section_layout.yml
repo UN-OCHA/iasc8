@@ -1,0 +1,21 @@
+uuid: 44e0a2d0-f378-45f7-80bb-11eb312eb4a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_oa_section_layout
+    - taxonomy.vocabulary.section_type
+  module:
+    - options
+id: taxonomy_term.section_type.field_oa_section_layout
+field_name: field_oa_section_layout
+entity_type: taxonomy_term
+bundle: section_type
+label: 'Section Layout'
+description: 'Choose the default layout for this section'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

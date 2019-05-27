@@ -1,0 +1,38 @@
+uuid: be6eae45-fec6-4e8b-a0a5-1e2776a3d65d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.oa_parent_space
+    - node.type.oa_group
+    - node.type.oa_space
+id: node.oa_group.oa_parent_space
+field_name: oa_parent_space
+entity_type: node
+bundle: oa_group
+label: Parents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      og_behavior:
+        status: true
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 1
+    lock_revision: 0
+    membership_type: og_membership_type_default
+    reference_revisions: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_group: oa_group
+      oa_space: oa_space
+field_type: entity_reference

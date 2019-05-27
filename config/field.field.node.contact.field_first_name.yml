@@ -1,0 +1,19 @@
+uuid: 721cbfb8-5b88-4fab-8888-5782034191d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.contact
+id: node.contact.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: contact
+label: 'First Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

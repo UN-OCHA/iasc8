@@ -1,0 +1,18 @@
+uuid: 5d3c8b1b-3d46-489d-b670-a0aaaa5d3c64
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Landing Page'
+type: panopoly_landing_page
+description: 'A primary landing page to display to users on your site.'
+help: "<p>Here you can set the <em>Landing Page's</em> metadata, for example the title, path and menu options.</p>\r\n<p>To add content to the page, first save this form and then click the \"Customize this page\" button.</p>"
+new_revision: false
+preview_mode: 1
+display_submitted: false

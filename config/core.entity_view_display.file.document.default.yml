@@ -1,0 +1,28 @@
+uuid: 8f8a23fc-68f6-430b-855a-d903cccfd83a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.document.field_file_title
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.document.default
+targetEntityType: file
+bundle: document
+mode: default
+content:
+  field_file_title:
+    label: hidden
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

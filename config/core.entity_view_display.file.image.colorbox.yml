@@ -1,0 +1,24 @@
+uuid: c408e014-0c87-4853-9628-ee1b214241ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.colorbox
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.image.colorbox
+targetEntityType: file
+bundle: image
+mode: colorbox
+content: {  }
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true

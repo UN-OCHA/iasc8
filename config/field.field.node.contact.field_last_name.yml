@@ -1,0 +1,19 @@
+uuid: ea358b00-d898-4e2c-960e-a8a9c84d89cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_name
+    - node.type.contact
+id: node.contact.field_last_name
+field_name: field_last_name
+entity_type: node
+bundle: contact
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

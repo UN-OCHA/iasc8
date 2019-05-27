@@ -1,0 +1,23 @@
+uuid: 5d0a5096-5ee5-4e6f-90ef-55e0843aab50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.contact
+id: node.contact.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: contact
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

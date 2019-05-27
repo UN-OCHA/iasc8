@@ -1,0 +1,30 @@
+uuid: 2f8501dc-e1b6-408a-98e1-a199661d3c84
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_oa_worktracker_task_type
+field_name: field_oa_worktracker_task_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: problem
+      label: Problem
+    -
+      value: feature
+      label: 'Feature Request'
+    -
+      value: task
+      label: Task
+  allowed_values_function: oa_worktracker_allowed_values_callback
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

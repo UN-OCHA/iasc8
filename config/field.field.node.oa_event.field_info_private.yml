@@ -1,0 +1,21 @@
+uuid: 2382dbf3-fbd2-4e86-996b-764afccd5554
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info_private
+    - node.type.oa_event
+  module:
+    - text
+id: node.oa_event.field_info_private
+field_name: field_info_private
+entity_type: node
+bundle: oa_event
+label: 'Private Details'
+description: 'Please enter additional information about the meeting. <strong>Please note:</strong> This information will not be made publicly available and has privacy restrictions.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

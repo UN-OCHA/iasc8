@@ -1,0 +1,19 @@
+uuid: fb8dc135-2bbc-4506-97e1-b826ecafab29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_date
+    - node.type.oa_event
+id: node.oa_event.field_oa_date
+field_name: field_oa_date
+entity_type: node
+bundle: oa_event
+label: 'Event Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

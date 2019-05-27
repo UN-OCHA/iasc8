@@ -1,0 +1,19 @@
+uuid: 3a16b7cf-5501-420e-98c4-99d932316117
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_branch
+    - node.type.contact
+id: node.contact.field_branch
+field_name: field_branch
+entity_type: node
+bundle: contact
+label: Branch
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

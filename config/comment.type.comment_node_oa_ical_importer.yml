@@ -1,0 +1,8 @@
+uuid: 41d85293-3239-4fb7-8392-c995e60e37c5
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_oa_ical_importer
+label: 'iCal Importer comment'
+target_entity_type_id: node
+description: null

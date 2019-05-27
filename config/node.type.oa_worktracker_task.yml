@@ -1,0 +1,16 @@
+uuid: 0a252af6-d221-4d99-9e43-f693cc3c3fa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Task
+type: oa_worktracker_task
+description: 'A unit of work to be performed.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

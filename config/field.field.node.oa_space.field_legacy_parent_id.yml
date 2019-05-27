@@ -1,0 +1,19 @@
+uuid: 626b5d9c-6376-4b72-9f42-9c7cc112caa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_parent_id
+    - node.type.oa_space
+id: node.oa_space.field_legacy_parent_id
+field_name: field_legacy_parent_id
+entity_type: node
+bundle: oa_space
+label: 'Legacy Parent ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,45 @@
+uuid: 02c39217-cf5c-43c5-9529-87225987c92c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.panopoly_page.body
+    - field.field.node.panopoly_page.comment_node_panopoly_page
+    - field.field.node.panopoly_page.field_featured_categories
+    - field.field.node.panopoly_page.field_featured_image
+    - field.field.node.panopoly_page.field_featured_status
+    - node.type.panopoly_page
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.panopoly_page.search_result
+targetEntityType: node
+bundle: panopoly_page
+mode: search_result
+content:
+  field_featured_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_panopoly_page: true
+  field_featured_categories: true
+  field_featured_status: true

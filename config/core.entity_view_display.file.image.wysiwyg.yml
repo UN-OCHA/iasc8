@@ -1,0 +1,24 @@
+uuid: 84325d81-1098-4b47-a998-b49850ec93bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.wysiwyg
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.image.wysiwyg
+targetEntityType: file
+bundle: image
+mode: wysiwyg
+content: {  }
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true

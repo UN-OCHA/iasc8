@@ -1,0 +1,42 @@
+uuid: 3f979630-9ef1-48b6-8de6-86c2c6c37a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_team.body
+    - field.field.node.oa_team.comment_node_oa_team
+    - field.field.node.oa_team.field_oa_team_users
+    - field.field.node.oa_team.og_group_ref
+    - node.type.oa_team
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_team.teaser
+targetEntityType: node
+bundle: oa_team
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_team: true
+  field_oa_team_users: true
+  og_group_ref: true

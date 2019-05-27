@@ -1,0 +1,54 @@
+uuid: bf1cb358-7fc1-4e4b-92f4-0cebf3500177
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_section.body
+    - field.field.node.oa_section.comment_node_oa_section
+    - field.field.node.oa_section.field_oa_group_ref
+    - field.field.node.oa_section.field_oa_node_types
+    - field.field.node.oa_section.field_oa_section
+    - field.field.node.oa_section.field_oa_section_override
+    - field.field.node.oa_section.field_oa_section_weight
+    - field.field.node.oa_section.field_oa_team_ref
+    - field.field.node.oa_section.field_oa_user_ref
+    - field.field.node.oa_section.og_group_ref
+    - node.type.oa_section
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_section.teaser
+targetEntityType: node
+bundle: oa_section
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_section: true
+  field_oa_group_ref: true
+  field_oa_node_types: true
+  field_oa_section: true
+  field_oa_section_override: true
+  field_oa_section_weight: true
+  field_oa_team_ref: true
+  field_oa_user_ref: true
+  og_group_ref: true

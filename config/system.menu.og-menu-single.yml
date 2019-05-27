@@ -1,0 +1,8 @@
+uuid: 57bbdaf1-a0a0-4b41-8bc2-2190fdf522ef
+langcode: en
+status: true
+dependencies: {  }
+id: og-menu-single
+label: 'OG menu'
+description: 'Contains all the links for organic groups and their menus'
+locked: false

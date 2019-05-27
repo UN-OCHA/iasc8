@@ -1,0 +1,24 @@
+uuid: 59c215df-c7ae-4791-91ba-c06e7fc1c556
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.large_image
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: file.image.large_image
+targetEntityType: file
+bundle: image
+mode: large_image
+content: {  }
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true

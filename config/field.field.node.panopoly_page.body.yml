@@ -1,0 +1,22 @@
+uuid: 8a5ebece-537b-4d3d-9a87-51ebf4dd1dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.panopoly_page
+  module:
+    - text
+id: node.panopoly_page.body
+field_name: body
+entity_type: node
+bundle: panopoly_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,18 @@
+uuid: b9e38252-bf1d-478c-ac4a-b9573cceeada
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Content Page'
+type: panopoly_page
+description: 'An important page to display to users on your site.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

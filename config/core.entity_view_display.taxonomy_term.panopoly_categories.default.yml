@@ -1,0 +1,38 @@
+uuid: 537b63b6-50b3-40ed-a5f6-454ff3fd1a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.panopoly_categories.field_featured_image
+    - taxonomy.vocabulary.panopoly_categories
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: taxonomy_term.panopoly_categories.default
+targetEntityType: taxonomy_term
+bundle: panopoly_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

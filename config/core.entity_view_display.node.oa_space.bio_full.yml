@@ -1,0 +1,70 @@
+uuid: e0310179-f85c-47a9-8f85-7978e797d973
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.bio_full
+    - field.field.node.oa_space.body
+    - field.field.node.oa_space.comment_node_oa_space
+    - field.field.node.oa_space.field_body_legacy_ids
+    - field.field.node.oa_space.field_date_closed
+    - field.field.node.oa_space.field_featured_image
+    - field.field.node.oa_space.field_homepage
+    - field.field.node.oa_space.field_legacy_parent_id
+    - field.field.node.oa_space.field_legacy_space_name
+    - field.field.node.oa_space.field_oa_banner
+    - field.field.node.oa_space.field_oa_banner_position
+    - field.field.node.oa_space.field_oa_banner_text
+    - field.field.node.oa_space.field_oa_node_types
+    - field.field.node.oa_space.field_oa_section_override
+    - field.field.node.oa_space.field_oa_space_type
+    - field.field.node.oa_space.field_responsibilities
+    - field.field.node.oa_space.field_short_name
+    - field.field.node.oa_space.group_access
+    - field.field.node.oa_space.group_group
+    - field.field.node.oa_space.oa_parent_space
+    - field.field.node.oa_space.og_roles_permissions
+    - field.field.node.oa_space.og_user_inheritance
+    - field.field.node.oa_space.og_user_permission_inheritance
+    - node.type.oa_space
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_space.bio_full
+targetEntityType: node
+bundle: oa_space
+mode: bio_full
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_oa_space: true
+  field_body_legacy_ids: true
+  field_date_closed: true
+  field_featured_image: true
+  field_homepage: true
+  field_legacy_parent_id: true
+  field_legacy_space_name: true
+  field_oa_banner: true
+  field_oa_banner_position: true
+  field_oa_banner_text: true
+  field_oa_node_types: true
+  field_oa_section_override: true
+  field_oa_space_type: true
+  field_responsibilities: true
+  field_short_name: true
+  group_access: true
+  group_group: true
+  oa_parent_space: true
+  og_roles_permissions: true
+  og_user_inheritance: true
+  og_user_permission_inheritance: true

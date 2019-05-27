@@ -1,0 +1,46 @@
+uuid: 92b17f1c-8d7b-44c9-a944-aeda1208b8c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oa_discussion_post.body
+    - field.field.node.oa_discussion_post.comment_node_oa_discussion_post
+    - field.field.node.oa_discussion_post.field_oa_media
+    - field.field.node.oa_discussion_post.oa_section_ref
+    - field.field.node.oa_discussion_post.og_group_ref
+    - field.field.node.oa_discussion_post.og_vocabulary
+    - node.type.oa_discussion_post
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_discussion_post.teaser
+targetEntityType: node
+bundle: oa_discussion_post
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_oa_discussion_post: true
+  field_oa_media: true
+  oa_section_ref: true
+  og_group_ref: true
+  og_vocabulary: true

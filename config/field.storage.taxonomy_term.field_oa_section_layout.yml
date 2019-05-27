@@ -1,0 +1,21 @@
+uuid: 71800443-e347-4532-9ec7-d959a3fbb8c8
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_oa_section_layout
+field_name: field_oa_section_layout
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

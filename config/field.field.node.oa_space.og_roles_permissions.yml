@@ -1,0 +1,23 @@
+uuid: 65456c9d-95ac-4564-ae65-dadaf9fb728e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_roles_permissions
+    - node.type.oa_space
+id: node.oa_space.og_roles_permissions
+field_name: og_roles_permissions
+entity_type: node
+bundle: oa_space
+label: 'Group roles and permissions'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: f6898e86-d736-48f1-9302-b15f72a893ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_roles_permissions
+    - node.type.oa_group
+id: node.oa_group.og_roles_permissions
+field_name: og_roles_permissions
+entity_type: node
+bundle: oa_group
+label: 'Group roles and permissions'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

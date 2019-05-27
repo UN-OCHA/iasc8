@@ -1,0 +1,39 @@
+uuid: 788af5e3-2f82-441d-9f82-58d99187bbc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.featured
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_user_about
+    - field.field.user.user.field_user_display_name
+    - field.field.user.user.field_user_picture
+    - field.field.user.user.og_user_node
+    - field.field.user.user.user_picture
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: user.user.featured
+targetEntityType: user
+bundle: user
+mode: featured
+content:
+  member_for:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_first_name: true
+  field_last_name: true
+  field_user_about: true
+  field_user_display_name: true
+  field_user_picture: true
+  og_user_node: true
+  user_picture: true

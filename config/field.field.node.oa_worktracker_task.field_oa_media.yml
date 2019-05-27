@@ -1,0 +1,27 @@
+uuid: 15359b4b-ffec-40b6-958f-09f8f7078861
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oa_media
+    - node.type.oa_worktracker_task
+  module:
+    - file
+id: node.oa_worktracker_task.field_oa_media
+field_name: field_oa_media
+entity_type: node
+bundle: oa_worktracker_task
+label: Attachments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: ''
+  file_extensions: 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm zip tgz gz key dotx'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

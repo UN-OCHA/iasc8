@@ -1,0 +1,8 @@
+uuid: bc4bd29f-8124-4eae-9610-696686a9873d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Section Type'
+vid: section_type
+description: 'Allow selection of Open Atrium sections'
+weight: 0

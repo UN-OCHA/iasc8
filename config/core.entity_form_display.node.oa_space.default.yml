@@ -1,0 +1,247 @@
+uuid: ea449f07-efe4-43c1-a2c9-105bc2e093ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.oa_space.body
+    - field.field.node.oa_space.comment_node_oa_space
+    - field.field.node.oa_space.field_body_legacy_ids
+    - field.field.node.oa_space.field_date_closed
+    - field.field.node.oa_space.field_featured_image
+    - field.field.node.oa_space.field_homepage
+    - field.field.node.oa_space.field_legacy_parent_id
+    - field.field.node.oa_space.field_legacy_space_name
+    - field.field.node.oa_space.field_oa_banner
+    - field.field.node.oa_space.field_oa_banner_position
+    - field.field.node.oa_space.field_oa_banner_text
+    - field.field.node.oa_space.field_oa_node_types
+    - field.field.node.oa_space.field_oa_section_override
+    - field.field.node.oa_space.field_oa_space_type
+    - field.field.node.oa_space.field_responsibilities
+    - field.field.node.oa_space.field_short_name
+    - field.field.node.oa_space.group_access
+    - field.field.node.oa_space.group_group
+    - field.field.node.oa_space.oa_parent_space
+    - field.field.node.oa_space.og_roles_permissions
+    - field.field.node.oa_space.og_user_inheritance
+    - field.field.node.oa_space.og_user_permission_inheritance
+    - image.style.thumbnail
+    - node.type.oa_space
+  module:
+    - comment
+    - datetime
+    - field_layout
+    - file
+    - image
+    - layout_discovery
+    - link
+    - path
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_space.default
+targetEntityType: node
+bundle: oa_space
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  comment_node_oa_space:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_body_legacy_ids:
+    weight: 15
+    type: number
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_date_closed:
+    weight: 2
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_featured_image:
+    weight: 4
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_homepage:
+    weight: 3
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_legacy_parent_id:
+    weight: 42
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_legacy_space_name:
+    weight: 43
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_oa_banner:
+    weight: 39
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_oa_banner_position:
+    weight: 40
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_banner_text:
+    weight: 41
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_oa_node_types:
+    weight: 37
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_section_override:
+    weight: 9
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_oa_space_type:
+    weight: 8
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_responsibilities:
+    weight: 7
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_short_name:
+    weight: 1
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  group_access:
+    weight: 5
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  group_group:
+    weight: 2
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  og_roles_permissions:
+    weight: 10
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  og_user_inheritance:
+    weight: 8
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  og_user_permission_inheritance:
+    weight: 9
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  oa_parent_space: true

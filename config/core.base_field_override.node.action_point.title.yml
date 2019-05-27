@@ -1,0 +1,18 @@
+uuid: dec8a0ac-a95d-4f29-aef9-0ab5e0e79bc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action_point
+id: node.action_point.title
+field_name: title
+entity_type: node
+bundle: action_point
+label: 'Meeting Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

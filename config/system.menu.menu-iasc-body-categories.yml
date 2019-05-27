@@ -1,0 +1,8 @@
+uuid: 099d03c7-916c-4324-8d3f-c99eba5b4e8c
+langcode: en
+status: true
+dependencies: {  }
+id: menu-iasc-body-categories
+label: 'IASC Body Categories'
+description: 'The <em>IASC Body Categories</em> menu is used to manage the menu of Body categories for the site.'
+locked: false

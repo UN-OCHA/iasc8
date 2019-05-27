@@ -1,0 +1,14 @@
+uuid: eeeee12a-2836-4c7a-b1ef-e00bbe99f6fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.focal_point
+  module:
+    - user
+id: user_remove_role_action.focal_point
+label: 'Remove the Focal Point role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: focal_point

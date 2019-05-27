@@ -1,0 +1,19 @@
+uuid: 9108818a-0422-4738-bad9-ccd03887f287
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
+id: node_search
+label: Content
+path: node
+weight: -10
+plugin: node_search
+configuration:
+  rankings:
+    comments: 0
+    promote: 0
+    relevance: 0
+    sticky: 0

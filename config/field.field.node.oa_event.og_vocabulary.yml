@@ -1,0 +1,30 @@
+uuid: 9aa8000e-6ebf-43dc-bf5f-19591b4a5bb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_vocabulary
+    - node.type.oa_event
+id: node.oa_event.og_vocabulary
+field_name: og_vocabulary
+entity_type: node
+bundle: oa_event
+label: 'OG vocabulary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    behaviors:
+      og_vocab:
+        status: true
+      taxonomy-index:
+        status: true
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

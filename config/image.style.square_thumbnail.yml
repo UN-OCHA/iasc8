@@ -1,0 +1,16 @@
+uuid: 12d83048-10a5-469d-b90c-8970f8bde46f
+langcode: en
+status: true
+dependencies: {  }
+name: square_thumbnail
+label: square_thumbnail
+effects:
+  09507053-134b-4e4d-931b-73226a8ec1bd:
+    uuid: 09507053-134b-4e4d-931b-73226a8ec1bd
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 100
+      height: 100
+      weight: 0
+      anchor: center-center

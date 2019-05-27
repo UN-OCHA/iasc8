@@ -1,0 +1,21 @@
+uuid: 1461dcea-f23c-45f4-b1fa-1aa7c110e7ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.oa_worktracker_task
+  module:
+    - datetime
+id: node.oa_worktracker_task.field_date
+field_name: field_date
+entity_type: node
+bundle: oa_worktracker_task
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

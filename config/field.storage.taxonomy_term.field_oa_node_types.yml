@@ -1,0 +1,21 @@
+uuid: 5e294c2a-5b29-45b7-9076-db48b1cb503c
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_oa_node_types
+field_name: field_oa_node_types
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: oa_buttons_get_command_buttons_options
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

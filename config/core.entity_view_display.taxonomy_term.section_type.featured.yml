@@ -1,0 +1,38 @@
+uuid: e734e465-a0ae-4f29-b965-be8ebd58e651
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.featured
+    - field.field.taxonomy_term.section_type.field_oa_icon_class
+    - field.field.taxonomy_term.section_type.field_oa_icon_image
+    - field.field.taxonomy_term.section_type.field_oa_node_types
+    - field.field.taxonomy_term.section_type.field_oa_section_layout
+    - field.field.taxonomy_term.section_type.field_oa_section_type_menu
+    - taxonomy.vocabulary.section_type
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: taxonomy_term.section_type.featured
+targetEntityType: taxonomy_term
+bundle: section_type
+mode: featured
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_oa_icon_class: true
+  field_oa_icon_image: true
+  field_oa_node_types: true
+  field_oa_section_layout: true
+  field_oa_section_type_menu: true

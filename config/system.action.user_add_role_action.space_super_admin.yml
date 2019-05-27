@@ -1,0 +1,14 @@
+uuid: 9c31a546-d8de-445e-b5aa-8ced424111d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.space_super_admin
+  module:
+    - user
+id: user_add_role_action.space_super_admin
+label: 'Add the space super admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: space_super_admin

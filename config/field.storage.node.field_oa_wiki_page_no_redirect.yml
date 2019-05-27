@@ -1,0 +1,18 @@
+uuid: 33d63e41-cdbb-46a9-9db5-b82c5f145e77
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_oa_wiki_page_no_redirect
+field_name: field_oa_wiki_page_no_redirect
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

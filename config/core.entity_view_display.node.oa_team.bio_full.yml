@@ -1,0 +1,34 @@
+uuid: 86fdc595-ac4c-4d32-97fd-dcd16e3184d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.bio_full
+    - field.field.node.oa_team.body
+    - field.field.node.oa_team.comment_node_oa_team
+    - field.field.node.oa_team.field_oa_team_users
+    - field.field.node.oa_team.og_group_ref
+    - node.type.oa_team
+  module:
+    - field_layout
+    - layout_discovery
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.oa_team.bio_full
+targetEntityType: node
+bundle: oa_team
+mode: bio_full
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_oa_team: true
+  field_oa_team_users: true
+  og_group_ref: true

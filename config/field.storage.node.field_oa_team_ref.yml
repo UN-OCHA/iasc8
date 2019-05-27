@@ -1,0 +1,19 @@
+uuid: a7843c04-66ae-4412-a733-18eb2a3304ba
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_oa_team_ref
+field_name: field_oa_team_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
