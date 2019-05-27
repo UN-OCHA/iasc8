@@ -1,0 +1,126 @@
+uuid: a1ba36ca-59bc-4630-b2a0-26f9433704f1
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_hosts
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Organizations)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: hosts
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_ap_responsibility
+        - upgrade_d7_taxonomy_term_country
+        - upgrade_d7_taxonomy_term_product_categories
+        - upgrade_d7_taxonomy_term_document_types
+        - upgrade_d7_taxonomy_term_hosts
+        - upgrade_d7_taxonomy_term_section_type
+        - upgrade_d7_taxonomy_term_space_type
+        - upgrade_d7_taxonomy_term_panopoly_categories
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+  field_homepage:
+    -
+      plugin: field_link
+      source: field_homepage
+  field_logo:
+    -
+      plugin: sub_process
+      source: field_logo
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_membership_level:
+    -
+      plugin: get
+      source: field_membership_level
+  field_long_name:
+    -
+      plugin: get
+      source: field_long_name
+  field_addresses:
+    -
+      plugin: addressfield
+      source: field_addresses
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: hosts
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_panopoly_categories
+    - upgrade_d7_taxonomy_term_space_type
+    - upgrade_d7_taxonomy_term_section_type
+    - upgrade_d7_taxonomy_term_hosts
+    - upgrade_d7_taxonomy_term_document_types
+    - upgrade_d7_taxonomy_term_product_categories
+    - upgrade_d7_taxonomy_term_country
+    - upgrade_d7_taxonomy_term_ap_responsibility
+    - upgrade_d7_taxonomy_term_ap_responsibility
+    - upgrade_d7_taxonomy_term_country
+    - upgrade_d7_taxonomy_term_product_categories
+    - upgrade_d7_taxonomy_term_document_types
+    - upgrade_d7_taxonomy_term_hosts
+    - upgrade_d7_taxonomy_term_section_type
+    - upgrade_d7_taxonomy_term_space_type
+    - upgrade_d7_taxonomy_term_panopoly_categories

@@ -1,0 +1,9 @@
+uuid: fe87fac2-55d5-42d7-b7a4-e4d596d222b8
+langcode: en
+status: true
+dependencies: {  }
+id: additional_locations
+label: 'Additional locations'
+icon_uuid: null
+description: 'Migrated from field_collection field_additional_locations'
+behavior_plugins: {  }

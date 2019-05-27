@@ -1,0 +1,21 @@
+uuid: c6f7bc80-0ccf-4cc7-9be4-30f7f211a053
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_panopoly_landing_page
+label: 'Content - Landing Page'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      panopoly_landing_page: panopoly_landing_page
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: 3956529d-18bb-4fba-86b2-14328f5264a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_term_panopoly_categories
+label: 'Taxonomy term - Categories'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'categories/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      panopoly_categories: panopoly_categories
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+selection_logic: and
+weight: 0
+relationships: {  }

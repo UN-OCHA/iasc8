@@ -1,0 +1,160 @@
+uuid: bdc40dc2-7dc1-44c1-af7c-7c2b5ec6139f
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_contact
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Contact)'
+source:
+  plugin: d7_node
+  node_type: contact
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_contact/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_address:
+    -
+      plugin: addressfield
+      source: field_address
+  field_branch:
+    -
+      plugin: get
+      source: field_branch
+  field_department:
+    -
+      plugin: get
+      source: field_department
+  field_email:
+    -
+      plugin: get
+      source: field_email
+  field_fax:
+    -
+      plugin: get
+      source: field_fax
+  field_first_name:
+    -
+      plugin: get
+      source: field_first_name
+  field_homepage:
+    -
+      plugin: field_link
+      source: field_homepage
+  field_last_name:
+    -
+      plugin: get
+      source: field_last_name
+  field_legacy_id:
+    -
+      plugin: get
+      source: field_legacy_id
+  field_membership:
+    -
+      plugin: get
+      source: field_membership
+  field_mobile:
+    -
+      plugin: get
+      source: field_mobile
+  field_organisation:
+    -
+      plugin: sub_process
+      source: field_organisation
+      process:
+        target_id: tid
+  field_phone:
+    -
+      plugin: get
+      source: field_phone
+  field_photo:
+    -
+      plugin: sub_process
+      source: field_photo
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_position:
+    -
+      plugin: get
+      source: field_position
+  field_title:
+    -
+      plugin: get
+      source: field_title
+destination:
+  plugin: 'entity:node'
+  default_bundle: contact
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

@@ -1,0 +1,21 @@
+uuid: 8b587616-cab8-4828-b78f-c6d60895db87
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_oa_space
+label: 'Content - Space'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      oa_space: oa_space
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: 0
+relationships: {  }

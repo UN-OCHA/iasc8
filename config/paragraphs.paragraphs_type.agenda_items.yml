@@ -1,0 +1,9 @@
+uuid: 5e52674c-e117-437a-a097-aaf06de2fe1e
+langcode: en
+status: true
+dependencies: {  }
+id: agenda_items
+label: 'Agenda items'
+icon_uuid: null
+description: 'Migrated from field_collection field_agenda_items'
+behavior_plugins: {  }

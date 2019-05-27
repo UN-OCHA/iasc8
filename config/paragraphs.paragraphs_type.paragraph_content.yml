@@ -1,0 +1,9 @@
+uuid: 34ee4d23-be71-4c8e-9b9d-70740039d05d
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_content
+label: 'Related Content'
+icon_uuid: null
+description: 'Migrated from paragraph bundle Related Content'
+behavior_plugins: {  }

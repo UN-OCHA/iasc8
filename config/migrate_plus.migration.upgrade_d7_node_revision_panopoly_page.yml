@@ -1,0 +1,118 @@
+uuid: 98a5b912-1c2e-4c96-a8f9-8227822e1624
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_panopoly_page
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Content Page)'
+source:
+  plugin: d7_node_revision
+  node_type: panopoly_page
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_panopoly_page/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_featured_categories:
+    -
+      plugin: sub_process
+      source: field_featured_categories
+      process:
+        target_id: tid
+  field_featured_image:
+    -
+      plugin: sub_process
+      source: field_featured_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_featured_status:
+    -
+      plugin: get
+      source: field_featured_status
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: panopoly_page
+migration_dependencies:
+  required:
+    - upgrade_d7_node_action_point
+    - upgrade_d7_node_announcement
+    - upgrade_d7_node_contact
+    - upgrade_d7_node_oa_discussion_post
+    - upgrade_d7_node_oa_event
+    - upgrade_d7_node_oa_group
+    - upgrade_d7_node_oa_ical_importer
+    - upgrade_d7_node_oa_section
+    - upgrade_d7_node_oa_space
+    - upgrade_d7_node_oa_team
+    - upgrade_d7_node_oa_wiki_page
+    - upgrade_d7_node_oa_worktracker_task
+    - upgrade_d7_node_panopoly_landing_page
+    - upgrade_d7_node_panopoly_page
+  optional: {  }

@@ -1,0 +1,9 @@
+uuid: 37f13066-cf01-4e8a-8209-98110a419889
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_snippet
+label: Snippet
+icon_uuid: null
+description: 'Migrated from paragraph bundle Snippet'
+behavior_plugins: {  }

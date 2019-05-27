@@ -1,0 +1,9 @@
+uuid: 39a949ed-eca6-4672-a914-5b292b306b2f
+langcode: en
+status: true
+dependencies: {  }
+id: membership
+label: Membership
+icon_uuid: null
+description: 'Migrated from field_collection field_membership'
+behavior_plugins: {  }
