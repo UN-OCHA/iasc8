@@ -22,3 +22,12 @@ function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $sour
       break;
   }
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Adds a user to the respective group identified.
+ */
+function iasc_migrate_user_insert(EntityInterface $entity) {
+  $add = (new IascMigrateGroup($entity))->addUserToGroup('field_iasc_group_space');
+}
