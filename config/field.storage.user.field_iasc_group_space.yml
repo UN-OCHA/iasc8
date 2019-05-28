@@ -1,16 +1,16 @@
-uuid: 2509dac7-7a41-4c12-ae77-f191340a85af
-langcode: und
+uuid: 964d06d4-2fd4-419f-a58c-8407d5f46536
+langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - group
     - user
-id: user.og_user_node
-field_name: og_user_node
+id: user.field_iasc_group_space
+field_name: field_iasc_group_space
 entity_type: user
 type: entity_reference
 settings:
-  target_type: node
+  target_type: group
 module: core
 locked: false
 cardinality: -1

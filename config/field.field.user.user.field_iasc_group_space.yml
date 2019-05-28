@@ -1,0 +1,31 @@
+uuid: 01e521bf-8743-4b87-a3e9-7fff5b5ddcd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_iasc_group_space
+    - group.type.iasc_group
+    - group.type.iasc_space
+  module:
+    - user
+id: user.user.field_iasc_group_space
+field_name: field_iasc_group_space
+entity_type: user
+bundle: user
+label: Group/Space
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      iasc_group: iasc_group
+      iasc_space: iasc_space
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: iasc_group
+field_type: entity_reference

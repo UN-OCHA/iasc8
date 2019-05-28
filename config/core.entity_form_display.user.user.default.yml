@@ -4,17 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_first_name
+    - field.field.user.user.field_iasc_group_space
     - field.field.user.user.field_last_name
     - field.field.user.user.field_user_about
     - field.field.user.user.field_user_display_name
     - field.field.user.user.field_user_picture
-    - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - field_layout
     - image
     - layout_discovery
+    - path
     - text
     - user
 third_party_settings:
@@ -41,6 +42,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_iasc_group_space:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_last_name:
     weight: 5
@@ -95,5 +105,4 @@ content:
     weight: 7
     third_party_settings: {  }
     region: content
-hidden:
-  og_user_node: true
+hidden: {  }
