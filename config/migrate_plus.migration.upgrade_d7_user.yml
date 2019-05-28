@@ -14,6 +14,7 @@ label: 'User accounts'
 source:
   plugin: d7_group_user
 process:
+  field_iasc_group_space: gids
   uid:
     -
       plugin: get
