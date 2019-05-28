@@ -113,7 +113,7 @@ process:
       plugin: get
       source: field_last_name
 destination:
-  plugin: 'entity:user'
+  plugin: custom_user
 migration_dependencies:
   required:
     - upgrade_d7_user_role
