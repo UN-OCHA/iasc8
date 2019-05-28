@@ -1,0 +1,17 @@
+uuid: 9dfc7b16-f74a-4607-8e68-c68bfc08a211
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+  enforced:
+    config:
+      - user.role.administrator
+id: iasc_space-a416e6833
+label: administrator
+weight: 2
+internal: true
+audience: outsider
+group_type: iasc_space
+permissions_ui: false
+permissions: {  }

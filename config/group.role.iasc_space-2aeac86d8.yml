@@ -1,0 +1,17 @@
+uuid: 3438c9c3-67f0-4f20-8fc7-0af7f527c4a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+  enforced:
+    config:
+      - user.role.space_super_admin
+id: iasc_space-2aeac86d8
+label: 'space super admin'
+weight: 7
+internal: true
+audience: outsider
+group_type: iasc_space
+permissions_ui: false
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: d3b9e540-07ef-4166-ba09-9d803d46c5fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+id: iasc_space-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: iasc_space
+permissions_ui: true
+permissions: {  }

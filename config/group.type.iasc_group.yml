@@ -1,0 +1,11 @@
+uuid: 9576d715-8287-4c0c-aff3-5e319180611c
+langcode: en
+status: true
+dependencies: {  }
+id: iasc_group
+label: Group
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles:
+  - iasc_group-admin

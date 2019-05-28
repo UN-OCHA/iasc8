@@ -1,0 +1,17 @@
+uuid: 23dd2d11-1e97-4650-8993-0ccf8458b2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+  enforced:
+    config:
+      - user.role.focal_point
+id: iasc_group-013c93403
+label: 'Focal Point'
+weight: 8
+internal: true
+audience: outsider
+group_type: iasc_group
+permissions_ui: false
+permissions: {  }

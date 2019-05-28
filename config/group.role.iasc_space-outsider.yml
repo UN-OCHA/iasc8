@@ -1,0 +1,14 @@
+uuid: 5d648d40-ee76-44b0-b260-a6b8495e5060
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+id: iasc_space-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: iasc_space
+permissions_ui: true
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: 761ec07c-99ee-4e11-aa58-01979df9591e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+id: iasc_group-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: iasc_group
+permissions_ui: true
+permissions: {  }

@@ -1,0 +1,22 @@
+uuid: 805fcd6c-ae91-499e-9368-7d355a7658f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.group_roles
+    - group.content_type.iasc_group-group_membership
+id: group_content.iasc_group-group_membership.group_roles
+field_name: group_roles
+entity_type: group_content
+bundle: iasc_group-group_membership
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: iasc_group
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 4534f28e-16cb-4c35-9179-7ab26305a687
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+id: iasc_space-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: iasc_space
+permissions_ui: true
+permissions: {  }

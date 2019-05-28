@@ -1,0 +1,24 @@
+uuid: cb94750e-661e-4ad1-8a82-55afa94c2cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+id: iasc_space-admin
+label: Admin
+weight: 100
+internal: false
+audience: member
+group_type: iasc_space
+permissions_ui: true
+permissions:
+  - 'access content overview'
+  - 'administer group'
+  - 'delete group'
+  - 'edit group'
+  - 'view group'
+  - 'administer members'
+  - 'update own group_membership content'
+  - 'leave group'
+  - 'view group_membership content'
+  - 'access group_node overview'

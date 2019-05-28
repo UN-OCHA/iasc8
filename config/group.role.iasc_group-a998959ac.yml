@@ -1,0 +1,17 @@
+uuid: 0a319ce4-e6fe-49a6-94af-3561779f2a1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+  enforced:
+    config:
+      - user.role.viewer
+id: iasc_group-a998959ac
+label: viewer
+weight: 5
+internal: true
+audience: outsider
+group_type: iasc_group
+permissions_ui: false
+permissions: {  }
