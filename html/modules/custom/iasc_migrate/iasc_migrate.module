@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Row;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_migrate_prepare_row().
+ */
+function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+
+  switch ($migration->id()) {
+    case 'upgrade_d7_node_oa_group':
+    case 'upgrade_d7_node_oa_space':
+      // Slugify the title then set that as the alias for the group
+      $title = $row->getSourceProperty('title');
+      $alias = Html::cleanCssIdentifier($title);
+      $alias = '/'. strtolower($alias);
+      $row->setSourceProperty('alias', $alias);
+
+      break;
+  }
+}

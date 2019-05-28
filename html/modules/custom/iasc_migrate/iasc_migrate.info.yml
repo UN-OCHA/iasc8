@@ -1,0 +1,5 @@
+name: IASC Migrate
+type: module
+description: 'Migrate functionality.'
+package: IASC
+core: '8.x'

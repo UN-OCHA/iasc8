@@ -2,6 +2,8 @@
 
 ## Migrate
 
+drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only 
+
 ### OG to groups
 
 https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
