@@ -34,7 +34,12 @@ $databases['migrate']['default'] = array (
 ### Import OA groups and spaces
 
 https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
-`fin drush mim --group=oa_group_space --verbose`
+
+```
+fin drush mim --group=oa_group_space --verbose
+fin drush mim --verbose upgrade_d7_user_role
+fin drush mim --verbose upgrade_d7_user
+```
 
 ### Modules from IASC 7
 

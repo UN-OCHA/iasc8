@@ -4,6 +4,7 @@ use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Row;
 use Drupal\Component\Utility\Html;
+use Drupal\iasc_migrate\IascMigrateGroup;
 
 /**
  * Implements hook_migrate_prepare_row().
@@ -28,6 +29,6 @@ function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $sour
  *
  * Adds a user to the respective group identified.
  */
-function iasc_migrate_user_insert(EntityInterface $entity) {
+function iasc_migrate_user_insert($entity) {
   $add = (new IascMigrateGroup($entity))->addUserToGroup('field_iasc_group_space');
 }
