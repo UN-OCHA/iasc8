@@ -1,0 +1,19 @@
+uuid: fa32e2ca-7b92-41b9-809d-6c701b4f79eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+    - node.type.action_point
+  module:
+    - gnode
+    - node
+id: group_content_type_3fedbd829dd81
+label: 'Group: Group node (Action Point)'
+description: 'Adds <em class="placeholder">Action Point</em> content to groups both publicly and privately.'
+group_type: iasc_group
+content_plugin: 'group_node:action_point'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

@@ -12,7 +12,7 @@ migration_tags:
 migration_group: migrate_drupal_7
 label: 'User accounts'
 source:
-  plugin: d7_user
+  plugin: d7_group_user
 process:
   uid:
     -

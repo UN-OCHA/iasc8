@@ -1,0 +1,20 @@
+uuid: 038fa498-5115-45f9-b5db-3318e7b80a5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - node
+id: node.field_iasc_audience
+field_name: field_iasc_audience
+entity_type: node
+type: entity_reference
+settings:
+  target_type: group
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

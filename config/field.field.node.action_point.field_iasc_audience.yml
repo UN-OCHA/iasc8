@@ -1,0 +1,30 @@
+uuid: 37eea8f1-c249-4526-b4a5-f967c11457d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iasc_audience
+    - group.type.iasc_group
+    - group.type.iasc_space
+    - node.type.action_point
+id: node.action_point.field_iasc_audience
+field_name: field_iasc_audience
+entity_type: node
+bundle: action_point
+label: Audience
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      iasc_group: iasc_group
+      iasc_space: iasc_space
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: iasc_group
+field_type: entity_reference

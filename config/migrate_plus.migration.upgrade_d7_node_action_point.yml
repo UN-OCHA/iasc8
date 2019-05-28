@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: upgrade_d7_node_action_point
 class: Drupal\migrate\Plugin\Migration
-field_plugin_method: alterFieldInstanceMigration
+field_plugin_method: null
 cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
@@ -12,9 +12,10 @@ migration_tags:
 migration_group: migrate_drupal_7
 label: 'Nodes (Action Point)'
 source:
-  plugin: d7_node
+  plugin: d7_node_custom
   node_type: action_point
 process:
+  field_iasc_audience: gids
   nid:
     -
       plugin: get

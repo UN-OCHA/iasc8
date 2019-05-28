@@ -41,6 +41,11 @@ fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
 ```
 
+```
+fin drush mim --verbose upgrade_d7_node_type
+fin drush mim --verbose upgrade_d7_node_action_point
+```
+
 ### Modules from IASC 7
 
 composer require drupal/admin_views

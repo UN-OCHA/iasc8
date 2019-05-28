@@ -12,7 +12,7 @@ class IascMigrateGroup {
   protected $entity;
 
   /**
-   * DgreatGroup constructor.
+   * Constructor.
    */
   public function __construct($entity) {
     $this->entity = $entity;
@@ -38,6 +38,47 @@ class IascMigrateGroup {
         if ($group !== NULL) {
           $group->addMember($this->entity);
         }
+      }
+    }
+
+    // Fail safe return
+    return FALSE;
+  }
+
+  /**
+   * Adds a node to a group specified by a ER field on the node.
+   *
+   * @param $field
+   *   The field we are using as a reference for the group.
+   *
+   * @return bool
+   */
+  public function addNodeToGroup($field) {
+    $plugin_id = 'group_node:' . $this->entity->bundle();
+    $group_ids = $this->entity->get($field)->getValue();
+
+    foreach ($group_ids as $group_id) {
+      // If it is assigned, then lets do the magix.
+      if (isset($group_id['target_id'])) {
+
+        $group = Group::load($group_id['target_id']);
+
+        // Unpublished groups were not migrated.
+        // This prevents the failure due to this.
+        if ($group === NULL) {
+          continue;
+        }
+
+        // Lets remove the existing content to prevent errors.
+        $check = $group->getContentByEntityId($plugin_id, $this->entity->id());
+        if (!empty($check)) {
+          foreach ($check as $g) {
+            $g->delete();
+          }
+        }
+
+        // Add the content to the group.
+        $group->addContent($this->entity, $plugin_id);
       }
     }
 

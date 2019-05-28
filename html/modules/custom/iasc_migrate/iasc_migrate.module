@@ -32,3 +32,16 @@ function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $sour
 function iasc_migrate_user_insert($entity) {
   $add = (new IascMigrateGroup($entity))->addUserToGroup('field_iasc_group_space');
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Adds a node to the respective group identified.
+ */
+function iasc_migrate_node_insert($entity) {
+  switch ($entity->bundle()) {
+    case 'action_point':
+      $add = (new IascMigrateGroup($entity))->addNodeToGroup('field_iasc_audience');
+      break;
+  }
+}
