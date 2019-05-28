@@ -24,6 +24,11 @@ targetEntityType: node
 bundle: article
 mode: rss
 content:
+  flag_bookmark:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content

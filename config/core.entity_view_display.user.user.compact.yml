@@ -28,6 +28,11 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  flag_following:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   user_picture:
     type: image
     weight: 0
@@ -45,3 +50,4 @@ hidden:
   field_user_picture: true
   member_for: true
   og_user_node: true
+  realname: true

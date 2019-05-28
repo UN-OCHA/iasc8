@@ -1,12 +1,40 @@
 # IASC 8
 
+## Config
+
+```
+// Docksal DB connection settings.
+$databases['default']['default'] = array (
+	'database' => 'default',
+	'username' => 'user',
+	'password' => 'user',
+	'host' => 'db',
+	'driver' => 'mysql',
+);
+
+$databases['migrate']['default'] = array (
+	'database' => 'd7',
+	'username' => 'user',
+	'password' => 'user',
+	'host' => 'db',
+	'driver' => 'mysql',
+);
+```
+
 ## Migrate
 
-drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only 
+### Install from config
 
-### OG to groups
+`fin drush si --existing-config --account-pass=admin`
+
+### Create skeleton
+
+`drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only `
+
+### Import OA groups and spaces
 
 https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
+`fin drush mim --group=oa_group_space --verbose`
 
 ### Modules from IASC 7
 
