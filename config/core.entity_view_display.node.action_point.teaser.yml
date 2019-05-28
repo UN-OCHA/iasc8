@@ -52,5 +52,6 @@ hidden:
   field_ap_topic: true
   field_contact: true
   field_date: true
+  field_iasc_audience: true
   group_content_access: true
   og_group_ref: true
