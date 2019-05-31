@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.oa_discussion_post.body
     - field.field.node.oa_discussion_post.comment_node_oa_discussion_post
+    - field.field.node.oa_discussion_post.field_iasc_audience
     - field.field.node.oa_discussion_post.field_oa_media
     - field.field.node.oa_discussion_post.oa_section_ref
     - field.field.node.oa_discussion_post.og_group_ref
@@ -47,6 +48,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_oa_media:
     weight: 5
     type: file_generic

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.announcement.body
     - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
+    - field.field.node.announcement.field_iasc_audience
     - field.field.node.announcement.field_legacy_publish
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
@@ -59,6 +60,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_legacy_publish:
     weight: 8

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.oa_worktracker_task.field_date
     - field.field.node.oa_worktracker_task.field_description_implementation
     - field.field.node.oa_worktracker_task.field_evaluation_title
+    - field.field.node.oa_worktracker_task.field_iasc_audience
     - field.field.node.oa_worktracker_task.field_oa_media
     - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
     - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
@@ -89,6 +90,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_oa_media:
     weight: 5

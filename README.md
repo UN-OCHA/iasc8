@@ -25,7 +25,7 @@ $databases['migrate']['default'] = array (
 
 ### Install from config
 
-`fin drush si --existing-config --account-pass=admin`
+`fin --verbose -y drush si --existing-config --account-pass="admin"`
 
 ### Create skeleton
 
@@ -36,7 +36,7 @@ $databases['migrate']['default'] = array (
 https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
 
 ```
-fin drush mim --group=oa_group_space --verbose
+fin drush mim --verbose --group=oa_group_space
 fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
 ```
@@ -44,6 +44,14 @@ fin drush mim --verbose upgrade_d7_user
 ```
 fin drush mim --verbose upgrade_d7_node_type
 fin drush mim --verbose upgrade_d7_node_action_point
+fin drush mim --verbose upgrade_d7_node_announcement
+fin drush mim --verbose upgrade_d7_node_oa_discussion_post
+fin drush mim --verbose upgrade_d7_node_oa_wiki_page
+fin drush mim --verbose upgrade_d7_node_oa_event
+fin drush mim --verbose upgrade_d7_node_oa_ical_importer
+fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
+fin drush mim --verbose upgrade_d7_node_oa_team
+fin drush mim --verbose upgrade_d7_node_oa_section
 ```
 
 ### Modules from IASC 7

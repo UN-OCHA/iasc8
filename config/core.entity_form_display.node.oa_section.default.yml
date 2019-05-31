@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.oa_section.body
     - field.field.node.oa_section.comment_node_oa_section
+    - field.field.node.oa_section.field_iasc_audience
     - field.field.node.oa_section.field_oa_group_ref
     - field.field.node.oa_section.field_oa_node_types
     - field.field.node.oa_section.field_oa_section
@@ -50,6 +51,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_oa_node_types:
     weight: 6
     type: options_buttons

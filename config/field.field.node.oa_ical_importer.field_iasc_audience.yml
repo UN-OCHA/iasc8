@@ -1,0 +1,30 @@
+uuid: c2f5e7bb-8e03-42ce-9b09-c68a4f17668a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iasc_audience
+    - group.type.iasc_group
+    - group.type.iasc_space
+    - node.type.oa_ical_importer
+id: node.oa_ical_importer.field_iasc_audience
+field_name: field_iasc_audience
+entity_type: node
+bundle: oa_ical_importer
+label: Audience
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      iasc_group: iasc_group
+      iasc_space: iasc_space
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: iasc_group
+field_type: entity_reference

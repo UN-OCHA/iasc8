@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.oa_team.body
     - field.field.node.oa_team.comment_node_oa_team
+    - field.field.node.oa_team.field_iasc_audience
     - field.field.node.oa_team.field_oa_team_users
     - field.field.node.oa_team.og_group_ref
     - node.type.oa_team
@@ -44,6 +45,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   path:
     type: path
     weight: 30

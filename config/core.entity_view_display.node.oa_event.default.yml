@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.oa_event.field_contact
     - field.field.node.oa_event.field_dial_in_meeting
     - field.field.node.oa_event.field_host
+    - field.field.node.oa_event.field_iasc_audience
     - field.field.node.oa_event.field_info_private
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
@@ -85,6 +86,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
+  field_iasc_audience:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_info_private:
     label: above

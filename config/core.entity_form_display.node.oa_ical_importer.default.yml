@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.oa_ical_importer.body
     - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
     - field.field.node.oa_ical_importer.field_basic_file_file
+    - field.field.node.oa_ical_importer.field_iasc_audience
     - field.field.node.oa_ical_importer.oa_section_ref
     - field.field.node.oa_ical_importer.og_group_ref
     - node.type.oa_ical_importer
@@ -52,6 +53,15 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
+    region: content
+  field_iasc_audience:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   oa_section_ref:
     weight: 2

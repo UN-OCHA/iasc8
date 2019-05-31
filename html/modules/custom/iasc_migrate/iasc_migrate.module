@@ -41,6 +41,14 @@ function iasc_migrate_user_insert($entity) {
 function iasc_migrate_node_insert($entity) {
   switch ($entity->bundle()) {
     case 'action_point':
+    case 'announcement':
+    case 'oa_discussion_post':
+    case 'oa_event':
+    case 'oa_ical_importer':
+    case 'oa_section':
+    case 'oa_team':
+    case 'oa_wiki_page':
+    case 'oa_worktracker_task':
       $add = (new IascMigrateGroup($entity))->addNodeToGroup('field_iasc_audience');
       break;
   }
