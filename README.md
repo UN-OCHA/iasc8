@@ -49,6 +49,14 @@ fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
 ```
 
 ```
+fin drush mim --verbose upgrade_d7_field
+fin drush mim --verbose upgrade_d7_field_instance
+fin drush mim --verbose upgrade_d7_field_instance_widget_settings
+fin drush mim --verbose upgrade_d7_view_modes
+fin drush mim --verbose upgrade_d7_field_formatter_settings
+```
+
+```
 fin drush mim --verbose --group=oa_group_space
 fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
@@ -70,6 +78,56 @@ fin drush mim --verbose upgrade_d7_node_oa_section
 ```
 fin drush mim --verbose upgrade_d7_field_collection_type
 fin drush mim --verbose upgrade_d7_paragraphs_type
+```
+
+### Migrate errors
+
+#### fin drush mim --verbose upgrade_d7_field
+```
+ [error]  The "command_button" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "command_button" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  Attempt to create a field storage field_basic_spotlight_items with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  Attempt to create a field storage field_basic_table_table with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message_type" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "og_membership" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "oa_wizard" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "oa_wizard" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  Attempt to create a field storage field_additional_timezone with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  Attempt to create a field storage field_geofield_additional_city with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  Attempt to create a field storage field_primary_geofield with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  Attempt to create a field storage field_primary_timezone with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  Attempt to create a field storage field_registration with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
+ [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
+ [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
 ```
 
 ### Modules from IASC 7
