@@ -10,6 +10,7 @@ dependencies:
     - field.field.user.user.field_user_about
     - field.field.user.user.field_user_display_name
     - field.field.user.user.field_user_picture
+    - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
   module:
     - field_layout
@@ -41,5 +42,6 @@ hidden:
   field_user_about: true
   field_user_display_name: true
   field_user_picture: true
+  og_user_node: true
   realname: true
   user_picture: true

@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_user_about
     - field.field.user.user.field_user_display_name
     - field.field.user.user.field_user_picture
+    - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -105,4 +106,5 @@ content:
     weight: 7
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  og_user_node: true

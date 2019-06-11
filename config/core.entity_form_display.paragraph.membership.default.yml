@@ -1,0 +1,49 @@
+uuid: 7ce887bb-3fc5-46a7-b2e3-67494abbb46f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.membership.field_body_membership
+    - field.field.paragraph.membership.field_contact_category
+    - field.field.paragraph.membership.field_position
+    - paragraphs.paragraphs_type.membership
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.membership.default
+targetEntityType: paragraph
+bundle: membership
+mode: default
+content:
+  field_body_membership:
+    weight: 0
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_contact_category:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_position:
+    weight: 1
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.action_point.field_ap_topic
     - field.field.node.action_point.field_contact
     - field.field.node.action_point.field_date
+    - field.field.node.action_point.field_iasc_audience
     - field.field.node.action_point.group_content_access
     - field.field.node.action_point.og_group_ref
     - node.type.action_point

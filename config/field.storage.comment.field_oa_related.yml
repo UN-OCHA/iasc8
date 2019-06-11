@@ -1,0 +1,21 @@
+uuid: 371b2037-1626-42be-aea0-ead91f2dcc1e
+langcode: und
+status: true
+dependencies:
+  module:
+    - comment
+    - entity_reference_revisions
+    - paragraphs
+id: comment.field_oa_related
+field_name: field_oa_related
+entity_type: comment
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

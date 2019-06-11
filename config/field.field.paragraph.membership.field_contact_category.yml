@@ -1,0 +1,19 @@
+uuid: 88793357-66b7-403f-9d05-93dee9cf337d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_category
+    - paragraphs.paragraphs_type.membership
+id: paragraph.membership.field_contact_category
+field_name: field_contact_category
+entity_type: paragraph
+bundle: membership
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

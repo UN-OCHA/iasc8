@@ -1,0 +1,23 @@
+uuid: 6488a948-9f40-4028-84d1-98ccab8e6c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_snippet_viewmode
+    - paragraphs.paragraphs_type.paragraph_snippet
+  module:
+    - options
+id: paragraph.paragraph_snippet.field_snippet_viewmode
+field_name: field_snippet_viewmode
+entity_type: paragraph
+bundle: paragraph_snippet
+label: 'View Mode'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

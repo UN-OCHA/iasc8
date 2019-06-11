@@ -1,0 +1,33 @@
+uuid: f71385ed-64d5-4e3f-8e4f-5ad75977f0d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_panopoly_page
+    - field.storage.comment.field_oa_related
+    - paragraphs.paragraphs_type.paragraph_content
+    - paragraphs.paragraphs_type.paragraph_media
+    - paragraphs.paragraphs_type.paragraph_snippet
+    - paragraphs.paragraphs_type.paragraph_text
+  module:
+    - entity_reference_revisions
+id: comment.comment_node_panopoly_page.field_oa_related
+field_name: field_oa_related
+entity_type: comment
+bundle: comment_node_panopoly_page
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paragraph_content: paragraph_content
+      paragraph_media: paragraph_media
+      paragraph_snippet: paragraph_snippet
+      paragraph_text: paragraph_text
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

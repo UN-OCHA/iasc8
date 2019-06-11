@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.bio_full_
     - field.field.node.contact.body
     - field.field.node.contact.comment_node_contact
+    - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
     - field.field.node.contact.field_email
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.contact.field_homepage
     - field.field.node.contact.field_last_name
     - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_membership
     - field.field.node.contact.field_mobile
     - field.field.node.contact.field_organisation
     - field.field.node.contact.field_phone
@@ -22,6 +24,8 @@ dependencies:
     - field.field.node.contact.field_title
     - node.type.contact
   module:
+    - address
+    - entity_reference_revisions
     - field_layout
     - image
     - layout_discovery
@@ -36,6 +40,13 @@ targetEntityType: node
 bundle: contact
 mode: bio_full_
 content:
+  field_address:
+    label: above
+    weight: 10
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_branch:
     label: above
     weight: 3
@@ -78,6 +89,15 @@ content:
       url_plain: false
       rel: ''
       target: ''
+    third_party_settings: {  }
+    region: content
+  field_membership:
+    label: above
+    weight: 12
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
     third_party_settings: {  }
     region: content
   field_mobile:

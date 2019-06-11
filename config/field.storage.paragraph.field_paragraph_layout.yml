@@ -1,0 +1,39 @@
+uuid: efcfe913-d560-41a1-9a61-6982d3deab8b
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_layout
+field_name: field_paragraph_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2'
+      label: '2 column'
+    -
+      value: '3'
+      label: '3 column'
+    -
+      value: '4'
+      label: '4 column'
+    -
+      value: full
+      label: Callout
+    -
+      value: left
+      label: 'Callout Left'
+    -
+      value: right
+      label: 'Callout Right'
+  allowed_values_function: oa_related_paragraphs_field_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

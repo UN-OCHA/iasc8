@@ -5,7 +5,9 @@ dependencies:
   config:
     - comment.type.comment_node_panopoly_page
     - field.field.comment.comment_node_panopoly_page.comment_body
+    - field.field.comment.comment_node_panopoly_page.field_oa_related
   module:
+    - entity_reference_revisions
     - field_layout
     - layout_discovery
     - text
@@ -23,6 +25,15 @@ content:
     weight: 0
     type: text_default
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_related:
+    label: hidden
+    weight: 1
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
     third_party_settings: {  }
     region: content
   links:

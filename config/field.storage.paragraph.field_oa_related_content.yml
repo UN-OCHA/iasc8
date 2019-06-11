@@ -1,0 +1,20 @@
+uuid: f942fd78-0a78-48d0-88fa-0e5e3f3b20a5
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_oa_related_content
+field_name: field_oa_related_content
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

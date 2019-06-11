@@ -1,0 +1,20 @@
+uuid: 6d0609b1-6965-41d0-b3d2-ea9e5513ef8b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_body_membership
+field_name: field_body_membership
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

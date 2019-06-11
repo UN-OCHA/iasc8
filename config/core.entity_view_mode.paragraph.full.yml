@@ -1,0 +1,10 @@
+uuid: 4526fa4e-400d-4b7b-87fd-7570b8adf0fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.full
+label: Full
+targetEntityType: paragraph
+cache: true

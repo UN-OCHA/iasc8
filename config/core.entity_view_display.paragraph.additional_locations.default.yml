@@ -1,0 +1,28 @@
+uuid: 18695808-b538-4819-ba7d-5ba26468dd99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_locations.field_additional_city
+    - paragraphs.paragraphs_type.additional_locations
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.additional_locations.default
+targetEntityType: paragraph
+bundle: additional_locations
+mode: default
+content:
+  field_additional_city:
+    label: above
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,30 @@
+uuid: d13ee465-8fe0-4b34-bfe2-3b6a87018e13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_snippet_content
+    - paragraphs.paragraphs_type.paragraph_snippet
+id: paragraph.paragraph_snippet.field_snippet_content
+field_name: field_snippet_content
+entity_type: paragraph
+bundle: paragraph_snippet
+label: 'Snippet content'
+description: 'Select the content you want to reference as a text snippet.  The body field of that content will be shown as this paragraph text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    lock_revision: 0
+    reference_revisions: 1
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles: null
+field_type: entity_reference

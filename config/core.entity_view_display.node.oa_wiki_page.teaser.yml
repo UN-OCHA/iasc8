@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.oa_wiki_page.field_category
     - field.field.node.oa_wiki_page.field_document_no
     - field.field.node.oa_wiki_page.field_document_type
+    - field.field.node.oa_wiki_page.field_iasc_audience
     - field.field.node.oa_wiki_page.field_legacy_publish
     - field.field.node.oa_wiki_page.field_oa_media
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
@@ -86,6 +87,7 @@ hidden:
   comment_node_oa_wiki_page: true
   field_category: true
   field_document_type: true
+  field_iasc_audience: true
   field_legacy_publish: true
   field_oa_media: true
   field_oa_wiki_page_no_redirect: true

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
+    - field.field.node.oa_event.field_additional_locations
+    - field.field.node.oa_event.field_agenda_items
     - field.field.node.oa_event.field_city
     - field.field.node.oa_event.field_contact
     - field.field.node.oa_event.field_dial_in_meeting
@@ -27,6 +29,7 @@ dependencies:
     - datetime
     - field_layout
     - layout_discovery
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -59,6 +62,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_additional_locations:
+    weight: 4
+    type: entity_reference_paragraphs
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_agenda_items:
+    weight: 11
+    type: entity_reference_paragraphs
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_city:
     weight: 7
     type: string_textfield

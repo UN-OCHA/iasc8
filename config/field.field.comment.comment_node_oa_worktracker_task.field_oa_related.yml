@@ -1,0 +1,33 @@
+uuid: 04acf036-e66f-4f56-8e73-127ef4538456
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_oa_worktracker_task
+    - field.storage.comment.field_oa_related
+    - paragraphs.paragraphs_type.paragraph_content
+    - paragraphs.paragraphs_type.paragraph_media
+    - paragraphs.paragraphs_type.paragraph_snippet
+    - paragraphs.paragraphs_type.paragraph_text
+  module:
+    - entity_reference_revisions
+id: comment.comment_node_oa_worktracker_task.field_oa_related
+field_name: field_oa_related
+entity_type: comment
+bundle: comment_node_oa_worktracker_task
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paragraph_content: paragraph_content
+      paragraph_media: paragraph_media
+      paragraph_snippet: paragraph_snippet
+      paragraph_text: paragraph_text
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

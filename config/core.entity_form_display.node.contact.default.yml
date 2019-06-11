@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.contact.body
     - field.field.node.contact.comment_node_contact
+    - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
     - field.field.node.contact.field_email
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.contact.field_homepage
     - field.field.node.contact.field_last_name
     - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_membership
     - field.field.node.contact.field_mobile
     - field.field.node.contact.field_organisation
     - field.field.node.contact.field_phone
@@ -21,11 +23,13 @@ dependencies:
     - field.field.node.contact.field_title
     - node.type.contact
   module:
+    - address
     - comment
     - field_layout
     - file
     - layout_discovery
     - link
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -58,6 +62,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_address:
+    weight: 25
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_branch:
     weight: 28
     type: string_textfield
@@ -119,6 +129,18 @@ content:
     type: number
     settings:
       placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_membership:
+    weight: 7
+    type: entity_reference_paragraphs
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
     region: content
   field_mobile:

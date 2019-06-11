@@ -1,0 +1,30 @@
+uuid: 67e8acba-9ef8-4a9d-a525-50a9f7a77f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_membership
+    - node.type.oa_space
+    - paragraphs.paragraphs_type.membership
+id: paragraph.membership.field_body_membership
+field_name: field_body_membership
+entity_type: paragraph
+bundle: membership
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 1
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+field_type: entity_reference

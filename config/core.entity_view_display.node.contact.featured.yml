@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.featured
     - field.field.node.contact.body
     - field.field.node.contact.comment_node_contact
+    - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
     - field.field.node.contact.field_email
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.contact.field_homepage
     - field.field.node.contact.field_last_name
     - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_membership
     - field.field.node.contact.field_mobile
     - field.field.node.contact.field_organisation
     - field.field.node.contact.field_phone
@@ -42,6 +44,7 @@ content:
 hidden:
   body: true
   comment_node_contact: true
+  field_address: true
   field_branch: true
   field_department: true
   field_email: true
@@ -50,6 +53,7 @@ hidden:
   field_homepage: true
   field_last_name: true
   field_legacy_id: true
+  field_membership: true
   field_mobile: true
   field_organisation: true
   field_phone: true

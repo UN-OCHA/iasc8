@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.featured
+    - field.field.taxonomy_term.hosts.field_addresses
     - field.field.taxonomy_term.hosts.field_homepage
     - field.field.taxonomy_term.hosts.field_logo
     - field.field.taxonomy_term.hosts.field_long_name
@@ -30,6 +31,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_addresses: true
   field_homepage: true
   field_logo: true
   field_long_name: true

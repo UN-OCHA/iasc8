@@ -1,0 +1,49 @@
+uuid: abd20dd0-6de1-4f05-b54b-61371f195455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_locations
+    - node.type.oa_event
+    - paragraphs.paragraphs_type.additional_locations
+  module:
+    - entity_reference_revisions
+id: node.oa_event.field_additional_locations
+field_name: field_additional_locations
+entity_type: node
+bundle: oa_event
+label: 'Additional locations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      additional_locations: additional_locations
+    target_bundles_drag_drop:
+      additional_locations:
+        enabled: true
+        weight: 1
+      agenda_items:
+        enabled: false
+        weight: 2
+      membership:
+        enabled: false
+        weight: 3
+      paragraph_content:
+        enabled: false
+        weight: 4
+      paragraph_media:
+        enabled: false
+        weight: 5
+      paragraph_snippet:
+        enabled: false
+        weight: 6
+      paragraph_text:
+        enabled: false
+        weight: 7
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

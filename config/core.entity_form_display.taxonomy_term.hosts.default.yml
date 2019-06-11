@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.hosts.field_addresses
     - field.field.taxonomy_term.hosts.field_homepage
     - field.field.taxonomy_term.hosts.field_logo
     - field.field.taxonomy_term.hosts.field_long_name
     - field.field.taxonomy_term.hosts.field_membership_level
     - taxonomy.vocabulary.hosts
   module:
+    - address
     - field_layout
     - file
     - layout_discovery
@@ -32,6 +34,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_addresses:
+    weight: 31
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_homepage:
     weight: 6
     type: link_default

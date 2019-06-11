@@ -1,0 +1,57 @@
+uuid: 1d9763dd-9522-4c0b-9ec6-31f38dde1d9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.agenda_items.field_ai_description
+    - field.field.paragraph.agenda_items.field_ai_title
+    - field.field.paragraph.agenda_items.field_contact
+    - field.field.paragraph.agenda_items.field_presenter_external
+    - field.field.paragraph.agenda_items.field_referenced_docs
+    - paragraphs.paragraphs_type.agenda_items
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.agenda_items.default
+targetEntityType: paragraph
+bundle: agenda_items
+mode: default
+content:
+  field_ai_description:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ai_title:
+    label: hidden
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_contact:
+    label: inline
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_referenced_docs:
+    label: hidden
+    weight: 5
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_presenter_external: true

@@ -1,0 +1,21 @@
+uuid: 4d27a011-73c0-426c-a547-ed2234744151
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_snippet_showtitle
+    - paragraphs.paragraphs_type.paragraph_snippet
+id: paragraph.paragraph_snippet.field_snippet_showtitle
+field_name: field_snippet_showtitle
+entity_type: paragraph
+bundle: paragraph_snippet
+label: 'Show Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

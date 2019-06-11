@@ -1,0 +1,24 @@
+uuid: 478df674-b4ca-4b8e-8d4d-a3e94ab528ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.paragraph_media.field_image_alignment
+    - field.field.paragraph.paragraph_media.field_oa_media
+    - paragraphs.paragraphs_type.paragraph_media
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.paragraph_media.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: paragraph_media
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_image_alignment: true
+  field_oa_media: true

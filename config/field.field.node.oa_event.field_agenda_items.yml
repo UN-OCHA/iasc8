@@ -1,0 +1,49 @@
+uuid: 7274ab24-2113-4169-9553-03aa3357c710
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agenda_items
+    - node.type.oa_event
+    - paragraphs.paragraphs_type.agenda_items
+  module:
+    - entity_reference_revisions
+id: node.oa_event.field_agenda_items
+field_name: field_agenda_items
+entity_type: node
+bundle: oa_event
+label: 'Meeting Documents'
+description: 'Please note: If the agenda item does not have a referenced Document then the agenda item will be public <em>if</em> the Meeting is public.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      agenda_items: agenda_items
+    target_bundles_drag_drop:
+      agenda_items:
+        enabled: true
+        weight: 1
+      additional_locations:
+        enabled: false
+        weight: 2
+      membership:
+        enabled: false
+        weight: 3
+      paragraph_content:
+        enabled: false
+        weight: 4
+      paragraph_media:
+        enabled: false
+        weight: 5
+      paragraph_snippet:
+        enabled: false
+        weight: 6
+      paragraph_text:
+        enabled: false
+        weight: 7
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

@@ -1,0 +1,51 @@
+uuid: 949a86de-ba3d-4485-ab8a-5f46fb1761d2
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_image_alignment
+field_name: field_image_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Align Left'
+    -
+      value: right
+      label: 'Align Right'
+    -
+      value: center
+      label: Center
+    -
+      value: full
+      label: 'Full width'
+    -
+      value: grid2
+      label: '2 columns'
+    -
+      value: grid3
+      label: '3 columns'
+    -
+      value: grid4
+      label: '4 columns'
+    -
+      value: grid5
+      label: '5 columns'
+    -
+      value: preview
+      label: 'Preview listing'
+    -
+      value: table
+      label: 'Media file table'
+  allowed_values_function: oa_related_paragraphs_field_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

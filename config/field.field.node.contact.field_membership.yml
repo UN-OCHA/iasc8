@@ -1,0 +1,49 @@
+uuid: e815f533-845d-4292-bb88-e2e39f003092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_membership
+    - node.type.contact
+    - paragraphs.paragraphs_type.membership
+  module:
+    - entity_reference_revisions
+id: node.contact.field_membership
+field_name: field_membership
+entity_type: node
+bundle: contact
+label: 'Body Membership'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      membership: membership
+    target_bundles_drag_drop:
+      membership:
+        enabled: true
+        weight: 1
+      additional_locations:
+        enabled: false
+        weight: 2
+      agenda_items:
+        enabled: false
+        weight: 3
+      paragraph_content:
+        enabled: false
+        weight: 4
+      paragraph_media:
+        enabled: false
+        weight: 5
+      paragraph_snippet:
+        enabled: false
+        weight: 6
+      paragraph_text:
+        enabled: false
+        weight: 7
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

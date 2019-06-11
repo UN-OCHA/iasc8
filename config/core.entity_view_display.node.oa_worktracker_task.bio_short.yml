@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.oa_worktracker_task.field_date
     - field.field.node.oa_worktracker_task.field_description_implementation
     - field.field.node.oa_worktracker_task.field_evaluation_title
+    - field.field.node.oa_worktracker_task.field_iasc_audience
     - field.field.node.oa_worktracker_task.field_oa_media
     - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
     - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
@@ -48,6 +49,7 @@ hidden:
   field_date: true
   field_description_implementation: true
   field_evaluation_title: true
+  field_iasc_audience: true
   field_oa_media: true
   field_oa_worktracker_assigned_to: true
   field_oa_worktracker_priority: true

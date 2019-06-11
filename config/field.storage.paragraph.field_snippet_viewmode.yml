@@ -1,0 +1,30 @@
+uuid: 11d6110f-1e5f-4535-bb0f-8fda8671bbd6
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_snippet_viewmode
+field_name: field_snippet_viewmode
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: summary
+      label: Summary
+    -
+      value: normal
+      label: 'Just body'
+    -
+      value: full
+      label: 'Body and paragraphs'
+  allowed_values_function: oa_related_paragraphs_field_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 0d6ae4fd-6b83-4697-a3bb-9fde497d912d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presenter_external
+    - paragraphs.paragraphs_type.agenda_items
+id: paragraph.agenda_items.field_presenter_external
+field_name: field_presenter_external
+entity_type: paragraph
+bundle: agenda_items
+label: 'Presenter (External)'
+description: 'You can use this field to enter Presenter(s) who are not in the Contacts database. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

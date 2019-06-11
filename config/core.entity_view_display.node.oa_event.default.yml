@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_node_oa_event.default
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
+    - field.field.node.oa_event.field_additional_locations
+    - field.field.node.oa_event.field_agenda_items
     - field.field.node.oa_event.field_city
     - field.field.node.oa_event.field_contact
     - field.field.node.oa_event.field_dial_in_meeting
@@ -25,6 +27,7 @@ dependencies:
     - node.type.oa_event
   module:
     - comment
+    - entity_reference_revisions
     - field_layout
     - layout_discovery
     - options
@@ -53,6 +56,24 @@ content:
     settings:
       view_mode: default
       pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_additional_locations:
+    label: above
+    weight: 24
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_agenda_items:
+    label: above
+    weight: 18
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
     third_party_settings: {  }
     region: content
   field_city:

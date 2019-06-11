@@ -1,0 +1,21 @@
+uuid: 1fe91a19-2c89-437d-b65d-80bb7628a134
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_presenter_external
+field_name: field_presenter_external
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

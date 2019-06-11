@@ -1,0 +1,27 @@
+uuid: 1895b3c2-a7ef-42f2-857e-a1e00173360c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oa_media
+    - paragraphs.paragraphs_type.paragraph_media
+  module:
+    - file
+id: paragraph.paragraph_media.field_oa_media
+field_name: field_oa_media
+entity_type: paragraph
+bundle: paragraph_media
+label: 'Embedded Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: ''
+  file_extensions: 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm zip tgz gz key dotx'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

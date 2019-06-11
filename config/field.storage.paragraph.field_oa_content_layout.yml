@@ -1,0 +1,33 @@
+uuid: e7367962-ec35-462c-9892-101c8bb1dca3
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_oa_content_layout
+field_name: field_oa_content_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: table
+      label: 'Table of files'
+    -
+      value: preview
+      label: 'Preview listing'
+    -
+      value: full
+      label: 'Full content'
+    -
+      value: list
+      label: 'Simple listing'
+  allowed_values_function: oa_related_paragraphs_field_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+uuid: 13379928-df40-434b-922d-64a49303b2cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact
+    - node.type.contact
+    - paragraphs.paragraphs_type.agenda_items
+id: paragraph.agenda_items.field_contact
+field_name: field_contact
+entity_type: paragraph
+bundle: agenda_items
+label: Presenters
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 1
+    lock_revision: 0
+    reference_revisions: 0
+    sort:
+      field: title
+      direction: ASC
+    target_bundles:
+      contact: contact
+field_type: entity_reference

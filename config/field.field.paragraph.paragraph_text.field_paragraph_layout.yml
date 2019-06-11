@@ -1,0 +1,21 @@
+uuid: 86f5675a-9e22-4f9c-b0d1-831f6b764272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_layout
+    - paragraphs.paragraphs_type.paragraph_text
+  module:
+    - options
+id: paragraph.paragraph_text.field_paragraph_layout
+field_name: field_paragraph_layout
+entity_type: paragraph
+bundle: paragraph_text
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

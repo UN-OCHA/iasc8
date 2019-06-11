@@ -1,0 +1,20 @@
+uuid: bce43840-76a6-4795-9965-9386f3de6825
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.og_user_node
+field_name: og_user_node
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

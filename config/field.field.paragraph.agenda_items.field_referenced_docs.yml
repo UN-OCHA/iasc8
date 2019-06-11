@@ -1,0 +1,30 @@
+uuid: d7997ea6-80bd-4012-b784-80a4ecf34b06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenced_docs
+    - node.type.oa_wiki_page
+    - paragraphs.paragraphs_type.agenda_items
+id: paragraph.agenda_items.field_referenced_docs
+field_name: field_referenced_docs
+entity_type: paragraph
+bundle: agenda_items
+label: 'Relevant Documents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_wiki_page: oa_wiki_page
+field_type: entity_reference

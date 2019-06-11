@@ -1,0 +1,46 @@
+uuid: 534f0835-1b61-4be0-a455-eab9fdd4d502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.membership.field_body_membership
+    - field.field.paragraph.membership.field_contact_category
+    - field.field.paragraph.membership.field_position
+    - paragraphs.paragraphs_type.membership
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.membership.default
+targetEntityType: paragraph
+bundle: membership
+mode: default
+content:
+  field_body_membership:
+    label: inline
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_contact_category:
+    label: inline
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_position:
+    label: inline
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

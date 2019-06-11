@@ -1,0 +1,44 @@
+uuid: 773e5b61-0312-4e1a-bb36-2e66664ecea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_oa_related_content
+    - node.type.oa_discussion_post
+    - node.type.oa_event
+    - node.type.oa_section
+    - node.type.oa_space
+    - node.type.oa_wiki_page
+    - node.type.oa_worktracker_task
+    - paragraphs.paragraphs_type.paragraph_content
+id: paragraph.paragraph_content.field_oa_related_content
+field_name: field_oa_related_content
+entity_type: paragraph
+bundle: paragraph_content
+label: 'Related Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-autocomplete:
+        status: 0
+      views-select-list:
+        status: 0
+    lock_revision: 0
+    reference_revisions: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      oa_space: oa_space
+      oa_discussion_post: oa_discussion_post
+      oa_event: oa_event
+      oa_section: oa_section
+      oa_wiki_page: oa_wiki_page
+      oa_worktracker_task: oa_worktracker_task
+field_type: entity_reference

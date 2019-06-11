@@ -1,0 +1,37 @@
+uuid: 616d6483-1f2a-4d2a-9d0a-3490d99715ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_media.field_image_alignment
+    - field.field.paragraph.paragraph_media.field_oa_media
+    - paragraphs.paragraphs_type.paragraph_media
+  module:
+    - field_layout
+    - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.paragraph_media.default
+targetEntityType: paragraph
+bundle: paragraph_media
+mode: default
+content:
+  field_image_alignment:
+    weight: 3
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_media:
+    weight: 2
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

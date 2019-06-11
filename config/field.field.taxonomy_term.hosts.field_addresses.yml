@@ -1,0 +1,25 @@
+uuid: cc0215a6-027a-4343-a837-7017db4b1c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_addresses
+    - taxonomy.vocabulary.hosts
+  module:
+    - address
+id: taxonomy_term.hosts.field_addresses
+field_name: field_addresses
+entity_type: taxonomy_term
+bundle: hosts
+label: 'Organization Addresses'
+description: 'Addresses for the organization.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

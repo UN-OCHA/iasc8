@@ -6,10 +6,13 @@ dependencies:
     - core.entity_view_mode.node.notifications
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
+    - field.field.node.oa_event.field_additional_locations
+    - field.field.node.oa_event.field_agenda_items
     - field.field.node.oa_event.field_city
     - field.field.node.oa_event.field_contact
     - field.field.node.oa_event.field_dial_in_meeting
     - field.field.node.oa_event.field_host
+    - field.field.node.oa_event.field_iasc_audience
     - field.field.node.oa_event.field_info_private
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
@@ -43,10 +46,13 @@ content:
 hidden:
   body: true
   comment_node_oa_event: true
+  field_additional_locations: true
+  field_agenda_items: true
   field_city: true
   field_contact: true
   field_dial_in_meeting: true
   field_host: true
+  field_iasc_audience: true
   field_info_private: true
   field_legacy_publish: true
   field_meeting_agendas: true

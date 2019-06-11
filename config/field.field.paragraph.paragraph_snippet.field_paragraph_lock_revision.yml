@@ -1,0 +1,23 @@
+uuid: 0813352f-8234-4911-9125-3edb041367c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_lock_revision
+    - paragraphs.paragraphs_type.paragraph_snippet
+id: paragraph.paragraph_snippet.field_paragraph_lock_revision
+field_name: field_paragraph_lock_revision
+entity_type: paragraph
+bundle: paragraph_snippet
+label: 'Lock revision'
+description: 'If unchecked, it will always show the latest revision of the referenced content.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.announcement.body
     - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
+    - field.field.node.announcement.field_iasc_audience
     - field.field.node.announcement.field_legacy_publish
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
@@ -36,6 +37,7 @@ hidden:
   body: true
   comment_node_announcement: true
   field_contact: true
+  field_iasc_audience: true
   field_legacy_publish: true
   field_links: true
   field_published_date: true

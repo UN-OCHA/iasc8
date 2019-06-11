@@ -1,0 +1,23 @@
+uuid: 601de4ff-7da0-4c50-9db2-1010ab2d49c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_alignment
+    - paragraphs.paragraphs_type.paragraph_media
+  module:
+    - options
+id: paragraph.paragraph_media.field_image_alignment
+field_name: field_image_alignment
+entity_type: paragraph
+bundle: paragraph_media
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

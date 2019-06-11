@@ -1,0 +1,32 @@
+uuid: 0fc883e0-7cb8-4b8d-bcc8-2bc904a4bf0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.paragraph_snippet.field_paragraph_layout
+    - field.field.paragraph.paragraph_snippet.field_paragraph_lock_revision
+    - field.field.paragraph.paragraph_snippet.field_snippet_content
+    - field.field.paragraph.paragraph_snippet.field_snippet_showtitle
+    - field.field.paragraph.paragraph_snippet.field_snippet_title_override
+    - field.field.paragraph.paragraph_snippet.field_snippet_viewmode
+    - paragraphs.paragraphs_type.paragraph_snippet
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.paragraph_snippet.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: paragraph_snippet
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_paragraph_layout: true
+  field_paragraph_lock_revision: true
+  field_snippet_content: true
+  field_snippet_showtitle: true
+  field_snippet_title_override: true
+  field_snippet_viewmode: true

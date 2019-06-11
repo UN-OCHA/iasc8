@@ -1,0 +1,19 @@
+uuid: 8f1f3e97-dce1-427e-9f0f-4ba11ce79390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_snippet_title_override
+    - paragraphs.paragraphs_type.paragraph_snippet
+id: paragraph.paragraph_snippet.field_snippet_title_override
+field_name: field_snippet_title_override
+entity_type: paragraph
+bundle: paragraph_snippet
+label: 'Title Override'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

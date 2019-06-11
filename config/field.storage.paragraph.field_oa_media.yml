@@ -1,0 +1,23 @@
+uuid: fd138ace-77c4-4914-b923-560296d5c3de
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - paragraphs
+id: paragraph.field_oa_media
+field_name: field_oa_media
+entity_type: paragraph
+type: file
+settings:
+  display_default: false
+  display_field: false
+  uri_scheme: private
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

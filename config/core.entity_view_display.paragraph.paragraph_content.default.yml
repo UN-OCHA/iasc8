@@ -1,0 +1,36 @@
+uuid: d7a38b8e-0e24-4684-b265-7843fd91ebfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_content.field_oa_content_layout
+    - field.field.paragraph.paragraph_content.field_oa_related_content
+    - paragraphs.paragraphs_type.paragraph_content
+  module:
+    - field_layout
+    - layout_discovery
+    - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.paragraph_content.default
+targetEntityType: paragraph
+bundle: paragraph_content
+mode: default
+content:
+  field_oa_content_layout:
+    label: above
+    weight: 1
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_oa_related_content:
+    label: heading
+    weight: 0
+    type: entity_reference_entity_id
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
