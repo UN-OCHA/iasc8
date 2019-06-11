@@ -36,6 +36,19 @@ $databases['migrate']['default'] = array (
 https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
 
 ```
+fin drush mim --verbose upgrade_d7_taxonomy_vocabulary
+fin drush mim --verbose upgrade_taxonomy_settings
+fin drush mim --verbose upgrade_d7_taxonomy_term_ap_responsibility
+fin drush mim --verbose upgrade_d7_taxonomy_term_panopoly_categories
+fin drush mim --verbose upgrade_d7_taxonomy_term_country
+fin drush mim --verbose upgrade_d7_taxonomy_term_document_types
+fin drush mim --verbose upgrade_d7_taxonomy_term_hosts
+fin drush mim --verbose upgrade_d7_taxonomy_term_product_categories
+fin drush mim --verbose upgrade_d7_taxonomy_term_section_type
+fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
+```
+
+```
 fin drush mim --verbose --group=oa_group_space
 fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
@@ -52,6 +65,11 @@ fin drush mim --verbose upgrade_d7_node_oa_ical_importer
 fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
 fin drush mim --verbose upgrade_d7_node_oa_team
 fin drush mim --verbose upgrade_d7_node_oa_section
+```
+
+```
+fin drush mim --verbose upgrade_d7_field_collection_type
+fin drush mim --verbose upgrade_d7_paragraphs_type
 ```
 
 ### Modules from IASC 7
