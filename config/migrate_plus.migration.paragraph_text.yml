@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_text
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - 'Paragraphs'
+migration_group: to_paragraphs
+label: 'paragraph_text migration from D7 to D8'
+source:
+  plugin: d7_paragraphs_item
+  bundle: paragraph_text
+process:
+  field_paragraph_layout: field_paragraph_layout
+  field_paragraph_text/format:
+    plugin: default_value
+    default_value: full_html
+  field_paragraph_text/value: field_paragraph_text/0/value
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: paragraph_text
+migration_dependencies: null
