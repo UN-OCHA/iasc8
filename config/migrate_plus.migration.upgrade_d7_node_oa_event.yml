@@ -103,9 +103,20 @@ process:
       plugin: get
       source: og_vocabulary
   field_agenda_items:
-    -
-      plugin: get
-      source: field_agenda_items
+    plugin: sub_process
+    source: d7_field_collection_item
+    process:
+      target_id:
+        -
+          plugin: migration_lookup
+          migration:
+            - agenda_items
+          source: value
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id: '@target_id'
   field_contact:
     -
       plugin: get

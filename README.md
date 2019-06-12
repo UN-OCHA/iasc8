@@ -49,6 +49,11 @@ fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
 ```
 
 ```
+fin drush mim --verbose upgrade_d7_field_collection_type
+fin drush mim --verbose upgrade_d7_paragraphs_type
+```
+
+```
 fin drush mim --verbose upgrade_d7_field
 fin drush mim --verbose upgrade_d7_field_instance
 fin drush mim --verbose upgrade_d7_field_instance_widget_settings
@@ -73,11 +78,6 @@ fin drush mim --verbose upgrade_d7_node_oa_ical_importer
 fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
 fin drush mim --verbose upgrade_d7_node_oa_team
 fin drush mim --verbose upgrade_d7_node_oa_section
-```
-
-```
-fin drush mim --verbose upgrade_d7_field_collection_type
-fin drush mim --verbose upgrade_d7_paragraphs_type
 ```
 
 ### Migrate errors
