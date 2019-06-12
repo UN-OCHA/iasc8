@@ -25,7 +25,7 @@ $databases['migrate']['default'] = array (
 
 ### Install from config
 
-`fin --verbose -y drush si --existing-config --account-pass="admin"`
+`fin drush --verbose -y si --existing-config --account-pass="admin"`
 
 ### Create skeleton
 
