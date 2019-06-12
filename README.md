@@ -51,6 +51,7 @@ fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
 ```
 fin drush mim --verbose upgrade_d7_field_collection_type
 fin drush mim --verbose upgrade_d7_paragraphs_type
+fin drush mim --verbose agenda_items
 ```
 
 ```
