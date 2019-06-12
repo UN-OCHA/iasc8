@@ -116,7 +116,6 @@ destination:
 migration_dependencies:
   required:
     - upgrade_d7_user
-    - upgrade_d7_node_type
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_comment_field_instance
