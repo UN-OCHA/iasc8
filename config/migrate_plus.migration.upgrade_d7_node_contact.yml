@@ -113,9 +113,20 @@ process:
       plugin: get
       source: field_legacy_id
   field_membership:
-    -
-      plugin: get
-      source: field_membership
+    plugin: sub_process
+    source: field_membership
+    process:
+      target_id:
+        -
+          plugin: migration_lookup
+          migration:
+            - field_membership
+          source: value
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id: '@target_id'
   field_mobile:
     -
       plugin: get

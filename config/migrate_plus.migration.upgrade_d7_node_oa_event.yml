@@ -156,9 +156,20 @@ process:
       plugin: get
       source: field_legacy_publish
   field_additional_locations:
-    -
-      plugin: get
-      source: field_additional_locations
+    plugin: sub_process
+    source: field_additional_locations
+    process:
+      target_id:
+        -
+          plugin: migration_lookup
+          migration:
+            - additional_locations
+          source: value
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id: '@target_id'
   field_dial_in_meeting:
     -
       plugin: get
