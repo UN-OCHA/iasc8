@@ -27,12 +27,11 @@ fin drush mim --verbose membership
 # fin drush mim --verbose paragraph_snippet
 # fin drush mim --verbose paragraph_text
 
-fin drush mim --verbose upgrade_d7_node_oa_event
 fin drush mim --verbose upgrade_d7_node_action_point
-fin drush mim --verbose upgrade_d7_node_announcement
-fin drush mim --verbose upgrade_d7_node_oa_discussion_post
-fin drush mim --verbose upgrade_d7_node_oa_event
-fin drush mim --verbose upgrade_d7_node_oa_ical_importer
-fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
-fin drush mim --verbose upgrade_d7_node_oa_team
-fin drush mim --verbose upgrade_d7_node_oa_section
+#fin drush mim --verbose upgrade_d7_node_oa_event
+#fin drush mim --verbose upgrade_d7_node_announcement
+#fin drush mim --verbose upgrade_d7_node_oa_discussion_post
+#fin drush mim --verbose upgrade_d7_node_oa_ical_importer
+#fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
+#fin drush mim --verbose upgrade_d7_node_oa_team
+#fin drush mim --verbose upgrade_d7_node_oa_section
