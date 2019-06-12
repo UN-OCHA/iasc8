@@ -48,18 +48,18 @@ fin drush mim --verbose upgrade_d7_taxonomy_term_section_type
 fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
 ```
 
-```
-fin drush mim --verbose upgrade_d7_field_collection_type
-fin drush mim --verbose upgrade_d7_paragraphs_type
+```bash
+#fin drush mim --verbose upgrade_d7_field_collection_type
+#fin drush mim --verbose upgrade_d7_paragraphs_type
 fin drush mim --verbose agenda_items
 ```
 
-```
-fin drush mim --verbose upgrade_d7_field
-fin drush mim --verbose upgrade_d7_field_instance
-fin drush mim --verbose upgrade_d7_field_instance_widget_settings
-fin drush mim --verbose upgrade_d7_view_modes
-fin drush mim --verbose upgrade_d7_field_formatter_settings
+```bash
+#fin drush mim --verbose upgrade_d7_field
+#fin drush mim --verbose upgrade_d7_field_instance
+#fin drush mim --verbose upgrade_d7_field_instance_widget_settings
+#fin drush mim --verbose upgrade_d7_view_modes
+#fin drush mim --verbose upgrade_d7_field_formatter_settings
 ```
 
 ```
@@ -68,8 +68,8 @@ fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
 ```
 
-```
-fin drush mim --verbose upgrade_d7_node_type
+```bash
+#fin drush mim --verbose upgrade_d7_node_type
 fin drush mim --verbose upgrade_d7_node_action_point
 fin drush mim --verbose upgrade_d7_node_announcement
 fin drush mim --verbose upgrade_d7_node_oa_discussion_post

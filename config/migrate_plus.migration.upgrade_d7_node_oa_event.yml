@@ -104,7 +104,7 @@ process:
       source: og_vocabulary
   field_agenda_items:
     plugin: sub_process
-    source: d7_field_collection_item
+    source: field_agenda_items
     process:
       target_id:
         -
@@ -181,7 +181,6 @@ destination:
 migration_dependencies:
   required:
     - upgrade_d7_user
-    - upgrade_d7_node_type
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_comment_field_instance
