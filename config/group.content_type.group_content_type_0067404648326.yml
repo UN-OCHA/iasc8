@@ -1,0 +1,19 @@
+uuid: eff6b240-f3ba-40c5-bc75-211e557d01b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+    - node.type.oa_wiki_page
+  module:
+    - gnode
+    - node
+id: group_content_type_0067404648326
+label: 'Space: Group node (Document Page)'
+description: 'Adds <em class="placeholder">Document Page</em> content to groups both publicly and privately.'
+group_type: iasc_space
+content_plugin: 'group_node:oa_wiki_page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

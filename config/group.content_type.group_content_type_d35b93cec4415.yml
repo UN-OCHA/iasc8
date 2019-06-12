@@ -1,0 +1,19 @@
+uuid: 207344fd-1449-47d3-8951-37dcb9045407
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+    - node.type.oa_discussion_post
+  module:
+    - gnode
+    - node
+id: group_content_type_d35b93cec4415
+label: 'Space: Group node (Discussion Post)'
+description: 'Adds <em class="placeholder">Discussion Post</em> content to groups both publicly and privately.'
+group_type: iasc_space
+content_plugin: 'group_node:oa_discussion_post'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true
