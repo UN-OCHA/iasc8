@@ -15,6 +15,7 @@ source:
   plugin: d7_node
   node_type: oa_discussion_post
 process:
+  field_iasc_audience: gids
   nid:
     -
       plugin: get
