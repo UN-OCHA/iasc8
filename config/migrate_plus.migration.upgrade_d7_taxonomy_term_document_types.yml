@@ -77,8 +77,6 @@ destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: document_types
 migration_dependencies:
-  required:
-    - upgrade_d7_taxonomy_vocabulary
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_taxonomy_vocabulary
