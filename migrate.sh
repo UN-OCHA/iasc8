@@ -13,6 +13,7 @@ fin drush mim --verbose --group=oa_group_space
 fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
 
+fin drush mim --verbose upgrade_d7_node_contact
 fin drush mim --verbose agenda_items
 
 fin drush mim --verbose upgrade_d7_node_oa_event
