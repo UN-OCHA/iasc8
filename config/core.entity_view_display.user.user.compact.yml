@@ -50,4 +50,5 @@ hidden:
   field_user_display_name: true
   field_user_picture: true
   member_for: true
+  og_user_node: true
   realname: true
