@@ -31,105 +31,13 @@ $databases['migrate']['default'] = array (
 
 `drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only `
 
-### Import OA groups and spaces
+### Import
 
-https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
+see [migrate.sh](./migrate.sh)
 
-```bash
-#fin drush mim --verbose upgrade_d7_taxonomy_vocabulary
-#fin drush mim --verbose upgrade_taxonomy_settings
-fin drush mim --verbose upgrade_d7_taxonomy_term_ap_responsibility
-fin drush mim --verbose upgrade_d7_taxonomy_term_panopoly_categories
-fin drush mim --verbose upgrade_d7_taxonomy_term_country
-fin drush mim --verbose upgrade_d7_taxonomy_term_document_types
-fin drush mim --verbose upgrade_d7_taxonomy_term_hosts
-fin drush mim --verbose upgrade_d7_taxonomy_term_product_categories
-fin drush mim --verbose upgrade_d7_taxonomy_term_section_type
-fin drush mim --verbose upgrade_d7_taxonomy_term_space_type
-```
-
-```bash
-fin drush mim --verbose --group=oa_group_space
-fin drush mim --verbose upgrade_d7_user_role
-fin drush mim --verbose upgrade_d7_user
-```
-
-```bash
-#fin drush mim --verbose upgrade_d7_field_collection_type
-#fin drush mim --verbose upgrade_d7_paragraphs_type
-fin drush mim --verbose agenda_items
-```
-
-```bash
-#fin drush mim --verbose upgrade_d7_field
-#fin drush mim --verbose upgrade_d7_field_instance
-#fin drush mim --verbose upgrade_d7_field_instance_widget_settings
-#fin drush mim --verbose upgrade_d7_view_modes
-#fin drush mim --verbose upgrade_d7_field_formatter_settings
-```
-
-```bash
-#fin drush mim --verbose upgrade_d7_node_type
-fin drush mim --verbose upgrade_d7_node_action_point
-fin drush mim --verbose upgrade_d7_node_announcement
-fin drush mim --verbose upgrade_d7_node_oa_discussion_post
-fin drush mim --verbose upgrade_d7_node_oa_wiki_page
-fin drush mim --verbose upgrade_d7_node_oa_event
-fin drush mim --verbose upgrade_d7_node_oa_ical_importer
-fin drush mim --verbose upgrade_d7_node_oa_worktracker_task
-fin drush mim --verbose upgrade_d7_node_oa_team
-fin drush mim --verbose upgrade_d7_node_oa_section
-```
-
-### Migrate errors
-
-#### fin drush mim --verbose upgrade_d7_field
-```
- [error]  The "command_button" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "command_button" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  Attempt to create a field storage field_basic_spotlight_items with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  Attempt to create a field storage field_basic_table_table with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message_type" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "og_membership" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "message" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "oa_wizard" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "oa_wizard" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  Attempt to create a field storage field_additional_timezone with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  Attempt to create a field storage field_geofield_additional_city with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  Attempt to create a field storage field_primary_geofield with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  Attempt to create a field storage field_primary_timezone with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  Attempt to create a field storage field_registration with no type. (/var/www/html/core/modules/field/src/Entity/FieldStorageConfig.php:258)
- [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "fieldable_panels_pane" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
- [error]  The "registration" entity type does not exist. (/var/www/html/core/lib/Drupal/Core/Entity/EntityTypeManager.php:150)
-```
+- https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
+- https://atendesigngroup.com/blog/getting-started-drupal-8-migrations
+- https://atendesigngroup.com/blog/drupal-8-migration-multiple-paragraph-references
 
 ### Modules from IASC 7
 
