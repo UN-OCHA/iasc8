@@ -1,3 +1,4 @@
+uuid: 2344ae7e-e5f1-475a-8e56-40619c1d0c06
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +8,7 @@ field_plugin_method: null
 cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
-  - 'Paragraphs'
+  - Paragraphs
 migration_group: to_paragraphs
 label: 'paragraph_content migration from D7 to D8'
 source:

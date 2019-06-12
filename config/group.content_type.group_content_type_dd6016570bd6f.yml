@@ -1,0 +1,19 @@
+uuid: 073c6b3f-b4e0-4164-8ce0-ba1632da7e65
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+    - node.type.oa_ical_importer
+  module:
+    - gnode
+    - node
+id: group_content_type_dd6016570bd6f
+label: 'Group: Group node (iCal Importer)'
+description: 'Adds <em class="placeholder">iCal Importer</em> content to groups both publicly and privately.'
+group_type: iasc_group
+content_plugin: 'group_node:oa_ical_importer'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true
