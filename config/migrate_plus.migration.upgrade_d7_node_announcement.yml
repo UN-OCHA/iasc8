@@ -12,9 +12,10 @@ migration_tags:
 migration_group: migrate_drupal_7
 label: 'Nodes (Announcement)'
 source:
-  plugin: d7_node
+  plugin: d7_node_custom
   node_type: announcement
 process:
+  field_iasc_audience: gids
   nid:
     -
       plugin: get

@@ -12,7 +12,7 @@ migration_tags:
 migration_group: migrate_drupal_7
 label: 'Nodes (Team)'
 source:
-  plugin: d7_node
+  plugin: d7_node_custom
   node_type: oa_team
 process:
   field_iasc_audience: gids
