@@ -21,11 +21,11 @@ fin drush mim --verbose agenda_items
 fin drush mim --verbose additional_locations
 fin drush mim --verbose membership
 
-# Paragraphs to paragraphs
-fin drush mim --verbose paragraph_media
-fin drush mim --verbose paragraph_content
-fin drush mim --verbose paragraph_snippet
-fin drush mim --verbose paragraph_text
+# Paragraphs to paragraphs, no content
+# fin drush mim --verbose paragraph_media
+# fin drush mim --verbose paragraph_content
+# fin drush mim --verbose paragraph_snippet
+# fin drush mim --verbose paragraph_text
 
 fin drush mim --verbose upgrade_d7_node_oa_event
 fin drush mim --verbose upgrade_d7_node_action_point
