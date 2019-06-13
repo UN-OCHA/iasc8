@@ -1,5 +1,8 @@
 fin drush --verbose -y si --existing-config --account-pass="admin"
 
+fin drush mim --verbose upgrade_d7_file
+fin drush mim --verbose upgrade_d7_file_private
+
 fin drush mim --verbose upgrade_d7_taxonomy_term_ap_responsibility
 fin drush mim --verbose upgrade_d7_taxonomy_term_panopoly_categories
 fin drush mim --verbose upgrade_d7_taxonomy_term_country

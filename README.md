@@ -39,6 +39,15 @@ see [migrate.sh](./migrate.sh)
 - https://atendesigngroup.com/blog/getting-started-drupal-8-migrations
 - https://atendesigngroup.com/blog/drupal-8-migration-multiple-paragraph-references
 
+### Files
+
+```bash
+drush php-eval " \Drupal::config('migrate.migration.d7_file')->set('destination.source_base_path', 'html/sites/default/files/d7')->save();"
+mkdir -p html/sites/default/files/d7/sites/default/files
+cp -r d7_source html/sites/default/files/d7/sites/default/files/
+```
+
+
 ### Modules from IASC 7
 
 composer require drupal/admin_views
