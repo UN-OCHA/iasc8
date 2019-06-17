@@ -47,6 +47,8 @@ mkdir -p html/sites/default/files/d7/sites/default/files
 cp -r d7_source html/sites/default/files/d7/sites/default/files/
 ```
 
+Optionally convert to media: https://thinktandem.io/blog/2019/04/04/migrating-a-drupal-7-file-to-a-drupal-8-media-entity/
+
 
 ### Modules from IASC 7
 
