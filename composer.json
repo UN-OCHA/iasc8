@@ -67,6 +67,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+		"bin-dir": "vendor/bin/",
         "sort-packages": true
     },
     "autoload": {
@@ -90,6 +91,7 @@
         ]
     },
     "extra": {
+		"enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
