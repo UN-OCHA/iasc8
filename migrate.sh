@@ -1,5 +1,16 @@
 fin drush --verbose -y si --existing-config --account-pass="admin"
 
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration.upgrade_d7_file')->set('source.constants.source_base_path', '/var/www/html/sites/default/files/d7')->save();"
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration.upgrade_d7_file')->set('source.constants.source_base_path', '/var/www/html/sites/default/files/d7')->save();"
+
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration_group.migrate_drupal_7')->set('shared_configuration.source.database.username', 'user')->save();"
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration_group.migrate_drupal_7')->set('shared_configuration.source.database.password', 'user')->save();"
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration_group.migrate_drupal_7')->set('shared_configuration.source.database.host', 'db')->save();"
+fin drush php-eval " \Drupal::configFactory()->getEditable('migrate_plus.migration_group.migrate_drupal_7')->set('shared_configuration.source.database.database', 'd7')->save();"
+
+# Clear cache so config gets recognized
+fin drush cr
+
 fin drush mim --verbose upgrade_d7_file
 fin drush mim --verbose upgrade_d7_file_private
 
