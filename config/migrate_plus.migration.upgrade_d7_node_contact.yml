@@ -118,6 +118,10 @@ process:
     process:
       target_id:
         -
+          plugin: skip_on_empty
+          method: process
+          source: value
+        -
           plugin: migration_lookup
           migration:
             - field_membership
