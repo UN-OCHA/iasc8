@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.membership.field_body_membership
     - field.field.paragraph.membership.field_contact_category
-    - field.field.paragraph.membership.field_membership
     - field.field.paragraph.membership.field_position
     - paragraphs.paragraphs_type.membership
   module:
@@ -36,15 +35,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
-  field_membership:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_position:
     weight: 1
