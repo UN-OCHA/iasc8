@@ -20,13 +20,13 @@ bundle: membership
 mode: default
 content:
   field_body_membership:
-    weight: 0
-    type: entity_reference_autocomplete
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_contact_category:
     weight: 2

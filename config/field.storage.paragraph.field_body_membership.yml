@@ -1,16 +1,16 @@
-uuid: 6d0609b1-6965-41d0-b3d2-ea9e5513ef8b
-langcode: und
+uuid: 6b6fb11f-22f4-4d0c-b5a2-8be72036e7fb
+langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - group
     - paragraphs
 id: paragraph.field_body_membership
 field_name: field_body_membership
 entity_type: paragraph
 type: entity_reference
 settings:
-  target_type: node
+  target_type: group
 module: core
 locked: false
 cardinality: 1
