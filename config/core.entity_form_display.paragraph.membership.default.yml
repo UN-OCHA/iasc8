@@ -20,7 +20,7 @@ bundle: membership
 mode: default
 content:
   field_body_membership:
-    weight: 3
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60
