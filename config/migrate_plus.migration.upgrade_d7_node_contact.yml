@@ -124,7 +124,7 @@ process:
         -
           plugin: migration_lookup
           migration:
-            - field_membership
+            - membership
           source: value
         -
           plugin: extract

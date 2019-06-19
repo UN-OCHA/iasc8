@@ -30,13 +30,15 @@ fin drush mim --verbose upgrade_d7_node_oa_space
 fin drush mim --verbose upgrade_d7_user_role
 fin drush mim --verbose upgrade_d7_user
 
+# Needed by contact
+fin drush mim --verbose membership
+
 fin drush mim --verbose upgrade_d7_node_oa_wiki_page
 fin drush mim --verbose upgrade_d7_node_contact
 
 # Field collection to paragraphs
 fin drush mim --verbose agenda_items
 fin drush mim --verbose additional_locations
-fin drush mim --verbose membership
 
 # Paragraphs to paragraphs, no content
 # fin drush mim --verbose paragraph_media
