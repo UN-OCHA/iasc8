@@ -1,4 +1,7 @@
 {
     "patches": {
+		"drupal/core": {
+			"https://www.drupal.org/project/drupal/issues/2582797 - login destination": "https://www.drupal.org/files/issues/2019-03-13/login-destination-2582797-110_0.patch"
+		}
     }
 }
