@@ -16,3 +16,14 @@ function iasc_content_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal
     }
   }
 }
+
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function iasc_content_form_alter(&$form, &$form_state, $form_id) {
+  // Hide legacy field.
+  if (isset($form['field_legacy_publish'])) {
+    $form['field_legacy_publish']['#access'] = FALSE;
+  }
+}
