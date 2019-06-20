@@ -41,6 +41,7 @@ module:
   group: 0
   help: 0
   history: 0
+  iasc_content: 0
   iasc_migrate: 0
   image: 0
   layout_discovery: 0

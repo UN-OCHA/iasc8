@@ -1,0 +1,5 @@
+name: IASC Content tweaks
+type: module
+description: 'IASC Content tweaks.'
+package: IASC
+core: '8.x'
