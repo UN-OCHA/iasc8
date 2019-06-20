@@ -50,6 +50,7 @@
         "drupal/paragraphs": "^1.8",
         "drupal/pathauto": "^1.4",
         "drupal/realname": "^1.0@RC",
+        "drupal/social_auth_hid": "^2.1",
         "drupal/tablefield": "^2.0@alpha",
         "drupal/token": "^1.5",
         "drush/drush": "^9.0.0",
