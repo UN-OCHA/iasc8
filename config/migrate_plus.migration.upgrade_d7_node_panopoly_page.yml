@@ -72,10 +72,10 @@ process:
     -
       plugin: get
       source: comment
-  body:
-    -
-      plugin: get
-      source: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  body/value: body/0/value
   field_featured_categories:
     -
       plugin: sub_process
