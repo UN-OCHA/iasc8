@@ -28,6 +28,7 @@ dependencies:
     - entity_reference_revisions
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - link
     - user
@@ -35,6 +36,221 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          5d203ed0-3109-4e70-b3f1-6dedb4ebf092:
+            uuid: 5d203ed0-3109-4e70-b3f1-6dedb4ebf092
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_position'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          8a97e4db-9cf6-459c-8ab2-0e5a78ca7372:
+            uuid: 8a97e4db-9cf6-459c-8ab2-0e5a78ca7372
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_department'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          04f5c9a2-f33b-495d-9c5c-9ebfb66f6052:
+            uuid: 04f5c9a2-f33b-495d-9c5c-9ebfb66f6052
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_branch'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          2eaab578-a4f3-430a-9e7c-5541de357476:
+            uuid: 2eaab578-a4f3-430a-9e7c-5541de357476
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_fax'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          92ab4f85-b8d2-43a1-896f-d69b98ce6375:
+            uuid: 92ab4f85-b8d2-43a1-896f-d69b98ce6375
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_homepage'
+              formatter:
+                label: above
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          0c0cb37a-e88d-4c71-abae-685636c5f3f4:
+            uuid: 0c0cb37a-e88d-4c71-abae-685636c5f3f4
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_photo'
+              formatter:
+                label: above
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          7c3eaad8-75de-41bd-a199-ebb4994a8344:
+            uuid: 7c3eaad8-75de-41bd-a199-ebb4994a8344
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_phone'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 6
+          a7d5a81f-0b05-40b8-97cf-0d9518679665:
+            uuid: a7d5a81f-0b05-40b8-97cf-0d9518679665
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_mobile'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 7
+          face2103-58b7-4354-b6c1-a2414277c20f:
+            uuid: face2103-58b7-4354-b6c1-a2414277c20f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_email'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 8
+          11487af0-35f2-4cfa-9bd5-4829f308b354:
+            uuid: 11487af0-35f2-4cfa-9bd5-4829f308b354
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_address'
+              formatter:
+                label: above
+                type: address_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 9
+          1ff10729-4342-459f-b508-ce79de87849e:
+            uuid: 1ff10729-4342-459f-b508-ce79de87849e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_organisation'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 10
+          7d32f1c8-0af4-4808-97fc-b8500a21a233:
+            uuid: 7d32f1c8-0af4-4808-97fc-b8500a21a233
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_membership'
+              formatter:
+                label: above
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 11
+          6b92fbc0-7115-4582-99cc-713416f65c2b:
+            uuid: 6b92fbc0-7115-4582-99cc-713416f65c2b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:contact:links'
+            additional: {  }
+            weight: 12
+        third_party_settings: {  }
 id: node.contact.bio_full_
 targetEntityType: node
 bundle: contact

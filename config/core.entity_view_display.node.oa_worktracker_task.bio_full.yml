@@ -26,12 +26,31 @@ dependencies:
     - node.type.oa_worktracker_task
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8e286830-8351-4409-8037-d8bf34b33c53:
+            uuid: 8e286830-8351-4409-8037-d8bf34b33c53
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_worktracker_task:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.oa_worktracker_task.bio_full
 targetEntityType: node
 bundle: oa_worktracker_task

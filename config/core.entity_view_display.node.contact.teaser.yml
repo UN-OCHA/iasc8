@@ -25,6 +25,7 @@ dependencies:
     - node.type.contact
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -32,6 +33,40 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          a925ee65-0aff-4b3b-9ee1-170ac105ac7b:
+            uuid: a925ee65-0aff-4b3b-9ee1-170ac105ac7b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:contact:links'
+            additional: {  }
+            weight: 0
+          89bb5343-da9d-4037-b897-2281217b50bb:
+            uuid: 89bb5343-da9d-4037-b897-2281217b50bb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.contact.teaser
 targetEntityType: node
 bundle: contact

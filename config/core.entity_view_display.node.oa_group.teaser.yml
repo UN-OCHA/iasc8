@@ -16,6 +16,7 @@ dependencies:
     - node.type.oa_group
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -23,6 +24,40 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          48e7861a-33c5-4684-9487-90b73c063a5a:
+            uuid: 48e7861a-33c5-4684-9487-90b73c063a5a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_group:links'
+            additional: {  }
+            weight: 0
+          c7c869ca-f736-49b4-ac8f-15306bbaad52:
+            uuid: c7c869ca-f736-49b4-ac8f-15306bbaad52
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_group:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.oa_group.teaser
 targetEntityType: node
 bundle: oa_group
