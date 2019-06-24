@@ -36,14 +36,22 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          21aeafcf-9fe9-4361-b7d8-7a546077eab6:
-            uuid: 21aeafcf-9fe9-4361-b7d8-7a546077eab6
+          c5244ad5-c352-46e3-aae6-7dbee21260ae:
+            uuid: c5244ad5-c352-46e3-aae6-7dbee21260ae
             region: content
             configuration:
+              id: 'field_block:node:oa_wiki_page:field_oa_media'
+              label: File(s)
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: file_default
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:oa_wiki_page:links'
             additional: {  }
             weight: 0
         third_party_settings: {  }

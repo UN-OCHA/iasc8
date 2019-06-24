@@ -1,9 +1,10 @@
-uuid: e66f32ed-caa3-4135-9b7f-3f467f43c9b2
+uuid: d84623d5-d2e2-47d3-af5a-86c23dfcec22
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment_node_oa_wiki_page.default
+    - core.entity_view_mode.node.full
     - field.field.node.oa_wiki_page.body
     - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
     - field.field.node.oa_wiki_page.field_category
@@ -37,30 +38,32 @@ third_party_settings:
     settings: {  }
   layout_builder:
     enabled: true
+    allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
-        layout_settings: {  }
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 67-33
         components:
-          7e7ff9b4-dd3c-448f-9079-f6dd4a7bcf2a:
-            uuid: 7e7ff9b4-dd3c-448f-9079-f6dd4a7bcf2a
-            region: content
+          6df5c809-72bb-4e11-9434-f0252b8d1b4c:
+            uuid: 6df5c809-72bb-4e11-9434-f0252b8d1b4c
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:oa_section_ref'
+              id: 'field_block:node:oa_wiki_page:field_iasc_audience'
               formatter:
                 label: above
-                type: entity_reference_label
                 settings:
                   link: true
                 third_party_settings: {  }
+                type: entity_reference_label
             additional: {  }
             weight: 0
-          157681bc-4741-4eca-afbc-23085697c8e0:
-            uuid: 157681bc-4741-4eca-afbc-23085697c8e0
-            region: content
+          21a094b4-52e5-47d8-8051-b7a75059b46e:
+            uuid: 21a094b4-52e5-47d8-8051-b7a75059b46e
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -74,26 +77,10 @@ third_party_settings:
                   image_link: ''
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
-          5a2010df-931e-414f-8aeb-b5e89f67358f:
-            uuid: 5a2010df-931e-414f-8aeb-b5e89f67358f
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:field_oa_media'
-              formatter:
-                label: above
-                type: file_default
-                settings:
-                  use_description_as_link_text: true
-                third_party_settings: {  }
-            additional: {  }
-            weight: 2
-          560d44b3-4fda-4e13-ae7e-29c87e396428:
-            uuid: 560d44b3-4fda-4e13-ae7e-29c87e396428
-            region: content
+            weight: 0
+          c5d67d63-a6ff-4bd9-a191-da596ec7876c:
+            uuid: c5d67d63-a6ff-4bd9-a191-da596ec7876c
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -106,25 +93,41 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 3
-          36292964-3d75-4959-91e5-0c16624b6f6b:
-            uuid: 36292964-3d75-4959-91e5-0c16624b6f6b
-            region: content
+            weight: 2
+          98c2f182-972e-44e6-b111-6b809b100960:
+            uuid: 98c2f182-972e-44e6-b111-6b809b100960
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:field_oa_wiki_page_no_redirect'
+              id: 'field_block:node:oa_wiki_page:body'
               formatter:
-                label: above
-                type: list_default
+                label: hidden
+                type: text_default
                 settings: {  }
                 third_party_settings: {  }
             additional: {  }
+            weight: 3
+          2eee8404-e085-4db6-8aa4-990b0aa0fb94:
+            uuid: 2eee8404-e085-4db6-8aa4-990b0aa0fb94
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:field_oa_media'
+              formatter:
+                label: above
+                type: file_default
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            additional: {  }
             weight: 4
-          a83ae3c0-3e58-4daf-a64a-e2d81c4f8c63:
-            uuid: a83ae3c0-3e58-4daf-a64a-e2d81c4f8c63
-            region: content
+          86b89ad1-838d-48a1-ae08-6bb39b4fe67b:
+            uuid: 86b89ad1-838d-48a1-ae08-6bb39b4fe67b
+            region: first
             configuration:
               label_display: '0'
               context_mapping:
@@ -137,10 +140,10 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 5
-          20a62b09-e2d0-4278-b2e8-3a5028da221d:
-            uuid: 20a62b09-e2d0-4278-b2e8-3a5028da221d
-            region: content
+            weight: 1
+          b90ef97d-1a19-4e1c-8561-d27e7233cf73:
+            uuid: b90ef97d-1a19-4e1c-8561-d27e7233cf73
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -153,26 +156,10 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 6
-          4b0799a5-f074-46d8-abf4-8eb9195e9d22:
-            uuid: 4b0799a5-f074-46d8-abf4-8eb9195e9d22
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:field_legacy_publish'
-              formatter:
-                label: above
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            additional: {  }
-            weight: 7
-          de6b9870-dda3-4de4-9187-0c0761521ee2:
-            uuid: de6b9870-dda3-4de4-9187-0c0761521ee2
-            region: content
+            weight: 1
+          0f29d310-00fb-4c18-9d55-47e5f21e059b:
+            uuid: 0f29d310-00fb-4c18-9d55-47e5f21e059b
+            region: second
             configuration:
               label_display: '0'
               context_mapping:
@@ -186,71 +173,17 @@ third_party_settings:
                   timezone_override: ''
                 third_party_settings: {  }
             additional: {  }
-            weight: 8
-          9222f65d-2884-4be7-9ef4-bae9a7bbbd81:
-            uuid: 9222f65d-2884-4be7-9ef4-bae9a7bbbd81
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:comment_node_oa_wiki_page'
-              formatter:
-                label: hidden
-                type: comment_default
-                settings:
-                  view_mode: default
-                  pager_id: 0
-                third_party_settings: {  }
-            additional: {  }
-            weight: 9
-          74ee2f2e-2511-4d3a-8bd8-1bea6609a340:
-            uuid: 74ee2f2e-2511-4d3a-8bd8-1bea6609a340
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:oa_wiki_page:links'
-            additional: {  }
-            weight: 10
-          734184a7-40fa-4941-bfbe-a0723172cc53:
-            uuid: 734184a7-40fa-4941-bfbe-a0723172cc53
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 11
-          1c9d74e3-8b2a-4d86-9958-d400cfe3af2c:
-            uuid: 1c9d74e3-8b2a-4d86-9958-d400cfe3af2c
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_wiki_page:field_iasc_audience'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 12
+            weight: 2
         third_party_settings: {  }
-    allow_custom: false
-id: node.oa_wiki_page.default
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
+        third_party_settings: {  }
+id: node.oa_wiki_page.full
 targetEntityType: node
 bundle: oa_wiki_page
-mode: default
+mode: full
 content:
   body:
     label: hidden
