@@ -21,6 +21,7 @@ dependencies:
     - comment
     - datetime
     - field_layout
+    - layout_builder
     - layout_discovery
     - options
     - text
@@ -29,6 +30,199 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          155694c1-94ac-4d30-98fa-09d330a3a714:
+            uuid: 155694c1-94ac-4d30-98fa-09d330a3a714
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_date'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          8435cd6d-ead4-431f-9f5e-249ad265dd14:
+            uuid: 8435cd6d-ead4-431f-9f5e-249ad265dd14
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_ap_date'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          ab8f890d-0e89-4ad3-848b-9ec05932c318:
+            uuid: ab8f890d-0e89-4ad3-848b-9ec05932c318
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_ap_status'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          0dfe5e75-e8ed-4ce9-98f1-4e7dff56dad6:
+            uuid: 0dfe5e75-e8ed-4ce9-98f1-4e7dff56dad6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_ap_progress_overview'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          d04894e6-9f8e-40a3-b681-f791cfc9f97f:
+            uuid: d04894e6-9f8e-40a3-b681-f791cfc9f97f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_contact'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          3c987937-0101-4c3d-9d3f-2bb3557ab6d1:
+            uuid: 3c987937-0101-4c3d-9d3f-2bb3557ab6d1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_ap_responsibility'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          9dfed32a-f01e-490f-b953-043a156aa7fb:
+            uuid: 9dfed32a-f01e-490f-b953-043a156aa7fb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_ap_topic'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 6
+          02dce50e-4b13-45f6-9e46-dac196563acc:
+            uuid: 02dce50e-4b13-45f6-9e46-dac196563acc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:group_content_access'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 7
+          1ce704a9-7bf4-4bb4-95d3-9cc04ac7f23c:
+            uuid: 1ce704a9-7bf4-4bb4-95d3-9cc04ac7f23c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:comment_node_action_point'
+              formatter:
+                label: hidden
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            additional: {  }
+            weight: 8
+          5d088001-ffb2-4ab5-898b-eb53c559c14c:
+            uuid: 5d088001-ffb2-4ab5-898b-eb53c559c14c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:action_point:links'
+            additional: {  }
+            weight: 9
+          a50a6861-d7c2-4f71-a3c0-4f9d16721b81:
+            uuid: a50a6861-d7c2-4f71-a3c0-4f9d16721b81
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 10
+          505c087c-9669-4786-b07c-e55648c095d7:
+            uuid: 505c087c-9669-4786-b07c-e55648c095d7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:field_iasc_audience'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 11
+        third_party_settings: {  }
 id: node.action_point.default
 targetEntityType: node
 bundle: action_point

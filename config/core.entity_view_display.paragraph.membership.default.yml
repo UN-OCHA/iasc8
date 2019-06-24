@@ -9,11 +9,68 @@ dependencies:
     - paragraphs.paragraphs_type.membership
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          a3fb0f16-5243-47ef-8d5a-b68576af2d76:
+            uuid: a3fb0f16-5243-47ef-8d5a-b68576af2d76
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:membership:field_position'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          456c467d-4848-4713-b622-fc19edf733b1:
+            uuid: 456c467d-4848-4713-b622-fc19edf733b1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:membership:field_contact_category'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          e5a5f2c4-096f-4760-93e1-0dcea16e91b5:
+            uuid: e5a5f2c4-096f-4760-93e1-0dcea16e91b5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:membership:field_body_membership'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: paragraph.membership.default
 targetEntityType: paragraph
 bundle: membership

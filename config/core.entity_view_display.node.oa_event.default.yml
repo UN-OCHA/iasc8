@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_event.default
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
     - field.field.node.oa_event.field_additional_locations
@@ -26,17 +25,18 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - comment
     - entity_reference_revisions
     - field_layout
-    - layout_discovery
-    - options
+    - layout_builder
     - text
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.oa_event.default
 targetEntityType: node
 bundle: oa_event
@@ -45,22 +45,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  comment_node_oa_event:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    region: content
   field_additional_locations:
-    label: above
-    weight: 24
+    label: inline
+    weight: 5
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
@@ -69,7 +60,7 @@ content:
     region: content
   field_agenda_items:
     label: above
-    weight: 18
+    weight: 10
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
@@ -77,63 +68,33 @@ content:
     third_party_settings: {  }
     region: content
   field_city:
-    label: above
-    weight: 23
+    label: inline
+    weight: 4
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   field_contact:
-    label: above
-    weight: 16
+    label: inline
+    weight: 3
     type: entity_reference_entity_view
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  field_dial_in_meeting:
-    label: above
-    weight: 27
-    type: list_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_host:
-    label: above
-    weight: 10
+    label: inline
+    weight: 0
     type: entity_reference_label
     settings:
       link: true
-    third_party_settings: {  }
-    region: content
-  field_iasc_audience:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_info_private:
-    label: above
-    weight: 11
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_legacy_publish:
-    label: above
-    weight: 22
-    type: string
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     region: content
   field_meeting_agendas:
     label: above
-    weight: 17
+    weight: 8
     type: entity_reference_entity_view
     settings:
       view_mode: default
@@ -142,51 +103,51 @@ content:
     region: content
   field_meeting_notes:
     label: above
-    weight: 15
+    weight: 9
     type: entity_reference_entity_view
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  field_room:
+  field_oa_date:
+    type: timestamp
+    weight: 1
+    region: content
     label: above
-    weight: 21
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_room:
+    label: inline
+    weight: 7
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   field_venue:
-    label: above
-    weight: 20
+    label: inline
+    weight: 6
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  oa_other_spaces_ref:
-    label: above
-    weight: 8
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
-  oa_section_ref:
-    label: above
-    weight: 6
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
 hidden:
-  field_oa_date: true
+  comment_node_oa_event: true
+  field_dial_in_meeting: true
+  field_iasc_audience: true
+  field_info_private: true
+  field_legacy_publish: true
+  oa_other_spaces_ref: true
+  oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true

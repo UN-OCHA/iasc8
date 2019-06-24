@@ -18,6 +18,7 @@ dependencies:
   module:
     - datetime
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -25,6 +26,57 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          6dbbbf28-a04f-4385-9075-14af6217191c:
+            uuid: 6dbbbf28-a04f-4385-9075-14af6217191c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:announcement:field_published_date'
+              formatter:
+                label: hidden
+                type: datetime_default
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          038daf98-726e-4418-bc99-023fe90d2580:
+            uuid: 038daf98-726e-4418-bc99-023fe90d2580
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:announcement:links'
+            additional: {  }
+            weight: 1
+          ce5479a4-f00e-46b7-b976-88b7fb539763:
+            uuid: ce5479a4-f00e-46b7-b976-88b7fb539763
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:announcement:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: node.announcement.teaser
 targetEntityType: node
 bundle: announcement
