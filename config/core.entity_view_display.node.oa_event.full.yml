@@ -185,17 +185,18 @@ third_party_settings:
             uuid: a5da6110-0edc-4ed8-bb1a-fcf44f92fcda
             region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:oa_event:field_meeting_agendas'
+              label: 'Meeting Agendas'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: default
-                  link: false
+                  view_mode: link_to_document
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 2
           932a7273-f586-469e-aee8-86aafc5db35f:

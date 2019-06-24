@@ -17,7 +17,6 @@ function iasc_content_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal
   }
 }
 
-
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
