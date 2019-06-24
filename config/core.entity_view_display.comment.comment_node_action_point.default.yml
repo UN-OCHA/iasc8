@@ -9,12 +9,63 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8b0120e9-b032-4cef-8eca-a6e031f54a42:
+            uuid: 8b0120e9-b032-4cef-8eca-a6e031f54a42
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_action_point:comment_body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          16904b62-cc77-4f0a-9d14-999f6c57033c:
+            uuid: 16904b62-cc77-4f0a-9d14-999f6c57033c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_action_point:field_oa_related'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          85ffb078-a338-4ede-8940-b76121ef687e:
+            uuid: 85ffb078-a338-4ede-8940-b76121ef687e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment_node_action_point:links'
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: comment.comment_node_action_point.default
 targetEntityType: comment
 bundle: comment_node_action_point

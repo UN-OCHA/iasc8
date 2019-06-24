@@ -17,12 +17,31 @@ dependencies:
     - node.type.announcement
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c5f6b1ce-e4f7-4607-941d-78eaca73127a:
+            uuid: c5f6b1ce-e4f7-4607-941d-78eaca73127a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:announcement:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.announcement.featured
 targetEntityType: node
 bundle: announcement

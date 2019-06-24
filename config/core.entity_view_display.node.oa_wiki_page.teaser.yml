@@ -24,6 +24,7 @@ dependencies:
     - datetime
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -31,6 +32,106 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          533317ed-5192-44f4-bfcd-acbb1190d39a:
+            uuid: 533317ed-5192-44f4-bfcd-acbb1190d39a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:field_product_thumbnail'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          dacb651a-70e4-4ba3-84cc-6f47ade68e10:
+            uuid: dacb651a-70e4-4ba3-84cc-6f47ade68e10
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:field_document_no'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          603f3e9e-b5ca-4388-b2b7-c0eff33add49:
+            uuid: 603f3e9e-b5ca-4388-b2b7-c0eff33add49
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:og_group_ref'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          a32c8aa2-d0db-43bf-b1e5-0ba1b7516380:
+            uuid: a32c8aa2-d0db-43bf-b1e5-0ba1b7516380
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:field_published_date'
+              formatter:
+                label: inline
+                type: datetime_default
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          f0389fdb-40e5-4930-9d5c-9c4bcbebe57a:
+            uuid: f0389fdb-40e5-4930-9d5c-9c4bcbebe57a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_wiki_page:links'
+            additional: {  }
+            weight: 4
+          9d769346-a83d-4e9b-899b-b55e39266c54:
+            uuid: 9d769346-a83d-4e9b-899b-b55e39266c54
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_wiki_page:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+        third_party_settings: {  }
 id: node.oa_wiki_page.teaser
 targetEntityType: node
 bundle: oa_wiki_page

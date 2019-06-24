@@ -9,12 +9,63 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          10d75f00-2b41-4f44-ad39-1e4e0afd0e1b:
+            uuid: 10d75f00-2b41-4f44-ad39-1e4e0afd0e1b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_oa_discussion_post:comment_body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          b03732d1-e37d-491c-ab09-f3c70bd33fea:
+            uuid: b03732d1-e37d-491c-ab09-f3c70bd33fea
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_oa_discussion_post:field_oa_related'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          424cac37-d739-4169-bd56-7b597ad16442:
+            uuid: 424cac37-d739-4169-bd56-7b597ad16442
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment_node_oa_discussion_post:links'
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: comment.comment_node_oa_discussion_post.default
 targetEntityType: comment
 bundle: comment_node_oa_discussion_post

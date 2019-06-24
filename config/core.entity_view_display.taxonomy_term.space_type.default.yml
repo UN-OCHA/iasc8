@@ -10,6 +10,7 @@ dependencies:
     - taxonomy.vocabulary.space_type
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - options
     - text
@@ -17,6 +18,90 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          3d9e7189-6205-4a8b-abba-57fd226b4186:
+            uuid: 3d9e7189-6205-4a8b-abba-57fd226b4186
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:space_type:description'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          6951e8fd-3d80-4ad5-b684-a9f3c11e1869:
+            uuid: 6951e8fd-3d80-4ad5-b684-a9f3c11e1869
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:space_type:field_oa_section_layout'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          c51d03cc-0c52-47b2-9cae-cbb78295e03e:
+            uuid: c51d03cc-0c52-47b2-9cae-cbb78295e03e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:space_type:field_oa_node_types'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          ea8cd4ef-3d6b-4829-9f62-6dad73c1264d:
+            uuid: ea8cd4ef-3d6b-4829-9f62-6dad73c1264d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:space_type:field_oa_clone_space'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          4e56f11c-665b-4b36-b341-3aa84bd4130d:
+            uuid: 4e56f11c-665b-4b36-b341-3aa84bd4130d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:space_type:field_oa_clone_enabled'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
 id: taxonomy_term.space_type.default
 targetEntityType: taxonomy_term
 bundle: space_type

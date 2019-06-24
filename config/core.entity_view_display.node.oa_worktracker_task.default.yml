@@ -29,6 +29,7 @@ dependencies:
     - datetime
     - field_layout
     - file
+    - layout_builder
     - layout_discovery
     - options
     - text
@@ -37,6 +38,291 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e88f1660-c933-403e-b5c6-51c1494af24d:
+            uuid: e88f1660-c933-403e-b5c6-51c1494af24d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_oa_media'
+              formatter:
+                label: above
+                type: file_default
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          b2a48edc-903b-4ae2-ba52-1ed0011d9590:
+            uuid: b2a48edc-903b-4ae2-ba52-1ed0011d9590
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:oa_section_ref'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          bc611fd8-4f96-4f73-bd00-6c75e3445a52:
+            uuid: bc611fd8-4f96-4f73-bd00-6c75e3445a52
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_oa_worktracker_assigned_to'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          306b6ec9-2264-4c3f-8c35-cf4889abf77f:
+            uuid: 306b6ec9-2264-4c3f-8c35-cf4889abf77f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_oa_worktracker_task_status'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          d65a0c4e-e641-42ec-a8d2-f590b53bb7ee:
+            uuid: d65a0c4e-e641-42ec-a8d2-f590b53bb7ee
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_oa_worktracker_priority'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          d36ecb5a-37ea-45c1-9725-ec7af053c186:
+            uuid: d36ecb5a-37ea-45c1-9725-ec7af053c186
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_oa_worktracker_task_type'
+              formatter:
+                label: inline
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          fc3f1786-a66e-4aa3-b7a0-94508b424814:
+            uuid: fc3f1786-a66e-4aa3-b7a0-94508b424814
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_recomendation'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 6
+          3a1626c4-bdd3-40ce-827d-3b7539a4c91c:
+            uuid: 3a1626c4-bdd3-40ce-827d-3b7539a4c91c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_date'
+              formatter:
+                label: above
+                type: datetime_default
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 7
+          999b0885-c332-460c-b9d6-329b394ed731:
+            uuid: 999b0885-c332-460c-b9d6-329b394ed731
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:comment_node_oa_worktracker_task'
+              formatter:
+                label: hidden
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            additional: {  }
+            weight: 8
+          40801880-7037-4d59-b52d-f79fb12f66ac:
+            uuid: 40801880-7037-4d59-b52d-f79fb12f66ac
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_description_implementation'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 9
+          b80d6279-cb2e-4c00-8c52-840a48242958:
+            uuid: b80d6279-cb2e-4c00-8c52-840a48242958
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_worktracker_country'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 10
+          e68825b3-7284-44e1-803d-97cbe8cd800a:
+            uuid: e68825b3-7284-44e1-803d-97cbe8cd800a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_summary_of_recommendat'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 11
+          eaecce9d-3cb3-492d-87eb-c7fa8e64f3fe:
+            uuid: eaecce9d-3cb3-492d-87eb-c7fa8e64f3fe
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_evaluation_title'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 12
+          aceaa146-db8b-480f-99ee-b4ff0ca70870:
+            uuid: aceaa146-db8b-480f-99ee-b4ff0ca70870
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_timeframe'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 13
+          484c7901-1dcc-4487-b857-21fa245f3510:
+            uuid: 484c7901-1dcc-4487-b857-21fa245f3510
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_addressee'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 14
+          dccf4ce7-daa4-4690-8705-c1ebd18e77e0:
+            uuid: dccf4ce7-daa4-4690-8705-c1ebd18e77e0
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_worktracker_task:links'
+            additional: {  }
+            weight: 15
+          14bd04a6-56d1-409a-acb8-8a2d39ce428e:
+            uuid: 14bd04a6-56d1-409a-acb8-8a2d39ce428e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 16
+          e64ac227-d896-4bf2-80eb-d765f1ccfeca:
+            uuid: e64ac227-d896-4bf2-80eb-d765f1ccfeca
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_worktracker_task:field_iasc_audience'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 17
+        third_party_settings: {  }
 id: node.oa_worktracker_task.default
 targetEntityType: node
 bundle: oa_worktracker_task

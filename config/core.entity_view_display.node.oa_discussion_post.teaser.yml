@@ -14,6 +14,7 @@ dependencies:
     - node.type.oa_discussion_post
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -21,6 +22,40 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f798c340-d1ae-4656-be67-6d6370c0b2f2:
+            uuid: f798c340-d1ae-4656-be67-6d6370c0b2f2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_discussion_post:links'
+            additional: {  }
+            weight: 0
+          9a41cfb4-a488-4f63-9857-d3aa69ba6f96:
+            uuid: 9a41cfb4-a488-4f63-9857-d3aa69ba6f96
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_discussion_post:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.oa_discussion_post.teaser
 targetEntityType: node
 bundle: oa_discussion_post

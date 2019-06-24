@@ -19,6 +19,7 @@ dependencies:
     - node.type.action_point
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -26,6 +27,40 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8afec4ee-c8a9-4ad7-8278-62f8e5689748:
+            uuid: 8afec4ee-c8a9-4ad7-8278-62f8e5689748
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:action_point:links'
+            additional: {  }
+            weight: 0
+          f8d609c1-9144-4643-8a12-cf99cd4ccd52:
+            uuid: f8d609c1-9144-4643-8a12-cf99cd4ccd52
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:action_point:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.action_point.teaser
 targetEntityType: node
 bundle: action_point

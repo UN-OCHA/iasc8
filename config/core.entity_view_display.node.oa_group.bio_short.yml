@@ -16,12 +16,31 @@ dependencies:
     - node.type.oa_group
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e7ad3c76-fd96-43ab-98e7-57b4b92230da:
+            uuid: e7ad3c76-fd96-43ab-98e7-57b4b92230da
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_group:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.oa_group.bio_short
 targetEntityType: node
 bundle: oa_group

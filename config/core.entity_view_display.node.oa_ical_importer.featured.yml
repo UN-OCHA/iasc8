@@ -13,12 +13,31 @@ dependencies:
     - node.type.oa_ical_importer
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          84d03e15-b27d-41f3-9b80-3e7843e989c8:
+            uuid: 84d03e15-b27d-41f3-9b80-3e7843e989c8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_ical_importer:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.oa_ical_importer.featured
 targetEntityType: node
 bundle: oa_ical_importer

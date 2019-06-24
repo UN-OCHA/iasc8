@@ -53,3 +53,7 @@ function iasc_migrate_node_insert($entity) {
       break;
   }
 }
+
+function oa_buttons_get_command_buttons_options() {
+  return [];
+}
