@@ -7,11 +7,36 @@ dependencies:
     - paragraphs.paragraphs_type.additional_locations
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          ddfaa12b-ef20-44a7-8ca0-2cd3d5a0a052:
+            uuid: ddfaa12b-ef20-44a7-8ca0-2cd3d5a0a052
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:additional_locations:field_additional_city'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: paragraph.additional_locations.default
 targetEntityType: paragraph
 bundle: additional_locations

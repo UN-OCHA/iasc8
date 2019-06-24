@@ -7,12 +7,46 @@ dependencies:
     - field.field.comment.comment_node_oa_section.comment_body
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          81c6b61b-b6c9-4850-950d-ccaf7d2a2db8:
+            uuid: 81c6b61b-b6c9-4850-950d-ccaf7d2a2db8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_oa_section:comment_body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          d9bf10bf-e5fb-46f8-a657-47e498b5d19f:
+            uuid: d9bf10bf-e5fb-46f8-a657-47e498b5d19f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment_node_oa_section:links'
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: comment.comment_node_oa_section.default
 targetEntityType: comment
 bundle: comment_node_oa_section

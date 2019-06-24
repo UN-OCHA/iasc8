@@ -11,12 +11,84 @@ dependencies:
     - paragraphs.paragraphs_type.agenda_items
   module:
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8c3c5754-528e-47e5-959f-fbf74bd28b62:
+            uuid: 8c3c5754-528e-47e5-959f-fbf74bd28b62
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:agenda_items:field_ai_title'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          a5046444-cfa4-4e76-af6b-a546f00f56ac:
+            uuid: a5046444-cfa4-4e76-af6b-a546f00f56ac
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:agenda_items:field_ai_description'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          f9e036e7-f882-407c-91ce-f604d96808bf:
+            uuid: f9e036e7-f882-407c-91ce-f604d96808bf
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:agenda_items:field_contact'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          96ac32ca-e89a-4a5f-956c-cd74afa718d3:
+            uuid: 96ac32ca-e89a-4a5f-956c-cd74afa718d3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:agenda_items:field_referenced_docs'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
 id: paragraph.agenda_items.default
 targetEntityType: paragraph
 bundle: agenda_items

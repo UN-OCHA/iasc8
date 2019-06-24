@@ -10,17 +10,54 @@ dependencies:
     - field.field.user.user.field_user_about
     - field.field.user.user.field_user_display_name
     - field.field.user.user.field_user_picture
+    - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          1f5e8b69-ff68-4a2f-8dea-fa879ae65fb9:
+            uuid: 1f5e8b69-ff68-4a2f-8dea-fa879ae65fb9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:user_picture'
+              formatter:
+                type: image
+                settings:
+                  image_style: thumbnail
+                  image_link: content
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 0
+          f31512d8-e3c3-47fc-ac81-e9c5ed7226cd:
+            uuid: f31512d8-e3c3-47fc-ac81-e9c5ed7226cd
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:user:user:flag_following'
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact

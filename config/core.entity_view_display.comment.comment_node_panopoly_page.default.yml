@@ -9,12 +9,63 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_layout
+    - layout_builder
     - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          ee77719b-4008-405a-8c62-58147a69fb16:
+            uuid: ee77719b-4008-405a-8c62-58147a69fb16
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_panopoly_page:comment_body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          250743ac-7927-43d2-a088-aef4d554b1fb:
+            uuid: 250743ac-7927-43d2-a088-aef4d554b1fb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:comment:comment_node_panopoly_page:field_oa_related'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          c9462110-7a85-403a-892a-ae8ceb45d33e:
+            uuid: c9462110-7a85-403a-892a-ae8ceb45d33e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment_node_panopoly_page:links'
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: comment.comment_node_panopoly_page.default
 targetEntityType: comment
 bundle: comment_node_panopoly_page

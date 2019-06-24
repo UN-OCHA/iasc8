@@ -26,12 +26,64 @@ dependencies:
   module:
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          67a4296b-461d-4ff9-80aa-74a817de7cab:
+            uuid: 67a4296b-461d-4ff9-80aa-74a817de7cab
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_organisation'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          91f8860e-716c-444d-b278-da36c52ac454:
+            uuid: 91f8860e-716c-444d-b278-da36c52ac454
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_photo'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          d49f0e86-8bf8-458c-93af-36e0ebf89a4c:
+            uuid: d49f0e86-8bf8-458c-93af-36e0ebf89a4c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:contact:links'
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: node.contact.bio_short
 targetEntityType: node
 bundle: contact

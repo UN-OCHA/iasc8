@@ -7,11 +7,36 @@ dependencies:
   module:
     - field_layout
     - file
+    - layout_builder
     - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          4ae6dee7-e648-4703-8b4c-9f21bea53892:
+            uuid: 4ae6dee7-e648-4703-8b4c-9f21bea53892
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:file:document:field_file_title'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: file.document.default
 targetEntityType: file
 bundle: document

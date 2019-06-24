@@ -15,6 +15,7 @@ dependencies:
     - comment
     - field_layout
     - file
+    - layout_builder
     - layout_discovery
     - text
     - user
@@ -22,6 +23,120 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          bd753313-cd63-411b-a1ec-323ba882fe12:
+            uuid: bd753313-cd63-411b-a1ec-323ba882fe12
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:oa_section_ref'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          9ece1289-8be9-4107-87eb-ca1b050d1259:
+            uuid: 9ece1289-8be9-4107-87eb-ca1b050d1259
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:og_group_ref'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          e73ef15e-408f-48d3-93cf-5ee0307b5c28:
+            uuid: e73ef15e-408f-48d3-93cf-5ee0307b5c28
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:field_basic_file_file'
+              formatter:
+                label: above
+                type: file_default
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          f382804b-bc65-4c6d-b0a1-67dc6a318fa7:
+            uuid: f382804b-bc65-4c6d-b0a1-67dc6a318fa7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:comment_node_oa_ical_importer'
+              formatter:
+                label: hidden
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          1fbde18e-1696-4945-9419-22c55a323f77:
+            uuid: 1fbde18e-1696-4945-9419-22c55a323f77
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:oa_ical_importer:links'
+            additional: {  }
+            weight: 4
+          0e164d67-92b6-4dd7-b40e-98725169d09d:
+            uuid: 0e164d67-92b6-4dd7-b40e-98725169d09d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          af12d631-5e28-4e91-b443-d2e1952e4aca:
+            uuid: af12d631-5e28-4e91-b443-d2e1952e4aca
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:oa_ical_importer:field_iasc_audience'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 6
+        third_party_settings: {  }
 id: node.oa_ical_importer.default
 targetEntityType: node
 bundle: oa_ical_importer

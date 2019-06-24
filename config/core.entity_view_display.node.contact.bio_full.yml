@@ -28,6 +28,7 @@ dependencies:
     - entity_reference_revisions
     - field_layout
     - image
+    - layout_builder
     - layout_discovery
     - link
     - options
@@ -36,6 +37,236 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          3a4f8249-3098-4e62-8513-1dc0dfc06d02:
+            uuid: 3a4f8249-3098-4e62-8513-1dc0dfc06d02
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_photo'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          8e03bfe6-d6b6-46c3-bdcb-a9161cd4710b:
+            uuid: 8e03bfe6-d6b6-46c3-bdcb-a9161cd4710b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_position'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          21c0e42b-647b-4635-bfa2-9b60584629ea:
+            uuid: 21c0e42b-647b-4635-bfa2-9b60584629ea
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_title'
+              formatter:
+                label: hidden
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          8de5da3d-94fa-40a3-81ec-2a9a03d296c5:
+            uuid: 8de5da3d-94fa-40a3-81ec-2a9a03d296c5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_department'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+          9889d6e6-0039-419c-9fda-a72b52968a2c:
+            uuid: 9889d6e6-0039-419c-9fda-a72b52968a2c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_branch'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          415b5dde-2e9b-47f4-96cf-8f89b318866b:
+            uuid: 415b5dde-2e9b-47f4-96cf-8f89b318866b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_phone'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          19482c70-310f-463b-a406-77701ca702fb:
+            uuid: 19482c70-310f-463b-a406-77701ca702fb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_mobile'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 6
+          ad240da6-7ae7-4e02-b220-e9f15a08f78a:
+            uuid: ad240da6-7ae7-4e02-b220-e9f15a08f78a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_fax'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 7
+          8bb54811-f4a1-4574-b19e-d7cdadfa3cf3:
+            uuid: 8bb54811-f4a1-4574-b19e-d7cdadfa3cf3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_email'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 8
+          5c71b70e-8126-49b5-9ef8-3dcc610d2a5e:
+            uuid: 5c71b70e-8126-49b5-9ef8-3dcc610d2a5e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_homepage'
+              formatter:
+                label: inline
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 9
+          c21d0bba-4399-4d86-b071-5b7359ca577e:
+            uuid: c21d0bba-4399-4d86-b071-5b7359ca577e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_address'
+              formatter:
+                label: inline
+                type: address_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 10
+          3eee82c8-a5cf-4c90-a285-5e2b393b9ac9:
+            uuid: 3eee82c8-a5cf-4c90-a285-5e2b393b9ac9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_organisation'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 11
+          502169fe-adf0-40e1-b9c0-ff24e214b3e7:
+            uuid: 502169fe-adf0-40e1-b9c0-ff24e214b3e7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:contact:field_membership'
+              formatter:
+                label: inline
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: full
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 12
+          56294e48-f977-4eb3-95e8-0f1c0bafd0b8:
+            uuid: 56294e48-f977-4eb3-95e8-0f1c0bafd0b8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:contact:links'
+            additional: {  }
+            weight: 13
+        third_party_settings: {  }
 id: node.contact.bio_full
 targetEntityType: node
 bundle: contact
