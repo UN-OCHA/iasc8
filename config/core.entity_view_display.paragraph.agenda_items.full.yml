@@ -1,8 +1,9 @@
-uuid: 1d9763dd-9522-4c0b-9ec6-31f38dde1d9e
+uuid: 9dbaa051-e8da-4c70-a8fa-fb4bebf46962
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.full
     - field.field.paragraph.agenda_items.field_ai_description
     - field.field.paragraph.agenda_items.field_ai_title
     - field.field.paragraph.agenda_items.field_contact
@@ -20,10 +21,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: paragraph.agenda_items.default
+id: paragraph.agenda_items.full
 targetEntityType: paragraph
 bundle: agenda_items
-mode: default
+mode: full
 content:
   field_ai_description:
     label: hidden
