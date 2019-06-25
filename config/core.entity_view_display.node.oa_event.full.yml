@@ -89,7 +89,7 @@ content:
     weight: 8
     type: entity_reference_entity_view
     settings:
-      view_mode: default
+      view_mode: link_to_document
       link: false
     third_party_settings: {  }
     region: content
