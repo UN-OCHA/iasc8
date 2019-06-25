@@ -203,17 +203,18 @@ third_party_settings:
             uuid: 932a7273-f586-469e-aee8-86aafc5db35f
             region: first
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:oa_event:field_meeting_notes'
+              label: 'Meeting Notes'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: above
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: default
-                  link: false
+                  view_mode: link_to_document
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 3
           f9dfee4f-15c7-4679-9978-6b7e0303bf1d:
