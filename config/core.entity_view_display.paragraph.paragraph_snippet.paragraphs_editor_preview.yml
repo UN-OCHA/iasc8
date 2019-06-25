@@ -11,12 +11,6 @@ dependencies:
     - field.field.paragraph.paragraph_snippet.field_snippet_title_override
     - field.field.paragraph.paragraph_snippet.field_snippet_viewmode
     - paragraphs.paragraphs_type.paragraph_snippet
-  module:
-    - field_layout
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.paragraph_snippet.paragraphs_editor_preview
 targetEntityType: paragraph
 bundle: paragraph_snippet

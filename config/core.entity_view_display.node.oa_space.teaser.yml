@@ -28,13 +28,8 @@ dependencies:
     - field.field.node.oa_space.og_user_permission_inheritance
     - node.type.oa_space
   module:
-    - field_layout
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_space.teaser
 targetEntityType: node
 bundle: oa_space

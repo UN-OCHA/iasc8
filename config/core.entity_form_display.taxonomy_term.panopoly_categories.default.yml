@@ -7,15 +7,9 @@ dependencies:
     - image.style.thumbnail
     - taxonomy.vocabulary.panopoly_categories
   module:
-    - field_layout
     - image
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.panopoly_categories.default
 targetEntityType: taxonomy_term
 bundle: panopoly_categories

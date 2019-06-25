@@ -6,13 +6,7 @@ dependencies:
     - comment.type.comment_node_oa_event
     - field.field.comment.comment_node_oa_event.comment_body
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: comment.comment_node_oa_event.default
 targetEntityType: comment
 bundle: comment_node_oa_event

@@ -22,15 +22,9 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
     - file
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_wiki_page.default
 targetEntityType: node
 bundle: oa_wiki_page

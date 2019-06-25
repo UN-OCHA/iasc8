@@ -12,14 +12,9 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - field_layout
     - image
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default

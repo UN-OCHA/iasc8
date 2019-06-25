@@ -26,12 +26,7 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_event.notifications
 targetEntityType: node
 bundle: oa_event

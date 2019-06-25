@@ -25,17 +25,11 @@ dependencies:
   module:
     - address
     - comment
-    - field_layout
     - file
-    - layout_discovery
     - link
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.contact.default
 targetEntityType: node
 bundle: contact

@@ -12,13 +12,8 @@ dependencies:
     - node.type.oa_team
   module:
     - comment
-    - field_layout
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_team.default
 targetEntityType: node
 bundle: oa_team

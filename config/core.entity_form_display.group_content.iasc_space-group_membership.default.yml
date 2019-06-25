@@ -6,13 +6,7 @@ dependencies:
     - field.field.group_content.iasc_space-group_membership.group_roles
     - group.content_type.iasc_space-group_membership
   module:
-    - field_layout
-    - layout_discovery
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: group_content.iasc_space-group_membership.default
 targetEntityType: group_content
 bundle: iasc_space-group_membership

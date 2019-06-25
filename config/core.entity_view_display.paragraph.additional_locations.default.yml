@@ -5,12 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.additional_locations.field_additional_city
     - paragraphs.paragraphs_type.additional_locations
-  module:
-    - field_layout
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.additional_locations.default
 targetEntityType: paragraph
 bundle: additional_locations

@@ -11,16 +11,10 @@ dependencies:
     - taxonomy.vocabulary.hosts
   module:
     - address
-    - field_layout
     - file
-    - layout_discovery
     - link
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.hosts.default
 targetEntityType: taxonomy_term
 bundle: hosts

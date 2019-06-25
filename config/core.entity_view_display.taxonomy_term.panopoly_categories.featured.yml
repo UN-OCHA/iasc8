@@ -7,12 +7,7 @@ dependencies:
     - field.field.taxonomy_term.panopoly_categories.field_featured_image
     - taxonomy.vocabulary.panopoly_categories
   module:
-    - field_layout
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.panopoly_categories.featured
 targetEntityType: taxonomy_term
 bundle: panopoly_categories

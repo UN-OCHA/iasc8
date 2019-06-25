@@ -13,12 +13,7 @@ dependencies:
     - field.field.node.oa_discussion_post.og_vocabulary
     - node.type.oa_discussion_post
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_discussion_post.bio_full
 targetEntityType: node
 bundle: oa_discussion_post

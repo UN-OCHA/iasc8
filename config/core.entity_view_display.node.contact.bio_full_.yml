@@ -26,14 +26,9 @@ dependencies:
   module:
     - address
     - entity_reference_revisions
-    - field_layout
     - image
     - link
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.contact.bio_full_
 targetEntityType: node
 bundle: contact

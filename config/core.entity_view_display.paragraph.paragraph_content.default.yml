@@ -7,12 +7,7 @@ dependencies:
     - field.field.paragraph.paragraph_content.field_oa_related_content
     - paragraphs.paragraphs_type.paragraph_content
   module:
-    - field_layout
     - options
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.paragraph_content.default
 targetEntityType: paragraph
 bundle: paragraph_content

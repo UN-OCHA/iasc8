@@ -12,15 +12,10 @@ dependencies:
     - node.type.panopoly_page
   module:
     - comment
-    - field_layout
     - image
     - options
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.panopoly_page.default
 targetEntityType: node
 bundle: panopoly_page

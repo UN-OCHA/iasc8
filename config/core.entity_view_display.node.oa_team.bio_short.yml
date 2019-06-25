@@ -11,12 +11,7 @@ dependencies:
     - field.field.node.oa_team.og_group_ref
     - node.type.oa_team
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_team.bio_short
 targetEntityType: node
 bundle: oa_team

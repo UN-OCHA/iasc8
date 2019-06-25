@@ -7,14 +7,8 @@ dependencies:
     - field.field.comment.comment_node_oa_worktracker_task.comment_body
     - field.field.comment.comment_node_oa_worktracker_task.field_oa_related
   module:
-    - field_layout
-    - layout_discovery
     - paragraphs
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: comment.comment_node_oa_worktracker_task.default
 targetEntityType: comment
 bundle: comment_node_oa_worktracker_task

@@ -16,12 +16,7 @@ dependencies:
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.announcement.featured
 targetEntityType: node
 bundle: announcement

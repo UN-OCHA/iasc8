@@ -30,16 +30,11 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
     - image
     - link
     - options
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_space.default
 targetEntityType: node
 bundle: oa_space

@@ -12,14 +12,9 @@ dependencies:
     - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
   module:
-    - field_layout
     - image
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default

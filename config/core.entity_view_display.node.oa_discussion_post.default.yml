@@ -14,14 +14,9 @@ dependencies:
     - node.type.oa_discussion_post
   module:
     - comment
-    - field_layout
     - file
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_discussion_post.default
 targetEntityType: node
 bundle: oa_discussion_post

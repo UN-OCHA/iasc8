@@ -11,14 +11,8 @@ dependencies:
     - node.type.oa_team
   module:
     - comment
-    - field_layout
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_team.default
 targetEntityType: node
 bundle: oa_team

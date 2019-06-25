@@ -27,15 +27,10 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
     - file
     - options
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_worktracker_task.default
 targetEntityType: node
 bundle: oa_worktracker_task

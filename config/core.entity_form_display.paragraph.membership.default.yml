@@ -7,13 +7,6 @@ dependencies:
     - field.field.paragraph.membership.field_contact_category
     - field.field.paragraph.membership.field_position
     - paragraphs.paragraphs_type.membership
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.membership.default
 targetEntityType: paragraph
 bundle: membership
