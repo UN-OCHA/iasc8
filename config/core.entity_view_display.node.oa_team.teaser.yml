@@ -12,48 +12,12 @@ dependencies:
     - node.type.oa_team
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          4da542cc-41fb-4e37-8ce5-944e237b2d49:
-            uuid: 4da542cc-41fb-4e37-8ce5-944e237b2d49
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:oa_team:links'
-            additional: {  }
-            weight: 0
-          609d6ddc-b3c3-42d3-a79e-c5d4d88e56cd:
-            uuid: 609d6ddc-b3c3-42d3-a79e-c5d4d88e56cd
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_team:body'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
 id: node.oa_team.teaser
 targetEntityType: node
 bundle: oa_team

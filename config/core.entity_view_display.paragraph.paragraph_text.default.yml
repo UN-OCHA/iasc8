@@ -8,52 +8,12 @@ dependencies:
     - paragraphs.paragraphs_type.paragraph_text
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - options
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          10182a50-f041-4d0d-92c8-3d481778af82:
-            uuid: 10182a50-f041-4d0d-92c8-3d481778af82
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:paragraph_text:field_paragraph_text'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-          4f34cd1c-e6fd-43c8-af8f-045da452e48d:
-            uuid: 4f34cd1c-e6fd-43c8-af8f-045da452e48d
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:paragraph_text:field_paragraph_layout'
-              formatter:
-                label: above
-                type: list_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
 id: paragraph.paragraph_text.default
 targetEntityType: paragraph
 bundle: paragraph_text

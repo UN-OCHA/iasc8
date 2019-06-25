@@ -12,15 +12,11 @@ dependencies:
     - paragraphs.paragraphs_type.agenda_items
   module:
     - field_layout
-    - layout_builder
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: paragraph.agenda_items.full
 targetEntityType: paragraph
 bundle: agenda_items

@@ -25,31 +25,11 @@ dependencies:
     - node.type.contact
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          897b1883-b864-4700-ac33-5c79937a9679:
-            uuid: 897b1883-b864-4700-ac33-5c79937a9679
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:contact:links'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: node.contact.link_to_document
 targetEntityType: node
 bundle: contact

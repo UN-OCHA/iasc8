@@ -8,36 +8,11 @@ dependencies:
     - taxonomy.vocabulary.panopoly_categories
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          9a11ea7b-fb53-4373-8baf-33a28aab33a5:
-            uuid: 9a11ea7b-fb53-4373-8baf-33a28aab33a5
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:panopoly_categories:description'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: taxonomy_term.panopoly_categories.featured
 targetEntityType: taxonomy_term
 bundle: panopoly_categories

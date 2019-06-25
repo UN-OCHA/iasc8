@@ -8,58 +8,12 @@ dependencies:
     - node.type.page
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          a538b8b1-b6bf-4d0a-afc0-e34be93a59ee:
-            uuid: a538b8b1-b6bf-4d0a-afc0-e34be93a59ee
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:page:flag_bookmark'
-            additional: {  }
-            weight: 0
-          1d325140-4fb7-4994-a74d-b56b77d38a72:
-            uuid: 1d325140-4fb7-4994-a74d-b56b77d38a72
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:body'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-          2a0b4648-0ef3-441c-8dab-ae80ac28f0d6:
-            uuid: 2a0b4648-0ef3-441c-8dab-ae80ac28f0d6
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:page:links'
-            additional: {  }
-            weight: 2
-        third_party_settings: {  }
 _core:
   default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
 id: node.page.teaser

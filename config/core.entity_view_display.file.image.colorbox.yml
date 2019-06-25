@@ -9,20 +9,10 @@ dependencies:
   module:
     - field_layout
     - file
-    - layout_builder
-    - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components: {  }
-        third_party_settings: {  }
 id: file.image.colorbox
 targetEntityType: file
 bundle: image

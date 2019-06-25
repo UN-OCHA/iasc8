@@ -11,41 +11,11 @@ dependencies:
     - node.type.article
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          51902b26-f706-4c54-a6f5-0511e8548bbd:
-            uuid: 51902b26-f706-4c54-a6f5-0511e8548bbd
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:article:flag_bookmark'
-            additional: {  }
-            weight: 0
-          24602b1c-b0c8-4607-a2a4-d8680ef29c34:
-            uuid: 24602b1c-b0c8-4607-a2a4-d8680ef29c34
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:article:links'
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
 _core:
   default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
 id: node.article.rss

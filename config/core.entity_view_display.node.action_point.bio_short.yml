@@ -19,31 +19,11 @@ dependencies:
     - node.type.action_point
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          bb4fd7d8-0dc0-4a56-822d-0acf9ac9c939:
-            uuid: bb4fd7d8-0dc0-4a56-822d-0acf9ac9c939
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:action_point:links'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: node.action_point.bio_short
 targetEntityType: node
 bundle: action_point

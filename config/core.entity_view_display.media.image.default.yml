@@ -8,37 +8,10 @@ dependencies:
   module:
     - field_layout
     - image
-    - layout_builder
-    - layout_discovery
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          0a580cab-3cd5-4768-b8da-afc44969b34f:
-            uuid: 0a580cab-3cd5-4768-b8da-afc44969b34f
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:media:image:field_media_image'
-              formatter:
-                label: visually_hidden
-                settings:
-                  image_style: ''
-                  image_link: file
-                third_party_settings: {  }
-                type: image
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
 id: media.image.default

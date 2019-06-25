@@ -22,39 +22,11 @@ dependencies:
     - node.type.oa_wiki_page
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          c5244ad5-c352-46e3-aae6-7dbee21260ae:
-            uuid: c5244ad5-c352-46e3-aae6-7dbee21260ae
-            region: content
-            configuration:
-              id: 'field_block:node:oa_wiki_page:field_oa_media'
-              label: File(s)
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: file_default
-                settings:
-                  use_description_as_link_text: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: node.oa_wiki_page.link_to_document
 targetEntityType: node
 bundle: oa_wiki_page
