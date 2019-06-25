@@ -37,38 +37,19 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-
 <div class="field--name-field-meeting-agendas">
-  {% if label_hidden %}
-    {% if items|length > 1 %}
-      <ul>
-        {% for item in items %}
-          <li>{{ item.content }}</li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      {% for item in items %}
-        <div>{{ item.content }}</div>
-      {% endfor %}
-    {% endif %}
-  {% else %}
+  {% if label_hidden == false %}
     <h3 class="field__label">{{ label }}</h3>
-    {% if items|length > 1 %}
-      <ul class="items">
-      {% for item in items %}
-        <li>{{ item.content }}</li>
-      {% endfor %}
-      </ul>
-    {% else %}
-      {% for item in items %}
-        <div>{{ item.content }}</div>
-      {% endfor %}
-    {% endif %}
+  {% endif %}
+  {% if items|length > 1 %}
+    <ul class="items">
+    {% for item in items %}
+      <li>{{ item.content }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    {% for item in items %}
+      <div>{{ item.content }}</div>
+    {% endfor %}
   {% endif %}
 </div>
