@@ -27,16 +27,12 @@ dependencies:
   module:
     - entity_reference_revisions
     - field_layout
-    - layout_builder
     - text
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.oa_event.default
 targetEntityType: node
 bundle: oa_event

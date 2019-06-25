@@ -22,31 +22,11 @@ dependencies:
     - node.type.oa_wiki_page
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          d24fdd7f-dea4-4274-bd0e-78ef4427bbe6:
-            uuid: d24fdd7f-dea4-4274-bd0e-78ef4427bbe6
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:oa_wiki_page:links'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: node.oa_wiki_page.bio_long
 targetEntityType: node
 bundle: oa_wiki_page

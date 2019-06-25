@@ -12,36 +12,11 @@ dependencies:
     - taxonomy.vocabulary.hosts
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          5bef9d07-6d0f-460e-936f-52572e66e1c8:
-            uuid: 5bef9d07-6d0f-460e-936f-52572e66e1c8
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:taxonomy_term:hosts:description'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 id: taxonomy_term.hosts.featured
 targetEntityType: taxonomy_term
 bundle: hosts

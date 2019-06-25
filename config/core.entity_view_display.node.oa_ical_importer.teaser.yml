@@ -13,48 +13,12 @@ dependencies:
     - node.type.oa_ical_importer
   module:
     - field_layout
-    - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          31e1176f-9ac2-496c-8172-7cd0aa44552c:
-            uuid: 31e1176f-9ac2-496c-8172-7cd0aa44552c
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:oa_ical_importer:links'
-            additional: {  }
-            weight: 0
-          95c03b19-cada-40a3-8f6b-08356cb0424c:
-            uuid: 95c03b19-cada-40a3-8f6b-08356cb0424c
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:oa_ical_importer:body'
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-            additional: {  }
-            weight: 1
-        third_party_settings: {  }
 id: node.oa_ical_importer.teaser
 targetEntityType: node
 bundle: oa_ical_importer
