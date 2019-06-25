@@ -12,9 +12,9 @@ shared_configuration:
     key: drupal_7
     database:
       driver: mysql
-      username: user
-      password: user
-      host: db
+      username: iasc
+      password: iasc
+      host: migrate
       port: 3306
-      database: d7
+      database: iasc
       prefix: null
