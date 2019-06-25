@@ -1,0 +1,19 @@
+name: iasc8
+type: theme
+description: Theme for IASC
+core: 8.x
+
+base theme: classy
+
+# Defines libraries group in which we can add css/js.
+libraries:
+  - iasc8/global-styling
+
+# Regions
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
