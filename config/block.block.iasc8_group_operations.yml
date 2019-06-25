@@ -1,0 +1,24 @@
+uuid: e1d650e3-65ec-454e-ad94-99aa95128279
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+  theme:
+    - iasc8
+_core:
+  default_config_hash: MjMChFykEa-4UxdnGstVk1FcXqwUF3p_GBJLIFT3_XI
+id: iasc8_group_operations
+theme: iasc8
+region: sidebar_first
+weight: -20
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: visible
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

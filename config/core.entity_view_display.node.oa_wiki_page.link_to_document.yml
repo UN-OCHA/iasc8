@@ -21,17 +21,26 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
+    - file
     - user
 id: node.oa_wiki_page.link_to_document
 targetEntityType: node
 bundle: oa_wiki_page
 mode: link_to_document
 content:
+  field_oa_media:
+    type: file_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   body: true
   comment_node_oa_wiki_page: true
@@ -40,7 +49,6 @@ hidden:
   field_document_type: true
   field_iasc_audience: true
   field_legacy_publish: true
-  field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
   field_published_date: true
