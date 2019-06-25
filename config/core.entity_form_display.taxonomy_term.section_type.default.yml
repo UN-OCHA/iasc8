@@ -10,15 +10,9 @@ dependencies:
     - field.field.taxonomy_term.section_type.field_oa_section_type_menu
     - taxonomy.vocabulary.section_type
   module:
-    - field_layout
     - file
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.section_type.default
 targetEntityType: taxonomy_term
 bundle: section_type

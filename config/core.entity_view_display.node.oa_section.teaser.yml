@@ -17,13 +17,8 @@ dependencies:
     - field.field.node.oa_section.og_group_ref
     - node.type.oa_section
   module:
-    - field_layout
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_section.teaser
 targetEntityType: node
 bundle: oa_section

@@ -21,12 +21,7 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_wiki_page.bio_short
 targetEntityType: node
 bundle: oa_wiki_page

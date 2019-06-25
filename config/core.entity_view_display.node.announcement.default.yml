@@ -18,14 +18,9 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
     - link
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.announcement.default
 targetEntityType: node
 bundle: announcement

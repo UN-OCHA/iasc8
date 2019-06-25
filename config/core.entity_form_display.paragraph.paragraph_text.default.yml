@@ -7,13 +7,7 @@ dependencies:
     - field.field.paragraph.paragraph_text.field_paragraph_text
     - paragraphs.paragraphs_type.paragraph_text
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.paragraph_text.default
 targetEntityType: paragraph
 bundle: paragraph_text

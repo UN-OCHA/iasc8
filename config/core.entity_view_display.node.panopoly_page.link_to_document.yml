@@ -11,12 +11,7 @@ dependencies:
     - field.field.node.panopoly_page.field_featured_status
     - node.type.panopoly_page
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.panopoly_page.link_to_document
 targetEntityType: node
 bundle: panopoly_page

@@ -13,14 +13,9 @@ dependencies:
     - node.type.oa_ical_importer
   module:
     - comment
-    - field_layout
     - file
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_ical_importer.default
 targetEntityType: node
 bundle: oa_ical_importer

@@ -18,12 +18,7 @@ dependencies:
     - field.field.node.action_point.og_group_ref
     - node.type.action_point
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.action_point.bio_long
 targetEntityType: node
 bundle: action_point

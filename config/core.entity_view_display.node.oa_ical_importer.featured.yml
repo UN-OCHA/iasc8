@@ -12,12 +12,7 @@ dependencies:
     - field.field.node.oa_ical_importer.og_group_ref
     - node.type.oa_ical_importer
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_ical_importer.featured
 targetEntityType: node
 bundle: oa_ical_importer

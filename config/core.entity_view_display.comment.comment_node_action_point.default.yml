@@ -8,12 +8,7 @@ dependencies:
     - field.field.comment.comment_node_action_point.field_oa_related
   module:
     - entity_reference_revisions
-    - field_layout
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: comment.comment_node_action_point.default
 targetEntityType: comment
 bundle: comment_node_action_point

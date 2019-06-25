@@ -9,13 +9,8 @@ dependencies:
     - field.field.taxonomy_term.space_type.field_oa_section_layout
     - taxonomy.vocabulary.space_type
   module:
-    - field_layout
     - options
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.space_type.default
 targetEntityType: taxonomy_term
 bundle: space_type

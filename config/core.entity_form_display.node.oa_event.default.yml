@@ -27,15 +27,9 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
-    - layout_discovery
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_event.default
 targetEntityType: node
 bundle: oa_event

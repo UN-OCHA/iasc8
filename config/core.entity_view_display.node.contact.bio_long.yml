@@ -24,14 +24,9 @@ dependencies:
     - field.field.node.contact.field_title
     - node.type.contact
   module:
-    - field_layout
     - image
     - options
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.contact.bio_long
 targetEntityType: node
 bundle: contact

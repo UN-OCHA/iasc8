@@ -5,12 +5,6 @@ dependencies:
   config:
     - field.field.group_content.iasc_group-group_membership.group_roles
     - group.content_type.iasc_group-group_membership
-  module:
-    - field_layout
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: group_content.iasc_group-group_membership.default
 targetEntityType: group_content
 bundle: iasc_group-group_membership

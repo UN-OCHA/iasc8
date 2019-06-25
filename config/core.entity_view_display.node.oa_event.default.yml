@@ -26,13 +26,8 @@ dependencies:
     - node.type.oa_event
   module:
     - entity_reference_revisions
-    - field_layout
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_event.default
 targetEntityType: node
 bundle: oa_event

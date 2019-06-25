@@ -18,14 +18,9 @@ dependencies:
     - node.type.oa_section
   module:
     - comment
-    - field_layout
     - options
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_section.default
 targetEntityType: node
 bundle: oa_section

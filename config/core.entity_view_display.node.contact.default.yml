@@ -27,15 +27,10 @@ dependencies:
     - address
     - comment
     - entity_reference_revisions
-    - field_layout
     - image
     - link
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.contact.default
 targetEntityType: node
 bundle: contact

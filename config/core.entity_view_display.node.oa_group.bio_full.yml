@@ -15,12 +15,7 @@ dependencies:
     - field.field.node.oa_group.og_user_permission_inheritance
     - node.type.oa_group
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.oa_group.bio_full
 targetEntityType: node
 bundle: oa_group

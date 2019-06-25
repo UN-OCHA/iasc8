@@ -20,14 +20,9 @@ dependencies:
   module:
     - comment
     - datetime
-    - field_layout
     - options
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.action_point.default
 targetEntityType: node
 bundle: action_point

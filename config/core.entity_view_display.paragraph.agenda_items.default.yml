@@ -10,12 +10,7 @@ dependencies:
     - field.field.paragraph.agenda_items.field_referenced_docs
     - paragraphs.paragraphs_type.agenda_items
   module:
-    - field_layout
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: paragraph.agenda_items.default
 targetEntityType: paragraph
 bundle: agenda_items
