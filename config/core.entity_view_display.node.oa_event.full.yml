@@ -116,7 +116,7 @@ content:
       separator: '-'
       timezone_override: ''
       interpreter: ''
-      show_next: 10
+      show_next: 100
       count_per_item: true
     third_party_settings: {  }
   field_room:

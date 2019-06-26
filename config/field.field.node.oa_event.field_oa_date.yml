@@ -18,7 +18,7 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  precreate: P2Y
+  precreate: P5Y
   parts:
     all: true
     frequencies:
