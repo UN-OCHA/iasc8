@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.date_format.medium
     - core.entity_view_mode.node.full
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
@@ -26,6 +27,7 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
+    - date_recur
     - entity_reference_revisions
     - text
     - user
@@ -103,14 +105,19 @@ content:
     third_party_settings: {  }
     region: content
   field_oa_date:
-    type: timestamp
+    type: date_recur_basic_formatter
     weight: 1
     region: content
     label: above
     settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
+      format_type: medium
+      occurrence_format_type: medium
+      same_end_date_format_type: medium
+      separator: '-'
+      timezone_override: ''
+      interpreter: ''
+      show_next: 10
+      count_per_item: true
     third_party_settings: {  }
   field_room:
     label: inline

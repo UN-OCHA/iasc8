@@ -1,19 +1,32 @@
-uuid: fb8dc135-2bbc-4506-97e1-b826ecafab29
+uuid: 50026ba1-6c59-4eb5-8a0f-5c87d31f4c28
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_oa_date
     - node.type.oa_event
+  module:
+    - date_recur
 id: node.oa_event.field_oa_date
 field_name: field_oa_date
 entity_type: node
 bundle: oa_event
-label: 'Event Date'
+label: 'Event date'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: timestamp
+settings:
+  precreate: P2Y
+  parts:
+    all: true
+    frequencies:
+      SECONDLY: {  }
+      MINUTELY: {  }
+      HOURLY: {  }
+      DAILY: {  }
+      WEEKLY: {  }
+      MONTHLY: {  }
+      YEARLY: {  }
+field_type: date_recur
