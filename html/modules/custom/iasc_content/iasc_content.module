@@ -3,21 +3,6 @@
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Implements hook_node_access().
- */
-function iasc_content_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal\Core\Session\AccountInterface $account) {
-  $type = $node->bundle();
-  if ($type == 'contact') {
-    if ($account->hasPermission('edit any ' . $type . ' content')) {
-      return AccessResult::allowed()->cachePerPermissions();
-    }
-    else {
-      return AccessResult::forbidden();
-    }
-  }
-}
-
-/**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function iasc_content_form_alter(&$form, &$form_state, $form_id) {
