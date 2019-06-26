@@ -79,8 +79,10 @@ process:
       source: body
   field_oa_date:
     -
-      plugin: sub_process
+      plugin: dateswap
       source: field_oa_date
+    -
+      plugin: sub_process
       process:
         value:
           plugin: format_date
