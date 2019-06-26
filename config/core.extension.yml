@@ -16,7 +16,9 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  date_recur: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   diff: 0
   dynamic_page_cache: 0

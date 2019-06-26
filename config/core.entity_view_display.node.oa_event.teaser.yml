@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
     - field.field.node.oa_event.field_meeting_notes
-    - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
@@ -26,7 +25,6 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - datetime
     - text
     - user
 id: node.oa_event.teaser
@@ -48,15 +46,6 @@ content:
     type: string
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_oa_date:
-    label: hidden
-    weight: 0
-    type: datetime_default
-    settings:
-      format_type: medium
-      timezone_override: ''
     third_party_settings: {  }
     region: content
   field_room:

@@ -85,8 +85,19 @@ process:
         value:
           plugin: format_date
           from_format: U
-          to_format: U
+          to_format: 'Y-m-d\TH:i:s'
           source: value
+        end_value:
+          plugin: format_date
+          from_format: U
+          to_format: 'Y-m-d\TH:i:s'
+          source: value2
+        timezone:
+          plugin: get
+          source: timezone
+        rrule:
+          plugin: get
+          source: rrule
   oa_other_spaces_ref:
     -
       plugin: get

@@ -1,15 +1,18 @@
-uuid: 47c9fe64-e8de-4fe0-9a78-209153b01560
-langcode: und
+uuid: 47bafb5b-1383-4272-b2ba-143c0fc856e7
+langcode: en
 status: true
 dependencies:
   module:
+    - date_recur
     - node
 id: node.field_oa_date
 field_name: field_oa_date
 entity_type: node
-type: timestamp
-settings: {  }
-module: core
+type: date_recur
+settings:
+  datetime_type: datetime
+  rrule_max_length: 256
+module: date_recur
 locked: false
 cardinality: -1
 translatable: true
