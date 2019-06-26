@@ -30,6 +30,7 @@
         "drupal/conditional_styles": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.1",
+        "drupal/date_recur": "^2.0@beta",
         "drupal/diff": "^1.0@RC",
         "drupal/extlink": "^1.1",
         "drupal/fasttoggle": "^2.0@alpha",
