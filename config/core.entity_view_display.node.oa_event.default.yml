@@ -71,9 +71,8 @@ content:
   field_contact:
     label: inline
     weight: 3
-    type: entity_reference_entity_view
+    type: entity_reference_label
     settings:
-      view_mode: default
       link: false
     third_party_settings: {  }
     region: content
