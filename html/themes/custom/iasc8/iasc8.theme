@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Preprocessors.
+ */
+
+/**
+ * Implements template_preprocess_field().
+ */
+function iasc8_preprocess_field(&$variables, $hook) {
+  return;
+  if (($variables['element']['#field_name'] == 'field_oa_date')) {
+    if (!isset($variables['element']['#items'][0])) {
+      return;
+    }
+
+    $min_date = $variables['element']['#items'][0]->value;
+    $max_date = $variables['element']['#items'][0]->end_value;
+
+    foreach ($variables['element']['#items'] as $item) {
+      $min_date = min($min_date, $item->value);
+      $max_date = max($max_date, $item->end_value);
+    }
+
+    $variables['min_date'] = [
+      'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
+      'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
+      'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
+    ];
+    $variables['max_date'] = [
+      'day' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'd'),
+      'month' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'M'),
+      'year' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'Y'),
+    ];
+  }
+}
