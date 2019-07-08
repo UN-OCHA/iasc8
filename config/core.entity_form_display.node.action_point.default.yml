@@ -20,6 +20,7 @@ dependencies:
     - comment
     - datetime
     - path
+    - select2
     - text
 id: node.action_point.default
 targetEntityType: node
@@ -63,8 +64,11 @@ content:
     region: content
   field_ap_responsibility:
     weight: 4
-    type: options_select
-    settings: {  }
+    type: select2_entity_reference
+    settings:
+      width: 100%
+      match_operator: CONTAINS
+      autocomplete: false
     third_party_settings: {  }
     region: content
   field_ap_status:
@@ -100,10 +104,10 @@ content:
     weight: 122
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   group_content_access:
     weight: 13
