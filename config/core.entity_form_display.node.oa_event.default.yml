@@ -29,6 +29,7 @@ dependencies:
     - date_recur
     - paragraphs
     - path
+    - select2
     - text
 id: node.oa_event.default
 targetEntityType: node
@@ -90,11 +91,11 @@ content:
     region: content
   field_contact:
     weight: 8
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
     region: content
   field_dial_in_meeting:
@@ -106,18 +107,21 @@ content:
     region: content
   field_host:
     weight: 7
-    type: options_select
-    settings: {  }
+    type: select2_entity_reference
+    settings:
+      autocomplete: false
+      match_operator: CONTAINS
+      width: 100%
     third_party_settings: {  }
     region: content
   field_iasc_audience:
     weight: 23
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_info_private:
     weight: 5
@@ -137,20 +141,20 @@ content:
     region: content
   field_meeting_agendas:
     weight: 9
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
     region: content
   field_meeting_notes:
     weight: 15
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
     region: content
   field_oa_date:
@@ -177,8 +181,11 @@ content:
     region: content
   oa_section_ref:
     weight: 1
-    type: options_select
-    settings: {  }
+    type: select2_entity_reference
+    settings:
+      autocomplete: false
+      match_operator: CONTAINS
+      width: 100%
     third_party_settings: {  }
     region: content
   path:
