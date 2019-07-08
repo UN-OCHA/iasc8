@@ -10,12 +10,13 @@ module:
   config_filter: 0
   config_split: 0
   devel: 0
+  devel_entity_updates: 0
 theme: {  }
 blacklist: {  }
 graylist:
-  - migrate_plus.migration_group.migrate_drupal_7
-  - migrate_plus.migration.upgrade_d7_file_private
   - migrate_plus.migration.upgrade_d7_file
+  - migrate_plus.migration.upgrade_d7_file_private
+  - migrate_plus.migration_group.migrate_drupal_7
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
