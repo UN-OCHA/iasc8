@@ -1,1 +1,23 @@
 version: "2.1"
+
+services:
+  mail:
+    hostname: mail
+    image: mailhog/mailhog
+    expose:
+      - "80"
+    environment:
+      - MH_API_BIND_ADDR=0.0.0.0:80
+      - MH_UI_BIND_ADDR=0.0.0.0:80
+    labels:
+      - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
+    user: root
+  tika:
+    hostname: tika
+    image: logicalspark/docker-tikaserver
+  redis:
+    hostname: redis
+    image: redis:3.2.11
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
