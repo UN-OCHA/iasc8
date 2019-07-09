@@ -11,7 +11,7 @@ _core:
 id: iasc8_group_operations
 theme: iasc8
 region: sidebar_first
-weight: -20
+weight: -6
 provider: null
 plugin: group_operations
 settings:
