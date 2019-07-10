@@ -119,3 +119,5 @@ hidden:
   field_legacy_id: true
   field_membership: true
   field_organisation: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,19 +1,19 @@
-uuid: 6fb751ff-3c2a-46e1-ab12-e971fe26c8a1
+uuid: 3ce2d941-f36c-43d2-b984-4e9e9507a683
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_index
+    - search_api.index.default_solr_index
   module:
     - search_api
 _core:
-  default_config_hash: EeNNkLARDmftWehrk-ew_OW8srW2RgDKI1mZrWxZ-ao
+  default_config_hash: WL4w5mZNKQaKr_LN6ix_lTtr-GqNDdB468D-WjlTtD0
 id: search_content
 label: 'Search content'
 module: views
 description: 'A search page preconfigured to search through the content of your site'
 tag: ''
-base_table: search_api_index_default_index
+base_table: search_api_index_default_solr_index
 base_field: search_api_id
 core: 8.x
 display:
@@ -74,7 +74,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_default_index
+          table: search_api_index_default_solr_index
           field: search_api_fulltext
           relationship: none
           group_type: group

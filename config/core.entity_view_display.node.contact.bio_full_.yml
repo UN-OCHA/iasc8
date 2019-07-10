@@ -147,3 +147,5 @@ hidden:
   field_last_name: true
   field_legacy_id: true
   field_title: true
+  langcode: true
+  search_api_excerpt: true

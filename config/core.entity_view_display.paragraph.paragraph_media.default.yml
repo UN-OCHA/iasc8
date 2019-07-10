@@ -22,3 +22,4 @@ content:
     region: content
 hidden:
   field_oa_media: true
+  search_api_excerpt: true

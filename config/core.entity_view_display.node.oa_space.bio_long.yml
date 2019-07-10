@@ -58,7 +58,9 @@ hidden:
   field_short_name: true
   group_access: true
   group_group: true
+  langcode: true
   oa_parent_space: true
   og_roles_permissions: true
   og_user_inheritance: true
   og_user_permission_inheritance: true
+  search_api_excerpt: true

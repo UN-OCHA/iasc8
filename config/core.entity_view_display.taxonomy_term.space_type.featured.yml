@@ -28,3 +28,5 @@ hidden:
   field_oa_clone_space: true
   field_oa_node_types: true
   field_oa_section_layout: true
+  langcode: true
+  search_api_excerpt: true

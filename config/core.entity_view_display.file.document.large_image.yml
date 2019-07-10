@@ -14,3 +14,4 @@ mode: large_image
 content: {  }
 hidden:
   field_file_title: true
+  langcode: true

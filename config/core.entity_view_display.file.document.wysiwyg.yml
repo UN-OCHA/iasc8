@@ -14,3 +14,4 @@ mode: wysiwyg
 content: {  }
 hidden:
   field_file_title: true
+  langcode: true
