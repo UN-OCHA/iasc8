@@ -1,0 +1,41 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Drupal dropdowns for nested menus
+//——————————————————————————————————————————————————————————————————————————————
+.menu--main {
+  .menu-item--expanded {
+
+    // Hide child nav.
+    > ul {
+      display: none;
+    }
+
+    .icon--arrow-down {
+      fill: $cd-highlight-red;
+      margin-left: 4px;
+      margin-top: 4px;
+      @include desktop {
+        margin-top: -2px;
+      }
+    }
+
+    &.open {
+
+      > ul {
+        display: block;
+        @include z-index(dropdown);
+      }
+
+      > a {
+        > .icon--arrow-down {
+          transform: rotate(180deg);
+        }
+      }
+
+      // Second level.
+      .menu .icon--arrow-down {
+        margin-top: 4px;
+      }
+
+    }
+  }
+}
