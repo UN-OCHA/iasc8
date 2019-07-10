@@ -28,5 +28,7 @@ hidden:
   comment_node_oa_ical_importer: true
   field_basic_file_file: true
   field_iasc_audience: true
+  langcode: true
   oa_section_ref: true
   og_group_ref: true
+  search_api_excerpt: true

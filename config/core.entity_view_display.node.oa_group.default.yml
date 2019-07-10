@@ -93,3 +93,5 @@ content:
     region: content
 hidden:
   group_group: true
+  langcode: true
+  search_api_excerpt: true

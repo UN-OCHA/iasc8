@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
     - field.field.node.oa_event.field_meeting_notes
+    - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
@@ -50,9 +51,12 @@ hidden:
   field_legacy_publish: true
   field_meeting_agendas: true
   field_meeting_notes: true
+  field_oa_date: true
   field_room: true
   field_venue: true
+  langcode: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

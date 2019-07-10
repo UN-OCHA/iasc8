@@ -58,3 +58,5 @@ content:
     third_party_settings: {  }
 hidden:
   comment: true
+  langcode: true
+  search_api_excerpt: true

@@ -37,6 +37,8 @@ hidden:
   comment_node_oa_discussion_post: true
   field_iasc_audience: true
   field_oa_media: true
+  langcode: true
   oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

@@ -14,3 +14,4 @@ mode: link
 content: {  }
 hidden:
   field_file_title: true
+  langcode: true

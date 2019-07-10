@@ -68,5 +68,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  langcode: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

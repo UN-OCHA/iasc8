@@ -30,3 +30,5 @@ hidden:
   field_logo: true
   field_long_name: true
   field_membership_level: true
+  langcode: true
+  search_api_excerpt: true

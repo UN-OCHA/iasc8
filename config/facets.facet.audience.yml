@@ -1,9 +1,9 @@
-uuid: 9f09a372-971a-4a2a-8bdc-a9b67f155a0d
+uuid: 621cc70f-9f58-41d7-af0c-93403c995598
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.default_index
+    - search_api.index.default_solr_index
     - views.view.search_content
   module:
     - facets_pretty_paths
@@ -17,7 +17,7 @@ url_alias: audience
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: label
+field_identifier: audience_label
 facet_source_id: 'search_api:views_page__search_content__page_1'
 widget:
   type: links
@@ -38,6 +38,18 @@ hard_limit: 0
 exclude: false
 only_visible_when_facet_source_is_visible: true
 processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:

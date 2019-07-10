@@ -51,4 +51,5 @@ content:
 hidden:
   comment: true
   field_tags: true
+  langcode: true
   search_api_excerpt: true
