@@ -62,6 +62,7 @@
         "drupal/realname": "^1.0@RC",
         "drupal/search_api": "^1.14",
         "drupal/search_api_attachments": "^1.0@beta",
+        "drupal/search_api_solr": "^3.2",
         "drupal/select2": "^1.1",
         "drupal/social_auth_hid": "^2.1",
         "drupal/tablefield": "^2.0@alpha",
