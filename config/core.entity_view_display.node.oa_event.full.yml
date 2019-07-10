@@ -146,7 +146,9 @@ hidden:
   field_iasc_audience: true
   field_info_private: true
   field_legacy_publish: true
+  langcode: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

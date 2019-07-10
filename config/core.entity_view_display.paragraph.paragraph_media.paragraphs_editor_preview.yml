@@ -15,3 +15,4 @@ content: {  }
 hidden:
   field_image_alignment: true
   field_oa_media: true
+  search_api_excerpt: true

@@ -136,6 +136,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  langcode: true
   oa_other_spaces_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

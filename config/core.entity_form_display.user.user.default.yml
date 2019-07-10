@@ -101,4 +101,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  langcode: true
   og_user_node: true

@@ -15,3 +15,4 @@ content: {  }
 hidden:
   field_oa_content_layout: true
   field_oa_related_content: true
+  search_api_excerpt: true

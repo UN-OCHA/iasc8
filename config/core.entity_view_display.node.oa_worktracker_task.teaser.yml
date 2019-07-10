@@ -61,6 +61,8 @@ hidden:
   field_summary_of_recommendat: true
   field_timeframe: true
   field_worktracker_country: true
+  langcode: true
   oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true

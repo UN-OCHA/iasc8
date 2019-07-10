@@ -23,3 +23,4 @@ hidden:
   field_snippet_showtitle: true
   field_snippet_title_override: true
   field_snippet_viewmode: true
+  search_api_excerpt: true

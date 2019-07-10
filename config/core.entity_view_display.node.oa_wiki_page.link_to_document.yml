@@ -52,7 +52,9 @@ hidden:
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
   field_published_date: true
+  langcode: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
+  search_api_excerpt: true
