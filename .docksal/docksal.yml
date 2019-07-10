@@ -12,9 +12,14 @@ services:
     labels:
       - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
     user: root
-  tika:
-    hostname: tika
-    image: logicalspark/docker-tikaserver
+  solr:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: solr
+    hostname: solr
+    image: docksal/solr:7.5
+    volumes:
+      - ${PROJECT_ROOT}/.docksal/etc/solr/conf:/opt/solr/server/solr/iasc/conf:ro
   redis:
     hostname: redis
     image: redis:3.2.11

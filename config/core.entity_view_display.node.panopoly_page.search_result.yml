@@ -37,3 +37,5 @@ hidden:
   comment_node_panopoly_page: true
   field_featured_categories: true
   field_featured_status: true
+  langcode: true
+  search_api_excerpt: true

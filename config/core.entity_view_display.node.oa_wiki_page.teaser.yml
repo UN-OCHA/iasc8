@@ -85,6 +85,8 @@ hidden:
   field_legacy_publish: true
   field_oa_media: true
   field_oa_wiki_page_no_redirect: true
+  langcode: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_vocabulary: true
+  search_api_excerpt: true
