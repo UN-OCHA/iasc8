@@ -54,4 +54,5 @@ class GroupUser extends User {
 
     return parent::prepareRow($row);
   }
+
 }

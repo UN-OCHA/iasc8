@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\iasc_general\Routing\RouteSubscriber.
- */
-
 namespace Drupal\iasc_general\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
@@ -23,4 +18,5 @@ class RouteSubscriber extends RouteSubscriberBase {
       $route->setPath('/user/login/hid');
     }
   }
+
 }
