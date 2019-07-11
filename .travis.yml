@@ -9,6 +9,11 @@ cache:
 php:
   - 7.1
 
+mysql: 
+  database: drupal 
+  username: root 
+  encoding: utf8
+
 env:
   global:
      - DRUPAL_REPO='git://drupalcode.org/project/drupal.git'
@@ -16,7 +21,7 @@ env:
      - DRUSH_VERSION='8.*'
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
-     - DB=sqlite
+     - DB=mysql
 
 install:
   ssh-agent -k
@@ -42,6 +47,10 @@ script:
   - test ! -d ./html/modules/custom || ./bin/phpcs -p --report=full ./html/modules/custom
   - # test ! -d ./html/themes/custom || ./bin/phpcs -p --report=full ./html/themes/custom
 
+  - mysql -e 'create database drupal;'
+  - ./bin/drush --verbose -y si --existing-config --db-url=mysql://root:@127.0.0.1/drupal
+  - DTT_BASE_URL=http://localhost:8080 ./bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
+  
 after_success:
   - echo "The tests completed without errors."
 
