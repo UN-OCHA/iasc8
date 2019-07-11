@@ -39,4 +39,5 @@ class CustomNode extends Node {
 
     return parent::prepareRow($row);
   }
+
 }

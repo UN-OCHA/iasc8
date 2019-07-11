@@ -4,9 +4,14 @@ namespace Drupal\iasc_migrate;
 
 use Drupal\group\Entity\Group;
 
+/**
+ * Prepare migrate from og to groups.
+ */
 class IascMigrateGroup {
 
   /**
+   * Reference to the entity.
+   *
    * @var object
    */
   protected $entity;
@@ -21,10 +26,11 @@ class IascMigrateGroup {
   /**
    * Adds a user to a group specified by a ER field on the user profile.
    *
-   * @param $field
+   * @param string $field
    *   The field we are using as a reference for the group.
    *
    * @return bool
+   *   Status.
    */
   public function addUserToGroup($field) {
     $group_ids = $this->entity->get($field)->getValue();
@@ -41,17 +47,18 @@ class IascMigrateGroup {
       }
     }
 
-    // Fail safe return
+    // Fail safe return.
     return FALSE;
   }
 
   /**
    * Adds a node to a group specified by a ER field on the node.
    *
-   * @param $field
+   * @param string $field
    *   The field we are using as a reference for the group.
    *
    * @return bool
+   *   Report status.
    */
   public function addNodeToGroup($field) {
     $plugin_id = 'group_node:' . $this->entity->bundle();
@@ -82,7 +89,8 @@ class IascMigrateGroup {
       }
     }
 
-    // Fail safe return
+    // Fail safe return.
     return FALSE;
   }
+
 }
