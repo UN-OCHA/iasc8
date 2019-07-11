@@ -71,6 +71,7 @@ $cd-contrast-red: #e00000;
 
 // Background colours
 $cd-site-bg-color: $cd-mid-bluey-grey;
+$cd-site-bg-color--dark: darken($cd-site-bg-color, 5%);
 $cd-white-bg-color: $cd-white;
 $cd-primary-bg-color: $cd-ocha-blue;
 $cd-dark-primary-bg-color: $cd-dark-blue;
