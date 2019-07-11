@@ -79,7 +79,9 @@
         "drupal/devel_entity_updates": "^1.0@RC",
         "webflo/drupal-core-require-dev": "^8.7.0",
         "weitzman/drupal-test-traits": "^1.2",
-        "weitzman/logintrait": "^1.1"
+        "weitzman/logintrait": "^1.1",
+        "phpmd/phpmd": "^2.6",
+        "sebastian/phpcpd": "^4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
