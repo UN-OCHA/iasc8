@@ -1,5 +1,11 @@
 # IASC 8
 
+## Testing 
+
+### Locally
+
+`fin exec "vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'"`
+
 ## Config
 
 ```
