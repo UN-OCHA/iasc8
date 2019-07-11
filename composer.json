@@ -36,7 +36,6 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.1",
         "drupal/date_recur": "^2.0@beta",
-        "drupal/devel_entity_updates": "^1.0@RC",
         "drupal/diff": "^1.0@RC",
         "drupal/extlink": "^1.1",
         "drupal/facets": "^1.4",
@@ -76,6 +75,8 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/devel_entity_updates": "^1.0@RC",
         "webflo/drupal-core-require-dev": "^8.7.0"
     },
     "conflict": {

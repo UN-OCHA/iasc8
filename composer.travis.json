@@ -1,0 +1,23 @@
+{
+    "name": "UN-OCHA/cerf8",
+    "description": "Travis testing tools.",
+    "type": "project",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "drush/drush": "~8.0",
+        "drupal/coder": "8.3.1",
+        "phpmd/phpmd": "^2.6",
+        "sebastian/phpcpd": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "OCHA",
+            "email": "info@humanitarianresponse.info"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

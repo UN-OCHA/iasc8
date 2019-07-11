@@ -36,12 +36,10 @@ before_script:
 
 script:
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
-  - test ! -d ./html/modules/features || find -L ./html/modules/features -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
 
   - ./bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
   - test ! -d ./html/modules/custom || ./bin/phpcs -p --report=full ./html/modules/custom
-  - test ! -d ./html/modules/features || ./bin/phpcs -p --report=full ./html/modules/features
   - # test ! -d ./html/themes/custom || ./bin/phpcs -p --report=full ./html/themes/custom
 
 after_success:
