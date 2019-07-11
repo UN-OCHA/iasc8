@@ -10,6 +10,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\migrate\Plugin\MigrationInterface;
 
 /**
+ * Set group association.
+ *
  * @MigrateDestination(
  *   id = "custom_user"
  * )
@@ -22,7 +24,6 @@ class EntityUserPostSave extends EntityUser {
    * @var array
    */
   private $gids;
-
 
   /**
    * {@inheritdoc}
@@ -56,16 +57,8 @@ class EntityUserPostSave extends EntityUser {
    * {@inheritdoc}
    */
   protected function save(ContentEntityInterface $entity, array $old_destination_id_values = []) {
-    // We need to pull the parts of the parents into this class.
-    // If we don't, we get a failed migration.
-
-    // From EntityUser::save()
     // Do not overwrite the root account password.
     if ($entity->id() != 1) {
-      // Set the pre_hashed password so that the PasswordItem field does not hash
-      // already hashed passwords. If the md5_passwords configuration option is
-      // set we need to rehash the password and prefix with a U.
-      // @see \Drupal\Core\Field\Plugin\Field\FieldType\PasswordItem::preSave()
       $entity->pass->pre_hashed = TRUE;
       if (isset($this->configuration['md5_passwords'])) {
         $entity->pass->value = 'U' . $this->password->hash($entity->pass->value);
@@ -74,7 +67,6 @@ class EntityUserPostSave extends EntityUser {
 
     // Save the entity as in EntityContentBase::save().
     $entity->save();
-
 
     // Let's go through Each Group and add users.
     foreach ($this->gids as $gid) {
@@ -86,7 +78,8 @@ class EntityUserPostSave extends EntityUser {
       }
     }
 
-    // return the entity ids as in EntityContentBase::save().
+    // Return the entity ids as in EntityContentBase::save().
     return [$entity->id()];
   }
+
 }
