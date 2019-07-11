@@ -1,0 +1,17 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      selenium2:
+        browser: chrome
+        wd_host: http://localhost:9515
+        capabilities:
+          chrome:
+              switches:
+                  - "--headless"
+      base_url: http://127.0.0.1:8888
+    Drupal\DrupalExtension:
+      drupal:
+        drupal_root: '../html'
+      drush:
+        root: '../html'
+        binary: '%paths.base%/bin/drush --uri=http://127.0.0.1:8888'

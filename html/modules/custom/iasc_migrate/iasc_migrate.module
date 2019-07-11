@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * IASC Migrate helpers.
+ */
+
 use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Row;
@@ -14,10 +19,10 @@ function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $sour
   switch ($migration->id()) {
     case 'upgrade_d7_node_oa_group':
     case 'upgrade_d7_node_oa_space':
-      // Slugify the title then set that as the alias for the group
+      // Slugify the title then set that as the alias for the group.
       $title = $row->getSourceProperty('title');
       $alias = Html::cleanCssIdentifier($title);
-      $alias = '/'. strtolower($alias);
+      $alias = '/' . strtolower($alias);
       $row->setSourceProperty('alias', $alias);
 
       break;
@@ -30,7 +35,7 @@ function iasc_migrate_migrate_prepare_row(Row $row, MigrateSourceInterface $sour
  * Adds a user to the respective group identified.
  */
 function iasc_migrate_user_insert($entity) {
-  $add = (new IascMigrateGroup($entity))->addUserToGroup('field_iasc_group_space');
+  (new IascMigrateGroup($entity))->addUserToGroup('field_iasc_group_space');
 }
 
 /**
@@ -49,11 +54,14 @@ function iasc_migrate_node_insert($entity) {
     case 'oa_team':
     case 'oa_wiki_page':
     case 'oa_worktracker_task':
-      $add = (new IascMigrateGroup($entity))->addNodeToGroup('field_iasc_audience');
+      (new IascMigrateGroup($entity))->addNodeToGroup('field_iasc_audience');
       break;
   }
 }
 
+/**
+ * Legacy command from Drupal 7 version.
+ */
 function oa_buttons_get_command_buttons_options() {
   return [];
 }
