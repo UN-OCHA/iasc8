@@ -18,3 +18,11 @@
 @import 'base/_grid';
 @import 'base/_helpers';
 @import 'base/_typography';
+
+
+//——————————————————————————————————————————————————————————————————————————————
+// Components
+//——————————————————————————————————————————————————————————————————————————————
+
+@import 'components/node/_node--grid';
+@import 'components/paragraph/_paragraph';

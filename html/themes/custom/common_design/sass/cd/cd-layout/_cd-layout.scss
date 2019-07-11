@@ -64,4 +64,19 @@ body {
   }
 }
 
+// Sidebar
+.cd-layout-container main.cd-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.cd-layout-container main.cd-container .layout-sidebar-first {
+  flex-basis: 285px;
+  flex-grow: 1;
+}
+
+.cd-layout-container main.cd-container .layout-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
