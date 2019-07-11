@@ -49,7 +49,7 @@ script:
 
   - mysql -e 'create database drupal;'
   - cd html
-  - echo '$config_directories = array(CONFIG_SYNC_DIRECTORY => dirname($app_root) . "/config");' >> sites/default/default.settings.php
+  - echo '$config_directories = array(CONFIG_SYNC_DIRECTORY => dirname($app_root) . "../config");' >> sites/default/default.settings.php
   - cat sites/default/default.settings.php
   - ../vendor/bin/drush --verbose -y si --existing-config --db-url=mysql://root:@127.0.0.1/drupal
   - cd ..
