@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Using this project's bootstrap file allows tests in `ExistingSite`,
+    `ExistingSiteSelenium2DriverTest`, and `ExistingSiteWebDriverTest`
+     to run alongside core's test types. -->
+<phpunit bootstrap="vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php">
+    <php>
+        <env name="DTT_BASE_URL" value="http://iasc8.local.docksal"/>
+        <env name="DTT_API_URL" value="http://localhost:9222"/>
+        <env name="DTT_MINK_DRIVER_ARGS" value='["chrome", null, "http://localhost:4444/wd/hub"]'/>
+        <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/tmp"/>
+        <!-- To disable deprecation testing completely uncomment the next line. -->
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
+        <!-- Specify the default directory screenshots should be placed. -->
+        <!--<env name="DTT_SCREENSHOT_REPORT_DIRECTORY" value=""/>-->
+    </php>
+
+    <testsuites>
+        <testsuite name="unit">
+            <directory>./html/modules/custom/*/tests/src/Unit</directory>
+        </testsuite>
+        <testsuite name="kernel">
+            <directory>./html/modules/custom/*/tests/src/Kernel</directory>
+        </testsuite>
+        <testsuite name="existing-site">
+            <directory>./html/modules/custom/*/tests/src/ExistingSite</directory>
+        </testsuite>
+        <testsuite name="existing-site-javascript">
+            <directory>./html/modules/custom/*/tests/src/ExistingSiteJavascript</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
