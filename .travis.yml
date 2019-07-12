@@ -62,7 +62,7 @@ script:
   - echo "  CONFIG_STAGING_DIRECTORY => '${TRAVIS_BUILD_DIR}/config'," >> sites/default/settings.local.php
   - echo ");"                                                          >> sites/default/settings.local.php
   - cat sites/default/settings.local.php
-  - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="***REMOVED***" --db-url=mysql://root:@127.0.0.1/drupal
+  - ../vendor/bin/drush --verbose -y si --existing-config --config-dir="${TRAVIS_BUILD_DIR}/config" --account-pass="***REMOVED***" --db-url=mysql://root:@127.0.0.1/drupal
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
