@@ -43,7 +43,10 @@ before_script:
   - composer install
 
   # LightHouseBot
-  - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
+  # - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
+
+  # PWMetrics
+  - npm i
 
 script:
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
@@ -72,7 +75,8 @@ script:
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - npm run lh -- http://127.0.0.1:8080
+  - # npm run lh -- http://127.0.0.1:8080
+  - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
