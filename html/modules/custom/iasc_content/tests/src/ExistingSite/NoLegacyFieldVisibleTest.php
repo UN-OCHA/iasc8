@@ -13,7 +13,7 @@ class NoLegacyFieldVisibleTest extends ExistingSiteBase {
   use LoginTrait;
 
   /**
-   * Make sure legacy fields are not displayed.
+   * Make sure legacy publish field is not displayed.
    *
    * @throws \Drupal\Core\Entity\EntityStorageException
    * @throws \Drupal\Core\Entity\EntityMalformedException
@@ -43,6 +43,39 @@ class NoLegacyFieldVisibleTest extends ExistingSiteBase {
 
     $this->assertSession()->hiddenFieldExists('form_id');
     $this->assertSession()->fieldNotExists('field_legacy_publish');
+  }
+
+  /**
+   * Make sure legacy publish field is not displayed.
+   *
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   * @throws \Drupal\Core\Entity\EntityMalformedException
+   * @throws \Behat\Mink\Exception\ExpectationException
+   */
+  public function testFieldLegacyId() {
+    $admin = User::load(1);
+
+    // Create a contact.
+    $node = $this->createNode([
+      'title' => 'Test contact',
+      'type' => 'contact',
+      'uid' => $admin->id(),
+    ]);
+    $node->setPublished()->save();
+
+    // Login using reset link.
+    $this->drupalLogin($admin);
+
+    // We can browse the contact.
+    $this->drupalGet($node->toUrl());
+    $this->assertSession()->statusCodeEquals(200);
+
+    // Check node edit screen.
+    $this->drupalGet($node->toUrl('edit-form'));
+    $this->assertSession()->statusCodeEquals(200);
+
+    $this->assertSession()->hiddenFieldExists('form_id');
+    $this->assertSession()->fieldNotExists('field_legacy_id');
   }
 
 }
