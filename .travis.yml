@@ -60,13 +60,13 @@ script:
   - ../vendor/bin/drush --verbose -y si --account-pass="***REMOVED***" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
   - ../vendor/bin/drush --verbose -y cset system.site uuid bca94898-6ebe-44c8-adc6-88e694da7b0e
   - ../vendor/bin/drush --verbose -y cim --source=${TRAVIS_BUILD_DIR}/config
-  - ../vendor/bin/drush rs 8080
+  - ../vendor/bin/drush rs 127.0.0.1:8080 &
   - cd $TRAVIS_BUILD_DIR
-  - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\Drupal\Tests\Listeners\HtmlOutputPrinter'
+  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --printer '\Drupal\Tests\Listeners\HtmlOutputPrinter'
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - npm run lh -- http://localhost:8080
+  - npm run lh -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
