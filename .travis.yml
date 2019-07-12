@@ -55,12 +55,17 @@ script:
 
   - mysql -e 'create database drupal;'
   - cd html
-  - echo "\$config_directories[CONFIG_SYNC_DIRECTORY] = '../config';" >> sites/default/default.settings.php
+  - echo "\$config_directories = array("                               >> sites/default/default.settings.php
+  - echo "  CONFIG_SYNC_DIRECTORY    => '${TRAVIS_BUILD_DIR}/config'," >> sites/default/default.settings.php
+  - echo "  CONFIG_ACTIVE_DIRECTORY  => '${TRAVIS_BUILD_DIR}/config';" >> sites/default/default.settings.php
+  - echo "  CONFIG_STAGING_DIRECTORY => '${TRAVIS_BUILD_DIR}/config';" >> sites/default/default.settings.php
+  - echo ");"                                                          >> sites/default/default.settings.php
   - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="***REMOVED***" --db-url=mysql://root:@127.0.0.1/drupal
-  - cd ..
+  - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
 after_success:
+  - cd $TRAVIS_BUILD_DIR
   - npm run lh -- http://localhost:8080
   - echo "The tests completed without errors."
 
