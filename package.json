@@ -1,5 +1,43 @@
 {
   "scripts": {
-    "lh": "lighthousebot"
+    "lh": "lighthousebot",
+    "pwmetrics": "./node_modules/pwmetrics/bin/cli.js --config=package.json"
+  },
+  "dependencies": {
+    "pwmetrics": "^4.2.1"
+  },
+  "pwmetrics": {
+    "url": "http://iasc8.local.docksal/needs-assessment-task-force-meeting-0",
+    "flags": {
+      "logLevel": "debug",
+      "outputPath": "stdout",
+      "runs": 3,
+      "expectations": true,
+      "chromeFlags": "--headless",
+      "failOnError": true,
+      "showOutput": true
+    },
+    "expectations": {
+      "firstMeaningfulPaint": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      },
+      "firstContentfulPaint": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      },
+      "firstCPUIdle": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      },
+      "interactive": {
+        "warn": ">=4000",
+        "error": ">=8000"
+      },
+      "speedIndex": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      }
+    }
   }
 }
