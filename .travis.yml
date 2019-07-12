@@ -57,10 +57,10 @@ script:
   - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
 
   - cd ${TRAVIS_BUILD_DIR}/html
-  - ../vendor/bin/drush --verbose -y si --account-pass="***REMOVED***" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
-  - ../vendor/bin/drush --verbose -y cset system.site uuid bca94898-6ebe-44c8-adc6-88e694da7b0e
-  - ../vendor/bin/drush --verbose -y cim --source=${TRAVIS_BUILD_DIR}/config
-  - ../vendor/bin/drush rs 127.0.0.1:8080 & exit 0
+  - ../vendor/bin/drush -y si --account-pass="***REMOVED***" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+  - ../vendor/bin/drush -y cset system.site uuid bca94898-6ebe-44c8-adc6-88e694da7b0e
+  - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
+  - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --printer '\Drupal\Tests\Listeners\HtmlOutputPrinter'
 
