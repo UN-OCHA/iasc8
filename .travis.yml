@@ -58,7 +58,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}/config
   - ln -sf . sync
   - cd ${TRAVIS_BUILD_DIR}/html
-  - travis_wait ../vendor/bin/drush --verbose -y si --existing-config --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
+  - travis_wait 30 ../vendor/bin/drush --verbose -y si --existing-config --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
