@@ -55,14 +55,8 @@ script:
 
   - mysql -e 'create database drupal;'
   - cd html
-  - echo "<?php"                                                       >  sites/default/settings.local.php
-  - echo "\$config_directories = array("                               >> sites/default/settings.local.php
-  - echo "  CONFIG_SYNC_DIRECTORY    => '${TRAVIS_BUILD_DIR}/config'," >> sites/default/settings.local.php
-  - echo "  CONFIG_ACTIVE_DIRECTORY  => '${TRAVIS_BUILD_DIR}/config'," >> sites/default/settings.local.php
-  - echo "  CONFIG_STAGING_DIRECTORY => '${TRAVIS_BUILD_DIR}/config'," >> sites/default/settings.local.php
-  - echo ");"                                                          >> sites/default/settings.local.php
-  - cat sites/default/settings.local.php
-  - ../vendor/bin/drush --verbose -y si --existing-config --config-dir="${TRAVIS_BUILD_DIR}/config" --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
+  - echo "\$config_directories = [CONFIG_SYNC_DIRECTORY => '${TRAVIS_BUILD_DIR}/config'];" >> sites/default/default.settings.php
+  - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
