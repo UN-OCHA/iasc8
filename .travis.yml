@@ -54,7 +54,10 @@ script:
   - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 
   - mysql -e 'create database drupal;'
-  - cd html
+
+  - cd ${TRAVIS_BUILD_DIR}/config
+  - ln -sf . sync
+  - cd ${TRAVIS_BUILD_DIR}/html
   - echo "\$config_directories[CONFIG_SYNC_DIRECTORY] = '${TRAVIS_BUILD_DIR}/config';" >> sites/default/default.settings.php
   - tail sites/default/default.settings.php
   - ../vendor/bin/drush php-eval 'print_r($config_directories);'
