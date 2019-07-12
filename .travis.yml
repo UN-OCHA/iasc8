@@ -58,12 +58,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}/config
   - ln -sf . sync
   - cd ${TRAVIS_BUILD_DIR}/html
-  - echo "\$config_directories[CONFIG_SYNC_DIRECTORY] = '${TRAVIS_BUILD_DIR}/config';" >> sites/default/default.settings.php
-  - tail sites/default/default.settings.php
-  - ../vendor/bin/drush php-eval 'print_r($config_directories);'
   - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
-  - tail sites/default/settings.php
-  - ../vendor/bin/drush php-eval 'print_r($config_directories);'
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
