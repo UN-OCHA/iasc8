@@ -53,6 +53,9 @@ script:
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 
+  # Run unit, kernel tests
+  - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel
+
   - mysql -e "CREATE DATABASE drupal;"
   - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
 
@@ -63,7 +66,7 @@ script:
   - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
   - sleep 5
   - cd $TRAVIS_BUILD_DIR
-  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors'
+  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --testsuite=existing-site,existing-site-javascript
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
