@@ -9,8 +9,12 @@
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function iasc_content_form_alter(&$form, &$form_state, $form_id) {
-  // Hide legacy field.
+  // Hide legacy fields.
   if (isset($form['field_legacy_publish'])) {
     $form['field_legacy_publish']['#access'] = FALSE;
+  }
+
+  if (isset($form['field_legacy_id'])) {
+    $form['field_legacy_id']['#access'] = FALSE;
   }
 }

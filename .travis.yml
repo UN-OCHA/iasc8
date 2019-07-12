@@ -63,7 +63,7 @@ script:
   - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
   - sleep 5
   - cd $TRAVIS_BUILD_DIR
-  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --printer '\Drupal\Tests\Listeners\HtmlOutputPrinter'
+  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors'
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
