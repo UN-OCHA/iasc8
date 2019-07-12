@@ -251,9 +251,6 @@ $databases = [];
  *   ];
  * @endcode
  */
-$config_directories = [
-  CONFIG_SYNC_DIRECTORY => '/Users/cafuego/Development/unocha/iasc8/config',
-];
 
 /**
  * Settings:
