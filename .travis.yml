@@ -56,6 +56,7 @@ script:
   - mysql -e 'create database drupal;'
   - cd html
   - echo "\$config_directories = [CONFIG_SYNC_DIRECTORY => '${TRAVIS_BUILD_DIR}/config'];" >> sites/default/default.settings.php
+  - tail sites/default/default.settings.php
   - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="***REMOVED***" --db-url=mysql://root:@127.0.0.1/drupal
   - cd $TRAVIS_BUILD_DIR
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
