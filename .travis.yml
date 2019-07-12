@@ -22,6 +22,7 @@ env:
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
      - DB=mysql
+     - LIGHTHOUSE_API_KEY=0d313658a8d944e7a723c7c4b46dbd54
 
 install:
   ssh-agent -k
@@ -38,6 +39,9 @@ before_script:
   # Code sniff
   - cd $TRAVIS_BUILD_DIR
   - composer install
+
+  # LightHouseBot
+  - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
 
 script:
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
@@ -58,6 +62,7 @@ script:
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
 after_success:
+  - npm run lh -- http://localhost:8080
   - echo "The tests completed without errors."
 
 after_failure:
