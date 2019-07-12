@@ -1,6 +1,6 @@
 # IASC 8
 
-## Testing 
+## Testing
 
 ### Locally
 
@@ -8,22 +8,22 @@
 
 ## Config
 
-```
+```php
 // Docksal DB connection settings.
 $databases['default']['default'] = array (
-	'database' => 'default',
-	'username' => 'user',
-	'password' => 'user',
-	'host' => 'db',
-	'driver' => 'mysql',
+  'database' => 'default',
+  'username' => 'user',
+  'password' => 'user',
+  'host' => 'db',
+  'driver' => 'mysql',
 );
 
 $databases['migrate']['default'] = array (
-	'database' => 'd7',
-	'username' => 'user',
-	'password' => 'user',
-	'host' => 'db',
-	'driver' => 'mysql',
+  'database' => 'd7',
+  'username' => 'user',
+  'password' => 'user',
+  'host' => 'db',
+  'driver' => 'mysql',
 );
 ```
 
@@ -35,15 +35,15 @@ $databases['migrate']['default'] = array (
 
 ### Create skeleton
 
-`drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only `
+`drush migrate-upgrade --legacy-db-url=mysql://user:user@db/d7 --configure-only`
 
 ### Import
 
 see [migrate.sh](./migrate.sh)
 
-- https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/
-- https://atendesigngroup.com/blog/getting-started-drupal-8-migrations
-- https://atendesigngroup.com/blog/drupal-8-migration-multiple-paragraph-references
+- <https://thinktandem.io/blog/2018/03/30/migrating-drupal-7-organic-groups-to-drupal-8-group/>
+- <https://atendesigngroup.com/blog/getting-started-drupal-8-migrations>
+- <https://atendesigngroup.com/blog/drupal-8-migration-multiple-paragraph-references>
 
 ### Files
 
@@ -53,8 +53,7 @@ mkdir -p html/sites/default/files/d7/sites/default/files
 cp -r d7_source html/sites/default/files/d7/sites/default/files/
 ```
 
-Optionally convert to media: https://thinktandem.io/blog/2019/04/04/migrating-a-drupal-7-file-to-a-drupal-8-media-entity/
-
+Optionally convert to media: <https://thinktandem.io/blog/2019/04/04/migrating-a-drupal-7-file-to-a-drupal-8-media-entity/>
 
 ### Modules from IASC 7
 
