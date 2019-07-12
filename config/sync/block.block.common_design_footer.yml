@@ -1,4 +1,4 @@
-uuid: 52fef2fd-a2f9-448b-b094-9126fb22423f
+uuid: b7f2142a-09bc-44d0-a2b3-924dbb64369d
 langcode: en
 status: true
 dependencies:
@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: common_design_footer
 theme: common_design
-region: header_top
-weight: 0
+region: footer_navigation
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
