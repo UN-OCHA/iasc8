@@ -9,19 +9,34 @@
   "pwmetrics": {
     "url": "http://iasc8.local.docksal/needs-assessment-task-force-meeting-0",
     "flags": {
+      "logLevel": "debug",
+      "outputPath": "stdout",
       "runs": 3,
       "expectations": true,
       "chromeFlags": "--headless",
-      "failOnError": true
+      "failOnError": true,
+      "showOutput": true
     },
     "expectations": {
-      "ttfmp": {
-        "warn": ">=500",
-        "error": ">=1000"
+      "firstMeaningfulPaint": {
+        "warn": ">=3000",
+        "error": ">=6000"
       },
-      "ttfcp": {
-        "warn": ">=500",
-        "error": ">=1000"
+      "firstContentfulPaint": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      },
+      "firstCPUIdle": {
+        "warn": ">=3000",
+        "error": ">=6000"
+      },
+      "interactive": {
+        "warn": ">=4000",
+        "error": ">=8000"
+      },
+      "speedIndex": {
+        "warn": ">=3000",
+        "error": ">=6000"
       }
     }
   }
