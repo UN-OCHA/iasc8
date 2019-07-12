@@ -1,13 +1,20 @@
 dist: trusty
 language: php
 cache:
-  - composer
+  directories:
+  - $HOME/.composer
+  - $HOME/.npm
 
 # addons:
 #   chrome: stable
 
 php:
-  - 7.1
+  - 7.2
+
+mysql:
+  database: drupal
+  username: root
+  encoding: utf8
 
 env:
   global:
@@ -16,7 +23,8 @@ env:
      - DRUSH_VERSION='8.*'
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
-     - DB=sqlite
+     - DB=mysql
+     - LIGHTHOUSE_API_KEY=***REMOVED***
 
 install:
   ssh-agent -k
@@ -32,17 +40,40 @@ before_script:
 
   # Code sniff
   - cd $TRAVIS_BUILD_DIR
-  - COMPOSER=composer.travis.json composer install
+  - composer install
+
+  # LightHouseBot
+  - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
 
 script:
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
 
-  - ./bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
-  - test ! -d ./html/modules/custom || ./bin/phpcs -p --report=full ./html/modules/custom
-  - # test ! -d ./html/themes/custom || ./bin/phpcs -p --report=full ./html/themes/custom
+  - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+  - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
+  - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
+
+  # Run unit, kernel tests
+  - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel
+
+  - mysql -e "CREATE DATABASE drupal;"
+  - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
+
+  - cd ${TRAVIS_BUILD_DIR}/html
+  - ../vendor/bin/drush -y si --account-pass="***REMOVED***" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+  - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
+  - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
+  - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
+  - ../vendor/bin/drush php-eval 'node_access_rebuild();'
+  - ../vendor/bin/drush cr
+  - sleep 5
+  - cd $TRAVIS_BUILD_DIR
+  - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --testsuite=existing-site,existing-site-javascript
 
 after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - npm run lh -- http://127.0.0.1:8080
+  - killall -9 php
   - echo "The tests completed without errors."
 
 after_failure:
