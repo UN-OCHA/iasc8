@@ -1,4 +1,4 @@
-uuid: 2555a44f-2d7d-40e5-97e9-6cdcd7fa7639
+uuid: 66d62305-a929-4419-b695-00db141ce39a
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: common_design_branding
 theme: common_design
-region: header_top
-weight: 0
+region: header_logo
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:
