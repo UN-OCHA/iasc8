@@ -1,7 +1,9 @@
 dist: trusty
 language: php
 cache:
-  - composer
+  directories:
+  - $HOME/.composer
+  - $HOME/.npm
 
 # addons:
 #   chrome: stable
@@ -54,11 +56,7 @@ script:
   - mysql -e 'create database drupal;'
   - cd html
   - echo "\$config_directories[CONFIG_SYNC_DIRECTORY] = '../config';" >> sites/default/default.settings.php
-  - ../vendor/bin/drush --verbose -y si --db-url=mysql://root:@127.0.0.1/drupal
-  - ../vendor/bin/drush --verbose -y config-set "system.site" uuid "bca94898-6ebe-44c8-adc6-88e694da7b0e"
-  - chmod 0755 sites/default && chmod 0644 sites/default/settings.php
-  - echo "\$config_directories[CONFIG_SYNC_DIRECTORY] = '../config';" >> sites/default/settings.php
-  - ../vendor/bin/drush --verbose -y cim
+  - ../vendor/bin/drush --verbose -y si --existing-config --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://root:@127.0.0.1/drupal
   - cd ..
   - DTT_BASE_URL=http://localhost:8080 ./vendor/bin/phpunit --debug --colors --printer '\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter'
 
