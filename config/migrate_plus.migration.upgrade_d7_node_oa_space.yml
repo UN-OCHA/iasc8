@@ -54,7 +54,7 @@ process:
       value: value
       format:
         plugin: default_value
-        default_value: 'basic_html'
+        default_value: basic_html
   field_responsibilities:
     plugin: sub_process
     source: field_responsibilities
@@ -62,7 +62,7 @@ process:
       value: value
       format:
         plugin: default_value
-        default_value: 'basic_html'
+        default_value: basic_html
   field_primary_image:
     -
       plugin: sub_process
@@ -83,7 +83,7 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: 'Y-m-d\TH:i:s'
           source: value
-  field_external_link	:
+  field_external_link:
     -
       plugin: field_link
       source: field_homepage

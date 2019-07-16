@@ -21,6 +21,36 @@ process:
   id: nid
   label: title
   path: alias
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_description:
+    plugin: sub_process
+    source: body
+    process:
+      value: value
+      format:
+        plugin: default_value
+        default_value: 'basic_html'
+  field_primary_image:
+    -
+      plugin: sub_process
+      source: field_featured_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_parent_space:
+    -
+      plugin: get
+      source: oa_parent_space
 destination:
   plugin: 'entity:group'
 migration_dependencies: null
