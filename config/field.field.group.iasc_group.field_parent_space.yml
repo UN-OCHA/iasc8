@@ -1,0 +1,29 @@
+uuid: 86d9a3e8-5508-4f1c-93d4-9c3439b2d0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_parent_space
+    - group.type.iasc_group
+    - group.type.iasc_space
+id: group.iasc_group.field_parent_space
+field_name: field_parent_space
+entity_type: group
+bundle: iasc_group
+label: 'Parent space'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      iasc_group: iasc_group
+      iasc_space: iasc_space
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: iasc_group
+field_type: entity_reference
