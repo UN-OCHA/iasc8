@@ -1,0 +1,118 @@
+uuid: a1944b29-0d79-4a34-aee5-a8632b340fd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.iasc_space.field_banner_image
+    - field.field.group.iasc_space.field_banner_position
+    - field.field.group.iasc_space.field_banner_text
+    - field.field.group.iasc_space.field_date_closed
+    - field.field.group.iasc_space.field_description
+    - field.field.group.iasc_space.field_external_link
+    - field.field.group.iasc_space.field_primary_image
+    - field.field.group.iasc_space.field_responsibilities
+    - field.field.group.iasc_space.field_short_name
+    - group.type.iasc_space
+    - image.style.thumbnail
+  module:
+    - datetime
+    - image
+    - link
+    - path
+    - text
+id: group.iasc_space.default
+targetEntityType: group
+bundle: iasc_space
+mode: default
+content:
+  field_banner_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_position:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_text:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_closed:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description:
+    weight: 35
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_external_link:
+    weight: 36
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_primary_image:
+    weight: 37
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_responsibilities:
+    weight: 38
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_short_name:
+    weight: 39
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true
