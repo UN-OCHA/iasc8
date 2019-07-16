@@ -2,6 +2,8 @@ uuid: baab9b44-186a-4a2e-93a8-356120f23e66
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.group_content.group_roles
   module:
     - group
     - user
@@ -27,7 +29,7 @@ display:
         options:
           group_permission: 'administer members'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -700,12 +702,14 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
+        - route.group
         - url
         - url.query_args
-      tags: {  }
+        - user.group_permissions
+      tags:
+        - 'config:field.storage.group_content.group_roles'
   page_1:
     display_plugin: page
     id: page_1
@@ -727,9 +731,11 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
+        - route.group
         - url
         - url.query_args
-      tags: {  }
+        - user.group_permissions
+      tags:
+        - 'config:field.storage.group_content.group_roles'
