@@ -1,2 +1,4 @@
 docksal-local.env
 docksal-local.yml
+etc/solr/data
+!etc/solr/data/.keep
