@@ -1,0 +1,20 @@
+uuid: 39374294-c1bc-4320-af60-2aadf447508b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - group
+id: group.field_date_closed
+field_name: field_date_closed
+entity_type: group
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

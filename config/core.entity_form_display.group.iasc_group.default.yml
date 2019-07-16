@@ -1,0 +1,67 @@
+uuid: 07c48110-6d29-477e-ab75-77fb184e5566
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.iasc_group.field_description
+    - field.field.group.iasc_group.field_parent_space
+    - field.field.group.iasc_group.field_primary_image
+    - group.type.iasc_group
+    - image.style.thumbnail
+  module:
+    - image
+    - path
+    - text
+id: group.iasc_group.default
+targetEntityType: group
+bundle: iasc_group
+mode: default
+content:
+  field_description:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_parent_space:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_primary_image:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true
