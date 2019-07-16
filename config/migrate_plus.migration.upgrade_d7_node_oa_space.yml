@@ -55,6 +55,14 @@ process:
       format:
         plugin: default_value
         default_value: 'basic_html'
+  field_responsibilities:
+    plugin: sub_process
+    source: field_responsibilities
+    process:
+      value: value
+      format:
+        plugin: default_value
+        default_value: 'basic_html'
   field_primary_image:
     -
       plugin: sub_process
@@ -79,10 +87,6 @@ process:
     -
       plugin: field_link
       source: field_homepage
-  field_responsibilities:
-    -
-      plugin: get
-      source: field_responsibilities
   field_short_name:
     -
       plugin: get
