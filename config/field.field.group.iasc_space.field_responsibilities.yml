@@ -1,0 +1,21 @@
+uuid: ffb3bf97-a639-443f-8eb5-d6649bbf506b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_responsibilities
+    - group.type.iasc_space
+  module:
+    - text
+id: group.iasc_space.field_responsibilities
+field_name: field_responsibilities
+entity_type: group
+bundle: iasc_space
+label: Responsibilities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: ea62b45b-0a47-4a03-9237-908ba18d043c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_short_name
+    - group.type.iasc_space
+id: group.iasc_space.field_short_name
+field_name: field_short_name
+entity_type: group
+bundle: iasc_space
+label: 'Short Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

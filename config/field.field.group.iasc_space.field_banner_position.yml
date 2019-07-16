@@ -1,0 +1,23 @@
+uuid: 4d6fe62a-2ad5-4713-91d0-ddff4f58bde0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_banner_position
+    - group.type.iasc_space
+  module:
+    - options
+id: group.iasc_space.field_banner_position
+field_name: field_banner_position
+entity_type: group
+bundle: iasc_space
+label: 'Banner Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
