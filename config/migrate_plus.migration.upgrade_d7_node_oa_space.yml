@@ -48,9 +48,13 @@ process:
       plugin: get
       source: changed
   field_description:
-    -
-      plugin: get
-      source: body
+    plugin: sub_process
+    source: body
+    process:
+      value: value
+      format:
+        plugin: default_value
+        default_value: 'basic_html'
   field_primary_image:
     -
       plugin: sub_process
