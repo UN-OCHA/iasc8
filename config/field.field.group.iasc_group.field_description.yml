@@ -1,0 +1,21 @@
+uuid: 0475149e-d73d-4872-9753-653a84222714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_description
+    - group.type.iasc_group
+  module:
+    - text
+id: group.iasc_group.field_description
+field_name: field_description
+entity_type: group
+bundle: iasc_group
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
