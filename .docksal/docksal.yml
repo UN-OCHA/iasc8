@@ -18,8 +18,12 @@ services:
       service: solr
     hostname: solr
     image: docksal/solr:7.5
+    user: solr
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/solr/conf:/opt/solr/server/solr/iasc/conf:ro
+      - ${PROJECT_ROOT}/.docksal/etc/solr/data:/opt/solr/server/solr/iasc/data
+    labels:
+      - io.docksal.virtual-host=solr.${VIRTUAL_HOST}
   redis:
     hostname: redis
     image: redis:3.2.11
