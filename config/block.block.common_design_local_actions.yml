@@ -9,7 +9,7 @@ _core:
 id: common_design_local_actions
 theme: common_design
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:
