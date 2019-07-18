@@ -100,17 +100,17 @@
 }
 
 
-.view-blog .view-content {
+.view .view-content {
   @extend .grid;
 }
 
-.view-blog .views-row {
+.view .views-row {
   @extend .grid-item;
   background-color: $cd-site-bg-color;
 }
 
 
-.view-blog .views-row article {
+.view .views-row article {
   @extend .grid-item_article;
 }
 
