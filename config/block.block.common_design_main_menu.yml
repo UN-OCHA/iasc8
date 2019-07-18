@@ -12,8 +12,8 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: common_design_main_menu
 theme: common_design
-region: header_top
-weight: 0
+region: header_navigation
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
