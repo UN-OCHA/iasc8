@@ -63,15 +63,32 @@
   @include desktop {
 
     .grid-item {
-      flex: 0 0 32%;
+      .layout-banner & {
+        flex: 0 0 25%;
 
-      // Reset from no support layout.
-      width: unset;
-      float: none;
+        // Reset from no support layout.
+        width: unset;
+        float: none;
 
-      &:nth-child(odd) {
-        margin-right: unset;
-        clear: initial;
+        &:nth-child(odd) {
+          margin-right: unset;
+          clear: initial;
+        }
+      }
+    }
+
+    .grid-item {
+      .layout-content & {
+        flex: 0 0 32%;
+
+        // Reset from no support layout.
+        width: unset;
+        float: none;
+
+        &:nth-child(odd) {
+          margin-right: unset;
+          clear: initial;
+        }
       }
     }
   }
@@ -87,15 +104,17 @@
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       grid-gap: 10px;
     }
-
   }
 
   @include desktop {
 
     .grid {
       grid-template-columns: repeat(3, minmax(200px, 1fr));
-    }
 
+      .layout-banner & {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+      }
+    }
   }
 }
 
