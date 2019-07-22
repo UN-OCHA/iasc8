@@ -48,14 +48,15 @@
     {% include '@common_design/cd/cd-header/cd-header.html.twig' %}
   {% endblock %}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  <div class="layout-banner cd-container">
 
-  {{ page.breadcrumb }}
+    {{ page.highlighted }}
 
-  {{ page.highlighted }}
+    {{ page.hero }}
 
-  {{ page.help }}
+    {{ page.help }}
+
+  </div>
 
   <main role="main" class="cd-container">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
