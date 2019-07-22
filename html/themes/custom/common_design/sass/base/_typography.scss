@@ -34,15 +34,18 @@ h5 {
 }
 
 .page-title {
-  padding-bottom: $cd-base-unit * 1.5;
-  border-bottom: 1px solid $cd-mid-bluey-grey;
   font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: $cd-default-text-color;
+  font-size: 1.875rem;
+  margin-bottom: 3rem;
+  color: $iasc-primary;
 
-  @include sm {
-    font-size: 2.5rem;
+  &::after {
+    background-color: $iasc-highlight;
+    content: "";
+    display: block;
+    height: 6px;
+    margin: calc(1rem - 6px) auto 0 0;
+    width: 80px;
   }
 }
 
