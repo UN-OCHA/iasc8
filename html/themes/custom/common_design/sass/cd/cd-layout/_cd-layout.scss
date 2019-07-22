@@ -74,8 +74,10 @@ body {
 
 // Sidebar
 .cd-layout-container main.cd-container {
-  display: flex;
-  flex-wrap: wrap;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .cd-layout-container main.cd-container .layout-sidebar-first {
@@ -88,4 +90,11 @@ body {
   flex-grow: 999;
   min-width: 50%;
 }
+
+.layout-with-sidebar .layout-content {
+  @include tablet {
+    margin-right: 3rem;
+  }
+}
+
 
