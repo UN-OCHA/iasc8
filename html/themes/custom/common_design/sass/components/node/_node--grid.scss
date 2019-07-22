@@ -118,16 +118,17 @@
   }
 }
 
+.layout-content,
+.layout-banner {
+  .view .view-content {
+    @extend .grid;
+  }
 
-.view .view-content {
-  @extend .grid;
+  .view .views-row {
+    @extend .grid-item;
+    background-color: $cd-site-bg-color;
+  }
 }
-
-.view .views-row {
-  @extend .grid-item;
-  background-color: $cd-site-bg-color;
-}
-
 
 .view .views-row article {
   @extend .grid-item_article;
