@@ -64,6 +64,14 @@ body {
   }
 }
 
+.cd-container[role='main'] {
+  padding-bottom: 2rem;
+
+  @include desktop {
+    padding-bottom: 4rem;
+  }
+}
+
 // Sidebar
 .cd-layout-container main.cd-container {
   display: flex;
@@ -80,3 +88,4 @@ body {
   flex-grow: 999;
   min-width: 50%;
 }
+
