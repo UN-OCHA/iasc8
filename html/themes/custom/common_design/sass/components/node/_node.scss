@@ -1,0 +1,23 @@
+.node__read-more {
+  text-align: right;
+
+  a {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    fill: $iasc-highlight;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
