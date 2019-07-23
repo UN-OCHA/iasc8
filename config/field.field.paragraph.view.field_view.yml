@@ -28,7 +28,8 @@ settings:
     page: 0
     feed: 0
   preselect_views:
-    upcoming_meetings: upcoming_meetings
+    iasc_content: iasc_content
+    iasc_events: iasc_events
     block_content: 0
     comment: 0
     comments_recent: 0
