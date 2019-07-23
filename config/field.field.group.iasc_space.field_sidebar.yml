@@ -1,9 +1,9 @@
-uuid: f6974c0e-9075-4473-a59c-298c3f8d68f4
+uuid: 7cb98bd2-af0c-4832-84b2-b338a2429014
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.field_content
+    - field.storage.group.field_sidebar
     - group.type.iasc_space
     - paragraphs.paragraphs_type.additional_locations
     - paragraphs.paragraphs_type.agenda_items
@@ -14,11 +14,11 @@ dependencies:
     - paragraphs.paragraphs_type.paragraph_text
   module:
     - entity_reference_revisions
-id: group.iasc_space.field_content
-field_name: field_content
+id: group.iasc_space.field_sidebar
+field_name: field_sidebar
 entity_type: group
 bundle: iasc_space
-label: Content
+label: Sidebar
 description: ''
 required: false
 translatable: false

@@ -14,12 +14,9 @@ mode: default
 content:
   field_view:
     weight: 0
-    settings:
-      match_operator: CONTAINS
-      size: '60'
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: viewsreference_autocomplete
+    type: viewsreference_select
     region: content
 hidden:
   created: true
