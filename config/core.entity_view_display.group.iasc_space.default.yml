@@ -6,6 +6,7 @@ dependencies:
     - field.field.group.iasc_space.field_banner_image
     - field.field.group.iasc_space.field_banner_position
     - field.field.group.iasc_space.field_banner_text
+    - field.field.group.iasc_space.field_content
     - field.field.group.iasc_space.field_date_closed
     - field.field.group.iasc_space.field_description
     - field.field.group.iasc_space.field_external_link
@@ -15,6 +16,7 @@ dependencies:
     - group.type.iasc_space
   module:
     - datetime
+    - entity_reference_revisions
     - image
     - link
     - options
@@ -25,7 +27,7 @@ bundle: iasc_space
 mode: default
 content:
   field_banner_image:
-    weight: -4
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -34,22 +36,31 @@ content:
     type: image
     region: content
   field_banner_position:
-    weight: -3
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_banner_text:
-    weight: -2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_date_closed:
-    weight: -1
+    weight: 4
     label: above
     settings:
       format_type: medium
@@ -58,14 +69,14 @@ content:
     type: datetime_default
     region: content
   field_description:
-    weight: 0
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_external_link:
-    weight: 1
+    weight: 8
     label: above
     settings:
       trim_length: 80
@@ -77,7 +88,7 @@ content:
     type: link
     region: content
   field_primary_image:
-    weight: 2
+    weight: 9
     label: above
     settings:
       image_style: ''
@@ -86,14 +97,14 @@ content:
     type: image
     region: content
   field_responsibilities:
-    weight: 3
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_short_name:
-    weight: 4
+    weight: 10
     label: above
     settings:
       link_to_entity: false
@@ -103,7 +114,7 @@ content:
   label:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
