@@ -63,6 +63,7 @@
         "drupal/search_api_attachments": "^1.0@beta",
         "drupal/search_api_solr": "^3.2",
         "drupal/select2": "^1.1",
+        "drupal/viewsreference": "^2.0",
         "drupal/social_auth_hid": "^2.1",
         "drupal/tablefield": "^2.0@alpha",
         "drupal/token": "^1.5",
@@ -77,11 +78,10 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/devel_entity_updates": "^1.0@RC",
+        "phpmd/phpmd": "^2.6",
         "webflo/drupal-core-require-dev": "^8.7.0",
         "weitzman/drupal-test-traits": "^1.2",
-        "weitzman/logintrait": "^1.1",
-        "phpmd/phpmd": "^2.6",
-        "sebastian/phpcpd": "^4.0"
+        "weitzman/logintrait": "^1.1"
     },
     "conflict": {
         "drupal/drupal": "*"
