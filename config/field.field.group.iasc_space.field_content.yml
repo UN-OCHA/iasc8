@@ -1,0 +1,50 @@
+uuid: f6974c0e-9075-4473-a59c-298c3f8d68f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_content
+    - group.type.iasc_space
+  module:
+    - entity_reference_revisions
+id: group.iasc_space.field_content
+field_name: field_content
+entity_type: group
+bundle: iasc_space
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles: null
+    target_bundles_drag_drop:
+      additional_locations:
+        weight: 9
+        enabled: false
+      agenda_items:
+        weight: 10
+        enabled: false
+      membership:
+        weight: 11
+        enabled: false
+      paragraph_content:
+        weight: 12
+        enabled: false
+      paragraph_media:
+        weight: 13
+        enabled: false
+      paragraph_snippet:
+        weight: 14
+        enabled: false
+      paragraph_text:
+        weight: 15
+        enabled: false
+      view:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
