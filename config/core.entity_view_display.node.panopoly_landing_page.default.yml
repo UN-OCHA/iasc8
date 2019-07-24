@@ -1,0 +1,61 @@
+uuid: 082d6ec4-f385-4b0c-aafb-6a4bdfb8cbcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.panopoly_landing_page.field_content
+    - field.field.node.panopoly_landing_page.field_footer
+    - field.field.node.panopoly_landing_page.field_header
+    - field.field.node.panopoly_landing_page.field_sidebar
+    - node.type.panopoly_landing_page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.panopoly_landing_page.default
+targetEntityType: node
+bundle: panopoly_landing_page
+mode: default
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_footer:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_header:
+    type: entity_reference_revisions_entity_view
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sidebar:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
