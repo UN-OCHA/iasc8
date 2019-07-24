@@ -28,6 +28,7 @@ settings:
     page: 0
     feed: 0
   preselect_views:
+    iasc_contacts: iasc_contacts
     iasc_content: iasc_content
     iasc_events: iasc_events
     block_content: 0
@@ -52,7 +53,8 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
-    limit: 0
+    limit: limit
+    filters: filters
     argument: 0
     offset: 0
     title: 0
