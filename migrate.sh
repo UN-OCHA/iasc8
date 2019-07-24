@@ -56,4 +56,3 @@ fin drush mim --verbose upgrade_d7_node_oa_team
 fin drush mim --verbose upgrade_d7_node_oa_section
 
 fin drush mim --verbose upgrade_d7_node_panopoly_page
-fin drush mim --verbose upgrade_d7_node_panopoly_landing_page
