@@ -13,6 +13,7 @@ dependencies:
     - field.field.group.iasc_space.field_primary_image
     - field.field.group.iasc_space.field_responsibilities
     - field.field.group.iasc_space.field_short_name
+    - field.field.group.iasc_space.field_sidebar
     - group.type.iasc_space
   module:
     - datetime
@@ -110,6 +111,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_sidebar:
+    type: entity_reference_revisions_entity_view
+    weight: 11
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   label:
     label: hidden
