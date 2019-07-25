@@ -1,0 +1,30 @@
+uuid: f3576f86-edd5-4687-ab6b-0fc9f313f995
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured
+  module:
+    - system
+    - views
+  theme:
+    - common_design
+id: views_block__featured_block
+theme: common_design
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:featured-block_1'
+settings:
+  id: 'views_block:featured-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
