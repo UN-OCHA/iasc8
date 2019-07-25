@@ -483,6 +483,7 @@ display:
         description: ''
         weight: 0
         context: '0'
+        enabled: false
       display_extenders: {  }
     cache_metadata:
       max-age: 0

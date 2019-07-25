@@ -3,9 +3,9 @@ name: IASC
 mail: iasccorrespondence@un.org
 slogan: ''
 page:
-  403: /access-denied
-  404: /page-not-found
-  front: /home
+  403: ''
+  404: ''
+  front: /node/23212
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
