@@ -50,43 +50,56 @@
 ]
 %}
 
+{% block attach %}
+{% endblock %}
+
 <div class="cd-layout-container">
 
   {% block header %}
     {% include '@common_design/cd/cd-header/cd-header.html.twig' %}
   {% endblock %}
 
-  <div class="layout-banner cd-container">
+  {{ page.help }}
 
-    {{ page.highlighted }}
+  {% block hero %}
+    <div class="layout-hero cd-container">
+      {{ page.hero }}
+    </div>
+  {% endblock %}
 
-    {{ page.hero }}
+  {% if page.highlighted %}
+    {% block highlighted %}
+      <div class="layout-highlighted cd-container">
+        {{ page.highlighted }}
+      </div>
+    {% endblock %}
+  {% endif %}
 
-    {{ page.help }}
 
-  </div>
+  {% block main %}
+    <main role="main" {{ attributes.addClass(layout_classes) }}>
 
-  <main role="main" {{ attributes.addClass(layout_classes) }}>
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+    </main>
+  {% endblock %}
 
-  </main>
 
   {% block footer_soft %}
     {{ page.footer_soft }}
