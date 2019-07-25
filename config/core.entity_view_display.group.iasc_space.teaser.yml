@@ -1,0 +1,81 @@
+uuid: 96d230f3-30b0-42c1-b8ef-169acbb16356
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.teaser
+    - field.field.group.iasc_space.field_banner_image
+    - field.field.group.iasc_space.field_banner_position
+    - field.field.group.iasc_space.field_banner_text
+    - field.field.group.iasc_space.field_content
+    - field.field.group.iasc_space.field_date_closed
+    - field.field.group.iasc_space.field_description
+    - field.field.group.iasc_space.field_external_link
+    - field.field.group.iasc_space.field_primary_image
+    - field.field.group.iasc_space.field_responsibilities
+    - field.field.group.iasc_space.field_short_name
+    - field.field.group.iasc_space.field_sidebar
+    - group.type.iasc_space
+  module:
+    - datetime
+    - image
+    - text
+id: group.iasc_space.teaser
+targetEntityType: group
+bundle: iasc_space
+mode: teaser
+content:
+  field_date_closed:
+    weight: 4
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_primary_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_short_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_banner_image: true
+  field_banner_position: true
+  field_banner_text: true
+  field_content: true
+  field_external_link: true
+  field_responsibilities: true
+  field_sidebar: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true
