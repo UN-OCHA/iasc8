@@ -29,3 +29,8 @@ search--inline:
     js/custom-search--inline.js: {}
     dependencies:
     - common_design/dropdown
+
+cd-hero:
+  css:
+    theme:
+      sass/components/cd-hero/cd-hero.css: {}
