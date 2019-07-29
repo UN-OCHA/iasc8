@@ -1,0 +1,60 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Search
+//——————————————————————————————————————————————————————————————————————————————
+.cd-search_btn {
+  color: $iasc-primary;
+
+  svg {
+    fill: $iasc-primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $cd-bright-blue-text-color;
+
+    svg {
+      fill: $cd-bright-blue-text-color;
+    }
+  }
+
+  &:focus {
+    color: $cd-highlight-red;
+
+    svg {
+      fill: $cd-highlight-red;
+    }
+  }
+
+  .open & {
+    color: $cd-highlight-red;
+
+    svg {
+      fill: $cd-highlight-red;
+    }
+
+    &:hover,
+    &:focus {
+      color: $cd-bright-blue-text-color;
+    }
+  }
+}
+
+.cd-search_btn-text {
+
+  .open & {
+    color: $cd-highlight-red;
+  }
+}
+
+.cd-search__submit {
+  background: $iasc-secondary;
+
+  &.js-has-focus,
+  &:focus {
+    background-color: $cd-highlight-red;
+  }
+}
+
+.open .cd-search__form {
+  @include z-index(search);
+}

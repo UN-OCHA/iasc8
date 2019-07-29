@@ -1,0 +1,108 @@
+.paragraph--type--text-and-image {
+
+  padding: 0 0 2rem;
+
+  @include tablet {
+    padding: 0 0 1rem;
+  }
+
+  // helper for @support testing
+  //background: rgba(255, 0, 0, 0.1);
+
+  .field--name-field-image {
+    max-width: 300px;
+  }
+
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  @supports (display: flex) {
+    //background: rgba(0, 255, 0, 0.1);
+
+    @include tablet {
+      display: flex;
+    }
+
+    .field--name-field-image {
+      @include tablet {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    //background: rgba(0, 0, 255, 0.1);
+    @include tablet {
+      display: grid;
+      grid-template-columns: minmax(300px, 1fr) auto;
+    }
+  }
+
+  &.paragraph__image--align-left {
+
+    .field--name-field-image {
+      @include tablet {
+        float: left;
+        margin-right: 2rem;
+      }
+    }
+
+    @supports (display: grid) {
+      @include tablet {
+        grid-template-columns: minmax(300px, 1fr) 2fr;
+      }
+    }
+  }
+
+  &.paragraph__image--align-right {
+
+    .field--name-field-image {
+      @include tablet {
+        float: right;
+        margin-left: 2rem;
+      }
+    }
+
+    @supports (display: flex) {
+
+      .field--name-field-image {
+        @include tablet {
+          order: 2;
+        }
+      }
+    }
+
+    @supports (display: grid) {
+      @include tablet {
+        grid-template-columns: 2fr minmax(300px, 1fr);
+      }
+    }
+  }
+
+  &.paragraph__image--align-center {
+
+    .field--name-field-image {
+      margin: 0 auto;
+      max-width: unset;
+    }
+
+    @supports (display: flex) {
+      flex-wrap: wrap;
+
+      .field--name-field-image {
+        @include tablet {
+          flex: 1 0 100%;
+        }
+      }
+    }
+
+    @supports (display: grid) {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
