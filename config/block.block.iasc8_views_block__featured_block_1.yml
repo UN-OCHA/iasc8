@@ -1,4 +1,4 @@
-uuid: f3576f86-edd5-4687-ab6b-0fc9f313f995
+uuid: b8566830-3d9e-40bc-9cb9-c780f1ba7eee
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - system
     - views
   theme:
-    - common_design
-id: views_block__featured_block
-theme: common_design
-region: highlighted
+    - iasc8
+id: iasc8_views_block__featured_block_1
+theme: iasc8
+region: header
 weight: 0
 provider: null
 plugin: 'views_block:featured-block_1'
