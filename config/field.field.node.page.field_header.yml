@@ -1,0 +1,52 @@
+uuid: 7fe88924-8b33-44a7-bc07-f4c60d9ff7a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.page
+    - paragraphs.paragraphs_type.paragraph_media
+  module:
+    - entity_reference_revisions
+id: node.page.field_header
+field_name: field_header
+entity_type: node
+bundle: page
+label: Header
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paragraph_media: paragraph_media
+    target_bundles_drag_drop:
+      additional_locations:
+        weight: 9
+        enabled: false
+      agenda_items:
+        weight: 10
+        enabled: false
+      membership:
+        weight: 11
+        enabled: false
+      paragraph_content:
+        weight: 12
+        enabled: false
+      paragraph_media:
+        enabled: true
+        weight: 13
+      paragraph_snippet:
+        weight: 14
+        enabled: false
+      paragraph_text:
+        weight: 15
+        enabled: false
+      view:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

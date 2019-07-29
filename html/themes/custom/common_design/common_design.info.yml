@@ -12,6 +12,7 @@ libraries:
 - core/jquery
 - core/jquery.once
 - common_design/global-styling
+- common_design/cd-hero
 
 # Regions
 regions:

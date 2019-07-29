@@ -6,6 +6,7 @@ dependencies:
     - facets.facet.audience
   module:
     - facets
+    - system
   theme:
     - common_design
 id: common_design_audience
@@ -19,5 +20,10 @@ settings:
   label: Audience
   provider: facets
   label_display: visible
-  block_id: audience
-visibility: {  }
+  block_id: common_design_audience
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
