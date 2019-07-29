@@ -41,8 +41,8 @@ body {
   @supports (display: grid) {
     //background: rgba(0, 0, 255, 0.1);
     @include tablet {
-      //display: grid;
-      //grid-template-rows: 95px 1fr auto; // Height of header.
+      display: grid;
+      grid-template-rows: 95px 1fr auto; // Height of header.
     }
   }
 }
@@ -71,33 +71,4 @@ body {
     padding-bottom: 4rem;
   }
 }
-
-// Sidebar
-.cd-layout-container main.cd-container {
-  padding-top: 2rem;
-
-  @include tablet {
-    padding-top: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.cd-layout-container main.cd-container .layout-sidebar-first {
-  flex-basis: 285px;
-  flex-grow: 1;
-}
-
-.cd-layout-container main.cd-container .layout-content {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: 50%;
-}
-
-.layout-with-sidebar .layout-content {
-  @include tablet {
-    margin-right: 3rem;
-  }
-}
-
 

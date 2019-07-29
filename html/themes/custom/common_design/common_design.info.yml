@@ -4,7 +4,7 @@ description: OCHA Common Design drupal theme. Use as a base theme, and extend.
 core: 8.x
 # Defines the base theme
 base theme: classy
-logo: 'img/logos/logo.svg'
+logo: 'img/logos/ocha-lockup-blue.svg'
 
 # Defines libraries group in which we can add css/js.
 libraries:
@@ -12,7 +12,6 @@ libraries:
 - core/jquery
 - core/jquery.once
 - common_design/global-styling
-- common_design/cd-hero
 
 # Regions
 regions:
@@ -20,8 +19,6 @@ regions:
   header_search: Header search
   header_logo: Header logo
   header_navigation: Header navigation
-  hero: Hero
-  highlighted: Highlighted
   content: Content
   sidebar_first: First sidebar
   footer_soft: Soft footer
