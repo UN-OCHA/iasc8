@@ -1,0 +1,20 @@
+uuid: 7f03ac4d-0d27-4c91-b6d5-2fcb436ac539
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iasc_common_design
+id: tabs
+theme: iasc_common_design
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

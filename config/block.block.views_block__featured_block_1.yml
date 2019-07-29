@@ -1,0 +1,30 @@
+uuid: 4c3c5dc7-780b-4586-81ae-29a00a178b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured
+  module:
+    - system
+    - views
+  theme:
+    - iasc_common_design
+id: views_block__featured_block_1
+theme: iasc_common_design
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:featured-block_1'
+settings:
+  id: 'views_block:featured-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
