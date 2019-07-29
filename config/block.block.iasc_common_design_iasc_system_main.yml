@@ -1,0 +1,22 @@
+uuid: cfbea44e-e56c-46b9-8730-c55807c7931e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iasc_common_design
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: iasc_common_design_iasc_system_main
+theme: iasc_common_design
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

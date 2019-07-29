@@ -1,17 +1,17 @@
-uuid: 9e1d37f6-6954-4153-a511-f132b798e062
+uuid: f2b45117-2c23-45c4-8bb2-a25678ef0570
 langcode: en
 status: false
 dependencies:
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: iasc8_breadcrumbs
-theme: iasc8
-region: header
-weight: 0
+id: iasc_common_design_breadcrumbs
+theme: iasc_common_design
+region: content
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

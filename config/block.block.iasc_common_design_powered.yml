@@ -1,17 +1,17 @@
-uuid: 1895633a-b93d-4f36-bfef-dcb85baf227f
+uuid: 1b55f0fa-d1cc-48b7-a910-c553b8f88925
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
-id: iasc8_powered
-theme: iasc8
-region: header
-weight: 10
+id: iasc_common_design_powered
+theme: iasc_common_design
+region: footer_soft
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

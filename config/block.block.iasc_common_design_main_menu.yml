@@ -1,19 +1,19 @@
-uuid: b7e0df94-878a-406d-9cfa-781286181707
+uuid: 60bfaa45-67cb-40ac-a86a-59e5eadea4f9
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: iasc8_main_menu
-theme: iasc8
-region: header
-weight: 0
+id: iasc_common_design_main_menu
+theme: iasc_common_design
+region: header_navigation
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

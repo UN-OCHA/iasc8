@@ -1,19 +1,19 @@
-uuid: f6baa218-7b60-4e92-9a72-701446296828
+uuid: 2c5625aa-ad97-4358-b8bf-6d44f2f7c4d2
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.footer
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
-id: iasc8_footer
-theme: iasc8
-region: header
-weight: 0
+id: iasc_common_design_footer
+theme: iasc_common_design
+region: footer_navigation
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

@@ -1,17 +1,17 @@
-uuid: 9cbaadf9-972b-4723-8036-c3ce82d689e7
+uuid: fbc353d8-db54-4266-8818-0146903559c3
 langcode: en
 status: false
 dependencies:
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: iasc8_messages
-theme: iasc8
-region: header
-weight: 0
+id: iasc_common_design_messages
+theme: iasc_common_design
+region: content
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:

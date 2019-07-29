@@ -1,17 +1,17 @@
-uuid: ecbd29ee-1299-4aa3-a1d6-8c06846f9803
+uuid: cc255cb9-5152-4386-be69-db9897c74afb
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - iasc8
+    - iasc_common_design
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: iasc8_branding
-theme: iasc8
-region: header
-weight: 0
+id: iasc_common_design_branding
+theme: iasc_common_design
+region: header_logo
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:
