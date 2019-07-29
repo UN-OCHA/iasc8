@@ -42,41 +42,64 @@
  * @see html.html.twig
  */
 #}
+
+{%
+  set layout_classes = [
+  'cd-container',
+  page.sidebar_first ? 'layout-with-sidebar',
+]
+%}
+
+{% block attach %}
+{% endblock %}
+
 <div class="cd-layout-container">
 
   {% block header %}
     {% include '@common_design/cd/cd-header/cd-header.html.twig' %}
   {% endblock %}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
   {{ page.help }}
 
-  <main role="main" class="cd-container">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  {% block hero %}
+    <div class="layout-hero cd-container">
+      {{ page.hero }}
+    </div>
+  {% endblock %}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+  {% if page.highlighted %}
+    {% block highlighted %}
+      <div class="layout-highlighted cd-container">
+        {{ page.highlighted }}
+      </div>
+    {% endblock %}
+  {% endif %}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+  {% block main %}
+    <main role="main" {{ attributes.addClass(layout_classes) }}>
 
-  </main>
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+
+    </main>
+  {% endblock %}
+
 
   {% block footer_soft %}
     {{ page.footer_soft }}

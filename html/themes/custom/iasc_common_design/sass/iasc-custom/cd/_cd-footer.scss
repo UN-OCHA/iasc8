@@ -1,10 +1,8 @@
 //——————————————————————————————————————————————————————————————————————————————
-// Common Design: Drupal dropdowns for nested menus
+// Common Design: Footer
 //——————————————————————————————————————————————————————————————————————————————
-.cd-nav {
-  .expanded {
-    .icon--arrow-down {
-      fill: $iasc-highlight;
-    }
-  }
+
+.cd-footer {
+  background: $cd-primary-bg-color;
+  color: $cd-white-text-color;
 }
