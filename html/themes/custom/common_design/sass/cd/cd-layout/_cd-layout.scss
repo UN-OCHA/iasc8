@@ -41,8 +41,8 @@ body {
   @supports (display: grid) {
     //background: rgba(0, 0, 255, 0.1);
     @include tablet {
-      display: grid;
-      grid-template-rows: 95px 1fr auto; // Height of header.
+      //display: grid;
+      //grid-template-rows: 95px 1fr auto; // Height of header.
     }
   }
 }
@@ -74,7 +74,10 @@ body {
 
 // Sidebar
 .cd-layout-container main.cd-container {
+  padding-top: 2rem;
+
   @include tablet {
+    padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
   }

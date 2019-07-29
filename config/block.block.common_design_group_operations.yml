@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - group
+    - system
   theme:
     - common_design
 _core:
@@ -21,4 +22,9 @@ settings:
   label_display: visible
   context_mapping:
     group: '@group.group_route_context:group'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
