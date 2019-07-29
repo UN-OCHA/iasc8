@@ -1,4 +1,4 @@
-uuid: 97cdbed8-0386-4ec3-a1b4-ad663bd37b9b
+uuid: 3f89cc58-2926-4df5-9b7a-2cc07ef447eb
 langcode: en
 status: true
 dependencies:
@@ -7,21 +7,19 @@ dependencies:
   module:
     - system
   theme:
-    - common_design
-_core:
-  default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
-id: common_design_account_menu
-theme: common_design
-region: header_top
-weight: -8
+    - iasc8
+id: iasc8_usermenu
+theme: iasc8
+region: header
+weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
-  label: 'User account menu'
+  label: 'User menu'
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }
