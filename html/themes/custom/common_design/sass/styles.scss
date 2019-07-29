@@ -18,23 +18,3 @@
 @import 'base/_grid';
 @import 'base/_helpers';
 @import 'base/_typography';
-
-// IASC CD overrides
-@import 'iasc-custom/cd/cd-dropdowns-drupal';
-//@import 'iasc-custom/cd/cd-header';
-@import 'iasc-custom/cd/cd-language-switcher';
-@import 'iasc-custom/cd/cd-layout';
-//@import 'iasc-custom/cd/cd-logo';
-@import 'iasc-custom/cd/cd-nav';
-@import 'iasc-custom/cd/cd-ocha';
-@import 'iasc-custom/cd/cd-search';
-@import 'iasc-custom/cd/cd-soft-footer';
-@import 'iasc-custom/cd/cd-user-menu';
-
-//——————————————————————————————————————————————————————————————————————————————
-// Components
-//——————————————————————————————————————————————————————————————————————————————
-
-@import 'components/node/_node';
-@import 'components/node/_node--grid';
-@import 'components/paragraph/_paragraph';

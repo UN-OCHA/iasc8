@@ -20,7 +20,7 @@ input {
 body {
   @include font-size($cd-font-size-base);
   font-family: $cd-font;
-  color: $cd-dark-text-color;
+  color: $cd-dark-grey;
   line-height: 1.5;
 
   &.no-scroll {
