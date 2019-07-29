@@ -15,10 +15,10 @@ body {
   min-height: 100%;
 
   &:not(.user-logged-in) {
-    @supports (display: grid) {
-      display: grid;
-      grid-template-rows: 1fr auto;
-    }
+    //@supports (display: grid) {
+    //  display: grid;
+    //  grid-template-rows: 1fr auto;
+    //}
   }
 }
 
@@ -41,8 +41,8 @@ body {
   @supports (display: grid) {
     //background: rgba(0, 0, 255, 0.1);
     @include tablet {
-      //display: grid;
-      //grid-template-rows: 95px 1fr auto; // Height of header.
+      display: grid;
+      grid-template-rows: 95px 1fr auto; // Height of header.
     }
   }
 }
@@ -99,5 +99,3 @@ body {
     margin-right: 3rem;
   }
 }
-
-
