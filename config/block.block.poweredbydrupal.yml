@@ -1,0 +1,20 @@
+uuid: da8b428d-7828-4303-a8a2-b8f1cdac6765
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iasc_common_design
+id: poweredbydrupal
+theme: iasc_common_design
+region: footer_soft
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: visible
+visibility: {  }

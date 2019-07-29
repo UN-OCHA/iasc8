@@ -1,0 +1,20 @@
+uuid: 252aaebe-0a69-405a-bce4-510291f72daa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iasc_common_design
+id: breadcrumbs
+theme: iasc_common_design
+region: content
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
