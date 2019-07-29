@@ -15,10 +15,10 @@ body {
   min-height: 100%;
 
   &:not(.user-logged-in) {
-    @supports (display: grid) {
-      display: grid;
-      grid-template-rows: 1fr auto;
-    }
+    //@supports (display: grid) {
+    //  display: grid;
+    //  grid-template-rows: 1fr auto;
+    //}
   }
 }
 
@@ -99,5 +99,3 @@ body {
     margin-right: 3rem;
   }
 }
-
-
