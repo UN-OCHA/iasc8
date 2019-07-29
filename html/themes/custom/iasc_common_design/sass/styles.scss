@@ -1,0 +1,38 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design
+//
+// Imports everything in the `cd` folder and ensures that the templates provided
+// in this theme for the Header/Footer will carry Common Design branding.
+//——————————————————————————————————————————————————————————————————————————————
+@import 'cd/cd';
+
+
+//——————————————————————————————————————————————————————————————————————————————
+// Theme extras
+//
+// These optional Sass files can be used to start out with a more complete theme
+// if you want something to get you started quickly.
+//——————————————————————————————————————————————————————————————————————————————
+
+@import 'base/_base';
+@import 'base/_typography';
+
+// IASC CD overrides
+@import 'iasc-custom/cd/cd-dropdowns-drupal';
+//@import 'iasc-custom/cd/cd-header';
+@import 'iasc-custom/cd/cd-language-switcher';
+@import 'iasc-custom/cd/cd-layout';
+//@import 'iasc-custom/cd/cd-logo';
+@import 'iasc-custom/cd/cd-nav';
+@import 'iasc-custom/cd/cd-ocha';
+@import 'iasc-custom/cd/cd-search';
+@import 'iasc-custom/cd/cd-soft-footer';
+@import 'iasc-custom/cd/cd-user-menu';
+
+//——————————————————————————————————————————————————————————————————————————————
+// Components
+//——————————————————————————————————————————————————————————————————————————————
+
+@import 'components/node/_node';
+@import 'components/node/_node--grid';
+@import 'components/paragraph/_paragraph';
