@@ -1,0 +1,25 @@
+uuid: aabf6c9f-437c-46d3-9e02-fdfb82e1b2b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - iasc_common_design
+id: footer_2
+theme: iasc_common_design
+region: footer_navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
