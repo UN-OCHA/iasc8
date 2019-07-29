@@ -106,6 +106,7 @@ theme:
   seven: 0
   common_design: 0
   iasc_common_design: 0
+  iasc8: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
