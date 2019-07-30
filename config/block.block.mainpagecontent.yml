@@ -1,22 +1,20 @@
-uuid: 670fa14e-4b0d-426c-8928-7d8dbd3b7197
+uuid: 8bf29c62-9f3e-4b23-a27a-af55126ed78c
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - common_design
-_core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: common_design_iasc_system_main
-theme: common_design
+    - iasc_common_design
+id: mainpagecontent
+theme: iasc_common_design
 region: content
 weight: -1
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: ''
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

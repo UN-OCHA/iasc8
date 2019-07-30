@@ -1,4 +1,4 @@
-uuid: 6e7cab1d-627f-4aa7-97e6-b002f793f487
+uuid: 77958d30-11db-483e-ba36-a64915b5f70d
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,11 @@ dependencies:
     - group
     - system
   theme:
-    - common_design
-_core:
-  default_config_hash: MjMChFykEa-4UxdnGstVk1FcXqwUF3p_GBJLIFT3_XI
-id: common_design_group_operations
-theme: common_design
+    - iasc_common_design
+id: groupoperations
+theme: iasc_common_design
 region: sidebar_first
-weight: -6
+weight: 0
 provider: null
 plugin: group_operations
 settings:
@@ -20,8 +18,7 @@ settings:
   label: 'Group operations'
   provider: group
   label_display: visible
-  context_mapping:
-    group: '@group.group_route_context:group'
+  context_mapping: {  }
 visibility:
   request_path:
     id: request_path
