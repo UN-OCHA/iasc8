@@ -1,0 +1,23 @@
+uuid: f5235a2a-fad3-4890-90d6-6e6094ca65a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser_link
+    - paragraphs.paragraphs_type.teaser_item
+  module:
+    - link
+id: paragraph.teaser_item.field_teaser_link
+field_name: field_teaser_link
+entity_type: paragraph
+bundle: teaser_item
+label: 'Teaser link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
