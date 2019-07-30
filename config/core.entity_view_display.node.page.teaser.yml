@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_content
     - field.field.node.page.field_featured_image
-    - field.field.node.page.field_header
     - node.type.page
   module:
     - image
@@ -44,7 +43,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_content: true
-  field_header: true
   flag_bookmark: true
   langcode: true
   search_api_excerpt: true
