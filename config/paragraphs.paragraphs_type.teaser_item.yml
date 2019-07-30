@@ -1,0 +1,9 @@
+uuid: 8bef798e-0dad-46f9-ae59-30451ede10e9
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_item
+label: 'Teaser item'
+icon_uuid: null
+description: 'Item with image, title, description and link'
+behavior_plugins: {  }
