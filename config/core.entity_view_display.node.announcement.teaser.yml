@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
   module:
-    - datetime
     - text
     - user
 id: node.announcement.teaser
@@ -25,33 +24,25 @@ bundle: announcement
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
+    region: content
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
-  field_published_date:
-    label: hidden
-    weight: 0
-    type: datetime_default
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    region: content
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   comment_node_announcement: true
   field_contact: true
   field_iasc_audience: true
   field_legacy_publish: true
   field_links: true
+  field_published_date: true
   field_referenced_docs: true
   langcode: true
   oa_section_ref: true

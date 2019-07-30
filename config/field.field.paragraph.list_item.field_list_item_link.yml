@@ -1,0 +1,23 @@
+uuid: fea21f4f-bf03-4559-a6e0-359f5a16947a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_link
+    - paragraphs.paragraphs_type.list_item
+  module:
+    - link
+id: paragraph.list_item.field_list_item_link
+field_name: field_list_item_link
+entity_type: paragraph
+bundle: list_item
+label: 'List item link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,9 @@
+uuid: 914f138e-143d-4eff-865b-7cf01912dbc3
+langcode: en
+status: true
+dependencies: {  }
+id: list_item
+label: 'List item'
+icon_uuid: null
+description: 'Item with icon, title, description and link'
+behavior_plugins: {  }
