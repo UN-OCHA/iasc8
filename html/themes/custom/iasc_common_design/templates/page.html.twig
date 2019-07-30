@@ -102,11 +102,11 @@
 
 
   {% block footer_soft %}
-    {{ page.footer_soft }}
+    {% include '@iasc_common_design/cd/cd-footer/cd-soft-footer.html.twig' %}
   {% endblock %}
 
   {% block footer %}
-    {% include '@common_design/cd/cd-footer/cd-footer.html.twig' %}
+    {% include '@iasc_common_design/cd/cd-footer/cd-footer.html.twig' %}
   {% endblock %}
 
 
