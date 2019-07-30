@@ -1,0 +1,19 @@
+uuid: 9f877c35-d25d-44cc-9d5d-fc2cd8916d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser_description
+    - paragraphs.paragraphs_type.teaser_item
+id: paragraph.teaser_item.field_teaser_description
+field_name: field_teaser_description
+entity_type: paragraph
+bundle: teaser_item
+label: 'Teaser description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

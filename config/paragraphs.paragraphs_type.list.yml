@@ -1,0 +1,9 @@
+uuid: 05f32bf3-ef23-4461-8ffc-d5d0b0378ebd
+langcode: en
+status: true
+dependencies: {  }
+id: list
+label: List
+icon_uuid: null
+description: 'A list of items'
+behavior_plugins: {  }

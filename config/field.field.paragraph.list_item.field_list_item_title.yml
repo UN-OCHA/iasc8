@@ -1,0 +1,19 @@
+uuid: 2091ad9d-c138-48fd-80f3-b770f54c941e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_title
+    - paragraphs.paragraphs_type.list_item
+id: paragraph.list_item.field_list_item_title
+field_name: field_list_item_title
+entity_type: paragraph
+bundle: list_item
+label: 'List item title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

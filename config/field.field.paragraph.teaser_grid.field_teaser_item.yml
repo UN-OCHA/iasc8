@@ -1,23 +1,21 @@
-uuid: 3abd30d8-d1de-4441-885f-324187cc10ee
+uuid: 1b44f111-b7ce-495c-99ae-1513fb7f83d5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
-    - node.type.page
-    - paragraphs.paragraphs_type.list
+    - field.storage.paragraph.field_teaser_item
     - paragraphs.paragraphs_type.teaser_grid
-    - paragraphs.paragraphs_type.view
+    - paragraphs.paragraphs_type.teaser_item
   module:
     - entity_reference_revisions
-id: node.page.field_content
-field_name: field_content
-entity_type: node
-bundle: page
-label: Content
+id: paragraph.teaser_grid.field_teaser_item
+field_name: field_teaser_item
+entity_type: paragraph
+bundle: teaser_grid
+label: 'Teaser item'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,44 +23,36 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      teaser_grid: teaser_grid
-      list: list
-      view: view
+      teaser_item: teaser_item
     target_bundles_drag_drop:
-      additional_locations:
-        weight: 9
-        enabled: false
-      agenda_items:
-        weight: 10
-        enabled: false
-      membership:
-        weight: 11
-        enabled: false
       teaser_grid:
-        enabled: true
         weight: 11
-      paragraph_content:
+        enabled: false
+      additional_locations:
         weight: 12
         enabled: false
-      list:
-        enabled: true
-        weight: 13
-      paragraph_media:
+      agenda_items:
         weight: 13
         enabled: false
-      paragraph_snippet:
+      membership:
         weight: 14
         enabled: false
-      paragraph_text:
+      paragraph_content:
         weight: 15
         enabled: false
-      list_item:
+      paragraph_media:
         weight: 16
         enabled: false
-      view:
-        enabled: true
-        weight: 16
+      paragraph_snippet:
+        weight: 17
+        enabled: false
+      paragraph_text:
+        weight: 18
+        enabled: false
       teaser_item:
+        enabled: true
         weight: 19
+      view:
+        weight: 20
         enabled: false
 field_type: entity_reference_revisions
