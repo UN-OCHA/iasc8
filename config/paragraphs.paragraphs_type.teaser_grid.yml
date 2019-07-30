@@ -1,0 +1,9 @@
+uuid: 55b3a412-d8c2-4147-b55b-f53abb1a1236
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_grid
+label: 'Teaser grid'
+icon_uuid: null
+description: 'Multiple teaser items displayed in a grid'
+behavior_plugins: {  }
