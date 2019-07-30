@@ -12,7 +12,7 @@ dependencies:
 id: views_block__featured_block_1
 theme: iasc_common_design
 region: highlighted
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:featured-block_1'
 settings:
