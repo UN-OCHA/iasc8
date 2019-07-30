@@ -83,6 +83,10 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
+  <div class="cd-teaser__date">
+    {{ content.field_published_date }}
+  </div>
+
   {{ title_prefix }}
   {% if label and not page %}
     <h3{{ title_attributes }}>

@@ -1,0 +1,19 @@
+uuid: 526deb3d-dd10-472e-a0fd-d12d30c60fbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser_grid_title
+    - paragraphs.paragraphs_type.teaser_grid
+id: paragraph.teaser_grid.field_teaser_grid_title
+field_name: field_teaser_grid_title
+entity_type: paragraph
+bundle: teaser_grid
+label: 'Teaser grid title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -54,12 +54,12 @@ function common_design_form_alter(&$form, FormStateInterface $form_state, $form_
   }
 
   // This is for a Views exposed form search block.
-  if ($form_id == 'views_exposed_form') {
-    $form['#attributes']['class'][] = 'cd-search--inline__form';
-    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_submit';
-    $form['actions']['submit']['#attributes']['class'][] = 'cd-search--inline__submit';
-    $form['keys']['#attributes']['class'][] = 'cd-search--inline__input';
-  }
+//  if ($form_id == 'views_exposed_form') {
+//    $form['#attributes']['class'][] = 'cd-search--inline__form';
+//    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_submit';
+//    $form['actions']['submit']['#attributes']['class'][] = 'cd-search--inline__submit';
+//    $form['keys']['#attributes']['class'][] = 'cd-search--inline__input';
+//  }
 }
 
 /**
