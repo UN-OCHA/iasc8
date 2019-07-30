@@ -1,22 +1,20 @@
-uuid: 1895633a-b93d-4f36-bfef-dcb85baf227f
+uuid: da8b428d-7828-4303-a8a2-b8f1cdac6765
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - iasc8
-_core:
-  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
-id: iasc8_powered
-theme: iasc8
-region: header
-weight: 10
+    - iasc_common_design
+id: poweredbydrupal
+theme: iasc_common_design
+region: footer_soft
+weight: 0
 provider: null
 plugin: system_powered_by_block
 settings:
   id: system_powered_by_block
   label: 'Powered by Drupal'
   provider: system
-  label_display: '0'
+  label_display: visible
 visibility: {  }
