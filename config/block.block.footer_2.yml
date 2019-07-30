@@ -1,4 +1,4 @@
-uuid: 52fef2fd-a2f9-448b-b094-9126fb22423f
+uuid: aabf6c9f-437c-46d3-9e02-fdfb82e1b2b5
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,16 @@ dependencies:
   module:
     - system
   theme:
-    - common_design
-_core:
-  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
-id: common_design_footer
-theme: common_design
+    - iasc_common_design
+id: footer_2
+theme: iasc_common_design
 region: footer_navigation
-weight: -7
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  label: Footer
   provider: system
   label_display: '0'
   level: 1

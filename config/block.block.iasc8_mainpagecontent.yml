@@ -1,4 +1,4 @@
-uuid: ec562332-5f54-4475-bdb9-66a6848edcf7
+uuid: f54bdcf7-75e0-4b84-adf8-523cd8635592
 langcode: en
 status: true
 dependencies:
@@ -6,17 +6,15 @@ dependencies:
     - system
   theme:
     - iasc8
-_core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: iasc8_iasc_system_main
+id: iasc8_mainpagecontent
 theme: iasc8
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: ''
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

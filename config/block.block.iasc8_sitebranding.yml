@@ -1,4 +1,4 @@
-uuid: ecbd29ee-1299-4aa3-a1d6-8c06846f9803
+uuid: d2212175-7050-4a76-9198-c1af5f454f91
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,7 @@ dependencies:
     - system
   theme:
     - iasc8
-_core:
-  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: iasc8_branding
+id: iasc8_sitebranding
 theme: iasc8
 region: header
 weight: 0

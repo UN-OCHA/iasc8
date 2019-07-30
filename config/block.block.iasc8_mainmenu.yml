@@ -1,24 +1,22 @@
-uuid: f6baa218-7b60-4e92-9a72-701446296828
+uuid: 3a63c50c-f2d6-47fe-a9fb-9a02afda0353
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - system.menu.main
   module:
     - system
   theme:
     - iasc8
-_core:
-  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
-id: iasc8_footer
+id: iasc8_mainmenu
 theme: iasc8
 region: header
 weight: 0
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: 'system_menu_block:main'
 settings:
-  id: 'system_menu_block:footer'
-  label: 'Footer menu'
+  id: 'system_menu_block:main'
+  label: 'Main menu'
   provider: system
   label_display: '0'
   level: 1
