@@ -72,8 +72,8 @@ body {
   }
 }
 
-// Sidebar
-.cd-layout-container main.cd-container {
+// with sidebar pattern
+.cd-layout {
   padding-top: 2rem;
 
   @include tablet {
@@ -83,19 +83,44 @@ body {
   }
 }
 
-.cd-layout-container main.cd-container .layout-sidebar-first {
+.cd-sidebar {
   flex-basis: 285px;
   flex-grow: 1;
 }
 
-.cd-layout-container main.cd-container .layout-content {
+.cd-main {
   flex-basis: 0;
   flex-grow: 999;
   min-width: 50%;
 }
 
-.layout-with-sidebar .layout-content {
+.cd-layout-container main.cd-container {
+  @extend .cd-layout;
+}
+
+.cd-layout-container main.cd-container .layout-sidebar-first {
+  @extend .cd-sidebar;
+}
+
+.cd-layout-container main.cd-container .layout-content {
+  @extend .cd-main;
+}
+
+.layout-with-sidebar .layout-content,
+.layout-with-section-sidebar .field--name-field-content {
   @include tablet {
     margin-right: 3rem;
+  }
+}
+
+section.cd-two-col {
+  @extend .cd-layout;
+
+  .field--name-field-content {
+    @extend .cd-main;
+  }
+
+  .field--name-field-sidebar {
+    @extend .cd-sidebar;
   }
 }

@@ -28,12 +28,11 @@ settings:
     page: 0
     feed: 0
   preselect_views:
-    custom_grid: custom_grid
     featured: featured
     iasc_contacts: iasc_contacts
     iasc_content: iasc_content
     iasc_events: iasc_events
-    working_for_results: working_for_results
+    iasc_organizations: iasc_organizations
     block_content: 0
     comment: 0
     comments_recent: 0
@@ -44,7 +43,6 @@ settings:
     flag_bookmark: 0
     flag_followers: 0
     flag_followers_content: 0
-    frontpage: 0
     group_members: 0
     group_nodes: 0
     media: 0

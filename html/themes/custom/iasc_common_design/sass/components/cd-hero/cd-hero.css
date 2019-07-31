@@ -32,6 +32,7 @@
 }
 
 .cd-hero__title {
+  color: var(--iasc-primary);
   margin: 0 0 0.5rem;
 }
 
