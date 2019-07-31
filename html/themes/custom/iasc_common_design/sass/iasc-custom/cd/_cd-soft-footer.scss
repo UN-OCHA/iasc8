@@ -13,8 +13,13 @@
     color: $iasc-primary;
     font-weight: bold;
     padding: 10px 12px;
+    margin-top: 1rem;
     text-transform: uppercase;
     transition: background 0.3s ease;
+
+    @include tablet {
+      margin-top: 0;
+    }
 
     &:hover,
     &:focus {
