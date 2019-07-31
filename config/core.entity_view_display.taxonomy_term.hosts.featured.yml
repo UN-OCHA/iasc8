@@ -9,25 +9,28 @@ dependencies:
     - field.field.taxonomy_term.hosts.field_logo
     - field.field.taxonomy_term.hosts.field_long_name
     - field.field.taxonomy_term.hosts.field_membership_level
+    - image.style.thumbnail
     - taxonomy.vocabulary.hosts
   module:
-    - text
+    - image
 id: taxonomy_term.hosts.featured
 targetEntityType: taxonomy_term
 bundle: hosts
 mode: featured
 content:
-  description:
-    label: hidden
-    type: text_default
+  field_logo:
+    type: image
     weight: 0
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
     third_party_settings: {  }
 hidden:
+  description: true
   field_addresses: true
   field_homepage: true
-  field_logo: true
   field_long_name: true
   field_membership_level: true
   langcode: true

@@ -1,0 +1,30 @@
+uuid: f1bdf1ed-1fbe-491d-b644-40704a62b933
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-product-catalogue
+  module:
+    - system
+  theme:
+    - iasc_common_design
+id: productcatalog
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-product-catalogue'
+settings:
+  id: 'system_menu_block:menu-product-catalogue'
+  label: 'Product Catalog'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
