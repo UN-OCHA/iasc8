@@ -1,0 +1,29 @@
+uuid: b2772d93-c5dd-417f-912d-383c9ac978eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.audience
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: audience
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:audience'
+settings:
+  id: 'facet_block:audience'
+  label: Audience
+  provider: facets
+  label_display: visible
+  block_id: audience
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

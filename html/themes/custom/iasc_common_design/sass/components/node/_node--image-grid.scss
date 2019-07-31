@@ -1,0 +1,37 @@
+/* Component styles */
+.with-image-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.with-image-grid > * {
+  flex: 0 0 4rem;
+}
+
+.with-image-grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+@supports (display: grid) {
+  .with-image-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr) );
+  }
+}
+
+.layout-content,
+.layout-highlighted {
+  .cd-image-grid .view-content {
+    @extend .with-image-grid;
+  }
+
+  .cd-image-grid .views-row {
+    background-color: $cd-site-bg-color;
+  }
+}
+

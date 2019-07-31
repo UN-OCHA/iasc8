@@ -5,6 +5,6 @@ dependencies:
   module:
     - taxonomy
 id: taxonomy_term.featured
-label: featured
+label: Featured
 targetEntityType: taxonomy_term
 cache: true
