@@ -34,3 +34,8 @@ cd-hero:
   css:
     theme:
       sass/components/cd-hero/cd-hero.css: {}
+
+cd-list:
+  css:
+    theme:
+      sass/components/cd-list/cd-list.css: {}

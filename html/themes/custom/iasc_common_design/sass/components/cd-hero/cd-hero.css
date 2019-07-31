@@ -1,7 +1,13 @@
 .cd-hero {
+  --iasc-primary: #272e67;
+  --iasc-red: #ff715b;
+  --iasc-highlight: #ff4d59;
+}
+
+.cd-hero {
   margin: 0;
   height: 100%;
-  max-height: 24rem;
+  /*max-height: 24rem;*/
   width: 100%;
   position: relative;
 }
@@ -43,15 +49,16 @@
   padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
-  color: black;
-  background-color: red;
+  font-weight: 700;
+  color: var(--iasc-primary);
+  background-color: var(--iasc-red);
   transition: background-color 1s ease-out;
 }
 
 .cd-hero__link:hover,
 .cd-hero__link:focus {
-  color: white;
-  background-color: black;
+  color: var(--iasc-primary);
+  background-color: var(--iasc-highlight);
 }
 
 @media (min-width: 576px) {
