@@ -137,3 +137,18 @@
 .grid-item .node__content {
   padding: 0 0 1rem;
 }
+
+.layout-highlighted {
+  .block {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $cd-mid-bluey-grey;
+  }
+
+  .block > h2 {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid $cd-mid-bluey-grey;
+  }
+}
