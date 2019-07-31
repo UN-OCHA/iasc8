@@ -49,9 +49,11 @@
 {% block paragraph %}
   <li{{ attributes.addClass(classes) }}>
 
+    {% if content.field_list_item_icon|render %}
     <div class="cd-list__image">
       {{ content.field_list_item_icon }}
     </div>
+    {% endif %}
 
     <div class="cd-list__container">
 
@@ -68,6 +70,7 @@
       </div>
     </div>
 
+    {% if content.field_list_item_link|render %}
     <div class="cd-list__footer">
       <div class="cd-list__link node__read-more">
         <a href="{{ content.field_list_item_link.0['#url'] }}" rel="tag">
@@ -79,6 +82,7 @@
         </a>
       </div>
     </div>
+    {% endif %}
 
   </li>
 {% endblock paragraph %}

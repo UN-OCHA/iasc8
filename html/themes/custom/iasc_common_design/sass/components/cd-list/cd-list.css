@@ -78,13 +78,13 @@
   }
 
   .cd-list__image {
-    width: 6rem;
-    max-height: 6rem;
+    width: 4rem;
+    max-height: 4rem;
   }
 
   .cd-list__image svg {
-    max-width: 6rem;
-    max-height: 6rem;
+    max-width: 4rem;
+    max-height: 4rem;
   }
 
   .cd-list__date {
