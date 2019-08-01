@@ -1,6 +1,6 @@
 uuid: f1bdf1ed-1fbe-491d-b644-40704a62b933
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-product-catalogue

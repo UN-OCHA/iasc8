@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_header
     - node.type.page
+    - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.teaser_grid
     - paragraphs.paragraphs_type.view
@@ -25,6 +26,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      hero: hero
       list: list
       teaser_grid: teaser_grid
       view: view
@@ -32,6 +34,9 @@ settings:
       additional_locations:
         weight: 13
         enabled: false
+      hero:
+        enabled: true
+        weight: 14
       agenda_items:
         weight: 14
         enabled: false
