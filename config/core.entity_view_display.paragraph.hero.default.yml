@@ -1,0 +1,66 @@
+uuid: ceb03927-8ef3-4cf2-aeab-03bd19360272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_hero_date
+    - field.field.paragraph.hero.field_hero_description
+    - field.field.paragraph.hero.field_hero_heading
+    - field.field.paragraph.hero.field_hero_image
+    - field.field.paragraph.hero.field_hero_link
+    - paragraphs.paragraphs_type.hero
+  module:
+    - datetime
+    - link
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_hero_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: teaser
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_hero_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hero_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_hero_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  search_api_excerpt: true
