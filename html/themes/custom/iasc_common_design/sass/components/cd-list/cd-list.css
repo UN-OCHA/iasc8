@@ -1,6 +1,6 @@
 .cd-list {
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
   list-style: none;
 }
 
@@ -9,19 +9,22 @@
   justify-content: space-between;
   align-items:center;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--cd-site-bg-color);
 }
 
 .cd-list__image {
   display: flex;
   align-items:center;
-  width: 4rem;
-  max-height: 4rem;
+  width: 3rem;
+  max-height: 3rem;
   padding-right: 1rem;
 }
 
 .cd-list__image svg {
-  max-width: 4rem;
-  max-height: 4rem;
+  max-width: 3rem;
+  max-height: 3rem;
+  fill: var(--cd-ocha-blue);
 }
 
 .cd-list__container {
@@ -62,7 +65,7 @@
 }
 
 .cd-list__link svg {
-  fill: red;
+  fill: var(--cd-highlight-red);
   width: 9px;
   height: 9px;
   display: inline-block;
