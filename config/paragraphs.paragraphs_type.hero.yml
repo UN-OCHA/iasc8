@@ -1,0 +1,9 @@
+uuid: 854a40f6-d925-4fbe-ab6e-cc1f6344175c
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+description: 'Hero component with background image, heading, description, date, and cta button'
+behavior_plugins: {  }

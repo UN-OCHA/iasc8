@@ -1,6 +1,6 @@
 uuid: b2772d93-c5dd-417f-912d-383c9ac978eb
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.audience

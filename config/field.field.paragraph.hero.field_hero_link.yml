@@ -1,0 +1,23 @@
+uuid: a55caeaa-4c7c-4709-9594-25c082768fb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_link
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+id: paragraph.hero.field_hero_link
+field_name: field_hero_link
+entity_type: paragraph
+bundle: hero
+label: 'Hero link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

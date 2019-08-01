@@ -24,7 +24,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -38,7 +38,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_featured_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       image_style: ''
@@ -47,7 +47,7 @@ content:
     type: image
     region: content
   field_header:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       view_mode: default
