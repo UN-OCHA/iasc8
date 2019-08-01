@@ -1,0 +1,19 @@
+uuid: 1b032a1f-70f8-4b9f-b6a1-0dd3db574544
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_description
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_hero_description
+field_name: field_hero_description
+entity_type: paragraph
+bundle: hero
+label: 'Hero description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
