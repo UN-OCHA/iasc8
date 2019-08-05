@@ -106,6 +106,10 @@
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       grid-gap: 10px;
     }
+
+    .grid-item {
+      max-width: unset;
+    }
   }
 
   @include desktop {
