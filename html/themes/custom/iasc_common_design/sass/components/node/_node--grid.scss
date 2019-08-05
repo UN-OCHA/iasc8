@@ -108,7 +108,10 @@
     }
 
     .grid-item {
-      max-width: unset;
+      .layout-highlighted &,
+      .layout-content & {
+        max-width: unset;
+      }
     }
   }
 
