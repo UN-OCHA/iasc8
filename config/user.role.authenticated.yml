@@ -82,6 +82,7 @@ permissions:
   - 'view field_ap_progress_overview'
   - 'view field_ap_status'
   - 'view files'
+  - 'view media'
   - 'view own event registration'
   - 'view own field_ap_progress_overview'
   - 'view own field_ap_status'

@@ -7,7 +7,6 @@
 .cd-hero {
   margin: 0;
   height: 100%;
-  /*max-height: 24rem;*/
   width: 100%;
   position: relative;
 }
@@ -17,7 +16,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -28,11 +26,10 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .cd-hero__title {
-  color: var(--iasc-primary);
   margin: 0 0 0.5rem;
 }
 
@@ -49,17 +46,17 @@
   width: 100%;
   padding: 0.5rem 1rem;
   text-align: center;
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none;
   color: var(--iasc-primary);
-  background-color: var(--iasc-red);
+  background-color: var(--iasc-highlight);
   transition: background-color 1s ease-out;
 }
 
 .cd-hero__link:hover,
 .cd-hero__link:focus {
   color: var(--iasc-primary);
-  background-color: var(--iasc-highlight);
+  background-color: var(--iasc-red);
 }
 
 @media (min-width: 576px) {
