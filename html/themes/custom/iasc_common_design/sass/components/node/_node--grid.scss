@@ -5,7 +5,7 @@
   @include desktop {
     padding: 0 1rem;
     margin-bottom: 1rem;
-    width: 47%;
+    width: 32%;
     float: left;
 
     &:nth-child(odd) {
@@ -39,7 +39,7 @@
 
     .grid {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
 
@@ -64,7 +64,8 @@
 
     .grid-item {
       .layout-highlighted & {
-        flex: 0 0 25%;
+        flex: 0 0 24%;
+        max-width: 24%;
 
         // Reset from no support layout.
         width: unset;
@@ -80,6 +81,7 @@
     .grid-item {
       .layout-content & {
         flex: 0 0 32%;
+        max-width: 32%;
 
         // Reset from no support layout.
         width: unset;
