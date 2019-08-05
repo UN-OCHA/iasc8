@@ -9,8 +9,6 @@ logo: 'img/logos/logo.svg'
 # Defines libraries group in which we can add css/js.
 libraries:
 - iasc_common_design/global-styling
-- iasc_common_design/cd-hero
-- iasc_common_design/cd-list
 
 # Regions
 regions:
