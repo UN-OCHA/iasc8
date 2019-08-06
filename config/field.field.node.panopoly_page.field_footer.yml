@@ -1,21 +1,20 @@
-uuid: 3abd30d8-d1de-4441-885f-324187cc10ee
+uuid: 9bb54c21-d2ec-4673-a14b-84debee0eff4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
-    - node.type.page
+    - field.storage.node.field_footer
+    - node.type.panopoly_page
     - paragraphs.paragraphs_type.list
-    - paragraphs.paragraphs_type.paragraph_text
     - paragraphs.paragraphs_type.teaser_grid
     - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
-id: node.page.field_content
-field_name: field_content
+id: node.panopoly_page.field_footer
+field_name: field_footer
 entity_type: node
-bundle: page
-label: Content
+bundle: panopoly_page
+label: Footer
 description: ''
 required: false
 translatable: true
@@ -26,48 +25,47 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      teaser_grid: teaser_grid
       list: list
-      paragraph_text: paragraph_text
+      teaser_grid: teaser_grid
       view: view
     target_bundles_drag_drop:
       additional_locations:
-        weight: 9
-        enabled: false
-      agenda_items:
-        weight: 10
-        enabled: false
-      membership:
-        weight: 11
-        enabled: false
-      teaser_grid:
-        enabled: true
-        weight: 11
-      paragraph_content:
-        weight: 12
-        enabled: false
-      list:
-        enabled: true
-        weight: 13
-      paragraph_media:
-        weight: 13
-        enabled: false
-      paragraph_snippet:
         weight: 14
         enabled: false
-      paragraph_text:
-        enabled: true
+      agenda_items:
         weight: 15
+        enabled: false
       hero:
         weight: 16
         enabled: false
+      list:
+        enabled: true
+        weight: 17
       list_item:
-        weight: 16
+        weight: 18
+        enabled: false
+      membership:
+        weight: 19
+        enabled: false
+      paragraph_content:
+        weight: 20
+        enabled: false
+      paragraph_media:
+        weight: 21
+        enabled: false
+      paragraph_snippet:
+        weight: 22
+        enabled: false
+      paragraph_text:
+        weight: 23
+        enabled: false
+      teaser_grid:
+        enabled: true
+        weight: 24
+      teaser_item:
+        weight: 25
         enabled: false
       view:
         enabled: true
-        weight: 16
-      teaser_item:
-        weight: 19
-        enabled: false
+        weight: 26
 field_type: entity_reference_revisions

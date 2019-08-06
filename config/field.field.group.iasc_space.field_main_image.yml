@@ -1,0 +1,28 @@
+uuid: 88565eb9-319d-4609-b8aa-b600116260e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_main_image
+    - group.type.iasc_space
+    - media.type.image
+id: group.iasc_space.field_main_image
+field_name: field_main_image
+entity_type: group
+bundle: iasc_space
+label: 'Main image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
