@@ -1,0 +1,28 @@
+uuid: d95c6947-8cc7-4ff4-8a89-c1c18fd8f15d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_group_banner
+    - group.type.iasc_group
+    - media.type.image
+id: group.iasc_group.field_group_banner
+field_name: field_group_banner
+entity_type: group
+bundle: iasc_group
+label: 'Banner image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
