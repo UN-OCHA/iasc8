@@ -1,0 +1,73 @@
+uuid: 9ee2a9c5-8a51-4742-9af5-3ef4349baf1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.panopoly_page
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.paragraph_text
+    - paragraphs.paragraphs_type.teaser_grid
+    - paragraphs.paragraphs_type.view
+  module:
+    - entity_reference_revisions
+id: node.panopoly_page.field_content
+field_name: field_content
+entity_type: node
+bundle: panopoly_page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      list: list
+      paragraph_text: paragraph_text
+      teaser_grid: teaser_grid
+      view: view
+    target_bundles_drag_drop:
+      additional_locations:
+        weight: 14
+        enabled: false
+      agenda_items:
+        weight: 15
+        enabled: false
+      hero:
+        weight: 16
+        enabled: false
+      list:
+        enabled: true
+        weight: 17
+      list_item:
+        weight: 18
+        enabled: false
+      membership:
+        weight: 19
+        enabled: false
+      paragraph_content:
+        weight: 20
+        enabled: false
+      paragraph_media:
+        weight: 21
+        enabled: false
+      paragraph_snippet:
+        weight: 22
+        enabled: false
+      paragraph_text:
+        enabled: true
+        weight: 23
+      teaser_grid:
+        enabled: true
+        weight: 24
+      teaser_item:
+        weight: 25
+        enabled: false
+      view:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions

@@ -18,8 +18,8 @@ mode: default
 content:
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -27,8 +27,8 @@ content:
     region: content
   field_footer:
     type: entity_reference_revisions_entity_view
-    weight: 104
-    label: above
+    weight: 3
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -36,8 +36,8 @@ content:
     region: content
   field_header:
     type: entity_reference_revisions_entity_view
-    weight: 101
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -45,17 +45,18 @@ content:
     region: content
   field_sidebar:
     type: entity_reference_revisions_entity_view
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
+  search_api_excerpt: true
