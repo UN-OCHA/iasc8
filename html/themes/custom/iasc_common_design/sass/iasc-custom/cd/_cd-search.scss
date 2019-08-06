@@ -10,10 +10,10 @@
 
   &:hover,
   &:focus {
-    color: $cd-bright-blue-text-color;
+    color: $iasc-secondary;
 
     svg {
-      fill: $cd-bright-blue-text-color;
+      fill: $iasc-secondary;
     }
   }
 
@@ -34,7 +34,7 @@
 
     &:hover,
     &:focus {
-      color: $cd-bright-blue-text-color;
+      color: $iasc-secondary;
     }
   }
 }
