@@ -22,4 +22,29 @@
   }
 }
 
+.field--name-field-header {
+  .block,
+  .field--type-viewsreference {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $cd-mid-bluey-grey;
+    margin-bottom: 3rem;
+  }
 
+  .block > h2,
+  .viewsreference--view-title {
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid $cd-mid-bluey-grey;
+  }
+}
+
+.field--name-field-header,
+.field--name-field-sidebar,
+.field--name-field-content,
+.field--name-field-footer {
+  .paragraph {
+    margin-bottom: 1rem;
+  }
+}
