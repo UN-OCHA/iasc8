@@ -81,6 +81,11 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+
+  // Assumes frontpage has hero as first element in header field.
+  .path-frontpage:not(.user-logged-in) & {
+    padding-top: 0;
+  }
 }
 
 .cd-sidebar {

@@ -5,7 +5,8 @@
   border-bottom: 1px solid $iasc-primary;
 
   .field--name-field-sidebar &,
-  .field--name-field-content & {
+  .field--name-field-content &,
+  .field--name-field-footer & {
     font-weight: 400;
   }
 }
