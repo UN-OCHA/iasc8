@@ -1,0 +1,23 @@
+uuid: 5c4df414-9916-4700-9b93-2db2b20d492f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_content
+  module:
+    - views
+  theme:
+    - iasc_common_design
+id: exposedformsearch_contentsearch
+theme: iasc_common_design
+region: header_search
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search_content-search'
+settings:
+  id: 'views_exposed_filter_block:search_content-search'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }
