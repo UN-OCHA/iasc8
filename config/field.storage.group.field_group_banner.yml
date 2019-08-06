@@ -1,0 +1,20 @@
+uuid: ab3b972f-10be-4eb4-a454-933eb3e6342f
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - media
+id: group.field_group_banner
+field_name: field_group_banner
+entity_type: group
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,73 @@
+uuid: 659426b8-9632-4582-b157-7d4203f14139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar
+    - node.type.panopoly_page
+    - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.membership
+    - paragraphs.paragraphs_type.paragraph_content
+    - paragraphs.paragraphs_type.view
+  module:
+    - entity_reference_revisions
+id: node.panopoly_page.field_sidebar
+field_name: field_sidebar
+entity_type: node
+bundle: panopoly_page
+label: Sidebar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      list: list
+      membership: membership
+      paragraph_content: paragraph_content
+      view: view
+    target_bundles_drag_drop:
+      additional_locations:
+        weight: 14
+        enabled: false
+      agenda_items:
+        weight: 15
+        enabled: false
+      hero:
+        weight: 16
+        enabled: false
+      list:
+        enabled: true
+        weight: 17
+      list_item:
+        weight: 18
+        enabled: false
+      membership:
+        enabled: true
+        weight: 19
+      paragraph_content:
+        enabled: true
+        weight: 20
+      paragraph_media:
+        weight: 21
+        enabled: false
+      paragraph_snippet:
+        weight: 22
+        enabled: false
+      paragraph_text:
+        weight: 23
+        enabled: false
+      teaser_grid:
+        weight: 24
+        enabled: false
+      teaser_item:
+        weight: 25
+        enabled: false
+      view:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions
