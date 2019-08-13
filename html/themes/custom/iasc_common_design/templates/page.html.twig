@@ -64,6 +64,11 @@
   {% block hero %}
     <div class="layout-hero cd-container">
       {{ page.hero }}
+      {% if hero_image %}
+        <div class="hero-image">
+          {{ hero_image }}
+        </div>
+      {% endif %}
     </div>
   {% endblock %}
 
