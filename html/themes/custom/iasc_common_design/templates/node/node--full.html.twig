@@ -103,7 +103,7 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_content', 'field_sidebar', 'field_footer') }}
+    {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
       {% if content.field_sidebar|render  or content.field_content| render %}
