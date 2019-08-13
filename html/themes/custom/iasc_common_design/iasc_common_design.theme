@@ -25,3 +25,58 @@ function iasc_common_design_form_alter(&$form, FormStateInterface $form_state, $
     $form['actions']['submit']['#attributes']['value'][] = 'Search';
   }
 }
+
+/**
+ * Implements template_preprocess_field().
+ */
+function iasc_common_design_preprocess_field(&$variables, $hook) {
+  if (($variables['element']['#field_name'] == 'field_oa_date')) {
+    if (!isset($variables['element']['#items'][0])) {
+      return;
+    }
+
+    $min_date = strtotime($variables['element']['#items'][0]->value);
+    $max_date = strtotime($variables['element']['#items'][0]->end_value);
+
+    foreach ($variables['element']['#items'] as $item) {
+      $min_date = min($min_date, strtotime($item->value));
+      $max_date = max($max_date, strtotime($item->end_value));
+    }
+
+    $variables['min_date'] = [
+      'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
+      'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
+      'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
+    ];
+    $variables['max_date'] = [
+      'day' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'd'),
+      'month' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'M'),
+      'year' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'Y'),
+    ];
+  }
+}
+
+function xxxiasc_common_design_preprocess_region(&$variables) {
+  dpm($variables['region'], 'iasc_common_design_preprocess_region');
+  if ($variables['region'] == 'hero') {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      if ($node->getType() == 'page') {
+        $variables['has_hero_image'] = TRUE;
+        $variables['hero_image'] = $node->get('field_featured_image')->view();
+        dpm($variables);
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function iasc_common_design_preprocess_page(&$variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($node->getType() == 'page') {
+      $variables['has_hero_image'] = TRUE;
+      $variables['hero_image'] = $node->get('field_featured_image')->view();
+    }
+  }
+}
