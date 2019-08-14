@@ -56,23 +56,10 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
   }
 }
 
-function xxxiasc_common_design_preprocess_region(&$variables) {
-  dpm($variables['region'], 'iasc_common_design_preprocess_region');
-  if ($variables['region'] == 'hero') {
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
-      if ($node->getType() == 'page') {
-        $variables['has_hero_image'] = TRUE;
-        $variables['hero_image'] = $node->get('field_featured_image')->view();
-        dpm($variables);
-      }
-    }
-  }
-}
-
 /**
  * Implements template_preprocess_page().
  */
-function iasc_common_design_preprocess_page(&$variables) {
+function disabled_iasc_common_design_preprocess_page(&$variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     if ($node->getType() == 'page') {
       $variables['has_hero_image'] = TRUE;
