@@ -10,3 +10,36 @@
     color: $cd-white;
   }
 }
+
+.cd-user-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    float: left;
+    position: relative;
+  }
+
+  &--no-language-switcher {
+    li:last-child a {
+      padding-right: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.region-header-top .menu {
+  @extend .cd-user-menu;
+
+  // If there's no language switcher in the Global Header, uncomment this line
+  // to apply special treatment to the last link in the list.
+  @extend .cd-user-menu--no-language-switcher;
+}
+
+.user-logged-in .region-header-top .menu > li:first-child::before {
+  display: none;
+}
