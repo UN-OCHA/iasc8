@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.date_format.long
     - core.entity_view_mode.node.teaser
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
@@ -26,38 +27,14 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - text
+    - date_recur
     - user
 id: node.oa_event.teaser
 targetEntityType: node
 bundle: oa_event
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   field_city:
-    label: hidden
-    weight: 3
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_room:
-    label: hidden
-    weight: 4
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_venue:
     label: hidden
     weight: 2
     type: string
@@ -65,20 +42,47 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
+  field_oa_date:
+    type: date_recur_basic_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format_type: long
+      occurrence_format_type: long
+      same_end_date_format_type: long
+      separator: '-'
+      timezone_override: ''
+      interpreter: ''
+      show_next: 5
+      count_per_item: true
+    third_party_settings: {  }
+  field_room:
+    label: hidden
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_venue:
+    label: hidden
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     region: content
   og_group_ref:
     label: hidden
-    weight: 5
+    weight: 4
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
 hidden:
+  body: true
   comment_node_oa_event: true
   field_additional_locations: true
   field_agenda_items: true
@@ -90,8 +94,8 @@ hidden:
   field_legacy_publish: true
   field_meeting_agendas: true
   field_meeting_notes: true
-  field_oa_date: true
   langcode: true
+  links: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_vocabulary: true
