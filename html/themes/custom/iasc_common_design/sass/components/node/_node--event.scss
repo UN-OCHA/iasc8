@@ -1,15 +1,19 @@
 .node--type-oa-event {
-  padding-left: 100px;
-  margin-bottom: 40px;
-  position: relative;
 
-  .cd-date {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+  &.node--view-mode-teaser,
+  &.node--view-mode-full {
+    padding-left: 100px;
+    margin-bottom: 40px;
+    position: relative;
 
-  h3 {
-    margin-top: 0;
+    .cd-date {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
   }
 }
