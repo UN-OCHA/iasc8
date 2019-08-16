@@ -13,3 +13,8 @@ cd-list:
   css:
     theme:
       sass/components/cd-list/cd-list.css: {}
+
+cd-date:
+  css:
+    theme:
+      sass/components/cd-date/cd-date.css: {}
