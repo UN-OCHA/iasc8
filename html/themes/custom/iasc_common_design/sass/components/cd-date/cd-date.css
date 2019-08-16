@@ -1,0 +1,48 @@
+.cd-date {
+  /* Color palette */
+  --cd-ocha-blue: #026cb6;
+  --cd-dark-blue: #025995;
+  --cd-highlight-red: #eb5c6d;
+  --cd-light-grey: #f2f2f2;
+  --cd-mid-grey: #595959;
+  --cd-dark-grey: #4a4a4a;
+  --cd-site-bg-color: #e6ecf1;
+  --cd-site-bg-color--light: #ebf0f4;
+
+  --iasc-primary: #272e67;
+  --iasc-red: #ff715b;
+  --iasc-highlight: #ff4d59;
+}
+
+.cd-date-wrapper {
+  overflow: hidden;
+  background-color: var(--cd-site-bg-color--light);
+  text-align: center;
+  width: 80px;
+  line-height: 18px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.cd-date-month-wrapper {
+  background: var(--iasc-primary);
+  padding: 3px 0;
+  margin-bottom: 10px;
+}
+
+.cd-date-month {
+  color: #fff;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.cd-date-day {
+  font-size: 25px;
+  color: var(--cd-dark-grey);
+}
+
+.cd-date-year-wrapper {
+  color: var(--iasc-primary);
+  padding-bottom: 5px;
+}
