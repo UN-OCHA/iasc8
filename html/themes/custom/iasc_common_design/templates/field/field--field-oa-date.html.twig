@@ -37,34 +37,41 @@
  * @see template_preprocess_field()
  */
 #}
-<div class="field--name-field-oa-date">
+{{ attach_library('iasc_common_design/cd-date') }}
+<div class="cd-date cd-date-wrapper">
   {% if label_hidden == false %}
     <h3 class="field__label">{{ label }}</h3>
   {% endif %}
 
   {% if items|length > 0 %}
-    <span class='iasc-event-date-month'>
+  <div class="cd-date-month-wrapper">
+    <span class="cd-date-month">
       {% if min_date.month != max_date.month %}
         {{ min_date.month }} - {{ max_date.month }}
       {% else %}
         {{ min_date.month }}
       {% endif %}
     </span>
+  </div>
 
-    <span class='iasc-event-date-day'>
+  <div class="cd-date-day-wrapper">
+    <span class="cd-date-day">
       {% if min_date.day != max_date.day %}
         {{ min_date.day }} - {{ max_date.day }}
       {% else %}
         {{ min_date.day }}
       {% endif %}
     </span>
+  </div>
 
-    <span class='iasc-event-date-year'>
+  <div class="cd-date-year-wrapper">
+    <small class="cd-date-year">
       {% if min_date.year != max_date.year %}
         {{ min_date.year }} - {{ max_date.year }}
       {% else %}
         {{ min_date.year }}
       {% endif %}
-    </span>
+    </small>
+  </div>
   {% endif %}
 </div>

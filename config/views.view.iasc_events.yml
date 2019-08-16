@@ -55,7 +55,11 @@ display:
           items_per_page: 5
           offset: 0
       style:
-        type: html_list
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -229,6 +233,7 @@ display:
           not: false
           plugin_id: numeric
       display_extenders: {  }
+      css_class: cd-grid
     cache_metadata:
       max-age: -1
       contexts:
