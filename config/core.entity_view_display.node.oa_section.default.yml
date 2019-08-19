@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment_node_oa_section.default
     - field.field.node.oa_section.body
     - field.field.node.oa_section.comment_node_oa_section
+    - field.field.node.oa_section.field_content
     - field.field.node.oa_section.field_iasc_audience
     - field.field.node.oa_section.field_oa_group_ref
     - field.field.node.oa_section.field_oa_node_types
@@ -18,6 +19,7 @@ dependencies:
     - node.type.oa_section
   module:
     - comment
+    - entity_reference_revisions
     - options
     - text
     - user
@@ -29,21 +31,30 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     region: content
   comment_node_oa_section:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 7
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
+  field_content:
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_iasc_audience:
-    weight: 102
+    weight: 11
     label: above
     settings:
       link: true
@@ -52,7 +63,7 @@ content:
     region: content
   field_oa_group_ref:
     label: above
-    weight: 2
+    weight: 0
     type: entity_reference_label
     settings:
       link: true
@@ -60,14 +71,14 @@ content:
     region: content
   field_oa_node_types:
     label: above
-    weight: 8
+    weight: 5
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_section:
     label: above
-    weight: 7
+    weight: 4
     type: entity_reference_label
     settings:
       link: true
@@ -75,14 +86,17 @@ content:
     region: content
   field_oa_section_override:
     label: above
-    weight: 9
-    type: list_default
-    settings: {  }
+    weight: 6
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   field_oa_section_weight:
     label: above
-    weight: 6
+    weight: 3
     type: number_integer
     settings:
       thousand_separator: ''
@@ -91,7 +105,7 @@ content:
     region: content
   field_oa_team_ref:
     label: above
-    weight: 3
+    weight: 1
     type: entity_reference_label
     settings:
       link: true
@@ -99,17 +113,17 @@ content:
     region: content
   field_oa_user_ref:
     label: above
-    weight: 4
+    weight: 2
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   og_group_ref: true

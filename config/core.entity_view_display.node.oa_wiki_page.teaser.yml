@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.oa_wiki_page.oa_section_ref
     - field.field.node.oa_wiki_page.og_group_ref
     - field.field.node.oa_wiki_page.og_vocabulary
+    - image.style.thumbnail
     - node.type.oa_wiki_page
   module:
     - datetime
@@ -33,11 +34,19 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 6
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_category:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   field_document_no:
     label: inline
     weight: 1
@@ -46,13 +55,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_document_type:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   field_product_thumbnail:
     label: hidden
     weight: 0
     type: image
     settings:
-      image_style: ''
-      image_link: ''
+      image_style: thumbnail
+      image_link: content
     third_party_settings: {  }
     region: content
   field_published_date:
@@ -60,13 +77,8 @@ content:
     weight: 5
     type: datetime_default
     settings:
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
+      format_type: teaser
     third_party_settings: {  }
     region: content
   og_group_ref:
@@ -79,13 +91,12 @@ content:
     region: content
 hidden:
   comment_node_oa_wiki_page: true
-  field_category: true
-  field_document_type: true
   field_iasc_audience: true
   field_legacy_publish: true
   field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   langcode: true
+  links: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_vocabulary: true

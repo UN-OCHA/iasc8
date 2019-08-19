@@ -81,6 +81,9 @@
     content.field_sidebar|render ? 'layout-with-section-sidebar',
   ]
 %}
+
+{% set longDate = node.getCreatedTime|format_date('long') %}
+
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -96,7 +99,7 @@
     <footer class="node__meta">
       {{ author_picture }}
       <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {% trans %}Submitted by {{ author_name }} on {{ longDate }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
