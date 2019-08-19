@@ -78,21 +78,31 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'cd-article-teaser'
 ]
 %}
 {{ attach_library('classy/node') }}
+{{ attach_library('iasc_common_design/cd-article-teaser') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h3{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
+  {% if content.field_product_thumbnail %}
+    <div class="cd-article-teaser__image">
+      {{ content.field_product_thumbnail }}
+    </div>
   {% endif %}
-  {{ title_suffix }}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_published_date') }}
+  <div class="cd-article-teaser__container">
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h3{{ title_attributes.addClass('cd-article-teaser__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h3>
+    {% endif %}
+    {{ title_suffix }}
+
+    <div class="cd-article-teaser__description node__content">
+      {{ content|without('field_product_thumbnail') }}
+    </div>
   </div>
 
 </article>

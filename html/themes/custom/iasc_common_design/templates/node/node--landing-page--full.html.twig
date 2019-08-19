@@ -72,14 +72,14 @@
 #}
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    content.field_sidebar|render ? 'layout-with-section-sidebar',
-  ]
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  content.field_sidebar|render ? 'layout-with-section-sidebar',
+]
 %}
 
 {% set longDate = node.getCreatedTime|format_date('long') %}
@@ -88,7 +88,11 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
   {{ title_suffix }}
 
   {% if display_submitted %}
@@ -102,26 +106,26 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      <section class="cd-two-col">
+      {% if content.field_sidebar|render  or content.field_content| render %}
+        <section class="cd-two-col">
 
-        <div class="layout-content">
-          {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_section', 'field_category', 'og_group_ref') }}
-          {{ content.field_content }}
-        </div>
+          <div class="layout-content">
+            {{ content.field_content }}
+          </div>
 
-        {% if content.field_sidebar|render or content.field_section|render or content.field_category|render or content.og_group_ref|render %}
-          <aside class="layout-sidebar-first" role="complementary">
-            {{ content.field_section }}
-            {{ content.field_category }}
-            {{ content.og_group_ref }}
-            {{ content.field_sidebar }}
-          </aside>
-        {% endif %}
+          {% if content.field_sidebar|render %}
+            <aside class="layout-sidebar-first" role="complementary">
+              {{ content.field_sidebar }}
+            </aside>
+          {% endif %}
 
-      </section>
+        </section>
+      {% endif %}
     {% endblock %}
+
 
     {% if content.field_footer|render %}
       {{ content.field_footer }}
