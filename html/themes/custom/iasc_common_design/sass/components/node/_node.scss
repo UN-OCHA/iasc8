@@ -49,6 +49,17 @@
   }
 }
 
-.node--view-mode-teaser {
+.node__meta {
   margin-bottom: 2rem;
+}
+
+.node--view-mode-full {
+
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  .field--label-inline {
+    overflow: hidden;
+  }
 }
