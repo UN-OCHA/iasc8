@@ -29,6 +29,7 @@ settings:
     feed: 0
   preselect_views:
     featured: featured
+    recent_documents: recent_documents
     iasc_contacts: iasc_contacts
     iasc_content: iasc_content
     iasc_events: iasc_events

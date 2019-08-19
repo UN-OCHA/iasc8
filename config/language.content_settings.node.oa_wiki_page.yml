@@ -1,0 +1,11 @@
+uuid: 31222395-f027-4bf1-bc5a-9f7964ae7b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page
+target_entity_type_id: node
+target_bundle: oa_wiki_page
+default_langcode: site_default
+language_alterable: false
