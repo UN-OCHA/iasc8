@@ -1,9 +1,9 @@
-uuid: 8857dfe5-b5ac-40df-b3a1-12f860bdf34c
+uuid: 89bff43a-da72-4371-a0b9-8ae66ae733fc
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.title
     - field.field.node.announcement.body
     - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
@@ -16,28 +16,29 @@ dependencies:
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
   module:
-    - text
+    - datetime
     - user
-id: node.announcement.teaser
+id: node.announcement.title
 targetEntityType: node
 bundle: announcement
-mode: teaser
+mode: title
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_published_date:
+    label: inline
     weight: 0
-    region: content
-    label: hidden
+    type: datetime_default
     settings:
-      trim_length: 600
+      timezone_override: ''
+      format_type: published_date
     third_party_settings: {  }
+    region: content
 hidden:
+  body: true
   comment_node_announcement: true
   field_contact: true
   field_iasc_audience: true
   field_legacy_publish: true
   field_links: true
-  field_published_date: true
   field_referenced_docs: true
   langcode: true
   links: true

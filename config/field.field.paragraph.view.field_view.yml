@@ -29,11 +29,12 @@ settings:
     feed: 0
   preselect_views:
     featured: featured
-    recent_documents: recent_documents
     iasc_contacts: iasc_contacts
     iasc_content: iasc_content
     iasc_events: iasc_events
     iasc_organizations: iasc_organizations
+    recent_documents: recent_documents
+    updates: updates
     block_content: 0
     comment: 0
     comments_recent: 0
@@ -41,9 +42,6 @@ settings:
     content: 0
     content_recent: 0
     files: 0
-    flag_bookmark: 0
-    flag_followers: 0
-    flag_followers_content: 0
     group_members: 0
     group_nodes: 0
     media: 0
