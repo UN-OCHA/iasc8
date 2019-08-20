@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_section.default
     - field.field.node.oa_section.body
     - field.field.node.oa_section.comment_node_oa_section
     - field.field.node.oa_section.field_content
@@ -18,7 +17,6 @@ dependencies:
     - field.field.node.oa_section.og_group_ref
     - node.type.oa_section
   module:
-    - comment
     - entity_reference_revisions
     - options
     - text
@@ -31,21 +29,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 9
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
-  comment_node_oa_section:
-    label: hidden
-    type: comment_default
-    weight: 7
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    region: content
   field_content:
-    weight: 10
+    weight: 7
     label: hidden
     settings:
       view_mode: default
@@ -54,7 +43,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_iasc_audience:
-    weight: 11
+    weight: 8
     label: above
     settings:
       link: true
@@ -71,36 +60,17 @@ content:
     region: content
   field_oa_node_types:
     label: above
-    weight: 5
+    weight: 4
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_section:
     label: above
-    weight: 4
+    weight: 3
     type: entity_reference_label
     settings:
       link: true
-    third_party_settings: {  }
-    region: content
-  field_oa_section_override:
-    label: above
-    weight: 6
-    type: boolean
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    region: content
-  field_oa_section_weight:
-    label: above
-    weight: 3
-    type: number_integer
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
     third_party_settings: {  }
     region: content
   field_oa_team_ref:
@@ -120,11 +90,14 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 8
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  comment_node_oa_section: true
+  field_oa_section_override: true
+  field_oa_section_weight: true
   langcode: true
   og_group_ref: true
   search_api_excerpt: true
