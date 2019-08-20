@@ -4,6 +4,21 @@ global-styling:
       css/styles.css: {}
       css/cd/cd-ie.css: { browsers: { IE: 'lte IE 8', '!IE': false } }
 
+cd-article-teaser:
+  css:
+    theme:
+      sass/components/cd-article-teaser/cd-article-teaser.css: {}
+
+cd-bullet-list:
+  css:
+    theme:
+      sass/components/cd-bullet-list/cd-bullet-list.css: {}
+
+cd-date:
+  css:
+    theme:
+      sass/components/cd-date/cd-date.css: {}
+
 cd-hero:
   css:
     theme:
@@ -13,13 +28,3 @@ cd-list:
   css:
     theme:
       sass/components/cd-list/cd-list.css: {}
-
-cd-date:
-  css:
-    theme:
-      sass/components/cd-date/cd-date.css: {}
-
-cd-article-teaser:
-  css:
-    theme:
-      sass/components/cd-article-teaser/cd-article-teaser.css: {}
