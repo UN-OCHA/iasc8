@@ -25,7 +25,6 @@ dependencies:
     - datetime
     - file
     - image
-    - options
     - text
     - user
 id: node.oa_wiki_page.default
@@ -100,8 +99,11 @@ content:
   field_oa_wiki_page_no_redirect:
     label: above
     weight: 7
-    type: list_default
-    settings: {  }
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   field_product_thumbnail:
@@ -124,9 +126,9 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   oa_section_ref:
     label: above
     weight: 2
