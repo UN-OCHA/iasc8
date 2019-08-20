@@ -265,11 +265,11 @@ display:
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
       use_ajax: false
-      use_more: false
+      use_more: true
       use_more_always: false
-      use_more_text: 'Load more'
-      link_url: ''
-      link_display: '0'
+      use_more_text: 'View all documents'
+      link_url: /resources
+      link_display: custom_url
     cache_metadata:
       max-age: -1
       contexts:
