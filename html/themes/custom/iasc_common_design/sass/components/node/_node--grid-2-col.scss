@@ -1,0 +1,38 @@
+.grid-2-col > * {
+  margin-bottom: 2rem;
+}
+
+@include desktop {
+  .grid-2-col {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .grid-2-col > * {
+    flex: 0 0 48%;
+    margin-bottom: 1rem;
+  }
+}
+
+@supports (display: grid) {
+
+  @include desktop {
+
+    .grid-2-col {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+  }
+}
+
+.layout-content {
+  .cd-grid-2-col .view-content {
+    @extend .grid-2-col;
+  }
+
+  .cd-grid-2-col .views-row {
+    background-color: $cd-site-bg-color;
+  }
+}
