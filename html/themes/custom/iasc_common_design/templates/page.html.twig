@@ -47,7 +47,9 @@
   set layout_classes = [
   'cd-container',
   page.sidebar_first ? 'layout-with-sidebar',
-  node.getType == 'oa_event' ? 'layout-with-sidebar'
+  node.getType == 'oa_event' ? 'layout-with-sidebar',
+  node.getType == 'oa_wiki_page' ? 'layout-with-sidebar',
+  node.getType == 'panopoly_page' ? 'layout-with-sidebar'
   ]
 %}
 

@@ -47,34 +47,29 @@
 <div{{ attributes.addClass(classes) }}>
 
     {{ title_prefix }}
-    {% if not page %}
-        <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-    {% endif %}
+    <h2{{ title_attributes }}>
+      {{ label }}
+    </h2>
     {{ title_suffix }}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      {% if content.field_sidebar|render  or content.field_content| render %}
-        <section class="cd-two-col">
+      <section class="cd-two-col">
 
-          <div class="layout-content">
-            {{ content.field_content }}
-          </div>
+        <div class="layout-content">
+          {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
+          {{ content.field_content }}
+        </div>
 
-          {% if content.field_sidebar|render %}
-            <aside class="layout-sidebar-first" role="complementary">
-              {{ content.field_sidebar }}
-            </aside>
-          {% endif %}
+        {% if content.field_sidebar|render %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ content.field_sidebar }}
+          </aside>
+        {% endif %}
 
-        </section>
-      {% endif %}
+      </section>
     {% endblock %}
-
 
     {% if content.field_footer|render %}
       {{ content.field_footer }}
