@@ -18,3 +18,8 @@ cd-date:
   css:
     theme:
       sass/components/cd-date/cd-date.css: {}
+
+cd-article-teaser:
+  css:
+    theme:
+      sass/components/cd-article-teaser/cd-article-teaser.css: {}

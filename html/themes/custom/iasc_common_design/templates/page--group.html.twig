@@ -1,0 +1,27 @@
+{%
+  set group_layout_classes = [
+  'cd-container layout-with-sidebar'
+  ]
+%}
+
+{% embed 'page.html.twig' %}
+
+  {% block main %}
+    <main role="main" {{ attributes.addClass(group_layout_classes) }}>
+
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+    </main>
+  {% endblock %}
+
+{% endembed %}

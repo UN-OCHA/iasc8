@@ -233,7 +233,7 @@ display:
           not: false
           plugin_id: numeric
       display_extenders: {  }
-      css_class: cd-grid
+      css_class: cd-grid-2-col
     cache_metadata:
       max-age: -1
       contexts:
