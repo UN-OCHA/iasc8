@@ -97,9 +97,9 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   oa_section_ref:
     label: above
     weight: 9
