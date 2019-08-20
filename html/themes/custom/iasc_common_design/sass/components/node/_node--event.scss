@@ -4,6 +4,7 @@
   &.node--view-mode-full {
     padding-left: 100px;
     margin-bottom: 40px;
+    min-height: 80px; // Height of calendar
     position: relative;
 
     .cd-date {
