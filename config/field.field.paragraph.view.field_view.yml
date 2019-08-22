@@ -33,7 +33,7 @@ settings:
     iasc_content: iasc_content
     iasc_events: iasc_events
     iasc_organizations: iasc_organizations
-    recent_documents: recent_documents
+    documents: documents
     updates: updates
     block_content: 0
     comment: 0

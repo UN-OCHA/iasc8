@@ -190,9 +190,9 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
-  block_1:
+  full_members:
     display_plugin: block
-    id: block_1
+    id: full_members
     display_title: 'Full members'
     position: 1
     display_options:
@@ -205,9 +205,9 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
-  block_2:
+  standing_invitees:
     display_plugin: block
-    id: block_2
+    id: standing_invitees
     display_title: 'Standing Invitees'
     position: 1
     display_options:
