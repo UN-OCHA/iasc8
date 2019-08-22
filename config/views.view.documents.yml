@@ -14,7 +14,7 @@ dependencies:
     - taxonomy
     - user
 id: documents
-label: 'Documents'
+label: Documents
 module: views
 description: ''
 tag: ''
@@ -379,7 +379,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      block_description: 'Recently Updated Documents'
+      block_description: 'Recent documents'
       style:
         type: html_list
         options:
@@ -424,6 +424,9 @@ display:
       display_extenders: {  }
       display_description: ''
       block_description: 'Recently Updated Documents'
+      title: 'Recently updated documents'
+      defaults:
+        title: false
     cache_metadata:
       max-age: -1
       contexts:
