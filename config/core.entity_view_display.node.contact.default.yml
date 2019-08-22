@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_contact.default
     - field.field.node.contact.body
     - field.field.node.contact.comment_node_contact
     - field.field.node.contact.field_address
@@ -22,10 +21,10 @@ dependencies:
     - field.field.node.contact.field_photo
     - field.field.node.contact.field_position
     - field.field.node.contact.field_title
+    - image.style.thumbnail
     - node.type.contact
   module:
     - address
-    - comment
     - entity_reference_revisions
     - image
     - link
@@ -37,63 +36,54 @@ bundle: contact
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
-    weight: 101
+    weight: 10
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_contact:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_address:
     label: above
-    weight: 10
+    weight: 8
     type: address_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_branch:
-    label: above
-    weight: 3
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_department:
-    label: above
-    weight: 2
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_email:
-    label: above
-    weight: 9
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_fax:
-    label: above
+    label: inline
     weight: 4
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_department:
+    label: inline
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_email:
+    label: inline
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_fax:
+    label: inline
+    weight: 7
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
   field_homepage:
-    label: above
-    weight: 5
+    label: inline
+    weight: 9
     type: link
     settings:
       trim_length: 80
@@ -105,7 +95,7 @@ content:
     region: content
   field_membership:
     label: above
-    weight: 12
+    weight: 11
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
@@ -113,8 +103,8 @@ content:
     third_party_settings: {  }
     region: content
   field_mobile:
-    label: above
-    weight: 8
+    label: inline
+    weight: 6
     type: string
     settings:
       link_to_entity: false
@@ -122,46 +112,43 @@ content:
     region: content
   field_organisation:
     label: above
-    weight: 11
+    weight: 12
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   field_phone:
-    label: above
-    weight: 7
+    label: inline
+    weight: 5
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   field_photo:
-    label: above
-    weight: 6
+    label: hidden
+    weight: 0
     type: image
     settings:
-      image_style: ''
+      image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
     region: content
   field_position:
-    label: above
-    weight: 1
+    label: inline
+    weight: 2
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  comment_node_contact: true
   field_first_name: true
   field_last_name: true
   field_legacy_id: true
   field_title: true
   langcode: true
+  links: true
   search_api_excerpt: true
