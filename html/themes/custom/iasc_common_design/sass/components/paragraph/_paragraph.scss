@@ -1,8 +1,12 @@
-//.paragraph {
-//  .field {
-//    margin-bottom: 0;
-//  }
-//}
+.paragraph--type--hero,
+.paragraph--type--teaser-item,
+.paragraph--type--teaser-grid,
+.paragraph--type--list-item,
+.paragraph--type--list {
+  .field {
+    margin-bottom: 0;
+  }
+}
 
 .paragraph--type--text-and-image {
 
