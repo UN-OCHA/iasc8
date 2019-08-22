@@ -1,0 +1,19 @@
+uuid: 736192d0-92c9-4598-9254-1fd6ccb073f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_feed_title
+    - paragraphs.paragraphs_type.twitter
+id: paragraph.twitter.field_twitter_feed_title
+field_name: field_twitter_feed_title
+entity_type: paragraph
+bundle: twitter
+label: 'Twitter feed title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

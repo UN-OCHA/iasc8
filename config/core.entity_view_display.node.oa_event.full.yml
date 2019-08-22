@@ -74,7 +74,7 @@ content:
     weight: 3
     type: entity_reference_entity_view
     settings:
-      view_mode: default
+      view_mode: teaser
       link: false
     third_party_settings: {  }
     region: content
@@ -135,11 +135,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  links:
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   comment_node_oa_event: true
   field_dial_in_meeting: true
@@ -147,6 +142,7 @@ hidden:
   field_info_private: true
   field_legacy_publish: true
   langcode: true
+  links: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_group_ref: true

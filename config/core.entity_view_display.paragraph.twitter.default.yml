@@ -1,0 +1,22 @@
+uuid: b4d7272d-e4c2-4c8c-9a24-8d58bd61a3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter.field_twitter_feed_title
+    - paragraphs.paragraphs_type.twitter
+id: paragraph.twitter.default
+targetEntityType: paragraph
+bundle: twitter
+mode: default
+content:
+  field_twitter_feed_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

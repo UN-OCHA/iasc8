@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
     - paragraphs.paragraphs_type.paragraph_text
+    - paragraphs.paragraphs_type.twitter
   module:
     - entity_reference_revisions
 id: node.panopoly_landing_page.field_sidebar
@@ -35,6 +36,7 @@ settings:
       paragraph_content: paragraph_content
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
+      twitter: twitter
       paragraph_text: paragraph_text
     target_bundles_drag_drop:
       additional_locations:
@@ -55,10 +57,28 @@ settings:
       paragraph_snippet:
         enabled: true
         weight: 14
+      twitter:
+        enabled: true
+        weight: 15
       paragraph_text:
         enabled: true
         weight: 15
       view:
         weight: 16
+        enabled: false
+      hero:
+        weight: 18
+        enabled: false
+      list:
+        weight: 19
+        enabled: false
+      list_item:
+        weight: 20
+        enabled: false
+      teaser_grid:
+        weight: 26
+        enabled: false
+      teaser_item:
+        weight: 27
         enabled: false
 field_type: entity_reference_revisions
