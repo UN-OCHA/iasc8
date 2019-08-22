@@ -1,0 +1,9 @@
+uuid: f81a5d72-3c5a-4766-a626-0e50bf463957
+langcode: en
+status: true
+dependencies: {  }
+id: twitter
+label: Twitter
+icon_uuid: null
+description: 'Twitter list embed, hard-coded in template override'
+behavior_plugins: {  }
