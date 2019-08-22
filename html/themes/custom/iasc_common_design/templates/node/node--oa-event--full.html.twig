@@ -106,16 +106,20 @@
     <section class="cd-two-col">
 
       <div class="layout-content">
-        {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_venue', 'field_room', 'field_host') }}
+        {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes') }}
         {{ content.field_content }}
       </div>
 
       <aside class="layout-sidebar-first" role="complementary">
+        <div class="sidebar-label"><div class="field__label">{% trans %}Location{% endtrans %}</div></div>
         {{ content.field_city }}
         {{ content.field_venue }}
         {{ content.field_room }}
         {{ content.field_host }}
         {{ content.field_contact }}
+        {{ content.field_meeting_agendas }}
+        {{ content.field_meeting_notes }}
+        {{ content.field_iasc_audience }}
         {{ content.field_sidebar }}
       </aside>
 
