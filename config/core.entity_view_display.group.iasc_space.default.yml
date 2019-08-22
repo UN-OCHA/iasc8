@@ -20,7 +20,6 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
-    - image
     - link
     - text
 id: group.iasc_space.default
@@ -28,18 +27,9 @@ targetEntityType: group
 bundle: iasc_space
 mode: default
 content:
-  field_banner_image:
-    weight: 2
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -47,16 +37,16 @@ content:
     third_party_settings: {  }
     region: content
   field_date_closed:
-    weight: 3
+    weight: 6
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: teaser
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_description:
-    weight: 4
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -85,24 +75,15 @@ content:
     region: content
   field_main_image:
     type: entity_reference_entity_view
-    weight: 8
+    weight: 4
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  field_primary_image:
-    weight: 9
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_responsibilities:
-    weight: 5
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -110,7 +91,7 @@ content:
     region: content
   field_sidebar:
     type: entity_reference_revisions_entity_view
-    weight: 10
+    weight: 8
     label: hidden
     settings:
       view_mode: default
@@ -128,8 +109,10 @@ content:
 hidden:
   changed: true
   created: true
+  field_banner_image: true
   field_banner_position: true
   field_banner_text: true
+  field_primary_image: true
   field_short_name: true
   langcode: true
   search_api_excerpt: true
