@@ -1,0 +1,62 @@
+.cd-user-list {
+  /* Color palette */
+  --cd-ocha-blue: #026cb6;
+  --cd-dark-blue: #025995;
+  --cd-highlight-red: #eb5c6d;
+  --cd-light-grey: #f2f2f2;
+  --cd-mid-grey: #595959;
+  --cd-dark-grey: #4a4a4a;
+  --cd-site-bg-color: #e6ecf1;
+  --cd-site-bg-color--light: #ebf0f4;
+
+  --iasc-primary: #272e67;
+  --iasc-red: #ff715b;
+  --iasc-highlight: #ff4d59;
+
+  margin: 0;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.cd-user-list li {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid var(--cd-site-bg-color); */
+  clear: left;
+  overflow: hidden;
+}
+
+.cd-user-list__image {
+  float: left;
+  width: 6rem;
+  max-height: 6rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.cd-user-list__image img {
+  border-radius: 0.5rem;
+}
+
+.cd-user-list__image svg {
+  max-width: 6rem;
+  max-height: 6rem;
+  fill: var(--cd-ocha-blue);
+}
+
+.cd-user-list__name {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.cd-user-list__position {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.cd-user-list__organization {
+  padding: 0 0 0.5rem;
+  font-weight: 600;
+}
