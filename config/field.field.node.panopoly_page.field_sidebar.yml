@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_content
+    - paragraphs.paragraphs_type.twitter
     - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
@@ -26,6 +27,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      twitter: twitter
       list: list
       membership: membership
       paragraph_content: paragraph_content
@@ -34,6 +36,9 @@ settings:
       additional_locations:
         weight: 14
         enabled: false
+      twitter:
+        enabled: true
+        weight: 15
       agenda_items:
         weight: 15
         enabled: false
