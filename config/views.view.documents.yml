@@ -13,8 +13,8 @@ dependencies:
     - node
     - taxonomy
     - user
-id: recent_documents
-label: 'Recent documents'
+id: documents
+label: 'Documents'
 module: views
 description: ''
 tag: ''
