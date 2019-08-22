@@ -88,11 +88,7 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
+  <h2{{ title_attributes }}>{{ label }}</h2>
   {{ title_suffix }}
 
   {% if display_submitted %}

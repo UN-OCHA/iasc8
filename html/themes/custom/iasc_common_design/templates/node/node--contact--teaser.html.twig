@@ -72,60 +72,39 @@
 #}
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    content.field_sidebar|render ? 'layout-with-section-sidebar',
-  ]
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class
+]
 %}
-
-{% set longDate = node.getCreatedTime|format_date('long') %}
-
 {{ attach_library('classy/node') }}
+{{ attach_library('iasc_common_design/cd-user-list') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ longDate }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
+  {% if content.field_photo|render %}
+    <div class="cd-user-list__image">
+      {{ content.field_photo }}
+    </div>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
+  {{ title_prefix }}
+    <div{{ title_attributes.addClass('cd-user-list__name') }}>
+      {{ label }}
+    </div>
+  {{ title_suffix }}
 
-    {% block section %}
-      <section class="cd-two-col">
+  <div class="cd-user-list__position">
+    {{ content.field_position }}
+  </div>
+  <div class="cd-user-list__organization">
+    {{ content.field_organisation }}
+  </div>
 
-        <div class="layout-content">
-          {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_section', 'field_category', 'og_group_ref', 'field_contact') }}
-          {{ content.field_content }}
-        </div>
-
-        <aside class="layout-sidebar-first" role="complementary">
-          {{ content.field_section }}
-          {{ content.field_category }}
-          {{ content.og_group_ref }}
-          {{ content.field_contact }}
-          {{ content.field_sidebar }}
-        </aside>
-
-      </section>
-    {% endblock %}
-
-    {% if content.field_footer|render %}
-      {{ content.field_footer }}
-    {% endif %}
-
+  <div class="cd-user-list__description node__content">
+    {{ content|without('field_photo', 'field_position', 'field_organisation') }}
   </div>
 
 </article>
