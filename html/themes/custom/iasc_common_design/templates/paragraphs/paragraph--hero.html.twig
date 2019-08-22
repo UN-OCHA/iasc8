@@ -57,7 +57,9 @@
 
     {% block content %}
     <figure class="cd-hero">
-      <img class="cd-hero__image" src="{{ hero_image_url }}" alt="">
+      <img class="cd-hero__image" src="{{ hero_image_url }}" alt="{{ hero_image_alt }}">
+
+      {% if content.field_hero_heading|render or content.field_hero_description|render %}
       <figcaption class="cd-hero__container">
         <h3 class="cd-hero__title">
           {{ content.field_hero_heading }}
@@ -65,17 +67,24 @@
         <div class="cd-hero__description">
           {{ content.field_hero_description }}
         </div>
+
+        {% if content.field_hero_date|render or content.field_hero_link|render %}
         <div class="cd-hero__footer">
           <div class="cd-hero__date">
             {{ content.field_hero_date }}
           </div>
 
+          {% if content.field_hero_link|render %}
           <a class="cd-hero__link" href="{{ content.field_hero_link.0['#url'] }}">
             {{ content.field_hero_link.0['#title'] }}
           </a>
-
+          {% endif %}
         </div>
+        {% endif %}
+
       </figcaption>
+      {% endif %}
+
     </figure>
     {% endblock %}
 
