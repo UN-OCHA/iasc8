@@ -18,3 +18,28 @@
   margin-bottom: 1rem;
   font-weight: bold;
 }
+
+.layout-sidebar-first {
+  > .sidebar-label,
+  .field--name-field-contact,
+  .field--name-field-meeting-notes,
+  .field--name-field-meeting-agendas,
+  .field--name-field-oa-section,
+  .field--name-field-iasc-audience,
+  .field--name-field-category,
+  .field--name-field-links,
+  .field--name-field-organisation,
+  .field--name-field-membership {
+    margin-bottom: 2rem !important;
+
+    > .field__label {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $iasc-primary;
+      padding-bottom: 0.5rem;
+      text-align: left;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $cd-mid-bluey-grey;
+    }
+  }
+}
