@@ -58,12 +58,14 @@
       <section class="cd-two-col">
 
         <div class="layout-content">
-          {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
+          {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
           {{ content.field_content }}
         </div>
 
         {% if content.field_sidebar|render %}
           <aside class="layout-sidebar-first" role="complementary">
+            {{ content.field_date_closed }}
+            {{ content.field_external_link }}
             {{ content.field_sidebar }}
           </aside>
         {% endif %}
