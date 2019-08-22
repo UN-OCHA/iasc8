@@ -4,13 +4,13 @@
     <section class="cd-two-col">
 
       <div class="layout-content">
-        {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_oa_section', 'field_iasc_audience') }}
+        {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_membership', 'field_organisation') }}
         {{ content.field_content }}
       </div>
 
       <aside class="layout-sidebar-first" role="complementary">
-        {{ content.field_oa_section }}
-        {{ content.field_iasc_audience }}
+        {{ content.field_membership }}
+        {{ content.field_organisation }}
         {{ content.field_sidebar }}
       </aside>
 

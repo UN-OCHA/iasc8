@@ -28,3 +28,8 @@ cd-list:
   css:
     theme:
       sass/components/cd-list/cd-list.css: {}
+
+cd-user-list:
+  css:
+    theme:
+      sass/components/cd-user-list/cd-user-list.css: {}
