@@ -2,11 +2,14 @@
 .paragraph--type--teaser-item,
 .paragraph--type--teaser-grid,
 .paragraph--type--list-item,
-.paragraph--type--list {
+.paragraph--type--list,
+.paragraph--type--view,
+.paragraph--type--twitter {
   .field {
     margin-bottom: 0;
   }
 }
+
 
 .paragraph--type--text-and-image {
 
@@ -129,7 +132,8 @@
   }
 }
 
-.paragraph--type--list > h2 {
+.paragraph--type--list > h2,
+.paragraph--type--twitter > h2 {
   font-weight: 700;
   padding-bottom: 0.5rem;
   text-align: center;
