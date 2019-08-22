@@ -244,9 +244,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_past_5:
+  past_meetings:
     display_plugin: block
-    id: block_past_5
+    id: past_meetings
     display_title: 'Past meetings (5)'
     position: 1
     display_options:
@@ -335,9 +335,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_upcoming_5:
+  upcoming_meetings:
     display_plugin: block
-    id: block_upcoming_5
+    id: upcoming_meetings
     display_title: 'Upcoming meetings (5)'
     position: 1
     display_options:
