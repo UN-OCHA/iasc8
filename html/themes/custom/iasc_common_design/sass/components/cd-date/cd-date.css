@@ -40,6 +40,7 @@
 .cd-date-day {
   font-size: 25px;
   color: var(--cd-dark-grey);
+  word-spacing: -5px;
 }
 
 .cd-date-year-wrapper {
