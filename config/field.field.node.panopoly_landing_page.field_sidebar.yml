@@ -7,12 +7,14 @@ dependencies:
     - node.type.panopoly_landing_page
     - paragraphs.paragraphs_type.additional_locations
     - paragraphs.paragraphs_type.agenda_items
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.list_item
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_content
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
     - paragraphs.paragraphs_type.paragraph_text
-    - paragraphs.paragraphs_type.twitter
+    - paragraphs.paragraphs_type.teaser_item
   module:
     - entity_reference_revisions
 id: node.panopoly_landing_page.field_sidebar
@@ -36,8 +38,10 @@ settings:
       paragraph_content: paragraph_content
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
-      twitter: twitter
       paragraph_text: paragraph_text
+      hero: hero
+      list_item: list_item
+      teaser_item: teaser_item
     target_bundles_drag_drop:
       additional_locations:
         enabled: true
@@ -57,28 +61,28 @@ settings:
       paragraph_snippet:
         enabled: true
         weight: 14
-      twitter:
-        enabled: true
-        weight: 15
       paragraph_text:
         enabled: true
         weight: 15
+      twitter:
+        weight: 15
+        enabled: false
       view:
         weight: 16
         enabled: false
       hero:
+        enabled: true
         weight: 18
-        enabled: false
       list:
         weight: 19
         enabled: false
       list_item:
+        enabled: true
         weight: 20
-        enabled: false
       teaser_grid:
         weight: 26
         enabled: false
       teaser_item:
+        enabled: true
         weight: 27
-        enabled: false
 field_type: entity_reference_revisions
