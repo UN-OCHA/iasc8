@@ -19,6 +19,10 @@
   font-weight: bold;
 }
 
+.field--name-field-content .field--type-viewsreference {
+  margin-bottom: 2rem !important;
+}
+
 .layout-sidebar-first {
   > .sidebar-label,
   .field--name-field-contact,
@@ -32,7 +36,7 @@
   .field--name-field-membership,
   .field--name-field-date-closed,
   .field--name-field-external-link {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
 
     > .field__label {
       font-size: 1.5rem;
@@ -44,8 +48,4 @@
       border-bottom: 2px solid $cd-mid-bluey-grey;
     }
   }
-}
-
-.field--name-field-content .field__item {
-  margin-bottom: 2rem !important;
 }
