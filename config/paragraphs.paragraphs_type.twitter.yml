@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: twitter
-label: Twitter
+label: 'Twitter feed/list'
 icon_uuid: null
 description: 'Twitter list embed, hard-coded in template override'
 behavior_plugins: {  }
