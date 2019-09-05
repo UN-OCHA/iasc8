@@ -1,0 +1,10 @@
+uuid: 8c379caf-0cb3-434c-8cca-457e22ba9d59
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.bio_long
+label: 'Bio long'
+targetEntityType: paragraph
+cache: true

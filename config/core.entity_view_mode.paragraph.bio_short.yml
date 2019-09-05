@@ -1,0 +1,10 @@
+uuid: 9652fd38-2d4f-4ec7-8cad-1eef1a754611
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.bio_short
+label: 'Bio short'
+targetEntityType: paragraph
+cache: true
