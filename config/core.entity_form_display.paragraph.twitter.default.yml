@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.twitter.field_twitter_feed_title
+    - field.field.paragraph.twitter.field_twitter_handle
+    - field.field.paragraph.twitter.field_twitter_list
     - paragraphs.paragraphs_type.twitter
 id: paragraph.twitter.default
 targetEntityType: paragraph
@@ -12,6 +14,22 @@ mode: default
 content:
   field_twitter_feed_title:
     weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_handle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_list:
+    weight: 2
     settings:
       size: 60
       placeholder: ''

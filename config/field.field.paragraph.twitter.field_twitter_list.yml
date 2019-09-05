@@ -1,0 +1,21 @@
+uuid: b7cba8ce-f488-4174-8462-d759496e589d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_list
+    - paragraphs.paragraphs_type.twitter
+id: paragraph.twitter.field_twitter_list
+field_name: field_twitter_list
+entity_type: paragraph
+bundle: twitter
+label: 'Twitter list'
+description: 'Optional twitter list to display'
+required: false
+translatable: false
+default_value:
+  -
+    value: iasc-ch
+default_value_callback: ''
+settings: {  }
+field_type: string
