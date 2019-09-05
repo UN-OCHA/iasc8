@@ -1,0 +1,21 @@
+uuid: 6ab918ee-6320-427b-97e6-8a9ec87d493b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_handle
+    - paragraphs.paragraphs_type.twitter
+id: paragraph.twitter.field_twitter_handle
+field_name: field_twitter_handle
+entity_type: paragraph
+bundle: twitter
+label: 'Twitter handle'
+description: 'Enter the twitter handle without the @'
+required: true
+translatable: false
+default_value:
+  -
+    value: iasc-ch
+default_value_callback: ''
+settings: {  }
+field_type: string
