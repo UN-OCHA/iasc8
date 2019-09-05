@@ -1,0 +1,9 @@
+uuid: 9b9f6fff-3764-4ab0-869e-512d90904f39
+langcode: en
+status: true
+dependencies: {  }
+id: contact_list
+label: 'Contact list'
+icon_uuid: null
+description: 'A manual curated list of contacts'
+behavior_plugins: {  }

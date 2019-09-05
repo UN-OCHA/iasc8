@@ -1,0 +1,29 @@
+uuid: f55315ad-20fa-4186-b726-2737e017b785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contacts
+    - node.type.contact
+    - paragraphs.paragraphs_type.contact_list
+id: paragraph.contact_list.field_contacts
+field_name: field_contacts
+entity_type: paragraph
+bundle: contact_list
+label: Contacts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contact: contact
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

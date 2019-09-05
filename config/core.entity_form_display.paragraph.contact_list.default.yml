@@ -1,0 +1,24 @@
+uuid: 82ca59ae-e836-486b-913b-c7927530cb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_list.field_contacts
+    - paragraphs.paragraphs_type.contact_list
+id: paragraph.contact_list.default
+targetEntityType: paragraph
+bundle: contact_list
+mode: default
+content:
+  field_contacts:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
