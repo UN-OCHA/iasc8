@@ -66,6 +66,7 @@ module:
   node_view_permissions: 0
   options: 0
   page_cache: 0
+  paragraphs_viewmode: 0
   path: 0
   quickedit: 0
   rdf: 0

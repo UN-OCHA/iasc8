@@ -1,0 +1,22 @@
+uuid: 9b9f6fff-3764-4ab0-869e-512d90904f39
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_viewmode
+id: contact_list
+label: 'Contact list'
+icon_uuid: null
+description: 'A manual curated list of contacts'
+behavior_plugins:
+  paragraphs_viewmode_behavior:
+    enabled: true
+    override_mode: default
+    override_available:
+      bio_long: bio_long
+      bio_short: bio_short
+      default: '0'
+      full: '0'
+      paragraphs_editor_preview: '0'
+      preview: '0'
+    override_default: bio_short

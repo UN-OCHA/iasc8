@@ -22,8 +22,10 @@ dependencies:
     - field.field.node.contact.field_photo
     - field.field.node.contact.field_position
     - field.field.node.contact.field_title
+    - image.style.thumbnail
     - node.type.contact
   module:
+    - address
     - image
     - user
 id: node.contact.bio_short
@@ -31,32 +33,41 @@ targetEntityType: node
 bundle: contact
 mode: bio_short
 content:
+  field_address:
+    type: address_plain
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_organisation:
     label: hidden
-    weight: 1
+    weight: 2
     type: entity_reference_label
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     region: content
   field_photo:
     label: hidden
-    weight: 4
+    weight: 0
     type: image
     settings:
-      image_style: ''
+      image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+  field_position:
+    type: string
+    weight: 1
     region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   body: true
   comment_node_contact: true
-  field_address: true
   field_branch: true
   field_department: true
   field_email: true
@@ -68,7 +79,7 @@ hidden:
   field_membership: true
   field_mobile: true
   field_phone: true
-  field_position: true
   field_title: true
   langcode: true
+  links: true
   search_api_excerpt: true

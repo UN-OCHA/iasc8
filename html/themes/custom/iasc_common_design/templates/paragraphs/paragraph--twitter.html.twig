@@ -46,11 +46,17 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <h2>{{ content.field_twitter_feed_title }}</h2>
-      <a class="twitter-timeline" data-height="500" href="https://twitter.com/iascch/lists/iasc-ch?ref_src=twsrc%5Etfw">A Twitter List by iascch</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {% if content.field_twitter_list.0 %}
+        <a class="twitter-timeline" data-height="500" href="https://twitter.com/{{ content.field_twitter_handle.0 }}/lists/{{ content.field_twitter_list.0 }}">A Twitter list by {{ content.field_twitter_handle.0 }}</a>
+      {% else %}
+        <a class="twitter-timeline" data-height="500" href="https://twitter.com/{{ content.field_twitter_handle.0 }}">A Twitter feed by {{ content.field_twitter_handle.0 }}</a>
+      {% endif %}
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     {% endblock %}
   </div>
 {% endblock paragraph %}

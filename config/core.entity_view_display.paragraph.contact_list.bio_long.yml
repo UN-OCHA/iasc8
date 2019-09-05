@@ -1,0 +1,24 @@
+uuid: 27746908-2f55-4616-8b04-3d0adc8dea4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.bio_long
+    - field.field.paragraph.contact_list.field_contacts
+    - paragraphs.paragraphs_type.contact_list
+id: paragraph.contact_list.bio_long
+targetEntityType: paragraph
+bundle: contact_list
+mode: bio_long
+content:
+  field_contacts:
+    weight: 0
+    label: above
+    settings:
+      view_mode: bio_long
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true
