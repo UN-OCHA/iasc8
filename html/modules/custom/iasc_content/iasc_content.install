@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * IASC Content helpers.
+ */
+
+/**
+ * Add default content to spaces.
+ */
+function iasc_content_update_8001() {
+  $groups = \Drupal::entityTypeManager()->getStorage('group')->loadByProperties(['type' => 'iasc_space']);
+
+  foreach ($groups as $id => $group) {
+    iasc_content_space_content_defaults($id);
+    iasc_content_space_sidebar_defaults($id);
+  }
+}
