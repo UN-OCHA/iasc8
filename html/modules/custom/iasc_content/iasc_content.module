@@ -5,6 +5,8 @@
  * IASC Content helpers.
  */
 
+use Drupal\paragraphs\Entity\Paragraph;
+
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
@@ -17,4 +19,123 @@ function iasc_content_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['field_legacy_id'])) {
     $form['field_legacy_id']['#access'] = FALSE;
   }
+}
+
+/**
+ * Add default sidebar blocks to a space.
+ */
+function iasc_content_space_sidebar_defaults($id) {
+  $id = 2605;
+
+  $group = entity_load('group', $id);
+  $current = $group->get('field_sidebar')->getValue();
+
+  // Bail out if we already have some blocks.
+  if (!empty($current)) {
+    return;
+  }
+
+  // Add documents.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'documents',
+    'display_id' => 'recent_documents_list',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
+  // Add chair.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'iasc_contacts',
+    'display_id' => 'chair',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
+  $group->set('field_sidebar', $current);
+  $group->save();
+}
+
+/**
+ * Add default content blocks to a space.
+ */
+function iasc_content_space_content_defaults($id) {
+  $group = entity_load('group', $id);
+  $current = $group->get('field_content')->getValue();
+
+  // Bail out if we already have some blocks.
+  if (!empty($current)) {
+    return;
+  }
+
+  // Add upcoming meetings.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'iasc_events',
+    'display_id' => 'upcoming_meetings',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
+  // Add past meetings.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'iasc_events',
+    'display_id' => 'past_meetings',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
+  // Add recent news.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'iasc_content',
+    'display_id' => 'block_recent_5',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
+  $group->set('field_content', $current);
+  $group->save();
 }
