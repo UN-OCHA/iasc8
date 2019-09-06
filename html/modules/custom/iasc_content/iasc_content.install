@@ -9,10 +9,9 @@
  * Add default content to spaces.
  */
 function iasc_content_update_8001() {
-  $query = \Drupal::entityTypeManager()->getStorage('group')->getQuery();
-  $ids = $query->execute();
+  $groups = \Drupal::entityTypeManager()->getStorage('group')->loadByProperties(['type' => 'iasc_space']);
 
-  foreach ($ids as $id) {
+  foreach ($groups as $id => $group) {
     iasc_content_space_content_defaults($id);
     iasc_content_space_sidebar_defaults($id);
   }
