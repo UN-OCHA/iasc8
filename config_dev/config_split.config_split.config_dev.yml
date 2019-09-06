@@ -11,6 +11,7 @@ module:
   config_split: 0
   devel: 0
   devel_entity_updates: 0
+  devel_php: 0
 theme: {  }
 blacklist: {  }
 graylist:
