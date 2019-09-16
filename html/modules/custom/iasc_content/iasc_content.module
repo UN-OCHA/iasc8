@@ -5,6 +5,7 @@
  * IASC Content helpers.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -136,4 +137,14 @@ function iasc_content_space_content_defaults($id) {
 
   $group->set('field_content', $current);
   $group->save();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function iasc_content_group_insert(EntityInterface $entity) {
+  if ($entity->bundle() == 'iasc_space') {
+    iasc_content_space_content_defaults($entity->id());
+    iasc_content_space_sidebar_defaults($entity->id());
+  }
 }
