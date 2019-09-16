@@ -142,7 +142,7 @@ function iasc_content_space_content_defaults($id) {
 /**
  * Implements hook_ENTITY_TYPE_insert().
  */
-function iasc_content_group_insert(Drupal\Core\Entity\EntityInterface $entity) {
+function iasc_content_group_insert(EntityInterface $entity) {
   if ($entity->bundle() == 'iasc_space') {
     iasc_content_space_content_defaults($entity->id());
     iasc_content_space_sidebar_defaults($entity->id());
