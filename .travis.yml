@@ -49,7 +49,6 @@ before_script:
   - npm i
 
 script:
-  - set -e
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
 
