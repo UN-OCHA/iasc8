@@ -66,7 +66,7 @@ script:
   - ../vendor/bin/drush -y si --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
   - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
   - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
-  - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
+  - ../vendor/bin/drush runserver 127.0.0.1:8080 >/dev/null 2>&1 &
   - ../vendor/bin/drush php-eval 'node_access_rebuild();'
   - ../vendor/bin/drush cr
   - sleep 5
@@ -79,6 +79,7 @@ after_success:
   - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
+  - pkill -f runserver
 
 after_failure:
   - echo "The tests failed. Please check the output above for problems."
