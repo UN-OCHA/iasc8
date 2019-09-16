@@ -76,7 +76,6 @@ script:
   - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
-  - pkill -f runserver
 
 after_failure:
   - echo "The tests failed. Please check the output above for problems."
