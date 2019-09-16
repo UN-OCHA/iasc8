@@ -5,6 +5,7 @@
  * IASC Content helpers.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
