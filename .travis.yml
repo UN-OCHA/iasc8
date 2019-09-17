@@ -49,12 +49,16 @@ before_script:
   - npm i
 
 script:
-  - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l | grep -v '^No syntax errors detected'; test $? -eq 1
-  - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l | grep -v '^No syntax errors detected'; test $? -eq 1
+  - set -e
+  - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
+  - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
+  - set +e
 
   - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+  - set -e
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
+  - set +e
 
   # Run unit, kernel tests
   - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel
