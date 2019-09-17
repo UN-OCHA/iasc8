@@ -8,8 +8,6 @@
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
-
-
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
