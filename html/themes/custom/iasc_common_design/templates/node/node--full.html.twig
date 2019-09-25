@@ -88,7 +88,7 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+    <h2{{ title_attributes.addClass('page-title') }}>{{ label }}</h2>
   {{ title_suffix }}
 
   {% if display_submitted %}
