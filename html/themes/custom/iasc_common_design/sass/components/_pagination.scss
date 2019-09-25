@@ -1,37 +1,30 @@
 // Pagination.
 
 .pager__items {
+  padding: 0.5rem;
+}
 
-  .pager__item {
-    margin: 0 0.5em 0.5em;
-    padding: 0;
-    display: inline-block;
-  }
+.pager__item a {
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid var(--cd-site-bg-color);
+  border-radius: 0.25rem;
+}
 
-  .pager__item,
-  .pager__item--previous,
-  .pager__item--first,
-  .pager__item--next,
-  .pager__item--last {
-    a {
-      text-decoration: none;
-      display: block;
-      padding: 5px 14px;
-      background-color: $cd-white-bg-color;
-      border: 1px solid $cd-site-bg-color;
-      border-radius: 4px;
+.pager__item a {
+  text-decoration: none;
+}
 
-      &:hover,
-      &:focus {
-        color: $cd-ocha-blue;
-        background-color: $cd-site-bg-color;
-      }
-    }
+.pager__item a:hover,
+.pager__item a:focus {
+  color: $cd-white;
+  background-color: $iasc-secondary;
+  border-color: $iasc-secondary;
+}
 
-    &.is-active a {
-      color: $cd-white-bg-color;
-      background-color: $cd-ocha-blue;
-      border-color: $cd-ocha-blue;
-    }
-  }
+.pager__item.is-active a {
+  font-weight: bold;
+  color: $cd-white;
+  background-color: $iasc-primary;
+  border-color: $iasc-primary;
 }
