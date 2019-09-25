@@ -6,12 +6,9 @@
 
 .pager__item a {
   padding: 0.5rem 0.75rem;
-  background-color: white;
-  border: 1px solid var(--cd-site-bg-color);
+  background-color: $cd-white;
+  border: 1px solid $cd-mid-bluey-grey;
   border-radius: 0.25rem;
-}
-
-.pager__item a {
   text-decoration: none;
 }
 
