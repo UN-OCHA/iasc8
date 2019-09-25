@@ -85,7 +85,7 @@
 {{ attach_library('iasc_common_design/cd-article-teaser') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {% if content.field_product_thumbnail %}
+  {% if content.field_product_thumbnail|render %}
     <div class="cd-article-teaser__image">
       {{ content.field_product_thumbnail }}
     </div>
