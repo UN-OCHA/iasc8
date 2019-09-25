@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-.cd-article-teaser__container {
+.cd-article-teaser__image + .cd-article-teaser__container {
   padding: 0 1rem 0 7rem;
 }
 
