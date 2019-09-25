@@ -1,4 +1,11 @@
 // Hide page title on homepage
-.path-frontpage .block-system-main-block > article > h2 {
+.path-frontpage .page-title {
   display: none;
+}
+
+
+.page-title {
+  @include xl {
+    padding-right: 285px; // width of sidebar
+  }
 }
