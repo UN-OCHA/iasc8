@@ -1,0 +1,28 @@
+uuid: 294a848c-969a-41fa-9577-b4dfd4b5699c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thumbnail
+    - media.type.image
+    - node.type.oa_event
+id: node.oa_event.field_thumbnail
+field_name: field_thumbnail
+entity_type: node
+bundle: oa_event
+label: Thumbnail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

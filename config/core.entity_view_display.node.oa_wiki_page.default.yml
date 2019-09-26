@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
     - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.field_thumbnail
     - field.field.node.oa_wiki_page.oa_other_spaces_ref
     - field.field.node.oa_wiki_page.oa_section_ref
     - field.field.node.oa_wiki_page.og_group_ref
@@ -123,6 +124,14 @@ content:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
+    region: content
+  field_thumbnail:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100
