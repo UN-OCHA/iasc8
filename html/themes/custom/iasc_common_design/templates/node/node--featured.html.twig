@@ -83,30 +83,38 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
+  <div class="cd-teaser__image">
+  {% if content.field_thumbnail|render %}
+    {{ content.field_thumbnail }}
+  {% else %}
+    <img src="https://via.placeholder.com/288x216" alt="image example">
+  {% endif %}
+  </div>
+
+  {% if content.field_published_date|render %}
   <div class="cd-teaser__date">
     {{ content.field_published_date }}
   </div>
+  {% endif %}
+
+  {% if content.field_oa_date %}
+  <div class="cd-teaser__date">
+    {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
+      {{ content.field_oa_date.0['#date'] }}
+    {% else %}
+      {{ content.field_oa_date.0['#date']['start_date'] }}
+    {% endif %}
+  </div>
+  {% endif %}
 
   {{ title_prefix }}
-  {% if label and not page %}
-    <h3{{ title_attributes }}>
+    <h3{{ title_attributes.addClass('cd-teaser__title') }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h3>
-  {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_published_date') }}
+    {{ content|without('field_thumbnail','field_published_date','field_oa_date') }}
   </div>
 
 </article>

@@ -122,7 +122,7 @@
 
 .paragraph--type--teaser-grid {
   .field--type-entity-reference-revisions {
-    @extend .grid;
+    @extend .grid-3-col;
   }
 
   .field--type-entity-reference-revisions .paragraph--type--teaser-item {
