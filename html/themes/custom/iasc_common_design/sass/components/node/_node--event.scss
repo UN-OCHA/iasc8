@@ -1,7 +1,6 @@
 .node--type-oa-event {
 
-  &.node--view-mode-teaser,
-  &.node--view-mode-full {
+  &.node--view-mode-teaser {
     padding-left: 100px;
     margin-bottom: 40px;
     min-height: 80px; // Height of calendar

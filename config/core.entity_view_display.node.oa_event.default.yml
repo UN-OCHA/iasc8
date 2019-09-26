@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.oa_event.field_meeting_notes
     - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_thumbnail
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
     - field.field.node.oa_event.oa_section_ref
@@ -38,13 +39,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_additional_locations:
     label: inline
-    weight: 5
+    weight: 4
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
@@ -53,7 +54,7 @@ content:
     region: content
   field_agenda_items:
     label: above
-    weight: 10
+    weight: 9
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
@@ -62,7 +63,7 @@ content:
     region: content
   field_city:
     label: inline
-    weight: 4
+    weight: 3
     type: string
     settings:
       link_to_entity: false
@@ -70,7 +71,7 @@ content:
     region: content
   field_contact:
     label: above
-    weight: 3
+    weight: 2
     type: entity_reference_label
     settings:
       link: false
@@ -86,7 +87,7 @@ content:
     region: content
   field_meeting_agendas:
     label: above
-    weight: 8
+    weight: 7
     type: entity_reference_entity_view
     settings:
       view_mode: default
@@ -95,7 +96,7 @@ content:
     region: content
   field_meeting_notes:
     label: above
-    weight: 9
+    weight: 8
     type: entity_reference_entity_view
     settings:
       view_mode: default
@@ -103,7 +104,7 @@ content:
     third_party_settings: {  }
     region: content
   field_oa_date:
-    weight: 12
+    weight: 11
     label: above
     settings:
       show_next: 5
@@ -119,7 +120,7 @@ content:
     region: content
   field_room:
     label: inline
-    weight: 7
+    weight: 6
     type: string
     settings:
       link_to_entity: false
@@ -127,14 +128,14 @@ content:
     region: content
   field_venue:
     label: inline
-    weight: 6
+    weight: 5
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   links:
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -144,6 +145,7 @@ hidden:
   field_iasc_audience: true
   field_info_private: true
   field_legacy_publish: true
+  field_thumbnail: true
   langcode: true
   oa_other_spaces_ref: true
   oa_section_ref: true

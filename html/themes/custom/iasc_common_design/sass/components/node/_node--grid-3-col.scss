@@ -1,9 +1,9 @@
 .grid-item {
-  padding: 1rem 1rem 0;
+  //padding: 1rem 1rem 0;
   margin-bottom: 2rem;
 
   @include desktop {
-    padding: 0 1rem;
+    //padding: 0 1rem;
     margin-bottom: 1rem;
     width: 32%;
     float: left;
@@ -37,7 +37,7 @@
 
   @include tablet {
 
-    .grid {
+    .grid-3-col {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -101,7 +101,7 @@
 
   @include tablet {
 
-    .grid {
+    .grid-3-col {
       display: grid;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       grid-gap: 1rem;
@@ -117,7 +117,7 @@
 
   @include desktop {
 
-    .grid {
+    .grid-3-col {
       grid-template-columns: repeat(3, minmax(200px, 1fr));
 
       .layout-highlighted & {
@@ -130,16 +130,16 @@
 .layout-content,
 .layout-highlighted {
   .cd-grid .view-content {
-    @extend .grid;
+    @extend .grid-3-col;
   }
 
-  .cd-grid .views-row {
+  .cd-grid-3-col .views-row {
     @extend .grid-item;
     background-color: $cd-site-bg-color;
   }
 }
 
-.cd-grid .views-row article {
+.cd-grid-3-col .views-row article {
   @extend .grid-item_article;
 }
 
