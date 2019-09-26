@@ -1,0 +1,15 @@
+uuid: c6ad849e-d032-4c15-bcd3-603f46d8f7d5
+langcode: en
+status: true
+dependencies: {  }
+name: featured_thumbnail
+label: 'Featured thumbnail'
+effects:
+  084135b7-c040-4540-8340-363b5e0e2933:
+    uuid: 084135b7-c040-4540-8340-363b5e0e2933
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 288
+      height: 216
+      anchor: center-center

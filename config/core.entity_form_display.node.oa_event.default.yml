@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.oa_event.field_meeting_notes
     - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_thumbnail
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
     - field.field.node.oa_event.oa_section_ref
@@ -27,6 +28,7 @@ dependencies:
   module:
     - comment
     - date_recur
+    - media_library
     - paragraphs
     - path
     - select2
@@ -38,7 +40,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 22
+    weight: 24
     settings:
       rows: 9
       summary_rows: 3
@@ -47,18 +49,18 @@ content:
     region: content
   comment_node_oa_event:
     type: comment_default
-    weight: 19
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_additional_locations:
-    weight: 3
+    weight: 5
     type: paragraphs
     settings:
       title: Paragraph
@@ -77,7 +79,7 @@ content:
     third_party_settings: {  }
     region: content
   field_agenda_items:
-    weight: 12
+    weight: 14
     type: paragraphs
     settings:
       title: Paragraph
@@ -96,7 +98,7 @@ content:
     third_party_settings: {  }
     region: content
   field_city:
-    weight: 6
+    weight: 8
     type: string_textfield
     settings:
       size: 60
@@ -104,7 +106,7 @@ content:
     third_party_settings: {  }
     region: content
   field_contact:
-    weight: 8
+    weight: 10
     type: select2_entity_reference
     settings:
       width: 100%
@@ -113,14 +115,14 @@ content:
     third_party_settings: {  }
     region: content
   field_dial_in_meeting:
-    weight: 14
+    weight: 16
     type: boolean_checkbox
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
   field_host:
-    weight: 7
+    weight: 9
     type: select2_entity_reference
     settings:
       autocomplete: false
@@ -129,7 +131,7 @@ content:
     third_party_settings: {  }
     region: content
   field_iasc_audience:
-    weight: 23
+    weight: 25
     settings:
       width: 100%
       autocomplete: true
@@ -138,7 +140,7 @@ content:
     type: select2_entity_reference
     region: content
   field_info_private:
-    weight: 5
+    weight: 7
     type: text_textarea
     settings:
       rows: 5
@@ -146,7 +148,7 @@ content:
     third_party_settings: {  }
     region: content
   field_legacy_publish:
-    weight: 16
+    weight: 18
     type: string_textfield
     settings:
       size: 60
@@ -154,7 +156,7 @@ content:
     third_party_settings: {  }
     region: content
   field_meeting_agendas:
-    weight: 9
+    weight: 11
     type: select2_entity_reference
     settings:
       width: 100%
@@ -163,7 +165,7 @@ content:
     third_party_settings: {  }
     region: content
   field_meeting_notes:
-    weight: 15
+    weight: 17
     type: select2_entity_reference
     settings:
       width: 100%
@@ -172,21 +174,28 @@ content:
     third_party_settings: {  }
     region: content
   field_oa_date:
-    weight: 2
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: date_recur_basic_widget
     region: content
   field_room:
-    weight: 13
+    weight: 15
     type: string_textfield
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_thumbnail:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
   field_venue:
-    weight: 11
+    weight: 13
     type: string_textfield
     settings:
       size: 60
@@ -195,13 +204,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   oa_section_ref:
-    weight: 1
+    weight: 2
     type: select2_entity_reference
     settings:
       autocomplete: false
@@ -211,7 +220,7 @@ content:
     region: content
   path:
     type: path
-    weight: 20
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -219,21 +228,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 19
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 20
     region: content
     third_party_settings: {  }
   title:
@@ -246,7 +255,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -254,7 +263,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
