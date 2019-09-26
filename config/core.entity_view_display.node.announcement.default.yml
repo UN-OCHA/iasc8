@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
@@ -95,6 +96,7 @@ content:
 hidden:
   comment_node_announcement: true
   field_legacy_publish: true
+  field_thumbnail: true
   langcode: true
   links: true
   search_api_excerpt: true

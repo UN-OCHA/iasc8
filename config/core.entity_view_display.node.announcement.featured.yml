@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
@@ -25,12 +26,21 @@ mode: featured
 content:
   field_published_date:
     type: datetime_default
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
       timezone_override: ''
       format_type: teaser
+    third_party_settings: {  }
+  field_thumbnail:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
     third_party_settings: {  }
 hidden:
   body: true

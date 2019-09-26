@@ -68,7 +68,7 @@
 .cd-list__link a {
   font-weight: 600;
   font-size: 1rem;
-  display: block;
+  display: inline-block;
   text-decoration: none;
 }
 
