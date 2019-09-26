@@ -1,0 +1,37 @@
+.grid-4-col {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-4-col > * {
+  flex: 0 0 48%;
+  margin-bottom: 1rem;
+}
+
+@include desktop {
+  .grid-4-col > * {
+    flex: 0 0 24%;
+  }
+}
+
+@supports (display: grid) {
+
+  .grid-4-col {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+  @include desktop {
+    .grid-4-col {
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+  }
+}
+
+.layout-content {
+  .cd-grid-4-col .view-content {
+    @extend .grid-4-col;
+  }
+}
