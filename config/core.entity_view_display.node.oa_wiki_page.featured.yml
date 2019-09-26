@@ -15,23 +15,38 @@ dependencies:
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
     - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.field_thumbnail
     - field.field.node.oa_wiki_page.oa_other_spaces_ref
     - field.field.node.oa_wiki_page.oa_section_ref
     - field.field.node.oa_wiki_page.og_group_ref
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
+    - datetime
     - user
 id: node.oa_wiki_page.featured
 targetEntityType: node
 bundle: oa_wiki_page
 mode: featured
 content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+  field_published_date:
+    type: datetime_default
+    weight: 1
     region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: teaser
+    third_party_settings: {  }
+  field_thumbnail:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
 hidden:
   body: true
   comment_node_oa_wiki_page: true
@@ -43,8 +58,8 @@ hidden:
   field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
-  field_published_date: true
   langcode: true
+  links: true
   oa_other_spaces_ref: true
   oa_section_ref: true
   og_group_ref: true

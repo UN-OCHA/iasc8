@@ -303,7 +303,7 @@ display:
       use_more: true
       use_more_always: true
       use_more_text: 'See more updates'
-      css_class: cd-grid
+      css_class: cd-grid-4-col
       filters:
         status:
           value: '1'
