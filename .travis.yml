@@ -24,7 +24,6 @@ env:
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
      - DB=mysql
-     - LIGHTHOUSE_API_KEY=0d313658a8d944e7a723c7c4b46dbd54
 
 install:
   ssh-agent -k
@@ -70,7 +69,7 @@ script:
   - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
 
   - cd ${TRAVIS_BUILD_DIR}/html
-  - ../vendor/bin/drush -y si --account-pass="Jie4siereimagh4reechohja" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+  - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
   - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
   - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
   - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
