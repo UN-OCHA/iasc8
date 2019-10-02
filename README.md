@@ -1,6 +1,32 @@
 # IASC 8
 
+This is the IASC Drupal 8 site. The code for this project is managed with composer.
+
+## Installation
+
+The html directory is the document root. The vendor directories contains libraries that are required for the site to function. These libraries
+
+* Checkout the repository.
+* Run `composer install`. This will download Drupal core, contributed modules, contributed themes and libraries.
+* Deploy the html and vendor directories to the web server(s).
+
+### Initialisation
+
+Use drush to bootstrap your site and import the initial configuration from the config subdirectory.
+
+* drush -y si --admin-password="your admin password" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+* drush -y cset system.site uuid $(grep uuid config/system.site.yml | awk '{print $2}')
+* drush -y cim --source=config
+* drush php-eval 'node_access_rebuild();'
+* drush cr
+
 ## Testing
+
+### Remote
+
+Automatic testing is run via Travis CI. Code syntax, style and quality are inspected and finally behat installs an instance of the site and tests that logins work.
+
+With a small alteration, these tests could run via GitHub Actions.
 
 ### Locally
 
