@@ -44,7 +44,7 @@
 .cd-article-teaser__title a {
   font-weight: 600;
   font-size: 1rem;
-  display: block;
+  display: inline-block;
 }
 
 .cd-article-teaser__description {
