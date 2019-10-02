@@ -1,20 +1,4 @@
 .cd-bullet-list {
-  /* Color palette */
-  --cd-ocha-blue: #026cb6;
-  --cd-dark-blue: #025995;
-  --cd-highlight-red: #eb5c6d;
-  --cd-light-grey: #f2f2f2;
-  --cd-mid-grey: #595959;
-  --cd-dark-grey: #4a4a4a;
-  --cd-site-bg-color: #e6ecf1;
-  --cd-site-bg-color--light: #ebf0f4;
-
-  --iasc-primary: #272e67;
-  --iasc-red: #ff715b;
-  --iasc-highlight: #ff4d59;
-}
-
-.cd-bullet-list {
   margin: 0;
   padding: 1rem 0;
   list-style: none;

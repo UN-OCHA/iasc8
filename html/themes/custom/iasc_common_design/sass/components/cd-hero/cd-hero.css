@@ -1,10 +1,4 @@
 .cd-hero {
-  --iasc-primary: #272e67;
-  --iasc-red: #ff715b;
-  --iasc-highlight: #ff4d59;
-}
-
-.cd-hero {
   margin: 0;
   height: 100%;
   width: 100%;
