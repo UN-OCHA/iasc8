@@ -1,14 +1,14 @@
 {% embed 'node--full.html.twig' %}
 
   {% block section %}
-    <section class="cd-two-col">
+    <section class="cd-layout-two-col">
 
-      <div class="layout-content">
+      <div class="cd-layout-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_categories') }}
         {{ content.field_content }}
       </div>
 
-      <aside class="layout-sidebar-first" role="complementary">
+      <aside class="cd-layout-sidebar-first" role="complementary">
         {{ content.field_featured_categories }}
         {{ content.field_sidebar }}
       </aside>

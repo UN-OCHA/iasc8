@@ -41,7 +41,7 @@
 #}
 {%
   set classes = [
-  content.field_sidebar|render ? 'layout-with-section-sidebar',
+  content.field_sidebar|render ? 'cd-layout-with-section-sidebar',
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -55,15 +55,15 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <section class="cd-two-col">
+      <section class="cd-layout-two-col">
 
-        <div class="layout-content">
+        <div class="cd-layout-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
           {{ content.field_content }}
         </div>
 
         {% if content.field_sidebar|render %}
-          <aside class="layout-sidebar-first" role="complementary">
+          <aside class="cd-layout-sidebar-first" role="complementary">
             {{ content.field_date_closed }}
             {{ content.field_external_link }}
             {{ content.field_sidebar }}

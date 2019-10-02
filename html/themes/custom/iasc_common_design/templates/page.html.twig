@@ -46,12 +46,12 @@
 {%
   set layout_classes = [
   'cd-container',
-  page.sidebar_first ? 'layout-with-sidebar',
-  node.getType == 'oa_event' ? 'layout-with-sidebar',
-  node.getType == 'oa_wiki_page' ? 'layout-with-sidebar',
-  node.getType == 'panopoly_page' ? 'layout-with-sidebar',
-  node.getType == 'oa_section' ? 'layout-with-sidebar',
-  node.getType == 'announcement' ? 'layout-with-sidebar'
+  page.sidebar_first ? 'cd-layout-with-sidebar',
+  node.getType == 'oa_event' ? 'cd-layout-with-sidebar',
+  node.getType == 'oa_wiki_page' ? 'cd-layout-with-sidebar',
+  node.getType == 'panopoly_page' ? 'cd-layout-with-sidebar',
+  node.getType == 'oa_section' ? 'cd-layout-with-sidebar',
+  node.getType == 'announcement' ? 'cd-layout-with-sidebar'
   ]
 %}
 
@@ -67,7 +67,7 @@
   {{ page.help }}
 
   {% block hero %}
-    <div class="layout-hero cd-container">
+    <div class="cd-layout-hero cd-container">
       {{ page.hero }}
       {% if hero_image %}
         <div class="hero-image">
@@ -79,7 +79,7 @@
 
   {% if page.highlighted %}
     {% block highlighted %}
-      <div class="layout-highlighted cd-container">
+      <div class="cd-layout-highlighted cd-container">
         {{ page.highlighted }}
       </div>
     {% endblock %}
@@ -91,12 +91,12 @@
 
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-      <div class="layout-content">
+      <div class="cd-layout-content">
         {{ page.content }}
-      </div>{# /.layout-content #}
+      </div>{# /.cd-layout-content #}
 
       {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
+        <aside class="cd-layout-sidebar-first" role="complementary">
           {{ page.sidebar_first }}
         </aside>
       {% endif %}
