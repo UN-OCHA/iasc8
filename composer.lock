@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1d9a9d0d2655c9b16ce720dc95fbb7c",
+    "content-hash": "28d166121e71ef6829c480fe86cf2e90",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5770,7 +5770,7 @@
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/social_auth": "^2",
-                "un-ocha/oauth2-hid": "^1.0.1"
+                "un-ocha/oauth2-hid": "^1.0.2"
             },
             "type": "drupal-module",
             "extra": {
@@ -5784,6 +5784,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Add the possibility to use custom HID domains": "PATCHES/social_auth_hid_staging_domain.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7264,9 +7267,7 @@
             "version": "4.0.10",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.10.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.10.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -10123,16 +10124,16 @@
         },
         {
             "name": "un-ocha/oauth2-hid",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/oauth2-hid.git",
-                "reference": "25cd4d40ec7bf924eaa6f8d0a5195e53e3acab5a"
+                "reference": "8589bd00d692d6e1977644537e0f30069084a2c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/oauth2-hid/zipball/25cd4d40ec7bf924eaa6f8d0a5195e53e3acab5a",
-                "reference": "25cd4d40ec7bf924eaa6f8d0a5195e53e3acab5a",
+                "url": "https://api.github.com/repos/UN-OCHA/oauth2-hid/zipball/8589bd00d692d6e1977644537e0f30069084a2c0",
+                "reference": "8589bd00d692d6e1977644537e0f30069084a2c0",
                 "shasum": ""
             },
             "require": {
@@ -10173,7 +10174,7 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2018-05-25T11:38:04+00:00"
+            "time": "2019-10-01T09:37:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -13332,7 +13333,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6"
+        "php": ">=7.2"
     },
     "platform-dev": []
 }
