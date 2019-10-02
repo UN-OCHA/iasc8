@@ -23,7 +23,7 @@
   margin-bottom: 2rem !important;
 }
 
-.layout-sidebar-first {
+.cd-layout-sidebar-first {
   > .sidebar-label,
   .field--name-field-contact,
   .field--name-field-meeting-notes,
@@ -47,5 +47,10 @@
       margin-bottom: 1rem;
       border-bottom: 2px solid $cd-mid-bluey-grey;
     }
+  }
+
+  .node--view-mode-bio-long .field--name-field-organisation,
+  .node--view-mode-bio-short .field--name-field-organisation {
+    margin-bottom: 0 !important;
   }
 }
