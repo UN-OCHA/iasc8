@@ -2,6 +2,8 @@
 
 This is the IASC Drupal 8 site. The code for this project is managed with composer.
 
+To install security updates for Drupal, run `composer update drupal/core webflo/drupal-core-require-dev --with-dependencies`.
+
 ## Installation
 
 The html directory is the document root. The vendor directories contains libraries that are required for the site to function. These libraries
