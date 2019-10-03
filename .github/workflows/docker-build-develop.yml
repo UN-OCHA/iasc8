@@ -16,5 +16,5 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        docker build . --file docker/Dockerfile --tag unocha/iasc8-site:develop
-        docker push unocha/iasc8-site:develop
+        docker build . --file docker/Dockerfile --tag unocha/iasc-site:develop
+        docker push unocha/iasc-site:develop
