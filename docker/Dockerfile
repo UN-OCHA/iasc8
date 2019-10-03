@@ -9,7 +9,6 @@ ENV  NGINX_SERVERNAME=interagencystandingcommittee.org
 env  PHP_ENVIRONMENT=production
 ENV  PHP_MEMORY_LIMIT=256M
 ENV  PHP_MAX_CHILDREN=16
-COPY --from=builder /srv/www/html \
-                    /srv/www/vendor \
-                    /srv/www/composer.json \
-     /srv/www/
+COPY --from=builder /srv/www/html /srv/www/html/
+COPY --from=builder /srv/www/vendor /srv/www/vendor/
+COPY --from=builder /srv/www/composer.json /srv/www/composer.json
