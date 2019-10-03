@@ -251,7 +251,9 @@ $databases = [];
  *   ];
  * @endcode
  */
-$config_directories = [];
+$config_directories = [
+  CONFIG_SYNC_DIRECTORY => getenv('DRUPAL_CONFIG_SYNC_DIRECTORY'),
+];
 
 /**
  * Settings:
@@ -280,7 +282,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = getenv('DRUPAL_HASH_SALT');
 
 /**
  * Deployment identifier.
@@ -355,13 +357,13 @@ $settings['update_free_access'] = FALSE;
  * Be aware, however, that it is likely that this would allow IP
  * address spoofing unless more advanced precautions are taken.
  */
-# $settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy'] = TRUE;
 
 /**
  * Specify every reverse proxy IP address in your environment.
  * This setting is required if $settings['reverse_proxy'] is TRUE.
  */
-# $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
+$settings['reverse_proxy_addresses'] = ['127.0.0.0/8', '10.0.0.0/8', '172.16.0.0/16', '192.168.0.0/16'];
 
 /**
  * Reverse proxy trusted headers.
@@ -728,6 +730,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
  */
+$settings['trusted_host_patterns'] = ['^' . preg_quote(getenv('NGINX_SERVERNAME')) . '$'];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
