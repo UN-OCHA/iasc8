@@ -1,0 +1,21 @@
+name: Build production docker image
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build docker production image
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_TAG: ${GITHUB_REF##*/}
+      run: |
+        export DOCKER_TAG="${GITHUB_REF##*/}"
+        echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+        docker build . --file docker/Dockerfile --tag "unocha/iasc-site:${DOCKER_TAG}"
+        docker push "unocha/iasc-site:${DOCKER_TAG}"
