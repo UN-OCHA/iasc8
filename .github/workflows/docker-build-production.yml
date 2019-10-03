@@ -1,20 +1,19 @@
-name: Build develop docker image
+name: Build production docker image
 
 on:
-  push:
-    branches:
-      - develop
+  release:
+    types: [published]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Build docker develop image
+    - name: Build docker production image
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        docker build . --file docker/Dockerfile --tag unocha/iasc-site:develop
-        docker push unocha/iasc-site:develop
+        docker build . --file docker/Dockerfile --tag "unocha/iasc-site:${GITHUB_REF}"
+        docker push "unocha/iasc-site:${GITHUB_REF}"
