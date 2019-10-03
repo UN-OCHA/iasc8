@@ -13,7 +13,8 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_TAG: ${GITHUB_REF##*/}
       run: |
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        docker build . --file docker/Dockerfile --tag "unocha/iasc-site:${GITHUB_REF}"
-        docker push "unocha/iasc-site:${GITHUB_REF}"
+        docker build . --file docker/Dockerfile --tag "unocha/iasc-site:${DOCKER_TAG}"
+        docker push "unocha/iasc-site:${DOCKER_TAG}"
