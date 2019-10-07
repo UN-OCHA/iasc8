@@ -1,6 +1,8 @@
-# IASC 8
+# IASC 8 | [![Develop branch Build Status](https://travis-ci.com/UN-OCHA/iasc8.svg?branch=develop)](https://travis-ci.com/UN-OCHA/iasc8)
 
 This is the IASC Drupal 8 site. The code for this project is managed with composer.
+
+To install security updates for Drupal, run `composer update drupal/core webflo/drupal-core-require-dev --with-dependencies`.
 
 ## Installation
 
