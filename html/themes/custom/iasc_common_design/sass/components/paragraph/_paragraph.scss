@@ -140,7 +140,7 @@
   margin-bottom: 1rem;
   border-bottom: 2px solid $cd-mid-bluey-grey;
 
-  .layout-with-sidebar & {
+  .cd-layout-with-sidebar & {
     text-align: left;
     font-weight: 400;
   }
@@ -150,4 +150,22 @@
     text-align: left;
     font-weight: 400;
   }
+}
+
+.paragraph--type--contact-list > .field--name-field-contacts > .field__label {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: $iasc-primary;
+  border-bottom: 1px solid $iasc-primary;
+}
+
+.paragraph--type--contact-list > .field--name-field-contacts > .field__items {
+  padding: 1rem 0;
+}
+
+.paragraph--type--contact-list > .field--name-field-contacts > .field__items > .field__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }

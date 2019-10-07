@@ -74,10 +74,10 @@ body {
 
 // with sidebar pattern
 .cd-layout {
-  padding-top: 2rem;
+  //padding-top: 2rem;
 
   @include tablet {
-    padding-top: 3rem;
+    //padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
   }
@@ -103,22 +103,22 @@ body {
   @extend .cd-layout;
 }
 
-.cd-layout-container main.cd-container .layout-sidebar-first {
+.cd-layout-container main.cd-container .cd-layout-sidebar-first {
   @extend .cd-sidebar;
 }
 
-.cd-layout-container main.cd-container .layout-content {
+.cd-layout-container main.cd-container .cd-layout-content {
   @extend .cd-main;
 }
 
-.layout-with-sidebar .layout-content,
-.layout-with-section-sidebar .field--name-field-content {
+.cd-layout-with-sidebar .cd-layout-content,
+.cd-layout-with-section-sidebar .field--name-field-content {
   @include tablet {
     margin-right: 3rem;
   }
 }
 
-section.cd-two-col {
+section.cd-layout-two-col {
   @extend .cd-layout;
 
   .field--name-field-content {

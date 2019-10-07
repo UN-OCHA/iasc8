@@ -63,7 +63,7 @@
   @include desktop {
 
     .grid-item {
-      .layout-highlighted & {
+      .cd-layout-highlighted & {
         flex: 0 0 24%;
         max-width: 24%;
 
@@ -79,7 +79,7 @@
     }
 
     .grid-item {
-      .layout-content & {
+      .cd-layout-content & {
         flex: 0 0 32%;
         max-width: 32%;
 
@@ -108,8 +108,8 @@
     }
 
     .grid-item {
-      .layout-highlighted &,
-      .layout-content & {
+      .cd-layout-highlighted &,
+      .cd-layout-content & {
         max-width: unset;
       }
     }
@@ -120,15 +120,15 @@
     .grid-3-col {
       grid-template-columns: repeat(3, minmax(200px, 1fr));
 
-      .layout-highlighted & {
+      .cd-layout-highlighted & {
         grid-template-columns: repeat(4, minmax(200px, 1fr));
       }
     }
   }
 }
 
-.layout-content,
-.layout-highlighted {
+.cd-layout-content,
+.cd-layout-highlighted {
   .cd-grid .view-content {
     @extend .grid-3-col;
   }

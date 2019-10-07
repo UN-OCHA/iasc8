@@ -78,7 +78,7 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    content.field_sidebar|render ? 'layout-with-section-sidebar',
+    content.field_sidebar|render ? 'cd-layout-with-section-sidebar',
   ]
 %}
 
@@ -104,14 +104,14 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <section class="cd-two-col">
+      <section class="cd-layout-two-col">
 
-        <div class="layout-content">
+        <div class="cd-layout-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_section', 'field_category', 'og_group_ref', 'field_contact') }}
           {{ content.field_content }}
         </div>
 
-        <aside class="layout-sidebar-first" role="complementary">
+        <aside class="cd-layout-sidebar-first" role="complementary">
           {{ content.field_section }}
           {{ content.field_category }}
           {{ content.og_group_ref }}

@@ -78,7 +78,7 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'layout-with-section-sidebar',
+    'cd-layout-with-section-sidebar',
   ]
 %}
 {{ attach_library('classy/node') }}
@@ -103,14 +103,14 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-    <section class="cd-two-col">
+    <section class="cd-layout-two-col">
 
-      <div class="layout-content">
+      <div class="cd-layout-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes') }}
         {{ content.field_content }}
       </div>
 
-      <aside class="layout-sidebar-first" role="complementary">
+      <aside class="cd-layout-sidebar-first" role="complementary">
         <div class="sidebar-label"><div class="field__label">{% trans %}Location{% endtrans %}</div></div>
         {{ content.field_city }}
         {{ content.field_venue }}
