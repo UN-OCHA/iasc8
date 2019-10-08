@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.medium
+    - core.date_format.long
     - core.entity_view_mode.node.full
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.oa_event.field_meeting_notes
     - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_thumbnail
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
     - field.field.node.oa_event.oa_section_ref
@@ -110,9 +111,9 @@ content:
     region: content
     label: hidden
     settings:
-      format_type: medium
-      occurrence_format_type: medium
-      same_end_date_format_type: medium
+      format_type: long
+      occurrence_format_type: long
+      same_end_date_format_type: long
       separator: '-'
       timezone_override: ''
       interpreter: ''
@@ -141,6 +142,7 @@ hidden:
   field_iasc_audience: true
   field_info_private: true
   field_legacy_publish: true
+  field_thumbnail: true
   langcode: true
   links: true
   oa_other_spaces_ref: true

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.medium
+    - core.date_format.long
     - field.field.node.oa_event.body
     - field.field.node.oa_event.comment_node_oa_event
     - field.field.node.oa_event.field_additional_locations
@@ -107,14 +107,14 @@ content:
     weight: 11
     label: above
     settings:
+      format_type: long
+      occurrence_format_type: long
+      same_end_date_format_type: long
+      separator: '-'
+      timezone_override: ''
+      interpreter: ''
       show_next: 5
       count_per_item: true
-      occurrence_format_type: medium
-      same_end_date_format_type: medium
-      interpreter: null
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
     third_party_settings: {  }
     type: date_recur_basic_formatter
     region: content
