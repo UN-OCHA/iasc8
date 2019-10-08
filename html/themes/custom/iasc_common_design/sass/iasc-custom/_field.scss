@@ -1,4 +1,5 @@
-.field--name-field-agenda-items {
+.field--name-field-agenda-items,
+.field--name-field-referenced-docs {
   > .field__label {
     font-size: 1.5rem;
     font-weight: 400;
@@ -37,7 +38,8 @@
   .field--name-field-date-closed,
   .field--name-field-external-link,
   .field--name-group-content-access,
-  .field--name-field-ap-responsibility {
+  .field--name-field-ap-responsibility,
+  .field--name-field-referenced-docs {
     margin-bottom: 1rem !important;
 
     > .field__label {
@@ -63,12 +65,13 @@
 }
 
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-.field--name-field-links {
-    .field__item a {
-      display: block;
-      margin-bottom: 1rem;
-      position: relative;
-    }
+.field--name-field-links,
+.field--name-field-referenced-docs {
+  .field__item a {
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+  }
 
   .field__item a::before {
     display: inline-block;
