@@ -96,15 +96,27 @@
     </div>
   {{ title_suffix }}
 
+  {% if content.field_position|render %}
   <div class="cd-user-list__position">
     {{ content.field_position }}
   </div>
+  {% endif %}
+
+  {% if content.field_organisation|render %}
   <div class="cd-user-list__organization">
     {{ content.field_organisation }}
   </div>
+  {% endif %}
+
   {% if node.field_address.locality %}
   <div class="cd-user-list__city">
-    City: {{ node.field_address.locality }}
+    {{ node.field_address.locality }}
+  </div>
+  {% endif %}
+
+  {% if content.field_email|render %}
+  <div class="cd-user-list__email">
+    {{ content.field_email }}
   </div>
   {% endif %}
 

@@ -31,67 +31,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
   comment_node_action_point:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 9
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
   field_ap_date:
-    label: above
-    weight: 3
-    type: datetime_default
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    region: content
-  field_ap_progress_overview:
-    label: above
-    weight: 5
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_ap_responsibility:
-    label: above
-    weight: 7
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
-  field_ap_status:
-    label: above
-    weight: 4
-    type: list_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_ap_topic:
-    label: above
-    weight: 8
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_contact:
-    label: above
-    weight: 6
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
-  field_date:
     label: above
     weight: 2
     type: datetime_default
@@ -100,8 +53,55 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     region: content
+  field_ap_progress_overview:
+    label: above
+    weight: 4
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ap_responsibility:
+    label: above
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_ap_status:
+    label: above
+    weight: 3
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ap_topic:
+    label: above
+    weight: 7
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_contact:
+    label: above
+    weight: 5
+    type: entity_reference_label
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_date:
+    label: above
+    weight: 1
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
   field_iasc_audience:
-    weight: 102
+    weight: 11
     label: above
     settings:
       link: true
@@ -110,16 +110,16 @@ content:
     region: content
   group_content_access:
     label: above
-    weight: 12
+    weight: 8
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   og_group_ref: true

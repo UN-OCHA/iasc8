@@ -9,7 +9,7 @@ id: group.iasc_space.field_banner_text
 field_name: field_banner_text
 entity_type: group
 bundle: iasc_space
-label: 'Banner text'
+label: 'Banner caption'
 description: ''
 required: false
 translatable: false
