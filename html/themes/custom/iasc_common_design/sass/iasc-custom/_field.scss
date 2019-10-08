@@ -61,3 +61,26 @@
   text-align: right;
   font-size: 0.9rem;
 }
+
+// This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
+.field--name-field-links {
+    .field__item a {
+      display: block;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+  .field__item a::before {
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    margin-right: 1rem;
+    content: '';
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">\
+      <path fill="#ff4d59" d="M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z"/>\
+    </svg>');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
