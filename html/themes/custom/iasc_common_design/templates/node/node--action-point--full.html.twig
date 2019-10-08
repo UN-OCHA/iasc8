@@ -1,0 +1,23 @@
+{% embed 'node--full.html.twig' %}
+
+    {% block section %}
+      <section class="cd-layout-two-col">
+
+        <div class="cd-layout-content">
+          {{ content|without('field_content', 'field_sidebar', 'field_footer',  'og_group_ref', 'group_content_access', 'field_iasc_audience', 'field_contact', 'field_ap_responsibility') }}
+          {{ content.field_content }}
+        </div>
+
+        <aside class="cd-layout-sidebar-first" role="complementary">
+          {{ content.og_group_ref }}
+          {{ content.group_content_access }}
+          {{ content.field_iasc_audience }}
+          {{ content.field_contact }}
+          {{ content.field_ap_responsibility }}
+          {{ content.field_sidebar }}
+        </aside>
+
+      </section>
+    {% endblock %}
+
+{% endembed %}
