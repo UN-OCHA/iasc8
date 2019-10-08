@@ -6,6 +6,7 @@
       <div class="cd-layout-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_links', 'field_contact', 'oa_section_ref', 'og_group_ref', 'field_iasc_audience', 'field_referenced_docs') }}
         {{ content.field_content }}
+        {{ content.field_referenced_docs }}
       </div>
 
       <aside class="cd-layout-sidebar-first" role="complementary">
@@ -14,7 +15,6 @@
 {#        {{ content.oa_section_ref }}#}
 {#        {{ content.og_group_ref }}#}
 {#        {{ content.field_iasc_audience }}#}
-{#        {{ content.field_referenced_docs }}#}
         {{ content.field_sidebar }}
       </aside>
 
