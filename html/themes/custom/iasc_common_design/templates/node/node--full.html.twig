@@ -85,6 +85,7 @@
 {% set longDate = node.getCreatedTime|format_date('long') %}
 
 {{ attach_library('classy/node') }}
+{{ attach_library('iasc_common_design/cd-responsive-tables') }}
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}

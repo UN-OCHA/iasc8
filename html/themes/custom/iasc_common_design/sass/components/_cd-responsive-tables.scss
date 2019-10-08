@@ -12,13 +12,13 @@ table {
   th,
   td {
     padding: $cd-base-unit;
-    background: $cd-light-bluey-grey;
-    border-bottom: 1px solid $cd-white;
+    background: #fafafa;
+    vertical-align: top;
   }
 
   th {
-    color: $cd-ocha-blue;
-    text-transform: uppercase;
+    color: $iasc-primary;
+    background: $cd-light-grey;
     text-align: left;
   }
 }
@@ -44,13 +44,6 @@ table {
   }
 }
 
-tr.odd,
-tr.even {
-  background: none;
-}
-
-
-
 @include min-width('md') {
   table {
     margin-bottom: $cd-base-unit * 3;
@@ -61,6 +54,7 @@ tr.even {
     td {
       display: table-cell;
       width: auto;
+      border-bottom: 1px solid $cd-mid-light-grey;
 
       &::before {
         content: none;
@@ -71,5 +65,56 @@ tr.even {
       }
     }
   }
+}
 
+
+@media (max-width: 767px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid $cd-light-grey;
+    padding: 0 !important;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: 0 none;
+    position: relative;
+    padding: 8px;
+    padding-left: 35% !important;
+    white-space: normal !important;
+    text-align: left;
+  }
+
+  td::before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 8px;
+    left: 8px;
+    width: 30%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: bold;
+    content: attr(data-title);
+  }
+}
+
+td > p {
+  margin-top: 0;
 }
