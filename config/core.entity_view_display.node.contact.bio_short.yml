@@ -35,10 +35,18 @@ mode: bio_short
 content:
   field_address:
     type: address_plain
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_organisation:
     label: hidden
@@ -70,7 +78,6 @@ hidden:
   comment_node_contact: true
   field_branch: true
   field_department: true
-  field_email: true
   field_fax: true
   field_first_name: true
   field_homepage: true
