@@ -6,36 +6,45 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.panopoly_page.body
     - field.field.node.panopoly_page.comment_node_panopoly_page
+    - field.field.node.panopoly_page.field_banner_image
+    - field.field.node.panopoly_page.field_content
     - field.field.node.panopoly_page.field_featured_categories
     - field.field.node.panopoly_page.field_featured_image
     - field.field.node.panopoly_page.field_featured_status
+    - field.field.node.panopoly_page.field_footer
+    - field.field.node.panopoly_page.field_header
+    - field.field.node.panopoly_page.field_sidebar
     - node.type.panopoly_page
   module:
-    - image
+    - text
     - user
 id: node.panopoly_page.search_result
 targetEntityType: node
 bundle: panopoly_page
 mode: search_result
 content:
-  field_featured_image:
-    label: hidden
+  body:
+    type: text_summary_or_trimmed
     weight: 0
-    type: image
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
     region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
-  body: true
   comment_node_panopoly_page: true
+  field_banner_image: true
+  field_content: true
   field_featured_categories: true
+  field_featured_image: true
   field_featured_status: true
+  field_footer: true
+  field_header: true
+  field_sidebar: true
   langcode: true
   search_api_excerpt: true

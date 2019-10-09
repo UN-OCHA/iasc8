@@ -24,14 +24,14 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   comment_node_oa_ical_importer:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 3
     settings:
       view_mode: default
       pager_id: 0
@@ -39,28 +39,20 @@ content:
     region: content
   field_basic_file_file:
     label: above
-    weight: 5
+    weight: 2
     type: file_default
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     region: content
-  field_iasc_audience:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   links:
-    weight: 100
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   oa_section_ref:
     label: above
-    weight: 2
+    weight: 0
     type: entity_reference_label
     settings:
       link: true
@@ -68,12 +60,13 @@ content:
     region: content
   og_group_ref:
     label: above
-    weight: 4
+    weight: 1
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
 hidden:
+  field_iasc_audience: true
   langcode: true
   search_api_excerpt: true

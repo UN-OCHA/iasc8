@@ -22,48 +22,41 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   comment_node_oa_team:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 2
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
-  field_iasc_audience:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_oa_team_users:
     label: above
-    weight: 2
+    weight: 0
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   og_group_ref:
     label: above
-    weight: 3
+    weight: 1
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
 hidden:
+  field_iasc_audience: true
   langcode: true
   search_api_excerpt: true

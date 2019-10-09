@@ -17,7 +17,6 @@ dependencies:
   module:
     - comment
     - image
-    - options
     - text
     - user
 id: node.oa_group.default
@@ -53,15 +52,18 @@ content:
   group_access:
     label: above
     weight: 4
-    type: list_default
-    settings: {  }
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   oa_parent_space:
     label: above
     weight: 7
@@ -73,22 +75,31 @@ content:
   og_roles_permissions:
     label: above
     weight: 9
-    type: list_default
-    settings: {  }
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   og_user_inheritance:
     label: above
     weight: 6
-    type: list_default
-    settings: {  }
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
   og_user_permission_inheritance:
     label: above
     weight: 8
-    type: list_default
-    settings: {  }
+    type: boolean
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     region: content
 hidden:
