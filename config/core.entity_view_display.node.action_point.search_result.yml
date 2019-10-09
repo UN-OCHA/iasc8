@@ -1,0 +1,54 @@
+uuid: 9c260542-74db-49bf-8114-aa6ef2a2096b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.action_point.body
+    - field.field.node.action_point.comment_node_action_point
+    - field.field.node.action_point.field_ap_date
+    - field.field.node.action_point.field_ap_progress_overview
+    - field.field.node.action_point.field_ap_responsibility
+    - field.field.node.action_point.field_ap_status
+    - field.field.node.action_point.field_ap_topic
+    - field.field.node.action_point.field_contact
+    - field.field.node.action_point.field_date
+    - field.field.node.action_point.field_iasc_audience
+    - field.field.node.action_point.group_content_access
+    - field.field.node.action_point.og_group_ref
+    - node.type.action_point
+  module:
+    - text
+    - user
+id: node.action_point.search_result
+targetEntityType: node
+bundle: action_point
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_action_point: true
+  field_ap_date: true
+  field_ap_progress_overview: true
+  field_ap_responsibility: true
+  field_ap_status: true
+  field_ap_topic: true
+  field_contact: true
+  field_date: true
+  field_iasc_audience: true
+  group_content_access: true
+  langcode: true
+  og_group_ref: true
+  search_api_excerpt: true

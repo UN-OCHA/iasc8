@@ -1,0 +1,48 @@
+uuid: 02b99552-754c-4890-af1f-ddf82eba0d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.oa_group.body
+    - field.field.node.oa_group.comment_node_oa_group
+    - field.field.node.oa_group.field_featured_image
+    - field.field.node.oa_group.group_access
+    - field.field.node.oa_group.group_group
+    - field.field.node.oa_group.oa_parent_space
+    - field.field.node.oa_group.og_roles_permissions
+    - field.field.node.oa_group.og_user_inheritance
+    - field.field.node.oa_group.og_user_permission_inheritance
+    - node.type.oa_group
+  module:
+    - text
+    - user
+id: node.oa_group.search_result
+targetEntityType: node
+bundle: oa_group
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_oa_group: true
+  field_featured_image: true
+  group_access: true
+  group_group: true
+  langcode: true
+  oa_parent_space: true
+  og_roles_permissions: true
+  og_user_inheritance: true
+  og_user_permission_inheritance: true
+  search_api_excerpt: true

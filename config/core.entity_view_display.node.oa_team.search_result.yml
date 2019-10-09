@@ -1,0 +1,40 @@
+uuid: 8616d358-ad66-41f5-aafd-e7ea342ef2ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.oa_team.body
+    - field.field.node.oa_team.comment_node_oa_team
+    - field.field.node.oa_team.field_iasc_audience
+    - field.field.node.oa_team.field_oa_team_users
+    - field.field.node.oa_team.og_group_ref
+    - node.type.oa_team
+  module:
+    - text
+    - user
+id: node.oa_team.search_result
+targetEntityType: node
+bundle: oa_team
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_oa_team: true
+  field_iasc_audience: true
+  field_oa_team_users: true
+  langcode: true
+  og_group_ref: true
+  search_api_excerpt: true

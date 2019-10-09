@@ -1,0 +1,30 @@
+uuid: 90f919c5-7603-42bb-a783-96bc6acd23fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.panopoly_landing_page.field_content
+    - field.field.node.panopoly_landing_page.field_footer
+    - field.field.node.panopoly_landing_page.field_header
+    - field.field.node.panopoly_landing_page.field_sidebar
+    - node.type.panopoly_landing_page
+  module:
+    - user
+id: node.panopoly_landing_page.search_result
+targetEntityType: node
+bundle: panopoly_landing_page
+mode: search_result
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_content: true
+  field_footer: true
+  field_header: true
+  field_sidebar: true
+  langcode: true
+  search_api_excerpt: true

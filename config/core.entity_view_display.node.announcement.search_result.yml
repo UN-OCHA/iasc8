@@ -1,0 +1,52 @@
+uuid: 74426cbd-451f-4a1a-b46e-01e4c0108c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.announcement.body
+    - field.field.node.announcement.comment_node_announcement
+    - field.field.node.announcement.field_contact
+    - field.field.node.announcement.field_iasc_audience
+    - field.field.node.announcement.field_legacy_publish
+    - field.field.node.announcement.field_links
+    - field.field.node.announcement.field_published_date
+    - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_thumbnail
+    - field.field.node.announcement.oa_section_ref
+    - field.field.node.announcement.og_group_ref
+    - node.type.announcement
+  module:
+    - text
+    - user
+id: node.announcement.search_result
+targetEntityType: node
+bundle: announcement
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_announcement: true
+  field_contact: true
+  field_iasc_audience: true
+  field_legacy_publish: true
+  field_links: true
+  field_published_date: true
+  field_referenced_docs: true
+  field_thumbnail: true
+  langcode: true
+  oa_section_ref: true
+  og_group_ref: true
+  search_api_excerpt: true

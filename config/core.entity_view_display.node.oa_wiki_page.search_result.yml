@@ -1,9 +1,9 @@
-uuid: d84623d5-d2e2-47d3-af5a-86c23dfcec22
+uuid: 34ba6905-4a14-46bc-89fd-c6a7dc27b567
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.search_result
     - field.field.node.oa_wiki_page.body
     - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
     - field.field.node.oa_wiki_page.field_category
@@ -22,67 +22,41 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - datetime
-    - file
     - text
     - user
-id: node.oa_wiki_page.full
+id: node.oa_wiki_page.search_result
 targetEntityType: node
 bundle: oa_wiki_page
-mode: full
+mode: search_result
 content:
   body:
     label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_category:
-    label: above
-    weight: 3
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
-  field_oa_media:
-    label: above
-    weight: 2
-    type: file_default
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    region: content
-  field_published_date:
-    type: datetime_default
+    type: text_summary_or_trimmed
     weight: 0
-    region: content
-    label: inline
     settings:
-      timezone_override: ''
-      format_type: teaser
+      trim_length: 600
     third_party_settings: {  }
-  og_group_ref:
-    type: entity_reference_label
-    weight: 4
     region: content
-    label: above
-    settings:
-      link: true
+  links:
+    weight: 1
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   comment_node_oa_wiki_page: true
+  field_category: true
   field_document_no: true
   field_document_type: true
   field_iasc_audience: true
   field_legacy_publish: true
+  field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
+  field_published_date: true
   field_thumbnail: true
   langcode: true
-  links: true
   oa_other_spaces_ref: true
   oa_section_ref: true
+  og_group_ref: true
   og_vocabulary: true
   search_api_excerpt: true
