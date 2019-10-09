@@ -86,20 +86,11 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-    <h2{{ title_attributes.addClass('page-title') }}>{{ label }}</h2>
+    <h3{{ title_attributes }}>{{ label }}</h3>
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted on {{ longDate }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_content }}
+    {{ content }}
   </div>
 
 </article>
