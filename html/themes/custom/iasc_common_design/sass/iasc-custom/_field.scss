@@ -1,5 +1,6 @@
 .field--name-field-agenda-items,
-.field--name-field-referenced-docs {
+.field--name-field-referenced-docs,
+.field--name-field-iasc-group-space {
   > .field__label {
     font-size: 1.5rem;
     font-weight: 400;
@@ -40,7 +41,7 @@
   .field--name-group-content-access,
   .field--name-field-ap-responsibility,
   .field--name-field-referenced-docs {
-    margin-bottom: 1rem !important;
+    margin-bottom: 2rem !important;
 
     > .field__label {
       font-size: 1.5rem;
@@ -66,7 +67,8 @@
 
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
 .field--name-field-links,
-.field--name-field-referenced-docs {
+.field--name-field-referenced-docs,
+.field--name-field-iasc-group-space {
   .field__item a {
     display: block;
     margin-bottom: 1rem;
@@ -86,4 +88,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
+}
+
+.field--name-field-membership > .field__items > .field__item + .field__item {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $cd-mid-bluey-grey;
 }
