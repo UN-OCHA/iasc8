@@ -65,3 +65,11 @@ function iasc_migrate_node_insert($entity) {
 function oa_buttons_get_command_buttons_options() {
   return [];
 }
+
+/**
+ * Legacy command from Drupal 7 version.
+ */
+function oa_related_paragraphs_field_allowed_values() {
+  return [];
+}
+
