@@ -89,9 +89,10 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  {% if content.field_product_thumbnail|render %}
+  {% if content.field_product_thumbnail|render or content.field_thumbnail %}
     <div class="cd-article-teaser__image">
       {{ content.field_product_thumbnail }}
+      {{ content.field_thumbnail }}
     </div>
   {% endif %}
 
@@ -109,7 +110,7 @@
     {{ title_suffix }}
 
     <div class="cd-article-teaser__description node__content">
-      {{ content|without('field_product_thumbnail') }}
+      {{ content|without('field_product_thumbnail','field_thumbnail') }}
     </div>
   </div>
 

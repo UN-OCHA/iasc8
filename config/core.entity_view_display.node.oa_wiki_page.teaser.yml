@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
     - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.field_thumbnail
     - field.field.node.oa_wiki_page.oa_other_spaces_ref
     - field.field.node.oa_wiki_page.oa_section_ref
     - field.field.node.oa_wiki_page.og_group_ref
@@ -34,14 +35,14 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 6
+    weight: 7
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   field_category:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: content
     label: inline
     settings:
@@ -49,7 +50,7 @@ content:
     third_party_settings: {  }
   field_document_no:
     label: inline
-    weight: 1
+    weight: 2
     type: string
     settings:
       link_to_entity: false
@@ -57,7 +58,7 @@ content:
     region: content
   field_document_type:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: content
     label: inline
     settings:
@@ -65,7 +66,7 @@ content:
     third_party_settings: {  }
   field_product_thumbnail:
     label: hidden
-    weight: 0
+    weight: 1
     type: image
     settings:
       image_style: thumbnail
@@ -74,16 +75,25 @@ content:
     region: content
   field_published_date:
     label: inline
-    weight: 5
+    weight: 6
     type: datetime_default
     settings:
       timezone_override: ''
       format_type: teaser
     third_party_settings: {  }
     region: content
+  field_thumbnail:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: product_thumbnail
+      link: false
+    third_party_settings: {  }
   og_group_ref:
     label: inline
-    weight: 4
+    weight: 5
     type: entity_reference_label
     settings:
       link: true
