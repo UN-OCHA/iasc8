@@ -141,7 +141,20 @@ display:
           content: 'Displaying results @start - @end of @total'
           plugin_id: result
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>\r\nYour search yielded no results</h2>\r\n\r\n<p>Check if your spelling is correct.<br>\r\n    Remove quotes around phrases to search for each word individually. bike shed will often show more results than \"bike shed\".<br>\r\n    Consider loosening your query with OR. bike OR shed will often show more results than bike shed.</p>\r\n\r\n"
+            format: basic_html
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
