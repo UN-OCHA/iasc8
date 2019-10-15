@@ -76,10 +76,19 @@ settings:
       list_item:
         enabled: true
         weight: 18
+      contact_list:
+        weight: 19
+        enabled: false
       teaser_grid:
         weight: 24
         enabled: false
       teaser_item:
         enabled: true
         weight: 25
+      section_menu:
+        weight: 28
+        enabled: false
+      twitter:
+        weight: 31
+        enabled: false
 field_type: entity_reference_revisions
