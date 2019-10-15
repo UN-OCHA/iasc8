@@ -37,6 +37,19 @@ function iasc_content_space_sidebar_defaults($id) {
     return;
   }
 
+  // Add section menu.
+  $paragraph = Paragraph::create([
+    'type' => 'section_menu',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
   // Add documents.
   $paragraph = Paragraph::create([
     'type' => 'view',
