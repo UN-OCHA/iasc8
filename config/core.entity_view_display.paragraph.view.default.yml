@@ -13,7 +13,7 @@ bundle: view
 mode: default
 content:
   field_view:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       plugin_types:

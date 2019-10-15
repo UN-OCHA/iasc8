@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.contact_list.field_contacts
+    - field.field.paragraph.contact_list.field_list_title
     - paragraphs.paragraphs_type.contact_list
 id: paragraph.contact_list.default
 targetEntityType: paragraph
@@ -11,13 +12,21 @@ bundle: contact_list
 mode: default
 content:
   field_contacts:
-    weight: 0
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_list_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
