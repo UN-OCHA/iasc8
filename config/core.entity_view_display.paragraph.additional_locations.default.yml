@@ -11,7 +11,7 @@ bundle: additional_locations
 mode: default
 content:
   field_additional_city:
-    label: above
+    label: inline
     weight: 0
     type: string
     settings:
