@@ -101,11 +101,6 @@ dd {
 }
 
 @include min-width(sm) {
-
-  h2 {
-    font-weight: normal;
-  }
-
   h1,
   h2,
   h3,
@@ -115,4 +110,22 @@ dd {
   dl {
     margin-bottom: $cd-base-unit * 2;
   }
+}
+
+.cd-heading-2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: $iasc-primary;
+  border-bottom: 2px solid $cd-mid-bluey-grey;
+}
+
+.cd-heading-3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: $iasc-primary;
+  border-bottom: 1px solid $iasc-primary;
 }
