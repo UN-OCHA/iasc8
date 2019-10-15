@@ -1,7 +1,7 @@
 .viewsreference--view-title {
   @extend .cd-heading-2;
 
-  .cd-layout-sidebar-first {
+  .cd-layout-sidebar-first & {
     @extend .cd-heading-3;
   }
 }

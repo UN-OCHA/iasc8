@@ -20,30 +20,28 @@
   margin-bottom: 2rem !important;
 }
 
-.cd-layout-content {
-  .cd-location,
-  .field--name-field-contact,
-  .field--name-field-meeting-notes,
-  .field--name-field-meeting-agendas,
-  .field--name-field-oa-section,
-  .field--name-field-iasc-audience,
-  .field--name-field-category,
-  .field--name-field-links,
-  .field--name-field-organisation,
-  .field--name-field-membership,
-  .field--name-field-date-closed,
-  .field--name-field-external-link,
-  .field--name-group-content-access,
-  .field--name-field-ap-responsibility,
-  .field--name-field-referenced-docs,
-  .field--name-field-list-title,
-  .field--name-field-host {
-    margin-bottom: 2rem !important;
+.cd-location,
+.field--name-field-contact,
+.field--name-field-meeting-notes,
+.field--name-field-meeting-agendas,
+.field--name-field-oa-section,
+.field--name-field-iasc-audience,
+.field--name-field-category,
+.field--name-field-links,
+.field--name-field-organisation,
+.field--name-field-membership,
+.field--name-field-date-closed,
+.field--name-field-external-link,
+.field--name-group-content-access,
+.field--name-field-ap-responsibility,
+.field--name-field-referenced-docs,
+.field--name-field-list-title,
+.field--name-field-host {
+  margin-bottom: 2rem !important;
 
-    > .field__label,
-    .cd-sidebar__label {
-      @extend .cd-heading-2;
-    }
+  > .field__label,
+  .cd-sidebar__label {
+    @extend .cd-heading-2;
   }
 }
 

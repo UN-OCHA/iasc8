@@ -8,34 +8,33 @@ h3,
 h4,
 h5 {
   line-height: 1.2;
-  font-weight: bold;
+  font-weight: 600;
   color: $iasc-primary;
 }
 
 h1 {
-  color: $iasc-primary;
   font-weight: 400;
   font-size: 1.875rem;
 }
 
 h2 {
-  color: $iasc-primary;
   font-weight: 400;
   font-size: 1.5rem;
 
   .region-sidebar-first & {
-    font-weight: 600;
     font-size: 1.125rem;
-    border-bottom: 1px solid $iasc-primary;
-    padding-bottom: 0.75rem;
-    margin-bottom: 0.875rem;
+    font-weight: 600;
   }
 }
 
 h3 {
-  color: $iasc-secondary;
-  font-weight: 600;
   font-size: 1.125rem;
+  color: $iasc-secondary;
+}
+
+h4,
+h5 {
+  font-weight: 400;
 }
 
 h1,
@@ -48,12 +47,8 @@ dl {
   margin-bottom: $cd-base-unit;
 }
 
-h4,
-h5 {
-  font-weight: 400;
-}
-
 .page-title {
+  font-size: 1.875rem;
   font-weight: 600;
   //margin-bottom: 3rem;
   border-bottom: 0 none;
@@ -66,6 +61,10 @@ h5 {
     height: 6px;
     margin: calc(1rem - 6px) auto 0 0;
     width: 80px;
+  }
+
+  @include min-width(sm) {
+    font-size: 1.875rem;
   }
 }
 
