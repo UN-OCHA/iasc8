@@ -1,0 +1,16 @@
+uuid: 0914e193-8907-45c3-a54c-abcf432240ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_viewmode
+id: section_menu
+label: 'Section menu'
+icon_uuid: null
+description: 'Displays a list of links to Documents, Meetings, News and Events if the visitor has access to at least one of them.'
+behavior_plugins:
+  paragraphs_viewmode_behavior:
+    override_mode: default
+    override_available:
+      default: Default
+    override_default: default
