@@ -11,6 +11,8 @@ dependencies:
     - field.field.group.iasc_space.field_date_closed
     - field.field.group.iasc_space.field_description
     - field.field.group.iasc_space.field_external_link
+    - field.field.group.iasc_space.field_group_banner
+    - field.field.group.iasc_space.field_main_image
     - field.field.group.iasc_space.field_primary_image
     - field.field.group.iasc_space.field_responsibilities
     - field.field.group.iasc_space.field_short_name
@@ -18,7 +20,6 @@ dependencies:
     - group.type.iasc_space
   module:
     - datetime
-    - image
     - text
 id: group.iasc_space.teaser
 targetEntityType: group
@@ -41,15 +42,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_primary_image:
+  field_group_banner:
+    type: entity_reference_entity_view
     weight: 2
+    region: content
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: thumbnail
+      link: false
     third_party_settings: {  }
-    type: image
-    region: content
   field_short_name:
     weight: 1
     label: hidden
@@ -74,6 +75,8 @@ hidden:
   field_banner_text: true
   field_content: true
   field_external_link: true
+  field_main_image: true
+  field_primary_image: true
   field_responsibilities: true
   field_sidebar: true
   langcode: true
