@@ -33,16 +33,19 @@
 
 .cd-user-list__name {
   margin: 0 0 0.5rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .cd-user-list__position {
   margin: 0 0 0.5rem;
+  font-size: 0.875rem;
   font-style: italic;
 }
 
 .cd-user-list__organization {
   padding: 0 0 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
+  color: var(--iasc-secondary);
 }
