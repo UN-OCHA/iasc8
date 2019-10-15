@@ -3,13 +3,7 @@
 .field--name-field-iasc-group-space,
 .field--name-field-info-private {
   > .field__label {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: $iasc-primary;
-    padding-bottom: 0.5rem;
-    text-align: left;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid $cd-mid-bluey-grey;
+    @extend .cd-heading-3;
   }
 
   .field__item {
@@ -24,6 +18,33 @@
 
 .field--name-field-content .field--type-viewsreference {
   margin-bottom: 2rem !important;
+}
+
+.cd-layout-content {
+  .cd-location,
+  .field--name-field-contact,
+  .field--name-field-meeting-notes,
+  .field--name-field-meeting-agendas,
+  .field--name-field-oa-section,
+  .field--name-field-iasc-audience,
+  .field--name-field-category,
+  .field--name-field-links,
+  .field--name-field-organisation,
+  .field--name-field-membership,
+  .field--name-field-date-closed,
+  .field--name-field-external-link,
+  .field--name-group-content-access,
+  .field--name-field-ap-responsibility,
+  .field--name-field-referenced-docs,
+  .field--name-field-list-title,
+  .field--name-field-host {
+    margin-bottom: 2rem !important;
+
+    > .field__label,
+    .cd-sidebar__label {
+      @extend .cd-heading-2;
+    }
+  }
 }
 
 .cd-layout-sidebar-first {
@@ -48,17 +69,11 @@
 
     > .field__label,
     .cd-sidebar__label {
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: $iasc-primary;
-      padding-bottom: 0.5rem;
-      text-align: left;
-      margin-bottom: 1rem;
-      //border-bottom: 2px solid $cd-mid-bluey-grey;
-      border-bottom: 1px solid $iasc-primary;
+      @extend .cd-heading-3;
     }
   }
 
+  // Margin resets because nested fields are hard.
   .node--view-mode-bio-long .field--name-field-organisation,
   .node--view-mode-bio-short .field--name-field-organisation {
     margin-bottom: 0 !important;
@@ -71,6 +86,7 @@
   margin-bottom: 1rem !important;
 }
 
+// Banner caption.
 .field--name-field-banner-text {
   text-align: right;
   font-size: 0.9rem;
@@ -116,7 +132,7 @@
   margin-right: 1rem;
 }
 
-
+// Multiple members separated by hr.
 .field--name-field-membership > .field__items > .field__item + .field__item,
 .field--name-field-contacts > .field__item + .field__item {
   margin-top: 1rem;

@@ -132,34 +132,23 @@
   }
 }
 
+.paragraph--type--twitter > .cd-sidebar__label,
 .paragraph--type--list > h2 {
-  font-weight: 700;
-  padding-bottom: 0.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid $cd-mid-bluey-grey;
 
   .cd-layout-with-sidebar & {
-    text-align: left;
-    font-weight: 400;
+    @extend .cd-heading-2;
   }
 
   .field--name-field-sidebar &,
   .field--name-field-content & {
-    text-align: left;
-    font-weight: 400;
+    @extend .cd-heading-3;
   }
 }
 
-.paragraph--type--twitter > .cd-sidebar__label,
+
 .paragraph--type--contact-list > .field--name-field-contacts > .field__label,
 .paragraph--type--contact-list .field--name-field-list-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  color: $iasc-primary;
-  border-bottom: 1px solid $iasc-primary;
+  @extend .cd-heading-3;
 }
 
 .paragraph--type--contact-list > .field--name-field-contacts > .field__items {

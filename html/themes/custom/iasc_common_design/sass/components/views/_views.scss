@@ -1,13 +1,8 @@
 .viewsreference--view-title {
-  font-weight: 700;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid $iasc-primary;
+  @extend .cd-heading-2;
 
-  .field--name-field-sidebar &,
-  .field--name-field-content &,
-  .field--name-field-footer & {
-    font-weight: 400;
+  .cd-layout-sidebar-first {
+    @extend .cd-heading-3;
   }
 }
 
