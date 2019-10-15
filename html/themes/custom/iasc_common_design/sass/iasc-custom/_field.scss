@@ -1,6 +1,7 @@
 .field--name-field-agenda-items,
 .field--name-field-referenced-docs,
-.field--name-field-iasc-group-space {
+.field--name-field-iasc-group-space,
+.field--name-field-info-private {
   > .field__label {
     font-size: 1.5rem;
     font-weight: 400;
@@ -26,7 +27,7 @@
 }
 
 .cd-layout-sidebar-first {
-  > .sidebar-label,
+  .cd-location,
   .field--name-field-contact,
   .field--name-field-meeting-notes,
   .field--name-field-meeting-agendas,
@@ -40,17 +41,21 @@
   .field--name-field-external-link,
   .field--name-group-content-access,
   .field--name-field-ap-responsibility,
-  .field--name-field-referenced-docs {
+  .field--name-field-referenced-docs,
+  .field--name-field-list-title,
+  .field--name-field-host {
     margin-bottom: 2rem !important;
 
-    > .field__label {
+    > .field__label,
+    .cd-sidebar__label {
       font-size: 1.5rem;
       font-weight: 400;
       color: $iasc-primary;
       padding-bottom: 0.5rem;
       text-align: left;
       margin-bottom: 1rem;
-      border-bottom: 2px solid $cd-mid-bluey-grey;
+      //border-bottom: 2px solid $cd-mid-bluey-grey;
+      border-bottom: 1px solid $iasc-primary;
     }
   }
 
@@ -58,6 +63,12 @@
   .node--view-mode-bio-short .field--name-field-organisation {
     margin-bottom: 0 !important;
   }
+}
+
+.cd-layout-sidebar-first > .cd-sidebar,
+.cd-layout-sidebar-first .field--name-field-organisation,
+.cd-layout-sidebar-first .field--name-field-list-title  {
+  margin-bottom: 1rem !important;
 }
 
 .field--name-field-banner-text {
@@ -90,8 +101,29 @@
   }
 }
 
-.field--name-field-membership > .field__items > .field__item + .field__item {
+// This emulates the cd-bullet-list component without being able to output as a ul.
+.field--name-field-meeting-notes > .field__items > .field__item,
+.field--name-field-meeting-agendas > .field__items > .field__item {
+  padding-bottom: 1rem;
+}
+
+.field--name-field-meeting-notes svg,
+.field--name-field-meeting-agendas svg {
+  fill: var(--iasc-highlight);
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+
+.field--name-field-membership > .field__items > .field__item + .field__item,
+.field--name-field-contacts > .field__item + .field__item {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid $cd-mid-bluey-grey;
+}
+
+.field__item p:first-child {
+  margin-top: 0;
 }

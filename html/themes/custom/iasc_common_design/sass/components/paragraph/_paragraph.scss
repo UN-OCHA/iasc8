@@ -120,7 +120,7 @@
   }
 }
 
-.paragraph--type--teaser-grid {
+.cd-layout-content .cd-layout-content .paragraph--type--teaser-grid {
   .field--type-entity-reference-revisions {
     @extend .grid-3-col;
   }
@@ -132,8 +132,7 @@
   }
 }
 
-.paragraph--type--list > h2,
-.paragraph--type--twitter > h2 {
+.paragraph--type--list > h2 {
   font-weight: 700;
   padding-bottom: 0.5rem;
   text-align: center;
@@ -152,7 +151,9 @@
   }
 }
 
-.paragraph--type--contact-list > .field--name-field-contacts > .field__label {
+.paragraph--type--twitter > .cd-sidebar__label,
+.paragraph--type--contact-list > .field--name-field-contacts > .field__label,
+.paragraph--type--contact-list .field--name-field-list-title {
   font-size: 1.5rem;
   font-weight: 400;
   padding-bottom: 0.5rem;
