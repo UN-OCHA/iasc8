@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Link ;
+use Drupal\Core\Url;
+use Drupal\group\Entity\Group;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -146,5 +149,46 @@ function iasc_content_group_insert(EntityInterface $entity) {
   if ($entity->bundle() == 'iasc_space') {
     iasc_content_space_content_defaults($entity->id());
     iasc_content_space_sidebar_defaults($entity->id());
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_content_preprocess_paragraph(&$vars) {
+  $paragraph = $vars['paragraph'];
+  if (!($paragraph instanceof Paragraph)) {
+    return;
+  }
+
+  $bundle = $paragraph->bundle();
+  if ($bundle != 'section_menu') {
+    return;
+  }
+
+  // Check which links needs to be displayed.
+  $group = $paragraph->getParentEntity();
+  if (!($group instanceof Group)) {
+    return;
+  }
+
+  $group_bundle = $group->bundle();
+  if ($group_bundle != 'iasc_space') {
+    return;
+  }
+
+  $supported_types = [
+    'News' => 'announcement',
+    'Events' => 'oa_event',
+    'Documents' => 'oa_wiki_page',
+  ];
+
+  $urls = [];
+  foreach ($supported_types as $label => $bundle) {
+    $content = $group->getContent('group_node:' . $bundle);
+    // If we find a node, add a link to the view.
+    if (count($content) > 0) {
+      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/2605/content/' . $bundle));
+    }
   }
 }
