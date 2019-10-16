@@ -44,3 +44,4 @@ backend_config:
   domain: generic
   optimize: false
   site_hash: true
+  rows: 10

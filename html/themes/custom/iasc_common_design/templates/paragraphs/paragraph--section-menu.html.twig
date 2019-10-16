@@ -46,18 +46,20 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{{ attach_library('iasc_common_design/cd-list') }}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+{% if (section_links) %}
+  {{ attach_library('iasc_common_design/cd-list') }}
+  {% block paragraph %}
+    <div{{ attributes.addClass(classes) }}>
 
     <h2 class="cd-sidebar__label">Sections</h2>
 
-    {% block content %}
-      <ul class="cd-list">
-        {% for section_link in section_links %}
-          <li>{{ section_link }}</li>
-        {% endfor %}
-      </ul>
-    {% endblock %}
-  </div>
-{% endblock paragraph %}
+      {% block content %}
+        <ul class="cd-list">
+          {% for section_link in section_links %}
+            <li>{{ section_link }}</li>
+          {% endfor %}
+        </ul>
+      {% endblock %}
+    </div>
+  {% endblock paragraph %}
+{% endif %}

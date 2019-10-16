@@ -175,9 +175,19 @@ function iasc_content_preprocess_paragraph(&$vars) {
   }
 
   $bundle = $paragraph->bundle();
-  if ($bundle != 'section_menu') {
-    return;
+  switch ($bundle) {
+    case 'section_menu':
+      iasc_content_preprocess_paragraph_iasc_space_section_menu($vars);
+      break;
+
   }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
+  $paragraph = $vars['paragraph'];
 
   // Check which links needs to be displayed.
   $group = $paragraph->getParentEntity();
@@ -185,6 +195,7 @@ function iasc_content_preprocess_paragraph(&$vars) {
     return;
   }
 
+  // Only allowed on spaces.
   $group_bundle = $group->bundle();
   if ($group_bundle != 'iasc_space') {
     return;
