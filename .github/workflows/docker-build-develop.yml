@@ -18,3 +18,8 @@ jobs:
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
         docker build . --file docker/Dockerfile --tag unocha/iasc-site:develop
         docker push unocha/iasc-site:develop
+    - name: Ping Flowdock
+      uses: UN-OCHA/gha-flowdock-notify@v1
+      env:
+        FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
+        FLOWDOCK_MESSAGE: 'Built and pushed a new develop `unocha/iasc-site` image.'

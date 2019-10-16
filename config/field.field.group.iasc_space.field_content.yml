@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
     - paragraphs.paragraphs_type.paragraph_text
+    - paragraphs.paragraphs_type.section_menu
     - paragraphs.paragraphs_type.teaser_item
   module:
     - entity_reference_revisions
@@ -42,6 +43,7 @@ settings:
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
+      section_menu: section_menu
     target_bundles_drag_drop:
       additional_locations:
         enabled: true
@@ -76,10 +78,19 @@ settings:
       list_item:
         enabled: true
         weight: 18
+      contact_list:
+        weight: 19
+        enabled: false
       teaser_grid:
         weight: 24
         enabled: false
       teaser_item:
         enabled: true
         weight: 25
+      section_menu:
+        enabled: true
+        weight: 28
+      twitter:
+        weight: 31
+        enabled: false
 field_type: entity_reference_revisions
