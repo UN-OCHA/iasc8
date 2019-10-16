@@ -27,6 +27,13 @@
   fill: var(--cd-ocha-blue);
 }
 
+.cd-list__image img {
+  max-width: 3rem;
+  max-height: 3rem;
+  width: auto;
+  height: auto;
+}
+
 .cd-list__container {
   flex: 1;
 }
