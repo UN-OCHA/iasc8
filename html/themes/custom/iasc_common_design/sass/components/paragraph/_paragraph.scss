@@ -129,7 +129,12 @@
     @extend .grid-item;
     @extend .grid-item_article;
     padding: 0;
+    margin-bottom: 1rem;
   }
+}
+
+.cd-layout-sidebar-first .paragraph--type--teaser-item {
+  margin-bottom: 2rem;
 }
 
 .paragraph--type--section-menu > .cd-sidebar__label,
