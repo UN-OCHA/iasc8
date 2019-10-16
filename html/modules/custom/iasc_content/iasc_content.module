@@ -226,12 +226,8 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
  * Implements hook_node_access().
  */
 function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $account) {
-  if (!isset($node->group_content_access)) {
-    return;
-  }
-
   // Only check view mode for anonymous users.
-  if ($op === 'view' && $account->isAnonymous()) {
+  if (isset($node->group_content_access) && $op === 'view' && $account->isAnonymous()) {
     // Allow access to nodes marked as being public.
     if ($node->group_content_access->value == 1) {
       return AccessResult::allowed();
@@ -239,6 +235,19 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
 
     // Deny access to nodes marked as being private.
     if ($node->group_content_access->value == 2) {
+      return AccessResult::forbidden();
+    }
+  }
+
+  // Only check view mode for anonymous users.
+  if (isset($node->oa_section_ref) && isset($node->oa_section_ref->entity) && $op === 'view' && $account->isAnonymous()) {
+    // Allow access to Public section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(Public)')) {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to IASC and Donor section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(IASC)') || strpos($node->oa_section_ref->entity->title->value, '(Donor)')) {
       return AccessResult::forbidden();
     }
   }
