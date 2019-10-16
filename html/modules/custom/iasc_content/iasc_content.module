@@ -5,10 +5,13 @@
  * IASC Content helpers.
  */
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
 use Drupal\group\Entity\Group;
+use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -217,4 +220,26 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
   }
 
   $vars['section_links'] = $urls;
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if (!isset($node->group_content_access)) {
+    return;
+  }
+
+  // Only check view mode for anonymous users.
+  if ($op === 'view' && $account->isAnonymous()) {
+    // Allow access to nodes marked as being public.
+    if ($node->group_content_access->value == 1) {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to nodes marked as being private.
+    if ($node->group_content_access->value == 2) {
+      return AccessResult::forbidden();
+    }
+  }
 }
