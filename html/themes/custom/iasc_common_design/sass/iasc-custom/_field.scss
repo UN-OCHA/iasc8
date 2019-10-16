@@ -1,16 +1,3 @@
-.field--name-field-agenda-items,
-.field--name-field-referenced-docs,
-.field--name-field-iasc-group-space,
-.field--name-field-info-private {
-  > .field__label {
-    @extend .cd-heading-3;
-  }
-
-  .field__item {
-    margin-bottom: 1rem;
-  }
-}
-
 .field--name-field-ai-title {
   margin-bottom: 1rem;
   font-weight: bold;
@@ -20,28 +7,32 @@
   margin-bottom: 2rem !important;
 }
 
-.cd-location,
 .field--name-field-contact,
 .field--name-field-meeting-notes,
 .field--name-field-meeting-agendas,
 .field--name-field-oa-section,
 .field--name-field-iasc-audience,
-.field--name-field-category,
 .field--name-field-links,
 .field--name-field-organisation,
 .field--name-field-membership,
-.field--name-field-date-closed,
-.field--name-field-external-link,
 .field--name-group-content-access,
 .field--name-field-ap-responsibility,
 .field--name-field-referenced-docs,
-.field--name-field-list-title,
-.field--name-field-host {
+.field--name-field-host,
+.field--name-field-agenda-items,
+.field--name-field-referenced-docs,
+.field--name-field-iasc-group-space,
+.field--name-field-info-private,
+.field--name-field-oa-media {
   margin-bottom: 2rem !important;
 
-  > .field__label,
-  .cd-sidebar__label {
+  > .field__label {
     @extend .cd-heading-2;
+    //margin-top: 0;
+  }
+
+  .field__item {
+    margin-bottom: 1rem;
   }
 }
 
@@ -52,7 +43,6 @@
   .field--name-field-meeting-agendas,
   .field--name-field-oa-section,
   .field--name-field-iasc-audience,
-  .field--name-field-category,
   .field--name-field-links,
   .field--name-field-organisation,
   .field--name-field-membership,
@@ -61,13 +51,13 @@
   .field--name-group-content-access,
   .field--name-field-ap-responsibility,
   .field--name-field-referenced-docs,
-  .field--name-field-list-title,
   .field--name-field-host {
     margin-bottom: 2rem !important;
 
     > .field__label,
     .cd-sidebar__label {
       @extend .cd-heading-3;
+      //margin-top: 1.5rem;
     }
   }
 
@@ -79,8 +69,7 @@
 }
 
 .cd-layout-sidebar-first > .cd-sidebar,
-.cd-layout-sidebar-first .field--name-field-organisation,
-.cd-layout-sidebar-first .field--name-field-list-title  {
+.cd-layout-sidebar-first .field--name-field-organisation {
   margin-bottom: 1rem !important;
 }
 

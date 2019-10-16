@@ -30,13 +30,22 @@
     margin-bottom: 3rem;
   }
 
-  .block > h2,
+  h2,
   .viewsreference--view-title {
     @extend .cd-heading-2;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .paragraph {
+    margin-bottom: 2rem;
+
+    &.paragraph--type--hero {
+      margin-bottom: 1rem;
+    }
   }
 }
 
-.field--name-field-header,
 .field--name-field-sidebar,
 .field--name-field-content,
 .field--name-field-footer {
@@ -45,6 +54,14 @@
   }
   .paragraph--type--contact-list {
     margin-bottom: 2rem;
+  }
+}
+
+.path-frontpage .field--name-field-content {
+  h2,
+  .viewsreference--view-title {
+    @extend .cd-heading-3;
+    margin-top: 1rem;
   }
 }
 

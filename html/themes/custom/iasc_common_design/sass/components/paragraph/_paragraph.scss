@@ -132,11 +132,13 @@
   }
 }
 
+.paragraph--type--section-menu > .cd-sidebar__label,
 .paragraph--type--twitter > .cd-sidebar__label,
 .paragraph--type--list > h2 {
 
   .cd-layout-with-sidebar & {
     @extend .cd-heading-2;
+    margin-top: 0;
   }
 
   .field--name-field-sidebar &,
