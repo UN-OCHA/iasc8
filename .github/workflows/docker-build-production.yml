@@ -19,7 +19,7 @@ jobs:
         docker build . --file docker/Dockerfile --tag "unocha/iasc-site:${DOCKER_TAG}"
         docker push "unocha/iasc-site:${DOCKER_TAG}"
     - name: Ping Flowdock
-      uses: UN-OCHA/gha-flowfock-notify@master
+      uses: UN-OCHA/gha-flowfock-notify@v1
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_MESSAGE: 'Built and pushed a new production `unocha/iasc-site` image.'
