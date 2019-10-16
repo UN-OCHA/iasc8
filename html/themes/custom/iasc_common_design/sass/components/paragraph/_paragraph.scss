@@ -134,19 +134,18 @@
 
 .paragraph--type--section-menu > .cd-sidebar__label,
 .paragraph--type--twitter > .cd-sidebar__label,
-.paragraph--type--list > h2 {
+.paragraph--type--list > h2,
+.paragraph--type--teaser-grid > h2 {
 
-  .cd-layout-with-sidebar & {
+  .cd-layout-main-content & {
     @extend .cd-heading-2;
     margin-top: 0;
   }
 
-  .field--name-field-sidebar &,
-  .field--name-field-content & {
+  .cd-layout-sidebar-first & {
     @extend .cd-heading-3;
   }
 }
-
 
 .paragraph--type--contact-list > .field--name-field-contacts > .field__label,
 .paragraph--type--contact-list .field--name-field-list-title {
