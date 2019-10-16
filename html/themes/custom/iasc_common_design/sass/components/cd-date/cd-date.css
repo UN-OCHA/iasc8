@@ -16,7 +16,7 @@
 }
 
 .cd-date-month {
-  color: #fff;
+  color: var(--cd-white);
   padding-top: 10px;
   text-transform: uppercase;
 }
