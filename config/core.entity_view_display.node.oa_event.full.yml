@@ -45,7 +45,7 @@ content:
     third_party_settings: {  }
     region: content
   field_additional_locations:
-    label: inline
+    label: above
     weight: 5
     type: entity_reference_revisions_entity_view
     settings:
@@ -79,20 +79,37 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_dial_in_meeting:
+    type: boolean
+    weight: 12
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_host:
-    label: inline
+    label: above
     weight: 0
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
+  field_info_private:
+    type: text_default
+    weight: 11
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_meeting_agendas:
     label: above
     weight: 8
     type: entity_reference_entity_view
     settings:
-      view_mode: link_to_document
+      view_mode: title
       link: false
     third_party_settings: {  }
     region: content
@@ -101,7 +118,7 @@ content:
     weight: 9
     type: entity_reference_entity_view
     settings:
-      view_mode: default
+      view_mode: title
       link: false
     third_party_settings: {  }
     region: content
@@ -138,9 +155,7 @@ content:
     region: content
 hidden:
   comment_node_oa_event: true
-  field_dial_in_meeting: true
   field_iasc_audience: true
-  field_info_private: true
   field_legacy_publish: true
   field_thumbnail: true
   langcode: true

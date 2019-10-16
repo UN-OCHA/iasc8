@@ -17,10 +17,8 @@ dependencies:
     - field.field.group.iasc_space.field_short_name
     - field.field.group.iasc_space.field_sidebar
     - group.type.iasc_space
-    - image.style.thumbnail
   module:
     - datetime
-    - image
     - link
     - media_library
     - paragraphs
@@ -31,22 +29,8 @@ targetEntityType: group
 bundle: iasc_space
 mode: default
 content:
-  field_banner_image:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_banner_position:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_banner_text:
-    weight: 6
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -55,7 +39,7 @@ content:
     region: content
   field_content:
     type: paragraphs
-    weight: 13
+    weight: 9
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -73,13 +57,13 @@ content:
     third_party_settings: {  }
     region: content
   field_date_closed:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_description:
-    weight: 9
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -87,7 +71,7 @@ content:
     type: text_textarea
     region: content
   field_external_link:
-    weight: 14
+    weight: 11
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -95,7 +79,7 @@ content:
     type: link_default
     region: content
   field_group_banner:
-    weight: 3
+    weight: 4
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -103,21 +87,13 @@ content:
     region: content
   field_main_image:
     type: media_library_widget
-    weight: 10
+    weight: 8
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_primary_image:
-    weight: 11
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_responsibilities:
-    weight: 12
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -125,7 +101,7 @@ content:
     type: text_textarea
     region: content
   field_short_name:
-    weight: 7
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -134,7 +110,7 @@ content:
     region: content
   field_sidebar:
     type: paragraphs
-    weight: 15
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -173,4 +149,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_banner_image: true
+  field_banner_position: true
+  field_primary_image: true
   uid: true

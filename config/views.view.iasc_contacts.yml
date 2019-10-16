@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.bio_long
+    - core.entity_view_mode.node.bio_short
     - node.type.contact
     - taxonomy.vocabulary.hosts
   content:
@@ -227,7 +228,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: bio_long
+          view_mode: bio_short
       fields: {  }
       filters:
         status:
@@ -648,6 +649,23 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: cd-user-list
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: bio_long
     cache_metadata:
       max-age: -1
       contexts:

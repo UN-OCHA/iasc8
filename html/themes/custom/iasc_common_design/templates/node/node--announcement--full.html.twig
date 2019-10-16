@@ -3,7 +3,7 @@
   {% block section %}
     <section class="cd-layout-two-col">
 
-      <div class="cd-layout-content">
+      <div class="cd-layout-main-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_links', 'field_contact', 'oa_section_ref', 'og_group_ref', 'field_iasc_audience', 'field_referenced_docs') }}
         {{ content.field_content }}
         {{ content.field_referenced_docs }}

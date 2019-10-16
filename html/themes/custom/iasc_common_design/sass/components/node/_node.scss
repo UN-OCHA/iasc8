@@ -30,22 +30,38 @@
     margin-bottom: 3rem;
   }
 
-  .block > h2,
+  h2,
   .viewsreference--view-title {
-    font-weight: 700;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    @extend .cd-heading-2;
     text-align: center;
-    border-bottom: 2px solid $cd-mid-bluey-grey;
+    margin-top: 0;
+  }
+
+  .paragraph {
+    margin-bottom: 2rem;
+
+    &.paragraph--type--hero {
+      margin-bottom: 1rem;
+    }
   }
 }
 
-.field--name-field-header,
 .field--name-field-sidebar,
 .field--name-field-content,
 .field--name-field-footer {
   .paragraph {
     margin-bottom: 1rem;
+  }
+  .paragraph--type--contact-list {
+    margin-bottom: 2rem;
+  }
+}
+
+.path-frontpage .field--name-field-content {
+  h2,
+  .viewsreference--view-title {
+    @extend .cd-heading-3;
+    margin-top: 1rem;
   }
 }
 

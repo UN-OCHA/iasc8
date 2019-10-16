@@ -57,12 +57,12 @@
     {% block section %}
       <section class="cd-layout-two-col">
 
-        <div class="cd-layout-content">
+        <div class="cd-layout-main-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
           {{ content.field_content }}
         </div>
 
-        {% if content.field_sidebar|render %}
+        {% if content.field_date_closed|render or content.field_external_link|render or content.field_sidebar|render %}
           <aside class="cd-layout-sidebar-first" role="complementary">
             {{ content.field_date_closed }}
             {{ content.field_external_link }}

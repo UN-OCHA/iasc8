@@ -82,6 +82,9 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+
+{% set dialIn = node.field_dial_in_meeting.0.value %}
+
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -105,7 +108,7 @@
     {% block section %}
     <section class="cd-layout-two-col">
 
-      <div class="cd-layout-content">
+      <div class="cd-layout-main-content">
 
         <div class="cd-teaser__date">
           {{ content.field_oa_date }}
@@ -122,15 +125,25 @@
 
         </div>
 
-        {{ content|without('field_oa_date', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes') }}
+        {{ content|without('field_oa_date', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_additional_locations', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes', 'field_dial_in_meeting', 'field_info_private') }}
         {{ content.field_content }}
+
+        {% if dialIn or content.field_info_private %}
+          <div class="cd-attn">
+            {{ content.field_info_private }}
+          </div>
+        {% endif %}
+
       </div>
 
       <aside class="cd-layout-sidebar-first" role="complementary">
-        <div class="sidebar-label"><div class="field__label">{% trans %}Location{% endtrans %}</div></div>
-        {{ content.field_city }}
-        {{ content.field_venue }}
-        {{ content.field_room }}
+        <div class="cd-location">
+          <div class="cd-sidebar__label">{% trans %}Location{% endtrans %}</div>
+          {{ content.field_city }}
+          {{ content.field_additional_locations }}
+          {{ content.field_venue }}
+          {{ content.field_room }}
+        </div>
         {{ content.field_host }}
         {{ content.field_contact }}
         {{ content.field_meeting_agendas }}
