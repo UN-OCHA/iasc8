@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+
+name: Flowdock Notification Demo
+jobs:
+  flowdockNotification:
+    name: Flowdock Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Flowdock Notification
+      uses: UN-OCHA/gha-flowdock-notify@master
+      env:
+        FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
