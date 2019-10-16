@@ -24,7 +24,6 @@
 }
 
 .grid-item_article {
-
   > h3 {
     text-transform: unset;
   }
@@ -111,7 +110,7 @@
 
     .grid-3-col {
       display: grid;
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
       grid-gap: 1rem;
     }
 
