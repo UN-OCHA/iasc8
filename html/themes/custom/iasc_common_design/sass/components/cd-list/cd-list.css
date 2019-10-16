@@ -1,6 +1,6 @@
 .cd-list {
   margin: 0;
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   list-style: none;
 }
 
@@ -28,8 +28,6 @@
 }
 
 .cd-list__image img {
-  max-width: 3rem;
-  max-height: 3rem;
   width: auto;
   height: auto;
 }
