@@ -5,12 +5,20 @@
   @include desktop {
     //padding: 0 1rem;
     margin-bottom: 1rem;
-    width: 32%;
+    width: 31%;
     float: left;
 
     &:nth-child(odd) {
       margin-right: 1rem;
-      clear: both;
+    }
+  }
+}
+
+/* IE 11 fix for clearing floated items */
+@media screen and (-ms-high-contrast: none) {
+  .grid-item {
+    @include desktop {
+      min-height: 24rem;
     }
   }
 }
