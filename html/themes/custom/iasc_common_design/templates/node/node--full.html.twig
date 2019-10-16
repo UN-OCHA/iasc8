@@ -106,7 +106,7 @@
     {% block section %}
       <section class="cd-layout-two-col">
 
-        <div class="cd-layout-content">
+        <div class="cd-layout-main-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_section', 'field_category', 'og_group_ref', 'field_contact') }}
           {{ content.field_content }}
         </div>

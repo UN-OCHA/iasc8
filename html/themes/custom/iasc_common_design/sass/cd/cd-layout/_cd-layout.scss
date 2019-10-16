@@ -107,11 +107,11 @@ body {
   @extend .cd-sidebar;
 }
 
-.cd-layout-container main.cd-container .cd-layout-content {
+.cd-layout-container main.cd-container .cd-layout-main-content {
   @extend .cd-main;
 }
 
-.cd-layout-with-sidebar .cd-layout-content,
+.cd-layout-with-sidebar .cd-layout-main-content,
 .cd-layout-with-section-sidebar .field--name-field-content {
   @include tablet {
     margin-right: 3rem;
