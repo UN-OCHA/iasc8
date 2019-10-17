@@ -1,0 +1,20 @@
+uuid: ab2300f3-9f0a-4187-bdc4-027036fe6aa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: taxonomy_term.field_featured_media
+field_name: field_featured_media
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

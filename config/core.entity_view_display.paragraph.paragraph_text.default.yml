@@ -3,30 +3,44 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.paragraph_text.field_image_align
+    - field.field.paragraph.paragraph_text.field_para_title
     - field.field.paragraph.paragraph_text.field_paragraph_layout
     - field.field.paragraph.paragraph_text.field_paragraph_text
+    - field.field.paragraph.paragraph_text.field_teaser_image
     - paragraphs.paragraphs_type.paragraph_text
   module:
-    - options
     - text
 id: paragraph.paragraph_text.default
 targetEntityType: paragraph
 bundle: paragraph_text
 mode: default
 content:
-  field_paragraph_layout:
-    label: above
-    weight: 1
-    type: list_default
-    settings: {  }
-    third_party_settings: {  }
+  field_para_title:
+    type: string
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_paragraph_text:
     label: hidden
-    weight: 0
+    weight: 1
     type: text_default
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_teaser_image:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
 hidden:
+  field_image_align: true
+  field_paragraph_layout: true
   search_api_excerpt: true

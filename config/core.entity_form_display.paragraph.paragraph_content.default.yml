@@ -5,27 +5,31 @@ dependencies:
   config:
     - field.field.paragraph.paragraph_content.field_oa_content_layout
     - field.field.paragraph.paragraph_content.field_oa_related_content
+    - field.field.paragraph.paragraph_content.field_para_title
     - paragraphs.paragraphs_type.paragraph_content
 id: paragraph.paragraph_content.default
 targetEntityType: paragraph
 bundle: paragraph_content
 mode: default
 content:
-  field_oa_content_layout:
-    weight: 2
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_oa_related_content:
     weight: 1
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_para_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
 hidden:
   created: true
+  field_oa_content_layout: true
   status: true

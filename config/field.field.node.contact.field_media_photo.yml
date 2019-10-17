@@ -1,0 +1,21 @@
+uuid: bdb34e81-5ba4-452e-a892-8312d708cf0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_photo
+    - node.type.contact
+id: node.contact.field_media_photo
+field_name: field_media_photo
+entity_type: node
+bundle: contact
+label: 'Media field for image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference
