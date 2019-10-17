@@ -16,10 +16,20 @@ cd-bullet-list:
     theme:
       sass/components/cd-bullet-list/cd-bullet-list.css: {}
 
+cd-button:
+  css:
+    theme:
+      sass/components/cd-button/cd-button.css: {}
+
 cd-date:
   css:
     theme:
       sass/components/cd-date/cd-date.css: {}
+
+cd-filters:
+  css:
+    theme:
+      sass/components/cd-filters/cd-filters.css: {}
 
 cd-hero:
   css:

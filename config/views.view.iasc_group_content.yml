@@ -72,14 +72,11 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: html_list
+        type: default
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: false
-          type: ul
-          wrapper_class: item-list
-          class: ''
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
