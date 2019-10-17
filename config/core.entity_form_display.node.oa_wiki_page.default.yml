@@ -28,6 +28,7 @@ dependencies:
     - image
     - media_library
     - path
+    - select2
     - text
 id: node.oa_wiki_page.default
 targetEntityType: node
@@ -79,10 +80,10 @@ content:
     weight: 21
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_legacy_publish:
     weight: 13
