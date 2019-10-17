@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.paragraphs_editor_preview
-    - field.field.paragraph.paragraph_text.field_paragraph_layout
     - field.field.paragraph.paragraph_text.field_paragraph_text
     - paragraphs.paragraphs_type.paragraph_text
 id: paragraph.paragraph_text.paragraphs_editor_preview
@@ -13,6 +12,5 @@ bundle: paragraph_text
 mode: paragraphs_editor_preview
 content: {  }
 hidden:
-  field_paragraph_layout: true
   field_paragraph_text: true
   search_api_excerpt: true

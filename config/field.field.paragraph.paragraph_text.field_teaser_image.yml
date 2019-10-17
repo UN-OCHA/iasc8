@@ -1,0 +1,30 @@
+uuid: 042226a9-0231-4cbe-ad9e-c041794ffde8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_teaser_image
+    - media.type.image
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.paragraph_text
+id: paragraph.paragraph_text.field_teaser_image
+field_name: field_teaser_image
+entity_type: paragraph
+bundle: paragraph_text
+label: 'Teaser image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

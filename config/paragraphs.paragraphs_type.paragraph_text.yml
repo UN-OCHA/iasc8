@@ -1,9 +1,16 @@
 uuid: 38e4c4ac-c95c-414f-94fa-2e846308d100
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_viewmode
 id: paragraph_text
 label: Text
 icon_uuid: null
 description: 'Migrated from paragraph bundle Text'
-behavior_plugins: {  }
+behavior_plugins:
+  paragraphs_viewmode_behavior:
+    override_mode: default
+    override_available:
+      default: Default
+    override_default: default

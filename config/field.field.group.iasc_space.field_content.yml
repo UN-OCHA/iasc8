@@ -10,10 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.list_item
     - paragraphs.paragraphs_type.membership
-    - paragraphs.paragraphs_type.paragraph_content
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
-    - paragraphs.paragraphs_type.paragraph_text
     - paragraphs.paragraphs_type.section_menu
     - paragraphs.paragraphs_type.teaser_item
   module:
@@ -36,10 +34,8 @@ settings:
       additional_locations: additional_locations
       agenda_items: agenda_items
       membership: membership
-      paragraph_content: paragraph_content
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
-      paragraph_text: paragraph_text
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
@@ -55,8 +51,8 @@ settings:
         enabled: true
         weight: 11
       paragraph_content:
-        enabled: true
         weight: 12
+        enabled: false
       paragraph_media:
         enabled: true
         weight: 13
@@ -64,8 +60,8 @@ settings:
         enabled: true
         weight: 14
       paragraph_text:
-        enabled: true
         weight: 15
+        enabled: false
       hero:
         enabled: true
         weight: 16
@@ -92,5 +88,8 @@ settings:
         weight: 28
       twitter:
         weight: 31
+        enabled: false
+      video:
+        weight: 33
         enabled: false
 field_type: entity_reference_revisions
