@@ -7,10 +7,12 @@
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\file\FileInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\file\FileInterface;
 use Drupal\group\Entity\Group;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
@@ -268,6 +270,18 @@ function iasc_content_file_field_to_media() {
         'field_product_thumbnail' => 'field_thumbnail|image',
         'field_oa_media' => 'field_media_files|file',
       ],
+      'page' => [
+        'field_featured_image' => 'field_banner_image|image',
+      ],
+      'contact' => [
+        'field_photo' => 'field_media_photo|image',
+      ],
+      'oa_discussion_post' => [
+        'field_oa_media' => 'field_media_files|file',
+      ],
+      'oa_worktracker_task' => [
+        'field_oa_media' => 'field_media_files|file',
+      ],
     ],
     'group' => [
       'iasc_group' => [
@@ -276,6 +290,14 @@ function iasc_content_file_field_to_media() {
       'iasc_space' => [
         'field_banner_image' => 'field_group_banner|image',
         'field_primary_image' => 'field_main_image|image',
+      ],
+    ],
+    'taxonomy_term' => [
+      'panopoly_categories' => [
+        'field_featured_image' => 'field_featured_media|image',
+      ],
+      'section_type' => [
+        'field_oa_icon_image' => 'field_icon_image|image',
       ],
     ],
   ];
@@ -291,14 +313,24 @@ function iasc_content_file_field_to_media() {
           $media_type = $parts[1];
         }
 
-        // Only load nodes if from has a value and to is empty.
+        // Make sure to field exists.
+        _iasc_content_media_present($entity_type, $bundle, $to, $media_type);
+
+        // Only load entities if from has a value and to is empty.
         $query = \Drupal::entityQuery($entity_type);
-        $query->condition('type', $bundle);
         $query->exists($from);
         $query->notExists($to);
         $query->range(0, 250);
-        $ids = $query->execute();
 
+        // Filter by bundle.
+        if ($entity_type == 'taxonomy_term') {
+          $query->condition('vid', $bundle);
+        }
+        else {
+          $query->condition('type', $bundle);
+        }
+
+        $ids = $query->execute();
         $entities = \Drupal::entityTypeManager()
           ->getStorage($entity_type)
           ->loadMultiple($ids);
@@ -321,7 +353,7 @@ function iasc_content_file_field_to_media() {
           if (!empty($entity->{$to}->entity)) {
             $entity->save();
             \Drupal::logger('iasc_content')->notice(
-              sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->getTitle(), $entity->id())
+              sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->label(), $entity->id())
             );
           }
         }
@@ -356,4 +388,39 @@ function _iasc_content_media_entity(FileInterface $file, $alt, $bundle) {
   ]);
   $media_entity->save();
   return $media_entity;
+}
+
+/**
+ * Make sure field exists.
+ */
+function _iasc_content_media_present($entity_type, $bundle, $field_name, $media_type) {
+  $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+  if (isset($fields[$field_name])) {
+    return;
+  }
+
+  // Field doesn't exist, create it.
+  if (!FieldStorageConfig::loadByName($entity_type, $field_name)) {
+    $field_storage = FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => $entity_type,
+      'type' => 'entity_reference',
+      'settings' => [
+        'target_type' => 'media',
+      ],
+    ]);
+    $field_storage->save();
+  }
+
+  $field = FieldConfig::create([
+    'field_name' => $field_name,
+    'entity_type' => $entity_type,
+    'bundle' => $bundle,
+    'label' => sprintf('Media field for %s', $media_type),
+  ]);
+  $field->save();
+
+  \Drupal::logger('iasc_content')->notice(
+    sprintf('Field %s created.', $field_name)
+  );
 }
