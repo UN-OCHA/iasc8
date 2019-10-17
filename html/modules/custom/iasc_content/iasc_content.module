@@ -7,10 +7,12 @@
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\file\FileInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
 use Drupal\group\Entity\Group;
+use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
@@ -251,4 +253,70 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
       return AccessResult::forbidden();
     }
   }
+}
+
+/**
+ * Convert file field to media field.
+ */
+function iasc_content_file_field_to_media() {
+  $convertions = [
+    'node' => [
+      'panopoly_page' => [
+        'field_featured_image' => 'field_banner_image',
+      ],
+    ],
+  ];
+
+  foreach ($convertions as $entity_type => $entity_info) {
+    foreach ($entity_info as $bundle => $bundle_info) {
+      $entities = \Drupal::entityTypeManager()
+      ->getStorage($entity_type)
+      ->loadByProperties(['type' => [$bundle]]);
+      foreach ($entities as $entity) {
+        foreach ($bundle_info as $from => $to) {
+          // Verify that the file field has a value.
+          if (!empty($entity->{$from}->entity)) {
+            // Create the new media entity and assign it to the new field.
+            $entity->{$to}->entity = _iasc_content_media_image_entity(
+              $entity->{$from}->entity,
+              $entity->{$from}->alt,
+              'image'
+            );
+            $entity->save();
+            \Drupal::logger('iasc_content')->notice(
+              sprintf('Updated image for node "%s".', $entity->getTitle())
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Creates a media image entity from a file entity.
+ *
+ * @param \Drupal\file\FileInterface $file
+ *   The existing file object.
+ * @param string $alt
+ *   The image alt text.
+ *
+ * @return \Drupal\media_entity\Entity\Media
+ *   The media entity.
+ *
+ * @see https://chromatichq.com/blog/migrating-drupal-file-fields-media-entities-without-migrate-module
+ */
+function _iasc_content_media_image_entity(FileInterface $file, $alt = NULL, $bundle) {
+  $media_entity = Media::create([
+    'bundle' => $bundle,
+    'uid' => '1',
+    'name' => $file->alt,
+    'status' => TRUE,
+    'field_media_image' => [
+      'target_id' => $file->id(),
+      'alt' => $alt,
+    ],
+  ]);
+  $media_entity->save();
+  return $media_entity;
 }
