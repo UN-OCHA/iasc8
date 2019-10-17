@@ -3,20 +3,18 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 button,
+.button,
 input[type='submit'] {
-  -webkit-appearance: none;
+  font-family: $cd-font;
   @include font-size($cd-font-size-small);
-  color: $cd-dark-grey;
+  -webkit-appearance: none;
   background: none;
   border: 0 none;
   box-shadow: none;
-  font-family: $cd-font;
 }
 
-.btn-primary,
 .form-actions input[type='submit'] {
   display: inline-block;
-  border-radius: 4px;
   background: $cd-ocha-blue;
   text-transform: uppercase;
   text-decoration: none;
@@ -29,9 +27,4 @@ input[type='submit'] {
     background: darken($cd-ocha-blue, 10%);
     color: $cd-white;
   }
-}
-
-.btn-primary {
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
 }
