@@ -13,7 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.paragraph_content
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
-    - paragraphs.paragraphs_type.paragraph_text
     - paragraphs.paragraphs_type.section_menu
     - paragraphs.paragraphs_type.teaser_item
   module:
@@ -39,7 +38,6 @@ settings:
       paragraph_content: paragraph_content
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
-      paragraph_text: paragraph_text
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
@@ -64,8 +62,8 @@ settings:
         enabled: true
         weight: 14
       paragraph_text:
-        enabled: true
         weight: 15
+        enabled: false
       hero:
         enabled: true
         weight: 16
@@ -92,5 +90,8 @@ settings:
         weight: 28
       twitter:
         weight: 31
+        enabled: false
+      video:
+        weight: 33
         enabled: false
 field_type: entity_reference_revisions
