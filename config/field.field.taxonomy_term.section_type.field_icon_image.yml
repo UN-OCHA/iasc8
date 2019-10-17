@@ -1,0 +1,21 @@
+uuid: 1ba1fcd0-1d0a-48ba-96ff-9d7a10d61823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon_image
+    - taxonomy.vocabulary.section_type
+id: taxonomy_term.section_type.field_icon_image
+field_name: field_icon_image
+entity_type: taxonomy_term
+bundle: section_type
+label: 'Media field for image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference
