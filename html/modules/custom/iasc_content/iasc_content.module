@@ -306,7 +306,7 @@ function iasc_content_file_field_to_media() {
         foreach ($entities as $entity) {
           foreach ($entity->get($from) as $source) {
             if ($source->entity) {
-              $media_entity =_iasc_content_media_image_entity(
+              $media_entity = _iasc_content_media_entity(
                 $source->entity,
                 $source->alt,
                 $media_type
@@ -343,7 +343,7 @@ function iasc_content_file_field_to_media() {
  *
  * @see https://chromatichq.com/blog/migrating-drupal-file-fields-media-entities-without-migrate-module
  */
-function _iasc_content_media_image_entity(FileInterface $file, $alt = NULL, $bundle) {
+function _iasc_content_media_entity(FileInterface $file, $alt, $bundle) {
   $media_entity = Media::create([
     'bundle' => $bundle,
     'uid' => '1',
