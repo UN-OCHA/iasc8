@@ -5,10 +5,15 @@
  * IASC Content helpers.
  */
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\file\FileInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
 use Drupal\group\Entity\Group;
+use Drupal\media\Entity\Media;
+use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -217,4 +222,138 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
   }
 
   $vars['section_links'] = $urls;
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  // Only check view mode for anonymous users.
+  if (isset($node->group_content_access) && $op === 'view' && $account->isAnonymous()) {
+    // Allow access to nodes marked as being public.
+    if ($node->group_content_access->value == 1) {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to nodes marked as being private.
+    if ($node->group_content_access->value == 2) {
+      return AccessResult::forbidden();
+    }
+  }
+
+  // Only check view mode for anonymous users.
+  if (isset($node->oa_section_ref) && isset($node->oa_section_ref->entity) && $op === 'view' && $account->isAnonymous()) {
+    // Allow access to Public section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(Public)')) {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to IASC and Donor section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(IASC)') || strpos($node->oa_section_ref->entity->title->value, '(Donor)')) {
+      return AccessResult::forbidden();
+    }
+  }
+}
+
+/**
+ * Convert file field to media field.
+ */
+function iasc_content_file_field_to_media() {
+  $convertions = [
+    'node' => [
+      'panopoly_page' => [
+        'field_featured_image' => 'field_banner_image|image',
+      ],
+      'oa_wiki_page' => [
+        'field_product_thumbnail' => 'field_thumbnail|image',
+        'field_oa_media' => 'field_media_files|file',
+      ],
+    ],
+    'group' => [
+      'iasc_group' => [
+        'field_primary_image' => 'field_group_banner|image',
+      ],
+      'iasc_space' => [
+        'field_banner_image' => 'field_group_banner|image',
+        'field_primary_image' => 'field_main_image|image',
+      ],
+    ],
+  ];
+
+  foreach ($convertions as $entity_type => $entity_info) {
+    foreach ($entity_info as $bundle => $bundle_info) {
+      foreach ($bundle_info as $from => $to_info) {
+        // Explode to field to get media type.
+        $parts = explode('|', $to_info);
+        $to = $parts[0];
+        $media_type = 'image';
+        if (isset($parts[1])) {
+          $media_type = $parts[1];
+        }
+
+        // Only load nodes if from has a value and to is empty.
+        $query = \Drupal::entityQuery($entity_type);
+        $query->condition('type', $bundle);
+        $query->exists($from);
+        $query->notExists($to);
+        $query->range(0, 250);
+        $ids = $query->execute();
+
+        $entities = \Drupal::entityTypeManager()
+          ->getStorage($entity_type)
+          ->loadMultiple($ids);
+
+        foreach ($entities as $entity) {
+          foreach ($entity->get($from) as $source) {
+            if ($source->entity) {
+              $media_entity = _iasc_content_media_entity(
+                $source->entity,
+                $source->alt,
+                $media_type
+              );
+              $entity->{$to}[] = [
+                'target_id' => $media_entity->id(),
+              ];
+            }
+          }
+
+          // Save if the new field has content.
+          if (!empty($entity->{$to}->entity)) {
+            $entity->save();
+            \Drupal::logger('iasc_content')->notice(
+              sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->getTitle(), $entity->id())
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Creates a media image entity from a file entity.
+ *
+ * @param \Drupal\file\FileInterface $file
+ *   The existing file object.
+ * @param string $alt
+ *   The image alt text.
+ *
+ * @return \Drupal\media_entity\Entity\Media
+ *   The media entity.
+ *
+ * @see https://chromatichq.com/blog/migrating-drupal-file-fields-media-entities-without-migrate-module
+ */
+function _iasc_content_media_entity(FileInterface $file, $alt, $bundle) {
+  $media_entity = Media::create([
+    'bundle' => $bundle,
+    'uid' => '1',
+    'name' => $file->alt,
+    'status' => TRUE,
+    'field_media_' . $bundle => [
+      'target_id' => $file->id(),
+      'alt' => $alt,
+    ],
+  ]);
+  $media_entity->save();
+  return $media_entity;
 }

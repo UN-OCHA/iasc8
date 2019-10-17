@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.oa_wiki_page.field_document_type
     - field.field.node.oa_wiki_page.field_iasc_audience
     - field.field.node.oa_wiki_page.field_legacy_publish
+    - field.field.node.oa_wiki_page.field_media_files
     - field.field.node.oa_wiki_page.field_oa_media
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
@@ -28,6 +29,7 @@ dependencies:
     - image
     - media_library
     - path
+    - select2
     - text
 id: node.oa_wiki_page.default
 targetEntityType: node
@@ -79,10 +81,10 @@ content:
     weight: 21
     settings:
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_legacy_publish:
     weight: 13
@@ -90,6 +92,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_media_files:
+    type: media_library_widget
+    weight: 26
+    settings:
+      media_types: {  }
     third_party_settings: {  }
     region: content
   field_oa_media:

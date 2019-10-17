@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.oa_wiki_page.field_document_type
     - field.field.node.oa_wiki_page.field_iasc_audience
     - field.field.node.oa_wiki_page.field_legacy_publish
+    - field.field.node.oa_wiki_page.field_media_files
     - field.field.node.oa_wiki_page.field_oa_media
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
@@ -23,7 +24,6 @@ dependencies:
     - node.type.oa_wiki_page
   module:
     - datetime
-    - file
     - text
     - user
 id: node.oa_wiki_page.full
@@ -34,7 +34,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -46,14 +46,14 @@ content:
       link: true
     third_party_settings: {  }
     region: content
-  field_oa_media:
-    label: above
-    weight: 2
-    type: file_default
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
+  field_media_files:
+    type: entity_reference_label
+    weight: 1
     region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_published_date:
     type: datetime_default
     weight: 0
@@ -77,6 +77,7 @@ hidden:
   field_document_type: true
   field_iasc_audience: true
   field_legacy_publish: true
+  field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
   field_thumbnail: true
