@@ -9,8 +9,8 @@ id: paragraph.membership.field_position
 field_name: field_position
 entity_type: paragraph
 bundle: membership
-label: Position
-description: ''
+label: 'Position (Legacy)'
+description: 'Old field, do not use'
 required: false
 translatable: false
 default_value: {  }

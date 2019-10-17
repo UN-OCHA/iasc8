@@ -1,0 +1,75 @@
+uuid: b6125679-73eb-44aa-8cba-df6da5961155
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_member_position
+field_name: field_member_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: chair
+      label: Chair
+    -
+      value: champion
+      label: Champion
+    -
+      value: co-chair
+      label: Co-Chair
+    -
+      value: 'co-chair hftt'
+      label: 'Co-Chair HFTT'
+    -
+      value: 'co-chair, revitalizing principled humanitarian action task team'
+      label: 'Co-Chair, Revitalizing Principled Humanitarian Action Task Team'
+    -
+      value: co-champion
+      label: Co-Champion
+    -
+      value: contact
+      label: Contact
+    -
+      value: coordinator
+      label: Coordinator
+    -
+      value: 'focal point'
+      label: 'Focal Point'
+    -
+      value: 'focal point for iasc champion'
+      label: 'Focal Point for IASC Champion'
+    -
+      value: help
+      label: Help
+    -
+      value: info
+      label: Info
+    -
+      value: member
+      label: Member
+    -
+      value: members
+      label: members
+    -
+      value: secondary
+      label: Secondary
+    -
+      value: 'secondary member'
+      label: 'Secondary Member'
+    -
+      value: secretariat
+      label: Secretariat
+    -
+      value: 'staff development associate'
+      label: 'Staff Development Associate'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

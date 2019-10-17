@@ -5,15 +5,18 @@ dependencies:
   config:
     - field.field.paragraph.membership.field_body_membership
     - field.field.paragraph.membership.field_contact_category
+    - field.field.paragraph.membership.field_member_position
     - field.field.paragraph.membership.field_position
     - paragraphs.paragraphs_type.membership
+  module:
+    - options
 id: paragraph.membership.default
 targetEntityType: paragraph
 bundle: membership
 mode: default
 content:
   field_body_membership:
-    weight: 3
+    weight: 2
     label: above
     settings:
       link: true
@@ -22,19 +25,19 @@ content:
     region: content
   field_contact_category:
     label: inline
-    weight: 2
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_position:
-    label: inline
     weight: 1
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_member_position:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
 hidden:
+  field_position: true
   search_api_excerpt: true
