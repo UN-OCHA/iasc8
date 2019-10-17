@@ -398,12 +398,12 @@ function _iasc_content_media_present($entity_type, $bundle, $field_name, $media_
   ]);
   $field_storage->save();
 
-  $field = FieldConfig::create(array(
+  $field = FieldConfig::create([
     'field_name' => $field_name,
     'entity_type' => $entity_type,
     'bundle' => $bundle,
     'label' => sprintf('Media field for %s', $media_type),
-  ));
+  ]);
   $field->save();
 
   \Drupal::logger('iasc_content')->notice(
