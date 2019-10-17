@@ -1,0 +1,34 @@
+uuid: 92e36257-a03c-4ee1-a3a1-41773258e089
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_files
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_media_files
+field_name: field_media_files
+entity_type: node
+bundle: oa_wiki_page
+label: File(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: file
+field_type: entity_reference
