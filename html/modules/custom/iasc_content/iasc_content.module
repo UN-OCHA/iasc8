@@ -270,6 +270,18 @@ function iasc_content_file_field_to_media() {
         'field_product_thumbnail' => 'field_thumbnail|image',
         'field_oa_media' => 'field_media_files|file',
       ],
+      'page' => [
+        'field_featured_image' => 'field_banner_image|image',
+      ],
+      'contact' => [
+        'field_photo' => 'field_media_photo|image',
+      ],
+      'oa_discussion_post' => [
+        'field_oa_media' => 'field_media_files|file',
+      ],
+      'oa_worktracker_task' => [
+        'field_oa_media' => 'field_media_files|file',
+      ],
     ],
     'group' => [
       'iasc_group' => [
@@ -388,15 +400,17 @@ function _iasc_content_media_present($entity_type, $bundle, $field_name, $media_
   }
 
   // Field doesn't exist, create it.
-  $field_storage = FieldStorageConfig::create([
-    'field_name' => $field_name,
-    'entity_type' => $entity_type,
-    'type' => 'entity_reference',
-    'settings' => [
-      'target_type' => 'media',
-    ],
-  ]);
-  $field_storage->save();
+  if (!FieldStorageConfig::loadByName($entity_type, $field_name)) {
+    $field_storage = FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => $entity_type,
+      'type' => 'entity_reference',
+      'settings' => [
+        'target_type' => 'media',
+      ],
+    ]);
+    $field_storage->save();
+  }
 
   $field = FieldConfig::create([
     'field_name' => $field_name,
