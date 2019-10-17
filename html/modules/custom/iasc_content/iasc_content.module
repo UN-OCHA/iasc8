@@ -262,29 +262,66 @@ function iasc_content_file_field_to_media() {
   $convertions = [
     'node' => [
       'panopoly_page' => [
-        'field_featured_image' => 'field_banner_image',
+        'field_featured_image' => 'field_banner_image|image',
+      ],
+      'oa_wiki_page' => [
+        'field_product_thumbnail' => 'field_thumbnail|image',
+        'field_oa_media' => 'field_media_files|file',
+      ],
+    ],
+    'group' => [
+      'iasc_group' => [
+        'field_primary_image' => 'field_group_banner|image',
+      ],
+      'iasc_space' => [
+        'field_banner_image' => 'field_group_banner|image',
+        'field_primary_image' => 'field_main_image|image',
       ],
     ],
   ];
 
   foreach ($convertions as $entity_type => $entity_info) {
     foreach ($entity_info as $bundle => $bundle_info) {
-      $entities = \Drupal::entityTypeManager()
-      ->getStorage($entity_type)
-      ->loadByProperties(['type' => [$bundle]]);
-      foreach ($entities as $entity) {
-        foreach ($bundle_info as $from => $to) {
-          // Verify that the file field has a value.
-          if (!empty($entity->{$from}->entity)) {
-            // Create the new media entity and assign it to the new field.
-            $entity->{$to}->entity = _iasc_content_media_image_entity(
-              $entity->{$from}->entity,
-              $entity->{$from}->alt,
-              'image'
-            );
+      foreach ($bundle_info as $from => $to_info) {
+        // Explode to field to get media type.
+        $parts = explode('|', $to_info);
+        $to = $parts[0];
+        $media_type = 'image';
+        if (isset($parts[1])) {
+          $media_type = $parts[1];
+        }
+
+        // Only load nodes if from has a value and to is empty.
+        $query = \Drupal::entityQuery($entity_type);
+        $query->condition('type', $bundle);
+        $query->exists($from);
+        $query->notExists($to);
+        $query->range(0, 250);
+        $ids = $query->execute();
+
+        $entities = \Drupal::entityTypeManager()
+          ->getStorage($entity_type)
+          ->loadMultiple($ids);
+
+        foreach ($entities as $entity) {
+          foreach ($entity->get($from) as $source) {
+            if ($source->entity) {
+              $media_entity =_iasc_content_media_image_entity(
+                $source->entity,
+                $source->alt,
+                $media_type
+              );
+              $entity->{$to}[] = [
+                'target_id' => $media_entity->id(),
+              ];
+            }
+          }
+
+          // Save if the new field has content.
+          if (!empty($entity->{$to}->entity)) {
             $entity->save();
             \Drupal::logger('iasc_content')->notice(
-              sprintf('Updated image for node "%s".', $entity->getTitle())
+              sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->getTitle(), $entity->id())
             );
           }
         }
@@ -312,7 +349,7 @@ function _iasc_content_media_image_entity(FileInterface $file, $alt = NULL, $bun
     'uid' => '1',
     'name' => $file->alt,
     'status' => TRUE,
-    'field_media_image' => [
+    'field_media_' . $bundle => [
       'target_id' => $file->id(),
       'alt' => $alt,
     ],
