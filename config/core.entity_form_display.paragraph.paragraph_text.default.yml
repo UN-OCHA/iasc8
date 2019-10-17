@@ -3,17 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.paragraph_text.field_image_align
     - field.field.paragraph.paragraph_text.field_para_title
     - field.field.paragraph.paragraph_text.field_paragraph_layout
     - field.field.paragraph.paragraph_text.field_paragraph_text
+    - field.field.paragraph.paragraph_text.field_teaser_image
     - paragraphs.paragraphs_type.paragraph_text
   module:
+    - media_library
     - text
 id: paragraph.paragraph_text.default
 targetEntityType: paragraph
 bundle: paragraph_text
 mode: default
 content:
+  field_image_align:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_para_title:
     type: string_textfield
     weight: 0
@@ -29,6 +38,13 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_teaser_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
 hidden:
   created: true
