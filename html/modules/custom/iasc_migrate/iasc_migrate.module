@@ -63,26 +63,34 @@ function iasc_migrate_node_insert($entity) {
  * Legacy command from Drupal 7 version.
  */
 function oa_buttons_get_command_buttons_options() {
-  return [];
+  return [
+    '_legacy' => 'do not use',
+  ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
 function oa_related_paragraphs_field_allowed_values() {
-  return [];
+  return [
+    '_legacy' => 'do not use',
+  ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
 function oa_sections_field_oa_section_type_menu_allowed_values() {
-  return [];
+  return [
+    0 => 'do not use',
+  ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
 function oa_worktracker_allowed_values_callback() {
-  return [];
+  return [
+    '_legacy' => 'do not use',
+  ];
 }
