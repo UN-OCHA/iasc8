@@ -223,6 +223,34 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
     }
   }
 
+  // Check for custom links.
+  if (isset($paragraph->field_custom_link)) {
+    foreach ($paragraph->field_custom_link as $link) {
+      $url = $link->getUrl();
+
+      // Use link title if set.
+      if (!empty($link->title)) {
+        $link_title = $link->title;
+      }
+      else {
+        if ($url->isExternal()) {
+          // Use url as title.
+          $link_title = $url->toString();
+        }
+        else {
+          // Load title from linked entity.
+          $params = $url->getRouteParameters();
+          $entity = \Drupal::entityTypeManager()
+            ->getStorage(key($params))
+            ->load(reset($params));
+          $link_title = $entity->label();
+        }
+      }
+
+      // Append to the end.
+      $urls[] = Link::fromTextAndUrl($link_title, $url)->toString();
+    }
+  }
   $vars['section_links'] = $urls;
 }
 
