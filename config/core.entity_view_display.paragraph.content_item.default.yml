@@ -1,0 +1,32 @@
+uuid: 97304bae-421e-4647-b842-1735c55f6ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_item.field_para_title
+    - field.field.paragraph.content_item.field_piece_of_content
+    - paragraphs.paragraphs_type.content_item
+id: paragraph.content_item.default
+targetEntityType: paragraph
+bundle: content_item
+mode: default
+content:
+  field_para_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_piece_of_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true
