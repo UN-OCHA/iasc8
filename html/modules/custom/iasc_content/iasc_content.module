@@ -424,3 +424,23 @@ function _iasc_content_media_present($entity_type, $bundle, $field_name, $media_
     sprintf('Field %s created.', $field_name)
   );
 }
+
+/**
+ * Update membership position.
+ */
+function iasc_content_membership_position_to_list() {
+  $query = \Drupal::entityQuery('paragraph');
+  $query->exists('field_position');
+  $query->notExists('field_member_position');
+  $query->condition('type', 'membership');
+  $ids = $query->execute();
+
+  $entities = \Drupal::entityTypeManager()
+    ->getStorage('paragraph')
+    ->loadMultiple($ids);
+
+  foreach ($entities as $entity) {
+    $entity->field_member_position->value = strtolower($entity->field_position->value);
+    $entity->save();
+  }
+}

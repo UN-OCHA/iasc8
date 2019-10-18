@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.membership.field_body_membership
     - field.field.paragraph.membership.field_contact_category
+    - field.field.paragraph.membership.field_member_position
     - field.field.paragraph.membership.field_position
     - paragraphs.paragraphs_type.membership
 id: paragraph.membership.default
@@ -29,14 +30,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_position:
+  field_member_position:
     weight: 1
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true
+  field_position: true
   status: true
