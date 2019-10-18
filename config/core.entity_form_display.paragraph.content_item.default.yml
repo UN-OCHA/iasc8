@@ -1,0 +1,33 @@
+uuid: ce517ca2-e81a-4723-ab09-d65607d95ce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_item.field_para_title
+    - field.field.paragraph.content_item.field_piece_of_content
+    - paragraphs.paragraphs_type.content_item
+id: paragraph.content_item.default
+targetEntityType: paragraph
+bundle: content_item
+mode: default
+content:
+  field_para_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_piece_of_content:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

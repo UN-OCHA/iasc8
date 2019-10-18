@@ -1,0 +1,41 @@
+uuid: eed52803-d8ee-4d4a-bb6e-d5c4d50708a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_piece_of_content
+    - node.type.action_point
+    - node.type.announcement
+    - node.type.oa_discussion_post
+    - node.type.oa_event
+    - node.type.oa_wiki_page
+    - node.type.panopoly_landing_page
+    - node.type.panopoly_page
+    - paragraphs.paragraphs_type.content_item
+id: paragraph.content_item.field_piece_of_content
+field_name: field_piece_of_content
+entity_type: paragraph
+bundle: content_item
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      action_point: action_point
+      announcement: announcement
+      panopoly_page: panopoly_page
+      oa_discussion_post: oa_discussion_post
+      oa_wiki_page: oa_wiki_page
+      oa_event: oa_event
+      panopoly_landing_page: panopoly_landing_page
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: action_point
+field_type: entity_reference

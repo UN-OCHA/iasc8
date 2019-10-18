@@ -300,6 +300,11 @@ function iasc_content_file_field_to_media() {
         'field_oa_icon_image' => 'field_icon_image|image',
       ],
     ],
+    'paragraph' => [
+      'paragraph_media' => [
+        'field_oa_media' => 'field_media|file',
+      ],
+    ],
   ];
 
   foreach ($convertions as $entity_type => $entity_info) {

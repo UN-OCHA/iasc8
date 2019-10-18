@@ -1,0 +1,21 @@
+uuid: 0026342e-f18b-4312-913f-5652400b5215
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - paragraphs.paragraphs_type.paragraph_media
+id: paragraph.paragraph_media.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: paragraph_media
+label: 'Media field for file'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference

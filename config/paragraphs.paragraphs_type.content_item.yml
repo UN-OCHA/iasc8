@@ -1,0 +1,16 @@
+uuid: 26d24e09-e54f-47c6-b501-6b6bb4ee8cf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_viewmode
+id: content_item
+label: 'Content item'
+icon_uuid: null
+description: 'Allows you to embed another piece of content'
+behavior_plugins:
+  paragraphs_viewmode_behavior:
+    override_mode: default
+    override_available:
+      default: Default
+    override_default: default
