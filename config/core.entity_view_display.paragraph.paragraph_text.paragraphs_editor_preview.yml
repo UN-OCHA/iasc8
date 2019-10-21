@@ -13,6 +13,9 @@ bundle: paragraph_text
 mode: paragraphs_editor_preview
 content: {  }
 hidden:
+  field_image_align: true
+  field_para_title: true
   field_paragraph_layout: true
   field_paragraph_text: true
+  field_teaser_image: true
   search_api_excerpt: true
