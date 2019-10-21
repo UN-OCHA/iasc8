@@ -1,0 +1,23 @@
+uuid: 36c24801-50da-45f3-ae80-0580127d54a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.document_type_label
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: documenttypelabel
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:document_type_label'
+settings:
+  id: 'facet_block:document_type_label'
+  label: 'Document Type label'
+  provider: facets
+  label_display: visible
+  block_id: documenttypelabel
+visibility: {  }

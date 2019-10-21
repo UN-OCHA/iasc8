@@ -1,0 +1,23 @@
+uuid: eb888fd1-b065-400e-88c3-48dbe227517b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.product_category_label
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: productcategorylabel
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:product_category_label'
+settings:
+  id: 'facet_block:product_category_label'
+  label: 'Product Category label'
+  provider: facets
+  label_display: visible
+  block_id: productcategorylabel
+visibility: {  }

@@ -7,9 +7,12 @@ dependencies:
     - group
     - node
     - user
+    - taxonomy
     - search_api
   config:
     - field.storage.node.field_iasc_audience
+    - field.storage.node.field_document_type
+    - field.storage.node.field_category
     - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
@@ -95,6 +98,17 @@ field_settings:
     dependencies:
       module:
         - node
+  document_type_label:
+    label: 'Document Type label'
+    datasource_id: 'entity:node'
+    property_path: 'field_document_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_document_type
+      module:
+        - taxonomy
+        - taxonomy
   field_iasc_audience:
     label: Audience
     datasource_id: 'entity:node'
@@ -118,6 +132,17 @@ field_settings:
     indexed_locked: true
     type_locked: true
     hidden: true
+  product_category_label:
+    label: 'Product Category label'
+    datasource_id: 'entity:node'
+    property_path: 'field_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category
+      module:
+        - taxonomy
+        - taxonomy
   rendered_item:
     label: 'Rendered item'
     property_path: rendered_item
