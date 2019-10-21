@@ -10,7 +10,7 @@ id: node.oa_wiki_page.oa_section_ref
 field_name: oa_section_ref
 entity_type: node
 bundle: oa_wiki_page
-label: Section
+label: 'Section (legacy)'
 description: ''
 required: false
 translatable: false
@@ -19,12 +19,10 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    behaviors:
-      views-select-list:
-        status: 1
-    sort:
-      field: _none
-      direction: ASC
     target_bundles:
       oa_section: oa_section
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

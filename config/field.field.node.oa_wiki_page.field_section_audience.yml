@@ -1,0 +1,21 @@
+uuid: 6d96f4c7-8db0-4ff8-ad99-2c0ae1b0137e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_audience
+    - node.type.oa_wiki_page
+  module:
+    - options
+id: node.oa_wiki_page.field_section_audience
+field_name: field_section_audience
+entity_type: node
+bundle: oa_wiki_page
+label: 'Section audience'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

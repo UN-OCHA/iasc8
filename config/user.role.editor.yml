@@ -117,7 +117,6 @@ permissions:
   - 'use manualcrop'
   - 'use media wysiwyg'
   - 'use panels in place editing'
-  - 'use text format iasc_wysiwyg'
   - 'use text format panopoly_wysiwyg_text'
   - 'view own files'
   - 'view own private files'

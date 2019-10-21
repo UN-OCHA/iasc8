@@ -1,0 +1,21 @@
+uuid: a9346f26-bf5b-449d-8a79-2f0207f7f075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.announcement
+  module:
+    - options
+id: node.announcement.field_section
+field_name: field_section
+entity_type: node
+bundle: announcement
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

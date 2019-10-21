@@ -23,48 +23,63 @@ function iasc_content_update_8001() {
 function iasc_content_update_8002() {
   $connection = \Drupal::database();
 
-  $sql = "update {node__body} set body_format = 'basic_html' where body_format IS NULL";
+  $sql = "update {node__body} set body_format = 'basic_html' where body_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node_revision__body} set body_format = 'basic_html' where body_format IS NULL";
+  $sql = "update {node_revision__body} set body_format = 'basic_html' where body_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {group__field_description} set field_description_format = 'basic_html' where field_description_format IS NULL";
+  $sql = "update {group__field_description} set field_description_format = 'basic_html' where field_description_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {group__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL";
+  $sql = "update {group__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node__field_ap_progress_overview} set field_ap_progress_overview_format = 'basic_html' where field_ap_progress_overview_format IS NULL";
+  $sql = "update {node__field_ap_progress_overview} set field_ap_progress_overview_format = 'basic_html' where field_ap_progress_overview_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node_revision__field_ap_progress_overview} set field_ap_progress_overview_format = 'basic_html' where field_ap_progress_overview_format IS NULL";
+  $sql = "update {node_revision__field_ap_progress_overview} set field_ap_progress_overview_format = 'basic_html' where field_ap_progress_overview_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node__field_info_private} set field_info_private_format = 'basic_html' where field_info_private_format IS NULL";
+  $sql = "update {node__field_info_private} set field_info_private_format = 'basic_html' where field_info_private_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node_revision__field_info_private} set field_info_private_format = 'basic_html' where field_info_private_format IS NULL";
+  $sql = "update {node_revision__field_info_private} set field_info_private_format = 'basic_html' where field_info_private_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL";
+  $sql = "update {node__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {node_revision__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL";
+  $sql = "update {node_revision__field_responsibilities} set field_responsibilities_format = 'basic_html' where field_responsibilities_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {paragraph__field_ai_description} set field_ai_description_format = 'basic_html' where field_ai_description_format IS NULL";
+  $sql = "update {paragraph__field_ai_description} set field_ai_description_format = 'basic_html' where field_ai_description_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {paragraph_revision__field_ai_description} set field_ai_description_format = 'basic_html' where field_ai_description_format IS NULL";
+  $sql = "update {paragraph_revision__field_ai_description} set field_ai_description_format = 'basic_html' where field_ai_description_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {paragraph__field_paragraph_text} set field_paragraph_text_format = 'basic_html' where field_paragraph_text_format IS NULL";
+  $sql = "update {paragraph__field_paragraph_text} set field_paragraph_text_format = 'basic_html' where field_paragraph_text_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {paragraph_revision__field_paragraph_text} set field_paragraph_text_format = 'basic_html' where field_paragraph_text_format IS NULL";
+  $sql = "update {paragraph_revision__field_paragraph_text} set field_paragraph_text_format = 'basic_html' where field_paragraph_text_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
 
-  $sql = "update {user__field_user_about} set field_user_about_format = 'basic_html' where field_user_about_format IS NULL";
+  $sql = "update {user__field_user_about} set field_user_about_format = 'basic_html' where field_user_about_format IS NULL or body_format = 'panopoly_wysiwyg_text'";
   $connection->query($sql);
+}
+
+/**
+ * Make sure text format is set everywhere.
+ */
+function iasc_content_update_8003() {
+  // Same for panopoly_wysiwyg_text.
+  iasc_content_update_8002();
+}
+
+/**
+ * Convert oa section field.
+ */
+function iasc_content_update_8004() {
+  iasc_content_convert_oa_section_ref();
 }

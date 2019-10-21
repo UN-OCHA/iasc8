@@ -283,6 +283,19 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
       return AccessResult::forbidden();
     }
   }
+
+  // Only check view mode for anonymous users.
+  if (isset($node->field_section_audience) && isset($node->field_section_audience->value) && $op === 'view' && $account->isAnonymous()) {
+    // Allow access to Public section.
+    if ($node->field_section_audience->value == 'public') {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to IASC and Donor section.
+    if ($node->field_section_audience->value = 'iasc' || $node->field_section_audience->value = 'donor') {
+      return AccessResult::forbidden();
+    }
+  }
 }
 
 /**
@@ -424,7 +437,7 @@ function _iasc_content_media_entity(FileInterface $file, $alt, $bundle) {
 }
 
 /**
- * Make sure field exists.
+ * Make sure media field exists.
  */
 function _iasc_content_media_present($entity_type, $bundle, $field_name, $media_type) {
   $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
@@ -476,4 +489,130 @@ function iasc_content_membership_position_to_list() {
     $entity->field_member_position->value = strtolower($entity->field_position->value);
     $entity->save();
   }
+}
+
+/**
+ * Convert oa_section_ref.
+ */
+function iasc_content_convert_oa_section_ref() {
+  $types = [
+    'announcement',
+    'oa_discussion_post',
+    'oa_event',
+    'oa_wiki_page',
+    'oa_worktracker_task',
+  ];
+
+  foreach ($types as $bundle) {
+    // Make sure field is present.
+    _iasc_content_section_present('node', $bundle, 'field_section');
+    _iasc_content_section_audience_present('node', $bundle, 'field_section_audience');
+
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', $bundle);
+    $query->exists('oa_section_ref');
+    $query->notExists('field_section');
+    $ids = $query->execute();
+
+    $entities = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->loadMultiple($ids);
+
+    foreach ($entities as $entity) {
+      if (!isset($entity->oa_section_ref->entity)) {
+        continue;
+      }
+
+      $old_label = $entity->oa_section_ref->entity->title->value;
+      $parts = explode(' ', $old_label);
+
+      $section = trim($parts[0]);
+      $entity->field_section->value = strtolower($section);
+
+      if (isset($parts[1])) {
+        $section_audience = trim(str_replace(['(', ')'], '', $parts[1]));
+        $entity->field_section_audience->value = strtolower($section_audience);
+      }
+
+      $entity->save();
+    }
+  }
+}
+
+/**
+ * Make sure section field exists.
+ */
+function _iasc_content_section_present($entity_type, $bundle, $field_name) {
+  $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+  if (isset($fields[$field_name])) {
+    return;
+  }
+
+  // Field doesn't exist, create it.
+  if (!FieldStorageConfig::loadByName($entity_type, $field_name)) {
+    $field_storage = FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => $entity_type,
+      'type' => 'list_string',
+      'settings' => [
+        'allowed_values' => [
+          'news' => 'News',
+          'documents' => 'Documents',
+          'meetings' => 'Meetings',
+        ],
+      ],
+    ]);
+    $field_storage->save();
+  }
+
+  $field = FieldConfig::create([
+    'field_name' => $field_name,
+    'entity_type' => $entity_type,
+    'bundle' => $bundle,
+    'label' => 'Section',
+  ]);
+  $field->save();
+
+  \Drupal::logger('iasc_content')->notice(
+    sprintf('Field %s created.', $field_name)
+  );
+}
+
+/**
+ * Make sure section audience field exists.
+ */
+function _iasc_content_section_audience_present($entity_type, $bundle, $field_name) {
+  $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+  if (isset($fields[$field_name])) {
+    return;
+  }
+
+  // Field doesn't exist, create it.
+  if (!FieldStorageConfig::loadByName($entity_type, $field_name)) {
+    $field_storage = FieldStorageConfig::create([
+      'field_name' => $field_name,
+      'entity_type' => $entity_type,
+      'type' => 'list_string',
+      'settings' => [
+        'allowed_values' => [
+          'public' => 'Public',
+          'iasc' => 'IASC',
+          'donor' => 'Donor',
+        ],
+      ],
+    ]);
+    $field_storage->save();
+  }
+
+  $field = FieldConfig::create([
+    'field_name' => $field_name,
+    'entity_type' => $entity_type,
+    'bundle' => $bundle,
+    'label' => 'Section audience',
+  ]);
+  $field->save();
+
+  \Drupal::logger('iasc_content')->notice(
+    sprintf('Field %s created.', $field_name)
+  );
 }
