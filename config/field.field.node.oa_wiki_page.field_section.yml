@@ -1,0 +1,21 @@
+uuid: 6bb2b8f0-6b88-488e-a5a4-99d5b743faf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.oa_wiki_page
+  module:
+    - options
+id: node.oa_wiki_page.field_section
+field_name: field_section
+entity_type: node
+bundle: oa_wiki_page
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: a47bf848-6e51-4abc-9a75-b0a6ce372c60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_audience
+    - node.type.oa_discussion_post
+  module:
+    - options
+id: node.oa_discussion_post.field_section_audience
+field_name: field_section_audience
+entity_type: node
+bundle: oa_discussion_post
+label: 'Section audience'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
