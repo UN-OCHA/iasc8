@@ -209,9 +209,9 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
   }
 
   $supported_types = [
-    'News' => 'announcement',
-    'Events' => 'oa_event',
     'Documents' => 'oa_wiki_page',
+    'Meetings' => 'oa_event',
+    'News' => 'announcement',
   ];
 
   $urls = [];
@@ -219,7 +219,7 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
     $content = $group->getContent('group_node:' . $bundle);
     // If we find a node, add a link to the view.
     if (count($content) > 0) {
-      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/2605/content/' . $bundle))->toString();
+      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label)))->toString();
     }
   }
 

@@ -1,0 +1,9 @@
+uuid: ed748bdf-a24c-4990-b93f-79c60be1cca2
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__iasc_group_content__page_documents
+name: 'search_api:views_page__iasc_group_content__page_documents'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }
