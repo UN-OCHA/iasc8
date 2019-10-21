@@ -89,7 +89,7 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  {% if content.field_product_thumbnail|render or content.field_thumbnail %}
+  {% if content.field_product_thumbnail|render or content.field_thumbnail|render %}
     <div class="cd-article-teaser__image">
       {{ content.field_product_thumbnail }}
       {{ content.field_thumbnail }}

@@ -10,20 +10,13 @@
   }
 }
 
+.paragraph--type--paragraph-text {
+  margin-bottom: 2rem;
+  clear: both;
 
-.paragraph--type--text-and-image {
-
-  padding: 0 0 2rem;
-
-  @include tablet {
-    padding: 0 0 1rem;
-  }
-
-  // helper for @support testing
-  //background: rgba(255, 0, 0, 0.1);
-
-  .field--name-field-image {
+  .field--name-field-teaser-image {
     max-width: 300px;
+    margin-bottom: 1rem;
   }
 
   h2,
@@ -33,88 +26,57 @@
   }
 
   @supports (display: flex) {
-    //background: rgba(0, 255, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
 
-    @include tablet {
-      display: flex;
+    .field--name-field-paragraph-text {
+      order: 2;
     }
 
-    .field--name-field-image {
+    .field--name-field-teaser-image {
+      order: 1;
+    }
+
+    .field--name-field-para-title {
+      flex: 1 0 100%;
+    }
+
+    .field--name-field-paragraph-text {
       @include tablet {
-        flex: 1 0 auto;
+        flex: 1 0 300px;
       }
     }
-  }
 
-  @supports (display: grid) {
-    //background: rgba(0, 0, 255, 0.1);
-    @include tablet {
-      display: grid;
-      grid-template-columns: minmax(300px, 1fr) auto;
+    .field--name-field-teaser-image {
+      @include tablet {
+        flex: 0 1 300px;
+      }
     }
   }
 
   &.paragraph__image--align-left {
-
-    .field--name-field-image {
-      @include tablet {
-        float: left;
-        margin-right: 2rem;
-      }
+    .field--name-field-paragraph-text p:last-child,
+    .field--name-field-paragraph-text p:only-of-type {
+      margin-bottom: 0;
     }
 
-    @supports (display: grid) {
+    .field--name-field-teaser-image {
       @include tablet {
-        grid-template-columns: minmax(300px, 1fr) 2fr;
+        margin-right: 2rem;
       }
     }
   }
 
   &.paragraph__image--align-right {
-
-    .field--name-field-image {
+    .field--name-field-paragraph-text {
       @include tablet {
-        float: right;
-        margin-left: 2rem;
+        margin-right: 2rem;
       }
     }
 
     @supports (display: flex) {
-
-      .field--name-field-image {
-        @include tablet {
-          order: 2;
-        }
-      }
-    }
-
-    @supports (display: grid) {
-      @include tablet {
-        grid-template-columns: 2fr minmax(300px, 1fr);
-      }
-    }
-  }
-
-  &.paragraph__image--align-center {
-
-    .field--name-field-image {
-      margin: 0 auto;
-      max-width: unset;
-    }
-
-    @supports (display: flex) {
-      flex-wrap: wrap;
-
-      .field--name-field-image {
-        @include tablet {
-          flex: 1 0 100%;
-        }
-      }
-    }
-
-    @supports (display: grid) {
-      @include tablet {
-        grid-template-columns: 1fr;
+      .field--name-field-teaser-image {
+        order: 2;
       }
     }
   }
@@ -133,14 +95,22 @@
   }
 }
 
-.cd-layout-sidebar-first .paragraph--type--teaser-item {
-  margin-bottom: 2rem;
+.cd-layout-sidebar-first {
+  .paragraph--type--teaser-item,
+  .paragraph--type--twitter,
+  .paragraph--type--content-item,
+  .paragraph--type--paragraph-content {
+    margin-bottom: 2rem;
+  }
 }
 
 .paragraph--type--section-menu > .cd-sidebar__label,
 .paragraph--type--twitter > .cd-sidebar__label,
 .paragraph--type--list > h2,
-.paragraph--type--teaser-grid > h2 {
+.paragraph--type--teaser-grid > h2,
+.paragraph--type--paragraph-content > .field--name-field-para-title,
+.paragraph--type--content-item .field--name-field-para-title,
+.paragraph--type--paragraph-text .field--name-field-para-title {
 
   .cd-layout-main-content & {
     @extend .cd-heading-2;
