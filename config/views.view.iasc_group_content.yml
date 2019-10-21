@@ -66,6 +66,13 @@ display:
           quantity: 9
       style:
         type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: search_api
         options:
@@ -159,7 +166,20 @@ display:
       filters: {  }
       sorts: {  }
       title: 'IASC Group Content'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: 'Content of {{ audience_label }}'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -274,6 +294,7 @@ display:
         filter_groups: false
         title: false
         cache: false
+        header: false
       filter_groups:
         operator: AND
         groups:
@@ -282,6 +303,20 @@ display:
       display_description: ''
       cache:
         type: none
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: 'Documents of {{ audience_label }}'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -343,12 +378,27 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       title: Meetings
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: 'Meetings of {{ audience_label }}'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -410,12 +460,27 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       title: News
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: 'News of {{ audience_label }}'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
