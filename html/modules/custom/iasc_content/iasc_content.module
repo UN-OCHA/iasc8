@@ -283,6 +283,19 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
       return AccessResult::forbidden();
     }
   }
+
+  // Only check view mode for anonymous users.
+  if (isset($node->field_section_audience) && isset($node->field_section_audience->value) && $op === 'view' && $account->isAnonymous()) {
+    // Allow access to Public section.
+    if ($node->field_section_audience->value == 'public') {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to IASC and Donor section.
+    if ($node->field_section_audience->value = 'iasc' || $node->field_section_audience->value = 'donor') {
+      return AccessResult::forbidden();
+    }
+  }
 }
 
 /**
