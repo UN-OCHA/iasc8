@@ -59,6 +59,5 @@ permissions:
   - 'untrash own oa_worktracker_task content'
   - 'use manualcrop'
   - 'use media wysiwyg'
-  - 'use text format iasc_wysiwyg'
   - 'view revisions'
   - 'view the administration theme'
