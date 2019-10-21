@@ -83,7 +83,7 @@ display:
               article: search_result
               contact: search_result
               oa_discussion_post: search_result
-              oa_event: search_result
+              oa_event: teaser
               oa_section: search_result
               oa_team: search_result
               oa_wiki_page: search_result
