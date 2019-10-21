@@ -1,0 +1,28 @@
+uuid: 145564d8-01f9-4c29-86d7-7265c196e956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_menu.field_custom_link
+    - paragraphs.paragraphs_type.section_menu
+  module:
+    - link
+id: paragraph.section_menu.default
+targetEntityType: paragraph
+bundle: section_menu
+mode: default
+content:
+  field_custom_link:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 43afac24-3c2e-43f0-8675-97c3502281a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_custom_link
+    - paragraphs.paragraphs_type.section_menu
+  module:
+    - link
+id: paragraph.section_menu.field_custom_link
+field_name: field_custom_link
+entity_type: paragraph
+bundle: section_menu
+label: 'Custom link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,21 @@
+uuid: 7bfe5e4f-272f-45e2-a3de-036fcab4c966
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_audience
+    - node.type.announcement
+  module:
+    - options
+id: node.announcement.field_section_audience
+field_name: field_section_audience
+entity_type: node
+bundle: announcement
+label: 'Section audience'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

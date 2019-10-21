@@ -1,0 +1,21 @@
+uuid: c7a6db1a-0e53-4607-8621-5a10701bd999
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.oa_worktracker_task
+  module:
+    - options
+id: node.oa_worktracker_task.field_section
+field_name: field_section
+entity_type: node
+bundle: oa_worktracker_task
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

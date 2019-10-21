@@ -1,0 +1,21 @@
+uuid: 25cc7a79-bbda-4bff-a85e-1a4db1786d58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.oa_discussion_post
+  module:
+    - options
+id: node.oa_discussion_post.field_section
+field_name: field_section
+entity_type: node
+bundle: oa_discussion_post
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 5bbed869-a6a5-42b7-85c3-f6ebee49fd93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_audience
+    - node.type.oa_worktracker_task
+  module:
+    - options
+id: node.oa_worktracker_task.field_section_audience
+field_name: field_section_audience
+entity_type: node
+bundle: oa_worktracker_task
+label: 'Section audience'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

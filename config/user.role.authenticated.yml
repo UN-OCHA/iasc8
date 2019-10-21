@@ -61,6 +61,7 @@ permissions:
   - 'update own event registration'
   - 'use hybridauth'
   - 'use media wysiwyg'
+  - 'use text format iasc_wysiwyg'
   - 'use text format panopoly_wysiwyg_text'
   - 'view any action_point content'
   - 'view any announcement content'
