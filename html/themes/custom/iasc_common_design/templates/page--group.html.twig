@@ -15,7 +15,7 @@
         {{ page.content }}
       </div>{# /.cd-layout-content #}
 
-      {% if page.sidebar_first %}
+      {% if page.sidebar_first|render|striptags|trim %}
         <aside class="cd-layout-sidebar-first" role="complementary">
           {{ page.sidebar_first }}
         </aside>
