@@ -45,6 +45,10 @@ foreach (array_keys($databases['default']['default']) as $key) {
   }
 }
 
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => '/srv/www/config',
+);
+
 // Load everything else from snippets under /srv/www/shared/settings.
 // @TODO: Use some sort of key/value store.
 if (file_exists('/srv/www/shared/settings')) {
