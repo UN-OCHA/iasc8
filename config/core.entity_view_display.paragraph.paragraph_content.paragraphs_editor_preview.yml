@@ -15,4 +15,5 @@ content: {  }
 hidden:
   field_oa_content_layout: true
   field_oa_related_content: true
+  field_para_title: true
   search_api_excerpt: true

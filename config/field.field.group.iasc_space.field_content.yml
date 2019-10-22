@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.list_item
     - paragraphs.paragraphs_type.membership
-    - paragraphs.paragraphs_type.paragraph_content
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
     - paragraphs.paragraphs_type.section_menu
@@ -35,7 +34,6 @@ settings:
       additional_locations: additional_locations
       agenda_items: agenda_items
       membership: membership
-      paragraph_content: paragraph_content
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
       hero: hero
@@ -53,8 +51,8 @@ settings:
         enabled: true
         weight: 11
       paragraph_content:
-        enabled: true
         weight: 12
+        enabled: false
       paragraph_media:
         enabled: true
         weight: 13
@@ -78,6 +76,9 @@ settings:
         weight: 18
       contact_list:
         weight: 19
+        enabled: false
+      content_item:
+        weight: 22
         enabled: false
       teaser_grid:
         weight: 24

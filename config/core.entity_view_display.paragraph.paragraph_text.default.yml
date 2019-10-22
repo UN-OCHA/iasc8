@@ -10,12 +10,20 @@ dependencies:
     - field.field.paragraph.paragraph_text.field_teaser_image
     - paragraphs.paragraphs_type.paragraph_text
   module:
+    - options
     - text
 id: paragraph.paragraph_text.default
 targetEntityType: paragraph
 bundle: paragraph_text
 mode: default
 content:
+  field_image_align:
+    type: list_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_para_title:
     type: string
     weight: 0
@@ -41,6 +49,5 @@ content:
     type: entity_reference_entity_view
     region: content
 hidden:
-  field_image_align: true
   field_paragraph_layout: true
   search_api_excerpt: true

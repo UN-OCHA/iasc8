@@ -87,7 +87,8 @@
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
 .field--name-field-links,
 .field--name-field-referenced-docs,
-.field--name-field-iasc-group-space {
+.field--name-field-iasc-group-space,
+.field--name-field-oa-related-content {
   .field__item a {
     display: block;
     margin-bottom: 1rem;

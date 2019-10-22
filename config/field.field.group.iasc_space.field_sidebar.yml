@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
-    - paragraphs.paragraphs_type.paragraph_text
     - paragraphs.paragraphs_type.teaser_item
   module:
     - entity_reference_revisions
@@ -36,7 +35,6 @@ settings:
       membership: membership
       paragraph_media: paragraph_media
       paragraph_snippet: paragraph_snippet
-      paragraph_text: paragraph_text
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
@@ -60,8 +58,8 @@ settings:
         enabled: true
         weight: 14
       paragraph_text:
-        enabled: true
         weight: 15
+        enabled: false
       hero:
         enabled: true
         weight: 16
@@ -76,6 +74,9 @@ settings:
         weight: 18
       contact_list:
         weight: 19
+        enabled: false
+      content_item:
+        weight: 22
         enabled: false
       teaser_grid:
         weight: 24
