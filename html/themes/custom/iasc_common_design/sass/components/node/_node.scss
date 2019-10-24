@@ -59,23 +59,21 @@
 
 .path-frontpage .field--name-field-content {
   h2,
-  .viewsreference--view-title {
+  .viewsreference--view-title,
+  .cd-sidebar__label {
     @extend .cd-heading-3;
+    margin-top: 1rem;
+  }
+}
+
+.path-frontpage .cd-layout-sidebar-first {
+  h2,
+  .viewsreference--view-title,
+  .cd-sidebar__label {
     margin-top: 1rem;
   }
 }
 
 .node__meta {
   margin-bottom: 2rem;
-}
-
-.node--view-mode-full {
-
-  .field {
-    margin-bottom: 1rem;
-  }
-
-  .field--label-inline {
-    overflow: hidden;
-  }
 }
