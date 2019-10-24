@@ -43,7 +43,7 @@
 
     .field--name-field-paragraph-text {
       @include tablet {
-        flex: 1 0 300px;
+        flex: 0 1 300px;
       }
     }
 
@@ -119,6 +119,26 @@
 
   .cd-layout-sidebar-first & {
     @extend .cd-heading-3;
+  }
+}
+
+.cd-layout-main-content {
+  > .field__items > .field__item {
+    margin-bottom: 2rem;
+  }
+}
+
+.cd-layout-sidebar-first {
+  > .field__items > .field__item {
+    margin-bottom: 2rem;
+  }
+}
+
+.cd-sidebar__label,
+.paragraph--type--list > h2,
+.paragraph--type--teaser-grid > h2 {
+  .cd-layout-sidebar-first & {
+    margin-top: 0;
   }
 }
 

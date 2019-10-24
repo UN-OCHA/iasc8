@@ -2,8 +2,58 @@
   margin-bottom: 1rem;
 }
 
+.cd-filters_btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  background: var(--cd-site-bg-color);
+  color: var(--iasc-secondary);
+  border: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.cd-filters_btn:hover,
+.cd-filters_btn:focus {
+  background: var(--cd-site-bg-color--light);
+  color: var(--iasc-secondary);
+}
+
+.cd-filters_btn:focus {
+  background: var(--cd-site-bg-color--light);
+  outline: 3px solid var(--iasc-secondary);
+  outline-offset: -3px;
+}
+
+/* Some buttons have SVG icons */
+.cd-filters_btn svg {
+  fill: var(--iasc-secondary);
+  width: 26px;
+  height: 26px;
+}
+
+.cd-filters_btn svg.icon--arrow-down {
+  margin-left: auto;
+}
+
+.cd-filters_btn:hover svg,
+.cd-filters_btn:focus svg {
+  fill: var(--iasc-primary);
+}
+
+@media (min-width: 1024px) {
+  .cd-filters_btn svg {
+    width: 22px;
+    height: 22px;
+    padding: 0 0 0 4px;
+  }
+}
+
 .cd-filters_btn.js-open {
-  color: var(--cd-highlight-red);
+  background: var(--cd-site-bg-color--light);
   position: relative;
 }
 
@@ -21,7 +71,7 @@
 }
 
 .cd-filters_btn.js-open svg {
-  fill: var(--cd-highlight-red);
+  fill: var(--iasc-primary);
 }
 
 .cd-filters_btn.js-open:hover,
@@ -40,7 +90,7 @@
 }
 
 .cd-filters__form {
-  background: var(--cd-light-grey);
+  background: var(--cd-site-bg-color--light);
   display: none;
   width: 100%;
   padding: 1rem;

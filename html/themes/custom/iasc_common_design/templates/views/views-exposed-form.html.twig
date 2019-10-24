@@ -20,7 +20,10 @@
 {{ attach_library('iasc_common_design/cd-button') }}
 {{ attach_library('iasc_common_design/cd-filters') }}
 <div class="cd-filters form--inline clearfix">
-  <button type="button" class="cd-filters_btn cd-button" id="cd-filters-btn" data-toggle="dropdown" id="cd-filter-dropdown-toggle" aria-expanded="false" aria-label="Filter">
+  <button type="button" class="cd-filters_btn" id="cd-filters-btn" data-toggle="dropdown" id="cd-filter-dropdown-toggle" aria-expanded="false" aria-label="Filter">
+    <svg class="icon icon--filter">
+      <use xlink:href="#filter"></use>
+    </svg>
     <span class="cd-filters_btn-text">Filter</span>
     <svg class="icon icon--arrow-down">
       <use xlink:href="#arrow-down"></use>

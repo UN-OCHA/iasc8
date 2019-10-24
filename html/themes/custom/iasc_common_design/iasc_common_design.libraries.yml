@@ -6,6 +6,11 @@ global-styling:
       css/styles.css: {}
       css/cd/cd-ie.css: { browsers: { IE: 'lte IE 8', '!IE': false } }
 
+cd-alert:
+  css:
+    theme:
+      sass/components/cd-alert/cd-alert.css: {}
+
 cd-article-teaser:
   css:
     theme:
