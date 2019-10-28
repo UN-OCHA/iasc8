@@ -81,10 +81,6 @@
   color: var(--cd-bright-blue);
 }
 
-.cd-filters_btn-text {
-  display: none;
-}
-
 .js-open .cd-filters_btn {
   background: var(--cd-highlight-red);
 }
@@ -194,9 +190,5 @@
     width: 22px;
     height: 22px;
     padding: 0 0 0 4px;
-  }
-
-  .cd-filters_btn-text {
-    display: block;
   }
 }
