@@ -6,6 +6,18 @@
  */
 
 /**
+ * Run needed updates after migration.
+ */
+function iasc_content_install() {
+  iasc_content_update_8001();
+  iasc_content_update_8002();
+  iasc_content_update_8003();
+  iasc_content_update_8004();
+  iasc_content_update_8005();
+  iasc_content_update_8006();
+}
+
+/**
  * Add default content to spaces.
  */
 function iasc_content_update_8001() {
@@ -70,16 +82,29 @@ function iasc_content_update_8002() {
 }
 
 /**
- * Make sure text format is set everywhere.
+ * Convert file field to media field.
  */
 function iasc_content_update_8003() {
-  // Same for panopoly_wysiwyg_text.
-  iasc_content_update_8002();
+  iasc_content_file_field_to_media();
 }
 
 /**
  * Convert oa section field.
  */
 function iasc_content_update_8004() {
+  iasc_content_convert_oa_section_ref();
+}
+
+/**
+ * Update membership position.
+ */
+function iasc_content_update_8005() {
+  iasc_content_membership_position_to_list();
+}
+
+/**
+ * Convert oa_section_ref.
+ */
+function iasc_content_update_8006() {
   iasc_content_convert_oa_section_ref();
 }
