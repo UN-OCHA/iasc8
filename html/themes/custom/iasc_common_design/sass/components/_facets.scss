@@ -6,7 +6,12 @@
   @extend .cd-heading-3;
 }
 
-.block-facet--checkbox li {
+.block-facets ul {
+  margin: 0;
+  padding: 0;
+}
+
+.block-facets li {
   list-style-type: none;
 }
 

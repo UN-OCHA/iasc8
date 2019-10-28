@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.panopoly_landing_page.body
     - field.field.node.panopoly_landing_page.field_content
     - field.field.node.panopoly_landing_page.field_footer
     - field.field.node.panopoly_landing_page.field_header
@@ -10,15 +11,23 @@ dependencies:
     - node.type.panopoly_landing_page
   module:
     - entity_reference_revisions
+    - text
     - user
 id: node.panopoly_landing_page.default
 targetEntityType: node
 bundle: panopoly_landing_page
 mode: default
 content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -27,7 +36,7 @@ content:
     region: content
   field_footer:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -45,7 +54,7 @@ content:
     region: content
   field_sidebar:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -53,7 +62,7 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
