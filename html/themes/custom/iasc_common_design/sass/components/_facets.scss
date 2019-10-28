@@ -15,6 +15,10 @@
   list-style-type: none;
 }
 
+.facet-item .is-active {
+  font-weight: 700;
+}
+
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
 .block-facet--links li {
   a {

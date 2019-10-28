@@ -8,3 +8,13 @@
     //margin-top: 1.5rem;
   }
 }
+
+.view-header {
+  .view-iasc-group-content & {
+    @extend .page-title;
+
+    @include xl {
+      padding-right:0;
+    }
+  }
+}
