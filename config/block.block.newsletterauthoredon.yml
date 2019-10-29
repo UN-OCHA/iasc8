@@ -1,0 +1,23 @@
+uuid: c109fcd3-9d51-4ef2-95bc-0dc04a75a0d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.newsletter_authored_on
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: newsletterauthoredon
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:newsletter_authored_on'
+settings:
+  id: 'facet_block:newsletter_authored_on'
+  label: 'Authored on'
+  provider: facets
+  label_display: visible
+  block_id: newsletterauthoredon
+visibility: {  }

@@ -109,6 +109,14 @@ field_settings:
       module:
         - taxonomy
         - taxonomy
+  field_document_type:
+    label: 'Document Type'
+    datasource_id: 'entity:node'
+    property_path: field_document_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_document_type
   field_iasc_audience:
     label: Audience
     datasource_id: 'entity:node'
