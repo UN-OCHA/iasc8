@@ -44,14 +44,6 @@
   fill: var(--iasc-primary);
 }
 
-@media (min-width: 1024px) {
-  .cd-filters_btn svg {
-    width: 22px;
-    height: 22px;
-    padding: 0 0 0 4px;
-  }
-}
-
 .cd-filters_btn.js-open {
   background: var(--cd-site-bg-color--light);
   position: relative;
@@ -190,5 +182,9 @@
     width: 22px;
     height: 22px;
     padding: 0 0 0 4px;
+  }
+
+  svg.icon--filter {
+    padding-right: 4px;
   }
 }
