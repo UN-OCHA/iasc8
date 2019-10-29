@@ -11,7 +11,7 @@ dependencies:
 id: resourcesproductcategorylabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -3
+weight: -4
 provider: null
 plugin: 'facet_block:resources_product_category_label'
 settings:
