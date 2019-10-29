@@ -1,4 +1,4 @@
-.block-facets  {
+.block-facets {
   margin-bottom: 2rem;
 }
 
@@ -13,6 +13,10 @@
 
 .block-facets li {
   list-style-type: none;
+}
+
+.facet-item .is-active {
+  font-weight: 700;
 }
 
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
@@ -35,3 +39,7 @@
   }
 }
 
+// Control select2 select element width when options are wider than parent element.
+.block-facets .select2-container--default .select2-search--inline .select2-search__field {
+  width: auto !important;
+}

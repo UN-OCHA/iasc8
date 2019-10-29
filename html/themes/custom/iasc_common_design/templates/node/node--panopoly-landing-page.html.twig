@@ -78,7 +78,7 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  content.field_sidebar|render ? 'cd-layout-with-section-sidebar',
+  content.field_sidebar|render ? 'cd-layout-with-section-sidebar'
 ]
 %}
 
@@ -105,21 +105,17 @@
     {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      {% if content.field_sidebar|render  or content.field_content| render %}
-        <section class="cd-layout-two-col">
+      <section class="cd-layout-two-col">
 
-          <div class="cd-layout-main-content">
-            {{ content.field_content }}
-          </div>
+        <div class="cd-layout-main-content">
+          {{ content.field_content }}
+        </div>
 
-          {% if content.field_sidebar|render %}
-            <aside class="cd-layout-sidebar-first" role="complementary">
-              {{ content.field_sidebar }}
-            </aside>
-          {% endif %}
+        <aside class="cd-layout-sidebar-first" role="complementary">
+          {{ content.field_sidebar }}
+        </aside>
 
-        </section>
-      {% endif %}
+      </section>
     {% endblock %}
 
 

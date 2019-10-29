@@ -8,3 +8,11 @@
     //margin-top: 1.5rem;
   }
 }
+
+.view-header {
+  @extend .page-title;
+
+  @include xl {
+    padding-right:0;
+  }
+}
