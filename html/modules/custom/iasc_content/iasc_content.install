@@ -6,18 +6,6 @@
  */
 
 /**
- * Run needed updates after migration.
- */
-function iasc_content_install() {
-  iasc_content_update_8001();
-  iasc_content_update_8002();
-  iasc_content_update_8003();
-  iasc_content_update_8004();
-  iasc_content_update_8005();
-  iasc_content_update_8006();
-}
-
-/**
  * Add default content to spaces.
  */
 function iasc_content_update_8001() {

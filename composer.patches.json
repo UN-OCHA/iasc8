@@ -5,6 +5,9 @@
     },
     "drupal/social_auth_hid": {
       "Add the possibility to use custom HID domains": "PATCHES/social_auth_hid_staging_domain.patch"
+    },
+    "drupal/core": {
+      "https://www.drupal.org/project/drupal/issues/2924549 - Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/2019-05-09/2924549-30.patch"
     }
   }
 }
