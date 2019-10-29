@@ -618,7 +618,7 @@ function _iasc_content_section_audience_present($entity_type, $bundle, $field_na
 }
 
 /**
- * Implements hook_site_install_finished.
+ * Implements hook_site_install_finished().
  */
 function iasc_content_site_install_finished($install_state) {
   module_load_install('iasc_content');
