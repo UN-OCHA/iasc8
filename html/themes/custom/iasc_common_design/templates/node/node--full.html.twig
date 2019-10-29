@@ -78,7 +78,7 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    content.field_sidebar|render ? 'cd-layout-with-section-sidebar',
+    content.field_sidebar|render ? 'cd-layout-with-section-sidebar'
   ]
 %}
 
@@ -95,7 +95,7 @@
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ longDate }}{% endtrans %}
+        {% trans %}Submitted on {{ longDate }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
