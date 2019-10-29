@@ -1,0 +1,23 @@
+uuid: b5c36669-2913-407d-bf4a-4f5c9ac49272
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_products_document_type_label
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: resourceproductsdocumenttypelabel
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:resource_products_document_type_label'
+settings:
+  id: 'facet_block:resource_products_document_type_label'
+  label: 'Document Type'
+  provider: facets
+  label_display: visible
+  block_id: resourceproductsdocumenttypelabel
+visibility: {  }

@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:document_type_label'
 settings:
   id: 'facet_block:document_type_label'
-  label: 'Document Type label'
+  label: 'Document Type'
   provider: facets
   label_display: visible
   block_id: documenttypelabel
