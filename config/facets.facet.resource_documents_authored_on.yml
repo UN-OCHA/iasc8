@@ -1,4 +1,4 @@
-uuid: 6ba0260b-abf0-4284-be22-b4e6a531b38f
+uuid: 95e4fc45-3291-4af2-96f5-59b8d74f5ff8
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,18 @@ dependencies:
     - views.view.resources
   module:
     - search_api
-id: resources_document_type_label
-name: 'Resources - Document Type label'
-url_alias: document_type
+id: resource_documents_authored_on
+name: 'Resource documents - Authored on'
+url_alias: resources_authored_on
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: document_type_label
-facet_source_id: 'search_api:views_page__resources__page_resources'
+field_identifier: created
+facet_source_id: 'search_api:views_page__resources__page_resources_documents'
 widget:
   type: select2
   config:
-    show_numbers: true
+    show_numbers: false
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
@@ -42,6 +42,14 @@ processor_configs:
       sort: 30
     settings:
       sort: DESC
+  date_item:
+    processor_id: date_item
+    weights:
+      build: 35
+    settings:
+      date_display: actual_date
+      granularity: 5
+      date_format: ''
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
