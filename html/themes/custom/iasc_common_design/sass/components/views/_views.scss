@@ -10,11 +10,9 @@
 }
 
 .view-header {
-  .view-iasc-group-content & {
-    @extend .page-title;
+  @extend .page-title;
 
-    @include xl {
-      padding-right:0;
-    }
+  @include xl {
+    padding-right:0;
   }
 }
