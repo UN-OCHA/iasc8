@@ -618,9 +618,9 @@ function _iasc_content_section_audience_present($entity_type, $bundle, $field_na
 }
 
 /**
- * Implements hook_site_install_finished().
+ * Post migrate steps.
  */
-function iasc_content_site_install_finished($install_state) {
+function iasc_content_post_migrate_steps() {
   module_load_install('iasc_content');
 
   iasc_content_update_8001();
@@ -629,4 +629,5 @@ function iasc_content_site_install_finished($install_state) {
   iasc_content_update_8004();
   iasc_content_update_8005();
   iasc_content_update_8006();
+  iasc_content_update_8007();
 }

@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\field\Entity\FieldStorageConfig;
+
 /**
  * @file
  * IASC Content helpers.
@@ -95,4 +97,36 @@ function iasc_content_update_8005() {
  */
 function iasc_content_update_8006() {
   iasc_content_convert_oa_section_ref();
+}
+
+/**
+ * Remove comment module.
+ */
+function iasc_content_update_8007() {
+  $fields = [
+    'comment_node_contact',
+    'comment_node_action_point',
+    'comment_node_announcement',
+    'comment_node_contact',
+    'comment_node_oa_discussion_post',
+    'comment_node_oa_event',
+    'comment_node_oa_group',
+    'comment_node_oa_ical_importer',
+    'comment_node_oa_section',
+    'comment_node_oa_space',
+    'comment_node_oa_team',
+    'comment_node_oa_wiki_page',
+    'comment_node_oa_worktracker_task',
+    'comment_node_panopoly_page'
+  ];
+
+  foreach ($fields as $field) {
+    if ($field = FieldStorageConfig::loadByName('node', $field)) {
+      $field->delete();
+    }
+  }
+
+  field_purge_batch(20000);
+
+  \Drupal::service('module_installer')->uninstall(['comment']);
 }
