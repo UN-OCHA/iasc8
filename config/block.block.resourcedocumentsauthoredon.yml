@@ -1,0 +1,23 @@
+uuid: e8164537-c8f3-47a3-8ebd-f5983e40423e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_documents_authored_on
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: resourcedocumentsauthoredon
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:resource_documents_authored_on'
+settings:
+  id: 'facet_block:resource_documents_authored_on'
+  label: 'Authored on'
+  provider: facets
+  label_display: visible
+  block_id: resourcedocumentsauthoredon
+visibility: {  }

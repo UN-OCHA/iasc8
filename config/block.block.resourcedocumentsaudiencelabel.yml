@@ -1,0 +1,23 @@
+uuid: 02d876b0-9dca-481f-b3a9-a5639b1daab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_documents_audience_label
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: resourcedocumentsaudiencelabel
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:resource_documents_audience_label'
+settings:
+  id: 'facet_block:resource_documents_audience_label'
+  label: Audience
+  provider: facets
+  label_display: visible
+  block_id: resourcedocumentsaudiencelabel
+visibility: {  }

@@ -616,3 +616,17 @@ function _iasc_content_section_audience_present($entity_type, $bundle, $field_na
     sprintf('Field %s created.', $field_name)
   );
 }
+
+/**
+ * Implements hook_site_install_finished().
+ */
+function iasc_content_site_install_finished($install_state) {
+  module_load_install('iasc_content');
+
+  iasc_content_update_8001();
+  iasc_content_update_8002();
+  iasc_content_update_8003();
+  iasc_content_update_8004();
+  iasc_content_update_8005();
+  iasc_content_update_8006();
+}

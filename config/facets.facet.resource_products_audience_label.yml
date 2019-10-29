@@ -1,4 +1,4 @@
-uuid: 6ba0260b-abf0-4284-be22-b4e6a531b38f
+uuid: 7fbbe0d7-ac4a-4bd4-92f4-e73616831b2f
 langcode: en
 status: true
 dependencies:
@@ -7,14 +7,14 @@ dependencies:
     - views.view.resources
   module:
     - search_api
-id: resources_document_type_label
-name: 'Resources - Document Type label'
-url_alias: document_type
+id: resource_products_audience_label
+name: 'Resource Products - Audience label'
+url_alias: resource_audience_label
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: document_type_label
-facet_source_id: 'search_api:views_page__resources__page_resources'
+field_identifier: audience_label
+facet_source_id: 'search_api:views_page__resources__page_resources_products'
 widget:
   type: select2
   config:
@@ -30,18 +30,6 @@ hard_limit: 0
 exclude: false
 only_visible_when_facet_source_is_visible: true
 processor_configs:
-  active_widget_order:
-    processor_id: active_widget_order
-    weights:
-      sort: 20
-    settings:
-      sort: DESC
-  count_widget_order:
-    processor_id: count_widget_order
-    weights:
-      sort: 30
-    settings:
-      sort: DESC
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
