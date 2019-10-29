@@ -12,14 +12,16 @@ name: 'Resources - Product Category label'
 url_alias: product_category
 weight: 0
 min_count: 1
-show_only_one_result: true
+show_only_one_result: false
 field_identifier: product_category_label
-facet_source_id: 'search_api:views_page__resources__page_1'
+facet_source_id: 'search_api:views_page__resources__page_resources'
 widget:
-  type: dropdown
+  type: select2
   config:
     show_numbers: true
-    default_option_label: Choose
+    width: 100%
+    autocomplete: false
+    match_operator: CONTAINS
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false

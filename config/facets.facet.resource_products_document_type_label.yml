@@ -1,4 +1,4 @@
-uuid: 6ba0260b-abf0-4284-be22-b4e6a531b38f
+uuid: 607f146c-87d0-4e3a-9be0-8dac2c28ed4a
 langcode: en
 status: true
 dependencies:
@@ -7,14 +7,14 @@ dependencies:
     - views.view.resources
   module:
     - search_api
-id: resources_document_type_label
-name: 'Resources - Document Type label'
+id: resource_products_document_type_label
+name: 'Resource Products - Document Type label'
 url_alias: document_type
 weight: 0
 min_count: 1
 show_only_one_result: false
 field_identifier: document_type_label
-facet_source_id: 'search_api:views_page__resources__page_resources'
+facet_source_id: 'search_api:views_page__resources__page_resources_products'
 widget:
   type: select2
   config:
