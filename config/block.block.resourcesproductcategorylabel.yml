@@ -1,0 +1,23 @@
+uuid: 2971b9ad-260f-4e74-97bf-6a1f1ff767bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resources_product_category_label
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: resourcesproductcategorylabel
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:resources_product_category_label'
+settings:
+  id: 'facet_block:resources_product_category_label'
+  label: 'Product Category'
+  provider: facets
+  label_display: visible
+  block_id: resourcesproductcategorylabel
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 8bcd5a38-e1bb-4d63-a5ef-5dcc238bd612
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resources_authored_on
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: resourcesauthoredon
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:resources_authored_on'
+settings:
+  id: 'facet_block:resources_authored_on'
+  label: 'Authored on'
+  provider: facets
+  label_display: visible
+  block_id: resourcesauthoredon
+visibility: {  }
