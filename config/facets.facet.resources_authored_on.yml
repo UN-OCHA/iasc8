@@ -12,14 +12,16 @@ name: 'Resources - Authored on'
 url_alias: resources_authored_on
 weight: 0
 min_count: 1
-show_only_one_result: true
+show_only_one_result: false
 field_identifier: created
 facet_source_id: 'search_api:views_page__resources__page_1'
 widget:
-  type: dropdown
+  type: select2
   config:
     show_numbers: false
-    default_option_label: Choose
+    width: 100%
+    autocomplete: false
+    match_operator: CONTAINS
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
