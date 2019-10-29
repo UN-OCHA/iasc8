@@ -1,11 +1,11 @@
 <?php
 
-use Drupal\field\Entity\FieldStorageConfig;
-
 /**
  * @file
  * IASC Content helpers.
  */
+
+use Drupal\field\Entity\FieldStorageConfig;
 
 /**
  * Add default content to spaces.
@@ -117,7 +117,7 @@ function iasc_content_update_8007() {
     'comment_node_oa_team',
     'comment_node_oa_wiki_page',
     'comment_node_oa_worktracker_task',
-    'comment_node_panopoly_page'
+    'comment_node_panopoly_page',
   ];
 
   foreach ($fields as $field) {
