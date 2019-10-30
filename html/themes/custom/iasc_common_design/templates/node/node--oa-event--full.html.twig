@@ -122,7 +122,9 @@
             {% endif %}
           {% endif %}
 
-          <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
+          {% if content.field_city|render %}
+            <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
+          {% endif %}
 
         </div>
 
@@ -163,12 +165,14 @@
 
       <aside class="cd-layout-sidebar-first" role="complementary">
         <div class="cd-location">
-          <div class="cd-sidebar__label">{% trans %}Location{% endtrans %}</div>
-          {{ content.field_city }}
-          {{ content.field_additional_locations }}
-          {{ content.field_venue }}
-          {{ content.field_room }}
-        </div>
+          {% if content.field_city|render or content.field_additional_locations|render or content.field_venue|render or content.field_room|render %}
+            <div class="cd-sidebar__label">{% trans %}Location{% endtrans %}</div>
+            {{ content.field_city }}
+            {{ content.field_additional_locations }}
+            {{ content.field_venue }}
+            {{ content.field_room }}
+          </div>
+        {% endif %}
         {{ content.field_host }}
         {{ content.field_contact }}
         {{ content.field_meeting_agendas }}
