@@ -5,11 +5,13 @@
  * IASC Migrate helpers.
  */
 
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\iasc_migrate\IascMigrateGroup;
 use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Row;
-use Drupal\Component\Utility\Html;
-use Drupal\iasc_migrate\IascMigrateGroup;
 
 /**
  * Implements hook_migrate_prepare_row().
@@ -64,7 +66,7 @@ function iasc_migrate_node_insert($entity) {
  */
 function oa_buttons_get_command_buttons_options() {
   return [
-    '_legacy' => 'do not use',
+    '_legacy' => 'do not use - oa_buttons_get_command_buttons_options',
   ];
 }
 
@@ -73,7 +75,7 @@ function oa_buttons_get_command_buttons_options() {
  */
 function oa_related_paragraphs_field_allowed_values() {
   return [
-    '_legacy' => 'do not use',
+    '_legacy' => 'do not use - oa_related_paragraphs_field_allowed_values',
   ];
 }
 
@@ -82,15 +84,45 @@ function oa_related_paragraphs_field_allowed_values() {
  */
 function oa_sections_field_oa_section_type_menu_allowed_values() {
   return [
-    0 => 'do not use',
+    0 => 'do not use - oa_sections_field_oa_section_type_menu_allowed_values',
   ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
-function oa_worktracker_allowed_values_callback() {
+function oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  $field_name = $definition->getName();
+
+  // Priority values.
+  if (strpos($field_name, 'field_oa_worktracker_priority') === 0) {
+    return [
+      '1' => 'Learning Opportunity',
+      '2' => 'Critical',
+      '3' => 'Important',
+    ];
+  }
+
+  // Status values.
+  if (strpos($field_name, 'field_oa_worktracker_task_status') === 0) {
+    return [
+      'not_initiated' => 'Not Initiated',
+      'ongoing' => 'Ongoing',
+      'implemented' => 'Implemented',
+      'closed' => 'Closed',
+    ];
+  }
+
+  // Type values.
+  if (strpos($field_name, 'field_oa_worktracker_task_type') === 0) {
+    return [
+      'natural_disaster' => 'Natural Disaster',
+      'conflict' => 'Conflict',
+    ];
+  }
+
   return [
-    '_legacy' => 'do not use',
+    '_legacy' => 'do not use - oa_worktracker_allowed_values_callback',
+    'test' => $definition->getName(),
   ];
 }
