@@ -44,6 +44,23 @@ function iasc_content_space_sidebar_defaults($id) {
     return;
   }
 
+  // Add chair.
+  $paragraph = Paragraph::create([
+    'type' => 'view',
+  ]);
+  $paragraph->set('field_view', [
+    'target_id' => 'iasc_contacts',
+    'display_id' => 'chair',
+  ]);
+
+  $paragraph->isNew();
+  $paragraph->save();
+
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+
   // Add section menu.
   $paragraph = Paragraph::create([
     'type' => 'section_menu',
@@ -64,23 +81,6 @@ function iasc_content_space_sidebar_defaults($id) {
   $paragraph->set('field_view', [
     'target_id' => 'documents',
     'display_id' => 'recent_documents_list',
-  ]);
-
-  $paragraph->isNew();
-  $paragraph->save();
-
-  $current[] = [
-    'target_id' => $paragraph->id(),
-    'target_revision_id' => $paragraph->getRevisionId(),
-  ];
-
-  // Add chair.
-  $paragraph = Paragraph::create([
-    'type' => 'view',
-  ]);
-  $paragraph->set('field_view', [
-    'target_id' => 'iasc_contacts',
-    'display_id' => 'chair',
   ]);
 
   $paragraph->isNew();
