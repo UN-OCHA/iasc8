@@ -11,6 +11,7 @@
 }
 
 .field--name-field-ai-title {
+  @extend .cd-heading-3;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -24,7 +25,6 @@
   margin-bottom: 2rem;
 }
 
-.field--name-field-contact,
 .field--name-field-meeting-notes,
 .field--name-field-meeting-agendas,
 .field--name-field-oa-section,
@@ -34,14 +34,13 @@
 .field--name-field-membership,
 .field--name-group-content-access,
 .field--name-field-ap-responsibility,
-.field--name-field-referenced-docs,
 .field--name-field-host,
 .field--name-field-agenda-items,
-.field--name-field-referenced-docs,
 .field--name-field-iasc-group-space,
 .field--name-field-info-private,
 .field--name-field-oa-media,
-.field--name-field-main-image {
+.field--name-field-main-image,
+.field--name-field-media-files {
   margin-bottom: 2rem !important;
 
   > .field__label {
