@@ -85,7 +85,7 @@
 
   <div class="cd-teaser__image">
   {% if content.field_thumbnail|render %}
-    {{ content.field_thumbnail }}
+    <a href="{{ url }}" rel="bookmark">{{ content.field_thumbnail }}</a>
   {% else %}
     <img src="https://via.placeholder.com/288x216" alt="image example">
   {% endif %}

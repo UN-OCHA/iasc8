@@ -102,12 +102,13 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
+    {{ content|without('body', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
       <section class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
+          {{ content.body }}
           {{ content.field_content }}
         </div>
 

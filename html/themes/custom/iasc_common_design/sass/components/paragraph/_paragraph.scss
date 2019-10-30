@@ -10,6 +10,18 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .paragraph--type--paragraph-text {
   margin-bottom: 2rem;
   clear: both;
@@ -29,27 +41,30 @@
     display: flex;
     flex-wrap: wrap;
 
-    .field--name-field-paragraph-text {
-      order: 2;
-    }
-
-    .field--name-field-teaser-image {
-      order: 1;
-    }
-
-    .field--name-field-para-title {
-      flex: 1 0 100%;
-    }
-
-    .field--name-field-paragraph-text {
-      @include tablet {
-        flex: 0 1 300px;
+    &.paragraph__image--align-left,
+    &.paragraph__image--align-right {
+      .field--name-field-paragraph-text {
+        order: 2;
       }
-    }
 
-    .field--name-field-teaser-image {
-      @include tablet {
-        flex: 0 1 300px;
+      .field--name-field-teaser-image {
+        order: 1;
+      }
+
+      .field--name-field-para-title {
+        flex: 1 0 100%;
+      }
+
+      .field--name-field-paragraph-text {
+        @include tablet {
+          flex: 1 0 300px;
+        }
+      }
+
+      .field--name-field-teaser-image {
+        @include tablet {
+          flex: 0 1 300px;
+        }
       }
     }
   }
@@ -81,6 +96,18 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cd-layout-main-content .paragraph--type--teaser-grid {
   .field--type-entity-reference-revisions {
@@ -152,4 +179,8 @@
 .paragraph--type--contact-list > .field--name-field-contacts > .field__items > .field__item {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+}
+
+.paragraph--type--agenda-items  {
+  margin-bottom: 2rem;
 }

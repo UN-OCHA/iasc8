@@ -20,7 +20,7 @@ content:
     label: visually_hidden
     settings:
       image_style: featured_thumbnail
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     type: image
     weight: 1
