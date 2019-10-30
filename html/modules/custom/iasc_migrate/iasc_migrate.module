@@ -64,34 +64,38 @@ function iasc_migrate_node_insert($entity) {
 /**
  * Legacy command from Drupal 7 version.
  */
-function oa_buttons_get_command_buttons_options() {
+function oa_buttons_get_command_buttons_options(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     '_legacy' => 'do not use - oa_buttons_get_command_buttons_options',
+    'debug' => $definition->getName(),
   ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
-function oa_related_paragraphs_field_allowed_values() {
+function oa_related_paragraphs_field_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     '_legacy' => 'do not use - oa_related_paragraphs_field_allowed_values',
+    'debug' => $definition->getName(),
   ];
 }
 
 /**
  * Legacy command from Drupal 7 version.
  */
-function oa_sections_field_oa_section_type_menu_allowed_values() {
+function oa_sections_field_oa_section_type_menu_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     0 => 'do not use - oa_sections_field_oa_section_type_menu_allowed_values',
+    999 => $definition->getName(),
   ];
 }
 
 /**
- * Legacy command from Drupal 7 version.
+ * Allowed values for task content type.
  */
 function oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  // TODO: Move to iasc_content after migration.
   $field_name = $definition->getName();
 
   // Priority values.
@@ -123,6 +127,6 @@ function oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, 
 
   return [
     '_legacy' => 'do not use - oa_worktracker_allowed_values_callback',
-    'test' => $definition->getName(),
+    'debug' => $definition->getName(),
   ];
 }
