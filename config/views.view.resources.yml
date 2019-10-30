@@ -6,12 +6,11 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
-    - 'taxonomy_term:document_types:1bb214c9-4c83-4a9b-8f08-374d33b7956c'
-    - 'taxonomy_term:document_types:5d75ef9e-d962-4259-aa5c-7e6d95b894d2'
-    - 'taxonomy_term:document_types:70f43e93-298f-4ee4-9dcc-04b322b03136'
-    - 'taxonomy_term:document_types:aa7ebfcd-12c9-4029-8585-a92e7a8ead01'
-    - 'taxonomy_term:document_types:c94805a1-4473-4790-a7fd-5382dc5c0803'
-    - 'taxonomy_term:document_types:da2b1f25-f7f9-48ed-87ca-c7053701bde0'
+    - 'taxonomy_term:document_types:12585a7f-6876-40bd-b207-e648c361f7c0'
+    - 'taxonomy_term:document_types:1c3cacc4-25aa-49b3-b353-fbcaf9471057'
+    - 'taxonomy_term:document_types:330a330c-99f3-4492-a507-d1e0aa68009d'
+    - 'taxonomy_term:document_types:c1d4bad9-7b26-4b6a-a3c6-bf7936f2a3f7'
+    - 'taxonomy_term:document_types:fe692645-00e6-4e2a-b5de-7787703d148c'
   module:
     - search_api
 id: resources
@@ -52,12 +51,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -66,9 +70,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: default
       row:
@@ -271,7 +273,20 @@ display:
             label: ''
           plugin_id: search_api
       title: Resources
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Other IASC Products'
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -300,6 +315,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filters:
         type:
           id: type
@@ -438,6 +454,20 @@ display:
           1: AND
       title: 'IASC Newsletters'
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'IASC Newsletters'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -462,6 +492,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filters:
         type:
           id: type
@@ -600,6 +631,20 @@ display:
           1: AND
       title: 'Other Products'
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Other Products'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -621,7 +666,22 @@ display:
         type: none
       defaults:
         cache: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: Resources
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -645,6 +705,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filters:
         type:
           id: type
@@ -784,6 +845,20 @@ display:
           1: AND
       title: Documents
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Meeting Documents'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -808,6 +883,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filters:
         type:
           id: type
@@ -946,6 +1022,20 @@ display:
           1: AND
       title: Products
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'IASC Products'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -970,6 +1060,7 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
       filters:
         type:
           id: type
@@ -1108,6 +1199,20 @@ display:
           1: AND
       title: 'Statements IASC Principals'
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: Statements
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

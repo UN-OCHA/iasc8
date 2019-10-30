@@ -91,12 +91,14 @@ body {
 .cd-sidebar {
   flex-basis: 285px;
   flex-grow: 1;
+  //background: rgba(yellow, 0.2);
 }
 
 .cd-main {
   flex-basis: 0;
   flex-grow: 999;
   min-width: 50%;
+  //background: rgba(red, 0.2);
 }
 
 .cd-layout-container main.cd-container {
@@ -105,41 +107,11 @@ body {
 
 .cd-layout-container main.cd-container .cd-layout-sidebar-first {
   @extend .cd-sidebar;
-  background: rgba(yellow, 0.2);
 }
 
 .cd-layout-container main.cd-container .cd-layout-main-content {
   @extend .cd-main;
 }
-
-// Node pages.
-.cd-layout-with-sidebar .cd-layout-main-content {
-  background: rgba(green, 0.2);
-  @include tablet {
-    margin-right: 3rem;
-  }
-}
-
-// Views list
-.cd-layout-with-region-sidebar .cd-layout-content {
-  background: rgba(blue, 0.2);
-  @include tablet {
-    margin-right: 3rem;
-  }
-}
-
-// Override common_design region layout rule.
-.cd-layout-with-sidebar .cd-layout-content {
-  @include tablet {
-    margin-right: 0;
-  }
-}
-
-//.path-group .cd-layout-with-sidebar .cd-layout-content {
-//  @include tablet {
-//    margin-right: 3rem;
-//  }
-//}
 
 section.cd-layout-two-col {
   @extend .cd-layout;
@@ -150,5 +122,20 @@ section.cd-layout-two-col {
 
   .field--name-field-sidebar {
     @extend .cd-sidebar;
+  }
+}
+
+// Override common_design region layout rule.
+.cd-layout-with-sidebar .cd-layout-content {
+  @include tablet {
+    margin-right: 0;
+  }
+}
+
+.cd-layout-with-section-sidebar .cd-layout-main-content,
+.cd-layout-two-col .cd-layout-main-content,
+.cd-layout-with-region-sidebar .cd-layout-content {
+  @include tablet {
+    margin-right: 3rem;
   }
 }

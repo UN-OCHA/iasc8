@@ -9,10 +9,13 @@
   }
 }
 
-.view-header {
-  @extend .page-title;
+.view-resources,
+.view-iasc-group-content {
+  .view-header {
+    @extend .page-title;
 
-  @include xl {
-    padding-right:0;
+    @include xl {
+      padding-right: 0;
+    }
   }
 }
