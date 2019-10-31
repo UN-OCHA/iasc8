@@ -1,0 +1,36 @@
+{% embed 'page.html.twig' %}
+
+{% block attach %}
+  {{ attach_library('iasc_common_design/cd-button') }}
+{% endblock %}
+
+  {% block main %}
+    <main role="main" {{ attributes.addClass(layout_classes) }}>
+
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      <div class="cd-layout-content">
+
+        <h1 class="page-title">404</h1>
+        <p>{% trans %}Sorry, the page you are looking for cannot be found.{% endtrans %}</p>
+
+        <form action="/search" method="get" accept-charset="UTF-8">
+          <div class="form--inline clearfix">
+            <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys">
+              <label for="edit-keys">Search</label>
+              <input placeholder="What are you looking for?" type="text" id="cd-search" data-drupal-selector="edit-keys" name="keys" value="" size="30" maxlength="128">
+            </div>
+            <button data-twig-suggestion="search_submit" class="cd-button button js-form-submit form-submit" value="Search" data-drupal-selector="edit-submit-search-content" type="submit" id="edit-submit-search-content">Search</button>
+          </div>
+        </form>
+
+      </div>{# /.cd-layout-content #}
+
+      <aside class="cd-layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+
+    </main>
+  {% endblock %}
+
+{% endembed %}
