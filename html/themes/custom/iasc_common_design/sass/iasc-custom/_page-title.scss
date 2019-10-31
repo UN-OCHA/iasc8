@@ -5,6 +5,6 @@
 
 .page-title {
   @include xl {
-    padding-right: 285px; // width of sidebar
+    padding-right: calc(285px + 3rem); // width of sidebar plus content div right margin.
   }
 }
