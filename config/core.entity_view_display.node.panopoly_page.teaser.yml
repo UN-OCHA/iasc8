@@ -6,12 +6,16 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.panopoly_page.body
     - field.field.node.panopoly_page.comment_node_panopoly_page
+    - field.field.node.panopoly_page.field_banner_image
+    - field.field.node.panopoly_page.field_content
     - field.field.node.panopoly_page.field_featured_categories
     - field.field.node.panopoly_page.field_featured_image
     - field.field.node.panopoly_page.field_featured_status
+    - field.field.node.panopoly_page.field_footer
+    - field.field.node.panopoly_page.field_header
+    - field.field.node.panopoly_page.field_sidebar
     - node.type.panopoly_page
   module:
-    - image
     - text
     - user
 id: node.panopoly_page.teaser
@@ -22,23 +26,9 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
     settings:
       trim_length: 600
-    third_party_settings: {  }
-    region: content
-  field_featured_image:
-    label: hidden
-    weight: 0
-    type: image
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
@@ -46,9 +36,11 @@ hidden:
   field_banner_image: true
   field_content: true
   field_featured_categories: true
+  field_featured_image: true
   field_featured_status: true
   field_footer: true
   field_header: true
   field_sidebar: true
   langcode: true
+  links: true
   search_api_excerpt: true
