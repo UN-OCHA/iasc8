@@ -138,7 +138,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Displaying results @start - @end of @total'
+          content: "<h1 class=page-title>Search</h1>\r\n<p>Displaying results @start - @end of @total</p>"
           plugin_id: result
       footer: {  }
       empty:
