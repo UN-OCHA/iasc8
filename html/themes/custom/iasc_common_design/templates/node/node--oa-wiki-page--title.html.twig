@@ -82,7 +82,7 @@
 %}
 {{ attach_library('iasc_common_design/cd-bullet-list') }}
 
-{% set fileUrl = file_url(node.field_oa_media.entity.uri.value) %}
+{% set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -103,7 +103,7 @@
 
   {% if content %}
     <div class="node__content">
-      {{ content }}
+      {{ content|without('field_media_files') }}
     </div>
   {% endif %}
 

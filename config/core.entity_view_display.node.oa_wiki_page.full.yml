@@ -49,12 +49,13 @@ content:
     third_party_settings: {  }
     region: content
   field_media_files:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     weight: 2
     region: content
     label: above
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
   field_published_date:
     type: datetime_default

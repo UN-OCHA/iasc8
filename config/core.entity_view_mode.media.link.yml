@@ -1,0 +1,10 @@
+uuid: 064a649b-5fdf-4317-987f-047737b53637
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.link
+label: 'Link to file'
+targetEntityType: media
+cache: true
