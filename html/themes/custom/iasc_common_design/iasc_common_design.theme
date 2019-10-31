@@ -117,3 +117,16 @@ function iasc_common_design_preprocess_html(&$vars) {
     '#template' => '<span class="hidden">' . $icons . '</span>',
   );
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variables) {
+  /**
+   * error page template suggestions.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    $suggestions[] = 'page__' . (string) $status_code;
+  }
+}
