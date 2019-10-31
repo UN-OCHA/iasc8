@@ -55,9 +55,12 @@ hidden:
   field_document_type: true
   field_iasc_audience: true
   field_legacy_publish: true
+  field_media_files: true
   field_oa_media: true
   field_oa_wiki_page_no_redirect: true
   field_product_thumbnail: true
+  field_section: true
+  field_section_audience: true
   langcode: true
   links: true
   oa_other_spaces_ref: true

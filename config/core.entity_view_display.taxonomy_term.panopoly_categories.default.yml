@@ -30,5 +30,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_featured_media: true
   langcode: true
   search_api_excerpt: true

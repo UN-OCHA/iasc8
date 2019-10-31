@@ -39,6 +39,7 @@ content:
     region: content
 hidden:
   comment_node_oa_section: true
+  field_content: true
   field_iasc_audience: true
   field_oa_group_ref: true
   field_oa_node_types: true

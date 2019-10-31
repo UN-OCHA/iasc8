@@ -69,6 +69,7 @@ hidden:
   field_homepage: true
   field_last_name: true
   field_legacy_id: true
+  field_media_photo: true
   field_membership: true
   field_mobile: true
   field_phone: true

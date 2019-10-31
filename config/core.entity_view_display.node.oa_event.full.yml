@@ -157,6 +157,8 @@ hidden:
   comment_node_oa_event: true
   field_iasc_audience: true
   field_legacy_publish: true
+  field_section: true
+  field_section_audience: true
   field_thumbnail: true
   langcode: true
   links: true

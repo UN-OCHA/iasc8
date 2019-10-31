@@ -64,5 +64,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_icon_image: true
   langcode: true
   search_api_excerpt: true

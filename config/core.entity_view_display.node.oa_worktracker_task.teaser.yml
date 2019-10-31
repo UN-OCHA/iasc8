@@ -52,12 +52,15 @@ hidden:
   field_description_implementation: true
   field_evaluation_title: true
   field_iasc_audience: true
+  field_media_files: true
   field_oa_media: true
   field_oa_worktracker_assigned_to: true
   field_oa_worktracker_priority: true
   field_oa_worktracker_task_status: true
   field_oa_worktracker_task_type: true
   field_recomendation: true
+  field_section: true
+  field_section_audience: true
   field_summary_of_recommendat: true
   field_timeframe: true
   field_worktracker_country: true
