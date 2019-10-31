@@ -1,7 +1,7 @@
 {
   "patches": {
     "drupal/viewsreference": {
-      "https://www.drupal.org/project/drupal/issues/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-07-24/i3004636-10.patch"
+      "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch"
     },
     "drupal/social_auth_hid": {
       "Add the possibility to use custom HID domains": "PATCHES/social_auth_hid_staging_domain.patch"

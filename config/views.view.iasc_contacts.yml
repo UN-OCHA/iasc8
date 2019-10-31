@@ -6,170 +6,10 @@ dependencies:
     - core.entity_view_mode.node.bio_long
     - core.entity_view_mode.node.bio_short
     - node.type.contact
-    - taxonomy.vocabulary.hosts
-  content:
-    - 'taxonomy_term:hosts:007d01e1-87d6-4618-af5d-9087ab4b5f7e'
-    - 'taxonomy_term:hosts:0141cfbd-1dc0-4103-af6f-d1c9f5be8141'
-    - 'taxonomy_term:hosts:03146bad-a653-4515-9400-22e74b6659c5'
-    - 'taxonomy_term:hosts:033aa313-0d66-40fe-bb57-4bf70d178610'
-    - 'taxonomy_term:hosts:054fb02f-84d0-43f7-baa8-2e13e66e2a06'
-    - 'taxonomy_term:hosts:05c95b9d-a74c-4e59-8326-3c782d7ba53d'
-    - 'taxonomy_term:hosts:0d6eaaf1-1ef4-432f-80ed-01858d9f8a5e'
-    - 'taxonomy_term:hosts:0dc4a8b3-2ec8-422f-ab23-62e6c1053a59'
-    - 'taxonomy_term:hosts:0f44ef11-ac38-48fd-9816-8d86caa61b4b'
-    - 'taxonomy_term:hosts:13e4928f-c99d-4c9c-9cb6-68d9d588ee4d'
-    - 'taxonomy_term:hosts:15f7837f-0838-4453-bc4a-99799a8fda85'
-    - 'taxonomy_term:hosts:1640f417-4fc0-4f1a-97d3-c41755e59b70'
-    - 'taxonomy_term:hosts:17dae217-e309-4938-8977-c6b4319d7218'
-    - 'taxonomy_term:hosts:18ca9d23-5ec3-4ae3-8931-a764f9bc345b'
-    - 'taxonomy_term:hosts:1f9b26a2-a178-4e0f-ad3a-de6e7f54bfd9'
-    - 'taxonomy_term:hosts:1fb784f9-9315-4e5e-9a54-6ab8b4a49aa4'
-    - 'taxonomy_term:hosts:20442178-7470-4f68-ac5c-c7de9b2672b0'
-    - 'taxonomy_term:hosts:2064d572-b1fc-48a5-8f37-b7d968461ef4'
-    - 'taxonomy_term:hosts:215058c6-9644-434a-9184-d28965a311e6'
-    - 'taxonomy_term:hosts:24dd2901-ed86-437f-955e-5b9693317ec5'
-    - 'taxonomy_term:hosts:2643a5e5-f36c-4806-b1da-11594e05a3e0'
-    - 'taxonomy_term:hosts:2653adc9-7da5-478d-bef3-0b1f9e215abb'
-    - 'taxonomy_term:hosts:2711d573-c3a0-4752-a44e-e73bfac7cad7'
-    - 'taxonomy_term:hosts:29e7caa3-2ee9-44ae-b13b-aaad13fcb851'
-    - 'taxonomy_term:hosts:2aca42b8-8970-48db-babd-80f231ca6aa3'
-    - 'taxonomy_term:hosts:2aed51f2-da59-46f2-8347-3b1be53a0458'
-    - 'taxonomy_term:hosts:2ba67313-afd7-4758-9cbe-14f5c7db37b0'
-    - 'taxonomy_term:hosts:2cfc379d-893c-468c-b1c5-d3406b384208'
-    - 'taxonomy_term:hosts:2e0ffb5a-39f6-41f1-9435-ac8300a9a3f2'
-    - 'taxonomy_term:hosts:31068085-544b-4ca6-bcf2-4ca78d2e60b5'
-    - 'taxonomy_term:hosts:33dca08f-fa69-4749-9c23-ef72605e066c'
-    - 'taxonomy_term:hosts:34695cbf-ac29-451b-8682-aeb1756339cf'
-    - 'taxonomy_term:hosts:35d27a99-5051-4b58-a92f-117daa599b0b'
-    - 'taxonomy_term:hosts:38094db6-08bb-426c-a927-096686228af5'
-    - 'taxonomy_term:hosts:38104415-eb4d-461c-9d0b-fab56076bc26'
-    - 'taxonomy_term:hosts:39536a72-437a-40ff-8621-10572cda374c'
-    - 'taxonomy_term:hosts:3a5230b0-497f-4274-8ab6-4c5af8c6314e'
-    - 'taxonomy_term:hosts:3f2f0e59-0a95-466c-abec-50d80ab1f864'
-    - 'taxonomy_term:hosts:40f0479f-bf7a-4e6a-9b63-c527c9c93799'
-    - 'taxonomy_term:hosts:428f84f2-8fee-44f2-8b12-93c206cff896'
-    - 'taxonomy_term:hosts:475c22b3-082d-4eaa-b3fa-cff7c785b34e'
-    - 'taxonomy_term:hosts:476d275a-da13-4471-9432-5fb4e7317c29'
-    - 'taxonomy_term:hosts:4adb3d19-af37-42f5-bbd1-6603c2cf6648'
-    - 'taxonomy_term:hosts:4ae9fb71-cb5d-472e-adf9-e9a60767db26'
-    - 'taxonomy_term:hosts:4d1a6a87-0228-4de5-ba91-24917bf974f2'
-    - 'taxonomy_term:hosts:506b2e04-92d1-4204-9b2a-59c89f5a3a4a'
-    - 'taxonomy_term:hosts:5154ff8e-3079-4c85-9e8f-a9632cdc684a'
-    - 'taxonomy_term:hosts:53123025-0758-4331-8c94-e09f9622bdb6'
-    - 'taxonomy_term:hosts:53555568-be6f-4e2f-bcc7-c6349378ef90'
-    - 'taxonomy_term:hosts:542b6e8b-38b8-4eb7-8a5f-f26450ae75ec'
-    - 'taxonomy_term:hosts:550f8b31-7484-4f11-8994-c443e46849af'
-    - 'taxonomy_term:hosts:557e873b-f747-49fc-bff4-92d7298b9668'
-    - 'taxonomy_term:hosts:562805c8-c12b-4e04-ae13-a36d5a7c597a'
-    - 'taxonomy_term:hosts:582dc30c-50de-42f2-8c27-7b3035a9f10e'
-    - 'taxonomy_term:hosts:59d18969-1d55-43e5-a341-0b4f1cce88b6'
-    - 'taxonomy_term:hosts:5a8a7af6-b2c7-447a-b5d7-24118710e224'
-    - 'taxonomy_term:hosts:5b4c054d-95df-461e-9cf6-81c4f5b1c85f'
-    - 'taxonomy_term:hosts:5d810aaa-5650-437a-8221-7a38a7fed436'
-    - 'taxonomy_term:hosts:5de7c9d2-4452-42e2-a62f-ebd9de33fc48'
-    - 'taxonomy_term:hosts:5f6a8cf6-dbfa-4373-99e2-f0f1078a46e6'
-    - 'taxonomy_term:hosts:63df47ab-d56d-4bfe-9acb-3fb9917531dd'
-    - 'taxonomy_term:hosts:6417320c-1f4e-4f77-86f7-2a0f678afdcc'
-    - 'taxonomy_term:hosts:64f73cd4-3914-49aa-a9b0-6c626c173395'
-    - 'taxonomy_term:hosts:67ea6919-5704-4039-b4e6-a50d13477467'
-    - 'taxonomy_term:hosts:689557a9-a78c-49af-b79c-0a617fec7135'
-    - 'taxonomy_term:hosts:6929fde8-4b20-4918-aaaf-13076e3d5a47'
-    - 'taxonomy_term:hosts:6a7a1b65-52de-421b-a3bd-1843d75d7283'
-    - 'taxonomy_term:hosts:6ab10fbe-c152-4a1d-aadc-bc9d94d42dc7'
-    - 'taxonomy_term:hosts:6b5bd694-a1e4-4736-aa7d-b0efb539376d'
-    - 'taxonomy_term:hosts:6e70f52a-aaa0-4142-beb4-4882bea786f5'
-    - 'taxonomy_term:hosts:6f8161c6-562f-43da-8b4a-3ad75295a45f'
-    - 'taxonomy_term:hosts:735b36be-c3c0-432d-b84a-0d6633c31f78'
-    - 'taxonomy_term:hosts:7723eff0-82cd-4b1b-b280-3a50a5bbc4a3'
-    - 'taxonomy_term:hosts:78189261-8955-4893-b282-762b533e930f'
-    - 'taxonomy_term:hosts:7837f5fb-8168-4b73-b333-75760b162d3c'
-    - 'taxonomy_term:hosts:784f43bb-3b44-472d-ab99-3600f8f9419a'
-    - 'taxonomy_term:hosts:7a5868b1-5ad8-4a2d-a4d6-c143eec97d78'
-    - 'taxonomy_term:hosts:7b610e3a-226c-463e-819f-6aa8f51dd698'
-    - 'taxonomy_term:hosts:7d543d70-45da-45f5-b5f6-a0660660ad72'
-    - 'taxonomy_term:hosts:7df21446-6ad0-432c-9dcb-2797c42806a4'
-    - 'taxonomy_term:hosts:7e40a460-e8e1-47bc-b9e0-07cc58acbcfc'
-    - 'taxonomy_term:hosts:7e91d3b9-6179-42e4-b864-d7a0600e30d0'
-    - 'taxonomy_term:hosts:85448327-13ea-4c01-976b-305db42b8a8a'
-    - 'taxonomy_term:hosts:8810526d-9de5-45e8-8088-7060fa114fcd'
-    - 'taxonomy_term:hosts:88db5975-e684-43c9-a7cb-8753c101c7a0'
-    - 'taxonomy_term:hosts:88fa7b60-cda3-407d-abb8-2394d1dce68a'
-    - 'taxonomy_term:hosts:8939d381-4e6f-49ef-b9f0-6bcf65d66bda'
-    - 'taxonomy_term:hosts:8a055003-dc6b-45b0-a31b-ed9b2c5542fd'
-    - 'taxonomy_term:hosts:8bbba9db-bcb9-4a80-abeb-c7d9bcea6524'
-    - 'taxonomy_term:hosts:8d05b096-b1b3-42e7-97c9-d1a83efe5bc4'
-    - 'taxonomy_term:hosts:8e30ea80-77ab-4651-a022-85a77d6a76ce'
-    - 'taxonomy_term:hosts:8e347116-8e1d-49fd-bef8-f1f4fead1901'
-    - 'taxonomy_term:hosts:93c81686-afe9-44b0-ad86-3ddc2d188e0b'
-    - 'taxonomy_term:hosts:950e68e7-77df-43ad-92a1-495067908cdd'
-    - 'taxonomy_term:hosts:9587e61f-c607-4343-b379-d2ea4b6125d8'
-    - 'taxonomy_term:hosts:980cb19b-2b58-4587-bc31-da12d55f0310'
-    - 'taxonomy_term:hosts:98204fb3-9e51-4f26-b5c9-739ff6df8720'
-    - 'taxonomy_term:hosts:9cecb3c2-4379-489d-80d0-edb2076fee81'
-    - 'taxonomy_term:hosts:a0b08621-e85c-494f-86da-636996d17ca1'
-    - 'taxonomy_term:hosts:a1ee66e8-ec82-4f29-93df-fde7adb0967c'
-    - 'taxonomy_term:hosts:a5115b13-4cb1-4a8d-a364-3c39b244330b'
-    - 'taxonomy_term:hosts:a80d29e6-f9ee-4dcb-9f1a-43ccdf7748ab'
-    - 'taxonomy_term:hosts:aa8dbf02-69a8-43a0-bc8a-97b12c83f1a7'
-    - 'taxonomy_term:hosts:aae93c2c-f754-488a-bcbc-961ed38d6638'
-    - 'taxonomy_term:hosts:ac1bf02f-4c9a-4915-9e6b-110273471640'
-    - 'taxonomy_term:hosts:af043251-86fb-4626-9480-2d4fcd93595c'
-    - 'taxonomy_term:hosts:b2ed19e0-ce99-4080-8a57-85024d88f5fa'
-    - 'taxonomy_term:hosts:b3aa4813-0d44-47d3-b6aa-43c9696a1c74'
-    - 'taxonomy_term:hosts:b912d483-7d39-4383-ac16-1b89d5f26fd0'
-    - 'taxonomy_term:hosts:c0dbc779-e810-422c-a58d-0eee13a82a9c'
-    - 'taxonomy_term:hosts:c0ee4997-255c-4225-84db-3bdc285cc73e'
-    - 'taxonomy_term:hosts:c33b4506-6010-4fa3-a29d-5af570d8060c'
-    - 'taxonomy_term:hosts:c4b1793e-97ea-4297-8354-87a81c5215e1'
-    - 'taxonomy_term:hosts:c7acdd83-1333-4dab-923b-a8c296c6f0ec'
-    - 'taxonomy_term:hosts:cb8a697e-8301-42cc-890e-fe41c3ed0a30'
-    - 'taxonomy_term:hosts:ccd9e2d0-4477-4b96-9763-b08d3206e986'
-    - 'taxonomy_term:hosts:cd9af8b7-49a2-4808-bdc7-58de192a890c'
-    - 'taxonomy_term:hosts:cfd99329-863e-4d8c-a72c-112f73f2f809'
-    - 'taxonomy_term:hosts:cff5cf10-eb58-4797-a26b-a0f5c9d2622e'
-    - 'taxonomy_term:hosts:d2c42762-6465-458a-b1a2-07c9af0b2217'
-    - 'taxonomy_term:hosts:d3d8ed10-003b-4a11-b552-32c058940811'
-    - 'taxonomy_term:hosts:d5d2b39c-37f9-4c91-b893-a4531dc3c313'
-    - 'taxonomy_term:hosts:d5d5ff48-4754-40a0-ba34-3338d927373b'
-    - 'taxonomy_term:hosts:d61e4ec9-1570-4086-be05-74d693b89683'
-    - 'taxonomy_term:hosts:d7435223-1d23-4f74-9121-0ecec86010b8'
-    - 'taxonomy_term:hosts:d989ec0a-2fea-406a-8849-57056306489f'
-    - 'taxonomy_term:hosts:d9a03966-f6f0-46d7-bbca-39a09a9c7a70'
-    - 'taxonomy_term:hosts:df39053d-feb6-4160-a7bb-722c40e4d42b'
-    - 'taxonomy_term:hosts:e08235ce-a05b-4af9-bf4c-44ee5fff1509'
-    - 'taxonomy_term:hosts:e0beaeed-8a10-46d0-8036-608552eeb762'
-    - 'taxonomy_term:hosts:e0df0d35-4ed2-49af-8543-edabe06c78a4'
-    - 'taxonomy_term:hosts:e17f2ca3-8703-43bc-9735-61c36ea8c2df'
-    - 'taxonomy_term:hosts:e4218440-ae62-4832-b259-12fbb2186b86'
-    - 'taxonomy_term:hosts:e4a2ea6f-e92e-4e52-b57b-30c962431fce'
-    - 'taxonomy_term:hosts:e4f1d537-1bd9-4292-a790-39b470f2ef9a'
-    - 'taxonomy_term:hosts:e544d00a-ad5f-446c-9656-8bf3241e22e9'
-    - 'taxonomy_term:hosts:e7bde60b-553b-4b69-8ee6-7ac6040b3846'
-    - 'taxonomy_term:hosts:ea50b9cf-71ed-4bf0-8a12-5815cb62ecb4'
-    - 'taxonomy_term:hosts:ebbef4a2-42d5-483c-b593-79ec04dc0f52'
-    - 'taxonomy_term:hosts:ebdd553e-21c8-4acd-abe4-1fac57bffd53'
-    - 'taxonomy_term:hosts:eca939d5-f3e1-409b-8c40-2b91b196b8c3'
-    - 'taxonomy_term:hosts:ede14e82-6ce2-47ad-b947-d419660dbdce'
-    - 'taxonomy_term:hosts:eea2c7c0-12bd-4058-916a-8e3bc9758b0e'
-    - 'taxonomy_term:hosts:ef374c13-2a47-4af7-963a-cae5322e4412'
-    - 'taxonomy_term:hosts:ef813769-3f37-45bb-b18d-7812fa3eb579'
-    - 'taxonomy_term:hosts:f02c5a60-c027-407f-aeda-91f957623327'
-    - 'taxonomy_term:hosts:f1f78da1-a2b4-4210-879f-05b3ee75ad5c'
-    - 'taxonomy_term:hosts:f5215fcc-7585-4101-8e9e-706b7f5ed550'
-    - 'taxonomy_term:hosts:f5b70795-c2c1-4095-a577-a30eddd7f37d'
-    - 'taxonomy_term:hosts:f63367db-1b03-4aee-ad51-54e759c7fd2f'
-    - 'taxonomy_term:hosts:f63d40ad-9dfc-4103-a38c-d68d5374feac'
-    - 'taxonomy_term:hosts:f73f8221-d496-4030-9d90-fafd66e2e678'
-    - 'taxonomy_term:hosts:fb0f31ec-c38e-4b17-8e53-28eea4674a4f'
-    - 'taxonomy_term:hosts:fb30de0d-3a1f-49ad-b463-5848fbb1d392'
-    - 'taxonomy_term:hosts:fb93455a-1a3d-4761-a1d3-392703f7c93b'
-    - 'taxonomy_term:hosts:fb98cfb0-714b-43d5-82b6-23120329b77a'
-    - 'taxonomy_term:hosts:fc70cdcb-ea60-4104-8391-e9326e6d1010'
   module:
     - node
     - options
     - paragraphs
-    - taxonomy
     - user
 id: iasc_contacts
 label: 'IASC Contacts'
@@ -252,214 +92,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_organisation_target_id:
-          id: field_organisation_target_id
-          table: node__field_organisation
-          field: field_organisation_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            8: 8
-            9: 9
-            1511: 1511
-            10: 10
-            11: 11
-            12: 12
-            13: 13
-            14: 14
-            15: 15
-            16: 16
-            17: 17
-            18: 18
-            19: 19
-            20: 20
-            21: 21
-            22: 22
-            23: 23
-            24: 24
-            25: 25
-            26: 26
-            27: 27
-            28: 28
-            29: 29
-            30: 30
-            31: 31
-            32: 32
-            33: 33
-            34: 34
-            35: 35
-            36: 36
-            37: 37
-            38: 38
-            39: 39
-            40: 40
-            1983: 1983
-            1971: 1971
-            41: 41
-            42: 42
-            43: 43
-            1961: 1961
-            44: 44
-            45: 45
-            46: 46
-            47: 47
-            48: 48
-            49: 49
-            50: 50
-            51: 51
-            52: 52
-            53: 53
-            234: 234
-            54: 54
-            55: 55
-            56: 56
-            57: 57
-            58: 58
-            59: 59
-            60: 60
-            1966: 1966
-            61: 61
-            62: 62
-            63: 63
-            64: 64
-            65: 65
-            66: 66
-            67: 67
-            68: 68
-            69: 69
-            70: 70
-            71: 71
-            72: 72
-            73: 73
-            74: 74
-            75: 75
-            76: 76
-            77: 77
-            78: 78
-            79: 79
-            236: 236
-            80: 80
-            81: 81
-            82: 82
-            83: 83
-            84: 84
-            85: 85
-            86: 86
-            87: 87
-            88: 88
-            89: 89
-            90: 90
-            91: 91
-            92: 92
-            1989: 1989
-            93: 93
-            94: 94
-            95: 95
-            96: 96
-            97: 97
-            98: 98
-            99: 99
-            100: 100
-            235: 235
-            101: 101
-            102: 102
-            103: 103
-            104: 104
-            105: 105
-            106: 106
-            107: 107
-            108: 108
-            237: 237
-            109: 109
-            238: 238
-            110: 110
-            111: 111
-            112: 112
-            1974: 1974
-            113: 113
-            1476: 1476
-            114: 114
-            115: 115
-            116: 116
-            117: 117
-            118: 118
-            119: 119
-            120: 120
-            121: 121
-            122: 122
-            123: 123
-            124: 124
-            125: 125
-            126: 126
-            127: 127
-            128: 128
-            129: 129
-            130: 130
-            131: 131
-            132: 132
-            133: 133
-            134: 134
-            135: 135
-            136: 136
-            137: 137
-            138: 138
-            139: 139
-            140: 140
-            141: 141
-            142: 142
-            143: 143
-            144: 144
-            145: 145
-            146: 146
-            147: 147
-            1471: 1471
-            148: 148
-            149: 149
-            150: 150
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_organisation_target_id_op
-            label: 'Organization (field_organisation)'
-            description: ''
-            use_operator: false
-            operator: field_organisation_target_id_op
-            identifier: field_organisation_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
-              group_login: '0'
-              viewer: '0'
-              recommendations_editor: '0'
-              space_super_admin: '0'
-              focal_point: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: hosts
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -480,16 +112,59 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
-      arguments: {  }
+      relationships:
+        field_membership:
+          id: field_membership
+          table: node__field_membership
+          field: field_membership
+          relationship: none
+          group_type: group
+          admin_label: 'field_membership: Paragraph'
+          required: true
+          plugin_id: standard
+      arguments:
+        field_body_membership_target_id:
+          id: field_body_membership_target_id
+          table: paragraph__field_body_membership
+          field: field_body_membership_target_id
+          relationship: field_membership
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: group_id_from_url
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: numeric
       display_extenders: {  }
       use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - route
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -504,20 +179,10 @@ display:
       title: Chair
       defaults:
         title: false
-        relationships: false
+        relationships: true
         filters: false
         filter_groups: false
-        arguments: false
-      relationships:
-        field_membership:
-          id: field_membership
-          table: node__field_membership
-          field: field_membership
-          relationship: none
-          group_type: group
-          admin_label: 'field_membership: Paragraph'
-          required: true
-          plugin_id: standard
+        arguments: true
       filters:
         status:
           value: '1'
@@ -583,41 +248,6 @@ display:
         operator: AND
         groups:
           1: AND
-      arguments:
-        field_body_membership_target_id:
-          id: field_body_membership_target_id
-          table: paragraph__field_body_membership
-          field: field_body_membership_target_id
-          relationship: field_membership
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: group_id_from_url
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: numeric
     cache_metadata:
       max-age: -1
       contexts:
@@ -772,12 +402,83 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            contact: contact
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_member_position_value:
+          id: field_member_position_value
+          table: paragraph__field_member_position
+          field: field_member_position_value
+          relationship: field_membership
+          group_type: group
+          admin_label: ''
+          operator: not
+          value:
+            chair: chair
+            co-chair: co-chair
+            'co-chair hftt': 'co-chair hftt'
+            'co-chair, revitalizing principled humanitarian action task team': 'co-chair, revitalizing principled humanitarian action task team'
+            co-champion: co-champion
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - route
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -801,34 +502,87 @@ display:
       defaults:
         style: false
         row: false
+        filters: false
+        filter_groups: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: bio_long
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            contact: contact
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_member_position_value:
+          id: field_member_position_value
+          table: paragraph__field_member_position
+          field: field_member_position_value
+          relationship: field_membership
+          group_type: group
+          admin_label: ''
+          operator: not
+          value:
+            chair: chair
+            co-chair: co-chair
+            'co-chair hftt': 'co-chair hftt'
+            'co-chair, revitalizing principled humanitarian action task team': 'co-chair, revitalizing principled humanitarian action task team'
+            co-champion: co-champion
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - route
         - url
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  page_contact_list:
-    display_plugin: page
-    id: page_contact_list
-    display_title: Page
-    position: 5
-    display_options:
-      display_extenders: {  }
-      path: testje
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
