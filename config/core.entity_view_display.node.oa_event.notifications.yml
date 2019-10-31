@@ -53,6 +53,9 @@ hidden:
   field_meeting_notes: true
   field_oa_date: true
   field_room: true
+  field_section: true
+  field_section_audience: true
+  field_thumbnail: true
   field_venue: true
   langcode: true
   oa_other_spaces_ref: true

@@ -150,6 +150,8 @@ content:
     region: content
 hidden:
   field_iasc_audience: true
+  field_section: true
+  field_section_audience: true
   langcode: true
   oa_other_spaces_ref: true
   og_group_ref: true

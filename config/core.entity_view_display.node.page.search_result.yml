@@ -35,6 +35,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_banner_image: true
   field_content: true
   field_featured_image: true
   field_footer: true

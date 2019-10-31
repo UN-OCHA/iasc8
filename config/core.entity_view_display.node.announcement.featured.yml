@@ -50,6 +50,8 @@ hidden:
   field_legacy_publish: true
   field_links: true
   field_referenced_docs: true
+  field_section: true
+  field_section_audience: true
   langcode: true
   links: true
   oa_section_ref: true

@@ -74,6 +74,8 @@ hidden:
   field_meeting_agendas: true
   field_meeting_notes: true
   field_room: true
+  field_section: true
+  field_section_audience: true
   field_venue: true
   langcode: true
   links: true

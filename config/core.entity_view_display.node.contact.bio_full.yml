@@ -154,5 +154,6 @@ hidden:
   field_first_name: true
   field_last_name: true
   field_legacy_id: true
+  field_media_photo: true
   langcode: true
   search_api_excerpt: true

@@ -42,7 +42,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_banner_image: true
   field_content: true
+  field_footer: true
+  field_header: true
+  field_sidebar: true
   flag_bookmark: true
   langcode: true
   search_api_excerpt: true

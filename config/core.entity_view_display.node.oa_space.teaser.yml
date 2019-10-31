@@ -50,6 +50,7 @@ content:
     region: content
 hidden:
   comment_node_oa_space: true
+  field_banner_image: true
   field_body_legacy_ids: true
   field_date_closed: true
   field_featured_image: true

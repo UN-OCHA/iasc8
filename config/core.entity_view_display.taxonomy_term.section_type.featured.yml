@@ -25,6 +25,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_icon_image: true
   field_oa_icon_class: true
   field_oa_icon_image: true
   field_oa_node_types: true
