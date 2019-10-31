@@ -8,6 +8,8 @@ dependencies:
     - field.field.paragraph.membership.field_member_position
     - field.field.paragraph.membership.field_position
     - paragraphs.paragraphs_type.membership
+  module:
+    - select2
 id: paragraph.membership.default
 targetEntityType: paragraph
 bundle: membership
@@ -16,11 +18,11 @@ content:
   field_body_membership:
     weight: 0
     settings:
+      width: element
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      autocomplete: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_contact_category:
     weight: 2
