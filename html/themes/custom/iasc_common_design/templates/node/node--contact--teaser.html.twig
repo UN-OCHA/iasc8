@@ -84,9 +84,9 @@
 {{ attach_library('iasc_common_design/cd-user-list') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {% if content.field_photo|render %}
+  {% if content.field_media_photo|render %}
     <div class="cd-user-list__image">
-      {{ content.field_photo }}
+      {{ content.field_media_photo }}
     </div>
   {% endif %}
 
@@ -104,7 +104,7 @@
   </div>
 
   <div class="cd-user-list__description node__content">
-    {{ content|without('field_photo', 'field_position', 'field_organisation') }}
+    {{ content|without('field_media_photo', 'field_position', 'field_organisation') }}
   </div>
 
 </article>
