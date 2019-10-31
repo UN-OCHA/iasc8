@@ -250,12 +250,12 @@ display:
   block_recent_5:
     display_plugin: block
     id: block_recent_5
-    display_title: 'Recent (5)'
+    display_title: 'Recent News (5)'
     position: 1
     display_options:
       display_extenders: {  }
       display_description: ''
-      title: Recent
+      title: 'Recent News'
       defaults:
         title: false
         filters: false
