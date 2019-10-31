@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.contact.field_homepage
     - field.field.node.contact.field_last_name
     - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_media_photo
     - field.field.node.contact.field_membership
     - field.field.node.contact.field_mobile
     - field.field.node.contact.field_organisation
@@ -25,7 +26,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.contact
   module:
-    - image
+    - media
     - user
 id: node.contact.bio_long
 targetEntityType: node
@@ -40,6 +41,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  field_media_photo:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
   field_mobile:
     label: inline
     weight: 5
@@ -64,15 +74,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  field_photo:
-    label: hidden
-    weight: 0
-    type: image
-    settings:
-      image_style: thumbnail
-      image_link: ''
-    third_party_settings: {  }
-    region: content
   field_position:
     label: hidden
     weight: 1
@@ -92,8 +93,8 @@ hidden:
   field_homepage: true
   field_last_name: true
   field_legacy_id: true
-  field_media_photo: true
   field_membership: true
+  field_photo: true
   field_title: true
   langcode: true
   links: true
