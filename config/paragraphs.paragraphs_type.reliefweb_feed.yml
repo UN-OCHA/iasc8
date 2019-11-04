@@ -1,0 +1,16 @@
+uuid: 44a69063-e719-4cf0-afc2-32ffac9eee86
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_viewmode
+id: reliefweb_feed
+label: 'Reliefweb feed'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraphs_viewmode_behavior:
+    override_mode: default
+    override_available:
+      default: Default
+    override_default: default

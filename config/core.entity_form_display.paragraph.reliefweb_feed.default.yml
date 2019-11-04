@@ -1,0 +1,21 @@
+uuid: dce83236-ffc7-4592-9463-802e35594907
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reliefweb_feed.field_reliefweb_feed_limit
+    - paragraphs.paragraphs_type.reliefweb_feed
+id: paragraph.reliefweb_feed.default
+targetEntityType: paragraph
+bundle: reliefweb_feed
+mode: default
+content:
+  field_reliefweb_feed_limit:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
