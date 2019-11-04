@@ -79,6 +79,7 @@ class ReliefWebController extends ControllerBase {
       if ($response->getStatusCode() === 200) {
         $raw = $response->getBody()->getContents();
         $data = json_decode($raw);
+        $data = $data->data;
       }
       else {
         // Return cached data.
@@ -103,7 +104,7 @@ class ReliefWebController extends ControllerBase {
   /**
    * Get updates.
    */
-  public function latestUpdates() {
+  public function latestUpdates($limit = 10) {
     $cid = 'iasc_reliefweb:latestUpdates';
 
     if ($cache = $this->cacheBackend->get($cid)) {
@@ -111,17 +112,20 @@ class ReliefWebController extends ControllerBase {
     }
     else {
       $data = $this->getApiUpdates();
+      $data = array_slice($data, 0, $limit);
 
       $feeds = [];
       foreach ($data as $feed) {
         $feeds[] = [
           'title' => $feed->fields->title,
           'url' => $feed->fields->url,
+          'date' => $feed->fields->date->created,
+          'source' => $feed->fields->source[0]->name,
         ];
       }
 
       if (!empty($feeds)) {
-        $this->cacheBackend->set($cid, $feeds, REQUEST_TIME + (60 * 60 * $this->config->get('update.max_age')), ['iasc_reliefweb', 'iasc_reliefweb:latestUpdates']);
+        $this->cacheBackend->set($cid, $feeds, REQUEST_TIME + (60 * 60 * $this->config->get('updates.max_age')), ['iasc_reliefweb', 'iasc_reliefweb:latestUpdates']);
       }
     }
 

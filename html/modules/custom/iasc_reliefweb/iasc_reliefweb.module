@@ -5,6 +5,11 @@
  * IASC Reliefweb.
  */
 
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\iasc_reliefweb\Controller\ReliefWebController;
+use Drupal\paragraphs\Entity\Paragraph;
+
 /**
  * Implements hook_preprocess_paragraph().
  */
@@ -37,10 +42,15 @@ function iasc_reliefweb_preprocess_paragraph_reliefweb_feed(&$vars) {
     \Drupal::service('cache.data')
   );
 
-  // Check which links needs to be displayed.
-  $feeds = $controller->latestUpdates();
+  $limit = 10;
+  if (isset($paragraph->field_reliefweb_feed_limit)) {
+    $limit = $paragraph->field_reliefweb_feed_limit->value;
+  }
+
+  // Fetch feed items.
+  $feeds = $controller->latestUpdates($limit);
   foreach ($feeds as $feed) {
-    $urls[] = Link::fromTextAndUrl($feed->title, Url::fromUri($feed->url))->toString();
+    $urls[] = (object) $feed;
   }
 
   $vars['feed_links'] = $urls;
