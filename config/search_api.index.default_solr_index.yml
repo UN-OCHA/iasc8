@@ -10,6 +10,7 @@ dependencies:
     - taxonomy
     - search_api
   config:
+    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
     - field.storage.node.field_document_type
     - field.storage.node.field_category
@@ -109,6 +110,15 @@ field_settings:
       module:
         - taxonomy
         - taxonomy
+  field_description:
+    label: Description
+    datasource_id: 'entity:group'
+    property_path: field_description
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.group.field_description
   field_document_type:
     label: 'Document Type'
     datasource_id: 'entity:node'
@@ -133,6 +143,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
+  label:
+    label: Title
+    datasource_id: 'entity:group'
+    property_path: label
+    type: text
+    boost: !!float 5
+    dependencies:
+      module:
+        - group
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -208,6 +227,13 @@ field_settings:
       module:
         - node
 datasource_settings:
+  'entity:group':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
   'entity:node':
     bundles:
       default: true
