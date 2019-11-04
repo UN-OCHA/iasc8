@@ -7,6 +7,7 @@ dependencies:
     - node.type.panopoly_page
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.paragraph_text
+    - paragraphs.paragraphs_type.reliefweb_feed
     - paragraphs.paragraphs_type.teaser_grid
     - paragraphs.paragraphs_type.view
   module:
@@ -30,6 +31,7 @@ settings:
       paragraph_text: paragraph_text
       teaser_grid: teaser_grid
       view: view
+      reliefweb_feed: reliefweb_feed
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
@@ -55,8 +57,14 @@ settings:
       paragraph_media:
         weight: 21
         enabled: false
+      contact_list:
+        weight: 22
+        enabled: false
       paragraph_snippet:
         weight: 22
+        enabled: false
+      content_item:
+        weight: 23
         enabled: false
       paragraph_text:
         enabled: true
@@ -70,4 +78,16 @@ settings:
       view:
         enabled: true
         weight: 26
+      reliefweb_feed:
+        enabled: true
+        weight: 32
+      section_menu:
+        weight: 33
+        enabled: false
+      twitter:
+        weight: 36
+        enabled: false
+      video:
+        weight: 37
+        enabled: false
 field_type: entity_reference_revisions
