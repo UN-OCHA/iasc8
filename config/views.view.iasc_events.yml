@@ -177,6 +177,19 @@ display:
             group_items: {  }
           plugin_id: datetime
       sorts:
+        field_oa_date_value:
+          id: field_oa_date_value
+          table: node__field_oa_date
+          field: field_oa_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
         created:
           id: created
           table: node_field_data
@@ -234,6 +247,11 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       css_class: cd-grid-2-col
+      use_more: true
+      use_more_always: false
+      use_more_text: 'More past events'
+      link_url: 'group/{{ arguments.field_iasc_audience_target_id }}/meetings'
+      link_display: custom_url
     cache_metadata:
       max-age: -1
       contexts:
@@ -344,6 +362,19 @@ display:
       display_extenders: {  }
       display_description: ''
       sorts:
+        field_oa_date_value:
+          id: field_oa_date_value
+          table: node__field_oa_date
+          field: field_oa_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
         created:
           id: created
           table: node_field_data
@@ -361,6 +392,12 @@ display:
           plugin_id: date
       defaults:
         sorts: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+      use_more: true
+      use_more_always: false
+      use_more_text: 'More upcoming events'
     cache_metadata:
       max-age: -1
       contexts:
