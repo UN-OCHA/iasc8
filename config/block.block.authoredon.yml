@@ -1,4 +1,4 @@
-uuid: 7d873a4d-475a-4f32-a8e9-997458b71c82
+uuid: f6d5d60f-b348-4edc-b595-ac673531f7c9
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: authoredon
 theme: iasc_common_design
 region: sidebar_first
-weight: -6
+weight: 0
 provider: null
 plugin: 'facet_block:search_authored_on'
 settings:
