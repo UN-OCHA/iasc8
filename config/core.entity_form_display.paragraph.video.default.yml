@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video.field_para_title
     - field.field.paragraph.video.field_video
     - paragraphs.paragraphs_type.video
   module:
@@ -12,9 +13,17 @@ targetEntityType: paragraph
 bundle: video
 mode: default
 content:
+  field_para_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_video:
     type: media_library_widget
-    weight: 0
+    weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }

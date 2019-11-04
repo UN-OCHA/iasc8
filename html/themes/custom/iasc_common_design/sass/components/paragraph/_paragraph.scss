@@ -10,18 +10,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .paragraph--type--paragraph-text {
   margin-bottom: 2rem;
   clear: both;
@@ -97,18 +85,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .cd-layout-main-content .paragraph--type--teaser-grid {
   .field--type-entity-reference-revisions {
     @extend .grid-3-col;
@@ -128,6 +104,7 @@
 .paragraph--type--teaser-grid > h2,
 .paragraph--type--paragraph-content > .field--name-field-para-title,
 .paragraph--type--content-item .field--name-field-para-title,
+.paragraph--type--video .field--name-field-para-title,
 .paragraph--type--paragraph-text .field--name-field-para-title {
 
   .cd-layout-main-content & {
