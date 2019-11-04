@@ -71,6 +71,9 @@ display:
         type: search_api
         options:
           view_modes:
+            'entity:group':
+              iasc_group: search_result
+              iasc_space: search_result
             'entity:node':
               action_point: search_result
               announcement: search_result
