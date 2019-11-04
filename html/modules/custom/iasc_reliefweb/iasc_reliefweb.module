@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * IASC Reliefweb.
+ */
+
+use Drupal\iasc_reliefweb\Controller\ReliefWebController;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_reliefweb_preprocess_paragraph(&$vars) {
+  $paragraph = $vars['paragraph'];
+  if (!($paragraph instanceof Paragraph)) {
+    return;
+  }
+
+  $bundle = $paragraph->bundle();
+  switch ($bundle) {
+    case 'reliefweb_feed':
+      iasc_reliefweb_preprocess_paragraph_reliefweb_feed($vars);
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_reliefweb_preprocess_paragraph_reliefweb_feed(&$vars) {
+  $paragraph = $vars['paragraph'];
+
+  // Fetch data.
+  $controller = new ReliefWebController(
+    \Drupal::service('http_client'),
+    \Drupal::service('http_client_factory'),
+    \Drupal::service('config.factory'),
+    \Drupal::service('cache.data')
+  );
+
+  $limit = 10;
+  if (isset($paragraph->field_reliefweb_feed_limit)) {
+    $limit = $paragraph->field_reliefweb_feed_limit->value;
+  }
+
+  // Fetch feed items.
+  $feeds = $controller->latestUpdates($limit);
+  foreach ($feeds as $feed) {
+    $urls[] = (object) $feed;
+  }
+
+  $vars['feed_links'] = $urls;
+}

@@ -1,0 +1,10 @@
+updates:
+  type: config_object
+  label: 'Allocation API settings'
+  mapping:
+    endpoint:
+      type: string
+      label: 'API endpoint'
+    max_age:
+      type: integer
+      label: 'Max age (hours)'

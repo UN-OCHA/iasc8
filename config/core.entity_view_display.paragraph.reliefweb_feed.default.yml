@@ -1,0 +1,23 @@
+uuid: 922b474d-e54e-4218-80e7-1daff142d51c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reliefweb_feed.field_reliefweb_feed_limit
+    - paragraphs.paragraphs_type.reliefweb_feed
+  module:
+    - options
+id: paragraph.reliefweb_feed.default
+targetEntityType: paragraph
+bundle: reliefweb_feed
+mode: default
+content:
+  field_reliefweb_feed_limit:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  search_api_excerpt: true
