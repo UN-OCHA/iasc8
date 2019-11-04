@@ -64,6 +64,17 @@
         </div>
 
         <aside class="cd-layout-sidebar-first" role="complementary">
+          {% if user.hasPermission('administer nodes') %}
+          <div class="paragraph-quick-links paragraph--type--section-menu">
+            <h2 class="cd-sidebar__label">Quick links</h2>
+              <ul class="content-links">
+                <li>{{ link('Add new content', 'internal:/group/' ~ group.id.value ~ '/content/create') }}</li>
+                <li>{{ link('Add existing content', 'internal:/group/' ~ group.id.value ~ '/node/add') }}</li>
+                <li>{{ link('List all content', 'internal:/group/' ~ group.id.value ~ '/content') }}</li>
+              </ul>
+          </div>
+          {% endif %}
+
           {{ content.field_date_closed }}
           {{ content.field_external_link }}
           {{ content.field_sidebar }}
