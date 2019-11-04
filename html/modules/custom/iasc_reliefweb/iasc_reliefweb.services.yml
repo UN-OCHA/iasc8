@@ -1,0 +1,4 @@
+services:
+  iasc_reliefweb_controller:
+    class: \Drupal\iasc_reliefweb\Controller\ReliefWebController
+    arguments: ['@http_client', '@http_client_factory', '@config.factory', '@cache.data']

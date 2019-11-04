@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * IASC Reliefweb.
+ */
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_reliefweb_preprocess_paragraph(&$vars) {
+  $paragraph = $vars['paragraph'];
+  if (!($paragraph instanceof Paragraph)) {
+    return;
+  }
+
+  $bundle = $paragraph->bundle();
+  switch ($bundle) {
+    case 'reliefweb_feed':
+      iasc_reliefweb_preprocess_paragraph_reliefweb_feed($vars);
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_reliefweb_preprocess_paragraph_reliefweb_feed(&$vars) {
+  $paragraph = $vars['paragraph'];
+
+  // Fetch data.
+  $controller = new ReliefWebController(
+    \Drupal::service('http_client'),
+    \Drupal::service('http_client_factory'),
+    \Drupal::service('config.factory'),
+    \Drupal::service('cache.data')
+  );
+
+  // Check which links needs to be displayed.
+  $feeds = $controller->latestUpdates();
+  foreach ($feeds as $feed) {
+    $urls[] = Link::fromTextAndUrl($feed->title, Url::fromUri($feed->url))->toString();
+  }
+
+  $vars['feed_links'] = $urls;
+}
