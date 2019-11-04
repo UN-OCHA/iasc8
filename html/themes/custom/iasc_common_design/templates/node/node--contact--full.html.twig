@@ -3,6 +3,7 @@
   {% block section %}
     <section class="cd-layout-two-col">
 
+      {% if user.hasPermission('edit any contact content') %}
       <div class="cd-layout-main-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_membership', 'field_organisation') }}
         {{ content.field_content }}
@@ -13,6 +14,7 @@
         {{ content.field_organisation }}
         {{ content.field_sidebar }}
       </aside>
+      {% endif %}
 
     </section>
   {% endblock %}
