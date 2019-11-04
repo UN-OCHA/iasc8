@@ -19,6 +19,7 @@ permissions:
   - 'view any action_point content'
   - 'view any announcement content'
   - 'view any article content'
+  - 'view any contact content'
   - 'view any oa_discussion_post content'
   - 'view any oa_event content'
   - 'view any oa_group content'
