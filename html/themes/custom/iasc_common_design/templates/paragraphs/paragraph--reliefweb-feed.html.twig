@@ -57,9 +57,7 @@
       {% block content %}
         <ul class="cd-list">
           {% for feed_link in feed_links %}
-            <li>
-              <a href="{{ feed_link.url }}">{{ feed_link.title }}, {{ feed_link.source }}, {{ feed_link.date|date("d F Y") }}<a/>
-            </li>
+            <li><a href="{{ feed_link.url }}">{{ feed_link.title }}, {{ feed_link.source }}, {{ feed_link.date|date("d F Y") }}</a></li>
           {% endfor %}
         </ul>
       {% endblock %}
