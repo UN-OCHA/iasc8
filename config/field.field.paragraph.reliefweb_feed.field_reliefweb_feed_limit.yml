@@ -1,0 +1,23 @@
+uuid: b79a7133-8ee1-4fa4-bec3-2a23e941aa79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reliefweb_feed_limit
+    - paragraphs.paragraphs_type.reliefweb_feed
+  module:
+    - options
+id: paragraph.reliefweb_feed.field_reliefweb_feed_limit
+field_name: field_reliefweb_feed_limit
+entity_type: paragraph
+bundle: reliefweb_feed
+label: Limit
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
