@@ -8,19 +8,21 @@ To install security updates for Drupal, run `composer update drupal/core webflo/
 
 The html directory is the document root. The vendor directories contains libraries that are required for the site to function. These libraries
 
-* Checkout the repository.
-* Run `composer install`. This will download Drupal core, contributed modules, contributed themes and libraries.
-* Deploy the html and vendor directories to the web server(s).
+- Checkout the repository.
+- Run `composer install`. This will download Drupal core, contributed modules, contributed themes and libraries.
+- Deploy the html and vendor directories to the web server(s).
 
 ### Initialisation
 
 Use drush to bootstrap your site and import the initial configuration from the config subdirectory.
 
-* drush -y si --admin-password="your admin password" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
-* drush -y cset system.site uuid $(grep uuid config/system.site.yml | awk '{print $2}')
-* drush -y cim --source=config
-* drush php-eval 'node_access_rebuild();'
-* drush cr
+```bash
+drush -y si --admin-password="your admin password" --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+drush -y cset system.site uuid $(grep uuid config/system.site.yml | awk '{print $2}')
+drush -y cim --source=config
+drush php-eval 'node_access_rebuild();'
+drush cr
+```
 
 ## Testing
 
