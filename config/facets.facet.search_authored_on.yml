@@ -1,4 +1,4 @@
-uuid: d0c75cce-b3f4-40a0-be07-117a8241e114
+uuid: 26c2db36-84fd-4ffa-99ae-96824385cba7
 langcode: en
 status: true
 dependencies:
@@ -28,7 +28,7 @@ expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
 exclude: false
-only_visible_when_facet_source_is_visible: false
+only_visible_when_facet_source_is_visible: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -63,7 +63,5 @@ processor_configs:
       build: 15
     settings: {  }
 empty_behavior:
-  behavior: text
-  text_format: plain_text
-  text: 'Your search yielded no results '
+  behavior: none
 show_title: false
