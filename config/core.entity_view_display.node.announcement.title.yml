@@ -12,6 +12,9 @@ dependencies:
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_section
+    - field.field.node.announcement.field_section_audience
+    - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
@@ -24,7 +27,7 @@ bundle: announcement
 mode: title
 content:
   field_published_date:
-    label: inline
+    label: hidden
     weight: 0
     type: datetime_default
     settings:

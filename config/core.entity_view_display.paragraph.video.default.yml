@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video.field_para_title
     - field.field.paragraph.video.field_video
     - paragraphs.paragraphs_type.video
 id: paragraph.video.default
@@ -10,9 +11,17 @@ targetEntityType: paragraph
 bundle: video
 mode: default
 content:
+  field_para_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default

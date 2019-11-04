@@ -12,11 +12,14 @@ dependencies:
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_section
+    - field.field.node.announcement.field_section_audience
     - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
   module:
+    - datetime
     - text
     - user
 id: node.announcement.search_result
@@ -27,13 +30,22 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 0
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_published_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: published_date
+    third_party_settings: {  }
   links:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -43,7 +55,6 @@ hidden:
   field_iasc_audience: true
   field_legacy_publish: true
   field_links: true
-  field_published_date: true
   field_referenced_docs: true
   field_section: true
   field_section_audience: true
