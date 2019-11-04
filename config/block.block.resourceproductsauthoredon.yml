@@ -11,7 +11,7 @@ dependencies:
 id: resourceproductsauthoredon
 theme: iasc_common_design
 region: sidebar_first
-weight: 0
+weight: -8
 provider: null
 plugin: 'facet_block:resource_products_authored_on'
 settings:

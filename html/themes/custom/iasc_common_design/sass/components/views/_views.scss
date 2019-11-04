@@ -20,3 +20,14 @@
     }
   }
 }
+
+.cd-layout-sidebar-first .views-exposed-form {
+
+  .form--inline {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    @extend .cd-heading-3;
+  }
+}
