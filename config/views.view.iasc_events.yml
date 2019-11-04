@@ -249,7 +249,7 @@ display:
       css_class: cd-grid-2-col
       use_more: true
       use_more_always: false
-      use_more_text: 'More past events'
+      use_more_text: 'More past meetings'
       link_url: 'group/{{ arguments.field_iasc_audience_target_id }}/meetings'
       link_display: custom_url
     cache_metadata:
@@ -396,8 +396,8 @@ display:
         use_more_always: false
         use_more_text: false
       use_more: true
-      use_more_always: false
-      use_more_text: 'More upcoming events'
+      use_more_always: true
+      use_more_text: 'View all meetings'
     cache_metadata:
       max-age: -1
       contexts:
