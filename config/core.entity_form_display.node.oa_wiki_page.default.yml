@@ -79,9 +79,9 @@ content:
   field_iasc_audience:
     weight: 21
     settings:
-      match_operator: CONTAINS
-      autocomplete: false
       width: 100%
+      autocomplete: true
+      match_operator: CONTAINS
     third_party_settings: {  }
     type: select2_entity_reference
     region: content
