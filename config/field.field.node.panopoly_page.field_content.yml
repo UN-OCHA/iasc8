@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.panopoly_page
+    - paragraphs.paragraphs_type.content_item
     - paragraphs.paragraphs_type.list
+    - paragraphs.paragraphs_type.paragraph_content
     - paragraphs.paragraphs_type.paragraph_text
     - paragraphs.paragraphs_type.reliefweb_feed
     - paragraphs.paragraphs_type.teaser_grid
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
@@ -28,10 +31,13 @@ settings:
     negate: 0
     target_bundles:
       list: list
+      paragraph_content: paragraph_content
+      content_item: content_item
       paragraph_text: paragraph_text
       teaser_grid: teaser_grid
       view: view
       reliefweb_feed: reliefweb_feed
+      video: video
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
@@ -52,8 +58,8 @@ settings:
         weight: 19
         enabled: false
       paragraph_content:
+        enabled: true
         weight: 20
-        enabled: false
       paragraph_media:
         weight: 21
         enabled: false
@@ -64,8 +70,8 @@ settings:
         weight: 22
         enabled: false
       content_item:
+        enabled: true
         weight: 23
-        enabled: false
       paragraph_text:
         enabled: true
         weight: 23
@@ -88,6 +94,6 @@ settings:
         weight: 36
         enabled: false
       video:
+        enabled: true
         weight: 37
-        enabled: false
 field_type: entity_reference_revisions

@@ -16,7 +16,6 @@ dependencies:
     - node.type.panopoly_page
   module:
     - entity_reference_revisions
-    - image
     - text
     - user
 id: node.panopoly_page.default
@@ -27,13 +26,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_banner_image:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       view_mode: banner
@@ -41,7 +40,7 @@ content:
     third_party_settings: {  }
     region: content
   field_content:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -51,23 +50,14 @@ content:
     region: content
   field_featured_categories:
     label: above
-    weight: 7
+    weight: 6
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
-  field_featured_image:
-    label: hidden
-    weight: 1
-    type: image
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    region: content
   field_footer:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -85,7 +75,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_sidebar:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -94,12 +84,13 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   comment_node_panopoly_page: true
+  field_featured_image: true
   field_featured_status: true
   langcode: true
   search_api_excerpt: true

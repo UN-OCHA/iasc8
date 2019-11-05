@@ -5,10 +5,15 @@ dependencies:
   config:
     - field.storage.node.field_sidebar
     - node.type.panopoly_page
+    - paragraphs.paragraphs_type.contact_list
+    - paragraphs.paragraphs_type.content_item
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_content
+    - paragraphs.paragraphs_type.paragraph_text
+    - paragraphs.paragraphs_type.section_menu
     - paragraphs.paragraphs_type.twitter
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.view
   module:
     - entity_reference_revisions
@@ -31,7 +36,12 @@ settings:
       list: list
       membership: membership
       paragraph_content: paragraph_content
+      contact_list: contact_list
+      content_item: content_item
+      paragraph_text: paragraph_text
       view: view
+      section_menu: section_menu
+      video: video
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
@@ -63,9 +73,15 @@ settings:
       paragraph_snippet:
         weight: 22
         enabled: false
-      paragraph_text:
+      contact_list:
+        enabled: true
+        weight: 22
+      content_item:
+        enabled: true
         weight: 23
-        enabled: false
+      paragraph_text:
+        enabled: true
+        weight: 23
       teaser_grid:
         weight: 24
         enabled: false
@@ -75,4 +91,13 @@ settings:
       view:
         enabled: true
         weight: 26
+      reliefweb_feed:
+        weight: 32
+        enabled: false
+      section_menu:
+        enabled: true
+        weight: 33
+      video:
+        enabled: true
+        weight: 37
 field_type: entity_reference_revisions
