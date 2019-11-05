@@ -34,7 +34,6 @@
 .field--name-field-oa-section,
 .field--name-field-iasc-audience,
 .field--name-field-links,
-.field--name-field-organisation,
 .field--name-field-membership,
 .field--name-group-content-access,
 .field--name-field-ap-responsibility,
@@ -88,6 +87,12 @@
   .node--view-mode-bio-short .field--name-field-organisation {
     margin-bottom: 0 !important;
   }
+}
+
+// Margin resets because nested fields are hard.
+.node--view-mode-bio-long .field,
+.node--view-mode-bio-short .field {
+  margin-bottom: 0;
 }
 
 .cd-layout-sidebar-first > .cd-sidebar,
