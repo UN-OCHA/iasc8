@@ -1,23 +1,23 @@
-uuid: bed044d8-beef-4887-b98b-21007a56ff02
+uuid: dc8ae8de-b443-4d25-8460-69f9499043c9
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.search_audience
+    - facets.facet.search_audience_label
   module:
     - facets
   theme:
     - iasc_common_design
-id: audience
+id: audiencelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -10
+weight: -11
 provider: null
-plugin: 'facet_block:search_audience'
+plugin: 'facet_block:search_audience_label'
 settings:
-  id: 'facet_block:search_audience'
+  id: 'facet_block:search_audience_label'
   label: Audience
   provider: facets
   label_display: visible
-  block_id: audience
+  block_id: audiencelabel
 visibility: {  }

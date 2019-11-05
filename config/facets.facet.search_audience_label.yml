@@ -1,4 +1,4 @@
-uuid: 8a628433-bec0-4f39-93e6-5f1162776895
+uuid: 2f526f18-ec04-4979-bc40-7ee76b25f925
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,18 @@ dependencies:
     - views.view.search_content
   module:
     - search_api
-id: search_audience
-name: Audience
-url_alias: search_audience
+id: search_audience_label
+name: 'Audience label'
+url_alias: search_audience_label
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_iasc_audience
+field_identifier: audience_label
 facet_source_id: 'search_api:views_page__search_content__search'
 widget:
   type: select2
   config:
-    show_numbers: true
+    show_numbers: false
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
