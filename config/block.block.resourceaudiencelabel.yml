@@ -11,12 +11,12 @@ dependencies:
 id: resourceaudiencelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -10
+weight: -9
 provider: null
 plugin: 'facet_block:resource_audience_label'
 settings:
   id: 'facet_block:resource_audience_label'
-  label: 'Audience label'
+  label: Audience
   provider: facets
   label_display: visible
   block_id: resourceaudiencelabel

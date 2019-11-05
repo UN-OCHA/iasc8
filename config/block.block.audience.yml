@@ -1,23 +1,23 @@
-uuid: f6d5d60f-b348-4edc-b595-ac673531f7c9
+uuid: bed044d8-beef-4887-b98b-21007a56ff02
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.search_authored_on
+    - facets.facet.search_audience
   module:
     - facets
   theme:
     - iasc_common_design
-id: authoredon
+id: audience
 theme: iasc_common_design
 region: sidebar_first
-weight: -1
+weight: -10
 provider: null
-plugin: 'facet_block:search_authored_on'
+plugin: 'facet_block:search_audience'
 settings:
-  id: 'facet_block:search_authored_on'
-  label: 'Authored on'
+  id: 'facet_block:search_audience'
+  label: Audience
   provider: facets
   label_display: visible
-  block_id: authoredon
+  block_id: audience
 visibility: {  }
