@@ -452,7 +452,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/content/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.<br><br></p>"
+            value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
             format: full_html
           plugin_id: text
       exposed_block: true
