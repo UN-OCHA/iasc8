@@ -48,16 +48,23 @@
 %}
 
 {% if (feed_links) %}
-  {{ attach_library('iasc_common_design/cd-list') }}
+  {{ attach_library('iasc_common_design/cd-bullet-list') }}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
 
-    <h2 class="cd-sidebar__label">Reliefweb feed</h2>
+    <h2>Reliefweb feed</h2>
 
       {% block content %}
-        <ul class="cd-list">
+        <ul class="cd-bullet-list">
           {% for feed_link in feed_links %}
-            <li><a href="{{ feed_link.url }}">{{ feed_link.title }}, {{ feed_link.source }}, {{ feed_link.date|date("d F Y") }}</a></li>
+            <li>
+              <a href="{{ feed_link.url }}">
+                <svg class="icon icon--arrow-right">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+                {{ feed_link.title }}, {{ feed_link.source }}, {{ feed_link.date|date("d F Y") }}
+              </a>
+            </li>
           {% endfor %}
         </ul>
       {% endblock %}
