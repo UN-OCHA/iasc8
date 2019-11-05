@@ -146,3 +146,16 @@ function iasc_content_update_8008() {
   $sql = "update {node_revision__field_published_date} set field_published_date_value = left(field_published_date_value, 10)";
   $connection->query($sql);
 }
+
+/**
+ * Delete non-existing groups.
+ */
+function iasc_content_update_8009() {
+  $connection = \Drupal::database();
+
+  $sql = "delete from {node__field_iasc_audience} where field_iasc_audience_target_id not in (select id from {groups});";
+  $connection->query($sql);
+
+  $sql = "delete from {node_revision__field_iasc_audience} where field_iasc_audience_target_id not in (select id from {groups});";
+  $connection->query($sql);
+}

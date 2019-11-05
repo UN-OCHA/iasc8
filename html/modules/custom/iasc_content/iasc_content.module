@@ -631,4 +631,5 @@ function iasc_content_post_migrate_steps() {
   iasc_content_update_8006();
   iasc_content_update_8007();
   iasc_content_update_8008();
+  iasc_content_update_8009();
 }
