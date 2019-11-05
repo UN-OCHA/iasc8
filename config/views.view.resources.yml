@@ -416,7 +416,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<h1 class="page-title">IASC Newsletters</h1>'
+            value: "<h1 class=\"page-title\">IASC Newsletters</h1>\r\n<p>\r\n\r\nThe IASC secretariat regularly publishes a newsletter reflecting important developments in the IASC.\r\n</p>"
             format: full_html
           plugin_id: text
     cache_metadata:
@@ -710,7 +710,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<h1 class="page-title">IASC Products</h1>'
+            value: "<h1 class=\"page-title\">IASC Products</h1>\r\n<p>\r\n\r\nIASC Products are guidelines, policies, tools and documents endorsed by the IASC and used to inform humanitarian preparedness and response activities both at global and field levels with ultimate goal of strengthening the effective of humanitarian action.\r\n</p><p>\r\nGiven the inclusive membership of the IASC, these products carry a very broad consensus within the humanitarian community and guide the work of many UN and Non-UN humanitarian partners.\r\n</p>"
             format: full_html
           plugin_id: text
     cache_metadata:
