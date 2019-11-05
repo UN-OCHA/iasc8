@@ -133,3 +133,16 @@ function iasc_content_update_8007() {
 
   \Drupal::service('module_installer')->uninstall(['comment']);
 }
+
+/**
+ * Fix published date.
+ */
+function iasc_content_update_8008() {
+  $connection = \Drupal::database();
+
+  $sql = "update {node__field_published_date} set field_published_date_value = left(field_published_date_value, 10)";
+  $connection->query($sql);
+
+  $sql = "update {node_revision__field_published_date} set field_published_date_value = left(field_published_date_value, 10)";
+  $connection->query($sql);
+}
