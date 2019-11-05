@@ -141,23 +141,6 @@ function iasc_content_space_content_defaults($id) {
     'target_revision_id' => $paragraph->getRevisionId(),
   ];
 
-  // Add recent news.
-  $paragraph = Paragraph::create([
-    'type' => 'view',
-  ]);
-  $paragraph->set('field_view', [
-    'target_id' => 'iasc_content',
-    'display_id' => 'block_recent_5',
-  ]);
-
-  $paragraph->isNew();
-  $paragraph->save();
-
-  $current[] = [
-    'target_id' => $paragraph->id(),
-    'target_revision_id' => $paragraph->getRevisionId(),
-  ];
-
   $group->set('field_content', $current);
   $group->save();
 }
