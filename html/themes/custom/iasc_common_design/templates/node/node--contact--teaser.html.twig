@@ -96,12 +96,17 @@
     </div>
   {{ title_suffix }}
 
-  <div class="cd-user-list__position">
-    {{ content.field_position }}
-  </div>
-  <div class="cd-user-list__organization">
-    {{ content.field_organisation }}
-  </div>
+  {% if content.field_position|render %}
+    <div class="cd-user-list__position">
+      {{ content.field_position }}
+    </div>
+  {% endif %}
+
+  {% if content.field_organisation|render %}
+    <div class="cd-user-list__organization">
+      {{ content.field_organisation }}
+    </div>
+  {% endif %}
 
   <div class="cd-user-list__description node__content">
     {{ content|without('field_media_photo', 'field_position', 'field_organisation') }}

@@ -64,7 +64,6 @@
   .field--name-field-oa-section,
   .field--name-field-iasc-audience,
   .field--name-field-links,
-  .field--name-field-organisation,
   .field--name-field-membership,
   .field--name-field-date-closed,
   .field--name-field-external-link,
@@ -91,13 +90,19 @@
 
 // Margin resets because nested fields are hard.
 .node--view-mode-bio-long .field,
-.node--view-mode-bio-short .field {
+.node--view-mode-bio-short .field,
+.node--type-contact .field--name-field-organisation,
+.node--type-contact .field--name-field-position,
+.node--type-contact .field--name-field-email {
   margin-bottom: 0;
 }
 
-.cd-layout-sidebar-first > .cd-sidebar,
-.cd-layout-sidebar-first .field--name-field-organisation {
+.cd-layout-sidebar-first > .cd-sidebar {
   margin-bottom: 1rem !important;
+}
+
+.field--name-field-referenced-docs > .field__label {
+  margin-bottom: 1rem;
 }
 
 // Banner caption.
@@ -147,6 +152,7 @@
 
 // Multiple members separated by hr.
 .field--name-field-membership > .field__items > .field__item + .field__item,
+.field--name-field-contact > .field__items > .field__item + .field__item,
 .field--name-field-contacts > .field__item + .field__item {
   margin: 1rem 0;
   padding-top: 1rem;

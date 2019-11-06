@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_section
+    - field.field.node.announcement.field_section_audience
     - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
@@ -35,8 +37,9 @@ content:
   field_contact:
     label: above
     weight: 3
-    type: entity_reference_label
+    type: entity_reference_entity_view
     settings:
+      view_mode: bio_long
       link: false
     third_party_settings: {  }
     region: content
@@ -53,7 +56,7 @@ content:
     third_party_settings: {  }
     region: content
   field_published_date:
-    label: hidden
+    label: inline
     weight: 0
     type: datetime_default
     settings:
