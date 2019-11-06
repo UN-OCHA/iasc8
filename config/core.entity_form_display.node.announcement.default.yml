@@ -23,6 +23,7 @@ dependencies:
     - link
     - media_library
     - path
+    - select2
     - text
 id: node.announcement.default
 targetEntityType: node
@@ -62,11 +63,11 @@ content:
   field_iasc_audience:
     weight: 20
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_legacy_publish:
     weight: 11

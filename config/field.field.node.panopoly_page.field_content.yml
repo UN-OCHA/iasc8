@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.panopoly_page
+    - paragraphs.paragraphs_type.contact_list
     - paragraphs.paragraphs_type.content_item
     - paragraphs.paragraphs_type.list
     - paragraphs.paragraphs_type.paragraph_content
@@ -32,6 +33,7 @@ settings:
     target_bundles:
       list: list
       paragraph_content: paragraph_content
+      contact_list: contact_list
       content_item: content_item
       paragraph_text: paragraph_text
       teaser_grid: teaser_grid
@@ -64,8 +66,8 @@ settings:
         weight: 21
         enabled: false
       contact_list:
+        enabled: true
         weight: 22
-        enabled: false
       paragraph_snippet:
         weight: 22
         enabled: false
