@@ -11,12 +11,15 @@ dependencies:
     - field.field.node.oa_worktracker_task.field_description_implementation
     - field.field.node.oa_worktracker_task.field_evaluation_title
     - field.field.node.oa_worktracker_task.field_iasc_audience
+    - field.field.node.oa_worktracker_task.field_media_files
     - field.field.node.oa_worktracker_task.field_oa_media
     - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
     - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
     - field.field.node.oa_worktracker_task.field_oa_worktracker_task_status
     - field.field.node.oa_worktracker_task.field_oa_worktracker_task_type
     - field.field.node.oa_worktracker_task.field_recomendation
+    - field.field.node.oa_worktracker_task.field_section
+    - field.field.node.oa_worktracker_task.field_section_audience
     - field.field.node.oa_worktracker_task.field_summary_of_recommendat
     - field.field.node.oa_worktracker_task.field_timeframe
     - field.field.node.oa_worktracker_task.field_worktracker_country
@@ -39,14 +42,14 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 16
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   comment_node_oa_worktracker_task:
     label: hidden
     type: comment_default
-    weight: 8
+    weight: 15
     settings:
       view_mode: default
       pager_id: 0
@@ -54,14 +57,14 @@ content:
     region: content
   field_addressee:
     label: above
-    weight: 14
+    weight: 11
     type: basic_string
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date:
-    label: above
-    weight: 7
+    label: inline
+    weight: 5
     type: datetime_default
     settings:
       format_type: medium
@@ -70,15 +73,15 @@ content:
     region: content
   field_description_implementation:
     label: above
-    weight: 9
+    weight: 6
     type: string
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
   field_evaluation_title:
-    label: above
-    weight: 12
+    label: inline
+    weight: 9
     type: string
     settings:
       link_to_entity: false
@@ -86,7 +89,7 @@ content:
     region: content
   field_oa_media:
     label: above
-    weight: 0
+    weight: 13
     type: file_default
     settings:
       use_description_as_link_text: true
@@ -94,36 +97,36 @@ content:
     region: content
   field_oa_worktracker_assigned_to:
     label: inline
-    weight: 2
+    weight: 12
     type: entity_reference_label
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     region: content
   field_oa_worktracker_priority:
     label: inline
-    weight: 4
+    weight: 1
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_worktracker_task_status:
     label: inline
-    weight: 3
+    weight: 0
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_worktracker_task_type:
     label: inline
-    weight: 5
+    weight: 2
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_recomendation:
     label: above
-    weight: 6
+    weight: 4
     type: string
     settings:
       link_to_entity: false
@@ -131,45 +134,38 @@ content:
     region: content
   field_summary_of_recommendat:
     label: above
-    weight: 11
+    weight: 8
     type: basic_string
     settings: {  }
     third_party_settings: {  }
     region: content
   field_timeframe:
-    label: above
-    weight: 13
+    label: inline
+    weight: 10
     type: list_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_worktracker_country:
-    label: above
-    weight: 10
+    label: inline
+    weight: 7
     type: entity_reference_label
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     region: content
   links:
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
-  oa_section_ref:
-    label: inline
-    weight: 1
-    type: entity_reference_label
-    settings:
-      link: true
-    third_party_settings: {  }
-    region: content
 hidden:
   field_iasc_audience: true
   field_media_files: true
   field_section: true
   field_section_audience: true
   langcode: true
+  oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true
   search_api_excerpt: true
