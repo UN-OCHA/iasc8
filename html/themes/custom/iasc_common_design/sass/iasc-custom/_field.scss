@@ -147,6 +147,7 @@
 
 // Multiple members separated by hr.
 .field--name-field-membership > .field__items > .field__item + .field__item,
+.field--name-field-contact > .field__items > .field__item + .field__item,
 .field--name-field-contacts > .field__item + .field__item {
   margin: 1rem 0;
   padding-top: 1rem;
