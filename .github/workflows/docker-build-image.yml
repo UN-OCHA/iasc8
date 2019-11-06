@@ -21,11 +21,19 @@ jobs:
       run: |
         export DOCKER_TAG="${GITHUB_REF##*/}"
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        docker build . --file docker/Dockerfile --tag unocha/iasc-site:${DOCKER_TAG}
-        docker push unocha/iasc-site:${DOCKER_TAG}
+        docker build \
+            --build-arg VCS_REF=`git rev-parse --short HEAD` \
+            --build-arg VCS_URL=`git config --get remote.origin.url | sed 's#git@github.com:#https://github.com/#'` \
+            --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+            --build-arg GITHUB_ACTOR=${GITHUB_ACTOR} \
+            --build-arg GITHUB_REPOSITORY=${GITHUB_REPOSITORY} \
+            --build-arg GITHUB_SHA=${GITHUB_SHA} \
+            --build-arg GITHUB_REF=${GITHUB_REF} \
+          . --file docker/Dockerfile --tag unocha/cerf-site:${DOCKER_TAG}
+        docker push unocha/cerf-site:${DOCKER_TAG}
     - name: Flowdock Notify
       uses: UN-OCHA/actions/flowdock-notify@v2
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
-        FLOWDOCK_MESSAGE: 'Built a new `unocha/iasc-site` image from ${{ github.ref }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/iasc-site/tags).'
+        FLOWDOCK_MESSAGE: 'Built a new `unocha/cerf-site` image from ${{ github.ref }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/cerf-site/tags).'
