@@ -45,7 +45,7 @@ content:
     weight: 3
     type: entity_reference_label
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     region: content
   field_media_files:
