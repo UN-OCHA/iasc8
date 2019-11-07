@@ -8,14 +8,16 @@ dependencies:
     - node
     - user
     - taxonomy
+    - media
     - search_api
+    - search_api_attachments
   config:
     - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
     - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
+    - field.storage.node.field_media_files
+    - field.storage.media.field_media_file
     - field.storage.node.field_category
-    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -100,6 +102,17 @@ field_settings:
     dependencies:
       module:
         - node
+  description:
+    label: 'Media field for file » Media » File » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_media_files:entity:field_media_file:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_media_files
+        - field.storage.media.field_media_file
+      module:
+        - media
   document_type_label:
     label: 'Document Type label'
     datasource_id: 'entity:node'
@@ -136,22 +149,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_iasc_audience
-  field_oa_date:
-    label: 'Event date'
-    datasource_id: 'entity:node'
-    property_path: field_oa_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_oa_date
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_tags
   label:
     label: Title
     datasource_id: 'entity:group'
@@ -190,6 +187,10 @@ field_settings:
         'entity:node':
           article: search_index
           page: search_index
+  saa_field_media_files:
+    label: 'Search api attachments: Media field for file'
+    property_path: saa_field_media_files
+    type: text
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -245,11 +246,19 @@ datasource_settings:
       selected: {  }
   'entity:node':
     bundles:
-      default: true
+      default: false
       selected:
-        - oa_group
-        - oa_ical_importer
-        - oa_space
+        - action_point
+        - announcement
+        - article
+        - contact
+        - oa_discussion_post
+        - oa_event
+        - oa_wiki_page
+        - oa_worktracker_task
+        - page
+        - panopoly_landing_page
+        - panopoly_page
     languages:
       default: true
       selected: {  }
@@ -267,10 +276,15 @@ processor_settings:
   entity_status:
     weights:
       preprocess_index: -10
+  file_attachments:
+    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
+    number_indexed: 0
+    number_first_bytes: '0'
+    max_filesize: '0'
+    excluded_private: 0
+    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   html_filter:
-    weights:
-      preprocess_index: -3
-      preprocess_query: -6
+    all_fields: false
     fields:
       - rendered_item
     title: true
@@ -281,12 +295,16 @@ processor_settings:
       h2: 3
       h3: 2
       string: 2
-    all_fields: false
+    weights:
+      preprocess_index: -3
+      preprocess_query: -6
   rendered_item:
     weights:
       add_properties: 0
       pre_index_save: -10
-  solr_date_range: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
 tracker_settings:
   default:
     indexing_order: fifo

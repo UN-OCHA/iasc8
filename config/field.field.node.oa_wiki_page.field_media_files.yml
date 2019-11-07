@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_media_files
     - media.type.file
     - media.type.image
-    - media.type.remote_video
-    - media.type.video
     - node.type.oa_wiki_page
 id: node.oa_wiki_page.field_media_files
 field_name: field_media_files
@@ -25,8 +23,6 @@ settings:
     target_bundles:
       file: file
       image: image
-      remote_video: remote_video
-      video: video
     sort:
       field: _none
     auto_create: false

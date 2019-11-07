@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_media_files
+    - media.type.file
+    - media.type.image
     - node.type.oa_discussion_post
 id: node.oa_discussion_post.field_media_files
 field_name: field_media_files
@@ -17,5 +19,12 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
-  handler_settings: {  }
+  handler_settings:
+    target_bundles:
+      file: file
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: file
 field_type: entity_reference
