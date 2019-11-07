@@ -15,6 +15,7 @@ dependencies:
     - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
     - field.storage.node.field_document_type
+    - field.storage.node.field_oa_date
     - field.storage.node.field_media_files
     - field.storage.media.field_media_file
     - field.storage.node.field_category
@@ -149,6 +150,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_iasc_audience
+  field_oa_date:
+    label: 'Event date'
+    datasource_id: 'entity:node'
+    property_path: field_oa_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_oa_date
   label:
     label: Title
     datasource_id: 'entity:group'
