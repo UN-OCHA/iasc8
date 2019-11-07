@@ -78,3 +78,8 @@
 .node__meta {
   margin-bottom: 2rem;
 }
+
+.node--type-oa-event.node--view-mode-full .cd-teaser__date {
+  min-height: 80px; // height of calendar icon, helps clear elements below.
+  margin-bottom: 1rem;
+}
