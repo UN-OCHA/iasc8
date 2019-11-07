@@ -64,9 +64,7 @@
           {% endtrans %}
         </div>
         <p>
-          {% trans %}
-            Please <a href="/user/login/hid?destination=/user/login">log in</a> to see all available search results.
-          {% endtrans %}
+          {% trans %}Please{% endtrans %}&nbsp<a href="/user/login/hid?destination{{ path('<current>') }}">{% trans %}log in </a> to see available search results.{% endtrans %}
         </p>
       </div>
     </div>
