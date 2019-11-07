@@ -82,7 +82,7 @@
   ]
 %}
 
-{% set longDate = node.getCreatedTime|format_date('long') %}
+{% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
 {{ attach_library('classy/node') }}
 {{ attach_library('iasc_common_design/cd-responsive-tables') }}
@@ -95,7 +95,7 @@
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted on {{ longDate }}{% endtrans %}
+        {% trans %}Posted on {{ longDate }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>

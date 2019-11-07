@@ -82,7 +82,7 @@
 ]
 %}
 
-{% set longDate = node.getCreatedTime|format_date('long') %}
+{% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
@@ -93,9 +93,8 @@
 
   {% if display_submitted %}
     <footer class="node__meta">
-      {{ author_picture }}
       <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ longDate }}{% endtrans %}
+        {% trans %}Posted on {{ longDate }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
