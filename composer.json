@@ -73,6 +73,7 @@
         "drush/drush": "^9.0.0",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1",
+        "symfony/event-dispatcher": "4.3.4 as 3.4.99",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",

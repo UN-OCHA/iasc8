@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "519e827605a9cdf9f730380e300f1a55",
+    "content-hash": "1fa1fba669427f74935cac1441fe9a0a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3404,6 +3404,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
                 }
             },
             "autoload": {
@@ -6155,7 +6158,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/drupal/issues/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-07-24/i3004636-10.patch"
+                    "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7440,9 +7443,7 @@
             "version": "4.0.10",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.10.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.10.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -8914,30 +8915,37 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.32",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "3e922c4c3430b9de624e8a285dada5e61e230959"
+                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/3e922c4c3430b9de624e8a285dada5e61e230959",
-                "reference": "3e922c4c3430b9de624e8a285dada5e61e230959",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
+                "reference": "429d0a1451d4c9c4abe1959b2986b88794b9b7d2",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": "^7.1.3",
+                "symfony/event-dispatcher-contracts": "^1.1"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3"
+                "symfony/dependency-injection": "<3.4"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "1.1"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.8|~3.0|~4.0",
-                "symfony/dependency-injection": "~3.3|~4.0",
-                "symfony/expression-language": "~2.8|~3.0|~4.0",
-                "symfony/stopwatch": "~2.8|~3.0|~4.0"
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/http-foundation": "^3.4|^4.0",
+                "symfony/service-contracts": "^1.1",
+                "symfony/stopwatch": "~3.4|~4.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -8946,7 +8954,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -8973,7 +8981,65 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-23T08:05:57+00:00"
+            "time": "2019-08-26T08:55:16+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+                "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "suggest": {
+                "psr/event-dispatcher": "",
+                "symfony/event-dispatcher-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-09-17T09:54:03+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -11701,8 +11767,8 @@
             "authors": [
                 {
                     "name": "Frank Kleine",
-                    "role": "Developer",
-                    "homepage": "http://frankkleine.de/"
+                    "homepage": "http://frankkleine.de/",
+                    "role": "Developer"
                 }
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
@@ -13481,7 +13547,14 @@
             "time": "2019-04-19T11:52:16+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.4.99",
+            "alias_normalized": "3.4.99.0",
+            "version": "4.3.4.0",
+            "package": "symfony/event-dispatcher"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/colors": 20,

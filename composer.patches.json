@@ -1,5 +1,8 @@
 {
   "patches": {
+    "drupal/core": {
+      "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
+    },
     "drupal/viewsreference": {
       "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch"
     },
