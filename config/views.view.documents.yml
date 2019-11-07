@@ -406,6 +406,77 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'All recent documents list'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      block_description: 'Recent documents'
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: cd-bullet-list
+      defaults:
+        style: false
+        row: false
+        pager: false
+        arguments: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+        footer: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: title
+      pager:
+        type: some
+        options:
+          items_per_page: 12
+          offset: 0
+      arguments: {  }
+      use_more: false
+      use_more_always: true
+      use_more_text: 'View all documents'
+      link_display: custom_url
+      link_url: 'resources?f%5B0%5D=content_type%3Aoa_wiki_page'
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<div class="more-link"><a href="/resources?f%5B0%5D=content_type%3Aoa_wiki_page">View all documents</a></div>'
+            format: full_html
+          plugin_id: text
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   recent_documents_list:
     display_plugin: block
     id: recent_documents_list
