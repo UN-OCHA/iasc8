@@ -16,16 +16,12 @@ show_only_one_result: false
 field_identifier: product_category_label
 facet_source_id: 'search_api:views_page__iasc_group_content__page_documents'
 widget:
-  type: links
+  type: select2
   config:
     show_numbers: false
-    soft_limit: 0
-    soft_limit_settings:
-      show_less_label: 'Show less'
-      show_more_label: 'Show more'
-    show_reset_link: false
-    reset_text: 'Show all'
-    hide_reset_when_no_selection: false
+    width: 100%
+    autocomplete: false
+    match_operator: CONTAINS
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
