@@ -18,7 +18,6 @@ dependencies:
     - field.storage.node.field_media_files
     - field.storage.media.field_media_file
     - field.storage.node.field_category
-    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -150,14 +149,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_iasc_audience
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_tags
   label:
     label: Title
     datasource_id: 'entity:group'
@@ -196,9 +187,9 @@ field_settings:
         'entity:node':
           article: search_index
           page: search_index
-  saa_field_oa_media:
-    label: 'Search api attachments: Attachments'
-    property_path: saa_field_oa_media
+  saa_field_media_files:
+    label: 'Search api attachments: Media field for file'
+    property_path: saa_field_media_files
     type: text
   status:
     label: 'Publishing status'
@@ -255,11 +246,19 @@ datasource_settings:
       selected: {  }
   'entity:node':
     bundles:
-      default: true
+      default: false
       selected:
-        - oa_group
-        - oa_ical_importer
-        - oa_space
+        - action_point
+        - announcement
+        - article
+        - contact
+        - oa_discussion_post
+        - oa_event
+        - oa_wiki_page
+        - oa_worktracker_task
+        - page
+        - panopoly_landing_page
+        - panopoly_page
     languages:
       default: true
       selected: {  }
