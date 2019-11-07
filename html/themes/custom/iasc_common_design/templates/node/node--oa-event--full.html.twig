@@ -140,9 +140,7 @@
                   {% endtrans %}
                 </div>
                 <p>
-                  {% trans %}
-                    Meetings often reference non-public documents. Please log in to see all available content.
-                  {% endtrans %}
+                  {% trans %}Meetings often reference non-public documents. Please&nbsp{% endtrans %}<a href="/user/login/hid?destination{{ path('<current>') }}">{% trans %}log in</a> to see all available content.{% endtrans %}
                 </p>
               </div>
             </div>
