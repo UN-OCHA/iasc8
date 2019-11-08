@@ -1,0 +1,19 @@
+.more-link {
+  a {
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      display: inline-block;
+      height: 9px;
+      width: 9px;
+      margin-left: 1rem;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}

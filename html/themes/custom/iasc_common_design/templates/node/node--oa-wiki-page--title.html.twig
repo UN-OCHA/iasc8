@@ -88,15 +88,11 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-
   {% if showPage %}
     <a href="{{ url }}" rel="bookmark">
   {% else %}
     <a href="{{ fileUrl }}" title="Download">
   {% endif %}
-      <svg class="icon icon--arrow-right">
-        <use xlink:href="#arrow-right"></use>
-      </svg>
       {{ label }}
     </a>
     {{ title_suffix }}

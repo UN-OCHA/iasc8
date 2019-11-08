@@ -6,8 +6,11 @@
 
 .cd-bullet-list li {
   padding-bottom: 1rem;
-  /* margin-bottom: 1rem; */
-  /* border-bottom: 1px solid var(--cd-site-bg-color); */
+  padding-left: 1.5rem;
+  background-image: url(../../../img/icons/list-bullet.svg);
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: top 7px left 0;
 }
 
 .cd-bullet-list svg {
