@@ -36,7 +36,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -175,7 +175,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -193,7 +193,7 @@ display:
               recommendations_editor: '0'
               space_super_admin: '0'
               focal_point: '0'
-            placeholder: ''
+            placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
             label: ''
@@ -239,7 +239,20 @@ display:
             format: basic_html
           plugin_id: text
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>Your search yielded no results</h2>\r\n    \r\n<p>Check if your spelling is correct.<br>\r\nRemove quotes around phrases to search for each word individually. <em>bike shed</em> will often show more results than <em>\"bike shed\"</em><br>\r\nConsider loosening your query with <em>OR</em>. <em>bike OR shed</em> will often show more results than <em>bike shed</em></p>"
+            format: full_html
+          plugin_id: text
       relationships: {  }
       arguments:
         field_iasc_audience:
@@ -360,7 +373,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -378,7 +391,7 @@ display:
               recommendations_editor: '0'
               space_super_admin: '0'
               focal_point: '0'
-            placeholder: ''
+            placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
             label: ''
@@ -480,54 +493,6 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: search_api_options
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_default_solr_index
-          field: search_api_fulltext
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
-            description: ''
-            use_operator: false
-            operator: search_api_fulltext_op
-            identifier: s
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
-              group_login: '0'
-              viewer: '0'
-              recommendations_editor: '0'
-              space_super_admin: '0'
-              focal_point: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          parse_mode: terms
-          min_length: null
-          fields: {  }
-          plugin_id: search_api_fulltext
       defaults:
         filters: false
         filter_groups: false
@@ -636,54 +601,6 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: search_api_options
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_default_solr_index
-          field: search_api_fulltext
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
-            description: ''
-            use_operator: false
-            operator: search_api_fulltext_op
-            identifier: s
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
-              group_login: '0'
-              viewer: '0'
-              recommendations_editor: '0'
-              space_super_admin: '0'
-              focal_point: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          parse_mode: terms
-          min_length: null
-          fields: {  }
-          plugin_id: search_api_fulltext
       defaults:
         filters: false
         filter_groups: false
