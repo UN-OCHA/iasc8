@@ -16,7 +16,7 @@ provider: null
 plugin: 'facet_block:resource_audience_label'
 settings:
   id: 'facet_block:resource_audience_label'
-  label: Audience
+  label: 'Authoring body'
   provider: facets
   label_display: visible
   block_id: resourceaudiencelabel
