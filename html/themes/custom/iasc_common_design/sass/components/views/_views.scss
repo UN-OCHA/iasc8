@@ -21,12 +21,21 @@
 }
 
 .cd-layout-sidebar-first .views-exposed-form {
-
   .form--inline {
     margin-bottom: 1rem;
   }
 
   label {
     @extend .cd-heading-3;
+  }
+}
+
+.view-iasc-group-content .views-exposed-form .form--inline {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .form-item,
+  .form-actions {
+    margin: 0;
   }
 }
