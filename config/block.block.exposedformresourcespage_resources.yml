@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/resources\r\n/resources/*\r\n/updates\r\n/search"
+    pages: "/resources\r\n/resources/iasc-products\r\n/resources/meeting-documents\r\n/updates\r\n/search"
     negate: false
     context_mapping: {  }
