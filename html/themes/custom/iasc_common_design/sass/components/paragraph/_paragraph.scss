@@ -168,3 +168,8 @@
 .paragraph--type--agenda-items  {
   margin-bottom: 2rem;
 }
+
+// Fixes clearing issue in IE11.
+.paragraph--type--view {
+  clear: both;
+}
