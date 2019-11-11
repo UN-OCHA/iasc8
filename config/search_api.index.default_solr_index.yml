@@ -19,6 +19,7 @@ dependencies:
     - field.storage.node.field_media_files
     - field.storage.media.field_media_file
     - field.storage.node.field_category
+    - field.storage.node.field_published_date
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -158,6 +159,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_oa_date
+  field_published_date:
+    label: 'Published Date'
+    datasource_id: 'entity:node'
+    property_path: field_published_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_published_date
   label:
     label: Title
     datasource_id: 'entity:group'
@@ -307,6 +316,7 @@ processor_settings:
     weights:
       preprocess_index: -3
       preprocess_query: -6
+  language_with_fallback: {  }
   rendered_item:
     weights:
       add_properties: 0
