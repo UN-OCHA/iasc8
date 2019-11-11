@@ -115,3 +115,25 @@
     padding-right: 2rem;
   }
 }
+
+@media (min-width: 767px) {
+  .cd-layout-sidebar-first .cd-list li {
+    flex-wrap: wrap;
+  }
+
+  .cd-layout-sidebar-first .cd-list__image {
+    width: 3rem;
+    max-height: 3rem;
+    padding-right: 1rem;
+  }
+
+  .cd-layout-sidebar-first .cd-list__footer {
+    flex: 1 0 100%;
+    display: block;
+  }
+
+  .cd-layout-sidebar-first .cd-list__link {
+    text-align: right;
+    padding-left: 0;
+  }
+}
