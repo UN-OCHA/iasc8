@@ -194,7 +194,8 @@ function iasc_content_update_8010() {
   // Purge all data.
   try {
     field_purge_batch(20000);
-  } catch (Exception $e) {
+  }
+  catch (Exception $e) {
     // Ignore potential errors.
   }
 
