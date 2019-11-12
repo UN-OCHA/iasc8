@@ -294,9 +294,6 @@ function iasc_content_file_field_to_media() {
         'field_product_thumbnail' => 'field_thumbnail|image',
         'field_oa_media' => 'field_media_files|file',
       ],
-      'page' => [
-        'field_featured_image' => 'field_banner_image|image',
-      ],
       'contact' => [
         'field_photo' => 'field_media_photo|image',
       ],
