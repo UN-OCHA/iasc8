@@ -45,7 +45,10 @@ module:
   group: 0
   help: 0
   history: 0
+  iasc_content: 0
+  iasc_general: 0
   iasc_migrate: 0
+  iasc_reliefweb: 0
   image: 0
   language: 0
   layout_discovery: 0
