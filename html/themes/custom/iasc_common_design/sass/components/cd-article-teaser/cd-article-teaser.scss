@@ -1,7 +1,9 @@
+@import '../../cd/cd-variables';
+
 .cd-article-teaser {
   padding: 1rem 0;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--cd-site-bg-color);
+  border-bottom: 1px solid $cd-site-bg-color;
   clear: left;
   overflow: hidden;
 }

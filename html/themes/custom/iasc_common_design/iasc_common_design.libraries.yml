@@ -9,42 +9,42 @@ global-styling:
 cd-alert:
   css:
     theme:
-      sass/components/cd-alert/cd-alert.css: {}
+      css/components/cd-alert.css: {}
 
 cd-article-teaser:
   css:
     theme:
-      sass/components/cd-article-teaser/cd-article-teaser.css: {}
+      css/components/cd-article-teaser.css: {}
 
 cd-bullet-list:
   css:
     theme:
-      sass/components/cd-bullet-list/cd-bullet-list.css: {}
+      css/components/cd-bullet-list.css: {}
 
 cd-button:
   css:
     theme:
-      sass/components/cd-button/cd-button.css: {}
+      css/components/cd-button.css: {}
 
 cd-date:
   css:
     theme:
-      sass/components/cd-date/cd-date.css: {}
+      css/components/cd-date.css: {}
 
 cd-filters:
   css:
     theme:
-      sass/components/cd-filters/cd-filters.css: {}
+      css/components/cd-filters.css: {}
 
 cd-hero:
   css:
     theme:
-      sass/components/cd-hero/cd-hero.css: {}
+      css/components/cd-hero.css: {}
 
 cd-list:
   css:
     theme:
-      sass/components/cd-list/cd-list.css: {}
+      css/components/cd-list.css: {}
 
 cd-responsive-tables:
   js:
@@ -53,4 +53,4 @@ cd-responsive-tables:
 cd-user-list:
   css:
     theme:
-      sass/components/cd-user-list/cd-user-list.css: {}
+      css/components/cd-user-list.css: {}

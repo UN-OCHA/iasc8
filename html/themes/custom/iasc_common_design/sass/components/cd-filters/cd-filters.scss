@@ -1,3 +1,5 @@
+@import '../../cd/cd-variables';
+
 .cd-filters {
   margin-bottom: 1rem;
 }
@@ -7,8 +9,8 @@
   font-weight: bold;
   text-transform: uppercase;
   padding: 1rem;
-  background: var(--cd-site-bg-color);
-  color: var(--iasc-secondary);
+  background: $cd-site-bg-color;
+  color: $iasc-secondary;
   border: 0;
   width: 100%;
   display: flex;
@@ -18,19 +20,19 @@
 
 .cd-filters_btn:hover,
 .cd-filters_btn:focus {
-  background: var(--cd-site-bg-color--light);
-  color: var(--iasc-secondary);
+  background: $cd-light-bg-color;
+  color: $iasc-secondary;
 }
 
 .cd-filters_btn:focus {
-  background: var(--cd-site-bg-color--light);
-  outline: 3px solid var(--iasc-secondary);
+  background: $cd-light-bg-color;
+  outline: 3px solid $iasc-secondary;
   outline-offset: -3px;
 }
 
 /* Some buttons have SVG icons */
 .cd-filters_btn svg {
-  fill: var(--iasc-secondary);
+  fill: $iasc-secondary;
   width: 26px;
   height: 26px;
 }
@@ -41,11 +43,11 @@
 
 .cd-filters_btn:hover svg,
 .cd-filters_btn:focus svg {
-  fill: var(--iasc-primary);
+  fill: $iasc-primary;
 }
 
 .cd-filters_btn.js-open {
-  background: var(--cd-site-bg-color--light);
+  background: $cd-light-bg-color;
   position: relative;
 }
 
@@ -55,7 +57,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 6px 6px;
-  border-color: transparent transparent var(--cd-site-bg-color);
+  border-color: transparent transparent $cd-site-bg-color;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -63,22 +65,22 @@
 }
 
 .cd-filters_btn.js-open svg {
-  fill: var(--iasc-primary);
+  fill: $iasc-primary;
 }
 
 .cd-filters_btn.js-open:hover,
 .cd-filters_btn.js-open:focus {
-  background: var(--cd-white);
+  background: $cd-white;
   outline: none;
-  color: var(--cd-bright-blue);
+  color: $cd-bright-blue;
 }
 
 .js-open .cd-filters_btn {
-  background: var(--cd-highlight-red);
+  background: $cd-highlight-red;
 }
 
 .cd-filters__form {
-  background: var(--cd-site-bg-color--light);
+  background: $cd-light-bg-color;
   display: none;
   width: 100%;
   padding: 1rem;
@@ -86,6 +88,7 @@
 
 .cd-filters__form label {
   display: block;
+  margin: 0 0 0.5rem;
 }
 
 .js-open .cd-filters__form {
@@ -96,10 +99,6 @@
   margin: 0 0 1rem;
 }
 
-.cd-filters__form label {
-  margin: 0 0 0.5rem;
-}
-
 .cd-filters__form fieldset ul {
   list-style-type: none;
   margin: 0;
@@ -108,7 +107,7 @@
 
 .cd-filters__input[type='search'],
 .cd-filters__input[type='text'] {
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
@@ -118,27 +117,26 @@
 .cd-filters__input[type='text']:focus {
   outline: 0;
   /* RGBA and custom properties? */
-  box-shadow: 0 0 4px rgba(var(--cd-mid-grey), 0.7);
-  box-shadow: 0 0 4px var(--cd-highlight-red);
+  box-shadow: 0 0 4px rgba($cd-mid-grey, 0.7);
 }
 
 .cd-filters__input::-webkit-input-placeholder {
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   font-style: italic;
 }
 
 .cd-filters__input::-moz-placeholder {
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   font-style: italic;
 }
 
 .cd-filters__input:-ms-input-placeholder {
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   font-style: italic;
 }
 
 .cd-filters__input:-moz-placeholder {
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   font-style: italic;
 }
 

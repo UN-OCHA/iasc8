@@ -1,3 +1,5 @@
+@import '../../cd/cd-variables';
+
 .cd-alert {
   padding: 1rem;
   margin: 1rem 0;
@@ -18,15 +20,15 @@
 }
 
 .cd-attn {
-  border: 1px solid var(--cd-bright-blue);
-  border-left: 6px solid var(--cd-bright-blue);
+  border: 1px solid $cd-bright-blue;
+  border-left: 6px solid $cd-bright-blue;
 }
 
 .cd-attn svg {
-  fill: var(--cd-bright-blue);
+  fill: $cd-bright-blue;
 }
 
 .cd-message {
-  border: 1px solid var(--cd-site-bg-color);
-  border-left: 6px solid var(--cd-site-bg-color);
+  border: 1px solid $cd-site-bg-color;
+  border-left: 6px solid $cd-site-bg-color;
 }
