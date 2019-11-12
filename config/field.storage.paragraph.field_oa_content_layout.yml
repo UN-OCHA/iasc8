@@ -23,7 +23,6 @@ settings:
     -
       value: list
       label: 'Simple listing'
-  allowed_values_function: oa_related_paragraphs_field_allowed_values
 module: options
 locked: false
 cardinality: 1
