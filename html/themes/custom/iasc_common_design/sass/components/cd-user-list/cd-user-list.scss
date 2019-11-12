@@ -1,3 +1,5 @@
+@import '../../cd/cd-variables';
+
 .cd-user-list {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 .cd-user-list li {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  /* border-bottom: 1px solid var(--cd-site-bg-color); */
+  /* border-bottom: 1px solid $cd-site-bg-color; */
   clear: left;
   overflow: hidden;
 }
@@ -28,7 +30,7 @@
 .cd-user-list__image svg {
   max-width: 6rem;
   max-height: 6rem;
-  fill: var(--cd-ocha-blue);
+  fill: $cd-ocha-blue;
 }
 
 .cd-user-list__name {
@@ -47,5 +49,5 @@
   padding: 0 0 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--iasc-secondary);
+  color: $iasc-secondary;
 }

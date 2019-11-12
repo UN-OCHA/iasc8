@@ -1,6 +1,8 @@
+@import '../../cd/cd-variables';
+
 .cd-date-wrapper {
   overflow: hidden;
-  background-color: var(--cd-site-bg-color--light);
+  background-color: $cd-light-bg-color;
   text-align: center;
   width: 80px;
   line-height: 18px;
@@ -10,24 +12,24 @@
 }
 
 .cd-date-month-wrapper {
-  background: var(--iasc-primary);
+  background: $iasc-primary;
   padding: 3px 0;
   margin-bottom: 10px;
 }
 
 .cd-date-month {
-  color: var(--cd-white);
+  color: $cd-white;
   padding-top: 10px;
   text-transform: uppercase;
 }
 
 .cd-date-day {
   font-size: 25px;
-  color: var(--cd-dark-grey);
+  color: $cd-dark-grey;
   word-spacing: -5px;
 }
 
 .cd-date-year-wrapper {
-  color: var(--iasc-primary);
+  color: $iasc-primary;
   padding-bottom: 5px;
 }

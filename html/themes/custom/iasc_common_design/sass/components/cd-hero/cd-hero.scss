@@ -1,3 +1,5 @@
+@import '../../cd/cd-variables';
+
 .cd-hero {
   margin: 0;
   height: 100%;
@@ -47,15 +49,15 @@
   text-align: center;
   font-weight: 700;
   text-decoration: none;
-  color: var(--iasc-primary);
-  background-color: var(--iasc-highlight);
+  color: $iasc-primary;
+  background-color: $iasc-highlight;
   transition: background-color 1s ease-out;
 }
 
 .cd-hero__link:hover,
 .cd-hero__link:focus {
-  color: var(--iasc-primary);
-  background-color: var(--iasc-red);
+  color: $iasc-primary;
+  background-color: $iasc-red;
 }
 
 @media (min-width: 576px) {
