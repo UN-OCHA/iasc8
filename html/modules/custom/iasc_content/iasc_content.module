@@ -294,9 +294,6 @@ function iasc_content_file_field_to_media() {
         'field_product_thumbnail' => 'field_thumbnail|image',
         'field_oa_media' => 'field_media_files|file',
       ],
-      'page' => [
-        'field_featured_image' => 'field_banner_image|image',
-      ],
       'contact' => [
         'field_photo' => 'field_media_photo|image',
       ],
@@ -334,6 +331,10 @@ function iasc_content_file_field_to_media() {
   foreach ($convertions as $entity_type => $entity_info) {
     foreach ($entity_info as $bundle => $bundle_info) {
       foreach ($bundle_info as $from => $to_info) {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Starting fore entity "%s", bundle "%s" from "%s" to "%s".', $entity_type, $bundle, $from, $to_info)
+        );
+
         // Explode to field to get media type.
         $parts = explode('|', $to_info);
         $to = $parts[0];
