@@ -126,7 +126,7 @@ function iasc_content_update_8007() {
     }
   }
 
-  // \Drupal::service("entity_field.manager")->getFieldStorageDefinitions("node")["comment"]->delete();
+  \Drupal::service("entity_field.manager")->getFieldStorageDefinitions("node")["comment"]->delete();
 
   // Purge all data.
   field_purge_batch(20000);
