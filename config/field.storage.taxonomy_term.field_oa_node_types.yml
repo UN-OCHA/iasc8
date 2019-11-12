@@ -11,7 +11,7 @@ entity_type: taxonomy_term
 type: list_string
 settings:
   allowed_values: {  }
-  allowed_values_function: oa_buttons_get_command_buttons_options
+  allowed_values_function: iasc_content_oa_buttons_get_command_buttons_options
 module: options
 locked: false
 cardinality: -1

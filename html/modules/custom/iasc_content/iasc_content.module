@@ -617,3 +617,73 @@ function iasc_content_post_migrate_steps() {
   iasc_content_update_8008();
   iasc_content_update_8009();
 }
+
+/**
+ * Legacy command from Drupal 7 version.
+ */
+function iasc_content_oa_buttons_get_command_buttons_options(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  return [
+    '_legacy' => 'do not use - oa_buttons_get_command_buttons_options',
+    'debug' => $definition->getName(),
+  ];
+}
+
+/**
+ * Legacy command from Drupal 7 version.
+ */
+function iasc_content_oa_related_paragraphs_field_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  return [
+    '_legacy' => 'do not use - oa_related_paragraphs_field_allowed_values',
+    'debug' => $definition->getName(),
+  ];
+}
+
+/**
+ * Legacy command from Drupal 7 version.
+ */
+function iasc_content_oa_sections_field_oa_section_type_menu_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  return [
+    0 => 'do not use - oa_sections_field_oa_section_type_menu_allowed_values',
+    999 => $definition->getName(),
+  ];
+}
+
+/**
+ * Allowed values for task content type.
+ */
+function iasc_content_oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+  // TODO: Move to iasc_content after migration.
+  $field_name = $definition->getName();
+
+  // Priority values.
+  if (strpos($field_name, 'field_oa_worktracker_priority') === 0) {
+    return [
+      '1' => 'Learning Opportunity',
+      '2' => 'Critical',
+      '3' => 'Important',
+    ];
+  }
+
+  // Status values.
+  if (strpos($field_name, 'field_oa_worktracker_task_status') === 0) {
+    return [
+      'not_initiated' => 'Not Initiated',
+      'ongoing' => 'Ongoing',
+      'implemented' => 'Implemented',
+      'closed' => 'Closed',
+    ];
+  }
+
+  // Type values.
+  if (strpos($field_name, 'field_oa_worktracker_task_type') === 0) {
+    return [
+      'natural_disaster' => 'Natural Disaster',
+      'conflict' => 'Conflict',
+    ];
+  }
+
+  return [
+    '_legacy' => 'do not use - oa_worktracker_allowed_values_callback',
+    'debug' => $definition->getName(),
+  ];
+}

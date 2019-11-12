@@ -20,7 +20,7 @@ settings:
     -
       value: 8
       label: High
-  allowed_values_function: oa_worktracker_allowed_values_callback
+  allowed_values_function: iasc_content_oa_worktracker_allowed_values_callback
 module: options
 locked: false
 cardinality: 1
