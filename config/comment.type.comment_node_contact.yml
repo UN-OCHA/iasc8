@@ -1,8 +1,0 @@
-uuid: 4f386744-27b7-4d95-991f-a99053094f72
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_contact
-label: 'Contact comment'
-target_entity_type_id: node
-description: null

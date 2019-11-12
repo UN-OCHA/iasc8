@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_action_point.default
     - field.field.node.action_point.body
-    - field.field.node.action_point.comment_node_action_point
     - field.field.node.action_point.field_ap_date
     - field.field.node.action_point.field_ap_progress_overview
     - field.field.node.action_point.field_ap_responsibility
@@ -18,7 +16,6 @@ dependencies:
     - field.field.node.action_point.og_group_ref
     - node.type.action_point
   module:
-    - comment
     - datetime
     - options
     - text
@@ -33,15 +30,6 @@ content:
     type: text_default
     weight: 0
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_action_point:
-    label: hidden
-    type: comment_default
-    weight: 9
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_ap_date:

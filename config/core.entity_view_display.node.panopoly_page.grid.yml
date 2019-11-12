@@ -5,10 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.grid
     - field.field.node.panopoly_page.body
-    - field.field.node.panopoly_page.comment_node_panopoly_page
+    - field.field.node.panopoly_page.field_banner_image
+    - field.field.node.panopoly_page.field_content
     - field.field.node.panopoly_page.field_featured_categories
     - field.field.node.panopoly_page.field_featured_image
     - field.field.node.panopoly_page.field_featured_status
+    - field.field.node.panopoly_page.field_footer
+    - field.field.node.panopoly_page.field_header
+    - field.field.node.panopoly_page.field_sidebar
     - node.type.panopoly_page
   module:
     - user
@@ -24,7 +28,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_panopoly_page: true
   field_banner_image: true
   field_content: true
   field_featured_categories: true

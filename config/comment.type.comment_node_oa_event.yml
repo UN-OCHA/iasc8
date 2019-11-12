@@ -1,8 +1,0 @@
-uuid: e74fa6fc-7152-46d1-b512-ccd90e37fc78
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_oa_event
-label: 'Event comment'
-target_entity_type_id: node
-description: null

@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.bio_short
     - field.field.node.contact.body
-    - field.field.node.contact.comment_node_contact
     - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
@@ -60,7 +59,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  comment_node_contact: true
   field_address: true
   field_branch: true
   field_department: true

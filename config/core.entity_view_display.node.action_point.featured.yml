@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.action_point.body
-    - field.field.node.action_point.comment_node_action_point
     - field.field.node.action_point.field_ap_date
     - field.field.node.action_point.field_ap_progress_overview
     - field.field.node.action_point.field_ap_responsibility
@@ -31,7 +30,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_action_point: true
   field_ap_date: true
   field_ap_progress_overview: true
   field_ap_responsibility: true

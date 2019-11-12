@@ -159,3 +159,44 @@ function iasc_content_update_8009() {
   $sql = "delete from {node_revision__field_iasc_audience} where field_iasc_audience_target_id not in (select id from {groups});";
   $connection->query($sql);
 }
+
+/**
+ * Remove comment module.
+ */
+function iasc_content_update_8010() {
+  $fields = [
+    'comment_node_contact',
+    'comment_node_action_point',
+    'comment_node_announcement',
+    'comment_node_contact',
+    'comment_node_oa_discussion_post',
+    'comment_node_oa_event',
+    'comment_node_oa_group',
+    'comment_node_oa_ical_importer',
+    'comment_node_oa_section',
+    'comment_node_oa_space',
+    'comment_node_oa_team',
+    'comment_node_oa_wiki_page',
+    'comment_node_oa_worktracker_task',
+    'comment_node_panopoly_page',
+  ];
+
+  foreach ($fields as $field) {
+    if ($field = FieldStorageConfig::loadByName('node', $field)) {
+      $field->delete();
+    }
+  }
+
+  if (\Drupal::service('entity_field.manager')->getFieldStorageDefinitions('node')['comment']) {
+    \Drupal::service('entity_field.manager')->getFieldStorageDefinitions('node')['comment']->delete();
+  }
+
+  // Purge all data.
+  try {
+    field_purge_batch(20000);
+  } catch (Exception $e) {
+    // Ignore potential errors.
+  }
+
+  \Drupal::service('module_installer')->uninstall(['comment']);
+}

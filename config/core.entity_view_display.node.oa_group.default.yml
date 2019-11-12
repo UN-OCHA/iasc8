@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_group.default
     - field.field.node.oa_group.body
-    - field.field.node.oa_group.comment_node_oa_group
     - field.field.node.oa_group.field_featured_image
     - field.field.node.oa_group.group_access
     - field.field.node.oa_group.group_group
@@ -15,7 +13,6 @@ dependencies:
     - field.field.node.oa_group.og_user_permission_inheritance
     - node.type.oa_group
   module:
-    - comment
     - image
     - text
     - user
@@ -29,15 +26,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_group:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_featured_image:

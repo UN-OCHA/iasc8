@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.oa_section.body
-    - field.field.node.oa_section.comment_node_oa_section
+    - field.field.node.oa_section.field_content
     - field.field.node.oa_section.field_iasc_audience
     - field.field.node.oa_section.field_oa_group_ref
     - field.field.node.oa_section.field_oa_node_types
@@ -30,7 +30,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_oa_section: true
   field_content: true
   field_iasc_audience: true
   field_oa_group_ref: true

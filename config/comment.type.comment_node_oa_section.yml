@@ -1,8 +1,0 @@
-uuid: 07408228-a427-487c-a80e-a07aa2ed7ca1
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_oa_section
-label: 'Section Page comment'
-target_entity_type_id: node
-description: null
