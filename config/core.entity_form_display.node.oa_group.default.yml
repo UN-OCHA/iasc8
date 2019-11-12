@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_group.body
-    - field.field.node.oa_group.comment_node_oa_group
     - field.field.node.oa_group.field_featured_image
     - field.field.node.oa_group.group_access
     - field.field.node.oa_group.group_group
@@ -15,7 +14,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.oa_group
   module:
-    - comment
     - image
     - path
     - text
@@ -31,12 +29,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_group:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.oa_group.body
-    - field.field.node.oa_group.comment_node_oa_group
     - field.field.node.oa_group.field_featured_image
     - field.field.node.oa_group.group_access
     - field.field.node.oa_group.group_group
@@ -36,7 +35,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment_node_oa_group: true
   field_featured_image: true
   group_access: true
   group_group: true

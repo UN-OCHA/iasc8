@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.panopoly_page.body
-    - field.field.node.panopoly_page.comment_node_panopoly_page
     - field.field.node.panopoly_page.field_banner_image
     - field.field.node.panopoly_page.field_content
     - field.field.node.panopoly_page.field_featured_categories
@@ -15,7 +14,6 @@ dependencies:
     - field.field.node.panopoly_page.field_sidebar
     - node.type.panopoly_page
   module:
-    - comment
     - media_library
     - paragraphs
     - path
@@ -32,12 +30,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_panopoly_page:
-    type: comment_default
-    weight: 11
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.contact.body
-    - field.field.node.contact.comment_node_contact
     - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
@@ -25,7 +24,6 @@ dependencies:
     - node.type.contact
   module:
     - address
-    - comment
     - link
     - media_library
     - paragraphs
@@ -44,12 +42,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_contact:
-    type: comment_default
-    weight: 16
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

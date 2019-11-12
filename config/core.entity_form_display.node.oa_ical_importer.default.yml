@@ -4,14 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_ical_importer.body
-    - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
     - field.field.node.oa_ical_importer.field_basic_file_file
     - field.field.node.oa_ical_importer.field_iasc_audience
     - field.field.node.oa_ical_importer.oa_section_ref
     - field.field.node.oa_ical_importer.og_group_ref
     - node.type.oa_ical_importer
   module:
-    - comment
     - file
     - path
     - text
@@ -27,12 +25,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_ical_importer:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

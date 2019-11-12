@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_wiki_page.default
     - field.field.node.oa_wiki_page.body
-    - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
     - field.field.node.oa_wiki_page.field_category
     - field.field.node.oa_wiki_page.field_document_no
     - field.field.node.oa_wiki_page.field_document_type
@@ -16,6 +14,8 @@ dependencies:
     - field.field.node.oa_wiki_page.field_oa_wiki_page_no_redirect
     - field.field.node.oa_wiki_page.field_product_thumbnail
     - field.field.node.oa_wiki_page.field_published_date
+    - field.field.node.oa_wiki_page.field_section
+    - field.field.node.oa_wiki_page.field_section_audience
     - field.field.node.oa_wiki_page.field_thumbnail
     - field.field.node.oa_wiki_page.oa_other_spaces_ref
     - field.field.node.oa_wiki_page.oa_section_ref
@@ -23,7 +23,6 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - comment
     - datetime
     - file
     - image
@@ -39,15 +38,6 @@ content:
     type: text_default
     weight: 11
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_wiki_page:
-    label: hidden
-    type: comment_default
-    weight: 9
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_category:

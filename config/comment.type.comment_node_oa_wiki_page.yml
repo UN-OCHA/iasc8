@@ -1,8 +1,0 @@
-uuid: 52744211-3eb4-46c6-b6d7-7aa428b0be7f
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_oa_wiki_page
-label: 'Document Page comment'
-target_entity_type_id: node
-description: null

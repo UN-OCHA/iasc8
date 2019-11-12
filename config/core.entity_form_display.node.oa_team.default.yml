@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_team.body
-    - field.field.node.oa_team.comment_node_oa_team
     - field.field.node.oa_team.field_iasc_audience
     - field.field.node.oa_team.field_oa_team_users
     - field.field.node.oa_team.og_group_ref
     - node.type.oa_team
   module:
-    - comment
     - path
     - text
 id: node.oa_team.default
@@ -25,12 +23,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_team:
-    type: comment_default
-    weight: 20
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

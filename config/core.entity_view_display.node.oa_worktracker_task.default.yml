@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_worktracker_task.default
     - field.field.node.oa_worktracker_task.body
-    - field.field.node.oa_worktracker_task.comment_node_oa_worktracker_task
     - field.field.node.oa_worktracker_task.field_addressee
     - field.field.node.oa_worktracker_task.field_date
     - field.field.node.oa_worktracker_task.field_description_implementation
@@ -28,7 +26,6 @@ dependencies:
     - field.field.node.oa_worktracker_task.og_vocabulary
     - node.type.oa_worktracker_task
   module:
-    - comment
     - datetime
     - file
     - options
@@ -44,15 +41,6 @@ content:
     type: text_default
     weight: 3
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_worktracker_task:
-    label: hidden
-    type: comment_default
-    weight: 15
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_addressee:

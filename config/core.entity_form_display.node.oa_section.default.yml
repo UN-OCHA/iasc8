@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_section.body
-    - field.field.node.oa_section.comment_node_oa_section
     - field.field.node.oa_section.field_content
     - field.field.node.oa_section.field_iasc_audience
     - field.field.node.oa_section.field_oa_group_ref
@@ -17,7 +16,6 @@ dependencies:
     - field.field.node.oa_section.og_group_ref
     - node.type.oa_section
   module:
-    - comment
     - paragraphs
     - path
     - text
@@ -33,12 +31,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_section:
-    type: comment_default
-    weight: 10
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

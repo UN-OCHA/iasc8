@@ -3,15 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_team.default
     - field.field.node.oa_team.body
-    - field.field.node.oa_team.comment_node_oa_team
     - field.field.node.oa_team.field_iasc_audience
     - field.field.node.oa_team.field_oa_team_users
     - field.field.node.oa_team.og_group_ref
     - node.type.oa_team
   module:
-    - comment
     - text
     - user
 id: node.oa_team.default
@@ -24,15 +21,6 @@ content:
     type: text_default
     weight: 4
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_team:
-    label: hidden
-    type: comment_default
-    weight: 2
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_oa_team_users:

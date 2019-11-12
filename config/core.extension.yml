@@ -9,7 +9,6 @@ module:
   chosen_lib: 0
   ckeditor: 0
   color: 0
-  comment: 0
   conditional_fields: 0
   config: 0
   contextual: 0
@@ -79,7 +78,6 @@ module:
   search_api_db: 0
   search_api_solr: 0
   search_api_solr_admin: 0
-  search_api_solr_defaults: 0
   select2: 0
   select2_facets: 0
   shortcut: 0

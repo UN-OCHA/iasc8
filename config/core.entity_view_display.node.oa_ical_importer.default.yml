@@ -3,16 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_ical_importer.default
     - field.field.node.oa_ical_importer.body
-    - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
     - field.field.node.oa_ical_importer.field_basic_file_file
     - field.field.node.oa_ical_importer.field_iasc_audience
     - field.field.node.oa_ical_importer.oa_section_ref
     - field.field.node.oa_ical_importer.og_group_ref
     - node.type.oa_ical_importer
   module:
-    - comment
     - file
     - text
     - user
@@ -26,15 +23,6 @@ content:
     type: text_default
     weight: 5
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_ical_importer:
-    label: hidden
-    type: comment_default
-    weight: 3
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_basic_file_file:

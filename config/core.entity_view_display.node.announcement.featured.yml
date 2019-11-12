@@ -5,13 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.announcement.body
-    - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
     - field.field.node.announcement.field_iasc_audience
     - field.field.node.announcement.field_legacy_publish
     - field.field.node.announcement.field_links
     - field.field.node.announcement.field_published_date
     - field.field.node.announcement.field_referenced_docs
+    - field.field.node.announcement.field_section
+    - field.field.node.announcement.field_section_audience
     - field.field.node.announcement.field_thumbnail
     - field.field.node.announcement.oa_section_ref
     - field.field.node.announcement.og_group_ref
@@ -44,7 +45,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  comment_node_announcement: true
   field_contact: true
   field_iasc_audience: true
   field_legacy_publish: true
