@@ -59,9 +59,6 @@
           {% for feed_link in feed_links %}
             <li>
               <a href="{{ feed_link.url }}">
-                <svg class="icon icon--arrow-right">
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
                 {{ feed_link.title }}, {{ feed_link.source }}, {{ feed_link.date|date("d F Y") }}
               </a>
             </li>

@@ -211,6 +211,18 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts:
+        created:
+          id: created
+          table: search_api_index_default_solr_index
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
         changed:
           id: changed
           table: search_api_index_default_solr_index

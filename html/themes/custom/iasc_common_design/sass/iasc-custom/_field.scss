@@ -106,7 +106,8 @@
 }
 
 // Banner caption.
-.field--name-field-banner-text {
+.field--name-field-banner-text,
+.field--name-field-oa-banner-text  {
   text-align: right;
   font-size: 0.9rem;
   margin-top: -1rem; // assumes banner_image field has bottom margin.
