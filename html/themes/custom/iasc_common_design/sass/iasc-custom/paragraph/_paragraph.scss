@@ -173,3 +173,20 @@
 .paragraph--type--view {
   clear: both;
 }
+
+.paragraph--type--paragraph-text {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    background-image: url('../img/icons/list-bullet.svg');
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    background-position: top 7px left 0;
+  }
+}
