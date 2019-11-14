@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_worktracker_task.body
-    - field.field.node.oa_worktracker_task.comment_node_oa_worktracker_task
     - field.field.node.oa_worktracker_task.field_addressee
     - field.field.node.oa_worktracker_task.field_date
     - field.field.node.oa_worktracker_task.field_description_implementation
@@ -27,7 +26,6 @@ dependencies:
     - field.field.node.oa_worktracker_task.og_vocabulary
     - node.type.oa_worktracker_task
   module:
-    - comment
     - datetime
     - file
     - path
@@ -44,12 +42,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_worktracker_task:
-    type: comment_default
-    weight: 22
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

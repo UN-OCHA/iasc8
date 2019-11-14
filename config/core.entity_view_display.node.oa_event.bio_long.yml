@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.bio_long
     - field.field.node.oa_event.body
-    - field.field.node.oa_event.comment_node_oa_event
     - field.field.node.oa_event.field_additional_locations
     - field.field.node.oa_event.field_agenda_items
     - field.field.node.oa_event.field_city
@@ -19,6 +18,9 @@ dependencies:
     - field.field.node.oa_event.field_meeting_notes
     - field.field.node.oa_event.field_oa_date
     - field.field.node.oa_event.field_room
+    - field.field.node.oa_event.field_section
+    - field.field.node.oa_event.field_section_audience
+    - field.field.node.oa_event.field_thumbnail
     - field.field.node.oa_event.field_venue
     - field.field.node.oa_event.oa_other_spaces_ref
     - field.field.node.oa_event.oa_section_ref
@@ -39,7 +41,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_oa_event: true
   field_additional_locations: true
   field_agenda_items: true
   field_city: true

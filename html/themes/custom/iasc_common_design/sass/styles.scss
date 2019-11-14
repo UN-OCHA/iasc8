@@ -33,27 +33,28 @@
 
 // IASC custom
 @import 'iasc-custom/field';
+@import 'iasc-custom/facets';
+@import 'iasc-custom/media/media';
+@import 'iasc-custom/more-link';
+@import 'iasc-custom/node/_node';
+@import 'iasc-custom/node/_node--event';
+@import 'iasc-custom/node/_node--grid-2-col';
+@import 'iasc-custom/node/_node--grid-3-col';
+@import 'iasc-custom/node/_node--grid-4-col';
+@import 'iasc-custom/node/_node--image-grid';
+@import 'iasc-custom/node/_node--teaser';
 @import 'iasc-custom/page-title';
+@import 'iasc-custom/paragraph/_paragraph';
 @import 'iasc-custom/secretariat';
+@import 'iasc-custom/taxonomy/_taxonomy';
+@import 'iasc-custom/user/_user';
+@import 'iasc-custom/views/_views';
 
 //——————————————————————————————————————————————————————————————————————————————
 // Components
 //——————————————————————————————————————————————————————————————————————————————
 
+@import 'components/buttons';
 @import 'components/cd-responsive-tables';
 @import 'components/forms';
-@import 'components/buttons';
-@import 'components/facets';
 @import 'components/pagination';
-@import 'components/media/media';
-@import 'components/node/_node';
-@import 'components/node/_node--event';
-@import 'components/node/_node--grid-2-col';
-@import 'components/node/_node--grid-3-col';
-@import 'components/node/_node--grid-4-col';
-@import 'components/node/_node--image-grid';
-@import 'components/node/_node--teaser';
-@import 'components/taxonomy/_taxonomy';
-@import 'components/paragraph/_paragraph';
-@import 'components/user/_user';
-@import 'components/views/_views';

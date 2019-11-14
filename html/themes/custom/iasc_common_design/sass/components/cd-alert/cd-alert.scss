@@ -1,0 +1,34 @@
+@import '../../cd/cd-variables';
+
+.cd-alert {
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  clear: both;
+}
+
+.cd-alert--title {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.cd-alert svg {
+  margin-right: 2rem;
+  width: 26px;
+  height: 26px;
+}
+
+.cd-attn {
+  border: 1px solid $cd-bright-blue;
+  border-left: 6px solid $cd-bright-blue;
+}
+
+.cd-attn svg {
+  fill: $cd-bright-blue;
+}
+
+.cd-message {
+  border: 1px solid $cd-site-bg-color;
+  border-left: 6px solid $cd-site-bg-color;
+}

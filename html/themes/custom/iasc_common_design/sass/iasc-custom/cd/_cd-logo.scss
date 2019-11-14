@@ -18,13 +18,18 @@
 
 @include tablet {
   .cd-site-logo {
-    background: url('../img/logos/logo.svg') center no-repeat;
-    background-size: contain;
+    background: none;
+    //background: url('../img/logos/logo.svg') center no-repeat;
+    //background-size: contain;
     width: 220px; // width may need to be adjusted depending on logo width.
 
     .no-svg & {
       background: url('../img/logos/logo.png') center no-repeat;
       background-size: contain;
+    }
+
+    img {
+      width: auto; // Fixes placement in IE11.
     }
   }
 }

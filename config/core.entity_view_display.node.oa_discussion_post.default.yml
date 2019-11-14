@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_discussion_post.default
     - field.field.node.oa_discussion_post.body
-    - field.field.node.oa_discussion_post.comment_node_oa_discussion_post
     - field.field.node.oa_discussion_post.field_iasc_audience
+    - field.field.node.oa_discussion_post.field_media_files
     - field.field.node.oa_discussion_post.field_oa_media
+    - field.field.node.oa_discussion_post.field_section
+    - field.field.node.oa_discussion_post.field_section_audience
     - field.field.node.oa_discussion_post.oa_section_ref
     - field.field.node.oa_discussion_post.og_group_ref
     - field.field.node.oa_discussion_post.og_vocabulary
     - node.type.oa_discussion_post
   module:
-    - comment
     - file
     - text
     - user
@@ -27,15 +27,6 @@ content:
     type: text_default
     weight: 4
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_discussion_post:
-    label: hidden
-    type: comment_default
-    weight: 2
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_oa_media:

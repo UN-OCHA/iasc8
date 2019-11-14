@@ -1,0 +1,35 @@
+@import '../../cd/cd-variables';
+
+.cd-date-wrapper {
+  overflow: hidden;
+  background-color: $cd-light-bg-color;
+  text-align: center;
+  width: 80px;
+  line-height: 18px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.cd-date-month-wrapper {
+  background: $iasc-primary;
+  padding: 3px 0;
+  margin-bottom: 10px;
+}
+
+.cd-date-month {
+  color: $cd-white;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.cd-date-day {
+  font-size: 25px;
+  color: $cd-dark-grey;
+  word-spacing: -5px;
+}
+
+.cd-date-year-wrapper {
+  color: $iasc-primary;
+  padding-bottom: 5px;
+}

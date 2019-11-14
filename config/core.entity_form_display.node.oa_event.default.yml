@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_event.body
-    - field.field.node.oa_event.comment_node_oa_event
     - field.field.node.oa_event.field_additional_locations
     - field.field.node.oa_event.field_agenda_items
     - field.field.node.oa_event.field_city
@@ -28,7 +27,6 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - comment
     - date_recur
     - media_library
     - paragraphs
@@ -47,12 +45,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_event:
-    type: comment_default
-    weight: 24
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

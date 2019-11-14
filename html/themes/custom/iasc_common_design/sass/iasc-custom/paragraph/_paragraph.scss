@@ -1,0 +1,175 @@
+.paragraph--type--hero,
+.paragraph--type--teaser-item,
+.paragraph--type--teaser-grid,
+.paragraph--type--list-item,
+.paragraph--type--list,
+.paragraph--type--view,
+.paragraph--type--twitter {
+  .field {
+    margin-bottom: 0;
+  }
+}
+
+.paragraph--type--section-menu {
+  margin-bottom: 2rem;
+}
+
+.paragraph--type--paragraph-text {
+  margin-bottom: 2rem;
+  clear: both;
+
+  .field--name-field-teaser-image {
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  @supports (display: flex) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field--name-field-para-title {
+      flex: 1 0 100%;
+    }
+
+    &.paragraph__image--align-left,
+    &.paragraph__image--align-right {
+      .field--name-field-paragraph-text {
+        order: 2;
+      }
+
+      .field--name-field-teaser-image {
+        order: 1;
+      }
+
+      .field--name-field-paragraph-text {
+        @include tablet {
+          flex: 1 0 300px;
+        }
+      }
+
+      .field--name-field-teaser-image {
+        @include tablet {
+          flex: 0 1 300px;
+        }
+      }
+    }
+  }
+
+  &.paragraph__image--align-left {
+    .field--name-field-paragraph-text p:last-child,
+    .field--name-field-paragraph-text p:only-of-type {
+      margin-bottom: 0;
+    }
+
+    .field--name-field-teaser-image {
+      @include tablet {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &.paragraph__image--align-right {
+    .field--name-field-paragraph-text {
+      @include tablet {
+        margin-right: 2rem;
+      }
+    }
+
+    @supports (display: flex) {
+      .field--name-field-teaser-image {
+        order: 2;
+      }
+    }
+  }
+}
+
+.cd-layout-main-content .paragraph--type--teaser-grid {
+  .field--type-entity-reference-revisions {
+    @extend .grid-3-col;
+  }
+
+  .field--type-entity-reference-revisions .paragraph--type--teaser-item {
+    @extend .grid-item;
+    @extend .grid-item_article;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.paragraph--type--teaser-item h3 {
+  margin: 0.5rem 0;
+}
+
+.paragraph--type--section-menu > .cd-sidebar__label,
+.paragraph--type--twitter > .cd-sidebar__label,
+.paragraph--type--reliefweb-feed > h2,
+.paragraph--type--list > h2,
+.paragraph--type--teaser-grid > h2,
+.paragraph--type--paragraph-content > .field--name-field-para-title,
+.paragraph--type--content-item .field--name-field-para-title,
+.paragraph--type--video .field--name-field-para-title,
+.paragraph--type--paragraph-text .field--name-field-para-title,
+.paragraph--type--paragraph-text .field--name-field-para-title,
+.paragraph--type--contact-list > .field--name-field-contacts > .field__label,
+.paragraph--type--contact-list .field--name-field-list-title {
+
+  .cd-layout-main-content & {
+    @extend .cd-heading-2;
+    margin-top: 0;
+  }
+
+  .cd-layout-sidebar-first & {
+    @extend .cd-heading-3;
+  }
+}
+
+.cd-layout-sidebar-first {
+  .paragraph--type--teaser-item,
+  .paragraph--type--twitter,
+  .paragraph--type--content-item,
+  .paragraph--type--paragraph-content {
+    margin-bottom: 2rem;
+  }
+
+  > .field__items > .field__item {
+    margin-bottom: 2rem;
+  }
+}
+
+.cd-layout-main-content {
+  > .field__items > .field__item {
+    margin-bottom: 2rem;
+  }
+}
+
+.cd-sidebar__label,
+.paragraph--type--list > h2,
+.paragraph--type--teaser-grid > h2 {
+  .cd-layout-sidebar-first & {
+    margin-top: 0;
+  }
+}
+
+.paragraph--type--contact-list > .field--name-field-contacts > .field__items {
+  padding: 1rem 0;
+}
+
+.paragraph--type--contact-list > .field--name-field-contacts > .field__items > .field__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph--type--agenda-items  {
+  margin-bottom: 2rem;
+}
+
+// Fixes clearing issue in IE11.
+.paragraph--type--view {
+  clear: both;
+}

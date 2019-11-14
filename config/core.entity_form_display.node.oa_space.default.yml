@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_space.body
-    - field.field.node.oa_space.comment_node_oa_space
     - field.field.node.oa_space.field_banner_image
     - field.field.node.oa_space.field_body_legacy_ids
     - field.field.node.oa_space.field_date_closed
@@ -29,7 +28,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.oa_space
   module:
-    - comment
     - datetime
     - image
     - link
@@ -48,12 +46,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_space:
-    type: comment_default
-    weight: 19
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

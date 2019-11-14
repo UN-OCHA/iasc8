@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.contact.body
-    - field.field.node.contact.comment_node_contact
     - field.field.node.contact.field_address
     - field.field.node.contact.field_branch
     - field.field.node.contact.field_department
@@ -14,6 +13,7 @@ dependencies:
     - field.field.node.contact.field_homepage
     - field.field.node.contact.field_last_name
     - field.field.node.contact.field_legacy_id
+    - field.field.node.contact.field_media_photo
     - field.field.node.contact.field_membership
     - field.field.node.contact.field_mobile
     - field.field.node.contact.field_organisation
@@ -144,7 +144,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  comment_node_contact: true
   field_first_name: true
   field_last_name: true
   field_legacy_id: true

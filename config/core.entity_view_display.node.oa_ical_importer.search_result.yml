@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.oa_ical_importer.body
-    - field.field.node.oa_ical_importer.comment_node_oa_ical_importer
     - field.field.node.oa_ical_importer.field_basic_file_file
     - field.field.node.oa_ical_importer.field_iasc_audience
     - field.field.node.oa_ical_importer.oa_section_ref
@@ -33,7 +32,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment_node_oa_ical_importer: true
   field_basic_file_file: true
   field_iasc_audience: true
   langcode: true

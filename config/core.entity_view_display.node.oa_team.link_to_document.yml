@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.link_to_document
     - field.field.node.oa_team.body
-    - field.field.node.oa_team.comment_node_oa_team
     - field.field.node.oa_team.field_iasc_audience
     - field.field.node.oa_team.field_oa_team_users
     - field.field.node.oa_team.og_group_ref
@@ -24,7 +23,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_oa_team: true
   field_iasc_audience: true
   field_oa_team_users: true
   langcode: true

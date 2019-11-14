@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.announcement.body
-    - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
     - field.field.node.announcement.field_iasc_audience
     - field.field.node.announcement.field_legacy_publish
@@ -89,7 +88,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  comment_node_announcement: true
   field_iasc_audience: true
   field_legacy_publish: true
   field_section: true

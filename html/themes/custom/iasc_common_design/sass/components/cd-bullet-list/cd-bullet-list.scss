@@ -1,0 +1,24 @@
+@import '../../cd/cd-variables';
+
+.cd-bullet-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cd-bullet-list li {
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  background-image: url('../../img/icons/list-bullet.svg');
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: top 7px left 0;
+}
+
+.cd-bullet-list svg {
+  fill: $iasc-highlight;
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  margin-right: 1rem;
+}

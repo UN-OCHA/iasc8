@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_wiki_page.body
-    - field.field.node.oa_wiki_page.comment_node_oa_wiki_page
     - field.field.node.oa_wiki_page.field_category
     - field.field.node.oa_wiki_page.field_document_no
     - field.field.node.oa_wiki_page.field_document_type
@@ -24,7 +23,6 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - comment
     - datetime
     - media_library
     - path
@@ -42,12 +40,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_wiki_page:
-    type: comment_default
-    weight: 16
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

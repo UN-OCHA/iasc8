@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_oa_space.default
     - field.field.node.oa_space.body
-    - field.field.node.oa_space.comment_node_oa_space
     - field.field.node.oa_space.field_banner_image
     - field.field.node.oa_space.field_body_legacy_ids
     - field.field.node.oa_space.field_date_closed
@@ -30,7 +28,6 @@ dependencies:
     - image.style.hero
     - node.type.oa_space
   module:
-    - comment
     - datetime
     - image
     - link
@@ -47,15 +44,6 @@ content:
     type: text_default
     weight: 22
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_space:
-    label: hidden
-    type: comment_default
-    weight: 15
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_banner_image:

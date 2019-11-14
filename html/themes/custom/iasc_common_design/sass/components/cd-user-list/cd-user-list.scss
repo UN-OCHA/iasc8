@@ -1,0 +1,53 @@
+@import '../../cd/cd-variables';
+
+.cd-user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cd-user-list li {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid $cd-site-bg-color; */
+  clear: left;
+  overflow: hidden;
+}
+
+.cd-user-list__image {
+  float: left;
+  width: 6rem;
+  max-height: 6rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.cd-user-list__image img {
+  border-radius: 0.5rem;
+}
+
+.cd-user-list__image svg {
+  max-width: 6rem;
+  max-height: 6rem;
+  fill: $cd-ocha-blue;
+}
+
+.cd-user-list__name {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cd-user-list__position {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.cd-user-list__organization {
+  padding: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $iasc-secondary;
+}

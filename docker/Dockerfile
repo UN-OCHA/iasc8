@@ -30,4 +30,5 @@ COPY --from=builder /srv/www/config /srv/www/config/
 COPY --from=builder /srv/www/html /srv/www/html/
 COPY --from=builder /srv/www/vendor /srv/www/vendor/
 COPY --from=builder /srv/www/composer.json /srv/www/composer.json
+COPY --from=builder /srv/www/composer.lock /srv/www/composer.lock
 COPY --from=builder /srv/www/docker/fastcgi_drupal.conf /etc/nginx/apps/drupal/fastcgi_drupal.conf

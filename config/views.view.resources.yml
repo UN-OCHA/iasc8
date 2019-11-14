@@ -241,7 +241,7 @@ display:
               recommendations_editor: '0'
               space_super_admin: '0'
               focal_point: '0'
-            placeholder: ''
+            placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
             label: ''
@@ -315,6 +315,7 @@ display:
         filter_groups: false
         title: false
         header: false
+        sorts: false
       filters:
         type:
           id: type
@@ -419,6 +420,31 @@ display:
             value: "<h1 class=\"page-title\">IASC Newsletters</h1>\r\n<p>\r\n\r\nThe IASC secretariat regularly publishes a newsletter reflecting important developments in the IASC.\r\n</p>"
             format: full_html
           plugin_id: text
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_default_solr_index
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_published_date:
+          id: field_published_date
+          table: search_api_index_default_solr_index
+          field: field_published_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
     cache_metadata:
       max-age: -1
       contexts:

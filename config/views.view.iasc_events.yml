@@ -144,7 +144,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 day'
+            value: now
             type: offset
           group: 1
           exposed: false
@@ -497,7 +497,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 day'
+            value: now
             type: offset
           group: 1
           exposed: false

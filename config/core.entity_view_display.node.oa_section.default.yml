@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_section.body
-    - field.field.node.oa_section.comment_node_oa_section
     - field.field.node.oa_section.field_content
     - field.field.node.oa_section.field_iasc_audience
     - field.field.node.oa_section.field_oa_group_ref
@@ -87,7 +86,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment_node_oa_section: true
   field_iasc_audience: true
   field_oa_section_override: true
   field_oa_section_weight: true

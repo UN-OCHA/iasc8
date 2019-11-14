@@ -25,6 +25,7 @@ const changed = require('gulp-changed');
 const concat = require('gulp-concat');
 const sassLint = require('gulp-sass-lint');
 
+path = require('path');
 
 //——————————————————————————————————————————————————————————————————————————————
 // Load local environment config
@@ -88,6 +89,37 @@ function sassCompileTask() {
 
 
 //——————————————————————————————————————————————————————————————————————————————
+// Components
+//——————————————————————————————————————————————————————————————————————————————
+function componentCompileTask() {
+  browserSync.notify(`Compiling Sass...`);
+
+  return gulp.src('./sass/components/*/*.scss')
+    .pipe(plumber())
+    .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
+    .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
+    .pipe(postcss([
+      prefix({
+        browsers: ['>1%', 'iOS 9'],
+        cascade: false,
+      }),
+      cssnano(),
+    ]))
+    .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
+    // rename the current file's parent directory
+    .pipe(rename(function (file) {
+      // file.dirname = current folder, your "scss"
+      // then get the parent of the current folder, e.g., "folder1", "folder2", etc.
+      let parentFolder = path.dirname(file.dirname)
+      // set each file's folder to "folder1/css", "folder2/css", etc.
+      file.dirname = path.join(parentFolder, 'css/components');
+    }))
+
+    .pipe(gulp.dest('.'));
+};
+
+
+//——————————————————————————————————————————————————————————————————————————————
 // Sass Linting
 //——————————————————————————————————————————————————————————————————————————————
 function sassLintTask() {
@@ -101,7 +133,7 @@ function sassLintTask() {
 //——————————————————————————————————————————————————————————————————————————————
 // Sass
 //——————————————————————————————————————————————————————————————————————————————
-const sassTask = gulp.series(sassLintTask, sassCompileTask);
+const sassTask = gulp.series(sassLintTask, sassCompileTask, componentCompileTask);
 exports.sass = sassTask;
 
 

@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.announcement.body
-    - field.field.node.announcement.comment_node_announcement
     - field.field.node.announcement.field_contact
     - field.field.node.announcement.field_iasc_audience
     - field.field.node.announcement.field_legacy_publish
@@ -50,7 +49,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment_node_announcement: true
   field_contact: true
   field_iasc_audience: true
   field_legacy_publish: true

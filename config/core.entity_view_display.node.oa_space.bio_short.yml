@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.bio_short
     - field.field.node.oa_space.body
-    - field.field.node.oa_space.comment_node_oa_space
+    - field.field.node.oa_space.field_banner_image
     - field.field.node.oa_space.field_body_legacy_ids
     - field.field.node.oa_space.field_date_closed
     - field.field.node.oa_space.field_featured_image
@@ -41,7 +41,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_oa_space: true
   field_banner_image: true
   field_body_legacy_ids: true
   field_date_closed: true

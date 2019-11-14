@@ -5,18 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.bio_long
     - field.field.node.oa_worktracker_task.body
-    - field.field.node.oa_worktracker_task.comment_node_oa_worktracker_task
     - field.field.node.oa_worktracker_task.field_addressee
     - field.field.node.oa_worktracker_task.field_date
     - field.field.node.oa_worktracker_task.field_description_implementation
     - field.field.node.oa_worktracker_task.field_evaluation_title
     - field.field.node.oa_worktracker_task.field_iasc_audience
+    - field.field.node.oa_worktracker_task.field_media_files
     - field.field.node.oa_worktracker_task.field_oa_media
     - field.field.node.oa_worktracker_task.field_oa_worktracker_assigned_to
     - field.field.node.oa_worktracker_task.field_oa_worktracker_priority
     - field.field.node.oa_worktracker_task.field_oa_worktracker_task_status
     - field.field.node.oa_worktracker_task.field_oa_worktracker_task_type
     - field.field.node.oa_worktracker_task.field_recomendation
+    - field.field.node.oa_worktracker_task.field_section
+    - field.field.node.oa_worktracker_task.field_section_audience
     - field.field.node.oa_worktracker_task.field_summary_of_recommendat
     - field.field.node.oa_worktracker_task.field_timeframe
     - field.field.node.oa_worktracker_task.field_worktracker_country
@@ -38,7 +40,6 @@ content:
     region: content
 hidden:
   body: true
-  comment_node_oa_worktracker_task: true
   field_addressee: true
   field_date: true
   field_description_implementation: true

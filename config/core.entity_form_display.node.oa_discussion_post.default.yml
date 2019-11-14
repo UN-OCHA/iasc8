@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.oa_discussion_post.body
-    - field.field.node.oa_discussion_post.comment_node_oa_discussion_post
     - field.field.node.oa_discussion_post.field_iasc_audience
     - field.field.node.oa_discussion_post.field_media_files
     - field.field.node.oa_discussion_post.field_oa_media
@@ -15,7 +14,6 @@ dependencies:
     - field.field.node.oa_discussion_post.og_vocabulary
     - node.type.oa_discussion_post
   module:
-    - comment
     - file
     - path
     - select2
@@ -32,12 +30,6 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-    third_party_settings: {  }
-    region: content
-  comment_node_oa_discussion_post:
-    type: comment_default
-    weight: 10
-    settings: {  }
     third_party_settings: {  }
     region: content
   created:

@@ -1,8 +1,0 @@
-uuid: 39bdfa33-61df-4130-8cb2-a2853bb2ca9f
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_oa_team
-label: 'Team comment'
-target_entity_type_id: node
-description: null

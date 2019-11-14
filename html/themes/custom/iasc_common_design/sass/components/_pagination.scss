@@ -4,6 +4,10 @@
   padding: 0.5rem;
 }
 
+.pager__item {
+  display: inline-block;
+}
+
 .pager__item a {
   padding: 0.5rem 0.75rem;
   background-color: $cd-white;

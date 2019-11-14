@@ -5,9 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_result
     - field.field.node.oa_discussion_post.body
-    - field.field.node.oa_discussion_post.comment_node_oa_discussion_post
     - field.field.node.oa_discussion_post.field_iasc_audience
+    - field.field.node.oa_discussion_post.field_media_files
     - field.field.node.oa_discussion_post.field_oa_media
+    - field.field.node.oa_discussion_post.field_section
+    - field.field.node.oa_discussion_post.field_section_audience
     - field.field.node.oa_discussion_post.oa_section_ref
     - field.field.node.oa_discussion_post.og_group_ref
     - field.field.node.oa_discussion_post.og_vocabulary
@@ -34,7 +36,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment_node_oa_discussion_post: true
   field_iasc_audience: true
   field_media_files: true
   field_oa_media: true

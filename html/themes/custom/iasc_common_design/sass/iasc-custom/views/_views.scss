@@ -1,0 +1,41 @@
+.viewsreference--view-title {
+  @extend .cd-heading-2;
+  margin-top: 0;
+
+  .cd-layout-sidebar-first & {
+    @extend .cd-heading-3;
+    margin-top: 0;
+    //margin-top: 1.5rem;
+  }
+}
+
+.view-updates,
+.view-iasc-group-content {
+  .view-header {
+    @extend .page-title;
+
+    @include xl {
+      padding-right: 0;
+    }
+  }
+}
+
+.cd-layout-sidebar-first .views-exposed-form {
+  .form--inline {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    @extend .cd-heading-3;
+  }
+}
+
+.view-iasc-group-content .views-exposed-form .form--inline {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .form-item,
+  .form-actions {
+    margin: 0;
+  }
+}

@@ -1,0 +1,188 @@
+@import '../../cd/cd-variables';
+
+.cd-filters {
+  margin-bottom: 1rem;
+}
+
+.cd-filters_btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  background: $cd-site-bg-color;
+  color: $iasc-secondary;
+  border: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.cd-filters_btn:hover,
+.cd-filters_btn:focus {
+  background: $cd-light-bg-color;
+  color: $iasc-secondary;
+}
+
+.cd-filters_btn:focus {
+  background: $cd-light-bg-color;
+  outline: 3px solid $iasc-secondary;
+  outline-offset: -3px;
+}
+
+/* Some buttons have SVG icons */
+.cd-filters_btn svg {
+  fill: $iasc-secondary;
+  width: 26px;
+  height: 26px;
+}
+
+.cd-filters_btn svg.icon--arrow-down {
+  margin-left: auto;
+}
+
+.cd-filters_btn:hover svg,
+.cd-filters_btn:focus svg {
+  fill: $iasc-primary;
+}
+
+.cd-filters_btn.js-open {
+  background: $cd-light-bg-color;
+  position: relative;
+}
+
+.cd-filters_btn.js-open::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px;
+  border-color: transparent transparent $cd-site-bg-color;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.cd-filters_btn.js-open svg {
+  fill: $iasc-primary;
+}
+
+.cd-filters_btn.js-open:hover,
+.cd-filters_btn.js-open:focus {
+  background: $cd-white;
+  outline: none;
+  color: $cd-bright-blue;
+}
+
+.js-open .cd-filters_btn {
+  background: $cd-highlight-red;
+}
+
+.cd-filters__form {
+  background: $cd-light-bg-color;
+  display: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.cd-filters__form label {
+  display: block;
+  margin: 0 0 0.5rem;
+}
+
+.js-open .cd-filters__form {
+  display: block;
+}
+
+.cd-filters__group {
+  margin: 0 0 1rem;
+}
+
+.cd-filters__form fieldset ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cd-filters__input[type='search'],
+.cd-filters__input[type='text'] {
+  color: $cd-dark-grey;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cd-filters__input[type='search']:focus,
+.cd-filters__input[type='text']:focus {
+  outline: 0;
+  /* RGBA and custom properties? */
+  box-shadow: 0 0 4px rgba($cd-mid-grey, 0.7);
+}
+
+.cd-filters__input::-webkit-input-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+
+.cd-filters__input::-moz-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+
+.cd-filters__input:-ms-input-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+
+.cd-filters__input:-moz-placeholder {
+  color: $cd-dark-grey;
+  font-style: italic;
+}
+
+.cd-filters__input::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px;
+}
+
+/* Safari fix */
+.cd-filters__input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.cd-filters__form form .cd-filters__submit {
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .cd-filters__form form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .cd-filters__form form > * {
+    flex: 0 1 33.33%;
+  }
+
+  .cd-filters__group {
+    padding-right: 1rem;
+  }
+
+  .cd-filters__group:nth-child(3n) {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cd-filters_btn svg {
+    width: 22px;
+    height: 22px;
+    padding: 0 0 0 4px;
+  }
+
+  svg.icon--filter {
+    padding-right: 4px;
+  }
+}
