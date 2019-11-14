@@ -25,6 +25,7 @@
 
 .cd-user-list__image img {
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 .cd-user-list__image svg {
@@ -50,4 +51,13 @@
   font-size: 0.875rem;
   font-weight: 600;
   color: $iasc-secondary;
+}
+
+.cd-user-list__has-image {
+  .cd-user-list__name,
+  .cd-user-list__position,
+  .cd-user-list__organization,
+  .cd-user-list__city {
+    padding-left: 7rem; // width of image + margin-right.
+  }
 }
