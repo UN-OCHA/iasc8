@@ -28,36 +28,41 @@ settings:
     page: 0
     feed: 0
   preselect_views:
+    documents: documents
     featured: featured
     iasc_contacts: iasc_contacts
-    iasc_content: iasc_content
     iasc_events: iasc_events
     iasc_organizations: iasc_organizations
-    documents: documents
     updates: updates
     block_content: 0
-    comment: 0
-    comments_recent: 0
     contacts: 0
     content: 0
     content_recent: 0
     files: 0
+    flag_bookmark: 0
+    flag_followers: 0
+    flag_followers_content: 0
     group_members: 0
     group_nodes: 0
+    iasc_content: 0
+    iasc_group_content: 0
+    iasc_tasks: 0
     media: 0
     media_library: 0
     redirect: 0
+    resources: 0
     search_content: 0
+    solr_search_content: 0
     taxonomy_term: 0
     user_admin_people: 0
     watchdog: 0
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
-    filters: filters
     limit: limit
     offset: 0
     title: 0
     argument: 0
+    exposed_filters: 0
     pager: 0
 field_type: viewsreference
