@@ -9,9 +9,14 @@
 .cd-user-list li {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  /* border-bottom: 1px solid $cd-site-bg-color; */
   clear: left;
   overflow: hidden;
+  border-bottom: 1px solid $cd-site-bg-color;
+
+  &:only-of-type,
+  &:last-child {
+    border-bottom: 0 none;
+  }
 }
 
 .cd-user-list__image {
@@ -21,6 +26,7 @@
   margin-right: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .cd-user-list__image img {
