@@ -1,0 +1,22 @@
+uuid: 91635491-ac00-4229-803d-60818e128a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.promote
+field_name: promote
+entity_type: node
+bundle: oa_wiki_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
