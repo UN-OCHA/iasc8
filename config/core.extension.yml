@@ -18,6 +18,7 @@ module:
   datetime_range: 0
   dblog: 0
   diff: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0

@@ -1,0 +1,35 @@
+diff --git a/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorageSchema.php b/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorageSchema.php
+index b2d1d29..d19a26e 100644
+--- a/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorageSchema.php
++++ b/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorageSchema.php
+@@ -1727,7 +1727,7 @@ class SqlContentEntityStorageSchema implements DynamicallyFieldableEntityStorage
+     }
+     else {
+       if ($this->hasColumnChanges($storage_definition, $original)) {
+-        throw new FieldStorageDefinitionUpdateForbiddenException('The SQL storage cannot change the schema for an existing field (' . $storage_definition->getName() . ' in ' . $storage_definition->getTargetEntityTypeId() . ' entity) with data.');
++//        throw new FieldStorageDefinitionUpdateForbiddenException('The SQL storage cannot change the schema for an existing field (' . $storage_definition->getName() . ' in ' . $storage_definition->getTargetEntityTypeId() . ' entity) with data.');
+       }
+       // There is data, so there are no column changes. Drop all the prior
+       // indexes and create all the new ones, except for all the priors that
+@@ -1818,7 +1818,7 @@ class SqlContentEntityStorageSchema implements DynamicallyFieldableEntityStorage
+     }
+     else {
+       if ($this->hasColumnChanges($storage_definition, $original)) {
+-        throw new FieldStorageDefinitionUpdateForbiddenException('The SQL storage cannot change the schema for an existing field (' . $storage_definition->getName() . ' in ' . $storage_definition->getTargetEntityTypeId() . ' entity) with data.');
++//        throw new FieldStorageDefinitionUpdateForbiddenException('The SQL storage cannot change the schema for an existing field (' . $storage_definition->getName() . ' in ' . $storage_definition->getTargetEntityTypeId() . ' entity) with data.');
+       }
+ 
+       $updated_field_name = $storage_definition->getName();
+diff --git a/modules/field/src/Entity/FieldStorageConfig.php b/modules/field/src/Entity/FieldStorageConfig.php
+index 4387c6c..18045c0 100644
+--- a/modules/field/src/Entity/FieldStorageConfig.php
++++ b/modules/field/src/Entity/FieldStorageConfig.php
+@@ -369,7 +369,7 @@ class FieldStorageConfig extends ConfigEntityBase implements FieldStorageConfigI
+ 
+     // Some updates are always disallowed.
+     if ($this->getType() != $this->original->getType()) {
+-      throw new FieldException("Cannot change the field type for an existing field storage.");
++//      throw new FieldException("Cannot change the field type for an existing field storage.");
+     }
+     if ($this->getTargetEntityTypeId() != $this->original->getTargetEntityTypeId()) {
+       throw new FieldException("Cannot change the entity type for an existing field storage.");
