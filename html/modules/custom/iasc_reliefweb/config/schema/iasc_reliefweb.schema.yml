@@ -5,6 +5,12 @@ updates:
     endpoint:
       type: string
       label: 'API endpoint'
+    more_link_url:
+      type: string
+      label: 'More link'
+    more_link_label:
+      type: string
+      label: 'More link label'
     max_age:
       type: integer
       label: 'Max age (hours)'
