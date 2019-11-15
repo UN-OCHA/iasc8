@@ -64,6 +64,13 @@
             </li>
           {% endfor %}
         </ul>
+
+        {% if more_link_url and more_link_label %}
+          <div class="cd-list__link more-link">
+            <a href="{{ more_link_url }}" rel="tag">{{ more_link_label }}</a>
+          </div>
+        {% endif %}
+
       {% endblock %}
     </div>
   {% endblock paragraph %}

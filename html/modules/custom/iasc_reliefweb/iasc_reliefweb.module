@@ -52,4 +52,6 @@ function iasc_reliefweb_preprocess_paragraph_reliefweb_feed(&$vars) {
   }
 
   $vars['feed_links'] = $urls;
+  $vars['more_link_url'] = \Drupal::service('config.factory')->get('iasc_reliefweb.settings')->get('updates.more_link_url');
+  $vars['more_link_label'] = \Drupal::service('config.factory')->get('iasc_reliefweb.settings')->get('updates.more_link_label');
 }
