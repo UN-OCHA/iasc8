@@ -37,3 +37,4 @@ jobs:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
         FLOWDOCK_MESSAGE: 'Built a new `unocha/iasc-site` image from ${{ github.ref }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/iasc-site/tags).'
+        FLOWDOCK_TAGS: 'build,docker,${{ github.actor }}'
