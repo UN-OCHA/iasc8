@@ -12,7 +12,7 @@ dependencies:
 id: exposedformresourcespage_resources
 theme: iasc_common_design
 region: sidebar_first
-weight: -16
+weight: -15
 provider: null
 plugin: 'views_exposed_filter_block:resources-page_resources'
 settings:
