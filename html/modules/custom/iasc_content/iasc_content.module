@@ -379,7 +379,7 @@ function iasc_content_file_field_to_media() {
         $query = \Drupal::entityQuery($entity_type);
         $query->exists($from);
         $query->notExists($to);
-        $query->range(0, 500);
+        $query->range(0, 750);
 
         // Filter by bundle.
         if ($entity_type == 'taxonomy_term') {
