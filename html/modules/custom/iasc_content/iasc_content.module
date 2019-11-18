@@ -180,6 +180,41 @@ function iasc_content_preprocess_paragraph(&$vars) {
 }
 
 /**
+ * Build section menu for a group.
+ */
+function iasc_content_build_section_menu($group, $link_to_group = FALSE) {
+  $supported_types = [
+    'Documents' => 'oa_wiki_page',
+    'Meetings' => 'oa_event',
+    'News' => 'announcement',
+  ];
+
+  $urls = [];
+
+  if ($link_to_group) {
+    $urls[] = Link::fromTextAndUrl($group->label(), Url::fromUri('internal:/group/' . $group->id(), [
+      'attributes' => [
+        'class' => 'link-to-group',
+      ],
+    ]))->toString();
+  }
+
+  foreach ($supported_types as $label => $bundle) {
+    $content = $group->getContent('group_node:' . $bundle);
+    // If we find a node, add a link to the view.
+    if (count($content) > 0) {
+      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label), [
+        'attributes' => [
+          'class' => 'link-to-section',
+        ],
+      ]))->toString();
+    }
+  }
+
+  return $urls;
+}
+
+/**
  * Implements hook_preprocess_paragraph().
  */
 function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
@@ -197,20 +232,7 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
     return;
   }
 
-  $supported_types = [
-    'Documents' => 'oa_wiki_page',
-    'Meetings' => 'oa_event',
-    'News' => 'announcement',
-  ];
-
-  $urls = [];
-  foreach ($supported_types as $label => $bundle) {
-    $content = $group->getContent('group_node:' . $bundle);
-    // If we find a node, add a link to the view.
-    if (count($content) > 0) {
-      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label)))->toString();
-    }
-  }
+  $urls = iasc_content_build_section_menu($group);
 
   // Check for custom links.
   if (isset($paragraph->field_custom_link)) {
@@ -858,4 +880,19 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
     $gnodes_existing[$gid]->delete();
   }
 
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iasc_content_theme() {
+  return [
+    'iasc_section_menu_block' => [
+      'variables' => [
+        'title' => NULL,
+        'section_links' => NULL,
+      ],
+      'template' => 'block--iasc-section-menu-block',
+    ],
+  ];
 }
