@@ -878,13 +878,13 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
  * Implements hook_theme().
  */
 function iasc_content_theme() {
-  return array(
-   'iasc_section_menu_block' => [
-     'variables' => [
+  return [
+    'iasc_section_menu_block' => [
+      'variables' => [
         'title' => NULL,
         'section_links' => NULL,
       ],
-     'template' => 'block--iasc-section-menu-block',
-   ],
-  );
+      'template' => 'block--iasc-section-menu-block',
+    ],
+  ];
 }
