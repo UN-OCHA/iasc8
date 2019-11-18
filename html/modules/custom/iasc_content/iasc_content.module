@@ -192,7 +192,11 @@ function iasc_content_build_section_menu($group, $link_to_group = FALSE) {
   $urls = [];
 
   if ($link_to_group) {
-    $urls[] = Link::fromTextAndUrl($group->label(), Url::fromUri('internal:/group/' . $group->id()))->toString();
+    $urls[] = Link::fromTextAndUrl($group->label(), Url::fromUri('internal:/group/' . $group->id(), [
+      'attributes' => [
+        'class' => 'link-to-group',
+      ]
+    ]))->toString();
   }
 
   foreach ($supported_types as $label => $bundle) {
