@@ -11,7 +11,7 @@ dependencies:
 id: resourceproductsaudiencelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -12
+weight: -11
 provider: null
 plugin: 'facet_block:resource_products_audience_label'
 settings:
