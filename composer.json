@@ -117,7 +117,16 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "gulp-prepare": "cd html/themes/custom/iasc_common_design && npm install",
+        "gulp-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/gulp build",
+        "gulp-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
+        "gulp": [
+            "@gulp-prepare",
+            "@gulp-build",
+            "@gulp-cleanup"
         ]
+
     },
     "extra": {
 		"enable-patching": true,
