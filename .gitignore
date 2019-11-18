@@ -24,3 +24,5 @@
 /.env
 
 /node_modules
+
+buildlog.txt
