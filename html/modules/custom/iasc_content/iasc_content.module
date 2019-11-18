@@ -195,7 +195,7 @@ function iasc_content_build_section_menu($group, $link_to_group = FALSE) {
     $urls[] = Link::fromTextAndUrl($group->label(), Url::fromUri('internal:/group/' . $group->id(), [
       'attributes' => [
         'class' => 'link-to-group',
-      ]
+      ],
     ]))->toString();
   }
 
@@ -203,7 +203,11 @@ function iasc_content_build_section_menu($group, $link_to_group = FALSE) {
     $content = $group->getContent('group_node:' . $bundle);
     // If we find a node, add a link to the view.
     if (count($content) > 0) {
-      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label)))->toString();
+      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label), [
+        'attributes' => [
+          'class' => 'link-to-section',
+        ],
+      ]))->toString();
     }
   }
 
