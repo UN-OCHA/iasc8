@@ -8,6 +8,9 @@
     },
     "drupal/social_auth_hid": {
       "Add the possibility to use custom HID domains": "PATCHES/social_auth_hid_staging_domain.patch"
+    },
+    "drupal/group": {
+      "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch"
     }
   }
 }

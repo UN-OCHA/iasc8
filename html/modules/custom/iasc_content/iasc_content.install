@@ -201,3 +201,34 @@ function iasc_content_update_8010() {
 
   \Drupal::service('module_installer')->uninstall(['comment']);
 }
+
+/**
+ * Make sure text format is set everywhere.
+ */
+function iasc_content_update_8011() {
+  $connection = \Drupal::database();
+
+  $sql = "alter table paragraph__field_oa_related_content add column field_oa_related_content_target_type varchar(32) NULL;";
+  $connection->query($sql);
+
+  $sql = "alter table paragraph_revision__field_oa_related_content add column field_oa_related_content_target_type varchar(32) NULL;";
+  $connection->query($sql);
+
+  $sql = "update paragraph__field_oa_related_content set field_oa_related_content_target_type = 'node';";
+  $connection->query($sql);
+
+  $sql = "update paragraph_revision__field_oa_related_content set field_oa_related_content_target_type = 'node';";
+  $connection->query($sql);
+
+  $sql = "alter table paragraph__field_piece_of_content add column field_piece_of_content_target_type varchar(32) NULL;";
+  $connection->query($sql);
+
+  $sql = "alter table paragraph_revision__field_piece_of_content add column field_piece_of_content_target_type varchar(32) NULL;";
+  $connection->query($sql);
+
+  $sql = "update paragraph__field_piece_of_content set field_piece_of_content_target_type = 'node';";
+  $connection->query($sql);
+
+  $sql = "update paragraph_revision__field_piece_of_content set field_piece_of_content_target_type = 'node';";
+  $connection->query($sql);
+}

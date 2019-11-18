@@ -19,14 +19,73 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
-  handler_settings:
-    target_bundles:
-      oa_discussion_post: oa_discussion_post
-      oa_wiki_page: oa_wiki_page
-      oa_event: oa_event
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: oa_discussion_post
-field_type: entity_reference
+  node:
+    handler: 'default:node'
+    handler_settings:
+      target_bundles:
+        action_point: action_point
+        announcement: announcement
+        panopoly_page: panopoly_page
+        oa_discussion_post: oa_discussion_post
+        oa_wiki_page: oa_wiki_page
+        oa_event: oa_event
+        panopoly_landing_page: panopoly_landing_page
+        oa_worktracker_task: oa_worktracker_task
+      sort:
+        field: title
+        direction: ASC
+      auto_create: false
+      auto_create_bundle: action_point
+  group:
+    handler: 'default:group'
+    handler_settings:
+      target_bundles:
+        iasc_space: iasc_space
+      sort:
+        field: label
+        direction: ASC
+      auto_create: false
+      auto_create_bundle: ''
+  block_content:
+    handler: 'default:block_content'
+    handler_settings: {  }
+  menu_link_content:
+    handler: 'default:menu_link_content'
+    handler_settings: {  }
+  field_collection_item:
+    handler: 'default:field_collection_item'
+    handler_settings: {  }
+  file:
+    handler: 'default:file'
+    handler_settings: {  }
+  flagging:
+    handler: 'default:flagging'
+    handler_settings: {  }
+  group_content:
+    handler: 'default:group_content'
+    handler_settings: {  }
+  media:
+    handler: 'default:media'
+    handler_settings: {  }
+  paragraph:
+    handler: 'default:paragraph'
+    handler_settings: {  }
+  redirect:
+    handler: 'default:redirect'
+    handler_settings: {  }
+  search_api_task:
+    handler: 'default:search_api_task'
+    handler_settings: {  }
+  shortcut:
+    handler: 'default:shortcut'
+    handler_settings: {  }
+  social_auth:
+    handler: 'default:social_auth'
+    handler_settings: {  }
+  taxonomy_term:
+    handler: 'default:taxonomy_term'
+    handler_settings: {  }
+  user:
+    handler: 'default:user'
+    handler_settings: {  }
+field_type: dynamic_entity_reference
