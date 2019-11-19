@@ -76,18 +76,14 @@ display:
               iasc_space: search_result
             'entity:node':
               action_point: search_result
-              announcement: search_result
-              article: search_result
-              contact: search_result
+              announcement: teaser
+              contact: teaser
               oa_discussion_post: search_result
-              oa_event: search_result
-              oa_section: search_result
-              oa_team: search_result
-              oa_wiki_page: search_result
+              oa_event: teaser
+              oa_wiki_page: teaser
               oa_worktracker_task: search_result
-              page: search_result
-              panopoly_landing_page: search_result
-              panopoly_page: search_result
+              panopoly_landing_page: teaser
+              panopoly_page: teaser
       filters:
         search_api_fulltext:
           id: search_api_fulltext
