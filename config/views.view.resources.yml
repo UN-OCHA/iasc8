@@ -6,10 +6,10 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
-    - 'taxonomy_term:document_types:12585a7f-6876-40bd-b207-e648c361f7c0'
-    - 'taxonomy_term:document_types:1c3cacc4-25aa-49b3-b353-fbcaf9471057'
-    - 'taxonomy_term:document_types:330a330c-99f3-4492-a507-d1e0aa68009d'
-    - 'taxonomy_term:document_types:c1d4bad9-7b26-4b6a-a3c6-bf7936f2a3f7'
+    - 'taxonomy_term:document_types:27d6b803-596c-485c-8123-ca9ff91fb30d'
+    - 'taxonomy_term:document_types:45e7bebb-1a6f-4cbc-aefd-6a71d68cf92d'
+    - 'taxonomy_term:document_types:6f081507-fc81-45f1-87a1-50761a0063b4'
+    - 'taxonomy_term:document_types:ca4c6d76-3f63-4fa1-8031-e08a5d913033'
   module:
     - search_api
 id: resources
@@ -76,20 +76,19 @@ display:
         type: search_api
         options:
           view_modes:
+            'entity:group':
+              iasc_group: default
+              iasc_space: default
             'entity:node':
               action_point: search_result
-              announcement: search_result
-              article: search_result
-              contact: search_result
+              announcement: teaser
+              contact: teaser
               oa_discussion_post: search_result
-              oa_event: search_result
-              oa_section: search_result
-              oa_team: search_result
-              oa_wiki_page: search_result
+              oa_event: teaser
+              oa_wiki_page: teaser
               oa_worktracker_task: search_result
-              page: search_result
-              panopoly_landing_page: search_result
-              panopoly_page: search_result
+              panopoly_landing_page: teaser
+              panopoly_page: teaser
       fields:
         audience_label:
           table: search_api_index_default_solr_index
