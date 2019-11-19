@@ -88,21 +88,21 @@ Optionally convert to media: <https://thinktandem.io/blog/2019/04/04/migrating-a
 ### Update core
 
 ```bash
-composer outdated drupal/core
+fin composer outdated drupal/core
 ```
 
 ```bash
-composer update drupal/core --with-dependencies
+fin composer update drupal/core --with-dependencies
 fin drush updb -y && fin drush cr
 ```
 
 ### Update contrib
 
 ```bash
-composer outdated drupal/*
+fin composer outdated drupal/*
 ```
 
 ```bash
-composer update drupal/* --with-dependencies
+fin composer update drupal/* --with-dependencies
 fin drush updb -y && fin drush cr
 ```
