@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2b0a8434d6d84f3a4ce7607488b34a7",
+    "content-hash": "5f375b5fbc7af5107f4d8740772b3ef4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4828,17 +4828,11 @@
         },
         {
             "name": "drupal/group",
-            "version": "1.0.0-rc4",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/group.git",
-                "reference": "8.x-1.0-rc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/group-8.x-1.0-rc4.zip",
-                "reference": "8.x-1.0-rc4",
-                "shasum": "d5d55167523a3ddccef7f66159b4c417d950d6f5"
+                "reference": "aa34f771c984896c1bb0861d4ed77d9536f8f248"
             },
             "require": {
                 "drupal/core": "^8.6",
@@ -4850,15 +4844,16 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc4",
-                    "datestamp": "1563460085",
+                    "version": "8.x-1.0-rc4+6-dev",
+                    "datestamp": "1573225086",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch"
+                    "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
+                    "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2019-11-19/group-status-2873212-17.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4882,7 +4877,8 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/group",
                 "issues": "https://drupal.org/project/issues/group"
-            }
+            },
+            "time": "2019-11-18T15:51:40+00:00"
         },
         {
             "name": "drupal/linkit",
@@ -13803,7 +13799,7 @@
         "drupal/file_entity": 10,
         "drupal/flag": 15,
         "drupal/geophp": 10,
-        "drupal/group": 5,
+        "drupal/group": 20,
         "drupal/paragraphs_edit": 15,
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
