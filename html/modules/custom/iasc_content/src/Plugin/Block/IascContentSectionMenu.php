@@ -75,6 +75,7 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
         '#section_links' => $urls,
         '#cache' => [
           'contexts' => ['url'],
+          'tags' => ['group_content_list:group:' . $group_id],
         ],
       ];
     }
