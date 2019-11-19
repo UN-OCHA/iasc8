@@ -51,7 +51,7 @@
         "drupal/geofield_map": "^2.38",
         "drupal/geophp": "^1.0@beta",
         "drupal/google_tag": "^1.2",
-        "drupal/group": "^1.0@RC",
+        "drupal/group": "1.x-dev",
         "drupal/linkit": "^4.3",
         "drupal/migrate_plus": "^4.2",
         "drupal/migrate_tools": "^4.1",
