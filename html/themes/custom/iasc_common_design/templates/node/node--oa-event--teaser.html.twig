@@ -111,7 +111,7 @@
     {% endif %}
 
     {{ content|without('field_published_date','field_oa_date') }}
-    <strong>Event time: {{ event_time.output }}</strong>
+    <div class="cd-date-time">{{ event_time.output }}</div>
   </div>
 
 </article>
