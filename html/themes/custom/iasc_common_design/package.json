@@ -21,7 +21,9 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-task-listing": "^1.1.0",
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.10.3",
@@ -37,8 +39,6 @@
   },
   "devDependencies": {
     "eslint": "^6.6.0",
-    "git-hooks": "^1.1.10",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-svg-sprite": "^1.5.0"
+    "git-hooks": "^1.1.10"
   }
 }
