@@ -46,7 +46,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -572,7 +572,7 @@ display:
               recommendations_editor: '0'
               space_super_admin: '0'
               focal_point: '0'
-            placeholder: ''
+            placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
             label: ''

@@ -42,5 +42,9 @@
     .form-actions {
       margin: 0;
     }
+
+    label {
+      @include visually-hidden;
+    }
   }
 }

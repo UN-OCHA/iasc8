@@ -110,6 +110,13 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              editor: '0'
+              group_login: '0'
+              viewer: '0'
+              recommendations_editor: '0'
+              space_super_admin: '0'
+              focal_point: '0'
+            placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
             label: ''
@@ -137,7 +144,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: "<h1 class=page-title>Search</h1>\r\n<p>Displaying results @start - @end of @total</p>"
+          content: "<h1 class=page-title>Search</h1>\r\n<p>Displaying results @start - @end of @total</p>\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
           plugin_id: result
       footer: {  }
       empty:
