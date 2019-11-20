@@ -311,6 +311,8 @@ display:
         pager: false
         use_ajax: false
         footer: false
+        link_display: false
+        link_url: false
       use_more: false
       use_more_always: true
       use_more_text: 'View all meetings'
@@ -406,20 +408,9 @@ display:
             offset_label: Offset
           quantity: 9
       use_ajax: false
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<div class="more-link"><a href="/resources?f%5B0%5D=content_type%3Aoa_event">View all meetings</a></div>'
-            format: full_html
-          plugin_id: text
+      footer: {  }
+      link_display: '0'
+      link_url: 'group/{{ arguments.field_iasc_audience_target_id }}/meetings'
     cache_metadata:
       max-age: -1
       contexts:
@@ -478,6 +469,8 @@ display:
         pager: false
         use_ajax: false
         footer: false
+        link_display: false
+        link_url: false
       use_more: false
       use_more_always: true
       use_more_text: 'View all meetings'
@@ -573,20 +566,9 @@ display:
             offset_label: Offset
           quantity: 9
       use_ajax: true
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<div class="more-link"><a href="/resources?f%5B0%5D=content_type%3Aoa_event">View all meetings</a></div>'
-            format: full_html
-          plugin_id: text
+      footer: {  }
+      link_display: '0'
+      link_url: 'group/{{ arguments.field_iasc_audience_target_id }}/meetings'
     cache_metadata:
       max-age: -1
       contexts:
