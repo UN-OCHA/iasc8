@@ -465,6 +465,7 @@ display:
       defaults:
         cache: false
         header: false
+        sorts: false
       display_description: ''
       header:
         area:
@@ -481,6 +482,55 @@ display:
             format: full_html
           plugin_id: text
       exposed_block: true
+      sorts:
+        field_oa_date:
+          id: field_oa_date
+          table: search_api_index_default_solr_index
+          field: field_oa_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_published_date:
+          id: field_published_date
+          table: search_api_index_default_solr_index
+          field: field_published_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        changed:
+          id: changed
+          table: search_api_index_default_solr_index
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        title:
+          id: title
+          table: search_api_index_default_solr_index
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
     cache_metadata:
       max-age: -1
       contexts:
@@ -848,6 +898,7 @@ display:
             value: '<h1 class="page-title">Statements</h1>'
             format: full_html
           plugin_id: text
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
