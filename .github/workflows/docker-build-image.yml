@@ -15,18 +15,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
     - name: Determine environment type
-      id: environment
-      uses: UN-OCHA/actions-determine-env@v1
+      uses: UN-OCHA/actions-determine-env@v2
     - name: Build docker image
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        NODE_ENV: ${{ steps.environment.outputs.branch_environment }}
       run: |
-        env
         export DOCKER_TAG="${GITHUB_REF##*/}"
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
         docker build \
+            --build-arg BRANCH_ENVIRONMENT=${BRANCH_ENVIRONMENT} \
             --build-arg VCS_REF=`git rev-parse --short HEAD` \
             --build-arg VCS_URL=`git config --get remote.origin.url | sed 's#git@github.com:#https://github.com/#'` \
             --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
