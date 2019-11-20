@@ -44,7 +44,7 @@ function iasc_common_design_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['elements']['#node'];
 
-  if ($node->hasField('field_oa_date')) {
+  if ($node->hasField('field_oa_date') && $node->field_oa_date->first() && is_numeric(strtotime($node->field_oa_date->first()->value))) {
     $variables['event_time'] = [
       'start' => \Drupal::service('date.formatter')->format(strtotime($node->field_oa_date->first()->value), 'custom', 'H:i'),
       'end' => \Drupal::service('date.formatter')->format(strtotime($node->field_oa_date->first()->end_value), 'custom', 'H:i'),
