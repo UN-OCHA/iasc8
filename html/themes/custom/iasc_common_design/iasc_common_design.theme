@@ -38,6 +38,30 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
 }
 
 /**
+ * Implements template_preprocess_node().
+ */
+function iasc_common_design_preprocess_node(&$variables) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['elements']['#node'];
+
+  if ($node->hasField('field_oa_date')) {
+    $variables['event_time'] = [
+      'start' => \Drupal::service('date.formatter')->format(strtotime($node->field_oa_date->first()->value), 'custom', 'H:i'),
+      'end' => \Drupal::service('date.formatter')->format(strtotime($node->field_oa_date->first()->end_value), 'custom', 'H:i'),
+      'all_day' => FALSE,
+    ];
+
+    if ($variables['event_time']['start'] == $variables['event_time']['end']) {
+      $variables['event_time']['all_day'] = TRUE;
+      $variables['event_time']['output'] = '(All day)';
+    }
+    else {
+      $variables['event_time']['output'] = $variables['event_time']['start'] . ' to ' . $variables['event_time']['end'];
+    }
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function disabled_iasc_common_design_preprocess_page(&$variables) {

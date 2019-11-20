@@ -62,6 +62,11 @@
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
+ * - event_time
+ *     .start: start time
+ *     .end: end time
+ *     .all_day: boolean flag
+ *     .output: formatted output
  *
  * @see template_preprocess_node()
  *
@@ -106,6 +111,7 @@
     {% endif %}
 
     {{ content|without('field_published_date','field_oa_date') }}
+    <strong>Event time: {{ event_time.output }}</strong>
   </div>
 
 </article>
