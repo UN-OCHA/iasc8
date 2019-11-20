@@ -1,3 +1,5 @@
+{{ attach_library('common_design/search') }}
+
 <div class="cd-search__form" aria-labelledby="cd-search_btn cd-search-btn">
   <form action="/search" method="get" accept-charset="UTF-8">
     <div class="form--inline clearfix">
@@ -6,7 +8,7 @@
         <input placeholder="What are you looking for?" class="cd-search__input form-text" type="text" id="cd-search" name="keys" value="{{ keyword }}" size="30" maxlength="128">
       </div>
       <div class="form-actions js-form-wrapper form-wrapper">
-        <button data-twig-suggestion="search_submit" class="cd-search__submit button js-form-submit form-submit js-has-focus" value="Search" type="submit">
+        <button data-twig-suggestion="search_submit" class="cd-search__submit button js-form-submit form-submit" value="Search" type="submit">
           <svg class="icon icon--search">
             <use xlink:href="#search"></use>
           </svg>
