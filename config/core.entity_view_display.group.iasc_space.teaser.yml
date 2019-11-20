@@ -19,46 +19,29 @@ dependencies:
     - field.field.group.iasc_space.field_sidebar
     - group.type.iasc_space
   module:
-    - datetime
     - text
 id: group.iasc_space.teaser
 targetEntityType: group
 bundle: iasc_space
 mode: teaser
 content:
-  field_date_closed:
-    weight: 4
+  field_description:
+    weight: 2
     label: hidden
     settings:
-      format_type: medium
-      timezone_override: ''
+      trim_length: 600
     third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_description:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
+    type: text_trimmed
     region: content
   field_group_banner:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
-      view_mode: thumbnail
+      view_mode: product_thumbnail
       link: false
     third_party_settings: {  }
-  field_short_name:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   label:
     label: hidden
     type: string
@@ -74,10 +57,12 @@ hidden:
   field_banner_position: true
   field_banner_text: true
   field_content: true
+  field_date_closed: true
   field_external_link: true
   field_main_image: true
   field_primary_image: true
   field_responsibilities: true
+  field_short_name: true
   field_sidebar: true
   langcode: true
   search_api_excerpt: true

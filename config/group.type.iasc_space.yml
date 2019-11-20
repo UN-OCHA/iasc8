@@ -6,6 +6,6 @@ id: iasc_space
 label: Space
 description: ''
 creator_membership: true
-creator_wizard: true
+creator_wizard: false
 creator_roles:
   - iasc_space-admin

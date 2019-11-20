@@ -77,7 +77,8 @@
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  content.field_media_photo|render ? 'cd-user-list__has-image'
 ]
 %}
 {{ attach_library('classy/node') }}

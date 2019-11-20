@@ -1,0 +1,52 @@
+uuid: 3c7d8b5c-111e-4227-9bc9-e6c5e6412daa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.title
+    - field.field.group.iasc_space.field_banner_image
+    - field.field.group.iasc_space.field_banner_position
+    - field.field.group.iasc_space.field_banner_text
+    - field.field.group.iasc_space.field_content
+    - field.field.group.iasc_space.field_date_closed
+    - field.field.group.iasc_space.field_description
+    - field.field.group.iasc_space.field_external_link
+    - field.field.group.iasc_space.field_group_banner
+    - field.field.group.iasc_space.field_main_image
+    - field.field.group.iasc_space.field_primary_image
+    - field.field.group.iasc_space.field_responsibilities
+    - field.field.group.iasc_space.field_short_name
+    - field.field.group.iasc_space.field_sidebar
+    - group.type.iasc_space
+id: group.iasc_space.title
+targetEntityType: group
+bundle: iasc_space
+mode: title
+content:
+  label:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_banner_image: true
+  field_banner_position: true
+  field_banner_text: true
+  field_content: true
+  field_date_closed: true
+  field_description: true
+  field_external_link: true
+  field_group_banner: true
+  field_main_image: true
+  field_primary_image: true
+  field_responsibilities: true
+  field_short_name: true
+  field_sidebar: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

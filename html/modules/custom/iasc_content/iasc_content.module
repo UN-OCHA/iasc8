@@ -6,7 +6,9 @@
  */
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
@@ -14,8 +16,10 @@ use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\file\FileInterface;
 use Drupal\group\Entity\Group;
+use Drupal\group\Entity\GroupContent;
 use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -30,6 +34,9 @@ function iasc_content_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['field_legacy_id'])) {
     $form['field_legacy_id']['#access'] = FALSE;
   }
+
+  // Check for group content.
+  iasc_content_node_field_group_form_alter($form, $form_state, $form_id);
 }
 
 /**
@@ -174,6 +181,41 @@ function iasc_content_preprocess_paragraph(&$vars) {
 }
 
 /**
+ * Build section menu for a group.
+ */
+function iasc_content_build_section_menu($group, $link_to_group = FALSE) {
+  $supported_types = [
+    'Documents' => 'oa_wiki_page',
+    'Meetings' => 'oa_event',
+    'News' => 'announcement',
+  ];
+
+  $urls = [];
+
+  if ($link_to_group) {
+    $urls[] = Link::fromTextAndUrl($group->label(), Url::fromUri('internal:/group/' . $group->id(), [
+      'attributes' => [
+        'class' => 'link-to-group',
+      ],
+    ]))->toString();
+  }
+
+  foreach ($supported_types as $label => $bundle) {
+    $content = $group->getContent('group_node:' . $bundle);
+    // If we find a node, add a link to the view.
+    if (count($content) > 0) {
+      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label), [
+        'attributes' => [
+          'class' => 'link-to-section',
+        ],
+      ]))->toString();
+    }
+  }
+
+  return $urls;
+}
+
+/**
  * Implements hook_preprocess_paragraph().
  */
 function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
@@ -191,20 +233,7 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
     return;
   }
 
-  $supported_types = [
-    'Documents' => 'oa_wiki_page',
-    'Meetings' => 'oa_event',
-    'News' => 'announcement',
-  ];
-
-  $urls = [];
-  foreach ($supported_types as $label => $bundle) {
-    $content = $group->getContent('group_node:' . $bundle);
-    // If we find a node, add a link to the view.
-    if (count($content) > 0) {
-      $urls[] = Link::fromTextAndUrl($label, Url::fromUri('internal:/group/' . $group->id() . '/' . strtolower($label)))->toString();
-    }
-  }
+  $urls = iasc_content_build_section_menu($group);
 
   // Check for custom links.
   if (isset($paragraph->field_custom_link)) {
@@ -350,7 +379,7 @@ function iasc_content_file_field_to_media() {
         $query = \Drupal::entityQuery($entity_type);
         $query->exists($from);
         $query->notExists($to);
-        $query->range(0, 250);
+        $query->range(0, 750);
 
         // Filter by bundle.
         if ($entity_type == 'taxonomy_term') {
@@ -685,5 +714,186 @@ function iasc_content_oa_worktracker_allowed_values_callback(FieldStorageConfig 
   return [
     '_legacy' => 'do not use - oa_worktracker_allowed_values_callback',
     'debug' => $definition->getName(),
+  ];
+}
+
+/**
+ * Get content types and field to act.
+ */
+function iasc_content_node_field_group_settings() {
+  $ctypes = [
+    'action_point',
+    'announcement',
+    'oa_discussion_post',
+    'oa_event',
+    'oa_wiki_page',
+    'oa_worktracker_task',
+  ];
+
+  $add = [];
+  $edit = [];
+
+  foreach ($ctypes as $ctype) {
+    $add[] = 'node_' . $ctype . '_form';
+    $edit[] = 'node_' . $ctype . '_edit_form';
+  }
+
+  return [
+    'form_id_add' => $add,
+    'form_id_edit' => $edit,
+    'group_field' => 'field_iasc_audience',
+  ];
+}
+
+/**
+ * Form alter to sync audience field with gnodes.
+ */
+function iasc_content_node_field_group_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $settings = iasc_content_node_field_group_settings();
+
+  // Add node.
+  if (in_array($form_id, $settings['form_id_add'])) {
+    // Prefill dropdown.
+    if ($form_state->get('group') && $form_state->get('group')->id()) {
+      $form[$settings['group_field']]['widget']['#default_value'] = [$form_state->get('group')->id() => $form_state->get('group')->id()];
+      $form[$settings['group_field']]['widget']['#disabled'] = TRUE;
+    }
+    else {
+      foreach (array_keys($form['actions']) as $action) {
+        if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+          $form['actions'][$action]['#submit'][] = 'iasc_content_node_field_group_add_custom_callback_group';
+        }
+      }
+    }
+  }
+
+  // Edit node.
+  if (in_array($form_id, $settings['form_id_edit'])) {
+    // Prefill dropdown.
+    if ($form_state->getFormObject()->getEntity()) {
+      $node = $form_state->getFormObject()->getEntity();
+      $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+      $activGroupListEntity = $storage->loadByEntity($node);
+      $gids_existing = [];
+      foreach ($activGroupListEntity as $groupContent) {
+        $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->label();
+      }
+
+      $form[$settings['group_field']]['widget']['#default_value'] = array_keys($gids_existing);
+    }
+
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'iasc_content_node_field_group_edit_custom_callback_group';
+      }
+    }
+  }
+}
+
+/**
+ * Add a new node to a group if the audience field is set.
+ */
+function iasc_content_node_field_group_add_custom_callback_group($form, FormStateInterface $form_state) {
+  $settings = iasc_content_node_field_group_settings();
+  $nid = $form_state->getValue('nid');
+  $node = Node::load($nid);
+  $gids = $form_state->getValue($settings['group_field']);
+
+  foreach ($gids as $gid) {
+    // Skip -none- option.
+    if ($gid['target_id'] == '_none') {
+      continue;
+    }
+
+    $group = Group::load($gid['target_id']);
+    /** @var \Drupal\group\Plugin\GroupContentEnablerInterface $plugin */
+    $plugin = $group->getGroupType()->getContentPlugin('group_node:' . $node->bundle());
+    $group_content = GroupContent::create([
+      'type' => $plugin->getContentTypeConfigId(),
+      'gid' => $group->id(),
+      'entity_id' => $node->id(),
+    ]);
+    $group_content->save();
+  }
+
+}
+
+/**
+ * Update group relations based on audience field.
+ */
+function iasc_content_node_field_group_edit_custom_callback_group($form, FormStateInterface $form_state) {
+  $settings = iasc_content_node_field_group_settings();
+  $nid = $form_state->getValue('nid');
+  $node = Node::load($nid);
+
+  // Wanted groups.
+  $gids = $form_state->getValue($settings['group_field']);
+  $gids_wanted = [];
+  foreach ($gids as $gid) {
+    $gids_wanted[$gid['target_id']] = $gid['target_id'];
+  }
+
+  // Existing groups.
+  $gids_existing = [];
+
+  // Deleted groups.
+  $gnodes_existing = [];
+
+  // Loads all groups with a relation to the node.
+  $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+  $activGroupListEntity = $storage->loadByEntity($node);
+  foreach ($activGroupListEntity as $groupContent) {
+    $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->id();
+    $gnodes_existing[$groupContent->getGroup()->id()] = $groupContent;
+  }
+
+  // Union for existing and wanted groups.
+  $gids_union = $gids_existing + $gids_wanted;
+
+  // Gnodes to create.
+  $gids_create = array_diff($gids_union, $gids_existing);
+
+  // Gnodes to delete.
+  $gids_delete = array_diff($gids_union, $gids_wanted);
+
+  foreach ($gids_create as $gid) {
+    // Skip -none- option.
+    if ($gid == '_none') {
+      continue;
+    }
+
+    $group = Group::load($gid);
+    $plugin = $group->getGroupType()->getContentPlugin('group_node:' . $node->bundle());
+    $group_content = GroupContent::create([
+      'type' => $plugin->getContentTypeConfigId(),
+      'gid' => $group->id(),
+      'entity_id' => $node->id(),
+    ]);
+    $group_content->save();
+  }
+
+  foreach ($gids_delete as $gid) {
+    // Skip -none- option.
+    if ($gid == '_none') {
+      continue;
+    }
+
+    $gnodes_existing[$gid]->delete();
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iasc_content_theme() {
+  return [
+    'iasc_section_menu_block' => [
+      'variables' => [
+        'title' => NULL,
+        'section_links' => NULL,
+      ],
+      'template' => 'block--iasc-section-menu-block',
+    ],
   ];
 }

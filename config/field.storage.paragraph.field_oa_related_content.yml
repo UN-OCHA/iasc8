@@ -8,10 +8,13 @@ dependencies:
 id: paragraph.field_oa_related_content
 field_name: field_oa_related_content
 entity_type: paragraph
-type: entity_reference
+type: dynamic_entity_reference
 settings:
-  target_type: node
-module: core
+  exclude_entity_types: false
+  entity_type_ids:
+    node: node
+    group: group
+module: dynamic_entity_reference
 locked: false
 cardinality: -1
 translatable: true

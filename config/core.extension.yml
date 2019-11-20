@@ -18,6 +18,7 @@ module:
   datetime_range: 0
   dblog: 0
   diff: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -40,6 +41,7 @@ module:
   geofield: 0
   geophp: 0
   gnode: 0
+  google_tag: 0
   group: 0
   help: 0
   history: 0

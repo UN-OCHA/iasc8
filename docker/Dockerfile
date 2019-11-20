@@ -1,8 +1,10 @@
 FROM unocha/unified-builder:7.2.18-r0-201905-11 as builder
+ENV  NODE_ENV=$NODE_ENV
 COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --quiet --no-dev --prefer-dist && \
-    cp -a docker/settings.php docker/services.yml html/sites/default
+    cp -a docker/settings.php docker/services.yml html/sites/default && \
+    composer run gulp
 
 FROM unocha/php7-k8s:7.3.9-r0-201911-01-NR
 

@@ -18,6 +18,7 @@ dependencies:
     - media_library
     - paragraphs
     - path
+    - select2
     - text
 id: node.panopoly_page.default
 targetEntityType: node
@@ -67,8 +68,11 @@ content:
     region: content
   field_featured_categories:
     weight: 7
-    type: options_buttons
-    settings: {  }
+    type: select2_entity_reference
+    settings:
+      width: 100%
+      autocomplete: true
+      match_operator: CONTAINS
     third_party_settings: {  }
     region: content
   field_oa_banner_text:
