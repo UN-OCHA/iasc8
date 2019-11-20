@@ -153,6 +153,9 @@
           {% if dialIn or content.field_info_private|render %}
             <div class="cd-alert cd-message">
               <div class="cd-alert--message">
+                {% if dialIn %}
+                  {{ content.field_dial_in_meeting }}
+                {% endif %}
                 {{ content.field_info_private }}
               </div>
             </div>
