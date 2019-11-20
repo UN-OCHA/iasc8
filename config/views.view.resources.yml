@@ -6,10 +6,10 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
-    - 'taxonomy_term:document_types:27d6b803-596c-485c-8123-ca9ff91fb30d'
-    - 'taxonomy_term:document_types:45e7bebb-1a6f-4cbc-aefd-6a71d68cf92d'
-    - 'taxonomy_term:document_types:6f081507-fc81-45f1-87a1-50761a0063b4'
-    - 'taxonomy_term:document_types:ca4c6d76-3f63-4fa1-8031-e08a5d913033'
+    - 'taxonomy_term:document_types:1bb214c9-4c83-4a9b-8f08-374d33b7956c'
+    - 'taxonomy_term:document_types:70f43e93-298f-4ee4-9dcc-04b322b03136'
+    - 'taxonomy_term:document_types:aa7ebfcd-12c9-4029-8585-a92e7a8ead01'
+    - 'taxonomy_term:document_types:c94805a1-4473-4790-a7fd-5382dc5c0803'
   module:
     - search_api
 id: resources
@@ -77,16 +77,16 @@ display:
         options:
           view_modes:
             'entity:group':
-              iasc_group: default
-              iasc_space: default
+              iasc_group: teaser
+              iasc_space: teaser
             'entity:node':
-              action_point: search_result
+              action_point: teaser
               announcement: teaser
               contact: teaser
-              oa_discussion_post: search_result
+              oa_discussion_post: teaser
               oa_event: teaser
               oa_wiki_page: teaser
-              oa_worktracker_task: search_result
+              oa_worktracker_task: teaser
               panopoly_landing_page: teaser
               panopoly_page: teaser
       fields:
@@ -314,7 +314,7 @@ display:
     display_plugin: page
     id: iasc_newsletters
     display_title: 'IASC Newsletters'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
       path: resources/iasc-newsletter
@@ -481,7 +481,7 @@ display:
             value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
             format: full_html
           plugin_id: text
-      exposed_block: true
+      exposed_block: false
       sorts:
         field_oa_date:
           id: field_oa_date
@@ -543,7 +543,7 @@ display:
     display_plugin: page
     id: page_resources_documents
     display_title: 'Meeting documents'
-    position: 1
+    position: 3
     display_options:
       display_extenders: {  }
       path: resources/meeting-documents
@@ -698,7 +698,7 @@ display:
     display_plugin: page
     id: page_resources_products
     display_title: 'IASC Products'
-    position: 1
+    position: 4
     display_options:
       display_extenders: {  }
       path: resources/iasc-products
@@ -826,7 +826,7 @@ display:
     display_plugin: page
     id: statements_iasc_principals
     display_title: 'Statements IASC Principals'
-    position: 1
+    position: 5
     display_options:
       display_extenders: {  }
       path: resources/statements-iasc-principals
