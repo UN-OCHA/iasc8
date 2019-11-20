@@ -104,7 +104,6 @@ function iasc_common_design_form_alter(&$form, FormStateInterface $form_state, $
   }
 
   $includeView = [
-    'views-exposed-form-search-content-search'
   ];
 
   // If in array above, add search--inline attributes.

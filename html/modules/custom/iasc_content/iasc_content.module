@@ -895,5 +895,12 @@ function iasc_content_theme() {
       ],
       'template' => 'block--iasc-section-menu-block',
     ],
+    'iasc_header_search_block' => [
+      'variables' => [
+        'title' => NULL,
+        'keyword' => NULL,
+      ],
+      'template' => 'block--iasc-header-search-block',
+    ],
   ];
 }
