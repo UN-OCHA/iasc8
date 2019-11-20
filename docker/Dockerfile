@@ -1,4 +1,6 @@
 FROM unocha/unified-builder:7.2.18-r0-201905-11 as builder
+ARG  BRANCH_ENVIRONMENT
+ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --quiet --no-dev --prefer-dist && \
