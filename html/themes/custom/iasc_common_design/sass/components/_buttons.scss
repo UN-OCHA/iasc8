@@ -19,6 +19,7 @@ input[type='submit'] {
   text-transform: uppercase;
   text-decoration: none;
   color: $cd-white;
+  border: 1px solid $cd-ocha-blue;
   padding: $cd-base-unit * 1.5;
   transition: background 0.3s ease;
 
