@@ -622,6 +622,11 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
       style:
         type: html_list
         options:
@@ -798,6 +803,11 @@ display:
           break_phrase: false
           not: false
           plugin_id: numeric
+      use_more: true
+      use_more_always: false
+      use_more_text: 'More news'
+      link_display: custom_url
+      link_url: 'group/{{ arguments.field_iasc_audience_target_id }}/news'
     cache_metadata:
       max-age: -1
       contexts:
