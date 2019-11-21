@@ -43,7 +43,12 @@
       margin: 0;
     }
 
-    label {
+    .form-actions input[type='submit'] {
+      line-height: 37px;
+      padding: 0 1rem;
+    }
+
+      label {
       @include visually-hidden;
     }
   }
