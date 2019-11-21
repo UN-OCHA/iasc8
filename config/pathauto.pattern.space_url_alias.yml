@@ -1,0 +1,23 @@
+uuid: 948f4958-6228-40e6-b86b-8c0aa6104113
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: space_url_alias
+label: 'Space URL alias'
+type: 'canonical_entities:group'
+pattern: '[group:title]'
+selection_criteria:
+  17f66e41-bf49-4c24-b494-31e47479bc70:
+    id: 'entity_bundle:group'
+    bundles:
+      iasc_space: iasc_space
+    negate: false
+    context_mapping:
+      group: group
+    uuid: 17f66e41-bf49-4c24-b494-31e47479bc70
+selection_logic: and
+weight: -9
+relationships: {  }
