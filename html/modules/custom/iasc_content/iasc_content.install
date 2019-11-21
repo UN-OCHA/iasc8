@@ -333,3 +333,28 @@ function iasc_content_update_8012() {
     $group->save();
   }
 }
+
+/**
+ * Double check URL aliases.
+ */
+function iasc_content_update_8013() {
+  $src = drupal_get_path('module', 'iasc_content') . '/nodes-with-url-alias.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $nid = $data[0];
+      $new_alias = $data[1];
+      $system_path = '/node/' . $nid;
+
+      $current_alias = \Drupal::service('path.alias_manager')->getAliasByPath($system_path);
+      if ($current_alias != $new_alias) {
+        \Drupal::service('path.alias_storage')->save($system_path, $new_alias);
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Alias updated for node "%s" to "%s".', $nid, $new_alias)
+        );
+      }
+    }
+
+    fclose($handle);
+  }
+}
