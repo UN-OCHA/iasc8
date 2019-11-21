@@ -114,6 +114,8 @@
         <div class="cd-teaser__date">
           {{ content.field_oa_date }}
 
+          <div class="cd-date-time">{{ event_time.output }}</div>
+
           {% if content.field_oa_date %}
             {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
               {{ content.field_oa_date.0['#date'] }}
