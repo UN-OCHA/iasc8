@@ -1,6 +1,6 @@
 uuid: 1c43ff53-3d00-4bf3-a886-4bdb1ecb6b46
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
@@ -17,5 +17,5 @@ selection_criteria:
     context_mapping:
       node: node
 selection_logic: and
-weight: 0
+weight: 1
 relationships: {  }

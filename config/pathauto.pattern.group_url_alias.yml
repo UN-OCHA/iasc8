@@ -1,0 +1,23 @@
+uuid: 73c53061-5d17-40c8-9b9b-c053f3a172b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: group_url_alias
+label: 'Group URL alias'
+type: 'canonical_entities:group'
+pattern: 'group/[group:title]'
+selection_criteria:
+  430b23ba-cc0a-414b-b1b5-5ced738fa25e:
+    id: 'entity_bundle:group'
+    bundles:
+      iasc_group: iasc_group
+    negate: false
+    context_mapping:
+      group: group
+    uuid: 430b23ba-cc0a-414b-b1b5-5ced738fa25e
+selection_logic: and
+weight: -8
+relationships: {  }
