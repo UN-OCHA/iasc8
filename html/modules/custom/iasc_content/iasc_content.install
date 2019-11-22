@@ -358,3 +358,66 @@ function iasc_content_update_8013() {
     fclose($handle);
   }
 }
+
+/**
+ * Add missing files.
+ */
+function iasc_content_update_8014() {
+  $connection = \Drupal::database();
+  $src = drupal_get_path('module', 'iasc_content') . '/files.csv';
+
+  // Fetch existing file Ids.
+  $select = $connection->select('file_managed', 'f')->fields('f', ['fid']);
+  $existing_fids = $select->execute()->fetchCol();
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $fid = $data[0];
+      $name = $data[1];
+      $path = $data[2];
+      $mime = $data[5];
+      $size = $data[6];
+      $date = $data[8];
+
+      if (empty($size)) {
+        $size = 0;
+      }
+
+      // Skip existing files.
+      if (in_array($fid, $existing_fids)) {
+        continue;
+      }
+
+      // Create a new UUID.
+      $uuid = \Drupal::service('uuid')->generate();
+
+      // Insert a record.
+      $connection->insert('file_managed')
+        ->fields([
+          'fid' => $fid,
+          'uuid' => $uuid,
+          'langcode' => 'en',
+          'uid' => 1,
+          'filename' => $name,
+          'uri' => $path,
+          'filemime' => $mime,
+          'filesize' => $size,
+          'status' => 1,
+          'created' => $date,
+          'changed' => $date,
+        ])
+        ->execute();
+
+      $existing_fids[] = $fid;
+
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('File entry added for "%s".', $name)
+      );
+    }
+
+    fclose($handle);
+  }
+}
