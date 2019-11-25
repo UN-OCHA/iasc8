@@ -436,19 +436,19 @@ display:
       cache:
         type: none
       header:
-        area:
-          id: area
+        entity_group:
+          id: entity_group
           table: views
-          field: area
+          field: entity_group
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
           tokenize: true
-          content:
-            value: 'Documents of {{ audience_label }}'
-            format: basic_html
-          plugin_id: text
+          target: '{{ arguments.field_iasc_audience }}'
+          view_mode: view_header_documents
+          bypass_access: false
+          plugin_id: entity
       sorts:
         field_published_date:
           id: field_published_date
