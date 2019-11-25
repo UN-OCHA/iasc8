@@ -11,6 +11,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access donor content'
   - 'access media browser'
   - 'access user profiles'
   - 'administer own event registration'

@@ -1,0 +1,6 @@
+access iasc content:
+  title: 'Access IASC content'
+  description: 'Access content marked as section IASC.'
+access donor content:
+  title: 'Access Donor content'
+  description: 'Access content marked as section Donor.'
