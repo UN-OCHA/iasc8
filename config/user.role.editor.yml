@@ -9,6 +9,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access iasc content'
   - 'access media browser'
   - 'access navbar'
   - 'act as member in og node:oa_group'
