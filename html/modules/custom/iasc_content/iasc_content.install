@@ -7,6 +7,7 @@
 
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\group\Entity\Group;
+use Drupal\user\Entity\User;
 
 /**
  * Add default content to spaces.
@@ -416,6 +417,50 @@ function iasc_content_update_8014() {
       \Drupal::logger('iasc_content')->notice(
         sprintf('File entry added for "%s".', $name)
       );
+    }
+
+    fclose($handle);
+  }
+}
+
+/**
+ * Add group admins.
+ */
+function iasc_content_update_8015() {
+  $src = drupal_get_path('module', 'iasc_content') . '/og-members-and-roles.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $group_id = $data[0];
+      $uid = $data[1];
+
+      $group = Group::load($group_id);
+      if (!$group) {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Unable to load group "%s".', $group_id)
+        );
+        continue;
+      }
+
+      $account = User::load($uid);
+      if (!$account) {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Unable to load group "%s".', $uid)
+        );
+        continue;
+      }
+
+      if ($membership = $group->getMember($account)) {
+        $roles = $membership->getRoles();
+        if (!isset($roles['iasc_space-admin'])) {
+          $group_content = $membership->getGroupContent();
+          $group_content->group_roles->target_id = 'iasc_space-admin';
+          $group_content->save();
+        }
+      }
     }
 
     fclose($handle);
