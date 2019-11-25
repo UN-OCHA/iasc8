@@ -1,0 +1,10 @@
+uuid: 146a7d42-821e-42ec-9190-6f9a99e2e5ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.view_header_news
+label: 'View header - news'
+targetEntityType: group
+cache: true
