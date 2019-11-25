@@ -1,0 +1,10 @@
+uuid: 6d24bdf6-8c2c-44e9-a878-7bd88a17a6ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.view_header_meetings
+label: 'View header - meetings'
+targetEntityType: group
+cache: true
