@@ -6,10 +6,10 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
-    - 'taxonomy_term:document_types:1bb214c9-4c83-4a9b-8f08-374d33b7956c'
-    - 'taxonomy_term:document_types:70f43e93-298f-4ee4-9dcc-04b322b03136'
-    - 'taxonomy_term:document_types:aa7ebfcd-12c9-4029-8585-a92e7a8ead01'
-    - 'taxonomy_term:document_types:c94805a1-4473-4790-a7fd-5382dc5c0803'
+    - 'taxonomy_term:document_types:27d6b803-596c-485c-8123-ca9ff91fb30d'
+    - 'taxonomy_term:document_types:45e7bebb-1a6f-4cbc-aefd-6a71d68cf92d'
+    - 'taxonomy_term:document_types:6f081507-fc81-45f1-87a1-50761a0063b4'
+    - 'taxonomy_term:document_types:ca4c6d76-3f63-4fa1-8031-e08a5d913033'
   module:
     - search_api
 id: resources
@@ -466,6 +466,8 @@ display:
         cache: false
         header: false
         sorts: false
+        filters: false
+        filter_groups: false
       display_description: ''
       header:
         area:
@@ -531,6 +533,104 @@ display:
           expose:
             label: ''
           plugin_id: search_api
+      filters:
+        type:
+          id: type
+          table: search_api_index_default_solr_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            action_point: action_point
+            announcement: announcement
+            oa_discussion_post: oa_discussion_post
+            oa_wiki_page: oa_wiki_page
+            oa_worktracker_task: oa_worktracker_task
+            panopoly_landing_page: panopoly_landing_page
+            panopoly_page: panopoly_page
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_default_solr_index
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            identifier: s
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              editor: '0'
+              group_login: '0'
+              viewer: '0'
+              recommendations_editor: '0'
+              space_super_admin: '0'
+              focal_point: '0'
+            placeholder: 'Enter keywords'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
