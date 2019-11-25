@@ -6,6 +6,7 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
+    - 'taxonomy_term:document_types:18be9c87-37a0-44c8-9dba-b847959b896d'
     - 'taxonomy_term:document_types:27d6b803-596c-485c-8123-ca9ff91fb30d'
     - 'taxonomy_term:document_types:45e7bebb-1a6f-4cbc-aefd-6a71d68cf92d'
     - 'taxonomy_term:document_types:6f081507-fc81-45f1-87a1-50761a0063b4'
@@ -860,6 +861,7 @@ display:
           operator: or
           value:
             1481: 1481
+            2018: 2018
           group: 1
           exposed: false
           expose:
