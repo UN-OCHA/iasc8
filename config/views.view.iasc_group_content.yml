@@ -75,18 +75,17 @@ display:
         type: search_api
         options:
           view_modes:
+            'entity:group':
+              iasc_group: default
+              iasc_space: default
             'entity:node':
               action_point: search_result
-              announcement: search_result
-              article: search_result
+              announcement: teaser
               contact: search_result
               oa_discussion_post: search_result
               oa_event: teaser
-              oa_section: search_result
-              oa_team: search_result
-              oa_wiki_page: search_result
+              oa_wiki_page: teaser
               oa_worktracker_task: search_result
-              page: search_result
               panopoly_landing_page: search_result
               panopoly_page: search_result
       fields:
@@ -666,10 +665,10 @@ display:
           bypass_access: false
           plugin_id: entity
       sorts:
-        created:
-          id: created
+        field_published_date:
+          id: field_published_date
           table: search_api_index_default_solr_index
-          field: created
+          field: field_published_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -678,10 +677,10 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-        field_published_date:
-          id: field_published_date
+        created:
+          id: created
           table: search_api_index_default_solr_index
-          field: field_published_date
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
