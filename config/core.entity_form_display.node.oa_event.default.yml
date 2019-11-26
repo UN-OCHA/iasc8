@@ -27,7 +27,7 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - date_recur
+    - iasc_content
     - media_library
     - paragraphs
     - path
@@ -171,7 +171,7 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-    type: date_recur_basic_widget
+    type: iasc_date_recur_modular_alpha
     region: content
   field_room:
     weight: 9
