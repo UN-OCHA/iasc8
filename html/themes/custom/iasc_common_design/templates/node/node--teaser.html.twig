@@ -101,7 +101,14 @@
     {{ title_suffix }}
 
     <div class="cd-article-teaser__description node__content">
-      {{ content|without('field_thumbnail') }}
+      {{ content|without('field_thumbnail', 'body') }}
+
+      {% set contentBody %}
+        {{ content.body }}
+      {% endset %}
+
+      {{ contentBody|striptags }}
+
     </div>
   </div>
 
