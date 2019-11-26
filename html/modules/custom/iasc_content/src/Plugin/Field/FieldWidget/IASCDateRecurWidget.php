@@ -6,7 +6,6 @@ use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\NestedArray;
-use Drupal\date_recur_modular\DateRecurModularWidgetFieldsTrait;
 use Drupal\date_recur_modular\Plugin\Field\FieldWidget\DateRecurModularAlphaWidget;
 
 /**
@@ -24,7 +23,7 @@ class IASCDateRecurWidget extends DateRecurModularAlphaWidget {
 
   protected const HTML_TIME_FORMAT = 'H:i:s';
 
-    /**
+  /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) : array {
@@ -219,4 +218,5 @@ class IASCDateRecurWidget extends DateRecurModularAlphaWidget {
     $time->setDate(...$baseDayParts);
     return $time;
   }
+
 }
