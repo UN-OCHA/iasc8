@@ -466,3 +466,68 @@ function iasc_content_update_8015() {
     fclose($handle);
   }
 }
+
+/**
+ * Add missing files to documents.
+ */
+function iasc_content_update_8016() {
+  // Add latest files from production.
+  iasc_content_update_8014();
+
+  $entity_type = 'node';
+  $from = 'field_oa_media';
+  $to = 'field_media_files';
+  $media_type = 'file';
+  $bundle = 'oa_wiki_page';
+
+  $query = \Drupal::entityQuery($entity_type);
+  $query->exists($from);
+  $query->condition('type', $bundle);
+
+  $ids = $query->execute();
+  $entities = \Drupal::entityTypeManager()
+    ->getStorage($entity_type)
+    ->loadMultiple($ids);
+
+  foreach ($entities as $entity) {
+    // Build list of existing files.
+    $target_ids = [];
+    foreach ($entity->get($to) as $dest) {
+      $target_ids[] = $dest
+        ->get('entity')
+        ->getTarget()
+        ->get('field_media_file')
+        ->first()
+        ->get('entity')
+        ->getValue()
+        ->id();
+    }
+
+    $needs_update = FALSE;
+    foreach ($entity->get($from) as $source) {
+      if ($source->entity) {
+        if (in_array($source->entity->id(), $target_ids)) {
+          continue;
+        }
+
+        $needs_update = TRUE;
+        $media_entity = _iasc_content_media_entity(
+          $source->entity,
+          $source->alt,
+          $media_type
+        );
+        $entity->{$to}[] = [
+          'target_id' => $media_entity->id(),
+        ];
+      }
+    }
+
+    // Save if the new field has content.
+    if ($needs_update) {
+      $entity->save();
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->label(), $entity->id())
+      );
+    }
+  }
+}
