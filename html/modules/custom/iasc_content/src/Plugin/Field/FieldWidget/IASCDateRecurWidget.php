@@ -123,16 +123,17 @@ class IASCDateRecurWidget extends DateRecurModularAlphaWidget {
       return;
     }
 
-    /** @var string|null $timeZone */
-    $timeZone = $form_state->getValue(array_merge($valueParents, ['time_zone']));
-    if (empty($startDay)) {
-      $form_state->setError($element, \t('Time zone must be set if start date is set.'));
-    }
-
     $isAllDay = (bool) $form_state->getValue(array_merge($valueParents, ['is_all_day']));
     if ($isAllDay) {
       $form_state->setValue(array_merge($valueParents, ['time_start']), '00:00:00');
       $form_state->setValue(array_merge($valueParents, ['time_end']), '23:59:59');
+      $form_state->setValue(array_merge($valueParents, ['time_zone']), 'UTC');
+    }
+
+    /** @var string|null $timeZone */
+    $timeZone = $form_state->getValue(array_merge($valueParents, ['time_zone']));
+    if (empty($startDay)) {
+      $form_state->setError($element, \t('Time zone must be set if start date is set.'));
     }
 
     try {
