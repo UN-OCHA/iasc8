@@ -22,6 +22,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-add-dims { width: 48px; height: 48px; }
 	.svg-add--white-dims { width: 48px; height: 48px; }
 	.svg-alert-dims { width: 48px; height: 48px; }
+	.svg-arrow-back-dims { width: 48px; height: 48px; }
 	.svg-arrow-down-dims { width: 48px; height: 48px; }
 	.svg-arrow-down--highlighted-dims { width: 48px; height: 48px; }
 	.svg-arrow-left-dims { width: 48px; height: 48px; }
@@ -62,6 +63,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-home-dims { width: 48px; height: 48px; }
 	.svg-icons-sprite-dims { width: 0px; height: 0px; }
 	.svg-info-dims { width: 48px; height: 48px; }
+	.svg-list-bullet-dims { width: 48px; height: 48px; }
 	.svg-location-dims { width: 48px; height: 48px; }
 	.svg-menu-dims { width: 48px; height: 48px; }
 	.svg-more-dims { width: 48px; height: 48px; }
@@ -123,6 +125,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 48 48" id="add" xmlns="http://www.w3.org/2000/svg"><path d="M44 20H28V4a4 4 0 0 0-4-4 4 4 0 0 0-4 4v16H4a4 4 0 0 0 0 8h16v16a4 4 0 0 0 4 4 4 4 0 0 0 4-4V28h16a4 4 0 0 0 0-8z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="add--white" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M44 20H28V4a4 4 0 0 0-4-4 4 4 0 0 0-4 4v16H4a4 4 0 0 0 0 8h16v16a4 4 0 0 0 4 4 4 4 0 0 0 4-4V28h16a4 4 0 0 0 0-8z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="alert" xmlns="http://www.w3.org/2000/svg"><path d="M47.67 40.9L27.12 5.3a3.6 3.6 0 0 0-6.24 0L.33 40.9a2.4 2.4 0 0 0 2.08 3.6h43.18a2.4 2.4 0 0 0 2.08-3.6zM22 17.5a2 2 0 0 1 4 0v11a2 2 0 0 1-4 0zm2 21a2.5 2.5 0 1 1 2.5-2.5 2.5 2.5 0 0 1-2.5 2.5z"/></symbol>
+		<symbol viewBox="0 0 48 48" id="arrow-back" xmlns="http://www.w3.org/2000/svg"><path fill="#ff4d59" d="M34 48a4 4 0 0 1-2.83-1.17l-20-20a4 4 0 0 1 0-5.66l20-20a4 4 0 0 1 5.66 5.66L19.66 24l17.17 17.17A4 4 0 0 1 34 48z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M48 14a4 4 0 0 1-1.17 2.83l-20 20a4 4 0 0 1-5.66 0l-20-20a4 4 0 0 1 5.66-5.66L24 28.34l17.17-17.17A4 4 0 0 1 48 14z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="arrow-down--highlighted" xmlns="http://www.w3.org/2000/svg"><path fill="#EB5C6D" d="M48 14a4 4 0 0 1-1.17 2.83l-20 20a4 4 0 0 1-5.66 0l-20-20a4 4 0 0 1 5.66-5.66L24 28.34l17.17-17.17A4 4 0 0 1 48 14z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M34 48a4 4 0 0 1-2.83-1.17l-20-20a4 4 0 0 1 0-5.66l20-20a4 4 0 0 1 5.66 5.66L19.66 24l17.17 17.17A4 4 0 0 1 34 48z"/></symbol>
@@ -161,8 +164,9 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 48 48" id="help" xmlns="http://www.w3.org/2000/svg"><path d="M29 43a5 5 0 0 1-5 5 5 5 0 1 1 3.53-8.53A4.82 4.82 0 0 1 29 43zM24 0a11 11 0 0 0-11 11 4 4 0 0 0 8 0 3 3 0 0 1 6 0c0 2-.64 3-2.33 4.67-2 2-4.67 4.67-4.67 9.33v5a4 4 0 0 0 8 0v-5c0-1.23.64-2 2.33-3.67A14.43 14.43 0 0 0 35 11 11 11 0 0 0 24 0z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="hide" xmlns="http://www.w3.org/2000/svg"><path d="M16 24a8 8 0 0 1 8.88-7.95l6.29-6.29A32.24 32.24 0 0 0 24 9C14.17 9 6.08 12.78.62 21.8a4.22 4.22 0 0 0 0 4.39 27.27 27.27 0 0 0 6.58 7.54l8.85-8.85A8.07 8.07 0 0 1 16 24zM47.38 21.8a27.27 27.27 0 0 0-6.59-7.53l-8.85 8.85a8 8 0 0 1-8.83 8.83l-6.29 6.29A32.24 32.24 0 0 0 24 39c9.83 0 17.92-3.78 23.38-12.8a4.23 4.23 0 0 0 0-4.4zM5 45a2 2 0 0 1-1.41-3.41l38-38a2 2 0 0 1 2.83 2.83l-38 38A2 2 0 0 1 5 45z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="home" xmlns="http://www.w3.org/2000/svg"><path d="M41.64 16.7L24 2 6.36 16.7a1 1 0 0 0-.36.77V46h13V33a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h13V17.47a1 1 0 0 0-.36-.77z"/></symbol>
-		<symbol class="bpicons-sprite" viewBox="0 0 0 0" id="icons-sprite" xmlns="http://www.w3.org/2000/svg"/>
+		<symbol class="bqicons-sprite" viewBox="0 0 0 0" id="icons-sprite" xmlns="http://www.w3.org/2000/svg"/>
 		<symbol viewBox="0 0 48 48" id="info" xmlns="http://www.w3.org/2000/svg"><path d="M41 3H7a4 4 0 0 0-4 4v34a4 4 0 0 0 4 4h34a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4zM27 38h-4a2 2 0 0 1-2-2V21h4a2 2 0 0 1 2 2zm-3-22a3 3 0 1 1 3-3 3 3 0 0 1-3 3z"/></symbol>
+		<symbol viewBox="0 0 48 48" id="list-bullet" xmlns="http://www.w3.org/2000/svg"><path fill="#ff4d59" d="M14 48a4 4 0 0 1-2.83-6.83L28.34 24 11.17 6.83a4 4 0 0 1 5.66-5.66l20 20a4 4 0 0 1 0 5.66l-20 20A4 4 0 0 1 14 48z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="location" xmlns="http://www.w3.org/2000/svg"><path d="M24 0A17 17 0 0 0 7 17c0 7.85 11.9 25 15.79 30.35a1.5 1.5 0 0 0 2.43 0C29.1 42 41 24.87 41 17A17 17 0 0 0 24 0zm0 25a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="menu" xmlns="http://www.w3.org/2000/svg"><path d="M3 15h42a3 3 0 0 0 0-6H3a3 3 0 0 0 0 6zM45 33H3a3 3 0 0 0 0 6h42a3 3 0 0 0 0-6zM45 21H3a3 3 0 0 0 0 6h42a3 3 0 0 0 0-6z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="more" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="6" r="5"/><circle cx="24" cy="24" r="5"/><circle cx="24" cy="42" r="5"/></symbol>
@@ -173,7 +177,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 48 48" id="print" xmlns="http://www.w3.org/2000/svg"><path d="M12 4h25a1 1 0 0 1 1 1v3H11V5a1 1 0 0 1 1-1zM37 22H12a1 1 0 0 0-1 1v20a1 1 0 0 0 1 1h25a1 1 0 0 0 1-1V23a1 1 0 0 0-1-1zm-3 17H15a1 1 0 0 1 0-2h19a1 1 0 0 1 0 2zm0-6H15a1 1 0 0 1 0-2h19a1 1 0 0 1 0 2z"/><path d="M43.36 10H4.64A1.65 1.65 0 0 0 3 11.64v14.67A1.65 1.65 0 0 0 4.64 28H9v-5a3 3 0 0 1 3-3h25a3 3 0 0 1 3 3v5h3.36A1.65 1.65 0 0 0 45 26.31V11.64A1.65 1.65 0 0 0 43.36 10zM32 17a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm6 0a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="remove" xmlns="http://www.w3.org/2000/svg"><path d="M4 28a4 4 0 0 1 0-8h40a4 4 0 0 1 0 8H4z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="save" xmlns="http://www.w3.org/2000/svg"><path d="M40 3h-4v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3H5a2 2 0 0 0-2 2v38a2 2 0 0 0 2 2h38a2 2 0 0 0 2-2V8zm0 36a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V21a1 1 0 0 1 1-1h30a1 1 0 0 1 1 1z"/><path d="M10 3h24v9H10z"/></symbol>
-		<symbol viewBox="0 0 48 48" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M46.12 41.88L33.66 29.41a18.06 18.06 0 1 0-4.24 4.24l12.46 12.47a3 3 0 0 0 4.24-4.24zM7 19a12 12 0 1 1 12 12A12 12 0 0 1 7 19z"/></symbol>
+		<symbol viewBox="0 0 48 48" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M46.829 41.172L38.4 32.744a21.018 21.018 0 1 0-5.657 5.657l8.427 8.427a4 4 0 0 0 5.658-5.656zM8 21a13 13 0 1 1 22.325 9.046c-.05.045-.106.078-.154.126s-.08.104-.125.154A12.992 12.992 0 0 1 8 21z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="see" xmlns="http://www.w3.org/2000/svg"><path d="M47.38 21.8C41.92 12.78 33.83 9 24 9S6.08 12.78.62 21.8a4.22 4.22 0 0 0 0 4.39C6.08 35.22 14.17 39 24 39s17.92-3.78 23.38-12.8a4.23 4.23 0 0 0 0-4.4zM24 32a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="selected" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 39.75a4 4 0 0 1-2.83-1.17l-12.5-12.5a4 4 0 0 1 5.66-5.66l9.67 9.67L39.17 9.42a4 4 0 0 1 5.66 5.66l-23.5 23.5a4 4 0 0 1-2.83 1.17z"/></symbol>
 		<symbol viewBox="0 0 48 48" id="selected--highlighted" xmlns="http://www.w3.org/2000/svg"><path fill="#80CBFF" d="M18.5 39.75a4 4 0 0 1-2.83-1.17l-12.5-12.5a4 4 0 0 1 5.66-5.66l9.67 9.67L39.17 9.42a4 4 0 0 1 5.66 5.66l-23.5 23.5a4 4 0 0 1-2.83 1.17z"/></symbol>
@@ -260,6 +264,17 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>alert</h2>
+				</li>
+				<li title="arrow-back">
+					<div class="icon-box">
+						
+						<!-- arrow-back -->
+						<svg class="svg-arrow-back-dims">
+							<use xlink:href="#arrow-back"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-back</h2>
 				</li>
 				<li title="arrow-down">
 					<div class="icon-box">
@@ -700,6 +715,17 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>info</h2>
+				</li>
+				<li title="list-bullet">
+					<div class="icon-box">
+						
+						<!-- list-bullet -->
+						<svg class="svg-list-bullet-dims">
+							<use xlink:href="#list-bullet"></use>
+						</svg>
+						
+					</div>
+					<h2>list-bullet</h2>
 				</li>
 				<li title="location">
 					<div class="icon-box">
@@ -1151,6 +1177,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>alert</h2>
 				</li>
+				<li title="arrow-back">
+					<div class="icon-box">
+						
+						<!-- arrow-back -->
+						<svg class="svg-arrow-back-dims">
+							<use xlink:href="icons-sprite.svg#arrow-back"></use>
+						</svg>
+						
+					</div>
+					<h2>arrow-back</h2>
+				</li>
 				<li title="arrow-down">
 					<div class="icon-box">
 						
@@ -1591,6 +1628,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>info</h2>
 				</li>
+				<li title="list-bullet">
+					<div class="icon-box">
+						
+						<!-- list-bullet -->
+						<svg class="svg-list-bullet-dims">
+							<use xlink:href="icons-sprite.svg#list-bullet"></use>
+						</svg>
+						
+					</div>
+					<h2>list-bullet</h2>
+				</li>
 				<li title="location">
 					<div class="icon-box">
 						
@@ -1995,7 +2043,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Thu, 24 Oct 2019 11:36:30 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Wed, 27 Nov 2019 07:28:44 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>
