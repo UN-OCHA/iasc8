@@ -36,6 +36,12 @@ class IASCDateRecurWidget extends DateRecurModularAlphaWidget {
     unset($element['start']);
     unset($element['end']);
 
+    $element['is_all_day'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('All day event'),
+      '#default_value' => $this->isAllDay($item),
+    ];
+
     $element['day_start'] = [
       '#type' => 'date',
       '#title' => $this->t('Start day'),
@@ -93,11 +99,8 @@ class IASCDateRecurWidget extends DateRecurModularAlphaWidget {
     ];
     $element['time_end']['#states']['visible'][0]['input[name="' . $isAllDayName . '"]'] = ['checked' => FALSE];
 
-    $element['is_all_day'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('All day'),
-      '#default_value' => $this->isAllDay($item),
-    ];
+    // Hide timezone for all day.
+    $element['time_zone']['#states']['visible'][0]['input[name="' . $isAllDayName . '"]'] = ['checked' => FALSE];
 
     return $element;
   }
