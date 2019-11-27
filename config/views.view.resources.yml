@@ -6,6 +6,7 @@ dependencies:
     - search_api.index.default_solr_index
     - taxonomy.vocabulary.document_types
   content:
+    - 'taxonomy_term:document_types:18be9c87-37a0-44c8-9dba-b847959b896d'
     - 'taxonomy_term:document_types:27d6b803-596c-485c-8123-ca9ff91fb30d'
     - 'taxonomy_term:document_types:45e7bebb-1a6f-4cbc-aefd-6a71d68cf92d'
     - 'taxonomy_term:document_types:6f081507-fc81-45f1-87a1-50761a0063b4'
@@ -77,16 +78,16 @@ display:
         options:
           view_modes:
             'entity:group':
-              iasc_group: default
-              iasc_space: default
+              iasc_group: teaser
+              iasc_space: teaser
             'entity:node':
-              action_point: search_result
+              action_point: teaser
               announcement: teaser
               contact: teaser
-              oa_discussion_post: search_result
+              oa_discussion_post: teaser
               oa_event: teaser
               oa_wiki_page: teaser
-              oa_worktracker_task: search_result
+              oa_worktracker_task: teaser
               panopoly_landing_page: teaser
               panopoly_page: teaser
       fields:
@@ -314,7 +315,7 @@ display:
     display_plugin: page
     id: iasc_newsletters
     display_title: 'IASC Newsletters'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
       path: resources/iasc-newsletter
@@ -465,6 +466,9 @@ display:
       defaults:
         cache: false
         header: false
+        sorts: false
+        filters: false
+        filter_groups: false
       display_description: ''
       header:
         area:
@@ -480,7 +484,154 @@ display:
             value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
             format: full_html
           plugin_id: text
-      exposed_block: true
+      exposed_block: false
+      sorts:
+        field_oa_date:
+          id: field_oa_date
+          table: search_api_index_default_solr_index
+          field: field_oa_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_published_date:
+          id: field_published_date
+          table: search_api_index_default_solr_index
+          field: field_published_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        changed:
+          id: changed
+          table: search_api_index_default_solr_index
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        title:
+          id: title
+          table: search_api_index_default_solr_index
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+      filters:
+        type:
+          id: type
+          table: search_api_index_default_solr_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            action_point: action_point
+            announcement: announcement
+            oa_discussion_post: oa_discussion_post
+            oa_wiki_page: oa_wiki_page
+            oa_worktracker_task: oa_worktracker_task
+            panopoly_landing_page: panopoly_landing_page
+            panopoly_page: panopoly_page
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_default_solr_index
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            identifier: s
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              editor: '0'
+              group_login: '0'
+              viewer: '0'
+              recommendations_editor: '0'
+              space_super_admin: '0'
+              focal_point: '0'
+            placeholder: 'Enter keywords'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -493,7 +644,7 @@ display:
     display_plugin: page
     id: page_resources_documents
     display_title: 'Meeting documents'
-    position: 1
+    position: 3
     display_options:
       display_extenders: {  }
       path: resources/meeting-documents
@@ -648,7 +799,7 @@ display:
     display_plugin: page
     id: page_resources_products
     display_title: 'IASC Products'
-    position: 1
+    position: 4
     display_options:
       display_extenders: {  }
       path: resources/iasc-products
@@ -710,6 +861,7 @@ display:
           operator: or
           value:
             1481: 1481
+            2018: 2018
           group: 1
           exposed: false
           expose:
@@ -776,7 +928,7 @@ display:
     display_plugin: page
     id: statements_iasc_principals
     display_title: 'Statements IASC Principals'
-    position: 1
+    position: 5
     display_options:
       display_extenders: {  }
       path: resources/statements-iasc-principals
@@ -848,6 +1000,7 @@ display:
             value: '<h1 class="page-title">Statements</h1>'
             format: full_html
           plugin_id: text
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

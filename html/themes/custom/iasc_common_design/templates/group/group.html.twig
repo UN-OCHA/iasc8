@@ -41,6 +41,7 @@
 #}
 {%
   set classes = [
+  not group.isPublished() ? 'group--unpublished',
   'cd-layout-with-section-sidebar',
   view_mode ? 'group--view-mode-' ~ view_mode|clean_class
 ]

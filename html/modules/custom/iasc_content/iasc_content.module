@@ -283,29 +283,59 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
     }
   }
 
-  // Only check view mode for anonymous users.
-  if ($node->isPublished() && isset($node->oa_section_ref) && isset($node->oa_section_ref->entity) && $op === 'view' && $account->isAnonymous()) {
-    // Allow access to Public section.
-    if (strpos($node->oa_section_ref->entity->title->value, '(Public)')) {
-      return AccessResult::allowed();
-    }
-
-    // Deny access to IASC and Donor section.
-    if (strpos($node->oa_section_ref->entity->title->value, '(IASC)') || strpos($node->oa_section_ref->entity->title->value, '(Donor)')) {
-      return AccessResult::forbidden();
-    }
-  }
-
-  // Only check view mode for anonymous users.
-  if ($node->isPublished() && isset($node->field_section_audience) && isset($node->field_section_audience->value) && $op === 'view' && $account->isAnonymous()) {
+  // Check audience field.
+  if ($node->isPublished() && isset($node->field_section_audience) && isset($node->field_section_audience->value) && $op === 'view') {
     // Allow access to Public section.
     if ($node->field_section_audience->value == 'public') {
       return AccessResult::allowed();
     }
 
-    // Deny access to IASC and Donor section.
-    if ($node->field_section_audience->value = 'iasc' || $node->field_section_audience->value = 'donor') {
-      return AccessResult::forbidden();
+    // Deny access to IASC section.
+    if ($node->field_section_audience->value == 'iasc') {
+      if ($account->hasPermission('access iasc content')) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+
+    // Deny access to Donor section.
+    if ($node->field_section_audience->value == 'donor') {
+      if ($account->hasPermission('access donor content')) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+  }
+
+  // Check legacy field.
+  if ($node->isPublished() && isset($node->oa_section_ref) && isset($node->oa_section_ref->entity) && $op === 'view') {
+    // Allow access to Public section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(Public)')) {
+      return AccessResult::allowed();
+    }
+
+    // Deny access to IASC section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(IASC)')) {
+      if ($account->hasPermission('access iasc content')) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+
+    // Deny access to Donor section.
+    if (strpos($node->oa_section_ref->entity->title->value, '(Donor)')) {
+      if ($account->hasPermission('access donor content')) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
     }
   }
 }
@@ -894,6 +924,17 @@ function iasc_content_theme() {
         'section_links' => NULL,
       ],
       'template' => 'block--iasc-section-menu-block',
+    ],
+    'iasc_header_search_block' => [
+      'variables' => [
+        'title' => NULL,
+        'keyword' => NULL,
+      ],
+      'template' => 'block--iasc-header-search-block',
+    ],
+    'iasc_content_alpha_widget' => [
+      'render element' => 'widget',
+      'template' => 'iasc-content-alpha-widget',
     ],
   ];
 }

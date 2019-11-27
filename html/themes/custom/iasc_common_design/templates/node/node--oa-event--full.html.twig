@@ -114,6 +114,8 @@
         <div class="cd-teaser__date">
           {{ content.field_oa_date }}
 
+          <div class="cd-date-time">{{ event_time.output }}</div>
+
           {% if content.field_oa_date %}
             {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
               {{ content.field_oa_date.0['#date'] }}
@@ -153,6 +155,9 @@
           {% if dialIn or content.field_info_private|render %}
             <div class="cd-alert cd-message">
               <div class="cd-alert--message">
+                {% if dialIn %}
+                  {{ content.field_dial_in_meeting }}
+                {% endif %}
                 {{ content.field_info_private }}
               </div>
             </div>

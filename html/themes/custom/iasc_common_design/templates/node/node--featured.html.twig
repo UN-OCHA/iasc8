@@ -99,11 +99,18 @@
 
   {% if content.field_oa_date %}
   <div class="cd-teaser__date">
+
+    {# Multi-day event #}
     {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
       {{ content.field_oa_date.0['#date'] }}
-    {% else %}
-      {{ content.field_oa_date.0['#date']['start_date'] }}
+    {# All-day event #}
+    {% elseif content.field_oa_date.0['#date']['#text']  != NULL %}
+      {{ content.field_oa_date.0['#date']['#text'] }}
+    {# Single day event with different start and end time #}
+    {% elseif content.field_oa_date.0['#date']['start_date']['#text']  == content.field_oa_date.0['#date']['end_date']['#text'] %}
+      {{ content.field_oa_date.0['#date']['start_date']['#text'] }}
     {% endif %}
+
   </div>
   {% endif %}
 

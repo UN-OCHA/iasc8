@@ -265,7 +265,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      title: Co-Chair
+      title: Co-Chairs
       defaults:
         title: false
         relationships: false

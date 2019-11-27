@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f375b5fbc7af5107f4d8740772b3ef4",
+    "content-hash": "539bb280dcf375f35bd9645686936138",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1269,6 +1269,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -3598,6 +3599,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/date_recur",
                 "issues": "https://www.drupal.org/project/issues/date_recur"
+            }
+        },
+        {
+            "name": "drupal/date_recur_modular",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_recur_modular.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_recur_modular-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "31d341fc05cb7cda5f74f0c752a8798199a81a0b"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/date_recur": "^2.0@beta"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1566554885",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dpi",
+                    "homepage": "https://www.drupal.org/user/81431"
+                }
+            ],
+            "description": "Recurring Date Fields Modular Widgets",
+            "homepage": "https://www.drupal.org/project/date_recur_modular",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/date_recur_modular",
+                "issues": "https://www.drupal.org/project/issues/date_recur_modular"
             }
         },
         {

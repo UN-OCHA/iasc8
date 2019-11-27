@@ -30,12 +30,26 @@
   }
 }
 
-.view-iasc-group-content .views-exposed-form .form--inline {
-  display: flex;
-  margin-bottom: 2rem;
+.view-iasc-group-content,
+.view-search-content,
+.view-updates,
+.view-resources {
+  .views-exposed-form .form--inline {
+    display: flex;
+    margin-bottom: 2rem;
 
-  .form-item,
-  .form-actions {
-    margin: 0;
+    .form-item,
+    .form-actions {
+      margin: 0;
+    }
+
+    .form-actions input[type='submit'] {
+      line-height: 37px;
+      padding: 0 1rem;
+    }
+
+      label {
+      @include visually-hidden;
+    }
   }
 }

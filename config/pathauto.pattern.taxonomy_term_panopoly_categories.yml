@@ -18,5 +18,5 @@ selection_criteria:
     context_mapping:
       taxonomy_term: taxonomy_term
 selection_logic: and
-weight: 0
+weight: -4
 relationships: {  }

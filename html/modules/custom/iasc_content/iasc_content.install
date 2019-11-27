@@ -6,6 +6,8 @@
  */
 
 use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\group\Entity\Group;
+use Drupal\user\Entity\User;
 
 /**
  * Add default content to spaces.
@@ -271,4 +273,274 @@ function iasc_content_update_8011() {
   catch (Exception $e) {
     // Just to be safe.
   }
+}
+
+/**
+ * Add closed date to groups.
+ */
+function iasc_content_update_8012() {
+  $groups_with_close_date = [
+    '25014' => '2018-06-27',
+    '17676' => '2019-02-01',
+    '17171' => '2016-06-10',
+    '11831' => '2016-02-19',
+    '11706' => '2019-02-01',
+    '11701' => '2019-02-01',
+    '9771' => '2015-07-23',
+    '2651' => '1900-12-31',
+    '2615' => '2005-11-21',
+    '2623' => '2005-11-21',
+    '2631' => '2005-11-21',
+    '2824' => '2018-01-01',
+    '2820' => '2019-02-01',
+    '2816' => '2016-03-31',
+    '2779' => '2019-02-01',
+    '2812' => '2019-02-01',
+    '2808' => '2013-03-30',
+    '2795' => '2013-03-30',
+    '2791' => '2013-03-30',
+    '2787' => '2011-08-05',
+    '2783' => '2010-04-05',
+    '3521' => '2013-03-30',
+    '2775' => '2011-08-05',
+    '2771' => '2013-03-30',
+    '2767' => '2011-08-05',
+    '2763' => '2014-05-31',
+    '2759' => '2018-01-01',
+    '2755' => '2011-08-05',
+    '2751' => '2008-06-30',
+    '2743' => '2011-08-05',
+    '2747' => '2008-12-31',
+    '2619' => '2009-03-31',
+    '2731' => '2006-12-31',
+    '2727' => '2007-02-20',
+    '2655' => '2006-11-08',
+    '2643' => '2011-08-05',
+    '2675' => '2007-12-06',
+    '2679' => '2007-12-07',
+    '3501' => '2007-12-31',
+    '2635' => '2007-02-01',
+    '2739' => '2005-06-01',
+    '3491' => '2007-03-19',
+    '2639' => '2013-03-30',
+    '2647' => '2013-03-30',
+    '2699' => '2009-11-02',
+    '3481' => '2013-03-30',
+  ];
+
+  foreach ($groups_with_close_date as $group_id => $date) {
+    $group = Group::load($group_id);
+    $group->set('field_date_closed', $date);
+    $group->save();
+  }
+}
+
+/**
+ * Double check URL aliases.
+ */
+function iasc_content_update_8013() {
+  $src = drupal_get_path('module', 'iasc_content') . '/nodes-with-url-alias.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $nid = $data[0];
+      $new_alias = $data[1];
+      $system_path = '/node/' . $nid;
+
+      $current_alias = \Drupal::service('path.alias_manager')->getAliasByPath($system_path);
+      if ($current_alias != $new_alias) {
+        \Drupal::service('path.alias_storage')->save($system_path, $new_alias);
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Alias updated for node "%s" to "%s".', $nid, $new_alias)
+        );
+      }
+    }
+
+    fclose($handle);
+  }
+}
+
+/**
+ * Add missing files.
+ */
+function iasc_content_update_8014() {
+  $connection = \Drupal::database();
+  $src = drupal_get_path('module', 'iasc_content') . '/files.csv';
+
+  // Fetch existing file Ids.
+  $select = $connection->select('file_managed', 'f')->fields('f', ['fid']);
+  $existing_fids = $select->execute()->fetchCol();
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $fid = $data[0];
+      $name = $data[1];
+      $path = $data[2];
+      $mime = $data[5];
+      $size = $data[6];
+      $date = $data[8];
+
+      if (empty($size)) {
+        $size = 0;
+      }
+
+      // Skip existing files.
+      if (in_array($fid, $existing_fids)) {
+        continue;
+      }
+
+      // Create a new UUID.
+      $uuid = \Drupal::service('uuid')->generate();
+
+      // Insert a record.
+      $connection->insert('file_managed')
+        ->fields([
+          'fid' => $fid,
+          'uuid' => $uuid,
+          'langcode' => 'en',
+          'uid' => 1,
+          'filename' => $name,
+          'uri' => $path,
+          'filemime' => $mime,
+          'filesize' => $size,
+          'status' => 1,
+          'created' => $date,
+          'changed' => $date,
+        ])
+        ->execute();
+
+      $existing_fids[] = $fid;
+
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('File entry added for "%s".', $name)
+      );
+    }
+
+    fclose($handle);
+  }
+}
+
+/**
+ * Add group admins.
+ */
+function iasc_content_update_8015() {
+  $src = drupal_get_path('module', 'iasc_content') . '/og-members-and-roles.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $group_id = $data[0];
+      $uid = $data[1];
+
+      $group = Group::load($group_id);
+      if (!$group) {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Unable to load group "%s".', $group_id)
+        );
+        continue;
+      }
+
+      $account = User::load($uid);
+      if (!$account) {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Unable to load group "%s".', $uid)
+        );
+        continue;
+      }
+
+      if ($membership = $group->getMember($account)) {
+        $roles = $membership->getRoles();
+        if (!isset($roles['iasc_space-admin'])) {
+          $group_content = $membership->getGroupContent();
+          $group_content->group_roles->target_id = 'iasc_space-admin';
+          $group_content->save();
+        }
+      }
+    }
+
+    fclose($handle);
+  }
+}
+
+/**
+ * Add missing files to documents.
+ */
+function iasc_content_update_8016() {
+  // Add latest files from production.
+  iasc_content_update_8014();
+
+  $entity_type = 'node';
+  $from = 'field_oa_media';
+  $to = 'field_media_files';
+  $media_type = 'file';
+  $bundle = 'oa_wiki_page';
+
+  $query = \Drupal::entityQuery($entity_type);
+  $query->exists($from);
+  $query->condition('type', $bundle);
+
+  $ids = $query->execute();
+  $entities = \Drupal::entityTypeManager()
+    ->getStorage($entity_type)
+    ->loadMultiple($ids);
+
+  foreach ($entities as $entity) {
+    // Build list of existing files.
+    $target_ids = [];
+    foreach ($entity->get($to) as $dest) {
+      $target_ids[] = $dest
+        ->get('entity')
+        ->getTarget()
+        ->get('field_media_file')
+        ->first()
+        ->get('entity')
+        ->getValue()
+        ->id();
+    }
+
+    $needs_update = FALSE;
+    foreach ($entity->get($from) as $source) {
+      if ($source->entity) {
+        if (in_array($source->entity->id(), $target_ids)) {
+          continue;
+        }
+
+        $needs_update = TRUE;
+        $media_entity = _iasc_content_media_entity(
+          $source->entity,
+          $source->alt,
+          $media_type
+        );
+        $entity->{$to}[] = [
+          'target_id' => $media_entity->id(),
+        ];
+      }
+    }
+
+    // Save if the new field has content.
+    if ($needs_update) {
+      $entity->save();
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('Updated %s for node "%s" [%s].', $media_type, $entity->label(), $entity->id())
+      );
+    }
+  }
+}
+
+/**
+ * Update time for all day events.
+ */
+function iasc_content_update_8017() {
+  $connection = \Drupal::database();
+
+  $sql = "update node__field_oa_date set field_oa_date_end_value = replace(field_oa_date_end_value, '00:00:00', '23:59:59'), field_oa_date_timezone = 'UTC' where field_oa_date_value like '%00:00:00' and field_oa_date_end_value like '%00:00:00'";
+  $connection->query($sql);
+
+  $sql = "update node_revision__field_oa_date set field_oa_date_end_value = replace(field_oa_date_end_value, '00:00:00', '23:59:59'), field_oa_date_timezone = 'UTC' where field_oa_date_value like '%00:00:00' and field_oa_date_end_value like '%00:00:00'";
+  $connection->query($sql);
 }

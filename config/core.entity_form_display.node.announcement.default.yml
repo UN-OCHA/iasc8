@@ -85,11 +85,11 @@ content:
     region: content
   field_referenced_docs:
     weight: 6
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
     region: content
   field_section:

@@ -7,8 +7,8 @@ dependencies:
 id: node
 label: 'Content - default'
 type: 'canonical_entities:node'
-pattern: '[node:group-or-section-alias]/[node:title]'
+pattern: '[node:field_iasc_audience:0:entity]/[node:title]'
 selection_criteria: {  }
 selection_logic: and
-weight: 0
+weight: -7
 relationships: {  }

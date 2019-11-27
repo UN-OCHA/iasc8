@@ -28,7 +28,7 @@ mode: teaser
 content:
   body:
     type: text_summary_or_trimmed
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -36,12 +36,21 @@ content:
     third_party_settings: {  }
   field_published_date:
     type: datetime_default
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: published_date
+    third_party_settings: {  }
+  field_thumbnail:
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: published_date
+      view_mode: product_thumbnail
+      link: false
     third_party_settings: {  }
 hidden:
   field_contact: true
@@ -51,7 +60,6 @@ hidden:
   field_referenced_docs: true
   field_section: true
   field_section_audience: true
-  field_thumbnail: true
   langcode: true
   links: true
   oa_section_ref: true

@@ -1,0 +1,10 @@
+uuid: dfa073c4-465e-45e4-ac91-4b72a20ab9d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.view_header_documents
+label: 'View header - documents'
+targetEntityType: group
+cache: true
