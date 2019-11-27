@@ -531,3 +531,16 @@ function iasc_content_update_8016() {
     }
   }
 }
+
+/**
+ * Update time for all day events.
+ */
+function iasc_content_update_8017() {
+  $connection = \Drupal::database();
+
+  $sql = "update node__field_oa_date set field_oa_date_end_value = replace(field_oa_date_end_value, '00:00:00', '23:59:59'), field_oa_date_timezone = 'UTC' where field_oa_date_value like '%00:00:00' and field_oa_date_end_value like '%00:00:00'";
+  $connection->query($sql);
+
+  $sql = "update node_revision__field_oa_date set field_oa_date_end_value = replace(field_oa_date_end_value, '00:00:00', '23:59:59'), field_oa_date_timezone = 'UTC' where field_oa_date_value like '%00:00:00' and field_oa_date_end_value like '%00:00:00'";
+  $connection->query($sql);
+}
