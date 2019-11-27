@@ -4,10 +4,10 @@
     {{ widget.daily_count }}
   </div>
   <div class="dates">
+    <div class="date">{{ widget.is_all_day }}</div>
     <div class="date container-inline">{{ widget.day_start }} {{ widget.time_start }}</div>
     <div class="date container-inline">{{ widget.day_end }} {{ widget.time_end }}</div>
     <div class="date">{{ widget.time_zone }}</div>
-    <div class="date">{{ widget.is_all_day }}</div>
   </div>
   {{ widget.weekdays }}
   {{ widget.ordinals }}
