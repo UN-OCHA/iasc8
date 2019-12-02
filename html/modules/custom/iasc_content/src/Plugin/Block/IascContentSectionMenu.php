@@ -84,6 +84,23 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
         ],
       ];
     }
+    else {
+      return [
+        '#cache' => [
+          'contexts' => [
+            'url',
+            'user',
+          ],
+        ],
+      ];
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function xxgetCacheMaxAge() {
+    return 0;
   }
 
 }
