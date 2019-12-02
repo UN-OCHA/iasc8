@@ -9,7 +9,7 @@ use weitzman\LoginTrait\LoginTrait;
 /**
  * Make sure contacts are not accessible by anonymous user.
  */
-class SectionMenuTest extends ExistingSiteBase {
+class SectionMenuTestDisabled extends ExistingSiteBase {
   use LoginTrait;
 
   /**
