@@ -54,8 +54,10 @@ function iasc_common_design_preprocess_node(&$variables) {
     if ($variables['event_time']['start'] == $variables['event_time']['end']) {
       $variables['event_time']['all_day'] = TRUE;
       $variables['event_time']['output'] = '(All day)';
-      $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'])[0];
-      $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'])[0];
+      if (isset($variables['content']['field_oa_date'][0]['#date']['start_date'])) {
+        $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'])[0];
+        $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'])[0];
+      }
     }
     elseif ($variables['event_time']['start'] == '00:00' && $variables['event_time']['end'] == '23:59') {
       $variables['event_time']['all_day'] = TRUE;
