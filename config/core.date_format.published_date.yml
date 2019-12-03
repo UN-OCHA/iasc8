@@ -5,4 +5,4 @@ dependencies: {  }
 id: published_date
 label: 'Published date'
 locked: false
-pattern: 'F d, Y'
+pattern: 'd F Y'
