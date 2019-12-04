@@ -1,0 +1,14 @@
+uuid: d53dbaa4-35e3-496d-8282-d6271f4d5c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.iasc
+  module:
+    - user
+id: user_remove_role_action.iasc
+label: 'Remove the IASC role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: iasc

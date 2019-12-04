@@ -82,7 +82,7 @@ content:
     type: datetime_default
     settings:
       timezone_override: ''
-      format_type: teaser
+      format_type: published_date
     third_party_settings: {  }
     region: content
   field_thumbnail:

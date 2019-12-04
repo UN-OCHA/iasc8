@@ -1,0 +1,14 @@
+uuid: 0fb1ed64-e17b-4e36-9f77-bd1e51e7b28b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.iasc
+  module:
+    - user
+id: user_add_role_action.iasc
+label: 'Add the IASC role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: iasc
