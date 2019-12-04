@@ -37,7 +37,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 26
+    weight: 24
     settings:
       rows: 9
       summary_rows: 3
@@ -46,12 +46,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_addressee:
-    weight: 17
+    weight: 16
     type: string_textarea
     settings:
       rows: 2
@@ -59,13 +59,13 @@ content:
     third_party_settings: {  }
     region: content
   field_date:
-    weight: 11
+    weight: 10
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_description_implementation:
-    weight: 20
+    weight: 19
     type: string_textfield
     settings:
       size: 60
@@ -73,7 +73,7 @@ content:
     third_party_settings: {  }
     region: content
   field_evaluation_title:
-    weight: 9
+    weight: 8
     type: string_textfield
     settings:
       size: 60
@@ -81,7 +81,7 @@ content:
     third_party_settings: {  }
     region: content
   field_iasc_audience:
-    weight: 27
+    weight: 25
     settings:
       match_operator: CONTAINS
       size: 60
@@ -97,31 +97,31 @@ content:
     third_party_settings: {  }
     region: content
   field_oa_worktracker_assigned_to:
-    weight: 7
+    weight: 6
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_worktracker_priority:
-    weight: 10
+    weight: 9
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_worktracker_task_status:
-    weight: 8
+    weight: 7
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_oa_worktracker_task_type:
-    weight: 13
+    weight: 12
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_recomendation:
-    weight: 14
+    weight: 13
     type: string_textfield
     settings:
       size: 60
@@ -130,18 +130,18 @@ content:
     region: content
   field_section:
     type: options_select
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_section_audience:
     type: options_select
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_summary_of_recommendat:
-    weight: 19
+    weight: 18
     type: string_textarea
     settings:
       rows: 5
@@ -149,13 +149,13 @@ content:
     third_party_settings: {  }
     region: content
   field_timeframe:
-    weight: 16
+    weight: 15
     type: options_select
     settings: {  }
     third_party_settings: {  }
     region: content
   field_worktracker_country:
-    weight: 15
+    weight: 14
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
@@ -170,15 +170,9 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-  oa_section_ref:
-    weight: 4
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   path:
     type: path
-    weight: 23
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -186,21 +180,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 17
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 25
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 21
+    weight: 20
     region: content
     third_party_settings: {  }
   title:
@@ -221,11 +215,12 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 24
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_media_files: true
+  oa_section_ref: true
   og_group_ref: true
   og_vocabulary: true

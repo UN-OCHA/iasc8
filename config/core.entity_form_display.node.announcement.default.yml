@@ -30,7 +30,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 19
+    weight: 16
     settings:
       rows: 9
       summary_rows: 3
@@ -39,7 +39,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -53,21 +53,13 @@ content:
     third_party_settings: {  }
     region: content
   field_iasc_audience:
-    weight: 20
+    weight: 17
     settings:
       width: 100%
       autocomplete: true
       match_operator: CONTAINS
     third_party_settings: {  }
     type: select2_entity_reference
-    region: content
-  field_legacy_publish:
-    weight: 11
-    type: string_textfield
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     region: content
   field_links:
     weight: 4
@@ -94,13 +86,13 @@ content:
     region: content
   field_section:
     type: options_select
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_section_audience:
     type: options_select
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -118,15 +110,9 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
-  oa_section_ref:
-    weight: 8
-    type: options_select
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   path:
     type: path
-    weight: 16
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -134,21 +120,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 11
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
@@ -169,9 +155,11 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 17
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_legacy_publish: true
+  oa_section_ref: true
   og_group_ref: true

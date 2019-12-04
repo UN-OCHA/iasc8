@@ -22,6 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_content: true
   field_footer: true
   field_header: true

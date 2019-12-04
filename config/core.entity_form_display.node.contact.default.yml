@@ -37,7 +37,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 26
+    weight: 24
     settings:
       rows: 9
       summary_rows: 3
@@ -51,13 +51,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_address:
-    weight: 18
+    weight: 16
     type: address_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_branch:
-    weight: 21
+    weight: 19
     type: string_textfield
     settings:
       size: 60
@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
     region: content
   field_department:
-    weight: 20
+    weight: 18
     type: string_textfield
     settings:
       size: 60
@@ -97,7 +97,7 @@ content:
     third_party_settings: {  }
     region: content
   field_homepage:
-    weight: 22
+    weight: 20
     type: link_default
     settings:
       placeholder_url: ''
@@ -109,13 +109,6 @@ content:
     type: string_textfield
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
-  field_legacy_id:
-    weight: 13
-    type: number
-    settings:
       placeholder: ''
     third_party_settings: {  }
     region: content
@@ -147,7 +140,7 @@ content:
     third_party_settings: {  }
     region: content
   field_organisation:
-    weight: 17
+    weight: 15
     type: select2_entity_reference
     settings:
       match_operator: CONTAINS
@@ -164,7 +157,7 @@ content:
     third_party_settings: {  }
     region: content
   field_position:
-    weight: 19
+    weight: 17
     type: string_textfield
     settings:
       size: 60
@@ -186,7 +179,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 23
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -194,21 +187,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 25
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
@@ -229,9 +222,10 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 24
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_legacy_id: true
   field_photo: true
