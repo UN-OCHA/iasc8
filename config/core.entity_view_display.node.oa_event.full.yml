@@ -132,7 +132,7 @@ content:
       format_type: long
       occurrence_format_type: long
       same_end_date_format_type: long
-      separator: '-'
+      separator: to
       timezone_override: ''
       interpreter: ''
       show_next: 100
