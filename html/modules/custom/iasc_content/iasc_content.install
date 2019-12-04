@@ -544,3 +544,23 @@ function iasc_content_update_8017() {
   $sql = "update node_revision__field_oa_date set field_oa_date_end_value = replace(field_oa_date_end_value, '00:00:00', '23:59:59'), field_oa_date_timezone = 'UTC' where field_oa_date_value like '%00:00:00' and field_oa_date_end_value like '%00:00:00'";
   $connection->query($sql);
 }
+
+/**
+ * Delete unused content types.
+ */
+function iasc_content_update_8018() {
+  $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+
+  $entities = $storage_handler->loadByProperties(['type' => 'oa_group']);
+  $storage_handler->delete($entities);
+
+  $entities = $storage_handler->loadByProperties(['type' => 'oa_space']);
+  $storage_handler->delete($entities);
+
+  $entities = $storage_handler->loadByProperties(['type' => 'oa_team']);
+  $storage_handler->delete($entities);
+
+  $entities = $storage_handler->loadByProperties(['type' => 'oa_ical_importer']);
+  $storage_handler->delete($entities);
+}
+
