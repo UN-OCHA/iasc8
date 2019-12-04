@@ -563,4 +563,3 @@ function iasc_content_update_8018() {
   $entities = $storage_handler->loadByProperties(['type' => 'oa_ical_importer']);
   $storage_handler->delete($entities);
 }
-
