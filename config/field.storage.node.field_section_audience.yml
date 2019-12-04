@@ -20,6 +20,9 @@ settings:
     -
       value: donor
       label: Donor
+    -
+      value: member
+      label: 'Members only'
   allowed_values_function: ''
 module: options
 locked: false

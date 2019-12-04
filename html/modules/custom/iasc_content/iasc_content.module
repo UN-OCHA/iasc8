@@ -271,14 +271,24 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
  */
 function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $account) {
   // Only check view mode for anonymous users.
-  if ($node->isPublished() && isset($node->group_content_access) && $op === 'view' && $account->isAnonymous()) {
+  if ($node->isPublished() && isset($node->group_content_access) && $op === 'view') {
+    // Check group settings.
+    if ($node->group_content_access->value == 0) {
+      return AccessResult::neutral();
+    }
+
     // Allow access to nodes marked as being public.
     if ($node->group_content_access->value == 1) {
       return AccessResult::allowed();
     }
 
-    // Deny access to nodes marked as being private.
+    // Check membership for private content.
     if ($node->group_content_access->value == 2) {
+      foreach (GroupContent::loadByEntity($node) as $group_content) {
+        if ($group_content->getGroup()->getMember($account)) {
+          return AccessResult::allowed();
+        }
+      }
       return AccessResult::forbidden();
     }
   }
@@ -308,6 +318,16 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
       else {
         return AccessResult::forbidden();
       }
+    }
+
+    // Check Member only access.
+    if ($node->field_section_audience->value == 'member') {
+      foreach (GroupContent::loadByEntity($node) as $group_content) {
+        if ($group_content->getGroup()->getMember($account)) {
+          return AccessResult::allowed();
+        }
+      }
+      return AccessResult::forbidden();
     }
   }
 
