@@ -11,8 +11,8 @@ id: node.oa_worktracker_task.field_section_audience
 field_name: field_section_audience
 entity_type: node
 bundle: oa_worktracker_task
-label: 'Section audience'
-description: ''
+label: Visibility
+description: "Specify who can see this content, if nothing or <em>Public</em> is selected, all visitors can see this.<br>\r\n<em>IASC</em> and <em>Donor</em> are only visible to authenticated visitors having the associated permission.<br>\r\n<em>Group members only</em> will only be visible to authenticated visitors when they are a member of the same group as the content (see the <a href=\"#edit-field-iasc-audience\"><em>Audience</em></a> field below)."
 required: false
 translatable: true
 default_value: {  }
