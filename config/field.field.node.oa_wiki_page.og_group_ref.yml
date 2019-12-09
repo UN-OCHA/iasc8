@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.og_group_ref
-    - node.type.oa_space
     - node.type.oa_wiki_page
 id: node.oa_wiki_page.og_group_ref
 field_name: og_group_ref
@@ -28,6 +27,5 @@ settings:
     sort:
       field: _none
       direction: ASC
-    target_bundles:
-      oa_space: oa_space
+    target_bundles: {  }
 field_type: entity_reference

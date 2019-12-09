@@ -23,6 +23,7 @@ settings:
     -
       value: list
       label: 'Simple listing'
+  allowed_values_function: ''
 module: options
 locked: false
 cardinality: 1

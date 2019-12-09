@@ -5,4 +5,4 @@ dependencies: {  }
 id: teaser
 label: Teaser
 locked: false
-pattern: 'd M Y'
+pattern: 'j F Y'
