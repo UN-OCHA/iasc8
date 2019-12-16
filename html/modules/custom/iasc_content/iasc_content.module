@@ -958,3 +958,92 @@ function iasc_content_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_file_download().
+ */
+function iasc_content_file_download($uri) {
+  $entity_types_to_check = [
+    'node' => [
+      'field_media_files',
+    ],
+    'paragraph' => [
+      'field_media',
+    ],
+  ];
+  // Only check private files.
+  $scheme = file_uri_scheme($uri);
+  if ($scheme != 'private') {
+    return;
+  }
+
+  // Load the file(s).
+  $files = \Drupal::entityTypeManager()
+    ->getStorage('file')
+    ->loadByProperties(['uri' => $uri]);
+
+  if (count($files)) {
+    foreach ($files as $file) {
+      // Case sensitive names.
+      if ($file->getFileUri() !== $uri) {
+        continue;
+      }
+
+      $usage_list = \Drupal::service('file.usage')->listUsage($file);
+      $referencing_entity_is_accessible = FALSE;
+      $references = empty($usage_list['file']) ? [] : $usage_list['file'];
+      foreach ($references as $entity_type => $entity_ids_usage_count) {
+        $referencing_entities = entity_load_multiple($entity_type, array_keys($entity_ids_usage_count));
+
+        /** @var \Drupal\Core\Entity\EntityInterface $referencing_entity */
+        foreach ($referencing_entities as $referencing_entity) {
+          // Check for media.
+          if ($entity_type == 'media') {
+            $media_id = $referencing_entity->id();
+
+            // Load items referencing this item.
+            foreach ($entity_types_to_check as $entity_type_to_check => $fields) {
+              $query = \Drupal::entityQuery($entity_type_to_check);
+              if (count($fields) > 1) {
+                $group = $query->orConditionGroup();
+                foreach ($fields as $field_name) {
+                  $group->condition($field_name . '.%delta.target_id', $media_id);
+                }
+              }
+              else {
+                $field_name = reset($fields);
+                $query->condition($field_name . '.%delta.target_id', $media_id);
+              }
+              $ids = $query->execute();
+
+              $entities = \Drupal::entityTypeManager()
+                ->getStorage($entity_type_to_check)
+                ->loadMultiple($ids);
+
+              foreach ($entities as $entity) {
+                if ($entity
+                  ->access('view', NULL, TRUE)
+                  ->isAllowed()) {
+                  $referencing_entity_is_accessible = TRUE;
+                  break 4;
+                }
+              }
+            }
+          }
+          else {
+            if ($referencing_entity
+              ->access('view', NULL, TRUE)
+              ->isAllowed()) {
+              $referencing_entity_is_accessible = TRUE;
+              break 2;
+            }
+          }
+        }
+      }
+
+      if (!$referencing_entity_is_accessible) {
+        return -1;
+      }
+    }
+  }
+}
