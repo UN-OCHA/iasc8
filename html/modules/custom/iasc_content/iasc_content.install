@@ -563,3 +563,30 @@ function iasc_content_update_8018() {
   $entities = $storage_handler->loadByProperties(['type' => 'oa_ical_importer']);
   $storage_handler->delete($entities);
 }
+
+/**
+ * Make media files private.
+ */
+function iasc_content_update_8019() {
+  $connection = \Drupal::database();
+
+  $sql = "select f.fid, f.uri from {media} m inner join {media__field_media_file} mf on m.mid = mf.entity_id inner join {file_managed} f on mf.field_media_file_target_id = f.fid where m.bundle='file' and f.uri not like 'private://%'";
+  $query = $connection->query($sql);
+  $result = $query->fetchAll();
+
+  $fids = [];
+  foreach ($result as $row) {
+    $fids[] = $row->fid;
+    if (file_exists($row->uri)) {
+      $target = str_replace('public://', 'private://', $row->uri);
+      $target_dir = 'private://' . dirname(file_uri_target($target));
+      file_prepare_directory($target_dir, FILE_CREATE_DIRECTORY);
+      file_unmanaged_move($row->uri, $target, FILE_EXISTS_REPLACE);
+    }
+  }
+
+  $sql = "update file_managed set uri = replace(uri, 'public://', 'private://') where fid in (:fids[])";
+  $connection->query($sql, [
+    ':fids[]' => $fids,
+  ]);
+}
