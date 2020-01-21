@@ -1,11 +1,9 @@
-# This file will be loaded on sites where the PHP_ENVIRONMENT env variable
-# contains the string "development".
-# Note that enabling debug_cachaebility_headers will break the LE Proxy because
-# the headers it outputs are too long/large.
+# Local development services.
+#
+# To activate this feature, follow the instructions at the top of the
+# 'example.settings.local.php' file, which sits next to this file.
 parameters:
-  http.response.debug_cacheability_headers: false
-  twig.config:
-    debug: true
+  http.response.debug_cacheability_headers: true
 services:
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory
