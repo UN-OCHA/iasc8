@@ -12,6 +12,10 @@
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
       "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2019-11-19/group-status-2873212-17.patch"
+    },
+    "drupal/social_auth_hid": {
+      "https://www.drupal.org/project/social_auth_hid/issues/3109176": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_update_url.patch",
+      "https://www.drupal.org/project/social_auth_hid/issues/3109177": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_rc2.patch"
     }
   }
 }
