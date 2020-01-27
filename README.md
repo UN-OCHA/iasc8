@@ -106,3 +106,14 @@ fin composer outdated drupal/*
 fin composer update drupal/* --with-dependencies
 fin drush updb -y && fin drush cr
 ```
+
+### HID
+
+```
+mkdir -p keys
+cd keys
+openssl genpkey -algorithm RSA -out hid.rsa -pkeyopt rsa_keygen_bits:2048
+openssl rsa -pubout -in hid.rsa -out hid.rsa.pub
+docker cp keys/hid.rsa f574cbb816a7:srv/www/keys/
+docker cp keys/hid.rsa.pub f574cbb816a7:srv/www/keys/
+```
