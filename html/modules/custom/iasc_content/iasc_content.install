@@ -590,3 +590,18 @@ function iasc_content_update_8019() {
     ':fids[]' => $fids,
   ]);
 }
+
+/**
+ * Remove non-existent config entity.
+ *
+ * Entity type: node,
+ * Bundle: page,
+ * Field name: field_banner_image.
+ */
+function iasc_content_update_8020() {
+  $entity_type = 'node';
+  $bundle = 'page';
+  $field_name = 'field_banner_image';
+
+  iasc_content_fix_entities($entity_type, $bundle, $field_name);
+}

@@ -127,3 +127,11 @@ Create test site and test user
 docker-compose exec dev node ./commands/createDummyClient.js --url=https://iasc8.local.docksal/ --redirectUrl=https://iasc8.local.docksal/user/login/hid/callback
 docker-compose exec dev node ./commands/createDummyUser.js --email=test@example.com --password=pwd
 ```
+
+Update Drupal config
+
+```
+fin drush config-set -y social_auth_hid.settings base_url http://hid.iasc8.local.docksal
+fin drush config-set -y social_auth_hid.settings client_id client
+fin drush config-set -y social_auth_hid.settings client_secret clientsecret
+```
