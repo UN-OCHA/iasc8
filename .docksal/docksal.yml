@@ -27,3 +27,29 @@ services:
     dns:
       - ${DOCKSAL_DNS1}
       - ${DOCKSAL_DNS2}
+  mongo:
+    image: unocha/mongo:4.0.5
+    volumes:
+      - ./db:/srv/db
+  dev:
+    image: unocha/hid-api:dev
+    expose:
+      - "80"
+    volumes:
+      - ./keys:/srv/www/keys
+    labels:
+      - io.docksal.virtual-host=hid.${VIRTUAL_HOST}
+    links:
+      - mongo:db
+    environment:
+      NODE_ENV: local
+      PORT: 80
+      ROOT_URL: http://hid.${VIRTUAL_HOST}
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+      SMTP_USER:
+      SMTP_PASS:
+      APP_URL: https://app.hid.vm
+      COOKIE_PASSWORD: 6*a!_5;1:|7~+%5**WdS:^;X%PN||~:_:_R
+      WKHTMLTOPDF_HOST: pdf.contactsid.vm
+      WKHTMLTOPDF_PORT: 3000

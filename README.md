@@ -106,3 +106,32 @@ fin composer outdated drupal/*
 fin composer update drupal/* --with-dependencies
 fin drush updb -y && fin drush cr
 ```
+
+### HID
+
+Create and add keys.
+
+```
+mkdir -p keys
+cd keys
+openssl genpkey -algorithm RSA -out hid.rsa -pkeyopt rsa_keygen_bits:2048
+openssl rsa -pubout -in hid.rsa -out hid.rsa.pub
+cd ..
+docker cp keys/hid.rsa f574cbb816a7:srv/www/keys/
+docker cp keys/hid.rsa.pub f574cbb816a7:srv/www/keys/
+```
+
+Create test site and test user
+
+```
+docker-compose exec dev node ./commands/createDummyClient.js --url=https://iasc8.local.docksal/ --redirectUrl=https://iasc8.local.docksal/user/login/hid/callback
+docker-compose exec dev node ./commands/createDummyUser.js --email=test@example.com --password=pwd
+```
+
+Update Drupal config
+
+```
+fin drush config-set -y social_auth_hid.settings base_url http://hid.iasc8.local.docksal
+fin drush config-set -y social_auth_hid.settings client_id client
+fin drush config-set -y social_auth_hid.settings client_secret clientsecret
+```
