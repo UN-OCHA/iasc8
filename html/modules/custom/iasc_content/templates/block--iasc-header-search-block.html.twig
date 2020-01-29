@@ -1,6 +1,7 @@
-{{ attach_library('common_design/search') }}
+{{ attach_library('common_design/cd-search') }}
 
-<div class="cd-search__form" aria-labelledby="cd-search_btn cd-search-btn">
+<div class="cd-search__form" aria-labelledby="cd-search_btn cd-search-btn" data-toggable="Search" data-hidden="false" data-component="cd-search" data-logo="search" id="block-searchform" role="search">
+  <h2 class="visually-hidden">Search form</h2>
   <form action="/search" method="get" accept-charset="UTF-8">
     <div class="form--inline clearfix">
       <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys">
