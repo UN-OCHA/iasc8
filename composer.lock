@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d1af39b86e41c1ab814921127517d82",
+    "content-hash": "d5ccd18456cf0970694261a45e933ff8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4500,17 +4500,17 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "2.5.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-2.5"
+                "reference": "8.x-2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "8a4b4bf4e4ec385b8e3b2ca1b620fd48680e512d"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "2880783910c4bbdc054fd3f8737e47ddf3211b70"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4532,8 +4532,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1576964283",
+                    "version": "8.x-2.7",
+                    "datestamp": "1580097184",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5873,17 +5873,17 @@
         },
         {
             "name": "drupal/select2",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select2.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select2-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "50d683d8da41fa8c29e2a88bcf7469c3d8abda91"
+                "url": "https://ftp.drupal.org/files/projects/select2-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "02624ef158e3b2c876f4a75dd57692b2cd80156b"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -5899,8 +5899,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1575980287",
+                    "version": "8.x-1.6",
+                    "datestamp": "1578484987",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5938,17 +5938,17 @@
         },
         {
             "name": "drupal/social_api",
-            "version": "2.0.0-rc1",
+            "version": "2.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_api.git",
-                "reference": "8.x-2.0-rc1"
+                "reference": "8.x-2.0-rc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_api-8.x-2.0-rc1.zip",
-                "reference": "8.x-2.0-rc1",
-                "shasum": "ab17107a7c73238eef080ccbc16c199c604fed94"
+                "url": "https://ftp.drupal.org/files/projects/social_api-8.x-2.0-rc2.zip",
+                "reference": "8.x-2.0-rc2",
+                "shasum": "361f628679610e7eaac699562efb6d19a85772b9"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -6005,17 +6005,17 @@
         },
         {
             "name": "drupal/social_auth",
-            "version": "2.0.0-rc1",
+            "version": "2.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_auth.git",
-                "reference": "8.x-2.0-rc1"
+                "reference": "8.x-2.0-rc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth-8.x-2.0-rc1.zip",
-                "reference": "8.x-2.0-rc1",
-                "shasum": "5726c6ebe580f5735a8cf8e5073a0be3d22e8500"
+                "url": "https://ftp.drupal.org/files/projects/social_auth-8.x-2.0-rc2.zip",
+                "reference": "8.x-2.0-rc2",
+                "shasum": "329c96d03f27b1f92577eb31cdad525f7d6a856e"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -6027,7 +6027,7 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-rc1",
+                    "version": "8.x-2.0-rc2",
                     "datestamp": "1576820588",
                     "security-coverage": {
                         "status": "not-covered",
@@ -6071,22 +6071,16 @@
         },
         {
             "name": "drupal/social_auth_hid",
-            "version": "2.1.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_auth_hid.git",
-                "reference": "8.x-2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth_hid-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "81c6023aad149f4aaa96680f0ddf775bb0a274d4"
+                "reference": "103e800e5e1340330a03ad41915c2a2b06edf58f"
             },
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/social_auth": "^2",
-                "un-ocha/oauth2-hid": "^1.0.1"
+                "un-ocha/oauth2-hid": "^1.0.2"
             },
             "type": "drupal-module",
             "extra": {
@@ -6094,15 +6088,16 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1551350884",
+                    "version": "8.x-2.1+0-dev",
+                    "datestamp": "1551350584",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "patches_applied": {
-                    "Add the possibility to use custom HID domains": "PATCHES/social_auth_hid_staging_domain.patch"
+                    "https://www.drupal.org/project/social_auth_hid/issues/3109176": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_update_url.patch",
+                    "https://www.drupal.org/project/social_auth_hid/issues/3109177": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_rc2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6124,7 +6119,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/social_auth_hid",
                 "issues": "https://www.drupal.org/project/issues/social_auth_hid"
-            }
+            },
+            "time": "2019-10-01T10:05:39+00:00"
         },
         {
             "name": "drupal/tablefield",
@@ -6271,17 +6267,17 @@
         },
         {
             "name": "drupal/viewsreference",
-            "version": "2.0.0-alpha4",
+            "version": "2.0.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/viewsreference.git",
-                "reference": "8.x-2.0-alpha4"
+                "reference": "8.x-2.0-alpha6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-alpha4.zip",
-                "reference": "8.x-2.0-alpha4",
-                "shasum": "6e5a2c60b7ddc0dad1fb62b004fe5f88ee337098"
+                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-alpha6.zip",
+                "reference": "8.x-2.0-alpha6",
+                "shasum": "4d18faa59f8e6464c449eee9fa97ff9a85a1da65"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -6295,8 +6291,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha4",
-                    "datestamp": "1515706384",
+                    "version": "8.x-2.0-alpha6",
+                    "datestamp": "1576373887",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -6312,12 +6308,16 @@
             ],
             "authors": [
                 {
-                    "name": "joekers",
-                    "homepage": "https://www.drupal.org/user/2229066"
+                    "name": "New Zeal",
+                    "homepage": "https://www.drupal.org/user/93571"
                 },
                 {
-                    "name": "kent@passingphase.nz",
-                    "homepage": "https://www.drupal.org/user/93571"
+                    "name": "jasonawant",
+                    "homepage": "https://www.drupal.org/user/589890"
+                },
+                {
+                    "name": "joekers",
+                    "homepage": "https://www.drupal.org/user/2229066"
                 },
                 {
                     "name": "seanB",
@@ -13081,6 +13081,7 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 5,
         "drupal/search_api_attachments": 10,
+        "drupal/social_auth_hid": 20,
         "drupal/devel_entity_updates": 5
     },
     "prefer-stable": true,

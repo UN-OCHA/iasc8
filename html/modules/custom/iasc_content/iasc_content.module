@@ -1047,3 +1047,14 @@ function iasc_content_file_download($uri) {
     }
   }
 }
+
+/**
+ * Fix non-existent config entity name.
+ */
+function iasc_content_fix_entities($entity_type, $bundle, $field_name) {
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $map = $field_map_kv_store->get($entity_type);
+  unset($map[$field_name]['bundles'][$bundle]);
+  $field_map_kv_store->set($entity_type, $map);
+}
