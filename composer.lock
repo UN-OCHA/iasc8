@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5ccd18456cf0970694261a45e933ff8",
+    "content-hash": "714d4f7a0c93b73f6fe8a041155cbe63",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6071,15 +6071,21 @@
         },
         {
             "name": "drupal/social_auth_hid",
-            "version": "dev-2.x",
+            "version": "2.2.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_auth_hid.git",
-                "reference": "103e800e5e1340330a03ad41915c2a2b06edf58f"
+                "reference": "8.x-2.2-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/social_auth_hid-8.x-2.2-rc1.zip",
+                "reference": "8.x-2.2-rc1",
+                "shasum": "1d24ad769a604951856007d50f02d613f3eb971c"
             },
             "require": {
                 "drupal/core": "~8.0",
-                "drupal/social_auth": "^2",
+                "drupal/social_auth": "^2.0.0-rc2",
                 "un-ocha/oauth2-hid": "^1.0.2"
             },
             "type": "drupal-module",
@@ -6088,16 +6094,12 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.1+0-dev",
-                    "datestamp": "1551350584",
+                    "version": "8.x-2.2-rc1",
+                    "datestamp": "1580385607",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "https://www.drupal.org/project/social_auth_hid/issues/3109176": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_update_url.patch",
-                    "https://www.drupal.org/project/social_auth_hid/issues/3109177": "https://www.drupal.org/files/issues/2020-01-27/social_auth_hid_rc2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6107,8 +6109,12 @@
             "authors": [
                 {
                     "name": "Guillaume Viguier-Just (guillaumev)",
-                    "homepage": "https://www.drupal.org/user/849890",
+                    "homepage": "https://www.drupal.org/user/105002",
                     "email": "guillaume@gvj-web.com"
+                },
+                {
+                    "name": "guillaumev",
+                    "homepage": "https://www.drupal.org/user/849890"
                 }
             ],
             "description": "Social Auth integration for Humanitarian ID.",
@@ -6119,8 +6125,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/social_auth_hid",
                 "issues": "https://www.drupal.org/project/issues/social_auth_hid"
-            },
-            "time": "2019-10-01T10:05:39+00:00"
+            }
         },
         {
             "name": "drupal/tablefield",
@@ -13081,7 +13086,6 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 5,
         "drupal/search_api_attachments": 10,
-        "drupal/social_auth_hid": 20,
         "drupal/devel_entity_updates": 5
     },
     "prefer-stable": true,
