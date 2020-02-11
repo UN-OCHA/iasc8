@@ -4,7 +4,6 @@ global-styling:
   css:
     theme:
       css/styles.css: {}
-      css/cd/cd-ie.css: { browsers: { IE: 'lte IE 8', '!IE': false } }
 
 cd-alert:
   css:
