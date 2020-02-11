@@ -1,130 +1,14 @@
 //——————————————————————————————————————————————————————————————————————————————
 // Common Design: Main Navigation
 //——————————————————————————————————————————————————————————————————————————————
-.cd-site-header__nav-toggle {
-
-  .cd-icon--arrow-down {
+.cd-nav__btn {
+  &[aria-expanded] .cd-icon--arrow-down {
     fill: $iasc-highlight;
   }
 
-  .open & {
+  &[aria-expanded='true']  {
     &::before {
       background: $iasc-highlight;
-    }
-  }
-}
-
-.cd-nav {
-  @include z-index(search);
-}
-
-// Active trail for mobile menu.
-@include max-width(lg) {
-
-  .cd-nav > ul > li {
-    > a.active::before,
-    > a.active.active-trail::before {
-      background: $iasc-highlight;
-    }
-
-    // First level menu item with children.
-    // Classes based on Drupal menu item configuration.
-    &.collapsed,
-    &.expanded {
-      > a.active::before,
-      > a.active.active-trail::before {
-        background: rgba($iasc-highlight, 0.2);
-      }
-    }
-
-    &.active-trail {
-
-      a {
-        &::before {
-          background: rgba($iasc-highlight, 0.2);
-        }
-
-        a.active::before {
-          background: $iasc-highlight;
-        }
-      }
-    }
-
-    > ul > li.active-trail {
-
-      a::before {
-        background: rgba($iasc-highlight, 0.6);
-      }
-
-      a.active::before {
-        background: $iasc-highlight;
-      }
-    }
-
-  }
-}
-
-@include desktop {
-  .cd-nav > ul > li,
-  .cd-nav__item {
-
-    &.open {
-
-      > a,
-      > button {
-
-        &::before {
-          background: $iasc-highlight;
-        }
-
-        &:focus {
-          &::before {
-            background: $iasc-highlight;
-          }
-        }
-      }
-    }
-
-    // Last item with dropdown, expands from right.
-    &.open.last {
-      ul {
-        right: -1px;
-        left: unset;
-      }
-    }
-
-    > a,
-    > button {
-      &.active,
-      &.active-trail,
-      &.active-trail.active,
-      &:focus {
-        &::before {
-          background: $iasc-highlight;
-        }
-      }
-    }
-  }
-
-  .cd-nav > ul > li > ul,
-  ul.cd-nav__child-nav {
-    a,
-    button {
-      &.active-trail {
-        border-left: 3px solid rgba($iasc-highlight, 0.6);
-      }
-
-      &.active {
-        border-left: 3px solid rgba($iasc-highlight, 0.2);
-      }
-    }
-
-    > li.active-trail a {
-      border-left: 3px solid rgba($iasc-highlight, 0.2);
-
-      &.active {
-        border-left: 3px solid $iasc-highlight;
-      }
     }
   }
 }

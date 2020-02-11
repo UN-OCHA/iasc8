@@ -3,16 +3,18 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 button,
-.button,
 input[type='submit'] {
-  font-family: $cd-font;
-  @include font-size($cd-font-size-small);
   -webkit-appearance: none;
+  @include font-size($cd-font-size-base);
+  color: $cd-dark-grey;
   background: none;
   border: 0 none;
+  border-radius: 0;
   box-shadow: none;
+  font-family: $cd-font;
 }
 
+.btn-primary,
 .form-actions input[type='submit'] {
   display: inline-block;
   background: $cd-ocha-blue;
@@ -28,4 +30,9 @@ input[type='submit'] {
     background: darken($cd-ocha-blue, 10%);
     color: $cd-white;
   }
+}
+
+.btn-primary {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }

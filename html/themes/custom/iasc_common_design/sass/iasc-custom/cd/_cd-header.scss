@@ -13,7 +13,7 @@
 }
 
 .cd-site-header__inner {
-  .cssgrid.flexbox & {
+  @supports(display: grid) {
     grid-template-columns: 100px 1fr;
 
     @include tablet {
