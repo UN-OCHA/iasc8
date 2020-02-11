@@ -7,7 +7,7 @@
 
 .cd-user-menu__item {
   &::after {
-    color: $cd-white;
+    background: $cd-white;
   }
 }
 
@@ -38,8 +38,4 @@
   // If there's no language switcher in the Global Header, uncomment this line
   // to apply special treatment to the last link in the list.
   @extend .cd-user-menu--no-language-switcher;
-}
-
-.user-logged-in .region-header-top .menu > li:first-child::before {
-  display: none;
 }

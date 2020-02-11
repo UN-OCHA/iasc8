@@ -18,14 +18,13 @@ const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const prefix = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const jshint = require('gulp-jshint');
-const stylish = require('jshint-stylish');
+const eslint = require('gulp-eslint');
 const uglify = require('gulp-uglify');
 const changed = require('gulp-changed');
 const concat = require('gulp-concat');
 const sassLint = require('gulp-sass-lint');
 
-path = require('path');
+var path = require('path');
 
 //——————————————————————————————————————————————————————————————————————————————
 // Load local environment config
@@ -72,29 +71,6 @@ function sassCompileTask() {
   browserSync.notify(`Compiling Sass...`);
 
   return gulp.src(['sass/styles.scss'])
-      .pipe(plumber())
-      .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
-      .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-      .pipe(postcss([
-        prefix({
-          browsers: ['>1%', 'iOS 9'],
-          cascade: false,
-        }),
-        cssnano(),
-      ]))
-      .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
-      .pipe(gulp.dest('css/'))
-      .pipe(reload({stream: true}));
-};
-
-
-//——————————————————————————————————————————————————————————————————————————————
-// Components
-//——————————————————————————————————————————————————————————————————————————————
-function componentCompileTask() {
-  browserSync.notify(`Compiling Sass...`);
-
-  return gulp.src('./sass/components/*/*.scss')
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
     .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
@@ -106,16 +82,8 @@ function componentCompileTask() {
       cssnano(),
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
-    // rename the current file's parent directory
-    .pipe(rename(function (file) {
-      // file.dirname = current folder, your "scss"
-      // then get the parent of the current folder, e.g., "folder1", "folder2", etc.
-      let parentFolder = path.dirname(file.dirname)
-      // set each file's folder to "folder1/css", "folder2/css", etc.
-      file.dirname = path.join(parentFolder, 'css/components');
-    }))
-
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('css/'))
+    .pipe(reload({stream: true}));
 };
 
 
@@ -124,16 +92,16 @@ function componentCompileTask() {
 //——————————————————————————————————————————————————————————————————————————————
 function sassLintTask() {
   return gulp.src('sass/**/*.s+(a|c)ss')
-      .pipe(sassLint())
-      .pipe(sassLint.format())
-      .pipe(sassLint.failOnError());
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 };
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // Sass
 //——————————————————————————————————————————————————————————————————————————————
-const sassTask = gulp.series(sassLintTask, sassCompileTask, componentCompileTask);
+const sassTask = gulp.series(sassLintTask, sassCompileTask);
 exports.sass = sassTask;
 
 
@@ -143,24 +111,36 @@ exports.sass = sassTask;
 
 // SVG Config
 const SVGconfig = {
+  shape: {
+    id: {
+      generator: function(name, file) {
+        return "cd-icon--" + path.basename(name.replace(/\s+/g, this.whitespace), '.svg');
+      }
+    }
+  },
   mode: {
+    css: false,
+    view: false,
+    defs: false,
+    stack: false,
     symbol: { // symbol mode to build the SVG
       dest: 'img/icons', // destination folder
-      sprite: 'icons-sprite.svg', //sprite name
-      example: true // Build sample page
+      sprite: 'cd-icons-sprite.svg', //sprite name
+      example: true, // Build sample page
+      prefix: '%s'
     }
   },
   svg: {
     xmlDeclaration: false, // strip out the XML attribute
     doctypeDeclaration: false, // don't include the !DOCTYPE declaration
-    rootAttributes: { "class": "icons-sprite" }
+    rootAttributes: { "class": "cd-icons-sprite" }
   }
 };
 
 function buildSvgSprite() {
   return gulp.src('img/icons/*.svg')
-      .pipe(svgSprite(SVGconfig))
-      .pipe(gulp.dest('.'));
+    .pipe(svgSprite(SVGconfig))
+    .pipe(gulp.dest('.'));
 };
 exports.sprites = buildSvgSprite;
 
@@ -169,9 +149,9 @@ exports.sprites = buildSvgSprite;
 // JS Linting
 //——————————————————————————————————————————————————————————————————————————————
 function jsLintTask() {
-  return gulp.src('js/*.js')
-      .pipe(jshint())
-      .pipe(jshint.reporter(stylish));
+  return gulp.src(['js/cd-*.js', '!js/cd-polyfill.js'])
+    .pipe(eslint())
+    .pipe(eslint.format());
 };
 
 
@@ -180,19 +160,19 @@ function jsLintTask() {
 //——————————————————————————————————————————————————————————————————————————————
 function jsBundleTask() {
   return gulp.src([
-    'js/*.js',
-  ])
-      .pipe(concat('ocha_bundle.js'))
-      .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
-      .pipe(gulp.dest('js'))
-      .pipe(reload({stream: true}));
+      'js/*.js',
+    ])
+    .pipe(concat('ocha_bundle.js'))
+    .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
+    .pipe(gulp.dest('js'))
+    .pipe(reload({stream: true}));
 };
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // JS Lint + Bundle
 //——————————————————————————————————————————————————————————————————————————————
-const jsTask = gulp.series(jsLintTask, jsBundleTask);
+const jsTask = gulp.series(jsLintTask/*, jsBundleTask*/);
 exports.js = jsTask;
 
 
@@ -200,12 +180,8 @@ exports.js = jsTask;
 // Watch Files For Changes
 //——————————————————————————————————————————————————————————————————————————————
 function watchTask() {
-  // gulp.watch([
-  //     'js/*.js'
-  // ], ['dev:js']);
-  gulp.watch([
-    'sass/**/*.scss'
-  ], sassTask);
+  gulp.watch(['js/cd-*.js'], jsTask);
+  gulp.watch(['sass/**/*.scss'], sassTask);
 };
 exports.watch = watchTask;
 
@@ -221,5 +197,5 @@ exports.default = defaultTask;
 //——————————————————————————————————————————————————————————————————————————————
 // Build all assets in the theme
 //——————————————————————————————————————————————————————————————————————————————
-const buildTask = gulp.parallel(sassTask/*, jsTask*/);
+const buildTask = gulp.parallel(sassTask, jsTask);
 exports.build = buildTask;
