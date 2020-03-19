@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "minimist": ">=1.2.2"
-  ,
+  },
   "pwmetrics": {
     "url": "http://iasc8.local.docksal/needs-assessment-task-force-meeting-0",
     "flags": {
