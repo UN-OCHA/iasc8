@@ -8,14 +8,12 @@
   background: rgba($iasc-primary, 0.9);
 
   .button {
-    display: inline-block;
     background: $iasc-red;
     color: $iasc-primary;
-    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
     padding: 10px 12px;
     margin-top: 1rem;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
 
     @include tablet {
       margin-top: 0;

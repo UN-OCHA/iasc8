@@ -4,7 +4,10 @@
     "pwmetrics": "./node_modules/pwmetrics/bin/cli.js --config=package.json"
   },
   "dependencies": {
-    "pwmetrics": "^4.2.1"
+    "pwmetrics": "^4.2.3"
+  },
+  "devDependencies": {
+    "minimist": ">=1.2.2"
   },
   "pwmetrics": {
     "url": "http://iasc8.local.docksal/needs-assessment-task-force-meeting-0",
