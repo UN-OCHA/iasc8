@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "6dc75eec3bacb7d179a16cd19cdc65f9",
@@ -3215,16 +3215,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.8.2",
+            "version": "8.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62"
+                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f997857003276c2ae6d27db30f0eab9c7dd10e62",
-                "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62",
+                "url": "https://api.github.com/repos/drupal/core/zipball/34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
+                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
                 "shasum": ""
             },
             "require": {
@@ -3444,7 +3444,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-02-01T19:51:15+00:00"
+            "time": "2020-03-18T16:26:33+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -3805,20 +3805,20 @@
         },
         {
             "name": "drupal/entity",
-            "version": "1.0.0-rc3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity.git",
-                "reference": "8.x-1.0-rc3"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0-rc3.zip",
-                "reference": "8.x-1.0-rc3",
-                "shasum": "6b4ccc0231c52ed9594502a0718057f53d98404d"
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "ac359ada43416ca3a8d0e44f2985b0a9fae07625"
             },
             "require": {
-                "drupal/core": "^8.6"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -3826,11 +3826,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc3",
-                    "datestamp": "1559579884",
+                    "version": "8.x-1.0",
+                    "datestamp": "1582735747",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3868,23 +3868,23 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.7"
+                "reference": "8.x-1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "4e3b849b0d984cd3c0a4330c9aa4cb16bf1f79f6"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "c1279e6c683edc2dbccedba8de1505340c8a62b6"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "require-dev": {
-                "drupal/diff": "*"
+                "drupal/diff": "1.x-dev"
             },
             "type": "drupal-module",
             "extra": {
@@ -3892,8 +3892,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1570284187",
+                    "version": "8.x-1.8",
+                    "datestamp": "1583961846",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3902,7 +3902,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0"
             ],
             "authors": [
                 {
@@ -3922,7 +3922,7 @@
                     "homepage": "https://www.drupal.org/user/227761"
                 }
             ],
-            "description": "Adds a Entity Reference field type with revision support.",
+            "description": "Entity Reference Revisions",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
@@ -4551,17 +4551,17 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-2.8"
+                "reference": "8.x-2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.8.zip",
-                "reference": "8.x-2.8",
-                "shasum": "5ad745d7ee40e9f7979e31ababa27be3cdae9cd6"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.9.zip",
+                "reference": "8.x-2.9",
+                "shasum": "d17350085350e88e6917e0e08a7af0333121d194"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4583,8 +4583,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.8",
-                    "datestamp": "1582062548",
+                    "version": "8.x-2.9",
+                    "datestamp": "1582227067",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4734,17 +4734,17 @@
         },
         {
             "name": "drupal/geofield_map",
-            "version": "2.57.0",
+            "version": "2.58.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield_map.git",
-                "reference": "8.x-2.57"
+                "reference": "8.x-2.58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.57.zip",
-                "reference": "8.x-2.57",
-                "shasum": "0f5247e194b575dba71588fd4edcb133e885601f"
+                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.58.zip",
+                "reference": "8.x-2.58",
+                "shasum": "bdf095e5fa41ae9134f3cdaaaf35047f52525e9f"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4756,8 +4756,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.57",
-                    "datestamp": "1579063387",
+                    "version": "8.x-2.58",
+                    "datestamp": "1583962813",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5923,17 +5923,17 @@
         },
         {
             "name": "drupal/select2",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select2.git",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select2-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "02624ef158e3b2c876f4a75dd57692b2cd80156b"
+                "url": "https://ftp.drupal.org/files/projects/select2-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "ad26fe63a488d9b3fc36818f194224ffa0b3aa8c"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -5949,8 +5949,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1578484987",
+                    "version": "8.x-1.7",
+                    "datestamp": "1583142729",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7696,9 +7696,7 @@
             "version": "4.0.13",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz"
             },
             "type": "npm-asset",
             "license": [
