@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0f9503d4ff2c3fc4894296978e0d665",
+    "content-hash": "12f578379f90d624cdad1371ec868e31",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -10546,16 +10546,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.5.0",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "6c20e5c07857f8ba3a0d74063d75777baa8b78d8"
+                "reference": "eaafcede4edb535e672af7a9f14fdce7aa9e9baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/6c20e5c07857f8ba3a0d74063d75777baa8b78d8",
-                "reference": "6c20e5c07857f8ba3a0d74063d75777baa8b78d8",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/eaafcede4edb535e672af7a9f14fdce7aa9e9baa",
+                "reference": "eaafcede4edb535e672af7a9f14fdce7aa9e9baa",
                 "shasum": ""
             },
             "require": {
@@ -10566,7 +10566,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-02-26T10:42:12+00:00"
+            "time": "2020-03-26T16:29:03+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
