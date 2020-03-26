@@ -43,7 +43,6 @@
         "drupal/facets": "^1.4",
         "drupal/facets_pretty_paths": "^1.0@beta",
         "drupal/fasttoggle": "^2.0@alpha",
-        "drupal/features": "^3.8",
         "drupal/field_collection": "^1.0@alpha",
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0@RC",
