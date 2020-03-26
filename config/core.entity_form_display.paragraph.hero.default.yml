@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_hero_caption
     - field.field.paragraph.hero.field_hero_date
     - field.field.paragraph.hero.field_hero_description
     - field.field.paragraph.hero.field_hero_heading
@@ -18,6 +19,14 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
+  field_hero_caption:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_hero_date:
     weight: 3
     settings: {  }
