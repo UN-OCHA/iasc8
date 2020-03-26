@@ -60,6 +60,13 @@
   background-color: $iasc-red;
 }
 
+// Hero caption.
+.cd-hero__caption {
+  text-align: right;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 @media (min-width: 576px) {
   .cd-hero__footer {
     display: flex;
