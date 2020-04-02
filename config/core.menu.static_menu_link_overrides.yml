@@ -6,7 +6,7 @@ definitions:
     expanded: false
     weight: 0
   user__page:
-    enabled: true
+    enabled: false
     menu_name: account
     parent: ''
     expanded: false
