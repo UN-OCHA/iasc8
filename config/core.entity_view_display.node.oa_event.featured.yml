@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.teaser
     - core.entity_view_mode.node.featured
     - field.field.node.oa_event.body
     - field.field.node.oa_event.field_additional_locations
@@ -29,28 +28,12 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - date_recur
     - user
 id: node.oa_event.featured
 targetEntityType: node
 bundle: oa_event
 mode: featured
 content:
-  field_oa_date:
-    type: date_recur_basic_formatter
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      format_type: teaser
-      occurrence_format_type: teaser
-      same_end_date_format_type: teaser
-      separator: '-'
-      timezone_override: ''
-      interpreter: ''
-      show_next: 5
-      count_per_item: true
-    third_party_settings: {  }
   field_thumbnail:
     type: entity_reference_entity_view
     weight: 0
@@ -73,6 +56,7 @@ hidden:
   field_legacy_publish: true
   field_meeting_agendas: true
   field_meeting_notes: true
+  field_oa_date: true
   field_room: true
   field_section: true
   field_section_audience: true

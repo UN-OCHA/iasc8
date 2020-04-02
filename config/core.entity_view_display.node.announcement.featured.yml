@@ -18,22 +18,12 @@ dependencies:
     - field.field.node.announcement.og_group_ref
     - node.type.announcement
   module:
-    - datetime
     - user
 id: node.announcement.featured
 targetEntityType: node
 bundle: announcement
 mode: featured
 content:
-  field_published_date:
-    type: datetime_default
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: teaser
-    third_party_settings: {  }
   field_thumbnail:
     type: entity_reference_entity_view
     weight: 0
@@ -49,6 +39,7 @@ hidden:
   field_iasc_audience: true
   field_legacy_publish: true
   field_links: true
+  field_published_date: true
   field_referenced_docs: true
   field_section: true
   field_section_audience: true
