@@ -38,13 +38,13 @@ content:
   body:
     label: above
     type: text_default
-    weight: 10
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
   field_address:
     label: above
-    weight: 8
+    weight: 6
     type: address_default
     settings: {  }
     third_party_settings: {  }
@@ -75,7 +75,7 @@ content:
     region: content
   field_fax:
     label: inline
-    weight: 7
+    weight: 5
     type: string
     settings:
       link_to_entity: false
@@ -83,7 +83,7 @@ content:
     region: content
   field_homepage:
     label: inline
-    weight: 9
+    weight: 7
     type: link
     settings:
       trim_length: 80
@@ -95,35 +95,19 @@ content:
     region: content
   field_membership:
     label: above
-    weight: 11
+    weight: 9
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
       link: ''
     third_party_settings: {  }
     region: content
-  field_mobile:
-    label: inline
-    weight: 6
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
   field_organisation:
     label: above
-    weight: 12
+    weight: 10
     type: entity_reference_label
     settings:
       link: true
-    third_party_settings: {  }
-    region: content
-  field_phone:
-    label: inline
-    weight: 5
-    type: string
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     region: content
   field_photo:
@@ -148,6 +132,8 @@ hidden:
   field_last_name: true
   field_legacy_id: true
   field_media_photo: true
+  field_mobile: true
+  field_phone: true
   field_title: true
   langcode: true
   links: true
