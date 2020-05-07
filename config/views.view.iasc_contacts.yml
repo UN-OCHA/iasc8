@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.bio_long
-    - core.entity_view_mode.node.bio_short
     - node.type.contact
   module:
     - node
@@ -68,7 +67,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: bio_short
+          view_mode: bio_long
       fields: {  }
       filters:
         status:

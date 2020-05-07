@@ -37,14 +37,14 @@ mode: bio_full
 content:
   field_address:
     label: inline
-    weight: 12
+    weight: 8
     type: address_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_branch:
     label: inline
-    weight: 6
+    weight: 4
     type: string
     settings:
       link_to_entity: false
@@ -52,7 +52,7 @@ content:
     region: content
   field_department:
     label: inline
-    weight: 5
+    weight: 3
     type: string
     settings:
       link_to_entity: false
@@ -60,7 +60,7 @@ content:
     region: content
   field_email:
     label: inline
-    weight: 10
+    weight: 6
     type: string
     settings:
       link_to_entity: false
@@ -68,7 +68,7 @@ content:
     region: content
   field_fax:
     label: inline
-    weight: 9
+    weight: 5
     type: string
     settings:
       link_to_entity: false
@@ -76,7 +76,7 @@ content:
     region: content
   field_homepage:
     label: inline
-    weight: 11
+    weight: 7
     type: link
     settings:
       trim_length: 80
@@ -88,35 +88,19 @@ content:
     region: content
   field_membership:
     label: inline
-    weight: 17
+    weight: 10
     type: entity_reference_revisions_entity_view
     settings:
       view_mode: full
       link: ''
     third_party_settings: {  }
     region: content
-  field_mobile:
-    label: inline
-    weight: 8
-    type: string
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
   field_organisation:
     label: inline
-    weight: 13
+    weight: 9
     type: entity_reference_label
     settings:
       link: true
-    third_party_settings: {  }
-    region: content
-  field_phone:
-    label: inline
-    weight: 7
-    type: string
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     region: content
   field_photo:
@@ -130,7 +114,7 @@ content:
     region: content
   field_position:
     label: hidden
-    weight: 2
+    weight: 1
     type: string
     settings:
       link_to_entity: false
@@ -144,15 +128,17 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   body: true
   field_first_name: true
   field_last_name: true
   field_legacy_id: true
   field_media_photo: true
+  field_mobile: true
+  field_phone: true
   langcode: true
   search_api_excerpt: true
