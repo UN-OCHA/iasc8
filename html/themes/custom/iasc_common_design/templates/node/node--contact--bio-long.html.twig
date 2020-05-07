@@ -108,6 +108,8 @@
   <div class="cd-user-list__city">
     City: {{ node.field_address.locality }}
   </div>
+  {% endif %}
+  {% if content.field_email %}
   <div class="cd-user-list__extra clearfix">
     {{ content.field_email }}
   </div>
