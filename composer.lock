@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "bca48b8e61b4f0ef6aa814f1f81cb116",
@@ -5762,7 +5762,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.16",
-                    "datestamp": "1586374699",
+                    "datestamp": "1588361091",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7724,7 +7724,9 @@
             "version": "4.0.13",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz"
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -10568,16 +10570,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.6.0",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "eaafcede4edb535e672af7a9f14fdce7aa9e9baa"
+                "reference": "0ab0a1ddfae997cbfe6a3b5dff16f72d7018a81b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/eaafcede4edb535e672af7a9f14fdce7aa9e9baa",
-                "reference": "eaafcede4edb535e672af7a9f14fdce7aa9e9baa",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/0ab0a1ddfae997cbfe6a3b5dff16f72d7018a81b",
+                "reference": "0ab0a1ddfae997cbfe6a3b5dff16f72d7018a81b",
                 "shasum": ""
             },
             "require": {
@@ -10588,7 +10590,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-03-26T16:29:03+00:00"
+            "time": "2020-05-07T14:10:49+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

@@ -81,7 +81,7 @@
         "symfony/event-dispatcher": "4.3.4 as 3.4.99",
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
-        "unocha/common_design": "^2.6.0",
+        "unocha/common_design": "^2.7.5",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
