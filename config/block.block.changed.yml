@@ -10,7 +10,7 @@ dependencies:
     - iasc_common_design
 id: changed
 theme: iasc_common_design
-region: sidebar_first
+region: sidebar_second
 weight: -12
 provider: null
 plugin: 'facet_block:changed'
