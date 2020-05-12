@@ -1,7 +1,9 @@
 {%
   set group_layout_classes = [
   'cd-container',
-  page.sidebar_first ? 'cd-layout-with-region-sidebar'
+  page.sidebar_first|render and not page.sidebar_second|render ? 'cd-layout-with-region-sidebar-first cd-layout-with-sidebar-first',
+  page.sidebar_second|render and not page.sidebar_first|render ? 'cd-layout-with-sidebar-second',
+  page.sidebar_first|render and page.sidebar_second|render ? 'cd-layout-with-sidebar-both',
   ]
 %}
 
@@ -9,17 +11,18 @@
 
   {% block main %}
     <main role="main" {{ attributes.addClass(group_layout_classes) }}>
-
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      {% if page.sidebar_first %}
+        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.sidebar_first }}</aside>
+      {% endif %}
 
       <div class="cd-layout-content">
         {{ page.content }}
       </div>{# /.cd-layout-content #}
 
-      {% if page.sidebar_first %}
-        <aside class="cd-layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
+      {% if page.sidebar_second  %}
+        <aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
       {% endif %}
 
     </main>
