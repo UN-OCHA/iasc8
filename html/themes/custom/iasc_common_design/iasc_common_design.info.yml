@@ -23,3 +23,32 @@ regions:
   sidebar_second: Second sidebar
   footer_soft: Soft footer
   footer_navigation: Footer navigation
+
+# Add implementation-specific styles to base theme components
+libraries-extend:
+  common_design/cd-alert:
+    - iasc_common_design/cd-alert
+
+  common_design/cd-article-teaser:
+    - iasc_common_design/cd-article-teaser
+
+  common_design/cd-bullet-list:
+    - iasc_common_design/cd-bullet-list
+
+  common_design/cd-date:
+    - iasc_common_design/cd-date
+
+  common_design/cd-hero:
+    - iasc_common_design/cd-hero
+
+  common_design/cd-list:
+    - iasc_common_design/cd-list
+
+  common_design/cd-user-list:
+    - iasc_common_design/cd-user-list
+
+# CD components
+component-libraries:
+  cd-components:
+    paths:
+      - components
