@@ -92,7 +92,7 @@ function sassCompileTask() {
 function componentCompileTask() {
   browserSync.notify(`Compiling Sass...`);
 
-  return gulp.src('./sass/components/*/*.scss')
+  return gulp.src('./components/*/*.scss')
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
     .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
@@ -110,7 +110,7 @@ function componentCompileTask() {
       // then get the parent of the current folder, e.g., "folder1", "folder2", etc.
       let parentFolder = path.dirname(file.dirname)
       // set each file's folder to "folder1/css", "folder2/css", etc.
-      file.dirname = path.join(parentFolder, 'css/components');
+      file.dirname = path.join(parentFolder, 'components/' + file.dirname + '/');
     }))
 
     .pipe(gulp.dest('.'));
@@ -210,7 +210,7 @@ exports.js = jsTask;
 //——————————————————————————————————————————————————————————————————————————————
 function watchTask() {
   gulp.watch(['js/cd-*.js'], jsTask);
-  gulp.watch(['sass/**/*.scss'], sassTask);
+  gulp.watch(['sass/**/*.scss', 'components/**/*.scss'], sassTask);
 };
 exports.watch = watchTask;
 
