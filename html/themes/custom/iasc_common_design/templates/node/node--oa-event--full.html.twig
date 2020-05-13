@@ -82,8 +82,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-{{ attach_library('iasc_common_design/cd-alert') }}
-
+{{ attach_library('common_design/cd-alert') }}
 {% set dialIn = node.field_dial_in_meeting.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -131,7 +130,7 @@
         </div>
 
         {% if not logged_in %}
-            <div class="cd-alert cd-attn">
+            <div class="cd-alert cd-alert--attn">
               <svg class="cd-icon cd-icon--alert">
                 <use xlink:href="#cd-icon--alert"></use>
               </svg>
