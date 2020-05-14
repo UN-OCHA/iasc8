@@ -1,0 +1,12 @@
+@import '../../sass/cd/cd-variables';
+
+.cd-hero__link {
+  color: $iasc-primary;
+  background-color: $iasc-highlight;
+}
+
+.cd-hero__link:hover,
+.cd-hero__link:focus {
+  color: $iasc-primary;
+  background-color: $iasc-red;
+}

@@ -8,48 +8,34 @@ global-styling:
 cd-alert:
   css:
     theme:
-      css/components/cd-alert.css: {}
+      components/cd-alert/cd-alert.css: {}
 
 cd-article-teaser:
   css:
     theme:
-      css/components/cd-article-teaser.css: {}
+      components/cd-article-teaser/cd-article-teaser.css: {}
 
 cd-bullet-list:
   css:
     theme:
-      css/components/cd-bullet-list.css: {}
-
-cd-button:
-  css:
-    theme:
-      css/components/cd-button.css: {}
+      components/cd-bullet-list/cd-bullet-list.css: {}
 
 cd-date:
   css:
     theme:
-      css/components/cd-date.css: {}
-
-cd-filters:
-  css:
-    theme:
-      css/components/cd-filters.css: {}
+      components/cd-date/cd-date.css: {}
 
 cd-hero:
   css:
     theme:
-      css/components/cd-hero.css: {}
+      components/cd-hero/cd-hero.css: {}
 
 cd-list:
   css:
     theme:
-      css/components/cd-list.css: {}
-
-cd-responsive-tables:
-  js:
-    js/cd-responsive-tables.js: {}
+      components/cd-list/cd-list.css: {}
 
 cd-user-list:
   css:
     theme:
-      css/components/cd-user-list.css: {}
+      components/cd-user-list/cd-user-list.css: {}
