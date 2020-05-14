@@ -35,10 +35,6 @@ cd-list:
     theme:
       components/cd-list/cd-list.css: {}
 
-cd-responsive-tables:
-  js:
-    js/cd-responsive-tables.js: {}
-
 cd-user-list:
   css:
     theme:
