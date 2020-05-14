@@ -68,7 +68,9 @@
 }
 
 .path-frontpage .cd-layout-sidebar-first {
-  .viewsreference--view-title {
+  h2,
+  .viewsreference--view-title,
+  .cd-sidebar__label {
     margin-top: 1rem;
   }
 }
