@@ -1,0 +1,287 @@
+/*BASIC*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.region-header,
+main,
+.region-footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 20px;
+}
+/*END BASIC*/
+
+
+/*LAYOUT*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+
+.layout-sidebar-first {
+  flex: 1;
+}
+
+.layout-sidebar-first .block-facet--links h2 {
+  margin-bottom: 15px;
+}
+
+.layout-content {
+  flex: 5;
+}
+
+.layout-content .page-title {
+  margin-top: 0;
+}
+/*ENDLAYOUT*/
+
+/*BREADCRUMBS*/
+.block-system-breadcrumb-block li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+/*END BREADCRUMBS*/
+
+/*HEADER*/
+header {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.region-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  height: 80px;
+}
+
+.region-header .block-system-branding-block {
+  flex: 1;
+}
+
+.site-logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 999999;
+  background: #333;
+  top: 0;
+  left: 0;
+}
+
+.site-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.region-header .block-system-branding-block .site-name {
+  display: none;
+}
+
+.region-header .block-system-branding-block .site-name a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/**NAV**/
+.menu--account {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.menu--main ul.menu li a,
+.block-language ul.links li a,
+.menu--account ul.menu li a {
+  font-size: 0.9rem;
+}
+
+.menu--main {
+  display: flex;
+  align-items: center;
+  flex: 5;
+}
+
+.menu--main ul.menu {
+  margin: 0;
+}
+
+.menu--main a {
+  text-decoration: none;
+}
+/**END NAV**/
+
+/**USER**/
+.menu--account ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.menu--account ul.menu li{
+  padding: 0;
+  margin-left: 10px;
+}
+
+.menu--account ul.menu li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu--account ul.menu > li:first-child a:before {
+  content:"";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../svg/user.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 6px;
+}
+/**END USER**/
+
+/**LANGUAGE**/
+.block-language {
+  margin-left: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.block-language ul.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-language ul.links li {
+  list-style-type: none;
+  flex: 1;
+}
+
+.block-language ul.links li + li {
+  margin-left: 10px;
+}
+
+.block-language ul.links > li:not(:last-of-type)::after {
+  content: '|';
+  color: #333;
+  position: relative;
+  right: -5px;
+  top: 0;
+}
+
+.block-language ul.links li a {
+  color: #333;
+  text-decoration: none;
+}
+/**END LANGUAGE**/
+/*END HEADER*/
+
+/*CONTENT*/
+.block-system-main-block .node--type-page .field--type-text-with-summary p + p {
+  margin-top: 15px;
+}
+
+.block-system-main-block .node--type-page .field--type-text-with-summary ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.block-system-main-block .node--type-page .field--type-text-with-summary ul li + li {
+  margin-top: 7px;
+}
+/*END CONTENT*/
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin-top: 40px;
+}
+/*END FOOTER*/
+
+/*PHONE 416px*/
+@media (max-width: 26em) {
+  .layout-sidebar-first {
+    flex: 100%;
+  }
+
+  .layout-content {
+    flex: 100%;
+  }
+
+  .region-header .block-system-branding-block {
+    flex: 100%;
+  }
+}
+
+/*PHAB 560px*/
+@media (min-width: 35em) {
+
+}
+
+/*TAB2 768px*/
+@media (min-width: 48em) {
+
+}
+
+/*TABDESK 1024px*/
+@media (min-width: 64em) {
+
+}
+
+/*DESK1 1200px*/
+@media (min-width: 75em) {
+
+}
+
+/*DESK2 1360px*/
+@media (min-width: 85em) {
+  body {
+    padding: 0;
+  }
+}
+
+.view-our-wines .views-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid #333 1px;
+}
+
+.view-our-wines .field:after,
+article .field:after {
+    display: table;
+  clear: both;
+  content: "";
+}
+
+.field--name-field-grape .field__item {
+  float: left;
+  margin-right: 10px;
+}
