@@ -32,3 +32,9 @@ section.cd-layout-two-col .cd-layout-sidebar-first {
     padding-bottom: 100px;
   }
 }
+
+section.cd-layout-two-col .cd-layout-main-content {
+  @include desktop {
+    margin-right: 3rem;
+  }
+}
