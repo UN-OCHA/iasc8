@@ -64,7 +64,12 @@
     {{ title_suffix }}
 
     <div class="cd-article-teaser__description node__content">
-      {{ content|without('label','field_group_banner') }}
+      {% set contentBody %}
+        {{ content.field_description }}
+      {% endset %}
+
+      {{ contentBody|striptags }}
+      {{ content|without('label','field_group_banner','field_description') }}
     </div>
   </div>
 

@@ -188,3 +188,23 @@
 .paragraph--type--view {
   clear: both;
 }
+
+// Override for Content Item paragraph type teaser node
+aside .paragraph--type--content-item .node--view-mode-teaser,
+aside .paragraph--type--content-item .group--view-mode-teaser {
+  .cd-article-teaser__image {
+    max-width: 100%;
+  }
+
+  .field__label {
+    font-size: inherit;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: currentColor;
+    border-bottom: 1px none #272e67;
+  }
+}
+
+.cd-layout-sidebar-first .paragraph--type--content-item .field--name-field-category {
+  margin-bottom: 1rem !important;
+}
