@@ -8,8 +8,7 @@
       "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-19/i2868252-27.patch"
     },
     "drupal/viewsreference": {
-      "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch",
-      "https://www.drupal.org/project/viewsreference/issues/3137849#comment-13623020": "https://www.drupal.org/files/issues/2020-05-19/i3137849.patch"
+      "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch"
     },
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
