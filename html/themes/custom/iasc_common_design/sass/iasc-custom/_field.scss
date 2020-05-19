@@ -143,6 +143,14 @@
   padding-bottom: 1rem;
 }
 
+aside .field--name-field-meeting-agendas > .field__items > .field__item {
+  padding-bottom: 0;
+}
+
+aside .field--name-field-meeting-agendas .field__items .field__item .field--name-field-published-date .field__item {
+  margin-bottom: 0;
+}
+
 .field--name-field-meeting-notes svg,
 .field--name-field-meeting-agendas svg {
   fill: var(--iasc-highlight);
