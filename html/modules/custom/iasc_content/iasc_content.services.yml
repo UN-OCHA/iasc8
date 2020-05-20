@@ -1,0 +1,5 @@
+services:
+  iasc_content.paragraph_summar_alter:
+    class: Drupal\iasc_content\EventSubscriber\ParagraphSummaryAlter
+    tags:
+      - { name: 'event_subscriber' }

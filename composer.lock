@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30bc3312e84aed3bd4ca8661660088c5",
+    "content-hash": "75c7597a9de37e45748f48ac1741c5aa",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5384,6 +5384,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Needed for next patch": "https://www.drupal.org/files/issues/2020-02-11/3055618-19.patch",
+                    "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6253,6 +6257,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/social_auth_hid",
                 "issues": "https://www.drupal.org/project/issues/social_auth_hid"
+            }
+        },
+        {
+            "name": "drupal/spamspan",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/spamspan.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/spamspan-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "017e12731aae7c853c5a3212a95980b10b99bdf7"
+            },
+            "require": {
+                "drupal/core": "~8.1 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1588076988",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "lakka",
+                    "homepage": "https://www.drupal.org/user/63367"
+                },
+                {
+                    "name": "peterx",
+                    "homepage": "https://www.drupal.org/user/23516"
+                },
+                {
+                    "name": "vitalie",
+                    "homepage": "https://www.drupal.org/user/175134"
+                }
+            ],
+            "description": "The SpamSpan module obfuscates email addresses to help prevent spambots from collecting them. It implements the technique at http://www.spamspan.com.",
+            "homepage": "http://drupal.org/project/spamspan",
+            "support": {
+                "source": "https://git.drupalcode.org/project/spamspan"
             }
         },
         {

@@ -73,6 +73,7 @@
         "drupal/search_api_solr": "^3.2",
         "drupal/select2": "^1.6",
         "drupal/social_auth_hid": "^2.2",
+        "drupal/spamspan": "^1.2",
         "drupal/tablefield": "^2.1",
         "drupal/token": "^1.5",
         "drupal/viewsreference": "2.0-alpha6",
