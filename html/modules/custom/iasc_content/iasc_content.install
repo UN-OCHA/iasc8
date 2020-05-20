@@ -605,3 +605,29 @@ function iasc_content_update_8020() {
 
   iasc_content_fix_entities($entity_type, $bundle, $field_name);
 }
+
+/**
+ * Change emailo field to email storage.
+ */
+function iasc_content_update_8021() {
+  $entity_type = 'node';
+  $field_name = 'field_email';
+
+  $name = 'field.storage.' . $entity_type . '.' . $field_name;
+
+  // Get the current settings.
+  $result = \Drupal::database()->query('SELECT data FROM {config} WHERE name = :name', [
+    ':name' => $name,
+    ])->fetchField();
+
+  $data = unserialize($result);
+  $data['type'] = 'email';
+  $data['settings'] = [];
+
+  // Write settings back to the database.
+  \Drupal::database()->update('config')
+    ->fields(['data' => serialize($data)])
+    ->condition('name', $name)
+    ->execute();
+
+}
