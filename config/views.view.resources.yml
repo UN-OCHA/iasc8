@@ -1075,7 +1075,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h1 class=\"page-title\">IASC Newsletters</h1>\r\n<p>\r\n\r\nThe IASC secretariat regularly publishes a newsletter reflecting important developments in the IASC.\r\n</p>"
+            value: "<h1 class=\"page-title\">IASC Statements</h1>\r\n"
             format: full_html
           plugin_id: text
       sorts:
