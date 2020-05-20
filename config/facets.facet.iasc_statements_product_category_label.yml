@@ -1,0 +1,47 @@
+uuid: a4bcd123-fd16-4399-a9ee-e69e3302fcde
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.resources
+  module:
+    - search_api
+id: iasc_statements_product_category_label
+name: 'Product Category label'
+url_alias: iasc_statements_product_category_label
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: product_category_label
+facet_source_id: 'search_api:views_page__resources__page_statements'
+widget:
+  type: select2
+  config:
+    show_numbers: false
+    width: 100%
+    autocomplete: false
+    match_operator: CONTAINS
+query_operator: or
+use_hierarchy: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: true
+processor_configs:
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

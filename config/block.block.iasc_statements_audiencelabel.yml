@@ -1,6 +1,6 @@
 uuid: 1f20e299-4e81-4b10-93a9-b7b70224acba
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.iasc_statements_audience_label
