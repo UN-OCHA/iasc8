@@ -4,10 +4,17 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_oa_related_content
-    - node.type.oa_discussion_post
+    - group.type.iasc_space
+    - node.type.action_point
+    - node.type.announcement
     - node.type.oa_event
     - node.type.oa_wiki_page
+    - node.type.oa_worktracker_task
+    - node.type.panopoly_landing_page
+    - node.type.panopoly_page
     - paragraphs.paragraphs_type.paragraph_content
+  module:
+    - dynamic_entity_reference
 id: paragraph.paragraph_content.field_oa_related_content
 field_name: field_oa_related_content
 entity_type: paragraph
@@ -26,7 +33,6 @@ settings:
         action_point: action_point
         announcement: announcement
         panopoly_page: panopoly_page
-        oa_discussion_post: oa_discussion_post
         oa_wiki_page: oa_wiki_page
         oa_event: oa_event
         panopoly_landing_page: panopoly_landing_page
@@ -51,9 +57,6 @@ settings:
     handler_settings: {  }
   menu_link_content:
     handler: 'default:menu_link_content'
-    handler_settings: {  }
-  field_collection_item:
-    handler: 'default:field_collection_item'
     handler_settings: {  }
   file:
     handler: 'default:file'
@@ -87,5 +90,8 @@ settings:
     handler_settings: {  }
   user:
     handler: 'default:user'
+    handler_settings: {  }
+  path_alias:
+    handler: 'default:path_alias'
     handler_settings: {  }
 field_type: dynamic_entity_reference
