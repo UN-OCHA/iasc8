@@ -28,6 +28,7 @@ dependencies:
     - entity_reference_revisions
     - image
     - link
+    - spamspan
     - text
     - user
 id: node.contact.default
@@ -68,9 +69,16 @@ content:
   field_email:
     label: inline
     weight: 1
-    type: string
+    type: email_spamspan
     settings:
-      link_to_entity: false
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: 0
+      spamspan_dot_enable: 0
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: 0
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
     third_party_settings: {  }
     region: content
   field_fax:
