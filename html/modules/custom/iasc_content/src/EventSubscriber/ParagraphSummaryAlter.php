@@ -17,9 +17,8 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    // Do not use ParagraphSummaryAlterEvent::ALTER.
     return [
-      'event.alter' => 'onSummaryAlter',
+      ParagraphSummaryAlterEvent::ALTER => 'onSummaryAlter',
     ];
   }
 
