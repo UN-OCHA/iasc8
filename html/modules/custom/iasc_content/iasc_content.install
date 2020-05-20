@@ -618,7 +618,7 @@ function iasc_content_update_8021() {
   // Get the current settings.
   $result = \Drupal::database()->query('SELECT data FROM {config} WHERE name = :name', [
     ':name' => $name,
-    ])->fetchField();
+  ])->fetchField();
 
   $data = unserialize($result);
   $data['type'] = 'email';
