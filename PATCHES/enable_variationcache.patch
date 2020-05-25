@@ -1,0 +1,18 @@
+diff --git a/group.install b/group.install
+index 4a83813..daa7ff8 100644
+--- a/group.install
++++ b/group.install
+@@ -522,3 +522,13 @@ function group_update_8019() {
+ 
+   return t('The published field has been added to groups.');
+ }
++
++/**
++ * Enable variationcache.
++ */
++function group_update_8020() {
++  if (!\Drupal::moduleHandler()->moduleExists('variationcache')) {
++    \Drupal::service('module_installer')->install(['variationcache']);
++    return t('Group has installed core "variationcache" module.');
++  }
++}
