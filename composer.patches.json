@@ -11,8 +11,7 @@
     },
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
-      "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2020-05-19/group-status-2873212-27.patch",
-      "Enable variation cache": "./PATCHES/enable_variationcache.patch"
+      "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2020-05-19/group-status-2873212-27.patch"
     }
   }
 }

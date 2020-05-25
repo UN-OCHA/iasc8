@@ -4971,8 +4971,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/group",
                 "issues": "https://drupal.org/project/issues/group"
-            },
-            "time": "2020-05-10T17:26:34+00:00"
+            }
         },
         {
             "name": "drupal/linkit",
