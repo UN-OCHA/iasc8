@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3ccbb7bdef5b0897634a58a6e32ee30",
+    "content-hash": "88912e470b5ffb184118388c1c1e3133",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4925,7 +4925,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/group.git",
-                "reference": "bb5a85528ed21e531fcf10f861b3f66e41f86f1a"
+                "reference": "f64e11d8"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -4947,7 +4947,7 @@
                 },
                 "patches_applied": {
                     "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
-                    "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2020-05-19/group-status-2873212-27.patch"
+                    "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2019-11-19/group-status-2873212-17.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4971,7 +4971,8 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/group",
                 "issues": "https://drupal.org/project/issues/group"
-            }
+            },
+            "time": "2019-12-20T14:49:57+00:00"
         },
         {
             "name": "drupal/linkit",
