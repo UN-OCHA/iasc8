@@ -1,0 +1,31 @@
+add hero entities:
+  title: 'Create new Hero entities'
+
+administer hero entities:
+  title: 'Administer Hero entities'
+  description: 'Allow to access the administration form to configure Hero entities.'
+  restrict access: true
+
+delete hero entities:
+  title: 'Delete Hero entities'
+
+edit hero entities:
+  title: 'Edit Hero entities'
+
+view published hero entities:
+  title: 'View published Hero entities'
+
+view unpublished hero entities:
+  title: 'View unpublished Hero entities'
+
+view all hero revisions:
+  title: 'View all Hero revisions'
+
+revert all hero revisions:
+  title: 'Revert all Hero revisions'
+  description: 'Role requires permission <em>view Hero revisions</em> and <em>edit rights</em> for hero entities in question or <em>administer hero entities</em>.'
+
+delete all hero revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Hero revisions</em> and <em>delete rights</em> for hero entities in question or <em>administer hero entities</em>.'
+

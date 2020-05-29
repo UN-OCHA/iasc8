@@ -1,0 +1,26 @@
+# Hero routing definition
+hero.settings_tab:
+  route_name: hero.settings
+  title: 'Settings'
+  base_route: hero.settings
+
+entity.hero.canonical:
+  route_name: entity.hero.canonical
+  base_route: entity.hero.canonical
+  title: 'View'
+
+entity.hero.edit_form:
+  route_name: entity.hero.edit_form
+  base_route: entity.hero.canonical
+  title: 'Edit'
+
+entity.hero.version_history:
+  route_name: entity.hero.version_history
+  base_route: entity.hero.canonical
+  title: 'Revisions'
+
+entity.hero.delete_form:
+  route_name:  entity.hero.delete_form
+  base_route:  entity.hero.canonical
+  title: Delete
+  weight: 10

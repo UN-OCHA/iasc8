@@ -1,0 +1,5 @@
+entity.hero.add_form:
+  route_name: entity.hero.add_form
+  title: 'Add Hero'
+  appears_on:
+    - entity.hero.collection

@@ -1,0 +1,59 @@
+{#
+/**
+ * @file hero.html.twig
+ * Default theme implementation to present Hero data.
+ *
+ * This template is used when viewing Hero pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_hero()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set hero_image_url = file_url(content.field_hero_image[0]['#media'].field_media_image.entity.uri.value) %}
+{% set hero_image_alt = file_url(content.field_hero_image[0]['#media'].field_media_image.alt) %}
+
+{{ attach_library('common_design/cd-hero') }}
+
+<div{{ attributes.addClass('hero') }}>
+  <figure class="cd-hero">
+    <img class="cd-hero__image" src="{{ hero_image_url }}" alt="{{ hero_image_alt }}">
+
+    {% if content.field_hero_heading|render or content.field_hero_description|render %}
+    <figcaption class="cd-hero__container">
+      <h3 class="cd-hero__title">
+        {{ content.field_hero_heading }}
+      </h3>
+      <div class="cd-hero__description">
+        {{ content.field_hero_description }}
+      </div>
+
+      {% if content.field_hero_date|render or content.field_hero_link|render %}
+      <div class="cd-hero__footer">
+        <div class="cd-hero__date">
+          {{ content.field_hero_date }}
+        </div>
+
+        {% if content.field_hero_link|render %}
+        <a class="cd-hero__link" href="{{ content.field_hero_link.0['#url'] }}">
+          {{ content.field_hero_link.0['#title'] }}
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+    </figcaption>
+    {% endif %}
+
+  </figure>
+
+  <div class="cd-hero__caption">
+    {{ content.field_hero_caption }}
+  </div>
+</div>
