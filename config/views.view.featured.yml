@@ -264,7 +264,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: ''
-      link_url: updates
+      link_url: featured
       link_display: custom_url
     cache_metadata:
       max-age: -1
