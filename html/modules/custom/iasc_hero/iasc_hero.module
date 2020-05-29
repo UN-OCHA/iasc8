@@ -13,6 +13,6 @@ function iasc_hero_theme() {
     'hero' => [
       'render element' => 'content',
       'template' => 'hero',
-      ],
+    ],
   ];
 }

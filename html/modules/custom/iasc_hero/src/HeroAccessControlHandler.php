@@ -28,7 +28,6 @@ class HeroAccessControlHandler extends EntityAccessControlHandler {
           return AccessResult::allowedIfHasPermission($account, 'view unpublished hero entities');
         }
 
-
         return AccessResult::allowedIfHasPermission($account, 'view published hero entities');
 
       case 'update':
@@ -50,6 +49,5 @@ class HeroAccessControlHandler extends EntityAccessControlHandler {
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
     return AccessResult::allowedIfHasPermission($account, 'add hero entities');
   }
-
 
 }

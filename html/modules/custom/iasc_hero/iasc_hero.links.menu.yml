@@ -4,7 +4,7 @@ entity.hero.collection:
   title: 'Hero list'
   route_name: entity.hero.collection
   description: 'List Hero entities'
-  parent: system.admin_structure
+  parent: system.admin_content
   weight: 100
 
 hero.admin.structure.settings:

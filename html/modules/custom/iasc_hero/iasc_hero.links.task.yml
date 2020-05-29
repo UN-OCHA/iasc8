@@ -24,3 +24,9 @@ entity.hero.delete_form:
   base_route:  entity.hero.canonical
   title: Delete
   weight: 10
+
+entity.hero.collection:
+  title: 'Hero list'
+  route_name: entity.hero.collection
+  base_route: system.admin_content
+  weight: 100

@@ -92,7 +92,7 @@ class HeroRevisionDeleteForm extends ConfirmFormBase {
     $this->HeroStorage->deleteRevision($this->revision->getRevisionId());
 
     $this->logger('content')->notice('Hero: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
-    $this->messenger()->addMessage(t('Revision from %revision-date of Hero %title has been deleted.', ['%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+    $this->messenger()->addMessage($this->t('Revision from %revision-date of Hero %title has been deleted.', ['%revision-date' => format_date($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
     $form_state->setRedirect(
       'entity.hero.canonical',
        ['hero' => $this->revision->id()]

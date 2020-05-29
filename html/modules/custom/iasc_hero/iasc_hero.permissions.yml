@@ -28,4 +28,3 @@ revert all hero revisions:
 delete all hero revisions:
   title: 'Delete all revisions'
   description: 'Role requires permission to <em>view Hero revisions</em> and <em>delete rights</em> for hero entities in question or <em>administer hero entities</em>.'
-
