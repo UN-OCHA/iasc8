@@ -39,3 +39,4 @@ permissions:
   - 'view media'
   - 'view own field_ap_progress_overview'
   - 'view own field_ap_status'
+  - 'view published hero entities'
