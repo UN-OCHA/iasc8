@@ -1,0 +1,20 @@
+uuid: bc385d96-2125-4fb6-bc18-53a9e049484b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hero.field_hero_heading
+  module:
+    - iasc_hero
+id: hero.hero.field_hero_heading
+field_name: field_hero_heading
+entity_type: hero
+bundle: hero
+label: 'Hero heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

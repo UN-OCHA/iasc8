@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_hero
     - field.field.paragraph.hero.field_hero_caption
     - field.field.paragraph.hero.field_hero_date
     - field.field.paragraph.hero.field_hero_description
@@ -10,66 +11,25 @@ dependencies:
     - field.field.paragraph.hero.field_hero_image
     - field.field.paragraph.hero.field_hero_link
     - paragraphs.paragraphs_type.hero
-  module:
-    - datetime
-    - link
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_hero_caption:
-    weight: 5
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_hero_date:
-    weight: 3
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: teaser
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_hero_description:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_hero_heading:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_hero_image:
-    type: entity_reference_entity_view
+  field_hero:
     weight: 0
     label: hidden
     settings:
-      view_mode: hero
-      link: false
+      link: true
+      view_mode: default
     third_party_settings: {  }
-    region: content
-  field_hero_link:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
+    type: entity_reference_entity_view
     region: content
 hidden:
+  field_hero_caption: true
+  field_hero_date: true
+  field_hero_description: true
+  field_hero_heading: true
+  field_hero_image: true
+  field_hero_link: true
   search_api_excerpt: true

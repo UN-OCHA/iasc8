@@ -1,0 +1,20 @@
+uuid: 3fd09128-cd38-48fd-b121-9aac15b9ede6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hero.field_hero_caption
+  module:
+    - iasc_hero
+id: hero.hero.field_hero_caption
+field_name: field_hero_caption
+entity_type: hero
+bundle: hero
+label: 'Hero caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
