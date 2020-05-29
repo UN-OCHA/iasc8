@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_hero
     - field.field.paragraph.hero.field_hero_caption
     - field.field.paragraph.hero.field_hero_date
     - field.field.paragraph.hero.field_hero_description
@@ -11,59 +12,28 @@ dependencies:
     - field.field.paragraph.hero.field_hero_link
     - paragraphs.paragraphs_type.hero
   module:
-    - datetime
-    - link
-    - media_library
+    - select2
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_hero_caption:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_hero_date:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_hero_description:
-    weight: 3
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_hero_heading:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_hero_image:
-    type: media_library_widget
+  field_hero:
     weight: 0
     settings:
-      media_types: {  }
+      match_operator: CONTAINS
+      match_limit: 10
+      autocomplete: false
+      width: 100%
     third_party_settings: {  }
-    region: content
-  field_hero_link:
-    weight: 5
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
+    type: select2_entity_reference
     region: content
 hidden:
   created: true
+  field_hero_caption: true
+  field_hero_date: true
+  field_hero_description: true
+  field_hero_heading: true
+  field_hero_image: true
+  field_hero_link: true
   status: true

@@ -1,0 +1,21 @@
+uuid: af95feb9-5f2d-4abc-9312-ca5c670e5045
+langcode: en
+status: true
+dependencies:
+  module:
+    - iasc_hero
+id: hero.field_hero_heading
+field_name: field_hero_heading
+entity_type: hero
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

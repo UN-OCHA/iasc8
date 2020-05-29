@@ -41,6 +41,7 @@
         "drupal/diff": "^1.0@RC",
         "drupal/dream_block_manager": "^1.0",
         "drupal/dynamic_entity_reference": "^1.7",
+        "drupal/entityqueue": "^1.0",
         "drupal/facets": "^1.4",
         "drupal/facets_pretty_paths": "^1.0@beta",
         "drupal/fasttoggle": "^2.0@alpha",
