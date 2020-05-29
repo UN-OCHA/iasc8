@@ -1,5 +1,8 @@
 {
   "patches": {
+    "unocha/common_design" : {
+      "Make sure table exists": "https://github.com/UN-OCHA/common_design/pull/71.patch"
+    },
     "drupal/core": {
       "Allow symfony/event-dispatcher 4+ to be installed in Drupal 8": "https://www.drupal.org/files/issues/2019-09-17/2876675-48.Fix-symfony-version-requirements-for-symfonyeventdispatcher.patch"
     },
