@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * IASC Content helpers.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function iasc_hero_theme() {
+  return [
+    'hero' => [
+      'render element' => 'content',
+      'template' => 'hero',
+    ],
+  ];
+}

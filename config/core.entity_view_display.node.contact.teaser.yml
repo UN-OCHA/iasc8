@@ -48,14 +48,6 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_phone:
-    type: string
-    weight: 4
-    region: content
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_photo:
     type: image
     weight: 0
@@ -86,6 +78,7 @@ hidden:
   field_media_photo: true
   field_membership: true
   field_mobile: true
+  field_phone: true
   field_title: true
   langcode: true
   links: true

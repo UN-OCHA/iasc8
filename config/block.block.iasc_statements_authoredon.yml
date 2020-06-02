@@ -1,0 +1,23 @@
+uuid: 1e8de369-7e33-4946-9847-ae9459c9c2c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.iasc_statements_authored_on
+  module:
+    - facets
+  theme:
+    - iasc_common_design
+id: iasc_statements_authoredon
+theme: iasc_common_design
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:iasc_statements_authored_on'
+settings:
+  id: 'facet_block:iasc_statements_authored_on'
+  label: 'Authored on'
+  provider: facets
+  label_display: visible
+  block_id: iasc_statements_authoredon
+visibility: {  }

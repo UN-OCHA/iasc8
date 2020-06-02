@@ -7,19 +7,19 @@ dependencies:
     - group
     - node
     - user
-    - taxonomy
     - media
+    - taxonomy
     - search_api
     - search_api_attachments
   config:
-    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
-    - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
-    - field.storage.node.field_media_files
     - field.storage.media.field_media_file
-    - field.storage.node.field_category
+    - field.storage.node.field_media_files
+    - field.storage.node.field_document_type
+    - field.storage.group.field_description
+    - field.storage.node.field_oa_date
     - field.storage.node.field_published_date
+    - field.storage.node.field_category
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -77,7 +77,6 @@ field_settings:
         - field.storage.node.field_iasc_audience
       module:
         - group
-        - group
   author:
     label: 'Author name'
     datasource_id: 'entity:node'
@@ -86,7 +85,6 @@ field_settings:
     dependencies:
       module:
         - node
-        - user
         - user
   changed:
     label: Changed
@@ -111,8 +109,8 @@ field_settings:
     type: text
     dependencies:
       config:
-        - field.storage.node.field_media_files
         - field.storage.media.field_media_file
+        - field.storage.node.field_media_files
       module:
         - media
   document_type_label:
@@ -124,7 +122,6 @@ field_settings:
       config:
         - field.storage.node.field_document_type
       module:
-        - taxonomy
         - taxonomy
   field_description:
     label: Description
@@ -192,7 +189,6 @@ field_settings:
       config:
         - field.storage.node.field_category
       module:
-        - taxonomy
         - taxonomy
   rendered_item:
     label: 'Rendered item'
@@ -268,13 +264,10 @@ datasource_settings:
       selected:
         - action_point
         - announcement
-        - article
-        - contact
         - oa_discussion_post
         - oa_event
         - oa_wiki_page
         - oa_worktracker_task
-        - page
         - panopoly_landing_page
         - panopoly_page
     languages:

@@ -1,0 +1,19 @@
+uuid: 1c1e17e3-c29c-4415-ba73-ef836a29d833
+langcode: en
+status: true
+dependencies:
+  module:
+    - iasc_hero
+    - link
+id: hero.field_hero_link
+field_name: field_hero_link
+entity_type: hero
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

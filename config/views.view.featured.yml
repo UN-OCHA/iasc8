@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - core.entity_view_mode.node.teaser
+    - entityqueue.entity_queue.featured
     - node.type.announcement
     - node.type.oa_event
     - node.type.oa_wiki_page
   module:
+    - entityqueue
     - node
     - user
 id: featured
@@ -241,6 +243,19 @@ display:
           entity_field: promote
           plugin_id: boolean
       sorts:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          plugin_id: entity_queue_position
         created:
           id: created
           table: node_field_data
@@ -260,11 +275,22 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content queue'
+          required: true
+          limit_queue: featured
+          entity_type: node
+          plugin_id: entity_queue
       arguments: {  }
       display_extenders: {  }
       css_class: ''
-      link_url: updates
+      link_url: featured
       link_display: custom_url
     cache_metadata:
       max-age: -1
@@ -274,7 +300,10 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:entityqueue.entity_queue.featured'
+        - entity_field_info
+        - views_data
   block_1:
     display_plugin: block
     id: block_1
@@ -367,46 +396,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        promote:
-          id: promote
-          table: node_field_data
-          field: promote
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: promote
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
@@ -419,4 +408,7 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:entityqueue.entity_queue.featured'
+        - entity_field_info
+        - views_data

@@ -1,0 +1,20 @@
+uuid: cc1ca8fc-dee9-4ddb-a475-768069aeb754
+langcode: en
+status: true
+dependencies:
+  module:
+    - iasc_hero
+    - paragraphs
+id: paragraph.field_hero
+field_name: field_hero
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: hero
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

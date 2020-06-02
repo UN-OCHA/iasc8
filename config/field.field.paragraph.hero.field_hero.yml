@@ -1,0 +1,25 @@
+uuid: 2c5fd278-da95-4a54-8c8c-cc8e47601a39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_hero
+field_name: field_hero
+entity_type: paragraph
+bundle: hero
+label: Hero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hero'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

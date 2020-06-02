@@ -1,0 +1,21 @@
+uuid: 99af348e-0206-4d81-8bb9-712f4613d378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hero.field_hero_date
+  module:
+    - datetime
+    - iasc_hero
+id: hero.hero.field_hero_date
+field_name: field_hero_date
+entity_type: hero
+bundle: hero
+label: 'Hero date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

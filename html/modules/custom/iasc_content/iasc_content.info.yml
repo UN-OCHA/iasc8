@@ -4,4 +4,5 @@ description: 'IASC Content tweaks.'
 package: IASC
 core: '8.x'
 dependencies:
-  - group:group
+  - group
+  - paragraphs

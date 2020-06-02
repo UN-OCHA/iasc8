@@ -83,7 +83,7 @@
 ]
 %}
 {{ attach_library('classy/node') }}
-{{ attach_library('iasc_common_design/cd-user-list') }}
+{{ attach_library('common_design/cd-user-list') }}
 <article{{ attributes.addClass(classes) }}>
 
   {% if content.field_media_photo|render %}
@@ -108,10 +108,10 @@
   <div class="cd-user-list__city">
     City: {{ node.field_address.locality }}
   </div>
+  {% endif %}
+  {% if content.field_email %}
   <div class="cd-user-list__extra clearfix">
     {{ content.field_email }}
-    {{ content.field_phone }}
-    {{ content.field_mobile }}
   </div>
   {% endif %}
 
