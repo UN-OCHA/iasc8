@@ -313,7 +313,9 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   iasc_newsletters:
     display_plugin: page
     id: iasc_newsletters
@@ -459,7 +461,9 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_resources:
     display_plugin: page
     id: page_resources
@@ -650,7 +654,9 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_resources_documents:
     display_plugin: page
     id: page_resources_documents
@@ -809,7 +815,9 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_resources_products:
     display_plugin: page
     id: page_resources_products
@@ -942,7 +950,157 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
+  page_statements:
+    display_plugin: page
+    id: page_statements
+    display_title: 'IASC Statements'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: resources/iasc-statements
+      cache:
+        type: none
+      defaults:
+        cache: false
+        filters: false
+        filter_groups: false
+        title: false
+        header: false
+        sorts: false
+      filters:
+        type:
+          id: type
+          table: search_api_index_default_solr_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            oa_wiki_page: oa_wiki_page
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        field_document_type:
+          id: field_document_type
+          table: search_api_index_default_solr_index
+          field: field_document_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            2018: 2018
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: document_types
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'IASC Statements'
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<h1 class=\"page-title\">IASC Statements</h1>\r\n"
+            format: full_html
+          plugin_id: text
+      sorts:
+        field_published_date:
+          id: field_published_date
+          table: search_api_index_default_solr_index
+          field: field_published_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   statements_iasc_principals:
     display_plugin: page
     id: statements_iasc_principals
@@ -1028,4 +1186,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'

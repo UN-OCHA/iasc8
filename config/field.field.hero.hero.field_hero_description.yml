@@ -1,0 +1,20 @@
+uuid: 04cf510a-cdd8-4bd4-b447-3ef341cd9aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hero.field_hero_description
+  module:
+    - iasc_hero
+id: hero.hero.field_hero_description
+field_name: field_hero_description
+entity_type: hero
+bundle: hero
+label: 'Hero description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

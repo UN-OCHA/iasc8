@@ -92,3 +92,4 @@ permissions:
   - 'view own private files'
   - 'view own unpublished content'
   - 'view private files'
+  - 'view published hero entities'

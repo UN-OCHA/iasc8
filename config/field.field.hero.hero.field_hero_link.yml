@@ -1,0 +1,23 @@
+uuid: ff041bc6-1b0c-40fc-af86-6c8e7b01393e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.hero.field_hero_link
+  module:
+    - iasc_hero
+    - link
+id: hero.hero.field_hero_link
+field_name: field_hero_link
+entity_type: hero
+bundle: hero
+label: 'Hero link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
