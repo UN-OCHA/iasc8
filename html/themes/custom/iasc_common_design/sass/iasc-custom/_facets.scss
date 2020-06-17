@@ -1,5 +1,14 @@
 .block-facets {
   margin-bottom: 2rem;
+
+  // Control select2 select element width when options are wider than parent element.
+  .select2-container--default .select2-search--inline .select2-search__field {
+    width: auto !important;
+  }
+
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    white-space: normal;
+  }
 }
 
 .block-facets h2 {
@@ -37,9 +46,4 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
-}
-
-// Control select2 select element width when options are wider than parent element.
-.block-facets .select2-container--default .select2-search--inline .select2-search__field {
-  width: auto !important;
 }
