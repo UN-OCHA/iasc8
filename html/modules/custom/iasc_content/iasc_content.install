@@ -5,8 +5,10 @@
  * IASC Content helpers.
  */
 
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\group\Entity\Group;
+use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
 
 /**
@@ -607,7 +609,7 @@ function iasc_content_update_8020() {
 }
 
 /**
- * Change emailo field to email storage.
+ * Change email field to email storage.
  */
 function iasc_content_update_8021() {
   $entity_type = 'node';
@@ -630,4 +632,88 @@ function iasc_content_update_8021() {
     ->condition('name', $name)
     ->execute();
 
+}
+
+/**
+ * Add wrong dates.
+ */
+function iasc_content_update_8022() {
+  $src = drupal_get_path('module', 'iasc_content') . '/wrong-dates.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header line.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $nid = $data[0];
+      $start_date = $data[2];
+      $end_date = $start_date + 60 * 60;
+
+      $node = Node::load($nid);
+
+      // Only update is date is empty.
+      if ($node->field_oa_date->isEmpty()) {
+        $node->set('field_oa_date', [
+          'value' => gmdate(DateTimeItemInterface::DATETIME_STORAGE_FORMAT, $start_date),
+          'end_value' => gmdate(DateTimeItemInterface::DATETIME_STORAGE_FORMAT, $end_date),
+          'timezone' => 'UTC',
+        ]);
+
+        $node->save();
+
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Date added for "%s".', $nid)
+        );
+      }
+      else {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Skipping "%s".', $nid)
+        );
+      }
+    }
+
+    fclose($handle);
+  }
+}
+
+/**
+ * Add missing dates.
+ */
+function iasc_content_update_8023() {
+  $src = drupal_get_path('module', 'iasc_content') . '/missing-dates.csv';
+
+  if (($handle = fopen($src, "r")) !== FALSE) {
+    // Skip header line.
+    fgetcsv($handle, 1000, ",");
+
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $nid = $data[0];
+      $start_date = $data[2];
+      $end_date = $data[3];
+
+      $node = Node::load($nid);
+
+      // Only update is date is empty.
+      if ($node->field_oa_date->isEmpty()) {
+        $node->set('field_oa_date', [
+          'value' => gmdate(DateTimeItemInterface::DATETIME_STORAGE_FORMAT, $start_date),
+          'end_value' => gmdate(DateTimeItemInterface::DATETIME_STORAGE_FORMAT, $end_date),
+          'timezone' => 'UTC',
+        ]);
+
+        $node->save();
+
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Date added for "%s".', $nid)
+        );
+      }
+      else {
+        \Drupal::logger('iasc_content')->notice(
+          sprintf('Skipping "%s".', $nid)
+        );
+      }
+    }
+
+    fclose($handle);
+  }
 }
