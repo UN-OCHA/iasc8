@@ -607,7 +607,7 @@ function iasc_content_update_8020() {
 }
 
 /**
- * Change emailo field to email storage.
+ * Change email field to email storage.
  */
 function iasc_content_update_8021() {
   $entity_type = 'node';
