@@ -21,6 +21,7 @@ use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\entityqueue\Entity\EntitySubqueue;
 
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
@@ -177,7 +178,38 @@ function iasc_content_preprocess_paragraph(&$vars) {
       iasc_content_preprocess_paragraph_iasc_space_section_menu($vars);
       break;
 
+    case 'featured':
+      iasc_content_preprocess_paragraph_iasc_featured($vars);
+      break;
+
   }
+}
+
+/**
+ * Build features block.
+ */
+function iasc_content_preprocess_paragraph_iasc_featured(&$vars) {
+  $paragraph = $vars['paragraph'];
+  $items = [];
+
+  // Check for hero image.
+  if (!$paragraph->field_hero->isEmpty()) {
+    $items[] = $paragraph->field_hero->view('default');
+  }
+
+  // Render featured queue.
+  $entities = EntitySubqueue::load('featured')->get('items')->referencedEntities();
+  if (!empty($items)) {
+    array_pop($entities);
+  }
+
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+
+  foreach ($entities as $node) {
+    $items[] = $view_builder->view($node, 'featured');
+  }
+
+  $vars['items'] = $items;
 }
 
 /**
