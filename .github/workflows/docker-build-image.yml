@@ -5,6 +5,7 @@ on:
     branches:
       - develop
       - master
+      - feature/**
   release:
     types: [published]
 
@@ -21,7 +22,8 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
-        export DOCKER_TAG="${GITHUB_REF##*/}"
+        export DOCKER_TAG="${GITHUB_REF#refs/*/}"
+        export DOCKER_TAG="${DOCKER_TAG//[^[:alnum:].-]/-}"
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
         docker build \
             --build-arg BRANCH_ENVIRONMENT=${BRANCH_ENVIRONMENT} \
