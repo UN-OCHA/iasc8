@@ -37,7 +37,7 @@ jobs:
          . --file docker/Dockerfile --tag unocha/iasc-site:${DOCKER_TAG}
         docker push unocha/iasc-site:${DOCKER_TAG}
     - name: Flowdock Notify
-      uses: docker://unocha/actions/flowdock-notify:v3
+      uses: docker://unocha/actions:flowdock-notify-v3
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
