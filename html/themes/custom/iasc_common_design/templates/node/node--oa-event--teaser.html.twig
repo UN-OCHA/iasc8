@@ -89,30 +89,32 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ content.field_oa_date }}
+  {% if content.field_oa_date|render %}
+    <div class="cd-article-teaser__image">
+      {{ content.field_oa_date }}
+    </div>
+  {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
+  <div class="cd-article-teaser__container">
 
     {{ title_prefix }}
     {% if label and not page %}
-      <h3{{ title_attributes }}>
+      <h3{{ title_attributes.addClass('cd-article-teaser__title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
 
-    {% if display_submitted %}
-      <footer class="node__meta">
-        {{ author_picture }}
-        <div{{ author_attributes.addClass('node__submitted') }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          {{ metadata }}
-        </div>
-      </footer>
-    {% endif %}
+    <div{{ content_attributes.addClass('cd-article-teaser__description node__content') }}>
+    {{ content|without('field_published_date','field_oa_date', 'body') }}
+      {% set contentBody %}
+        {{ content.body }}
+      {% endset %}
+      {{ contentBody|striptags }}
 
-    {{ content|without('field_published_date','field_oa_date') }}
-    <div class="cd-date-time">{{ event_time.output }}</div>
+      <div class="cd-date-time">{{ event_time.output }}</div>
+    </div>
+
   </div>
 
 </article>
