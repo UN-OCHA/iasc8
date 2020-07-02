@@ -1,10 +1,10 @@
 .node--type-oa-event {
 
   &.node--view-mode-teaser {
-    padding-left: 100px;
-    margin-bottom: 40px;
-    min-height: 80px; // Height of calendar
-    position: relative;
+    .cd-article-teaser__image {
+      min-height: 80px; // Height of calendar
+      position: relative;
+    }
 
     .cd-date {
       position: absolute;

@@ -76,6 +76,7 @@
         "drupal/select2": "^1.6",
         "drupal/social_auth_hid": "^2.2",
         "drupal/spamspan": "^1.2",
+        "drupal/stage_file_proxy": "^1.0",
         "drupal/tablefield": "^2.1",
         "drupal/token": "^1.5",
         "drupal/variationcache": "^1.0",
