@@ -13,7 +13,10 @@ use Drupal\node\Entity\Node;
  */
 class HeroToAnnouncement {
 
-  static function convert(HeroInterface $hero) {
+  /**
+   * Convert hero entity to announcement.
+   */
+  public static function convert(HeroInterface $hero) {
     // Create new node.
     $data = [
       'status' => 0,
@@ -22,7 +25,7 @@ class HeroToAnnouncement {
       'field_published_date' => '',
       'body' => '',
       'field_thumbnail' => '',
-      'revision_log' => 'Converted from hero.'
+      'revision_log' => 'Converted from hero.',
     ];
 
     if (!$hero->get('field_hero_date')->isEmpty()) {
@@ -44,12 +47,12 @@ class HeroToAnnouncement {
 
     // Output message and link.
     $link = Link::fromTextAndUrl('you can edit it', $node->toUrl('edit-form'));
-    return array(
+    return [
       '#markup' => t('Hero %title has been converted, but is not published by default, %link.', [
         '%title' => $hero->label(),
         '%link' => $link->toString(),
       ]),
-    );
+    ];
   }
 
 }
