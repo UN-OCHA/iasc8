@@ -201,6 +201,10 @@ function iasc_content_preprocess_paragraph_iasc_featured(&$vars) {
   $entities = EntitySubqueue::load('featured')->get('items')->referencedEntities();
   if (!empty($items)) {
     array_pop($entities);
+    $entities = array_slice($entities, 0, 3);
+  }
+  else {
+    $entities = array_slice($entities, 0, 4);
   }
 
   $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
