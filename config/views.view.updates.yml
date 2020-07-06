@@ -5,11 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - core.entity_view_mode.node.title
+    - entityqueue.entity_queue.featured
     - field.storage.node.body
     - node.type.announcement
     - node.type.oa_event
     - node.type.oa_wiki_page
   module:
+    - entityqueue
     - node
     - text
     - user
@@ -495,6 +497,8 @@ display:
         filters: false
         filter_groups: false
         title: false
+        sorts: false
+        relationships: false
       filters:
         status:
           value: '1'
@@ -606,6 +610,62 @@ display:
         groups:
           1: AND
       title: Featured
+      sorts:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          plugin_id: entity_queue_position
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content queue'
+          required: true
+          limit_queue: featured
+          entity_type: node
+          plugin_id: entity_queue
     cache_metadata:
       max-age: -1
       contexts:
@@ -616,7 +676,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:entityqueue.entity_queue.featured'
         - 'config:field.storage.node.body'
+        - entity_field_info
+        - views_data
   page_updates:
     display_plugin: page
     id: page_updates
