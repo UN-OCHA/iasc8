@@ -34,6 +34,10 @@ class HeroToAnnouncement {
       ];
     }
 
+    if (!$hero->get('field_hero_heading')->isEmpty()) {
+      $data['title'] = $hero->get('field_hero_heading')->first()->getValue();
+    }
+
     if (!$hero->get('field_hero_description')->isEmpty()) {
       $data['body'] = $hero->get('field_hero_description')->first()->getValue();
     }
