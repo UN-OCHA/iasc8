@@ -14,8 +14,6 @@ entity_settings:
   handler_settings:
     target_bundles:
       announcement: announcement
-      oa_wiki_page: oa_wiki_page
-      oa_event: oa_event
     sort:
       field: _none
     auto_create: false
