@@ -1,0 +1,27 @@
+uuid: 1ba5c04a-0111-47e8-9159-27a2e1cd66a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured.field_hero
+    - paragraphs.paragraphs_type.featured
+  module:
+    - select2
+id: paragraph.featured.default
+targetEntityType: paragraph
+bundle: featured
+mode: default
+content:
+  field_hero:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      autocomplete: false
+      width: 100%
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true

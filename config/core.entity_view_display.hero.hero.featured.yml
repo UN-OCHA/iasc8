@@ -1,0 +1,65 @@
+uuid: 2b0990b2-998b-451e-b7a4-34faf203eb8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.hero.featured
+    - field.field.hero.hero.field_hero_caption
+    - field.field.hero.hero.field_hero_date
+    - field.field.hero.hero.field_hero_description
+    - field.field.hero.hero.field_hero_heading
+    - field.field.hero.hero.field_hero_image
+    - field.field.hero.hero.field_hero_link
+    - image.style.medium
+  module:
+    - iasc_hero
+    - link
+    - media
+id: hero.hero.featured
+targetEntityType: hero
+bundle: hero
+mode: featured
+content:
+  field_hero_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hero_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hero_image:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_hero_caption: true
+  field_hero_date: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  user_id: true

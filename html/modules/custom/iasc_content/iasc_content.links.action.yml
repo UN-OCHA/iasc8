@@ -1,0 +1,6 @@
+iasc_content.hero_to_content:
+  route_name: iasc_content.hero_to_announcement
+  title: 'Convert to announcement'
+  appears_on:
+    - entity.hero.canonical
+    - entity.hero.edit_form
