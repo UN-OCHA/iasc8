@@ -495,6 +495,8 @@ display:
         filters: false
         filter_groups: false
         title: false
+        sorts: false
+        relationships: false
       filters:
         status:
           value: '1'
@@ -606,6 +608,38 @@ display:
         groups:
           1: AND
       title: Featured
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:

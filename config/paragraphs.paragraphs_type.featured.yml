@@ -1,0 +1,10 @@
+uuid: a47feb60-afed-4c3e-8896-e38c532ad4d7
+langcode: en
+status: true
+dependencies: {  }
+id: featured
+label: Featured
+icon_uuid: null
+icon_default: null
+description: 'Featured announcements with optional hero'
+behavior_plugins: {  }

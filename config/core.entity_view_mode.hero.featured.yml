@@ -1,0 +1,10 @@
+uuid: c9a64625-88ff-4b11-8552-3ab0a3ef31a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - iasc_hero
+id: hero.featured
+label: Featured
+targetEntityType: hero
+cache: true

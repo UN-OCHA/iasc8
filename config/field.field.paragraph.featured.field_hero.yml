@@ -1,0 +1,25 @@
+uuid: b4a302f1-fa8e-4eb0-ab75-df023cf9ca08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero
+    - paragraphs.paragraphs_type.featured
+id: paragraph.featured.field_hero
+field_name: field_hero
+entity_type: paragraph
+bundle: featured
+label: Hero
+description: 'Optional hero item displayed to the left'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:hero'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

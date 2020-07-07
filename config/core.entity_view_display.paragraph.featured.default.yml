@@ -1,0 +1,23 @@
+uuid: a9326684-a945-4ae9-a5ae-e5bc3fb4b455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured.field_hero
+    - paragraphs.paragraphs_type.featured
+id: paragraph.featured.default
+targetEntityType: paragraph
+bundle: featured
+mode: default
+content:
+  field_hero:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true
