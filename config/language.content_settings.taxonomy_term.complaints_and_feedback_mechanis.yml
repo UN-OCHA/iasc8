@@ -1,0 +1,11 @@
+uuid: 8e884386-4969-41af-9bce-33147ae9872b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.complaints_and_feedback_mechanis
+id: taxonomy_term.complaints_and_feedback_mechanis
+target_entity_type_id: taxonomy_term
+target_bundle: complaints_and_feedback_mechanis
+default_langcode: site_default
+language_alterable: false

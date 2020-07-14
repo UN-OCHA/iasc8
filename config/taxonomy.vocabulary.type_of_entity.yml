@@ -1,0 +1,8 @@
+uuid: 039e6c93-8dd4-4f7b-b1c2-1c61f9d081bc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Type of Entity'
+vid: type_of_entity
+description: ''
+weight: 0

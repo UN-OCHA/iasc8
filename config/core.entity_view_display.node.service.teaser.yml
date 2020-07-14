@@ -1,0 +1,46 @@
+uuid: a87b7ddc-8602-4695-95ec-fd2978b47f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service.field_agency_initiative_or_group
+    - field.field.node.service.field_complaints_and_feedback
+    - field.field.node.service.field_description
+    - field.field.node.service.field_global_focal_point
+    - field.field.node.service.field_interest
+    - field.field.node.service.field_kind_of_data
+    - field.field.node.service.field_service_coverage
+    - field.field.node.service.field_service_description
+    - field.field.node.service.field_services
+    - field.field.node.service.field_share_data
+    - field.field.node.service.field_type_of_entity
+    - field.field.node.service.field_updated
+    - node.type.service
+  module:
+    - user
+id: node.service.teaser
+targetEntityType: node
+bundle: service
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_agency_initiative_or_group: true
+  field_complaints_and_feedback: true
+  field_description: true
+  field_global_focal_point: true
+  field_interest: true
+  field_kind_of_data: true
+  field_service_coverage: true
+  field_service_description: true
+  field_services: true
+  field_share_data: true
+  field_type_of_entity: true
+  field_updated: true
+  langcode: true
+  search_api_excerpt: true

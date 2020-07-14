@@ -1,0 +1,11 @@
+uuid: b6bcef57-afc8-494d-b2da-4f91715ef540
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.interest
+id: taxonomy_term.interest
+target_entity_type_id: taxonomy_term
+target_bundle: interest
+default_langcode: site_default
+language_alterable: false

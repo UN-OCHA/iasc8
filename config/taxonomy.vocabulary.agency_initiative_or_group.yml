@@ -1,0 +1,8 @@
+uuid: cedf7784-8ac6-4dfd-9299-e98a5237f9b8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Agency, Initiative or Group'
+vid: agency_initiative_or_group
+description: ''
+weight: 0
