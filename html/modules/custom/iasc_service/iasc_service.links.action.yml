@@ -1,0 +1,7 @@
+iasc_service.iasc_service_create_template:
+  title: Create Template
+  description: Create Template xlsx file
+  route_name: iasc_service.iasc_service_create_template
+  appears_on:
+    - iasc_service.iasc_service_bulk_import
+  weight: 15

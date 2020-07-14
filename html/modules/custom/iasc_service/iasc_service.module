@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * OCHA Assessments.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\ocha_persons\Entity\PersonEntity;
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function ocha_assessments_field_widget_info_alter(array &$info) {
+  $info['select2']['field_types'][] = 'ocha_countries';
+  $info['select2']['field_types'][] = 'ocha_disasters';
+  $info['select2']['field_types'][] = 'ocha_local_groups';
+  $info['select2']['field_types'][] = 'ocha_organizations';
+  $info['select2']['field_types'][] = 'ocha_themes';
+  $info['select2']['field_types'][] = 'ocha_population_type';
+  $info['select2']['field_types'][] = 'ocha_global_coordination_groups';
+
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_countries';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_disasters';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_local_groups';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_organizations';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_themes';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_population_type';
+  $info['custom_widgets_text_autocomplete']['field_types'][] = 'ocha_global_coordination_groups';
+}
+
+/**
+ * Get a variable.
+ */
+function ocha_assessments_variable_get($key, $default) {
+  if (Drupal::state()->get($key)) {
+    return Drupal::state()->get($key);
+  }
+
+  return $default;
+}
+
+/**
+ * Set a variable.
+ */
+function ocha_assessments_variable_set($key, $value) {
+  Drupal::state()->set($key, $value);
+}
+
+/**
+ * Wrapper around log function.
+ */
+function ocha_assessments_log($message) {
+  if (function_exists('drush_log')) {
+    drush_log($message);
+  }
+  else {
+    \Drupal::logger('ocha_assessments')->notice($message);
+  }
+}
