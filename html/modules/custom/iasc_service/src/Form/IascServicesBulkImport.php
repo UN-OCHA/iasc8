@@ -202,9 +202,100 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode('|', $item['agency, initiative or group']));
       foreach ($values as $input) {
         $data['field_agency_initiative_or_group'][] = [
-          'value' => $this->extractIdFromInput($input, 'agency_initiative_or_group'),
+          'target_id' => $this->extractIdFromInput($input, 'agency_initiative_or_group'),
         ];
       }
+    }
+
+    // Type of Entity.
+    if (isset($item['type of entity']) && !empty($item['type of entity'])) {
+      // Split and trim.
+      $values = array_map('trim', explode('|', $item['type of entity']));
+      foreach ($values as $input) {
+        $data['field_type_of_entity'][] = [
+          'target_id' => $this->extractIdFromInput($input, 'type_of_entity'),
+        ];
+      }
+    }
+
+    // Services.
+    if (isset($item['services']) && !empty($item['services'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(',', $item['services']));
+      foreach ($values as $input) {
+        $data['field_services'][] = [
+          'target_id' => $this->extractIdFromInput($input, 'services'),
+        ];
+      }
+    }
+
+    // Service Description.
+    if (isset($item['service description']) && !empty($item['service description'])) {
+      $data['field_service_description'][] = [
+        'value' => trim($item['service description']),
+      ];
+    }
+
+    // Service Coverage.
+    if (isset($item['service coverage']) && !empty($item['service coverage'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(',', $item['service coverage']));
+      foreach ($values as $input) {
+        $data['field_service_coverage'][] = [
+          'target_id' => $this->extractIdFromInput($input, 'service_coverage'),
+        ];
+      }
+    }
+
+    // Global Focal Point.
+
+    // Complaints and feedback mechanism (CFM).
+    if (isset($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']) && !empty($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?'])) {
+      // Trim.
+      $value = trim($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']);
+      foreach ($values as $input) {
+        $data['field_complaints_and_feedback'][] = [
+          'target_id' => $this->extractIdFromInput($value, 'complaints_and_feedback_mechanis'),
+        ];
+      }
+    }
+
+    // The entity I am representing may be interested in.
+    if (isset($item['please select any that may apply. "the entity i am representing may be interested in..."']) && !empty($item['please select any that may apply. "the entity i am representing may be interested in..."'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(',', $item['please select any that may apply. "the entity i am representing may be interested in..."']));
+      foreach ($values as $input) {
+        $data['field_interest'][] = [
+          'target_id' => $this->extractIdFromInput($input, 'interest'),
+        ];
+      }
+    }
+
+    // Does your entity share data with the humanitarian community?.
+    if (isset($item['does your entity share data with the humanitarian community?']) && !empty($item['does your entity share data with the humanitarian community?'])) {
+      // Trim.
+      $value = trim($item['does your entity share data with the humanitarian community?']);
+      $data['field_share_data'][] = [
+        'target_id' => $this->extractIdFromInput($value, 'share_data'),
+      ];
+    }
+
+    // What kind of data do you collect that you share.
+    if (isset($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']) && !empty($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(',', $item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']));
+      foreach ($values as $input) {
+        $data['field_kind_of_data'][] = [
+          'target_id' => $this->extractIdFromInput($input, 'kind_of_data'),
+        ];
+      }
+    }
+
+    // Description.
+    if (isset($item['description']) && !empty($item['description'])) {
+      $data['field_description'][] = [
+        'value' => trim($item['description']),
+      ];
     }
 
     $node = Node::create($data);
@@ -224,7 +315,7 @@ class IascServicesBulkImport extends FormBase {
 
     if (!empty($existing)) {
       $term = reset($existing);
-      return $term->tid;
+      return $term->tid->value;
     }
 
     $data = [
@@ -236,7 +327,7 @@ class IascServicesBulkImport extends FormBase {
     $term = Term::create($data);
     $term->save();
 
-    return $term->tid;
+    return $term->tid->value;
   }
 
   /**
