@@ -6,10 +6,8 @@ use Drupal\Core\File\FileSystem;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use PhpOffice\PhpSpreadsheet\Cell\DataValidation;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PhpOffice\PhpSpreadsheet\Style\Protection;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx as XlsxWriter;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Response;
@@ -82,26 +80,22 @@ class IascServicesCreateTemplate extends FormBase {
     $reader->setReadDataOnly(FALSE);
     $spreadsheet = $reader->load($filename);
 
-    // Set title.
-    $worksheet = $spreadsheet->getSheetByName('Assessments');
-    $worksheet->getCell('C2')->setValue('Services');
-
     // Protect headers.
     $spreadsheet->getDefaultStyle()->getProtection()->setLocked(TRUE);
-    $worksheet = $spreadsheet->getSheetByName('Assessments');
+    $worksheet = $spreadsheet->getSheetByName('Services');
     $worksheet->getProtection()
       ->setSheet(TRUE)
       ->setInsertColumns(TRUE)
       ->setInsertRows(TRUE)
       ->setFormatCells(TRUE);
-    $worksheet->getStyle('A9:X999')->getProtection()->setLocked(Protection::PROTECTION_UNPROTECTED);
+    $worksheet->getStyle('A2:X999')->getProtection()->setLocked(Protection::PROTECTION_UNPROTECTED);
 
     // Freeze.
-    $worksheet = $spreadsheet->getSheetByName('Assessments');
+    $worksheet = $spreadsheet->getSheetByName('Services');
     $worksheet->freezePane('A2');
 
     // Set focus to main sheet.
-    $spreadsheet->setActiveSheetIndexByName('Assessments');
+    $spreadsheet->setActiveSheetIndexByName('Services');
 
     // Set metadata.
     $spreadsheet->getProperties()

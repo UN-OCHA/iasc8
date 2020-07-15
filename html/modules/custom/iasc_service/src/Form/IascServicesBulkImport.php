@@ -7,8 +7,6 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileSystem;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\node\Entity\Node;
-use Drupal\taxonomy\Entity\Term;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -42,9 +40,9 @@ class IascServicesBulkImport extends FormBase {
   /**
    * Class constructor.
    */
-  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityQuery) {
+  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityTypeManager) {
     $this->fileSystem = $fileSystem;
-    $this->entityQuery = $entityQuery;
+    $this->entityTypeManager = $entityTypeManager;
   }
 
   /**
@@ -105,7 +103,7 @@ class IascServicesBulkImport extends FormBase {
 
     $reader = new Xlsx();
     $reader->setReadDataOnly(TRUE);
-    $reader->setLoadSheetsOnly(['Assessments']);
+    $reader->setLoadSheetsOnly(['Services']);
     $spreadsheet = $reader->load($filename);
 
     $header = [];
@@ -167,21 +165,6 @@ class IascServicesBulkImport extends FormBase {
       'field_kind_of_data' => [],
     ];
 
-    /*
-    Updated
-    Agency, Initiative or Group
-    Type of Entity
-    Services
-    Service Description
-    Service Coverage
-    Global Focal Point
-    Does your entity usually implement a complaints and feedback mechanism (CFM) for programs at the country level?
-    Please select any that may apply. "The entity I am representing may be interested in..."
-    Does your entity share data with the humanitarian community?
-    What kind of data do you collect that you share/may be interested in sharing for the purposes of collective AAP?
-    Description
-    */
-
     // Updated.
     if (isset($item['updated']) && !empty($item['updated'])) {
       if (strpos($item['updated'], '-')) {
@@ -202,7 +185,7 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode('|', $item['agency, initiative or group']));
       foreach ($values as $input) {
         $data['field_agency_initiative_or_group'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'agency_initiative_or_group'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'agency_initiative_or_group'),
         ];
       }
     }
@@ -213,7 +196,7 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode('|', $item['type of entity']));
       foreach ($values as $input) {
         $data['field_type_of_entity'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'type_of_entity'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'type_of_entity'),
         ];
       }
     }
@@ -224,7 +207,7 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode(',', $item['services']));
       foreach ($values as $input) {
         $data['field_services'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'services'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'services'),
         ];
       }
     }
@@ -242,22 +225,27 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode(',', $item['service coverage']));
       foreach ($values as $input) {
         $data['field_service_coverage'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'service_coverage'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'service_coverage'),
         ];
       }
     }
 
     // Global Focal Point.
+    if (isset($item['global focal point']) && !empty($item['global focal point'])) {
+      // Trim.
+      $value = trim($item['global focal point']);
+      $data['field_global_focal_point'][] = [
+        'target_id' => $this->fetchOrCreateContact($value),
+      ];
+    }
 
     // Complaints and feedback mechanism (CFM).
     if (isset($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']) && !empty($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?'])) {
       // Trim.
       $value = trim($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']);
-      foreach ($values as $input) {
-        $data['field_complaints_and_feedback'][] = [
-          'target_id' => $this->extractIdFromInput($value, 'complaints_and_feedback_mechanis'),
-        ];
-      }
+      $data['field_complaints_and_feedback'][] = [
+        'target_id' => $this->fetchOrCreateTerm($value, 'complaints_and_feedback_mechanis'),
+      ];
     }
 
     // The entity I am representing may be interested in.
@@ -266,7 +254,7 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode(',', $item['please select any that may apply. "the entity i am representing may be interested in..."']));
       foreach ($values as $input) {
         $data['field_interest'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'interest'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'interest'),
         ];
       }
     }
@@ -276,7 +264,7 @@ class IascServicesBulkImport extends FormBase {
       // Trim.
       $value = trim($item['does your entity share data with the humanitarian community?']);
       $data['field_share_data'][] = [
-        'target_id' => $this->extractIdFromInput($value, 'share_data'),
+        'target_id' => $this->fetchOrCreateTerm($value, 'share_data'),
       ];
     }
 
@@ -286,7 +274,7 @@ class IascServicesBulkImport extends FormBase {
       $values = array_map('trim', explode(',', $item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']));
       foreach ($values as $input) {
         $data['field_kind_of_data'][] = [
-          'target_id' => $this->extractIdFromInput($input, 'kind_of_data'),
+          'target_id' => $this->fetchOrCreateTerm($input, 'kind_of_data'),
         ];
       }
     }
@@ -298,14 +286,14 @@ class IascServicesBulkImport extends FormBase {
       ];
     }
 
-    $node = Node::create($data);
+    $node = $this->entityTypeManager->getStorage('node')->create($data);
     $node->save();
   }
 
   /**
-   * Extract Id from input string.
+   * Fetch or create term.
    */
-  protected function extractIdFromInput($input, $vocabulary) {
+  protected function fetchOrCreateTerm($input, $vocabulary) {
     $short_name = $input;
     if (mb_strlen($input) > 250) {
       $short_name = Unicode::truncate($input, 250, TRUE, TRUE);
@@ -324,47 +312,45 @@ class IascServicesBulkImport extends FormBase {
       'description' => $input,
     ];
 
-    $term = Term::create($data);
+    $term = $this->entityTypeManager->getStorage('taxonomy_term')->create($data);
     $term->save();
 
     return $term->tid->value;
   }
 
   /**
-   * Create contact using HID Id.
+   * Fetch or create contact.
    */
-  protected function addPerson($name, $email, $tel) {
-    // Email and tel can be multivalue.
-    $email = str_replace(['&', 'and'], '|', $email);
-    $tel = str_replace(['&', 'and'], '|', $tel);
-
-    $emails = explode('|', $email);
-    $tels = explode('|', $tel);
-
-    $existing_person_id = FALSE;
-    foreach ($emails as $e) {
-      $e = trim($e);
-      $existing_person_id = $this->lookupPersonByEmail($e);
-      if ($existing_person_id) {
-        return $existing_person_id;
-      }
+  protected function fetchOrCreateContact($email) {
+    $existing_contact_id = $this->lookupPersonByEmail($email);
+    if ($existing_contact_id) {
+      return $existing_contact_id;
     }
 
     // Create new person.
-    $data['name'] = $name;
+    $data = [
+      'type' => 'contact',
+      'title' => $email,
+      'field_email' => [],
+    ];
 
-    $person = Node::create($data);
-    $person->save();
+    $data['field_email'][] = [
+      'value' => $email,
+    ];
 
-    return $person->id();
+    $contact = $this->entityTypeManager->getStorage('node')->create($data);
+    $contact->save();
+
+    return $contact->id();
   }
 
   /**
    * Lookup contact using email.
    */
   protected function lookupPersonByEmail($email) {
-    $query = $this->entityQuery
-      ->get('person_entity')
+    $query = $this->entityTypeManager->getStorage('node')
+      ->getQuery()
+      ->condition('type', 'contact')
       ->condition('field_email', $email);
     $entity_ids = $query->execute();
 
