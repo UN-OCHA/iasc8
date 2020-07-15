@@ -50,6 +50,7 @@ module:
   iasc_content: 0
   iasc_hero: 0
   iasc_reliefweb: 0
+  iasc_service: 0
   image: 0
   language: 0
   layout_discovery: 0
@@ -80,6 +81,7 @@ module:
   search_api_solr_admin: 0
   select2: 0
   select2_facets: 0
+  select_or_other: 0
   shortcut: 0
   social_api: 0
   social_auth: 0
