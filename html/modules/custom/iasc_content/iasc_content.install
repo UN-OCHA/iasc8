@@ -717,3 +717,33 @@ function iasc_content_update_8023() {
     fclose($handle);
   }
 }
+
+/**
+ * Change email field to email storage.
+ */
+function iasc_content_update_8024() {
+  \Drupal::database()->query('ALTER TABLE node__field_email MODIFY field_email_value varchar(254) NOT NULL');
+  \Drupal::database()->query('ALTER TABLE node_revision__field_email MODIFY field_email_value varchar(254) NOT NULL');
+
+  $entity_type = 'node';
+  $field_name = 'field_email';
+
+  $name = 'field.storage.' . $entity_type . '.' . $field_name;
+
+  // Get the current settings.
+  $result = \Drupal::database()->query('SELECT data FROM {config} WHERE name = :name', [
+    ':name' => $name,
+  ])->fetchField();
+
+  $data = unserialize($result);
+  $data['type'] = 'email';
+  $data['settings'] = [
+    'length' => 254,
+  ];
+
+  // Write settings back to the database.
+  \Drupal::database()->update('config')
+    ->fields(['data' => serialize($data)])
+    ->condition('name', $name)
+    ->execute();
+}
