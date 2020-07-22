@@ -1,0 +1,29 @@
+uuid: 99a990e4-bc78-4c2e-a3f6-ed6a0c135997
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.aap_agency_initiative_or_group
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: agencyinitiativeorgroup
+theme: iasc_common_design
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:aap_agency_initiative_or_group'
+settings:
+  id: 'facet_block:aap_agency_initiative_or_group'
+  label: 'Agency, Initiative or Group'
+  provider: facets
+  label_display: visible
+  block_id: agencyinitiativeorgroup
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }

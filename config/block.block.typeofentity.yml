@@ -1,0 +1,29 @@
+uuid: 6638855f-16cf-460f-af36-9acf8ba914e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.aap_type_of_entity
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: typeofentity
+theme: iasc_common_design
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:aap_type_of_entity'
+settings:
+  id: 'facet_block:aap_type_of_entity'
+  label: 'Type of Entity'
+  provider: facets
+  label_display: visible
+  block_id: typeofentity
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }
