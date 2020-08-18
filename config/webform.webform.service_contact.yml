@@ -112,7 +112,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: message
   confirmation_title: ''
-  confirmation_message: 'You&#39;re request has been sent.'
+  confirmation_message: 'Your request has been sent.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -207,8 +207,8 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: _default
-      body: "<p>Submitted on [webform_submission:created]</p>\r\n\r\n<p>Submitted by: [webform_submission:user]</p>\r\n\r\n<p>Service: [site:url]/node/[webform_submission:submitted-to:nid]</p>\r\n\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
+      subject: 'Request for service access - [webform_submission:source-title]'
+      body: "<p>Submitted on [webform_submission:created]</p>\r\n\r\n<p>Submitted by: [webform_submission:user]</p>\r\n\r\n<p>Service: <a href=\"[site:url]node/[webform_submission:submitted-to:nid]\">[webform_submission:source-title]</a></p>\r\n\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
