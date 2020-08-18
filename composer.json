@@ -82,6 +82,7 @@
         "drupal/token": "^1.5",
         "drupal/variationcache": "^1.0",
         "drupal/viewsreference": "2.0-alpha6",
+        "drupal/webform": "^5.19",
         "drush/drush": "^9.0.0",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1",
