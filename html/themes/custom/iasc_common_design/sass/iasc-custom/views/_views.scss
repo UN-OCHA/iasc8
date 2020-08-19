@@ -53,3 +53,19 @@
     }
   }
 }
+
+// Services table
+.views-table {
+  @media (min-width: 576px) {
+    .views-field-field-service-coverage {
+      width: 30%;
+    }
+  }
+}
+
+// Adjust height to accommodate height of long th.
+@media (max-width: 575px) {
+  .cd-table--responsive td.views-field-field-share-data {
+    min-height: 8rem;
+  }
+}
