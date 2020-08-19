@@ -48,11 +48,13 @@
 %}
 <div{{ attributes.addClass(classes) }}>
 
-    {{ title_prefix }}
+  {{ title_prefix }}
+  {% if not page %}
     <h2{{ title_attributes.addClass('page-title') }}>
-      {{ label }}
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
-    {{ title_suffix }}
+  {% endif %}
+  {{ title_suffix }}
 
   <div{{ content_attributes.addClass('node__content') }}>
 
