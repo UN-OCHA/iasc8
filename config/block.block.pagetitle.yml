@@ -1,20 +1,18 @@
-uuid: 7f03ac4d-0d27-4c91-b6d5-2fcb436ac539
+uuid: ae082603-2a59-4c74-b491-f2958393e7a3
 langcode: en
 status: true
 dependencies:
   theme:
     - iasc_common_design
-id: tabs
+id: pagetitle
 theme: iasc_common_design
 region: content
-weight: -22
+weight: -21
 provider: null
-plugin: local_tasks_block
+plugin: page_title_block
 settings:
-  id: local_tasks_block
-  label: Tabs
+  id: page_title_block
+  label: 'Page title'
   provider: core
   label_display: '0'
-  primary: true
-  secondary: true
 visibility: {  }

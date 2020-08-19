@@ -492,7 +492,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
+            value: "\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
             format: full_html
           plugin_id: text
       exposed_block: false
@@ -940,7 +940,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h1 class=\"page-title\">IASC Products</h1>\r\n<p>\r\n\r\nIASC Products are guidelines, policies, tools and documents endorsed by the IASC and used to inform humanitarian preparedness and response activities both at global and field levels with ultimate goal of strengthening the effective of humanitarian action.\r\n</p><p>\r\nGiven the inclusive membership of the IASC, these products carry a very broad consensus within the humanitarian community and guide the work of many UN and Non-UN humanitarian partners.\r\n</p>"
+            value: "\r\n<p>\r\n\r\nIASC Products are guidelines, policies, tools and documents endorsed by the IASC and used to inform humanitarian preparedness and response activities both at global and field levels with ultimate goal of strengthening the effective of humanitarian action.\r\n</p><p>\r\nGiven the inclusive membership of the IASC, these products carry a very broad consensus within the humanitarian community and guide the work of many UN and Non-UN humanitarian partners.\r\n</p>"
             format: full_html
           plugin_id: text
     cache_metadata:

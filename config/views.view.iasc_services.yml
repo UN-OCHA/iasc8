@@ -350,6 +350,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: 'cd-table cd-table--row-numbers cd-table--responsive cd-table--striped'
     cache_metadata:
       max-age: -1
       contexts:
