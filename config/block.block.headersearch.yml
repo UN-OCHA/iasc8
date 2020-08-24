@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - iasc_content
-    - system
   theme:
     - iasc_common_design
 id: headersearch
@@ -18,9 +17,4 @@ settings:
   label: 'Header search'
   provider: iasc_content
   label_display: visible
-visibility:
-  request_path:
-    id: request_path
-    pages: ''
-    negate: true
-    context_mapping: {  }
+visibility: {  }

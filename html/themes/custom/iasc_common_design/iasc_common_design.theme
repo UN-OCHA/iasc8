@@ -124,33 +124,3 @@ function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variabl
     $suggestions[] = 'page__' . (string) $status_code;
   }
 }
-
-/**
- * Implements hook_form_alter().
- */
-function iasc_common_design_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $includeView = [
-    'disabled-views-exposed-form-iasc-services-page-1',
-  ];
-
-  // If in array above, add attributes for styling and behaviour.
-  // Replace $form['keys'] with the appropriate fulltext input eg. $form['search_api_fulltext'].
-  if (in_array($form['#id'], $includeView)) {
-    $form['#attributes']['class'][] = 'cd-search__form';
-    $form['#attributes']['aria-labelledby'][] = 'cd-search_btn';
-    $form['#attributes']['data-cd-toggable'][] = 'Search';
-    $form['#attributes']['data-cd-hidden'][] = 'true';
-    $form['#attributes']['data-cd-icon'][] = '';
-    $form['#attributes']['data-cd-component'][] = 'cd-search';
-    $form['#attributes']['data-cd-logo'][] = 'search';
-    $form['s']['#attributes']['placeholder'] = t('What are you looking for?');
-    $form['s']['#attributes']['class'][] = 'cd-search__input';
-    $form['s']['#attributes']['type'][] = 'search';
-    $form['s']['#attributes']['id'][] = 'cd-search';
-    $form['s']['#attributes']['autocomplete'][] = 'off';
-    // Theme suggestion for submit element.
-    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_submit';
-    $form['actions']['submit']['#attributes']['class'][] = 'cd-search__submit';
-    $form['actions']['submit']['#attributes']['value'][] = 'Search';
-  }
-}
