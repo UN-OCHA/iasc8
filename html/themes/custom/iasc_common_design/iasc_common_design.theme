@@ -130,7 +130,7 @@ function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variabl
  */
 function iasc_common_design_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $includeView = [
-    'views-exposed-form-iasc-services-page-1',
+    'disabled-views-exposed-form-iasc-services-page-1',
   ];
 
   // If in array above, add attributes for styling and behaviour.
