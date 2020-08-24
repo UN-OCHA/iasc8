@@ -38,10 +38,10 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
@@ -355,7 +355,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Search
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -376,7 +376,7 @@ display:
               space_super_admin: '0'
               focal_point: '0'
               iasc: '0'
-            placeholder: ''
+            placeholder: 'Search within AAP Service Directory'
           is_grouped: false
           group_info:
             label: ''
