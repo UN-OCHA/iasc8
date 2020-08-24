@@ -17,6 +17,7 @@ dependencies:
     - field.storage.node.field_type_of_entity
     - field.storage.node.field_kind_of_data
     - search_api.server.default_solr_server
+    - core.entity_view_mode.node.full
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -132,6 +133,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_type_of_entity
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          service: full
   title:
     label: Title
     datasource_id: 'entity:node'

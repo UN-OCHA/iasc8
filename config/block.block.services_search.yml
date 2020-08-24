@@ -1,26 +1,29 @@
-uuid: 638e105c-1c90-48f5-89a0-596976db5317
+uuid: a38c8e16-2d5a-4f78-bcb3-09d0fca4cafb
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.iasc_services
   module:
-    - iasc_content
     - system
+    - views
   theme:
     - iasc_common_design
-id: headersearch
+id: services_search
 theme: iasc_common_design
 region: header_search
 weight: 0
 provider: null
-plugin: iasc_header_search_block
+plugin: 'views_exposed_filter_block:iasc_services-page_1'
 settings:
-  id: iasc_header_search_block
-  label: 'Header search'
-  provider: iasc_content
+  id: 'views_exposed_filter_block:iasc_services-page_1'
+  label: ''
+  provider: views
   label_display: visible
+  views_label: ''
 visibility:
   request_path:
     id: request_path
     pages: "/services\r\n/services/*"
-    negate: true
+    negate: false
     context_mapping: {  }
