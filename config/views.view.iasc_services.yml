@@ -437,7 +437,7 @@ display:
         type: none
       defaults:
         cache: false
-      exposed_block: true
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:
