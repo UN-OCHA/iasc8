@@ -12,7 +12,7 @@ dependencies:
 id: theentityiamrepresentingmaybeinterestedin...
 theme: iasc_common_design
 region: sidebar_second
-weight: 0
+weight: 2
 provider: null
 plugin: 'facet_block:aap__interested'
 settings:

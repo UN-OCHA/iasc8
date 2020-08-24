@@ -11,7 +11,7 @@ dependencies:
 id: iasc_statements_audiencelabel
 theme: iasc_common_design
 region: sidebar_second
-weight: 0
+weight: 10
 provider: null
 plugin: 'facet_block:iasc_statements_audience_label'
 settings:

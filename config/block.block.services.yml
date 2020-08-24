@@ -12,7 +12,7 @@ dependencies:
 id: services
 theme: iasc_common_design
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'facet_block:aap_services'
 settings:
