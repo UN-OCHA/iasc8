@@ -5,9 +5,8 @@
 {% endblock %}
 
   {% block main %}
-    <main role="main" {{ attributes.addClass(layout_classes) }}>
-
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {# Link to skip to the main content is in html.html.twig #}
+    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
       <div class="cd-layout-content">
 
