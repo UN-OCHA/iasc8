@@ -33,7 +33,8 @@
 .view-iasc-group-content,
 .view-search-content,
 .view-updates,
-.view-resources {
+.view-resources,
+.view-iasc-services {
   .views-exposed-form .form--inline {
     display: flex;
     margin-bottom: 2rem;
@@ -43,9 +44,17 @@
       margin: 0;
     }
 
+    .form-text:focus {
+      outline: 2px solid $cd-bright-blue;
+    }
+
     .form-actions input[type='submit'] {
       line-height: 37px;
       padding: 0 1rem;
+    }
+
+    .form-actions input:focus {
+      outline: 2px solid $cd-bright-blue;
     }
 
     label {
