@@ -286,6 +286,36 @@ class IascServicesBulkImport extends FormBase {
       ];
     }
 
+    // Examples and Case Studies.
+    if (isset($item['examples and case studies']) && !empty($item['examples and case studies'])) {
+      $values = array_map('trim', explode(';', $item['examples and case studies']));
+      $data['field_examples_and_case_studies'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
+      ];
+    }
+
+    // Links to Relevant Docs.
+    if (isset($item['links to relevant docs']) && !empty($item['links to relevant docs'])) {
+      $values = array_map('trim', explode(';', $item['links to relevant docs']));
+      $data['field_links_to_relevant_docs'] = [];
+      foreach ($values as $input) {
+        // Split in title and URI.
+        $parts = explode(': ', $input);
+        if (count($parts) > 1) {
+          $data['field_links_to_relevant_docs'][] = [
+            'title' => $parts[0],
+            'uri' => $parts[1],
+          ];
+        }
+        else {
+          $data['field_links_to_relevant_docs'][] = [
+            'uri' => $input,
+          ];
+        }
+      }
+    }
+
     $node = $this->entityTypeManager->getStorage('node')->create($data);
     $node->save();
   }
