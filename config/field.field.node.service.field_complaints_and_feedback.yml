@@ -10,7 +10,7 @@ id: node.service.field_complaints_and_feedback
 field_name: field_complaints_and_feedback
 entity_type: node
 bundle: service
-label: 'Complaints and feedback mechanism'
+label: 'CFMs implemented at country level?'
 description: "Does your entity usually implement a complaints and feedback mechanism (CFM) for programs at the country level?\r\n"
 required: false
 translatable: false
