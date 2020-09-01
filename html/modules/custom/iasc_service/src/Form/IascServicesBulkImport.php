@@ -235,7 +235,7 @@ class IascServicesBulkImport extends FormBase {
       // Trim.
       $value = trim($item['global focal point']);
       $data['field_global_focal_point'][] = [
-        'target_id' => $this->fetchOrCreateContact($value),
+        'target_id' => $this->fetchOrCreateContact($value, $item),
       ];
     }
 
@@ -321,7 +321,7 @@ class IascServicesBulkImport extends FormBase {
   /**
    * Fetch or create contact.
    */
-  protected function fetchOrCreateContact($email) {
+  protected function fetchOrCreateContact($email, $item) {
     $existing_contact_id = $this->lookupPersonByEmail($email);
     if ($existing_contact_id) {
       return $existing_contact_id;
@@ -330,13 +330,40 @@ class IascServicesBulkImport extends FormBase {
     // Create new person.
     $data = [
       'type' => 'contact',
-      'title' => $email,
+      'title' => '',
       'field_email' => [],
+      'field_first_name' => [],
+      'field_last_name' => [],
+      'field_homepage' => [],
     ];
 
     $data['field_email'][] = [
       'value' => $email,
     ];
+
+    if (isset($item['first name']) && !empty($item['first name'])) {
+      $data['field_first_name'][] = [
+        'value' => trim($item['first name']),
+      ];
+      $data['title'] = trim($item['first name']);
+    }
+
+    if (isset($item['last name']) && !empty($item['last name'])) {
+      $data['field_last_name'][] = [
+        'value' => trim($item['last name']),
+      ];
+      $data['title'] .= empty($data['title']) ? trim($item['last name']) : (' ' . trim($item['last name']));
+    }
+
+    if (isset($item['website']) && !empty($item['website'])) {
+      $data['field_homepage'][] = [
+        'uri' => trim($item['website']),
+      ];
+    }
+
+    if (empty($data['title'])) {
+      $data['title'] = $email;
+    }
 
     $contact = $this->entityTypeManager->getStorage('node')->create($data);
     $contact->save();
