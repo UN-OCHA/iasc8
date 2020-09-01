@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.service.field_agency_initiative_or_group
     - field.field.node.service.field_complaints_and_feedback
     - field.field.node.service.field_description
+    - field.field.node.service.field_examples_and_case_studies
     - field.field.node.service.field_global_focal_point
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
+    - field.field.node.service.field_links_to_relevant_docs
     - field.field.node.service.field_service_coverage
     - field.field.node.service.field_service_description
     - field.field.node.service.field_services
@@ -33,9 +35,11 @@ hidden:
   field_agency_initiative_or_group: true
   field_complaints_and_feedback: true
   field_description: true
+  field_examples_and_case_studies: true
   field_global_focal_point: true
   field_interest: true
   field_kind_of_data: true
+  field_links_to_relevant_docs: true
   field_service_coverage: true
   field_service_description: true
   field_services: true

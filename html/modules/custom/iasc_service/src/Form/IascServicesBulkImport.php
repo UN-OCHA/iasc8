@@ -235,7 +235,7 @@ class IascServicesBulkImport extends FormBase {
       // Trim.
       $value = trim($item['global focal point']);
       $data['field_global_focal_point'][] = [
-        'target_id' => $this->fetchOrCreateContact($value),
+        'target_id' => $this->fetchOrCreateContact($value, $item),
       ];
     }
 
@@ -286,6 +286,36 @@ class IascServicesBulkImport extends FormBase {
       ];
     }
 
+    // Examples and Case Studies.
+    if (isset($item['examples and case studies']) && !empty($item['examples and case studies'])) {
+      $values = array_map('trim', explode(';', $item['examples and case studies']));
+      $data['field_examples_and_case_studies'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
+      ];
+    }
+
+    // Links to Relevant Docs.
+    if (isset($item['links to relevant docs']) && !empty($item['links to relevant docs'])) {
+      $values = array_map('trim', explode(';', $item['links to relevant docs']));
+      $data['field_links_to_relevant_docs'] = [];
+      foreach ($values as $input) {
+        // Split in title and URI.
+        $parts = explode(': ', $input);
+        if (count($parts) > 1) {
+          $data['field_links_to_relevant_docs'][] = [
+            'title' => $parts[0],
+            'uri' => $parts[1],
+          ];
+        }
+        else {
+          $data['field_links_to_relevant_docs'][] = [
+            'uri' => $input,
+          ];
+        }
+      }
+    }
+
     $node = $this->entityTypeManager->getStorage('node')->create($data);
     $node->save();
   }
@@ -321,7 +351,7 @@ class IascServicesBulkImport extends FormBase {
   /**
    * Fetch or create contact.
    */
-  protected function fetchOrCreateContact($email) {
+  protected function fetchOrCreateContact($email, $item) {
     $existing_contact_id = $this->lookupPersonByEmail($email);
     if ($existing_contact_id) {
       return $existing_contact_id;
@@ -330,13 +360,40 @@ class IascServicesBulkImport extends FormBase {
     // Create new person.
     $data = [
       'type' => 'contact',
-      'title' => $email,
+      'title' => '',
       'field_email' => [],
+      'field_first_name' => [],
+      'field_last_name' => [],
+      'field_homepage' => [],
     ];
 
     $data['field_email'][] = [
       'value' => $email,
     ];
+
+    if (isset($item['first name']) && !empty($item['first name'])) {
+      $data['field_first_name'][] = [
+        'value' => trim($item['first name']),
+      ];
+      $data['title'] = trim($item['first name']);
+    }
+
+    if (isset($item['last name']) && !empty($item['last name'])) {
+      $data['field_last_name'][] = [
+        'value' => trim($item['last name']),
+      ];
+      $data['title'] .= empty($data['title']) ? trim($item['last name']) : (' ' . trim($item['last name']));
+    }
+
+    if (isset($item['website']) && !empty($item['website'])) {
+      $data['field_homepage'][] = [
+        'uri' => trim($item['website']),
+      ];
+    }
+
+    if (empty($data['title'])) {
+      $data['title'] = $email;
+    }
 
     $contact = $this->entityTypeManager->getStorage('node')->create($data);
     $contact->save();
