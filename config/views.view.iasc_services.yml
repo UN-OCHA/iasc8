@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_service_coverage
     - field.storage.node.field_share_data
     - search_api.index.services
+  content:
+    - 'node:oa_wiki_page:002d2759-2f43-4e20-9288-439e9326190f'
   module:
     - search_api
 id: iasc_services
@@ -396,19 +398,19 @@ display:
       sorts: {  }
       title: Services
       header:
-        area:
-          id: area
+        entity_node:
+          id: entity_node
           table: views
-          field: area
+          field: entity_node
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: false
-          content:
-            value: '<h1>Accountability to Affected Populations (AAP) Services Directory</h1>'
-            format: full_html
-          plugin_id: text
+          tokenize: true
+          target: 002d2759-2f43-4e20-9288-439e9326190f
+          view_mode: no_title
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
       empty: {  }
       relationships: {  }
