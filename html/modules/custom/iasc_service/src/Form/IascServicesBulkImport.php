@@ -65,6 +65,17 @@ class IascServicesBulkImport extends FormBase {
       '#description' => $this->t('Excel file containing services to import'),
     ];
 
+    $form['strategy'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Import strategy'),
+      '#required' => TRUE,
+      '#options' => [
+        'overwrite' => $this->t('Remove all services first'),
+        'append' => $this->t('Append services'),
+      ],
+      '#default_value' => 'append',
+    ];
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
@@ -97,6 +108,10 @@ class IascServicesBulkImport extends FormBase {
     $file = file_save_upload('xlsx_file', $validators, FALSE, 0);
     if (!$file) {
       return;
+    }
+
+    if ($form_state->getValue('strategy') === 'overwrite') {
+      $this->deleteContent();
     }
 
     $filename = $this->fileSystem->realpath($file->destination);
@@ -138,6 +153,20 @@ class IascServicesBulkImport extends FormBase {
         $this->createService($data);
       }
     }
+  }
+
+  /**
+   * Clear extract content and theme terms before import.
+   */
+  private function deleteContent() {
+    $entities = $this->entityTypeManager->getStorage('node')->loadByProperties(['type' => 'service']);
+    $this->entityTypeManager->getStorage('node')->delete($entities);
+
+    $message = $this->t('Removed @count_nodes services.', [
+      '@count_nodes' => count($entities),
+    ]);
+
+    $this->messenger()->addMessage($message);
   }
 
   /**
