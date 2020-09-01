@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_share_data
     - search_api.index.services
   content:
-    - 'node:oa_wiki_page:002d2759-2f43-4e20-9288-439e9326190f'
+    - 'node:panopoly_page:c8dc7780-4775-4a75-a4dc-9b4093ef607d'
   module:
     - search_api
 id: iasc_services
@@ -407,7 +407,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: true
-          target: 002d2759-2f43-4e20-9288-439e9326190f
+          target: c8dc7780-4775-4a75-a4dc-9b4093ef607d
           view_mode: no_title
           bypass_access: false
           plugin_id: entity
