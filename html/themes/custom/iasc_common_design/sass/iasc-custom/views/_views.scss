@@ -63,6 +63,22 @@
   }
 }
 
+.region-sidebar-second {
+  .views-exposed-form .form--inline {
+    .form-item {
+      max-width: 285px;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-actions {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: right;
+    }
+  }
+}
+
 // Services table
 .views-table {
   @media (min-width: 576px) {
