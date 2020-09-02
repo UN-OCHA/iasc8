@@ -288,19 +288,19 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-    // Does your entity share data with the humanitarian community?.
-    if (isset($item['does your entity share data with the humanitarian community?']) && !empty($item['does your entity share data with the humanitarian community?'])) {
+    // Data sharing requirements.
+    if (isset($item['data sharing requirements']) && !empty($item['data sharing requirements'])) {
       // Trim.
-      $value = trim($item['does your entity share data with the humanitarian community?']);
+      $value = trim($item['data sharing requirements']);
       $data['field_share_data'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'share_data'),
       ];
     }
 
     // What kind of data do you collect that you share.
-    if (isset($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']) && !empty($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?'])) {
+    if (isset($item['type(s) of data available']) && !empty($item['type(s) of data available'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']));
+      $values = array_map('trim', explode(',', $item['type(s) of data available']));
       foreach ($values as $input) {
         $data['field_kind_of_data'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'kind_of_data'),
@@ -339,6 +339,27 @@ class IascServicesBulkImport extends FormBase {
         }
         else {
           $data['field_links_to_relevant_docs'][] = [
+            'uri' => $input,
+          ];
+        }
+      }
+    }
+
+    // Inter-Agency CFM Resources.
+    if (isset($item['inter-agency cfm resources']) && !empty($item['inter-agency cfm resources'])) {
+      $values = array_map('trim', explode(';', $item['inter-agency cfm resources']));
+      $data['field_inter_agency_cfm_resources'] = [];
+      foreach ($values as $input) {
+        // Split in title and URI.
+        $parts = explode(': ', $input);
+        if (count($parts) > 1) {
+          $data['field_inter_agency_cfm_resources'][] = [
+            'title' => $parts[0],
+            'uri' => $parts[1],
+          ];
+        }
+        else {
+          $data['field_inter_agency_cfm_resources'][] = [
             'uri' => $input,
           ];
         }
