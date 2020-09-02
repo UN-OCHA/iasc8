@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.service.field_description
     - field.field.node.service.field_examples_and_case_studies
     - field.field.node.service.field_global_focal_point
+    - field.field.node.service.field_inter_agency_cfm_resources
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
@@ -75,6 +76,14 @@ content:
       width: 100%
     third_party_settings: {  }
     type: select2_entity_reference
+    region: content
+  field_inter_agency_cfm_resources:
+    weight: 135
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_interest:
     weight: 129
