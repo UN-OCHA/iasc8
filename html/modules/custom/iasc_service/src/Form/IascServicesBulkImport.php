@@ -269,18 +269,18 @@ class IascServicesBulkImport extends FormBase {
     }
 
     // Complaints and feedback mechanism (CFM).
-    if (isset($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']) && !empty($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?'])) {
+    if (isset($item['cfms implemented at country level?']) && !empty($item['cfms implemented at country level?'])) {
       // Trim.
-      $value = trim($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']);
+      $value = trim($item['cfms implemented at country level?']);
       $data['field_complaints_and_feedback'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'complaints_and_feedback_mechanis'),
       ];
     }
 
     // The entity I am representing may be interested in.
-    if (isset($item['please select any that may apply. "the entity i am representing may be interested in..."']) && !empty($item['please select any that may apply. "the entity i am representing may be interested in..."'])) {
+    if (isset($item['this entity has indicated interest in…']) && !empty($item['this entity has indicated interest in…'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['please select any that may apply. "the entity i am representing may be interested in..."']));
+      $values = array_map('trim', explode(',', $item['this entity has indicated interest in…']));
       foreach ($values as $input) {
         $data['field_interest'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'interest'),
@@ -288,19 +288,19 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-    // Does your entity share data with the humanitarian community?.
-    if (isset($item['does your entity share data with the humanitarian community?']) && !empty($item['does your entity share data with the humanitarian community?'])) {
+    // Data sharing requirements.
+    if (isset($item['data sharing requirements']) && !empty($item['data sharing requirements'])) {
       // Trim.
-      $value = trim($item['does your entity share data with the humanitarian community?']);
+      $value = trim($item['data sharing requirements']);
       $data['field_share_data'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'share_data'),
       ];
     }
 
     // What kind of data do you collect that you share.
-    if (isset($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']) && !empty($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?'])) {
+    if (isset($item['type(s) of data available']) && !empty($item['type(s) of data available'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']));
+      $values = array_map('trim', explode(',', $item['type(s) of data available']));
       foreach ($values as $input) {
         $data['field_kind_of_data'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'kind_of_data'),
@@ -343,6 +343,15 @@ class IascServicesBulkImport extends FormBase {
           ];
         }
       }
+    }
+
+    // Inter-Agency CFM Resources.
+    if (isset($item['inter-agency cfm resources']) && !empty($item['inter-agency cfm resources'])) {
+      $values = array_map('trim', explode(';', $item['inter-agency cfm resources']));
+      $data['field_inter_agency_cfm_resources'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
+      ];
     }
 
     $node = $this->entityTypeManager->getStorage('node')->create($data);
