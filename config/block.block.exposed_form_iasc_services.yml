@@ -20,7 +20,7 @@ settings:
   label: ''
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'Looking for something more specific?'
 visibility:
   request_path:
     id: request_path
