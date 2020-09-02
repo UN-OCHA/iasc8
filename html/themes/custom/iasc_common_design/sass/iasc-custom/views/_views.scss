@@ -64,6 +64,11 @@
 }
 
 .region-sidebar-second {
+  .block-search h2 {
+    @extend .cd-heading-3;
+    margin-top: 0;
+  }
+
   .views-exposed-form .form--inline {
     .form-item {
       max-width: 285px;
