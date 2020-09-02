@@ -118,7 +118,8 @@
 .field--name-field-links,
 .field--name-field-referenced-docs,
 .field--name-field-iasc-group-space,
-.field--name-field-oa-related-content {
+.field--name-field-oa-related-content,
+.field--name-field-links-to-relevant-docs {
   .field__item a {
     display: block;
     margin-bottom: 1rem;
@@ -171,4 +172,20 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 
 .field__item p:first-child {
   margin-top: 0;
+}
+
+// Emulate circle bullet list on fields that are not ul elements.
+.field--name-field-interest {
+  > .field__items {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+
+    > .field__item::before {
+      content: "•";
+      vertical-align: middle;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      padding-right: 0.5rem;
+    }
+  }
 }

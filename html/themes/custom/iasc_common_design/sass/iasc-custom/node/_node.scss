@@ -101,3 +101,14 @@
 .node--view-mode-no-title {
   margin-bottom: 2rem;
 }
+
+// Services node type.
+.node--type-service {
+  &.node--view-mode-full .cd-layout-main-content > .field {
+    margin-bottom: 2rem;
+  }
+
+  .field__label {
+    margin-bottom: 1rem;
+  }
+}
