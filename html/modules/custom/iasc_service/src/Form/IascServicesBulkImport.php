@@ -269,18 +269,18 @@ class IascServicesBulkImport extends FormBase {
     }
 
     // Complaints and feedback mechanism (CFM).
-    if (isset($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']) && !empty($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?'])) {
+    if (isset($item['cfms implemented at country level?']) && !empty($item['cfms implemented at country level?'])) {
       // Trim.
-      $value = trim($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']);
+      $value = trim($item['cfms implemented at country level?']);
       $data['field_complaints_and_feedback'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'complaints_and_feedback_mechanis'),
       ];
     }
 
     // The entity I am representing may be interested in.
-    if (isset($item['please select any that may apply. "the entity i am representing may be interested in..."']) && !empty($item['please select any that may apply. "the entity i am representing may be interested in..."'])) {
+    if (isset($item['this entity has indicated interest in…']) && !empty($item['this entity has indicated interest in…'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['please select any that may apply. "the entity i am representing may be interested in..."']));
+      $values = array_map('trim', explode(',', $item['this entity has indicated interest in…']));
       foreach ($values as $input) {
         $data['field_interest'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'interest'),
