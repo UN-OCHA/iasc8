@@ -348,22 +348,10 @@ class IascServicesBulkImport extends FormBase {
     // Inter-Agency CFM Resources.
     if (isset($item['inter-agency cfm resources']) && !empty($item['inter-agency cfm resources'])) {
       $values = array_map('trim', explode(';', $item['inter-agency cfm resources']));
-      $data['field_inter_agency_cfm_resources'] = [];
-      foreach ($values as $input) {
-        // Split in title and URI.
-        $parts = explode(': ', $input);
-        if (count($parts) > 1) {
-          $data['field_inter_agency_cfm_resources'][] = [
-            'title' => $parts[0],
-            'uri' => $parts[1],
-          ];
-        }
-        else {
-          $data['field_inter_agency_cfm_resources'][] = [
-            'uri' => $input,
-          ];
-        }
-      }
+      $data['field_inter_agency_cfm_resources'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
+      ];
     }
 
     $node = $this->entityTypeManager->getStorage('node')->create($data);
