@@ -19,7 +19,7 @@ settings:
   id: 'block_content:963d3fef-f775-4a29-8d29-6ae049bc065c'
   label: 'Does your entity offer a service not featured here?'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

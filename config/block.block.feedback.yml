@@ -19,7 +19,7 @@ settings:
   id: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
   label: 'Have feedback on the Service Directory?'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
