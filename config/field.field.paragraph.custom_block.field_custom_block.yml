@@ -1,0 +1,87 @@
+uuid: 8e8a89ca-9df1-4e8f-9c7d-d98624a144d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - block_content.type.block_with_text_and_link
+    - field.storage.paragraph.field_custom_block
+    - paragraphs.paragraphs_type.custom_block
+  module:
+    - dynamic_entity_reference
+id: paragraph.custom_block.field_custom_block
+field_name: field_custom_block
+entity_type: paragraph
+bundle: custom_block
+label: 'Custom block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  block_content:
+    handler: 'default:block_content'
+    handler_settings:
+      target_bundles:
+        basic: basic
+        block_with_text_and_link: block_with_text_and_link
+      sort:
+        field: _none
+      auto_create: false
+      auto_create_bundle: basic
+  node:
+    handler: 'default:node'
+    handler_settings: {  }
+  menu_link_content:
+    handler: 'default:menu_link_content'
+    handler_settings: {  }
+  entity_subqueue:
+    handler: 'default:entity_subqueue'
+    handler_settings: {  }
+  file:
+    handler: 'default:file'
+    handler_settings: {  }
+  flagging:
+    handler: 'default:flagging'
+    handler_settings: {  }
+  group:
+    handler: 'default:group'
+    handler_settings: {  }
+  group_content:
+    handler: 'default:group_content'
+    handler_settings: {  }
+  hero:
+    handler: 'default:hero'
+    handler_settings: {  }
+  media:
+    handler: 'default:media'
+    handler_settings: {  }
+  paragraph:
+    handler: 'default:paragraph'
+    handler_settings: {  }
+  redirect:
+    handler: 'default:redirect'
+    handler_settings: {  }
+  search_api_task:
+    handler: 'default:search_api_task'
+    handler_settings: {  }
+  shortcut:
+    handler: 'default:shortcut'
+    handler_settings: {  }
+  social_auth:
+    handler: 'default:social_auth'
+    handler_settings: {  }
+  taxonomy_term:
+    handler: 'default:taxonomy_term'
+    handler_settings: {  }
+  path_alias:
+    handler: 'default:path_alias'
+    handler_settings: {  }
+  user:
+    handler: 'default:user'
+    handler_settings: {  }
+  webform_submission:
+    handler: 'default:webform_submission'
+    handler_settings: {  }
+field_type: dynamic_entity_reference
