@@ -18,6 +18,7 @@ module:
   date_recur_modular: 0
   datetime: 0
   datetime_range: 0
+  devel: 0
   diff: 0
   dream_block_manager: 0
   dynamic_entity_reference: 0
