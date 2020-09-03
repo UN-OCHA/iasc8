@@ -1,0 +1,31 @@
+uuid: 421bdf91-ff70-4f52-b5db-4511aa965661
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_text_and_link:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+  module:
+    - block_content
+    - system
+  theme:
+    - iasc_common_design
+id: feedback
+theme: iasc_common_design
+region: sidebar_second
+weight: 10
+provider: null
+plugin: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+settings:
+  id: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+  label: 'Have feedback on the Service Directory?'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*"
+    negate: false
+    context_mapping: {  }

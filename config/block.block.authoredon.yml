@@ -11,7 +11,7 @@ dependencies:
 id: authoredon
 theme: iasc_common_design
 region: sidebar_second
-weight: -4
+weight: -5
 provider: null
 plugin: 'facet_block:search_authored_on'
 settings:
