@@ -1,9 +1,10 @@
 // Drupal custom block
 
+.cd-layout-sidebar-first .paragraph--type--custom-block,
 .cd-layout-sidebar-second .block-block-content {
   margin-bottom: 2rem !important;
 
-  h2 {
+  .field--name-field-block-title {
     @extend .cd-heading-3;
     margin-top: 0;
   }
