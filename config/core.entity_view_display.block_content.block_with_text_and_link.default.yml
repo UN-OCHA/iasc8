@@ -15,20 +15,20 @@ mode: default
 content:
   field_description:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_link:
     weight: 2
-    label: above
+    label: hidden
     settings:
       trim_length: 80
+      target: _blank
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
     third_party_settings: {  }
     type: link
     region: content
