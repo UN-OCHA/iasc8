@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.service.field_description
     - field.field.node.service.field_examples_and_case_studies
     - field.field.node.service.field_global_focal_point
+    - field.field.node.service.field_inter_agency_cfm_resources
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
@@ -37,6 +38,7 @@ hidden:
   field_description: true
   field_examples_and_case_studies: true
   field_global_focal_point: true
+  field_inter_agency_cfm_resources: true
   field_interest: true
   field_kind_of_data: true
   field_links_to_relevant_docs: true
