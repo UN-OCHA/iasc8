@@ -136,6 +136,7 @@ function iasc_common_design_preprocess_form_element(array &$variables) {
   if (isset($variables['element']['#attributes']['data-drupal-facet-id'])) {
     $new_id = 'select--' . str_replace('_', '-', $variables['element']['#attributes']['data-drupal-facet-id']);
     $variables['label']['#attributes']['for'] = $new_id;
+    $variables['label']['#attributes']['class'] = 'visually-hidden';
   }
 }
 
