@@ -12,7 +12,7 @@ dependencies:
 id: feature_request
 theme: iasc_common_design
 region: sidebar_second
-weight: 9
+weight: 10
 provider: null
 plugin: 'block_content:963d3fef-f775-4a29-8d29-6ae049bc065c'
 settings:

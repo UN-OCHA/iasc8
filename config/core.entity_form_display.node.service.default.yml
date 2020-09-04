@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
+    - field.field.node.service.field_relevant_hpc_stage
     - field.field.node.service.field_service_coverage
     - field.field.node.service.field_service_description
     - field.field.node.service.field_services
@@ -112,6 +113,16 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_relevant_hpc_stage:
+    weight: 136
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_service_coverage:
     weight: 126

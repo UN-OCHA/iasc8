@@ -1,0 +1,83 @@
+uuid: 24cfbb53-852b-4bad-b0ac-af67f6140bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.services
+    - views.view.iasc_services
+  module:
+    - search_api
+id: services_summary
+name: 'Services summary'
+facets:
+  aap_agency_initiative_or_group:
+    checked: true
+    label: 'Agency, Initiative or Group'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_complaints_and_feedback_mechanism:
+    checked: true
+    label: 'Complaints and feedback mechanism'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_kind_of_data:
+    checked: true
+    label: 'What kind of data do you collect that you share/may be interested in sharing for the purposes of collective AAP?'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_services:
+    checked: true
+    label: Services
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_service_coverage:
+    checked: true
+    label: 'Service Coverage'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_share_data:
+    checked: true
+    label: 'Does your entity share data with the humanitarian community?'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap_type_of_entity:
+    checked: true
+    label: 'Type of Entity'
+    separator: ', '
+    weight: 0
+    show_count: false
+  aap__interested:
+    checked: true
+    label: 'The entity I am representing may be interested in...'
+    separator: ', '
+    weight: 0
+    show_count: false
+  services_relevant_hpc_stage:
+    checked: true
+    label: 'Relevant HPC Stage'
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__iasc_services__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '-10'
+    settings: {  }
+  reset_string_ocha:
+    processor_id: reset_string_ocha
+    weights:
+      build: '-4'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-9'
+    settings: {  }

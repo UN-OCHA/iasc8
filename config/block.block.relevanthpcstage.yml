@@ -1,29 +1,29 @@
-uuid: 6638855f-16cf-460f-af36-9acf8ba914e9
+uuid: 69532cf7-3b60-4626-8104-f82094c85a97
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.aap_type_of_entity
+    - facets.facet.services_relevant_hpc_stage
   module:
     - facets
     - system
   theme:
     - iasc_common_design
-id: typeofentity
+id: relevanthpcstage
 theme: iasc_common_design
 region: sidebar_second
-weight: 3
+weight: 0
 provider: null
-plugin: 'facet_block:aap_type_of_entity'
+plugin: 'facet_block:services_relevant_hpc_stage'
 settings:
-  id: 'facet_block:aap_type_of_entity'
-  label: 'Type of Entity'
+  id: 'facet_block:services_relevant_hpc_stage'
+  label: 'Relevant HPC Stage'
   provider: facets
   label_display: visible
-  block_id: typeofentity
+  block_id: relevanthpcstage
 visibility:
   request_path:
     id: request_path
-    pages: "/services\r\n/services/*\r\n"
+    pages: "/services\r\n/services/*"
     negate: false
     context_mapping: {  }

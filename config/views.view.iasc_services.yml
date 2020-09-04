@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_service_coverage
     - field.storage.node.field_share_data
     - search_api.index.services
+  content:
+    - 'node:panopoly_page:c8dc7780-4775-4a75-a4dc-9b4093ef607d'
   module:
     - search_api
 id: iasc_services
@@ -31,9 +33,9 @@ display:
       query:
         type: views_query
         options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
+          skip_access: 0
+          bypass_access: 0
+          preserve_facet_query_args: 1
       exposed_form:
         type: basic
         options:

@@ -1,0 +1,28 @@
+uuid: 5fc26e66-11ed-4a3b-93d1-8e7a739c9877
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.services_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - iasc_common_design
+id: servicessummary
+theme: iasc_common_design
+region: sidebar_second
+weight: -24
+provider: null
+plugin: 'facets_summary_block:services_summary'
+settings:
+  id: 'facets_summary_block:services_summary'
+  label: 'Services summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*"
+    negate: false
+    context_mapping: {  }

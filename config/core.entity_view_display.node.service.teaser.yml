@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
+    - field.field.node.service.field_relevant_hpc_stage
     - field.field.node.service.field_service_coverage
     - field.field.node.service.field_service_description
     - field.field.node.service.field_services
@@ -42,6 +43,7 @@ hidden:
   field_interest: true
   field_kind_of_data: true
   field_links_to_relevant_docs: true
+  field_relevant_hpc_stage: true
   field_service_coverage: true
   field_service_description: true
   field_services: true

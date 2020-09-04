@@ -1,0 +1,29 @@
+uuid: a9b2fc7a-a793-4c5b-972c-0c351e0972e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relevant_hpc_stage
+    - node.type.service
+    - taxonomy.vocabulary.relevant_hpc_stage
+id: node.service.field_relevant_hpc_stage
+field_name: field_relevant_hpc_stage
+entity_type: node
+bundle: service
+label: 'Relevant HPC Stage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      relevant_hpc_stage: relevant_hpc_stage
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
