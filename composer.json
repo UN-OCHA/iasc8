@@ -91,6 +91,7 @@
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
         "unocha/common_design": "^2.8.3",
+        "unocha/ocha_integrations": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",

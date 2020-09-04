@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63e1ff4bed22c102b285b0ce95a47e94",
+    "content-hash": "958e3a353b93769a4678e43f9957802b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2596,7 +2596,8 @@
             "homepage": "https://www.drupal.org/project/colors",
             "support": {
                 "source": "https://git.drupalcode.org/project/colors"
-            }
+            },
+            "time": "2020-04-20T14:02:54+00:00"
         },
         {
             "name": "drupal/comment_alter",
@@ -5349,7 +5350,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.2",
-                    "datestamp": "1588260035",
+                    "datestamp": "1588260599",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5375,22 +5376,6 @@
                     "name": "Lucas Hedding",
                     "homepage": "https://www.drupal.org/u/heddn",
                     "role": "Maintainer"
-                },
-                {
-                    "name": "ksenzee",
-                    "homepage": "https://www.drupal.org/user/139855"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                },
-                {
-                    "name": "ultimike",
-                    "homepage": "https://www.drupal.org/user/51132"
-                },
-                {
-                    "name": "xjm",
-                    "homepage": "https://www.drupal.org/user/65776"
                 }
             ],
             "description": "Drush support for direct upgrades from older Drupal versions.",
@@ -5560,12 +5545,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-2.0-alpha6",
                     "datestamp": "1509009544",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -11675,6 +11663,34 @@
             "time": "2020-08-20T12:46:02+00:00"
         },
         {
+            "name": "unocha/ocha_integrations",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/ocha_integrations.git",
+                "reference": "7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731",
+                "reference": "7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "sebastian/phpcpd": "^4.1"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "time": "2020-07-31T08:17:18+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.6.5",
             "source": {
@@ -14193,6 +14209,5 @@
     "platform": {
         "php": ">=7.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
