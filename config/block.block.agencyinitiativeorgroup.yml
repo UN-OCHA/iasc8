@@ -12,7 +12,7 @@ dependencies:
 id: agencyinitiativeorgroup
 theme: iasc_common_design
 region: sidebar_second
-weight: -6
+weight: -4
 provider: null
 plugin: 'facet_block:aap_agency_initiative_or_group'
 settings:

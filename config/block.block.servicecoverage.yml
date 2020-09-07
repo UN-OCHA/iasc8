@@ -12,7 +12,7 @@ dependencies:
 id: servicecoverage
 theme: iasc_common_design
 region: sidebar_second
-weight: 1
+weight: 3
 provider: null
 plugin: 'facet_block:aap_service_coverage'
 settings:

@@ -127,9 +127,9 @@ dl {
     font-size: 1.875rem;
   }
 
-  @include desktop {
-    margin-top: 1rem;
-  }
+  //@include desktop {
+  //  margin-top: 1rem;
+  //}
 }
 
 a {
