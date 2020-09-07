@@ -105,6 +105,7 @@ class IascServicesBulkImport extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $count = 0;
     $validators = ['file_validate_extensions' => ['xlsx']];
     $file = file_save_upload('xlsx_file', $validators, FALSE, 0);
     if (!$file) {
@@ -160,8 +161,16 @@ class IascServicesBulkImport extends FormBase {
 
       if (isset($data['agency, initiative or group']) && !empty($data['agency, initiative or group'])) {
         $this->createService($data);
+        $count++;
       }
     }
+
+
+    $message = $this->t('Created @count services.', [
+      '@count' => $count,
+    ]);
+
+    $this->messenger()->addMessage($message);
   }
 
   /**
