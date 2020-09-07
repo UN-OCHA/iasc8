@@ -12,7 +12,7 @@ dependencies:
 id: exposed_form_iasc_services
 theme: iasc_common_design
 region: sidebar_second
-weight: -25
+weight: -26
 provider: null
 plugin: 'views_exposed_filter_block:iasc_services-page_1'
 settings:
