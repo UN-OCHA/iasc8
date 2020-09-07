@@ -11667,16 +11667,16 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
-                "reference": "9644131dc12fe12ae3bf49641f7efe1d52abebff"
+                "reference": "cfe1fb380ba57b26db395796f2ce3b6bed728ba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/9644131dc12fe12ae3bf49641f7efe1d52abebff",
-                "reference": "9644131dc12fe12ae3bf49641f7efe1d52abebff",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/cfe1fb380ba57b26db395796f2ce3b6bed728ba4",
+                "reference": "cfe1fb380ba57b26db395796f2ce3b6bed728ba4",
                 "shasum": ""
             },
             "require": {
@@ -11691,7 +11691,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-09-07T12:25:03+00:00"
+            "time": "2020-09-07T13:02:14+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
