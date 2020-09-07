@@ -165,7 +165,6 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-
     $message = $this->t('Created @count services.', [
       '@count' => $count,
     ]);
@@ -393,7 +392,7 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-    // Relevant HPC Stage.relevant hpc stage
+    // Relevant HPC Stage.relevant hpc stage.
     if (isset($item['relevant hpc stage']) && !empty($item['relevant hpc stage'])) {
       // Split and trim.
       $values = array_map('trim', explode(';', $item['relevant hpc stage']));
