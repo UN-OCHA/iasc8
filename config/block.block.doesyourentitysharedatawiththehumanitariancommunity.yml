@@ -12,7 +12,7 @@ dependencies:
 id: doesyourentitysharedatawiththehumanitariancommunity
 theme: iasc_common_design
 region: sidebar_second
-weight: -2
+weight: 0
 provider: null
 plugin: 'facet_block:aap_share_data'
 settings:

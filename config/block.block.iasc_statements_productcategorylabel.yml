@@ -11,7 +11,7 @@ dependencies:
 id: iasc_statements_productcategorylabel
 theme: iasc_common_design
 region: sidebar_second
-weight: -1
+weight: 1
 provider: null
 plugin: 'facet_block:iasc_statements_product_category_label'
 settings:

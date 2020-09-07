@@ -11,7 +11,7 @@ dependencies:
 id: resourcescontenttype
 theme: iasc_common_design
 region: sidebar_second
-weight: -10
+weight: -8
 provider: null
 plugin: 'facet_block:resources_content_type'
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: complaintsandfeedbackmechanism
 theme: iasc_common_design
 region: sidebar_second
-weight: -3
+weight: -1
 provider: null
 plugin: 'facet_block:aap_complaints_and_feedback_mechanism'
 settings:
