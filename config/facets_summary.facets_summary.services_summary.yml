@@ -71,13 +71,28 @@ processor_configs:
     weights:
       build: '-10'
     settings: {  }
+  reset_facets_pretty_path:
+    processor_id: reset_facets_pretty_path
+    weights:
+      build: '-3'
+    settings:
+      link_text: 'Reset all filters'
+      clear_string: 1
   reset_string_ocha:
     processor_id: reset_string_ocha
     weights:
-      build: '-4'
+      build: '-7'
     settings: {  }
   show_count:
     processor_id: show_count
     weights:
       build: '-9'
     settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-8'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text
