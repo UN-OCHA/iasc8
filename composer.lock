@@ -5928,6 +5928,9 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches_applied": {
+                    "Facets query part is lost in views": "https://www.drupal.org/files/issues/2020-04-22/search_api-facets_query_lost_non_saved_source_config-3130004-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -11664,16 +11667,16 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
-                "reference": "7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731"
+                "reference": "9644131dc12fe12ae3bf49641f7efe1d52abebff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731",
-                "reference": "7bcc3b919e4c23a3bc5fef1a24146d3b00d5a731",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/9644131dc12fe12ae3bf49641f7efe1d52abebff",
+                "reference": "9644131dc12fe12ae3bf49641f7efe1d52abebff",
                 "shasum": ""
             },
             "require": {
@@ -11688,7 +11691,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-07-31T08:17:18+00:00"
+            "time": "2020-09-07T12:25:03+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
