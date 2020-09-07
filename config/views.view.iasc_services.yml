@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_service_coverage
     - field.storage.node.field_share_data
     - search_api.index.services
-  content:
-    - 'node:panopoly_page:c8dc7780-4775-4a75-a4dc-9b4093ef607d'
   module:
     - search_api
 id: iasc_services
@@ -398,19 +396,19 @@ display:
       sorts: {  }
       title: Services
       header:
-        entity_node:
-          id: entity_node
+        area:
+          id: area
           table: views
-          field: entity_node
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: true
-          target: c8dc7780-4775-4a75-a4dc-9b4093ef607d
-          view_mode: no_title
-          bypass_access: false
-          plugin_id: entity
+          tokenize: false
+          content:
+            value: "<h1 class=\"page-title\">Global Accountability and Inclusion</h1>\r\n<h2>Service Directory</h2>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
