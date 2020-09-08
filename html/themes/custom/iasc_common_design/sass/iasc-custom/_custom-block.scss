@@ -28,6 +28,16 @@
       border: 1px solid $cd-ocha-blue;
       padding: $cd-base-unit * 1.5;
       transition: background 0.3s ease;
+      width: 100%;
+
+      @include sm {
+        max-width: 16rem;
+      }
+
+      @include tablet {
+        max-width: unset;
+        width: 100%;
+      }
 
       &::after {
         display: inline-block;

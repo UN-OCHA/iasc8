@@ -64,6 +64,10 @@
 }
 
 .region-sidebar-second {
+  .block-search {
+    margin-bottom: 2rem;
+  }
+
   .block-search h2 {
     @extend .cd-heading-3;
     margin-top: 0;
@@ -71,7 +75,6 @@
 
   .views-exposed-form .form--inline {
     .form-item {
-      max-width: 285px;
       margin-top: 0;
       margin-bottom: 0.5rem;
     }
@@ -79,7 +82,23 @@
     .form-actions {
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
-      text-align: right;
+    }
+
+    .form-text {
+      width: 100%;
+    }
+
+    .form-actions input[type='submit'] {
+      width: 100%;
+
+      @include sm {
+        max-width: 16rem;
+      }
+
+      @include tablet {
+        max-width: unset;
+        width: 100%;
+      }
     }
   }
 }

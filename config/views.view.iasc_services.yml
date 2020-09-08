@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_service_coverage
     - field.storage.node.field_share_data
     - search_api.index.services
-  content:
-    - 'node:panopoly_page:c8dc7780-4775-4a75-a4dc-9b4093ef607d'
   module:
     - search_api
 id: iasc_services
@@ -40,7 +38,7 @@ display:
         type: basic
         options:
           submit_button: Search
-          reset_button: true
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: false
@@ -378,7 +376,7 @@ display:
               space_super_admin: '0'
               focal_point: '0'
               iasc: '0'
-            placeholder: 'Search within AAP Service Directory'
+            placeholder: 'Search the directory'
           is_grouped: false
           group_info:
             label: ''
@@ -398,19 +396,19 @@ display:
       sorts: {  }
       title: Services
       header:
-        entity_node:
-          id: entity_node
+        area:
+          id: area
           table: views
-          field: entity_node
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: true
-          target: c8dc7780-4775-4a75-a4dc-9b4093ef607d
-          view_mode: no_title
-          bypass_access: false
-          plugin_id: entity
+          tokenize: false
+          content:
+            value: "<h1 class=\"page-title\">Global Accountability and Inclusion</h1>\r\n<h2>Service Directory</h2>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
