@@ -7,6 +7,7 @@
 
 use Drupal\facets\Entity\Facet;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\search_api\Entity\Index;
 use Drupal\Taxonomy\Entity\Term;
 
 /**
@@ -36,9 +37,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     'aap_service_coverage',
   ];
 
-  $lookup = [];
-
-  $index = \Drupal\search_api\Entity\Index::load('services');
+  $index = Index::load('services');
   $query = $index->query([
     'limit' => 0,
   ]);
@@ -49,8 +48,6 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     foreach ($active_facets as $facet_name) {
       $facet = Facet::load($facet_name);
       $field_name = $facet->getFieldIdentifier();
-      $lookup[$field_name]= $facet_name;
-
       $facet_options[$field_name] = [
         'field' => $field_name,
         'limit' => 0,
