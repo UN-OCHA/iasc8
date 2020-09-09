@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * IASC Services.
+ */
+
+use Drupal\facets\Entity\Facet;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Taxonomy\Entity\Term;
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function iasc_service_preprocess_paragraph(&$vars) {
+  $paragraph = $vars['paragraph'];
+  if (!($paragraph instanceof Paragraph)) {
+    return;
+  }
+
+  $bundle = $paragraph->bundle();
+  switch ($bundle) {
+    case 'services_landing_block':
+      iasc_service_preprocess_paragraph_services_landing_block($vars);
+      break;
+
+  }
+}
+
+/**
+ * Build services landing block.
+ */
+function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
+  $active_facets = [
+    'aap_services',
+    'aap_service_coverage',
+  ];
+
+  $lookup = [];
+
+  $index = \Drupal\search_api\Entity\Index::load('services');
+  $query = $index->query([
+    'limit' => 0,
+  ]);
+
+  $server = $index->getServerInstance();
+  if ($server->supportsFeature('search_api_facets')) {
+    $facet_options = [];
+    foreach ($active_facets as $facet_name) {
+      $facet = Facet::load($facet_name);
+      $field_name = $facet->getFieldIdentifier();
+      $lookup[$field_name]= $facet_name;
+
+      $facet_options[$field_name] = [
+        'field' => $field_name,
+        'limit' => 0,
+        'operator' => 'OR',
+        'min_count' => 1,
+        'missing' => TRUE,
+      ];
+    }
+
+    $query->setOption('search_api_facets', $facet_options);
+  }
+
+  $results = $query->execute();
+  $facets = $results->getExtraData('search_api_facets', []);
+
+  foreach ($facets as $field_name => $facet_values) {
+    $tids = [];
+    foreach ($facet_values as $facet) {
+      $id = trim($facet['filter'], '"');
+      $tids[] = $id;
+    }
+
+    $terms = Term::loadMultiple($tids);
+
+    $options = [];
+    foreach ($facet_values as $facet) {
+      $id = trim($facet['filter'], '"');
+      $options[] = [
+        'key' => $facet_name . ':' . $id,
+        'label' => $terms[$id]->getName(),
+      ];
+    }
+
+    $vars['facets'][$field_name]['label'] = $field_name;
+    $vars['facets'][$field_name]['options'] = $options;
+  }
+}
