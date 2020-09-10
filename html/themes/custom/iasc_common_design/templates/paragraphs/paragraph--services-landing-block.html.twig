@@ -49,9 +49,6 @@
 {% if (facets) %}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
-
-    <h2 class="cd-sidebar__label">Filter</h2>
-
       {% block content %}
         <form method="POST" action="/services-search">
           {% for facet in facets %}

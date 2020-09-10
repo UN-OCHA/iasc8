@@ -1,0 +1,25 @@
+uuid: b2b403f7-2b91-400d-872e-cdb9e1ae6c54
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iasc_common_design
+id: pagetitle
+theme: iasc_common_design
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/41316\r\n/services\r\n/services/*"
+    negate: false
+    context_mapping: {  }

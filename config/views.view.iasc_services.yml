@@ -49,9 +49,17 @@ display:
         options:
           offset: 0
       style:
-        type: table
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              service: teaser
       fields:
         title:
           id: title
@@ -394,7 +402,7 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts: {  }
-      title: Services
+      title: 'Global Accountability and Inclusion'
       header:
         area:
           id: area
@@ -406,7 +414,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<h1 class=\"page-title\">Global Accountability and Inclusion</h1>\r\n<h2>Service Directory</h2>"
+            value: '<h2>Services</h2>'
             format: full_html
           plugin_id: text
       footer: {  }

@@ -38,3 +38,11 @@ section.cd-layout-two-col .cd-layout-main-content {
     margin-right: 3rem;
   }
 }
+
+.page-title {
+  padding-top: 3rem;
+}
+
+main.cd-container aside:empty {
+  display: none;
+}

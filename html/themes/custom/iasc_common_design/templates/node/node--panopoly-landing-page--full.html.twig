@@ -88,7 +88,11 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-  <h2{{ title_attributes.addClass('page-title') }}>{{ label }}</h2>
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
   {{ title_suffix }}
 
   {% if display_submitted %}
@@ -111,9 +115,7 @@
           {{ content.field_content }}
         </div>
 
-        <aside class="cd-layout-sidebar-first" role="complementary">
-          {{ content.field_sidebar }}
-        </aside>
+        <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_sidebar }}</aside>
 
       </section>
     {% endblock %}

@@ -10,7 +10,7 @@ dependencies:
     - iasc_common_design
 id: iasc_statements_audiencelabel
 theme: iasc_common_design
-region: sidebar_second
+region: sidebar_first
 weight: 14
 provider: null
 plugin: 'facet_block:iasc_statements_audience_label'

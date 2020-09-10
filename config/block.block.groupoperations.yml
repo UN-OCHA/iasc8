@@ -9,7 +9,7 @@ dependencies:
     - iasc_common_design
 id: groupoperations
 theme: iasc_common_design
-region: sidebar_second
+region: sidebar_first
 weight: 15
 provider: null
 plugin: group_operations
