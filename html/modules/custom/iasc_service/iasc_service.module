@@ -60,7 +60,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
       $lookup[$field_name] = [
         'key' => $facet->getUrlAlias(),
         'name' => $facet_name,
-        'label' => $facet->label()
+        'label' => $facet->label(),
       ];
       $facet_options[$field_name] = [
         'field' => $field_name,

@@ -4,8 +4,9 @@ namespace Drupal\iasc_service\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Routing\TrustedRedirectResponse;
-use\Drupal\Core\Url;
+use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Class IascServicesBulkImport.
  */
@@ -33,7 +34,7 @@ class IascServicesSearch extends ControllerBase {
     $url = Url::fromUserInput('/services', [
       'query' => [
         'f' => $filters,
-      ]
+      ],
     ])->toString(TRUE)->getGeneratedUrl();
 
     return new TrustedRedirectResponse($url);
