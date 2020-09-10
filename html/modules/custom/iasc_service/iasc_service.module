@@ -35,6 +35,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
   $active_facets = [
     'aap_services',
     'aap_service_coverage',
+    'services_relevant_hpc_stage',
   ];
 
   $index = Index::load('services');
