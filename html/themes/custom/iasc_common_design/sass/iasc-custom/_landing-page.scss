@@ -1,0 +1,13 @@
+.operations.form-actions {
+  margin: 2rem 0;
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 16rem;
+    }
+  }
+}

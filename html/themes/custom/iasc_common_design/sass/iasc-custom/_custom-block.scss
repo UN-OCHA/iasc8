@@ -1,8 +1,7 @@
 // Drupal custom block
 
-.cd-layout-sidebar-first .paragraph--type--custom-block,
-.cd-layout-sidebar-second .block-block-content {
-  margin-bottom: 2rem !important;
+.block--type-block-with-text-and-link {
+  margin-top: 2rem;
 
   .field--name-field-block-title {
     @extend .cd-heading-3;
@@ -63,3 +62,16 @@
   }
 }
 
+.paragraph--type--custom-block {
+  @extend .block--type-block-with-text-and-link;
+}
+
+.cd-layout-content .block--type-block-with-text-and-link,
+.cd-layout-main-content .block--type-block-with-text-and-link {
+
+  @include desktop {
+    max-width: 50%;
+    float: left;
+    padding-right: 1.5rem;
+  }
+}
