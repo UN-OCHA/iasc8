@@ -152,8 +152,14 @@
   }
 }
 
+.cd-filter {
+  padding: 2rem 0;
 
-//@TODO this, better.
+  @include tablet {
+    padding: 0;
+  }
+}
+
 .cd-filter__btn {
   background: $iasc-primary;
   color: $cd-light-grey;

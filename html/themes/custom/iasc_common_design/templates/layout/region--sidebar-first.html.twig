@@ -25,7 +25,7 @@
 {% if content %}
 
   {% if has_filter %}
-    <div {{ attributes.setAttribute('id', 'cd-filter').setAttribute('aria-labelledby', 'cd-filter-toggle').setAttribute('data-cd-toggable','Modify your search'|t).setAttribute('data-cd-icon', 'arrow-down').setAttribute('data-cd-component', 'cd-filter').setAttribute('data-cd-toggable-keep', 'true').addClass(classes).addClass('cd-filter') }}>
+    <div {{ attributes.setAttribute('id', 'cd-filter').setAttribute('aria-labelledby', 'cd-filter-toggle').setAttribute('data-cd-toggable','Modify your search'|t).setAttribute('data-cd-icon', 'arrow-down').setAttribute('data-cd-component', 'cd-filter').setAttribute('data-cd-toggable-keep', 'true').addClass(classes) }}>
   {% else %}
     <div {{ attributes.addClass(classes) }}>
   {% endif %}
