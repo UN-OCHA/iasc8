@@ -49,16 +49,20 @@
 {% if (facets) %}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
-
       {% block content %}
+        <form method="POST" action="/services-search">
           {% for facet in facets %}
-            <h2>{{ facet.label }}</h2>
-            <select multiple>
+            <h3>{{ facet.label }}</h3>
+            <select name="{{ facet.name }}[]" multiple>
               {% for option in facet.options %}
                 <option value="{{ option.key }}">{{ option.label }}</option>
               {% endfor %}
             </select>
           {% endfor %}
+          <div class="operations">
+            <input type="submit" value="Search">
+          </div>
+        </form>
       {% endblock %}
     </div>
   {% endblock paragraph %}
