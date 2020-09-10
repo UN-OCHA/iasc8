@@ -49,6 +49,8 @@ settings:
       language_list: un
     linkit:
       linkit_profile: ''
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public

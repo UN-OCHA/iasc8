@@ -100,3 +100,57 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     $vars['facets'][$field_name]['options'] = $options;
   }
 }
+
+/**
+ * Implements hook_token_info().
+ */
+function iasc_service_token_info() {
+  return [
+    'types' => [
+      'iasc_service' => [
+        'name' => t('IASC services.'),
+        'description' => t('Tokens related to the service directory.'),
+      ],
+    ],
+    'tokens' => [
+      'iasc_service' => [
+        'num_organizations' => [
+          'name' => t('Number of organizations.'),
+          'description' => t('Number of organizations in the service directory.'),
+        ],
+      ],
+    ]
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function iasc_service_tokens($type, $tokens, array $data, array $options, $bubbleable_metadata) {
+  $replacements = [];
+
+  if ($type == 'iasc_service') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'num_organizations':
+          $replacements[$original] = iasc_service_index_num_documents();
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Get num of documents in service index.
+ */
+function iasc_service_index_num_documents() {
+  $index = Index::load('services');
+  $query = $index->query([
+    'limit' => 0,
+  ]);
+
+  $results = $query->execute();
+  return $results->getResultCount();
+}
