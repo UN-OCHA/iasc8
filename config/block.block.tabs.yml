@@ -7,7 +7,7 @@ dependencies:
 id: tabs
 theme: iasc_common_design
 region: content
-weight: -4
+weight: -26
 provider: null
 plugin: local_tasks_block
 settings:

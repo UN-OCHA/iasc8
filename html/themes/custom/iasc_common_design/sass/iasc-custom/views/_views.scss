@@ -77,16 +77,19 @@
   .views-exposed-form .form--inline {
     .form-item {
       margin-top: 0;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
     }
 
     .form-actions {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
     }
 
     .form-text {
       width: 100%;
+
+      &:focus {
+        outline: 2px solid $cd-bright-blue;
+      }
     }
 
     .form-actions input[type='submit'] {

@@ -46,21 +46,22 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
 {% if (facets) %}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
         <form method="POST" action="/services-search">
           {% for facet in facets %}
-            <h3>{{ facet.label }}</h3>
+            <h2>{{ facet.label }}</h2>
             <select name="{{ facet.name }}[]" multiple>
               {% for option in facet.options %}
                 <option value="{{ option.key }}">{{ option.label }}</option>
               {% endfor %}
             </select>
           {% endfor %}
-          <div class="operations">
-            <input type="submit" value="Search">
+          <div class="operations form-actions">
+            <input type="submit" value="{% trans %}Show Results{% endtrans %}">
           </div>
         </form>
       {% endblock %}

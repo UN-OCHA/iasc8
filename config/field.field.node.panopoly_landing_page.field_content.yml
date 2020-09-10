@@ -7,7 +7,6 @@ dependencies:
     - node.type.panopoly_landing_page
     - paragraphs.paragraphs_type.additional_locations
     - paragraphs.paragraphs_type.agenda_items
-    - paragraphs.paragraphs_type.custom_block
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.list_item
     - paragraphs.paragraphs_type.membership
@@ -38,7 +37,6 @@ settings:
       paragraph_snippet: paragraph_snippet
       hero: hero
       list_item: list_item
-      custom_block: custom_block
       teaser_item: teaser_item
     target_bundles_drag_drop:
       additional_locations:
@@ -54,8 +52,8 @@ settings:
         weight: 22
         enabled: false
       custom_block:
-        enabled: true
         weight: 22
+        enabled: false
       featured:
         weight: 27
         enabled: false
@@ -88,6 +86,9 @@ settings:
         enabled: false
       section_menu:
         weight: 31
+        enabled: false
+      services_landing_block:
+        weight: 39
         enabled: false
       teaser_grid:
         weight: 27
