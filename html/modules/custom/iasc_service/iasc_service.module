@@ -38,6 +38,8 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     'services_relevant_hpc_stage',
   ];
 
+  $lookup = [];
+
   $index = Index::load('services');
   $query = $index->query([
     'limit' => 0,
@@ -49,6 +51,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     foreach ($active_facets as $facet_name) {
       $facet = Facet::load($facet_name);
       $field_name = $facet->getFieldIdentifier();
+      $lookup[$field_name] = $facet_name;
       $facet_options[$field_name] = [
         'field' => $field_name,
         'limit' => 0,
@@ -77,7 +80,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     foreach ($facet_values as $facet) {
       $id = trim($facet['filter'], '"');
       $options[] = [
-        'key' => $facet_name . ':' . $id,
+        'key' => $lookup[$field_name] . ':' . $id,
         'label' => $terms[$id]->getName(),
       ];
     }
