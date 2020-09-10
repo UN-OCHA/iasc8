@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: documentsummary
 theme: iasc_common_design
-region: sidebar_second
-weight: -23
+region: sidebar_first
+weight: -12
 provider: null
 plugin: 'facets_summary_block:document_summary'
 settings:

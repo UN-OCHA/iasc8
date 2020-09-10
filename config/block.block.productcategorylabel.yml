@@ -10,8 +10,8 @@ dependencies:
     - iasc_common_design
 id: productcategorylabel
 theme: iasc_common_design
-region: sidebar_second
-weight: -18
+region: sidebar_first
+weight: -7
 provider: null
 plugin: 'facet_block:product_category_label'
 settings:

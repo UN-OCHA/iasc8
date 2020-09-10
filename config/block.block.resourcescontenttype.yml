@@ -10,8 +10,8 @@ dependencies:
     - iasc_common_design
 id: resourcescontenttype
 theme: iasc_common_design
-region: sidebar_second
-weight: -8
+region: sidebar_first
+weight: 3
 provider: null
 plugin: 'facet_block:resources_content_type'
 settings:
