@@ -11,7 +11,7 @@ dependencies:
 id: productcatalog
 theme: iasc_common_design
 region: sidebar_first
-weight: 16
+weight: 14
 provider: null
 plugin: 'system_menu_block:menu-product-catalogue'
 settings:
