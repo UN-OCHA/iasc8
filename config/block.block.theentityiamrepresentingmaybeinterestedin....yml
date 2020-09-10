@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: theentityiamrepresentingmaybeinterestedin...
 theme: iasc_common_design
-region: sidebar_second
-weight: 4
+region: sidebar_first
+weight: -18
 provider: null
 plugin: 'facet_block:aap__interested'
 settings:

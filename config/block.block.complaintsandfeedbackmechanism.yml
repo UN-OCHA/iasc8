@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: complaintsandfeedbackmechanism
 theme: iasc_common_design
-region: sidebar_second
-weight: -1
+region: sidebar_first
+weight: -22
 provider: null
 plugin: 'facet_block:aap_complaints_and_feedback_mechanism'
 settings:

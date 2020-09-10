@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: feedback
 theme: iasc_common_design
-region: sidebar_second
-weight: 13
+region: sidebar_first
+weight: -14
 provider: null
 plugin: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
 settings:
