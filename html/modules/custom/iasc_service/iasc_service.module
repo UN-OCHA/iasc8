@@ -119,7 +119,7 @@ function iasc_service_token_info() {
           'description' => t('Number of organizations in the service directory.'),
         ],
       ],
-    ]
+    ],
   ];
 }
 
