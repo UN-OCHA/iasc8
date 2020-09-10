@@ -50,19 +50,15 @@
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
 
-    <h2 class="cd-sidebar__label">Filter</h2>
-
       {% block content %}
-        <ul class="cd-list">
           {% for facet in facets %}
-            <h3>{{ facet.label }}</h3>
+            <h2>{{ facet.label }}</h2>
             <select multiple>
               {% for option in facet.options %}
                 <option value="{{ option.key }}">{{ option.label }}</option>
               {% endfor %}
             </select>
           {% endfor %}
-        </ul>
       {% endblock %}
     </div>
   {% endblock paragraph %}
