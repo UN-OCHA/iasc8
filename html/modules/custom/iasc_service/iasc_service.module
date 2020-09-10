@@ -31,13 +31,19 @@ function iasc_service_preprocess_paragraph(&$vars) {
 /**
  * Build services landing block.
  */
-function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
-  $active_facets = [
+function iasc_service_landing_block_facets() {
+  return [
     'aap_services',
     'aap_service_coverage',
     'services_relevant_hpc_stage',
   ];
+}
 
+/**
+ * Build services landing block.
+ */
+function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
+  $active_facets = iasc_service_landing_block_facets();
   $lookup = [];
 
   $index = Index::load('services');
@@ -51,7 +57,11 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     foreach ($active_facets as $facet_name) {
       $facet = Facet::load($facet_name);
       $field_name = $facet->getFieldIdentifier();
-      $lookup[$field_name] = $facet_name;
+      $lookup[$field_name] = [
+        'key' => $facet->getUrlAlias(),
+        'name' => $facet_name,
+        'label' => $facet->label()
+      ];
       $facet_options[$field_name] = [
         'field' => $field_name,
         'limit' => 0,
@@ -80,12 +90,13 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     foreach ($facet_values as $facet) {
       $id = trim($facet['filter'], '"');
       $options[] = [
-        'key' => $lookup[$field_name] . ':' . $id,
-        'label' => $terms[$id]->getName(),
+        'key' => $lookup[$field_name]['key'] . ':' . $id,
+        'label' => $terms[$id]->getName() . ' (' . $facet['count'] . ')',
       ];
     }
 
-    $vars['facets'][$field_name]['label'] = $field_name;
+    $vars['facets'][$field_name]['label'] = $lookup[$field_name]['label'];
+    $vars['facets'][$field_name]['name'] = $lookup[$field_name]['name'];
     $vars['facets'][$field_name]['options'] = $options;
   }
 }

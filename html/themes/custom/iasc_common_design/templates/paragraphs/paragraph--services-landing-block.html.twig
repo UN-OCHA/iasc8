@@ -56,7 +56,7 @@
         <form method="POST" action="/services-search">
           {% for facet in facets %}
             <h3>{{ facet.label }}</h3>
-            <select name="{{ facet.label }}[]" multiple>
+            <select name="{{ facet.name }}[]" multiple>
               {% for option in facet.options %}
                 <option value="{{ option.key }}">{{ option.label }}</option>
               {% endfor %}
