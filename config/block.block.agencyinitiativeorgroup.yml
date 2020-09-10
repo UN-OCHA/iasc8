@@ -1,6 +1,6 @@
 uuid: 99a990e4-bc78-4c2e-a3f6-ed6a0c135997
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.aap_agency_initiative_or_group
@@ -12,7 +12,7 @@ dependencies:
 id: agencyinitiativeorgroup
 theme: iasc_common_design
 region: sidebar_first
-weight: -23
+weight: 6
 provider: null
 plugin: 'facet_block:aap_agency_initiative_or_group'
 settings:

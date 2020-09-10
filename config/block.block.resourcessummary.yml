@@ -12,7 +12,7 @@ dependencies:
 id: resourcessummary
 theme: iasc_common_design
 region: sidebar_first
-weight: -10
+weight: -18
 provider: null
 plugin: 'facets_summary_block:resources_summary'
 settings:
