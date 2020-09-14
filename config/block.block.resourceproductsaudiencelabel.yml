@@ -10,8 +10,8 @@ dependencies:
     - iasc_common_design
 id: resourceproductsaudiencelabel
 theme: iasc_common_design
-region: sidebar_second
-weight: -17
+region: sidebar_first
+weight: -13
 provider: null
 plugin: 'facet_block:resource_products_audience_label'
 settings:

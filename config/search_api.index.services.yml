@@ -11,6 +11,7 @@ dependencies:
     - field.storage.node.field_complaints_and_feedback
     - field.storage.node.field_share_data
     - field.storage.node.field_global_focal_point
+    - field.storage.node.field_relevant_hpc_stage
     - field.storage.node.field_service_coverage
     - field.storage.node.field_services
     - field.storage.node.field_interest
@@ -101,6 +102,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_kind_of_data
+  field_relevant_hpc_stage:
+    label: 'Relevant HPC Stage'
+    datasource_id: 'entity:node'
+    property_path: field_relevant_hpc_stage
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relevant_hpc_stage
   field_service_coverage:
     label: 'Service Coverage'
     datasource_id: 'entity:node'

@@ -10,8 +10,8 @@ dependencies:
     - iasc_common_design
 id: iasc_statements_authoredon
 theme: iasc_common_design
-region: sidebar_second
-weight: -3
+region: sidebar_first
+weight: -1
 provider: null
 plugin: 'facet_block:iasc_statements_authored_on'
 settings:

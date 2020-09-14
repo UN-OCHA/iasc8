@@ -6,7 +6,11 @@ dependencies:
     - search_api.index.services
     - views.view.iasc_services
   module:
+    - facets_pretty_paths
     - search_api
+third_party_settings:
+  facets_pretty_paths:
+    coder: taxonomy_term_coder
 id: aap_services
 name: Services
 url_alias: aap_services

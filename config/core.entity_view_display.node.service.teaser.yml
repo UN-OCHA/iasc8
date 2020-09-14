@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.service.field_interest
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
+    - field.field.node.service.field_relevant_hpc_stage
     - field.field.node.service.field_service_coverage
     - field.field.node.service.field_service_description
     - field.field.node.service.field_services
@@ -27,26 +28,50 @@ targetEntityType: node
 bundle: service
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_relevant_hpc_stage:
+    type: entity_reference_label
+    weight: 3
     region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_service_coverage:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_services:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
 hidden:
   field_agency_initiative_or_group: true
   field_complaints_and_feedback: true
-  field_description: true
   field_examples_and_case_studies: true
   field_global_focal_point: true
   field_inter_agency_cfm_resources: true
   field_interest: true
   field_kind_of_data: true
   field_links_to_relevant_docs: true
-  field_service_coverage: true
   field_service_description: true
-  field_services: true
   field_share_data: true
   field_type_of_entity: true
   field_updated: true
   langcode: true
+  links: true
   search_api_excerpt: true

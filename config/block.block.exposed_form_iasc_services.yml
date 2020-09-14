@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: exposed_form_iasc_services
 theme: iasc_common_design
-region: sidebar_second
-weight: -22
+region: sidebar_first
+weight: -26
 provider: null
 plugin: 'views_exposed_filter_block:iasc_services-page_1'
 settings:
@@ -20,10 +20,10 @@ settings:
   label: ''
   provider: views
   label_display: visible
-  views_label: 'Looking for something more specific?'
+  views_label: 'Looking for something specific?'
 visibility:
   request_path:
     id: request_path
-    pages: "/services\r\n/services/*"
+    pages: "/node/41316\r\n/services\r\n/services/*"
     negate: false
     context_mapping: {  }

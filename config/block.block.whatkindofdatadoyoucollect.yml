@@ -1,6 +1,6 @@
 uuid: ef224f9e-d295-4aca-a678-04cfd1705f61
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.aap_kind_of_data
@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: whatkindofdatadoyoucollect
 theme: iasc_common_design
-region: sidebar_second
-weight: 4
+region: sidebar_first
+weight: 11
 provider: null
 plugin: 'facet_block:aap_kind_of_data'
 settings:
