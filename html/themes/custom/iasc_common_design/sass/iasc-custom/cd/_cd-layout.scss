@@ -46,3 +46,44 @@ section.cd-layout-two-col .cd-layout-main-content {
 main.cd-container aside:empty {
   display: none;
 }
+
+// One sidebar.
+.cd-layout-with-sidebar-first .cd-layout-sidebar-first {
+  @include tablet {
+    flex-basis: 550px;
+  }
+
+  @include desktop {
+    flex-basis: 285px;
+  }
+}
+
+.cd-layout-content {
+  @include tablet {
+    .cd-layout-with-sidebar-first &,
+    .cd-layout-with-sidebar-second & {
+      min-width: 50%;
+    }
+  }
+
+  @include desktop {
+    .cd-layout-with-sidebar-first &,
+    .cd-layout-with-sidebar-second & {
+      min-width: 50%;
+    }
+  }
+
+  .cd-layout-with-sidebar-first & {
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include desktop {
+      margin-left: 3rem;
+      margin-right: 0;
+    }
+  }
+}
+
+

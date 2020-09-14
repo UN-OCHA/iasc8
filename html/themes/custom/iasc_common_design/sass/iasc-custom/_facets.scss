@@ -208,7 +208,7 @@
 }
 
 .cd-filter[data-cd-toggable] {
-  @include tablet {
+  @include desktop {
     --dropdown: false;
 
     // This is needed for IE11
