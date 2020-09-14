@@ -7,7 +7,9 @@
   "license": "GPL-2.0",
   "dependencies": {
     "autoprefixer": "^8.6.5",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
+    "browserslist": "^4.14.0",
+    "caniuse-lite": "^1.0.30001116",
     "chalk": "^3.0.0",
     "child_process": "^1.0.2",
     "cssnano": "^4.1.8",
@@ -21,7 +23,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
@@ -39,6 +41,8 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "git-hooks": "^1.1.10",
-    "minimist": "^1.2.2"
+    "minimist": ">=1.2.3",
+    "dot-prop": ">=4.2.1",
+    "yargs-parser": ">=13.1.2"
   }
 }

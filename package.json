@@ -7,7 +7,9 @@
     "pwmetrics": "^4.2.3"
   },
   "devDependencies": {
-    "minimist": ">=1.2.2"
+    "minimist": ">=1.2.2",
+    "dot-prop": ">=4.2.1",
+    "yargs-parser": ">=13.1.2"
   },
   "pwmetrics": {
     "url": "http://iasc8.local.docksal/needs-assessment-task-force-meeting-0",

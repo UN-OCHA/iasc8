@@ -717,3 +717,173 @@ function iasc_content_update_8023() {
     fclose($handle);
   }
 }
+
+/**
+ * Change email field to email storage.
+ */
+function iasc_content_update_8024() {
+  \Drupal::database()->query('ALTER TABLE node__field_email MODIFY field_email_value varchar(254) NOT NULL');
+  \Drupal::database()->query('ALTER TABLE node_revision__field_email MODIFY field_email_value varchar(254) NOT NULL');
+
+  $entity_type = 'node';
+  $field_name = 'field_email';
+
+  $name = 'field.storage.' . $entity_type . '.' . $field_name;
+
+  // Get the current settings.
+  $result = \Drupal::database()->query('SELECT data FROM {config} WHERE name = :name', [
+    ':name' => $name,
+  ])->fetchField();
+
+  $data = unserialize($result);
+  $data['type'] = 'email';
+  $data['settings'] = [
+    'length' => 254,
+  ];
+
+  // Write settings back to the database.
+  \Drupal::database()->update('config')
+    ->fields(['data' => serialize($data)])
+    ->condition('name', $name)
+    ->execute();
+}
+
+/**
+ * Update stored schema for email field.
+ */
+function iasc_content_update_8025() {
+  $key = 'node.field_schema_data.field_email';
+  $$schema = [
+    'node__field_email' => [
+      'description' => 'Data storage for node field field_email.',
+      'fields' => [
+        'bundle' => [
+          'type' => 'varchar_ascii',
+          'length' => 128,
+          'not null' => 1,
+          'default' => '',
+          'description' => 'The field instance bundle to which this row belongs, used when deleting a field instance',
+        ],
+        'deleted' => [
+          'type' => 'int',
+          'size' => 'tiny',
+          'not null' => 1,
+          'default' => 0,
+          'description' => 'A boolean indicating whether this data item has been deleted',
+        ],
+        'entity_id' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The entity id this data is attached to',
+        ],
+        'revision_id' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The entity revision id this data is attached to',
+        ],
+        'langcode' => [
+          'type' => 'varchar_ascii',
+          'length' => 32,
+          'not null' => 1,
+          'default' => '',
+          'description' => 'The language code for this data item.',
+        ],
+        'delta' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The sequence number for this data item, used for multi-value fields',
+        ],
+        'field_email_value' => [
+          'type' => 'varchar',
+          'length' => 254,
+          'not null' => 1,
+        ],
+      ],
+      'primary key' => [
+        'entity_id',
+        'deleted',
+        'delta',
+        'langcode',
+      ],
+      'indexes' => [
+        'bundle' => [
+          'bundle',
+        ],
+        'revision_id' => [
+          'revision_id',
+        ],
+      ],
+    ],
+
+    'node_revision__field_email' => [
+      'description' => 'Revision archive storage for node field field_email.',
+      'fields' => [
+        'bundle' => [
+          'type' => 'varchar_ascii',
+          'length' => 128,
+          'not null' => 1,
+          'default' => '',
+          'description' => 'The field instance bundle to which this row belongs, used when deleting a field instance',
+        ],
+        'deleted' => [
+          'type' => 'int',
+          'size' => 'tiny',
+          'not null' => 1,
+          'default' => 0,
+          'description' => 'A boolean indicating whether this data item has been deleted',
+        ],
+        'entity_id' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The entity id this data is attached to',
+        ],
+        'revision_id' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The entity revision id this data is attached to',
+        ],
+        'langcode' => [
+          'type' => 'varchar_ascii',
+          'length' => 32,
+          'not null' => 1,
+          'default' => '',
+          'description' => 'The language code for this data item.',
+        ],
+        'delta' => [
+          'type' => 'int',
+          'unsigned' => 1,
+          'not null' => 1,
+          'description' => 'The sequence number for this data item, used for multi-value fields',
+        ],
+        'field_email_value' => [
+          'type' => 'varchar',
+          'length' => 254,
+          'not null' => 1,
+        ],
+      ],
+      'primary key' => [
+        'entity_id',
+        'revision_id',
+        'deleted',
+        'delta',
+        'langcode',
+      ],
+      'indexes' => [
+        'bundle' => [
+          'bundle',
+        ],
+        'revision_id' => [
+          'revision_id',
+        ],
+      ],
+    ],
+  ];
+
+  $installedStorageSchema = \Drupal::keyValue('entity.storage_schema.sql');
+  $installedStorageSchema->set($key, $schema);
+}
