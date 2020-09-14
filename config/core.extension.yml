@@ -28,6 +28,7 @@ module:
   entityqueue: 0
   facets: 0
   facets_pretty_paths: 0
+  facets_summary: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -63,6 +64,7 @@ module:
   menu_ui: 0
   node: 0
   node_view_permissions: 0
+  ocha_integrations: 0
   options: 0
   page_cache: 0
   paragraphs_edit: 0
@@ -95,6 +97,7 @@ module:
   telephone: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   tour: 0
   update: 0

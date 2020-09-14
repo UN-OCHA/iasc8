@@ -1,6 +1,6 @@
 uuid: 042162a6-f6a1-4e6e-aee8-f6b7e8f3f742
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.aap_share_data
@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: doesyourentitysharedatawiththehumanitariancommunity
 theme: iasc_common_design
-region: sidebar_second
-weight: 0
+region: sidebar_first
+weight: 8
 provider: null
 plugin: 'facet_block:aap_share_data'
 settings:

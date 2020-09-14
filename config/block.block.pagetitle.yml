@@ -2,12 +2,14 @@ uuid: ae082603-2a59-4c74-b491-f2958393e7a3
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - iasc_common_design
 id: pagetitle
 theme: iasc_common_design
-region: content
-weight: -21
+region: page_title
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
@@ -15,4 +17,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/41316\r\n/services\r\n/services/*"
+    negate: false
+    context_mapping: {  }

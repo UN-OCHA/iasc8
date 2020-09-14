@@ -65,6 +65,18 @@ class IascServicesBulkImport extends FormBase {
       '#description' => $this->t('Excel file containing services to import'),
     ];
 
+    $form['strategy'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Import strategy'),
+      '#required' => TRUE,
+      '#options' => [
+        'append' => $this->t('Append services'),
+        'overwrite' => $this->t('Remove all services first'),
+        'clear' => $this->t('Remove all services and reference data first'),
+      ],
+      '#default_vaTerms' => 'append',
+    ];
+
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
@@ -93,17 +105,30 @@ class IascServicesBulkImport extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $count = 0;
     $validators = ['file_validate_extensions' => ['xlsx']];
     $file = file_save_upload('xlsx_file', $validators, FALSE, 0);
     if (!$file) {
       return;
     }
 
+    switch ($form_state->getValue('strategy')) {
+      case 'overwrite':
+        $this->deleteContent();
+        break;
+
+      case 'clear':
+        $this->deleteContent();
+        $this->deleteTerms();
+        break;
+
+    }
+
     $filename = $this->fileSystem->realpath($file->destination);
 
     $reader = new Xlsx();
     $reader->setReadDataOnly(TRUE);
-    $reader->setLoadSheetsOnly(['Services']);
+    $reader->setLoadSheetsOnly(['Services', 'Clean']);
     $spreadsheet = $reader->load($filename);
 
     $header = [];
@@ -136,8 +161,59 @@ class IascServicesBulkImport extends FormBase {
 
       if (isset($data['agency, initiative or group']) && !empty($data['agency, initiative or group'])) {
         $this->createService($data);
+        $count++;
       }
     }
+
+    $message = $this->t('Created @count services.', [
+      '@count' => $count,
+    ]);
+
+    $this->messenger()->addMessage($message);
+  }
+
+  /**
+   * Clear extract content and theme terms before import.
+   */
+  private function deleteContent() {
+    $entities = $this->entityTypeManager->getStorage('node')->loadByProperties(['type' => 'service']);
+    $this->entityTypeManager->getStorage('node')->delete($entities);
+
+    $message = $this->t('Removed @count_nodes services.', [
+      '@count_nodes' => count($entities),
+    ]);
+
+    $this->messenger()->addMessage($message);
+  }
+
+  /**
+   * Delete all terms.
+   */
+  private function deleteTerms() {
+    $vocabularies = [
+      'agency_initiative_or_group',
+      'type_of_entity',
+      'services',
+      'service_coverage',
+      'complaints_and_feedback_mechanis',
+      'interest',
+      'share_data',
+      'kind_of_data',
+      'relevant_hpc_stage',
+    ];
+
+    $count = 0;
+    foreach ($vocabularies as $vocabulary) {
+      $entities = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties(['vid' => $vocabulary]);
+      $this->entityTypeManager->getStorage('taxonomy_term')->delete($entities);
+      $count += count($entities);
+    }
+
+    $message = $this->t('Removed @count_terms terms.', [
+      '@count_terms' => $count,
+    ]);
+
+    $this->messenger()->addMessage($message);
   }
 
   /**
@@ -204,7 +280,7 @@ class IascServicesBulkImport extends FormBase {
     // Services.
     if (isset($item['services']) && !empty($item['services'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['services']));
+      $values = array_map('trim', explode(';', $item['services']));
       foreach ($values as $input) {
         $data['field_services'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'services'),
@@ -222,7 +298,7 @@ class IascServicesBulkImport extends FormBase {
     // Service Coverage.
     if (isset($item['service coverage']) && !empty($item['service coverage'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['service coverage']));
+      $values = array_map('trim', explode(';', $item['service coverage']));
       foreach ($values as $input) {
         $data['field_service_coverage'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'service_coverage'),
@@ -235,23 +311,23 @@ class IascServicesBulkImport extends FormBase {
       // Trim.
       $value = trim($item['global focal point']);
       $data['field_global_focal_point'][] = [
-        'target_id' => $this->fetchOrCreateContact($value),
+        'target_id' => $this->fetchOrCreateContact($value, $item),
       ];
     }
 
     // Complaints and feedback mechanism (CFM).
-    if (isset($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']) && !empty($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?'])) {
+    if (isset($item['cfms implemented at country level?']) && !empty($item['cfms implemented at country level?'])) {
       // Trim.
-      $value = trim($item['does your entity usually implement a complaints and feedback mechanism (cfm) for programs at the country level?']);
+      $value = trim($item['cfms implemented at country level?']);
       $data['field_complaints_and_feedback'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'complaints_and_feedback_mechanis'),
       ];
     }
 
     // The entity I am representing may be interested in.
-    if (isset($item['please select any that may apply. "the entity i am representing may be interested in..."']) && !empty($item['please select any that may apply. "the entity i am representing may be interested in..."'])) {
+    if (isset($item['this entity has indicated interest in…']) && !empty($item['this entity has indicated interest in…'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['please select any that may apply. "the entity i am representing may be interested in..."']));
+      $values = array_map('trim', explode(';', $item['this entity has indicated interest in…']));
       foreach ($values as $input) {
         $data['field_interest'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'interest'),
@@ -259,19 +335,19 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-    // Does your entity share data with the humanitarian community?.
-    if (isset($item['does your entity share data with the humanitarian community?']) && !empty($item['does your entity share data with the humanitarian community?'])) {
+    // Data sharing requirements.
+    if (isset($item['data sharing requirements']) && !empty($item['data sharing requirements'])) {
       // Trim.
-      $value = trim($item['does your entity share data with the humanitarian community?']);
+      $value = trim($item['data sharing requirements']);
       $data['field_share_data'][] = [
         'target_id' => $this->fetchOrCreateTerm($value, 'share_data'),
       ];
     }
 
     // What kind of data do you collect that you share.
-    if (isset($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']) && !empty($item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?'])) {
+    if (isset($item['type(s) of data available']) && !empty($item['type(s) of data available'])) {
       // Split and trim.
-      $values = array_map('trim', explode(',', $item['what kind of data do you collect that you share/may be interested in sharing for the purposes of collective aap?']));
+      $values = array_map('trim', explode(';', $item['type(s) of data available']));
       foreach ($values as $input) {
         $data['field_kind_of_data'][] = [
           'target_id' => $this->fetchOrCreateTerm($input, 'kind_of_data'),
@@ -283,6 +359,56 @@ class IascServicesBulkImport extends FormBase {
     if (isset($item['description']) && !empty($item['description'])) {
       $data['field_description'][] = [
         'value' => trim($item['description']),
+      ];
+    }
+
+    // Examples and Case Studies.
+    if (isset($item['examples and case studies']) && !empty($item['examples and case studies'])) {
+      $values = array_map('trim', explode(';', $item['examples and case studies']));
+      $data['field_examples_and_case_studies'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
+      ];
+    }
+
+    // Links to Relevant Docs.
+    if (isset($item['links to relevant docs']) && !empty($item['links to relevant docs'])) {
+      $values = array_map('trim', explode(';', $item['links to relevant docs']));
+      $data['field_links_to_relevant_docs'] = [];
+      foreach ($values as $input) {
+        // Split in title and URI.
+        $parts = explode(': ', $input);
+        if (count($parts) > 1) {
+          $data['field_links_to_relevant_docs'][] = [
+            'title' => $parts[0],
+            'uri' => $parts[1],
+          ];
+        }
+        else {
+          $data['field_links_to_relevant_docs'][] = [
+            'uri' => $input,
+          ];
+        }
+      }
+    }
+
+    // Relevant HPC Stage.relevant hpc stage.
+    if (isset($item['relevant hpc stage']) && !empty($item['relevant hpc stage'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(';', $item['relevant hpc stage']));
+      foreach ($values as $input) {
+        $data['field_relevant_hpc_stage'][] = [
+          'target_id' => $this->fetchOrCreateTerm($input, 'relevant_hpc_stage'),
+        ];
+      }
+    }
+
+    // Inter-Agency CFM Resources.
+    if (isset($item['inter-agency cfm resources']) && !empty($item['inter-agency cfm resources'])) {
+      $values = array_map('trim', explode(';', $item['inter-agency cfm resources']));
+      $data['field_inter_agency_cfm_resources'][] = [
+        'value' => '<ul><li>' . implode('</li><li>', $values) . '</li></ul>',
+        'format' => 'basic_html',
       ];
     }
 
@@ -321,7 +447,7 @@ class IascServicesBulkImport extends FormBase {
   /**
    * Fetch or create contact.
    */
-  protected function fetchOrCreateContact($email) {
+  protected function fetchOrCreateContact($email, $item) {
     $existing_contact_id = $this->lookupPersonByEmail($email);
     if ($existing_contact_id) {
       return $existing_contact_id;
@@ -330,13 +456,40 @@ class IascServicesBulkImport extends FormBase {
     // Create new person.
     $data = [
       'type' => 'contact',
-      'title' => $email,
+      'title' => '',
       'field_email' => [],
+      'field_first_name' => [],
+      'field_last_name' => [],
+      'field_homepage' => [],
     ];
 
     $data['field_email'][] = [
       'value' => $email,
     ];
+
+    if (isset($item['first name']) && !empty($item['first name'])) {
+      $data['field_first_name'][] = [
+        'value' => trim($item['first name']),
+      ];
+      $data['title'] = trim($item['first name']);
+    }
+
+    if (isset($item['last name']) && !empty($item['last name'])) {
+      $data['field_last_name'][] = [
+        'value' => trim($item['last name']),
+      ];
+      $data['title'] .= empty($data['title']) ? trim($item['last name']) : (' ' . trim($item['last name']));
+    }
+
+    if (isset($item['website']) && !empty($item['website'])) {
+      $data['field_homepage'][] = [
+        'uri' => trim($item['website']),
+      ];
+    }
+
+    if (empty($data['title'])) {
+      $data['title'] = $email;
+    }
 
     $contact = $this->entityTypeManager->getStorage('node')->create($data);
     $contact->save();

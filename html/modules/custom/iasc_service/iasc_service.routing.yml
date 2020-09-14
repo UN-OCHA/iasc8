@@ -12,3 +12,12 @@ iasc_service.iasc_service_create_template:
     _title: 'Create Template'
   requirements:
     _permission: 'iasc service bulk import'
+iasc_service.iasc_service_search:
+  path: '/services-search'
+  defaults:
+    _controller: '\Drupal\iasc_service\Controller\IascServicesSearch::execute'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+

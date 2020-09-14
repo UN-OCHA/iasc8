@@ -18,6 +18,7 @@ regions:
   header_navigation: Header navigation
   hero: Hero
   highlighted: Highlighted
+  page_title: Page title
   content: Content
   sidebar_first: First sidebar
   sidebar_second: Second sidebar

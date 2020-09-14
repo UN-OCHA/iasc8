@@ -9,7 +9,7 @@ dependencies:
 id: breadcrumbs
 theme: iasc_common_design
 region: content
-weight: -18
+weight: -23
 provider: null
 plugin: system_breadcrumb_block
 settings:
