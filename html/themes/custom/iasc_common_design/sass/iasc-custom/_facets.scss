@@ -208,6 +208,11 @@
 }
 
 .cd-filter[data-cd-toggable] {
+  // When there is only one block, do not collapse on mobile.
+  &[data-num-childs="1"] {
+    --dropdown: false;
+  }
+
   @include desktop {
     --dropdown: false;
 
