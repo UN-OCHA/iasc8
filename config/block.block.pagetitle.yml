@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/node/41316\r\n/services\r\n/services/*"
-    negate: false
+    pages: '/group/*'
+    negate: true
     context_mapping: {  }
