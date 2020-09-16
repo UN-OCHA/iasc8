@@ -86,4 +86,6 @@ main.cd-container aside:empty {
   }
 }
 
-
+.cd-page-title + main.cd-container {
+  padding-top: 1rem;
+}
