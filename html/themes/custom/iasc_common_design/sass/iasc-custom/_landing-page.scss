@@ -13,10 +13,13 @@
 }
 
 .paragraph--type--services-landing-block {
-
   form {
-    margin-bottom: 6rem;
     border-bottom: 1px solid $cd-mid-bluey-grey;
+    margin-bottom: 4rem;
+
+    @include desktop {
+      margin-bottom: 6rem;
+    }
   }
 
   .cd-form__group {
