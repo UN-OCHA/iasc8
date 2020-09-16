@@ -89,3 +89,11 @@ main.cd-container aside:empty {
 .cd-page-title + main.cd-container {
   padding-top: 1rem;
 }
+
+.cd-layout-sidebar-first {
+  margin-bottom: 3rem;
+
+  @include desktop {
+    margin-bottom: 1rem;
+  }
+}
