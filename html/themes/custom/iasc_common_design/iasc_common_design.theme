@@ -160,3 +160,11 @@ function iasc_common_design_preprocess_block(&$variables) {
     $variables['attributes']['class'][] = 'block--type-' . $blockType;
   }
 }
+
+function iasc_common_design_preprocess_page_title(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    $vars['title'] = "";
+  }
+}
+
