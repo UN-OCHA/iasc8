@@ -2,6 +2,7 @@
 
 .block--type-block-with-text-and-link {
   margin-top: 2rem;
+  margin-bottom: 4rem;
 
   .field--name-field-block-title {
     @extend .cd-heading-3;
@@ -68,10 +69,27 @@
 
 .cd-layout-content .block--type-block-with-text-and-link,
 .cd-layout-main-content .block--type-block-with-text-and-link {
+  margin-bottom: 4rem;
 
-  @include desktop {
+  @include tablet {
     max-width: 50%;
     float: left;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Adjust padding so Custom blocks float flush left and right.
+@include desktop {
+  .node--type-panopoly-landing-page .field--name-field-content .field__item:last-child {
+    .paragraph--type--custom-block {
+      padding-left: 1rem;
+      padding-right: 0;
+    }
+  }
+
+  .region-content > .block--type-block-with-text-and-link:last-child {
+    padding-left: 1rem;
+    padding-right: 0;
   }
 }

@@ -47,18 +47,22 @@
   ]
 %}
 
+{{ attach_library('iasc_common_design/select2') }}
+
 {% if (facets) %}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
         <form method="POST" action="/services-search">
           {% for facet in facets %}
-            <h2>{{ facet.label }}</h2>
-            <select name="{{ facet.name }}[]" multiple>
-              {% for option in facet.options %}
-                <option value="{{ option.key }}">{{ option.label }}</option>
-              {% endfor %}
-            </select>
+            <div class="cd-form__group">
+              <label for="{{ facet.name }}">{{ facet.label }}</label>
+              <select class="{{ facet.name }}" name="{{ facet.name }}[]" multiple id="{{ facet.name }}">
+                {% for option in facet.options %}
+                  <option value="{{ option.key }}">{{ option.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
           {% endfor %}
           <div class="operations form-actions">
             <input type="submit" value="{% trans %}Show Results{% endtrans %}">
