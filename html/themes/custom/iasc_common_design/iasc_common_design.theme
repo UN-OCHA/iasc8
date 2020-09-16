@@ -154,7 +154,7 @@ function iasc_common_design_preprocess_region(&$variables) {
  */
 function iasc_common_design_preprocess_block(&$variables) {
 
-  // adding custom attribute class for block
+  // Adding custom attribute class for block.
   if ($variables['elements']['#base_plugin_id'] == 'block_content') {
     $blockType = strtr($variables['content']['#block_content']->bundle(), '_', '-');
     $variables['attributes']['class'][] = 'block--type-' . $blockType;
