@@ -9,6 +9,9 @@
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
       "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2019-11-19/group-status-2873212-17.patch"
+    },
+    "drupal/core": {
+      "Attempt to debug intermittent 'The \"\" entity type does not exist.'": "PATCHES/core_backtrace_entitymanager.patch"
     }
   }
 }
