@@ -3,7 +3,8 @@ ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
 WORKDIR /srv/www
-RUN composer install --no-dev --prefer-dist && \
+RUN php -v && \
+    composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default && \
     composer run gulp
 
