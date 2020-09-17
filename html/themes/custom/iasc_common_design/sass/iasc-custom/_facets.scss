@@ -1,18 +1,5 @@
 .block-facets {
   margin-bottom: 2rem;
-
-  // Control select2 select element width when options are wider than parent element.
-  .select2-container--default .select2-search--inline .select2-search__field {
-    width: auto !important;
-  }
-
-  .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    white-space: normal;
-  }
-
-  .select2-container--default.select2-container--focus .select2-selection--multiple {
-    outline: 2px solid $cd-bright-blue;
-  }
 }
 
 .block-facets h2 {
@@ -153,7 +140,7 @@
 }
 
 .cd-filter {
-  padding: 2rem 0;
+  padding: 2rem 0 0;
 
   @include desktop {
     padding: 0;
