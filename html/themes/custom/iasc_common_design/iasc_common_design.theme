@@ -164,8 +164,8 @@ function iasc_common_design_preprocess_block(&$variables) {
 function iasc_common_design_preprocess_page_title(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');
 
-  if (!($node->getType() == 'panopoly_landing_page')) {
-    if ($node) {
+  if ($node) {
+    if (!($node->getType() == 'panopoly_landing_page')) {
       $vars['title'] = "";
     }
   }
