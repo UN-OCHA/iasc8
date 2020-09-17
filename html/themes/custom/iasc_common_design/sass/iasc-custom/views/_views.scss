@@ -99,7 +99,7 @@
         max-width: 16rem;
       }
 
-      @include tablet {
+      @include desktop {
         max-width: unset;
         width: 100%;
       }
