@@ -62,7 +62,7 @@ class IascHeaderSearch extends BlockBase implements ContainerFactoryPluginInterf
    * {@inheritdoc}
    */
   public function build() {
-    $keyword = $this->request->query->get('keys');;
+    $keyword = $this->request->query->get('keys');
 
     return [
       '#theme' => 'iasc_header_search_block',
