@@ -130,3 +130,21 @@
 .view-header > p {
   margin-top: 0;
 }
+
+.view-iasc-services {
+  .view-header h2 {
+    @media (max-width: 1023px) {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $cd-mid-bluey-grey;
+    }
+  }
+
+  .pager {
+    margin-bottom: 4rem;
+
+    @include desktop {
+      margin-bottom: 6rem;
+    }
+  }
+}
