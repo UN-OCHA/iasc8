@@ -96,6 +96,7 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
+        "weitzman/drupal-test-traits": "^1.5",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
@@ -104,7 +105,7 @@
         "drupal/devel_entity_updates": "^1.0@RC",
         "drupal/devel_php": "^1.1",
         "phpmd/phpmd": "^2.6",
-        "weitzman/drupal-test-traits": "^1.2",
+        "phpunit/phpunit": "^7",
         "weitzman/logintrait": "^1.1"
     },
     "conflict": {
