@@ -100,6 +100,7 @@
         "drupal/devel_entity_updates": "^1.0@RC",
         "drupal/devel_php": "^1.1",
         "phpmd/phpmd": "^2.6",
+        "phpunit/phpunit": "^7",
         "weitzman/logintrait": "^1.1"
     },
     "conflict": {
