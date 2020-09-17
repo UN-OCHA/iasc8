@@ -26,7 +26,7 @@ class HeroListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var \Drupal\iasc_hero\Entity\Hero $entity */
+    /** @var \Drupal\iasc_hero\Entity\Hero $entity */
     $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),

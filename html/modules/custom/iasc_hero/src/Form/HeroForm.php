@@ -34,7 +34,7 @@ class HeroForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var \Drupal\iasc_hero\Entity\Hero $entity */
+    /** @var \Drupal\iasc_hero\Entity\Hero $entity */
     $form = parent::buildForm($form, $form_state);
 
     if (!$this->entity->isNew()) {
