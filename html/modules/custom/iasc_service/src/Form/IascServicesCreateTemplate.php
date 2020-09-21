@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Class IascServicesCreateTemplate.
+ * Class creates IASC Services template.
  */
 class IascServicesCreateTemplate extends FormBase {
 
