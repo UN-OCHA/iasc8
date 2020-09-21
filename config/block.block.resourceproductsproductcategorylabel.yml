@@ -10,7 +10,7 @@ dependencies:
     - iasc_common_design
 id: resourceproductsproductcategorylabel
 theme: iasc_common_design
-region: sidebar_second
+region: sidebar_first
 weight: 4
 provider: null
 plugin: 'facet_block:resource_products_product_category_label'

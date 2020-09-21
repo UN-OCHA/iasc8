@@ -10,8 +10,8 @@ dependencies:
     - iasc_common_design
 id: audiencelabel
 theme: iasc_common_design
-region: sidebar_second
-weight: -10
+region: sidebar_first
+weight: -12
 provider: null
 plugin: 'facet_block:search_audience_label'
 settings:

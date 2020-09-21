@@ -1,0 +1,8 @@
+uuid: d17d1a50-7534-4c66-90fb-006ebfaa04f3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Kind of data'
+vid: kind_of_data
+description: ''
+weight: 0

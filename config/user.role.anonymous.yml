@@ -32,6 +32,7 @@ permissions:
   - 'view any page content'
   - 'view any panopoly_landing_page content'
   - 'view any panopoly_page content'
+  - 'view any service content'
   - 'view comment alterations in oa_worktracker_task'
   - 'view field_ap_progress_overview'
   - 'view field_ap_status'

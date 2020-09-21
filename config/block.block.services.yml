@@ -1,0 +1,29 @@
+uuid: e0466930-2041-4da8-8db8-7291ac1d9340
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.aap_services
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: services
+theme: iasc_common_design
+region: sidebar_first
+weight: -24
+provider: null
+plugin: 'facet_block:aap_services'
+settings:
+  id: 'facet_block:aap_services'
+  label: Services
+  provider: facets
+  label_display: visible
+  block_id: services
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }

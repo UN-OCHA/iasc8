@@ -235,21 +235,8 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'IASC Group Content'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          content:
-            value: 'Content of {{ audience_label }}'
-            format: basic_html
-          plugin_id: text
+      title: 'Content of {{ audience_label }}'
+      header: {  }
       footer: {  }
       empty:
         area:
@@ -306,7 +293,9 @@ display:
         - route
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_content:
     display_plugin: page
     id: page_content
@@ -323,7 +312,9 @@ display:
         - route
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_documents:
     display_plugin: page
     id: page_documents
@@ -435,24 +426,11 @@ display:
         operator: AND
         groups:
           1: AND
-      title: Documents
+      title: 'Documents of {{ audience_label }}'
       display_description: ''
       cache:
         type: none
-      header:
-        entity_group:
-          id: entity_group
-          table: views
-          field: entity_group
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          target: '{{ arguments.field_iasc_audience }}'
-          view_mode: view_header_documents
-          bypass_access: false
-          plugin_id: entity
+      header: {  }
       sorts:
         field_published_date:
           id: field_published_date
@@ -486,7 +464,9 @@ display:
         - route
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_meetings:
     display_plugin: page
     id: page_meetings
@@ -547,22 +527,9 @@ display:
         operator: AND
         groups:
           1: AND
-      title: Meetings
+      title: 'Meetings of {{ audience_label }}'
       display_description: ''
-      header:
-        entity_group:
-          id: entity_group
-          table: views
-          field: entity_group
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          target: '{{ arguments.field_iasc_audience }}'
-          view_mode: view_header_meetings
-          bypass_access: false
-          plugin_id: entity
+      header: {  }
       sorts:
         field_oa_date:
           id: field_oa_date
@@ -596,7 +563,9 @@ display:
         - route
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'
   page_news:
     display_plugin: page
     id: page_news
@@ -657,22 +626,9 @@ display:
         operator: AND
         groups:
           1: AND
-      title: News
+      title: 'News of {{ audience_label }}'
       display_description: ''
-      header:
-        entity_group:
-          id: entity_group
-          table: views
-          field: entity_group
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          target: '{{ arguments.field_iasc_audience }}'
-          view_mode: view_header_news
-          bypass_access: false
-          plugin_id: entity
+      header: {  }
       sorts:
         field_published_date:
           id: field_published_date
@@ -706,4 +662,6 @@ display:
         - route
         - url
         - url.query_args
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.default_solr_index'

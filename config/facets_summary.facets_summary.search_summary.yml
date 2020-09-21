@@ -1,0 +1,62 @@
+uuid: 1cc716ec-2255-4a5b-8477-e8deca171600
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.search_content
+  module:
+    - search_api
+id: search_summary
+name: 'Search summary'
+facets:
+  search_audience_label:
+    checked: true
+    label: 'Audience label'
+    separator: ', '
+    weight: 0
+    show_count: false
+  search_authored_on:
+    checked: true
+    label: 'Authored on'
+    separator: ', '
+    weight: 0
+    show_count: false
+  search_content_type:
+    checked: true
+    label: 'Content type'
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_page__search_content__search'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '-3'
+    settings: {  }
+  reset_facets_pretty_path:
+    processor_id: reset_facets_pretty_path
+    weights:
+      build: '-4'
+    settings:
+      link_text: 'Reset all filters'
+      clear_string: 1
+  reset_string_ocha:
+    processor_id: reset_string_ocha
+    weights:
+      build: '-5'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-10'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-9'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text

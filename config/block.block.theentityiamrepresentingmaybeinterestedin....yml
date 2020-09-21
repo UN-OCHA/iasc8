@@ -1,0 +1,29 @@
+uuid: 0885a9d7-e55a-4e07-b0df-42bb1da48190
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.aap__interested
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: theentityiamrepresentingmaybeinterestedin...
+theme: iasc_common_design
+region: sidebar_first
+weight: 9
+provider: null
+plugin: 'facet_block:aap__interested'
+settings:
+  id: 'facet_block:aap__interested'
+  label: 'The entity I am representing may be interested in...'
+  provider: facets
+  label_display: visible
+  block_id: theentityiamrepresentingmaybeinterestedin...
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }

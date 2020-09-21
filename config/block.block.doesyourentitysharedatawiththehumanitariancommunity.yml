@@ -1,0 +1,29 @@
+uuid: 042162a6-f6a1-4e6e-aee8-f6b7e8f3f742
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.aap_share_data
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: doesyourentitysharedatawiththehumanitariancommunity
+theme: iasc_common_design
+region: sidebar_first
+weight: 8
+provider: null
+plugin: 'facet_block:aap_share_data'
+settings:
+  id: 'facet_block:aap_share_data'
+  label: 'Does your entity share data with the humanitarian community?'
+  provider: facets
+  label_display: visible
+  block_id: doesyourentitysharedatawiththehumanitariancommunity
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }

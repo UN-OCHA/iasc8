@@ -91,3 +91,49 @@
 .align-right {
   margin-left: 1rem;
 }
+
+// Contact block on Service node.
+.field--name-field-global-focal-point {
+  background: $cd-light-bluey-grey;
+  padding: 1rem;
+}
+
+.node--view-mode-no-title {
+  margin-bottom: 2rem;
+}
+
+// Services node type.
+.node--type-service {
+  &.node--view-mode-full .cd-layout-main-content > .field {
+    margin-bottom: 2rem;
+  }
+
+  &.node--view-mode-teaser .node__content > .field {
+    margin-bottom: 1rem;
+  }
+
+  &.node--view-mode-teaser .cd-article-teaser__description {
+    padding-top: 1rem;
+  }
+
+  .field__label {
+    margin-bottom: 0.5rem;
+  }
+
+  // Comma separated.
+  .field--name-field-service-coverage .field__items,
+  .field--name-field-relevant-hpc-stage .field__items {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field__item::after {
+      content: ',';
+      padding-right: 0.25rem;
+    }
+
+    .field__item:last-child::after {
+      content: none;
+      padding-right: 0;
+    }
+  }
+}

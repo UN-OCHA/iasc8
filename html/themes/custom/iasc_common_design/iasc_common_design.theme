@@ -124,3 +124,76 @@ function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variabl
     $suggestions[] = 'page__' . (string) $status_code;
   }
 }
+
+
+/**
+ * Implements template_preprocess_region().
+ */
+function iasc_common_design_preprocess_region(&$variables) {
+
+  $variables['has_filter'] = FALSE;
+
+  if (isset($variables['region']) && $variables['region'] == 'sidebar_first') {
+    $view_id = \Drupal::routeMatch()->getParameter('view_id');
+
+    if ($view_id === 'iasc_services' || 'resources') {
+      $variables['attributes']['class'][] = 'cd-filter';
+    }
+
+    $variables['has_filter'] = TRUE;
+  }
+
+  // Create the $content variable that templates expect.
+  $variables['content'] = $variables['elements']['#children'];
+  $variables['region'] = $variables['elements']['#region'];
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function iasc_common_design_preprocess_block(&$variables) {
+
+  // Adding custom attribute class for block.
+  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $blockType = strtr($variables['content']['#block_content']->bundle(), '_', '-');
+    $variables['attributes']['class'][] = 'block--type-' . $blockType;
+  }
+}
+
+function iasc_common_design_preprocess_page_title(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    $vars['title'] = "";
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
+function iasc_common_design_preprocess_form_element(array &$variables) {
+  if (!isset($variables['label'])) {
+    return;
+  }
+
+  if (isset($variables['element']['#attributes']['data-drupal-facet-id'])) {
+    $new_id = 'select--' . str_replace('_', '-', $variables['element']['#attributes']['data-drupal-facet-id']);
+    $variables['label']['#attributes']['for'] = $new_id;
+    $variables['label']['#attributes']['class'] = 'visually-hidden';
+  }
+}
+
+/**
+ * Implements template_preprocess_select().
+ */
+function iasc_common_design_preprocess_select(&$variables) {
+  template_preprocess_select($variables);
+
+  if (isset($variables['element']['#attributes']['data-drupal-facet-id'])) {
+    $new_id = 'select--' . str_replace('_', '-', $variables['element']['#attributes']['data-drupal-facet-id']);
+    $variables['attributes']['id'] = $new_id;
+    $variables['attributes']['aria-labelledby'] = $variables['element']['#attributes']['data-drupal-facet-id'];
+//    $variables['attributes']['role'] = 'listbox';
+  }
+}
