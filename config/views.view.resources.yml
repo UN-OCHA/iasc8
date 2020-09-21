@@ -438,7 +438,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "\r\n<p>\r\n\r\nThe IASC secretariat regularly publishes a newsletter reflecting important developments in the IASC.\r\n</p>"
+            value: "<h1 class=\"page-title\">IASC Newsletters</h1>\r\n<p>\r\n\r\nThe IASC secretariat regularly publishes a newsletter reflecting important developments in the IASC.\r\n</p>"
             format: full_html
           plugin_id: text
       sorts:
@@ -492,7 +492,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
+            value: "<h1 class=\"page-title\">Resources</h1>\r\n\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
             format: full_html
           plugin_id: text
       exposed_block: false
@@ -767,9 +767,22 @@ display:
         operator: AND
         groups:
           1: AND
-      title: 'Meeting Documents'
+      title: Documents
       display_description: ''
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h1 class="page-title">Meeting Documents</h1>'
+            format: full_html
+          plugin_id: text
       sorts:
         field_published_date:
           id: field_published_date
@@ -914,7 +927,7 @@ display:
         operator: AND
         groups:
           1: AND
-      title: 'IASC Products'
+      title: Products
       display_description: ''
       header:
         area:
@@ -927,7 +940,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "\r\n<p>\r\n\r\nIASC Products are guidelines, policies, tools and documents endorsed by the IASC and used to inform humanitarian preparedness and response activities both at global and field levels with ultimate goal of strengthening the effective of humanitarian action.\r\n</p><p>\r\nGiven the inclusive membership of the IASC, these products carry a very broad consensus within the humanitarian community and guide the work of many UN and Non-UN humanitarian partners.\r\n</p>"
+            value: "<h1 class=\"page-title\">IASC Products</h1>\r\n<p>\r\n\r\nIASC Products are guidelines, policies, tools and documents endorsed by the IASC and used to inform humanitarian preparedness and response activities both at global and field levels with ultimate goal of strengthening the effective of humanitarian action.\r\n</p><p>\r\nGiven the inclusive membership of the IASC, these products carry a very broad consensus within the humanitarian community and guide the work of many UN and Non-UN humanitarian partners.\r\n</p>"
             format: full_html
           plugin_id: text
     cache_metadata:
@@ -1062,7 +1075,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "\r\n"
+            value: "<h1 class=\"page-title\">IASC Statements</h1>\r\n"
             format: full_html
           plugin_id: text
       sorts:
@@ -1078,7 +1091,6 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

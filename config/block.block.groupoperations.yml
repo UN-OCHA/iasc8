@@ -9,8 +9,8 @@ dependencies:
     - iasc_common_design
 id: groupoperations
 theme: iasc_common_design
-region: sidebar_first
-weight: 13
+region: sidebar_second
+weight: 6
 provider: null
 plugin: group_operations
 settings:

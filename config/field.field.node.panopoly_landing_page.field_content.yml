@@ -45,27 +45,6 @@ settings:
       agenda_items:
         enabled: true
         weight: 10
-      contact_list:
-        weight: 18
-        enabled: false
-      content_item:
-        weight: 22
-        enabled: false
-      custom_block:
-        weight: 22
-        enabled: false
-      featured:
-        weight: 27
-        enabled: false
-      hero:
-        enabled: true
-        weight: 19
-      list:
-        weight: 20
-        enabled: false
-      list_item:
-        enabled: true
-        weight: 21
       membership:
         enabled: true
         weight: 11
@@ -81,14 +60,23 @@ settings:
       paragraph_text:
         weight: 15
         enabled: false
-      reliefweb_feed:
-        weight: 36
+      view:
+        weight: 16
         enabled: false
-      section_menu:
-        weight: 31
+      contact_list:
+        weight: 18
         enabled: false
-      services_landing_block:
-        weight: 39
+      hero:
+        enabled: true
+        weight: 19
+      list:
+        weight: 20
+        enabled: false
+      list_item:
+        enabled: true
+        weight: 21
+      content_item:
+        weight: 22
         enabled: false
       teaser_grid:
         weight: 27
@@ -99,10 +87,10 @@ settings:
       twitter:
         weight: 29
         enabled: false
+      section_menu:
+        weight: 31
+        enabled: false
       video:
         weight: 35
-        enabled: false
-      view:
-        weight: 16
         enabled: false
 field_type: entity_reference_revisions

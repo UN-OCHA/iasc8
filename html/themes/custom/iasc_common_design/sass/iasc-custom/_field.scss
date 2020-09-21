@@ -118,8 +118,7 @@
 .field--name-field-links,
 .field--name-field-referenced-docs,
 .field--name-field-iasc-group-space,
-.field--name-field-oa-related-content,
-.field--name-field-links-to-relevant-docs {
+.field--name-field-oa-related-content {
   .field__item a {
     display: block;
     margin-bottom: 1rem;
@@ -137,26 +136,6 @@
     background-position: 0 0;
   }
 }
-
-//// This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-//.field--name-field-interest {
-//  .field__item {
-//    display: block;
-//    margin-bottom: 1rem;
-//    position: relative;
-//  }
-//
-//  .field__item::before {
-//    display: inline-block;
-//    height: 9px;
-//    width: 9px;
-//    margin-right: 1rem;
-//    content: '';
-//    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
-//    background-repeat: no-repeat;
-//    background-position: 0 0;
-//  }
-//}
 
 // This emulates the cd-bullet-list component without being able to output as a ul.
 .field--name-field-meeting-notes > .field__items > .field__item,
@@ -192,20 +171,4 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 
 .field__item p:first-child {
   margin-top: 0;
-}
-
-// Emulate circle bullet list on fields that are not ul elements.
-.field--name-field-interest {
-  > .field__items {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-
-    > .field__item::before {
-      content: "•";
-      vertical-align: middle;
-      font-size: 1.5rem;
-      line-height: 1.2;
-      padding-right: 0.5rem;
-    }
-  }
 }

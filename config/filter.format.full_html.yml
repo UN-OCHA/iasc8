@@ -1,10 +1,7 @@
 uuid: e038f158-83dc-4206-bfb2-70e1fcc3735f
 langcode: en
 status: true
-dependencies:
-  module:
-    - media
-    - token_filter
+dependencies: {  }
 _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
 name: 'Full HTML'
@@ -26,19 +23,3 @@ filters:
       allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
-  token_filter:
-    id: token_filter
-    provider: token_filter
-    status: true
-    weight: 0
-    settings:
-      replace_empty: '1'

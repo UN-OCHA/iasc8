@@ -1,8 +1,0 @@
-uuid: 3052dac4-b473-4ac7-bb37-63a2a9dbd8e3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Service Coverage'
-vid: service_coverage
-description: ''
-weight: 0

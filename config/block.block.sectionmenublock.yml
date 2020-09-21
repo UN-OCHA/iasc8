@@ -8,8 +8,8 @@ dependencies:
     - iasc_common_design
 id: sectionmenublock
 theme: iasc_common_design
-region: sidebar_first
-weight: -21
+region: sidebar_second
+weight: -16
 provider: null
 plugin: iasc_section_menu_block
 settings:

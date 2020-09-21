@@ -8,9 +8,3 @@
     padding-right: calc(285px + 3rem); // width of sidebar plus content div right margin.
   }
 }
-
-.view-header .page-title {
-  @include xl {
-    padding-right: 0;
-  }
-}

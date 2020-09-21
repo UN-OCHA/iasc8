@@ -1,8 +1,0 @@
-uuid: 6171ac99-a36f-4318-b125-d977842227e4
-langcode: en
-status: true
-dependencies: {  }
-name: 'Relevant HPC Stage'
-vid: relevant_hpc_stage
-description: ''
-weight: 0

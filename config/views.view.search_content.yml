@@ -147,7 +147,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Search
+      title: 'Search Content'
       header:
         result:
           id: result
@@ -157,7 +157,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: "\r\n<p>Displaying results @start - @end of @total</p>\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
+          content: "<h1 class=page-title>Search</h1>\r\n<p>Displaying results @start - @end of @total</p>\r\n<p><strong>Can't find what you're looking for?</strong> Try the <a href=\"/how-search-iasc-resource\" target=\"_blank\" title=\"Opens in a new window.\">resources search guide</a> for tips on how to narrow down to the results you want.</p>"
           plugin_id: result
       footer: {  }
       empty:

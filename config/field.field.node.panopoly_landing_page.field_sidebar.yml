@@ -12,7 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
-    - paragraphs.paragraphs_type.services_landing_block
     - paragraphs.paragraphs_type.teaser_item
   module:
     - entity_reference_revisions
@@ -39,7 +38,6 @@ settings:
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
-      services_landing_block: services_landing_block
     target_bundles_drag_drop:
       additional_locations:
         enabled: true
@@ -47,27 +45,6 @@ settings:
       agenda_items:
         enabled: true
         weight: 10
-      contact_list:
-        weight: 21
-        enabled: false
-      content_item:
-        weight: 22
-        enabled: false
-      custom_block:
-        weight: 27
-        enabled: false
-      featured:
-        weight: 28
-        enabled: false
-      hero:
-        enabled: true
-        weight: 18
-      list:
-        weight: 19
-        enabled: false
-      list_item:
-        enabled: true
-        weight: 20
       membership:
         enabled: true
         weight: 11
@@ -83,28 +60,37 @@ settings:
       paragraph_text:
         weight: 15
         enabled: false
-      reliefweb_feed:
-        weight: 37
+      twitter:
+        weight: 15
         enabled: false
-      section_menu:
-        weight: 31
+      view:
+        weight: 16
         enabled: false
-      services_landing_block:
+      hero:
         enabled: true
-        weight: 39
+        weight: 18
+      list:
+        weight: 19
+        enabled: false
+      list_item:
+        enabled: true
+        weight: 20
+      contact_list:
+        weight: 21
+        enabled: false
+      content_item:
+        weight: 22
+        enabled: false
       teaser_grid:
         weight: 26
         enabled: false
       teaser_item:
         enabled: true
         weight: 27
-      twitter:
-        weight: 15
+      section_menu:
+        weight: 31
         enabled: false
       video:
         weight: 35
-        enabled: false
-      view:
-        weight: 16
         enabled: false
 field_type: entity_reference_revisions

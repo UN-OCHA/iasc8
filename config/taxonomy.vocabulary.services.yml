@@ -1,8 +1,0 @@
-uuid: 1132f86d-02c1-4997-b6f7-8c5c9ef475c3
-langcode: en
-status: true
-dependencies: {  }
-name: Services
-vid: services
-description: ''
-weight: 0

@@ -80,7 +80,6 @@ hidden:
   field_mobile: true
   field_phone: true
   field_title: true
-  field_xyzzy: true
   langcode: true
   links: true
   search_api_excerpt: true

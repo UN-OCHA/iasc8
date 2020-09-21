@@ -1,3 +1,0 @@
-iasc service bulk import:
-  title: 'Bulk create services'
-  description: 'Allows user to create services by importing xlsx file'

@@ -89,14 +89,6 @@
     {% endblock %}
   {% endif %}
 
-  {% if page.page_title %}
-    {% block page_title %}
-      <div class="cd-page-title cd-container">
-        {{ page.page_title }}
-      </div>
-    {% endblock %}
-  {% endif %}
-
 
   {% block main %}
 
@@ -111,7 +103,9 @@
         {{ page.content }}
       </div>{# /.cd-layout-content #}
 
-      {% if page.sidebar_second|render|striptags|trim %}<aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>{% endif %}
+      {% if page.sidebar_second|render|striptags|trim %}
+        <aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
+      {% endif %}
 
     </main>
   {% endblock %}
