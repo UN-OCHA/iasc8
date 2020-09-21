@@ -4,7 +4,8 @@
     "pwmetrics": "./node_modules/pwmetrics/bin/cli.js --config=package.json"
   },
   "dependencies": {
-    "pwmetrics": "^4.2.3"
+    "pwmetrics": "^4.2.3",
+    "node-forge": ">=0.10.0"
   },
   "devDependencies": {
     "minimist": ">=1.2.2",
