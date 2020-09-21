@@ -87,20 +87,6 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label %}
-    {% if not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% else %}
-      <h1{{ title_attributes.addClass('page-title') }}>
-        {{ label }}
-      </h1>
-    {% endif %}
-  {% endif %}
-  {{ title_suffix }}
-
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
