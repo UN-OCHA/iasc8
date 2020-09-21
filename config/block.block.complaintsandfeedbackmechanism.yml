@@ -1,0 +1,29 @@
+uuid: e216bb22-558c-43ca-be7b-d93b3f332b38
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.aap_complaints_and_feedback_mechanism
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: complaintsandfeedbackmechanism
+theme: iasc_common_design
+region: sidebar_first
+weight: 7
+provider: null
+plugin: 'facet_block:aap_complaints_and_feedback_mechanism'
+settings:
+  id: 'facet_block:aap_complaints_and_feedback_mechanism'
+  label: 'Complaints and feedback mechanism'
+  provider: facets
+  label_display: visible
+  block_id: complaintsandfeedbackmechanism
+visibility:
+  request_path:
+    id: request_path
+    pages: "/services\r\n/services/*\r\n"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+uuid: 74ff9f82-f167-4d94-a949-e7eac09db40d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.products_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - iasc_common_design
+id: productssummary
+theme: iasc_common_design
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'facets_summary_block:products_summary'
+settings:
+  id: 'facets_summary_block:products_summary'
+  label: 'Products summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/iasc-products
+    negate: false
+    context_mapping: {  }

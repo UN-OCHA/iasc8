@@ -1,0 +1,6 @@
+iasc_service.iasc_service_bulk_import:
+  title: Bulk import services
+  description: Allows user to create services by importing xlsx file
+  route_name: iasc_service.iasc_service_bulk_import
+  base_route: system.admin_content
+  weight: 10

@@ -51,12 +51,14 @@ settings:
             - ShowBlocks
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
     linkit:
       linkit_profile: ''
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public

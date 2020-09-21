@@ -1,0 +1,232 @@
+uuid: d24084e1-6369-4fe5-861a-9641e6306051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service.field_agency_initiative_or_group
+    - field.field.node.service.field_complaints_and_feedback
+    - field.field.node.service.field_description
+    - field.field.node.service.field_examples_and_case_studies
+    - field.field.node.service.field_global_focal_point
+    - field.field.node.service.field_inter_agency_cfm_resources
+    - field.field.node.service.field_interest
+    - field.field.node.service.field_kind_of_data
+    - field.field.node.service.field_links_to_relevant_docs
+    - field.field.node.service.field_relevant_hpc_stage
+    - field.field.node.service.field_service_coverage
+    - field.field.node.service.field_service_description
+    - field.field.node.service.field_services
+    - field.field.node.service.field_share_data
+    - field.field.node.service.field_type_of_entity
+    - field.field.node.service.field_updated
+    - node.type.service
+  module:
+    - datetime
+    - link
+    - path
+    - select2
+    - select_or_other
+    - text
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_agency_initiative_or_group:
+    weight: 122
+    settings:
+      select_element_type: select_or_other_select
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+  field_complaints_and_feedback:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description:
+    weight: 132
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_examples_and_case_studies:
+    weight: 134
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_global_focal_point:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      autocomplete: false
+      width: 100%
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
+  field_inter_agency_cfm_resources:
+    weight: 135
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_interest:
+    weight: 129
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_kind_of_data:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_links_to_relevant_docs:
+    weight: 133
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_relevant_hpc_stage:
+    weight: 136
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_service_coverage:
+    weight: 126
+    settings:
+      select_element_type: select_or_other_buttons
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+  field_service_description:
+    weight: 125
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_services:
+    weight: 124
+    settings:
+      select_element_type: select_or_other_buttons
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+  field_share_data:
+    weight: 130
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_type_of_entity:
+    weight: 123
+    settings:
+      select_element_type: select_or_other_select
+      sort_options: ''
+    third_party_settings: {  }
+    type: select_or_other_reference
+    region: content
+  field_updated:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

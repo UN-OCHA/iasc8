@@ -18,6 +18,7 @@ input[type='submit'] {
   display: inline-block;
   background: $cd-ocha-blue;
   text-transform: uppercase;
+  font-weight: bold;
   text-decoration: none;
   color: $cd-white;
   border: 1px solid $cd-ocha-blue;
@@ -28,6 +29,10 @@ input[type='submit'] {
   &:focus {
     background: darken($cd-ocha-blue, 10%);
     color: $cd-white;
+  }
+
+  &:focus {
+    outline: 3px solid $cd-bright-blue;
   }
 }
 

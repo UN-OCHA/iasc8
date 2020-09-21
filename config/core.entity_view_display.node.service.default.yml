@@ -1,0 +1,170 @@
+uuid: d5296a98-7cfd-4b31-b5bc-c68b21f9f8e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service.field_agency_initiative_or_group
+    - field.field.node.service.field_complaints_and_feedback
+    - field.field.node.service.field_description
+    - field.field.node.service.field_examples_and_case_studies
+    - field.field.node.service.field_global_focal_point
+    - field.field.node.service.field_inter_agency_cfm_resources
+    - field.field.node.service.field_interest
+    - field.field.node.service.field_kind_of_data
+    - field.field.node.service.field_links_to_relevant_docs
+    - field.field.node.service.field_relevant_hpc_stage
+    - field.field.node.service.field_service_coverage
+    - field.field.node.service.field_service_description
+    - field.field.node.service.field_services
+    - field.field.node.service.field_share_data
+    - field.field.node.service.field_type_of_entity
+    - field.field.node.service.field_updated
+    - node.type.service
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  field_agency_initiative_or_group:
+    weight: 102
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_complaints_and_feedback:
+    weight: 108
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_examples_and_case_studies:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_global_focal_point:
+    weight: 107
+    label: above
+    settings:
+      view_mode: bio_long
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_inter_agency_cfm_resources:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_interest:
+    weight: 109
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_kind_of_data:
+    weight: 111
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_links_to_relevant_docs:
+    weight: 113
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_relevant_hpc_stage:
+    weight: 116
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_service_coverage:
+    weight: 106
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_service_description:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_services:
+    weight: 104
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_share_data:
+    weight: 110
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type_of_entity:
+    weight: 103
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_updated:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

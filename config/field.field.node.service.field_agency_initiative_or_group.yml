@@ -1,0 +1,29 @@
+uuid: beb40ea3-7685-45a2-9864-c37ad32cbf15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_initiative_or_group
+    - node.type.service
+    - taxonomy.vocabulary.agency_initiative_or_group
+id: node.service.field_agency_initiative_or_group
+field_name: field_agency_initiative_or_group
+entity_type: node
+bundle: service
+label: 'Agency, Initiative or Group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      agency_initiative_or_group: agency_initiative_or_group
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

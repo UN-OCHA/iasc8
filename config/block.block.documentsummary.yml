@@ -1,0 +1,28 @@
+uuid: 23ee2728-f319-4576-b5de-a555b565e691
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.document_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - iasc_common_design
+id: documentsummary
+theme: iasc_common_design
+region: sidebar_first
+weight: -20
+provider: null
+plugin: 'facets_summary_block:document_summary'
+settings:
+  id: 'facets_summary_block:document_summary'
+  label: 'Document summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/documents'
+    negate: false
+    context_mapping: {  }

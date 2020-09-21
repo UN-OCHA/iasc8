@@ -1,0 +1,29 @@
+uuid: 2b56dc5e-0416-4d32-a0c8-4b8bfa6fac8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_coverage
+    - node.type.service
+    - taxonomy.vocabulary.service_coverage
+id: node.service.field_service_coverage
+field_name: field_service_coverage
+entity_type: node
+bundle: service
+label: 'Service Coverage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      service_coverage: service_coverage
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
