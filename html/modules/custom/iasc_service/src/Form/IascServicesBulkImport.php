@@ -12,7 +12,7 @@ use PhpOffice\PhpSpreadsheet\Shared\Date;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Class IascServicesBulkImport.
+ * Class bulk importer for IASC Services.
  */
 class IascServicesBulkImport extends FormBase {
 
