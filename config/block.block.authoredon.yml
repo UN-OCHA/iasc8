@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.search_authored_on
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: authoredon
 theme: iasc_common_design
-region: sidebar_first
-weight: -2
+region: sidebar_filter
+weight: -4
 provider: null
 plugin: 'facet_block:search_authored_on'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: authoredon
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

@@ -9,7 +9,7 @@ dependencies:
 id: sectionmenublock
 theme: iasc_common_design
 region: sidebar_first
-weight: -21
+weight: -22
 provider: null
 plugin: iasc_section_menu_block
 settings:

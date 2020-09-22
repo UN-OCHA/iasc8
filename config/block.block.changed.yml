@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.changed
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: changed
 theme: iasc_common_design
-region: sidebar_first
-weight: -14
+region: sidebar_filter
+weight: -8
 provider: null
 plugin: 'facet_block:changed'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: changed
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/documents'
+    negate: false
+    context_mapping: {  }

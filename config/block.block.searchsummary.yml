@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: searchsummary
 theme: iasc_common_design
-region: sidebar_first
-weight: -17
+region: sidebar_filter
+weight: -6
 provider: null
 plugin: 'facets_summary_block:search_summary'
 settings:

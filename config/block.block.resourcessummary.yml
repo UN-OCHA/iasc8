@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: resourcessummary
 theme: iasc_common_design
-region: sidebar_first
-weight: -18
+region: sidebar_filter
+weight: -16
 provider: null
 plugin: 'facets_summary_block:resources_summary'
 settings:
