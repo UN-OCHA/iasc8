@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.resource_documents_audience_label
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: resourcedocumentsaudiencelabel
 theme: iasc_common_design
-region: sidebar_first
-weight: -19
+region: sidebar_filter
+weight: 4
 provider: null
 plugin: 'facet_block:resource_documents_audience_label'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: resourcedocumentsaudiencelabel
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/meeting-documents
+    negate: false
+    context_mapping: {  }
