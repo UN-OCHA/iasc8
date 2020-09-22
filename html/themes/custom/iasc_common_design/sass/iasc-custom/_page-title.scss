@@ -3,6 +3,11 @@
   display: none;
 }
 
+.cd-page-title {
+  margin-top: 3rem; // Matches main.cd-container.
+}
+
+
 .page-title {
   @include xl {
     padding-right: calc(285px + 3rem); // width of sidebar plus content div right margin.
