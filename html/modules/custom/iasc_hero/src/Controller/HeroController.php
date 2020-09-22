@@ -92,7 +92,10 @@ class HeroController extends ControllerBase implements ContainerInjectionInterfa
     $langname = $hero->language()->getName();
     $languages = $hero->getTranslationLanguages();
     $has_translations = (count($languages) > 1);
-    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', ['@langname' => $langname, '%title' => $hero->label()]) : $this->t('Revisions for %title', ['%title' => $hero->label()]);
+    $build['#title'] = $has_translations ? $this->t('@langname revisions for %title', [
+      '@langname' => $langname,
+      '%title' => $hero->label(),
+    ]) : $this->t('Revisions for %title', ['%title' => $hero->label()]);
 
     $header = [$this->t('Revision'), $this->t('Operations')];
     $revert_permission = (($account->hasPermission("revert all hero revisions") || $account->hasPermission('administer hero entities')));

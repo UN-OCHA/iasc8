@@ -1,0 +1,20 @@
+diff --git a/core/lib/Drupal/Core/Entity/EntityTypeManager.php b/core/lib/Drupal/Core/Entity/EntityTypeManager.php
+index b2d1d29..d19a26e 100644
+--- a/core/lib/Drupal/Core/Entity/EntityTypeManager.php	2020-09-15 14:04:16.000000000 +1000
++++ b/core/lib/Drupal/Core/Entity/EntityTypeManager.php	2020-09-15 14:03:40.000000000 +1000
+@@ -147,6 +147,15 @@
+       return NULL;
+     }
+ 
++    // This is not very nice, but really, I want the backtrace.
++    ob_start();
++    debug_print_backtrace();
++    $backtrace = ob_get_contents();
++    ob_end_clean();
++
++    // And drop the backtrace in the logs.
++    \Drupal::logger('entity')->error($backtrace);
++
+     throw new PluginNotFoundException($entity_type_id, sprintf('The "%s" entity type does not exist.', $entity_type_id));
+   }
+

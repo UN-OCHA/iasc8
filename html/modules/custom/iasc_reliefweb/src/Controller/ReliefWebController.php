@@ -11,7 +11,7 @@ use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\Http\ClientFactory;
 
 /**
- * Class ReliefWebController.
+ * Reliefweb API controller.
  */
 class ReliefWebController extends ControllerBase {
 
@@ -125,7 +125,10 @@ class ReliefWebController extends ControllerBase {
       }
 
       if (!empty($feeds)) {
-        $this->cacheBackend->set($cid, $feeds, REQUEST_TIME + (60 * 60 * $this->config->get('updates.max_age')), ['iasc_reliefweb', 'iasc_reliefweb:latestUpdates']);
+        $this->cacheBackend->set($cid, $feeds, REQUEST_TIME + (60 * 60 * $this->config->get('updates.max_age')), [
+          'iasc_reliefweb',
+          'iasc_reliefweb:latestUpdates',
+        ]);
       }
     }
 
