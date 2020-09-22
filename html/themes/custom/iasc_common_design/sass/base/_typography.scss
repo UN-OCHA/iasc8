@@ -112,7 +112,7 @@ dl {
   font-size: 1.875rem;
   font-weight: 600;
   line-height: 1.5;
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 2rem;
   padding-bottom: 0;
   border-bottom: 0 none;
@@ -129,6 +129,10 @@ dl {
 
   @include min-width(sm) {
     font-size: 1.875rem;
+  }
+
+  @include desktop {
+    margin-top: 1rem;
   }
 
   //@include desktop {
