@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.product_category_label
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: productcategorylabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -15
+weight: -9
 provider: null
 plugin: 'facet_block:product_category_label'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: productcategorylabel
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/documents'
+    negate: false
+    context_mapping: {  }

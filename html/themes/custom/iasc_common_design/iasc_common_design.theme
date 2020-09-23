@@ -196,6 +196,5 @@ function iasc_common_design_preprocess_select(&$variables) {
     $new_id = 'select--' . str_replace('_', '-', $variables['element']['#attributes']['data-drupal-facet-id']);
     $variables['attributes']['id'] = $new_id;
     $variables['attributes']['aria-labelledby'] = $variables['element']['#attributes']['data-drupal-facet-id'];
-//    $variables['attributes']['role'] = 'listbox';
   }
 }

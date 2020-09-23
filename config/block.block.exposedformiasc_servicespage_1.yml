@@ -1,4 +1,4 @@
-uuid: 0cd3f7e7-b964-414d-b936-9d791dbfc1aa
+uuid: 4b719f69-bd0e-4b43-96bb-fd03d72057aa
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - views
   theme:
     - iasc_common_design
-id: exposed_form_iasc_services
+id: exposedformiasc_servicespage_1
 theme: iasc_common_design
 region: sidebar_first
-weight: -22
+weight: 10
 provider: null
 plugin: 'views_exposed_filter_block:iasc_services-page_1'
 settings:
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/services\r\n/services/*"
+    pages: /node/41316
     negate: false
     context_mapping: {  }

@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.newsletter_authored_on
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: newsletterauthoredon
 theme: iasc_common_design
 region: sidebar_first
-weight: -6
+weight: 3
 provider: null
 plugin: 'facet_block:newsletter_authored_on'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: newsletterauthoredon
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/iasc-newsletter
+    negate: false
+    context_mapping: {  }

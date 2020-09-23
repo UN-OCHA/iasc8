@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.document_type_label
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: documenttypelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -16
+weight: -10
 provider: null
 plugin: 'facet_block:document_type_label'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: documenttypelabel
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/documents'
+    negate: false
+    context_mapping: {  }
