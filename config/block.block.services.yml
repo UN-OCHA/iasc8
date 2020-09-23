@@ -11,7 +11,7 @@ dependencies:
     - iasc_common_design
 id: services
 theme: iasc_common_design
-region: sidebar_filter
+region: sidebar_first
 weight: -19
 provider: null
 plugin: 'facet_block:aap_services'

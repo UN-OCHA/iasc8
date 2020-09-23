@@ -11,7 +11,7 @@ dependencies:
 id: iasc_statements_authoredon
 theme: iasc_common_design
 region: sidebar_first
-weight: -21
+weight: 9
 provider: null
 plugin: 'facet_block:iasc_statements_authored_on'
 settings:
