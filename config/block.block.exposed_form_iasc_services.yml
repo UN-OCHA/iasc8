@@ -19,11 +19,11 @@ settings:
   id: 'views_exposed_filter_block:iasc_services-page_1'
   label: ''
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: 'Looking for something specific?'
 visibility:
   request_path:
     id: request_path
-    pages: "/services\r\n/services/*"
+    pages: "/services\r\n/services/*\r\n/node/41316"
     negate: false
     context_mapping: {  }
