@@ -6,7 +6,6 @@ dependencies:
     - facets.facet.iasc_statements_product_category_label
   module:
     - facets
-    - system
   theme:
     - iasc_common_design
 id: iasc_statements_productcategorylabel
@@ -21,9 +20,4 @@ settings:
   provider: facets
   label_display: visible
   block_id: iasc_statements_productcategorylabel
-visibility:
-  request_path:
-    id: request_path
-    pages: /resources/meeting-documents
-    negate: false
-    context_mapping: {  }
+visibility: {  }
