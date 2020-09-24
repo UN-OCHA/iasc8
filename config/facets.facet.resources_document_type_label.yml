@@ -22,6 +22,7 @@ widget:
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
+    placeholder: ''
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
@@ -56,4 +57,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: false
+show_title: true
