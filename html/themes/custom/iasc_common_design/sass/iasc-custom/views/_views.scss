@@ -75,6 +75,11 @@
   }
 
   .views-exposed-form .form--inline {
+
+    label {
+      @include visually-hidden;
+    }
+
     .form-item {
       margin-top: 0;
       margin-bottom: 0;
