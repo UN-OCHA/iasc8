@@ -22,7 +22,6 @@ widget:
     width: 100%
     autocomplete: false
     match_operator: CONTAINS
-    placeholder: ''
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
