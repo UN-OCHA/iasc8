@@ -4,7 +4,11 @@
 }
 
 .cd-page-title {
-  margin-top: 3rem; // Matches main.cd-container.
+  margin-top: 2rem;
+
+  @include tablet {
+    margin-top: 3rem; // Matches main.cd-container.
+  }
 
   .path-frontpage & {
     margin-top: 0;

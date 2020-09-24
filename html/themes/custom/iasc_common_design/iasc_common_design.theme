@@ -136,11 +136,10 @@ function iasc_common_design_preprocess_region(&$variables) {
   if (isset($variables['region']) && $variables['region'] == 'sidebar_first') {
     $view_id = \Drupal::routeMatch()->getParameter('view_id');
 
-    if ($view_id === 'iasc_services' || 'resources') {
+    if ($view_id === 'iasc_services' || $view_id === 'resources' || $view_id === 'iasc_group_content' || $view_id === 'search_content') {
       $variables['attributes']['class'][] = 'cd-filter';
+      $variables['has_filter'] = TRUE;
     }
-
-    $variables['has_filter'] = TRUE;
   }
 
   // Create the $content variable that templates expect.
@@ -160,6 +159,7 @@ function iasc_common_design_preprocess_block(&$variables) {
     $variables['attributes']['class'][] = 'block--type-' . $blockType;
   }
 }
+
 
 function iasc_common_design_preprocess_page_title(&$vars) {
   $node = \Drupal::routeMatch()->getParameter('node');

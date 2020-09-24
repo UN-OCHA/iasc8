@@ -12,7 +12,7 @@ dependencies:
 id: audiencelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -5
+weight: -6
 provider: null
 plugin: 'facet_block:search_audience_label'
 settings:

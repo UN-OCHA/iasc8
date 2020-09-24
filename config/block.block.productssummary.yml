@@ -12,7 +12,7 @@ dependencies:
 id: productssummary
 theme: iasc_common_design
 region: sidebar_first
-weight: -2
+weight: -3
 provider: null
 plugin: 'facets_summary_block:products_summary'
 settings:
