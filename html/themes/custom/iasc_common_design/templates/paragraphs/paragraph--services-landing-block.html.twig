@@ -53,7 +53,7 @@
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
-        <form method="POST" action="/services-search">
+        <form method="POST" action="/rg2/service-directory/services">
           {% for facet in facets %}
             <div class="cd-form__group">
               <label for="{{ facet.name }}">{{ facet.label }}</label>
