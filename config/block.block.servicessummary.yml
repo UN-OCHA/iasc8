@@ -23,6 +23,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/services\r\n/services/*"
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }

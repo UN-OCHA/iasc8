@@ -472,7 +472,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: services
+      path: rg2/service-directory/services
       cache:
         type: none
       defaults:

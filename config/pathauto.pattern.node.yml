@@ -10,5 +10,5 @@ type: 'canonical_entities:node'
 pattern: '[node:field_iasc_audience:0:entity]/[node:title]'
 selection_criteria: {  }
 selection_logic: and
-weight: -7
+weight: -6
 relationships: {  }
