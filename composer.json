@@ -79,6 +79,7 @@
         "drupal/stage_file_proxy": "^1.0",
         "drupal/tablefield": "^2.1",
         "drupal/token": "^1.5",
+        "drupal/token_filter": "^1.2",
         "drupal/variationcache": "^1.0",
         "drupal/viewsreference": "2.0-alpha6",
         "drush/drush": "^9.0.0",
