@@ -4,4 +4,5 @@ description: 'Expose filters for editors to configure referenced views'
 core: 8.x
 package: 'Views'
 dependencies:
+  - drupal:views
   - viewsreference:viewsreference
