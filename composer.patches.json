@@ -4,7 +4,7 @@
       "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
     },
     "drupal/viewsreference": {
-      "https://www.drupal.org/node/3004636 - Add View filter plugin to improve experience for content editor": "https://www.drupal.org/files/issues/2019-10-24/3004636-add-exposed-filter-plugin-for-editor-15.patch"
+      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "https://www.drupal.org/files/issues/2020-09-02/viewsreference-ajax_after_display_selection-3166490-3.patch"
     },
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",

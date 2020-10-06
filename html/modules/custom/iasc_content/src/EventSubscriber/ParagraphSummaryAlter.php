@@ -3,6 +3,7 @@
 namespace Drupal\iasc_content\EventSubscriber;
 
 use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -48,7 +49,29 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
         foreach ($data as $key => $value) {
           if (!empty($value)) {
             if (is_array($value)) {
-              $event->appendTextToSummary($key . ': ' . reset($value));
+              if ($key == 'ocha_exposed_filters') {
+                $tids = [];
+                foreach ($value as $filter_id => $filter_values) {
+                  if (!is_array($filter_values)) {
+                    $filter_values = [$filter_values];
+                  }
+                  elseif (isset($filter_values[0]['target_id'])) {
+                    $filter_values = array_column($filter_values, 'target_id');
+                  }
+                  $tids = array_merge($tids, $filter_values);
+                }
+
+                $terms = Term::loadMultiple($tids);
+                $labels = [];
+                foreach ($terms as $term) {
+                  $labels[] = $term->getName();
+                }
+
+                $event->appendTextToSummary('Filter(s): ' . implode(', ', $labels));
+              }
+              else {
+                $event->appendTextToSummary($key . ': ' . reset($value));
+              }
             }
             else {
               $event->appendTextToSummary($key . ': ' . $value);
