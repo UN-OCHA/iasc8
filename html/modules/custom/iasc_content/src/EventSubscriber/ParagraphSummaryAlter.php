@@ -83,6 +83,7 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
 
                 $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($tids);
                 $labels = [];
+                /** @var \Drupal\taxonomy\Entity\Term $term */
                 foreach ($terms as $term) {
                   $labels[] = $term->getName();
                 }

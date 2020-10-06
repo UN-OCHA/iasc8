@@ -3,7 +3,7 @@
 namespace Drupal\ocha_viewsreference_filter;
 
 /**
- * Interface OchaViewsRefFilterUtilityInterface.
+ * A utility class Interface.
  */
 interface OchaViewsRefFilterUtilityInterface {
 
