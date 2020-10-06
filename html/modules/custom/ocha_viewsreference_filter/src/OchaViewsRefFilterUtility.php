@@ -42,10 +42,7 @@ class OchaViewsRefFilterUtility implements OchaViewsRefFilterUtilityInterface {
   }
 
   /**
-   * @param $view_name
-   * @param $display_id
-   *
-   * @return \Drupal\Core\Entity\EntityInterface|mixed|null
+   * {@inheritdoc}
    */
   public function loadView($view_name, $display_id) {
     static $views = [];
@@ -91,9 +88,11 @@ class OchaViewsRefFilterUtility implements OchaViewsRefFilterUtilityInterface {
    *   The formatted terms.
    */
   public function buildAutocompleteTerms(array $tids) {
-    foreach ($tids as $tid => $value) {
-      $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($value['target_id']);
-      $formatted_terms[] = $term->getName() . ' (' . $value['target_id'] . ')';
+    foreach ($tids as $value) {
+      if (isset($value['target_id'])) {
+        $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($value['target_id']);
+        $formatted_terms[] = $term->getName() . ' (' . $value['target_id'] . ')';
+      }
     }
     $formatted_terms_data = implode(', ', $formatted_terms);
     return $formatted_terms_data;

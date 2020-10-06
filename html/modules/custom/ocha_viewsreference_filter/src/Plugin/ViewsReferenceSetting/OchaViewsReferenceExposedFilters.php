@@ -26,11 +26,14 @@ class OchaViewsReferenceExposedFilters extends PluginBase implements ViewsRefere
   use StringTranslationTrait;
 
   /**
-   * Constructor.
+   * Views utility.
    *
-   * @param array $configuration
-   * @param $pluginId
-   * @param $pluginDefinition
+   * @var \Drupal\ocha_viewsreference_filter\OchaViewsRefFilterUtilityInterface
+   */
+  protected $viewsUtility;
+
+  /**
+   * Constructor.
    */
   public function __construct(array $configuration, $pluginId, $pluginDefinition, OchaViewsRefFilterUtilityInterface $viewsUtility) {
     parent::__construct($configuration, $pluginId, $pluginDefinition);
@@ -82,7 +85,7 @@ class OchaViewsReferenceExposedFilters extends PluginBase implements ViewsRefere
     // @see ViewExposedForm::buildForm()
     foreach ($view->display_handler->handlers as $type => $value) {
       /** @var \Drupal\views\Plugin\views\ViewsHandlerInterface $handler */
-      foreach ($view->$type as $id => $handler) {
+      foreach ($view->$type as $handler) {
         if ($handler->canExpose() && $handler->isExposed()) {
           $handler->buildExposedForm($form_field, $form_state);
           if ($info = $handler->exposedInfo()) {

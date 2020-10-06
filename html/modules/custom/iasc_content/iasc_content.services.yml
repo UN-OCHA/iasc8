@@ -1,5 +1,6 @@
 services:
   iasc_content.paragraph_summar_alter:
     class: Drupal\iasc_content\EventSubscriber\ParagraphSummaryAlter
+    arguments: ['@entity_type.manager']
     tags:
       - { name: 'event_subscriber' }

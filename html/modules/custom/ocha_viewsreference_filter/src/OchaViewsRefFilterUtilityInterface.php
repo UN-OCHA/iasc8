@@ -8,10 +8,7 @@ namespace Drupal\ocha_viewsreference_filter;
 interface OchaViewsRefFilterUtilityInterface {
 
   /**
-   * @param $view_name
-   * @param $display_id
-   *
-   * @return mixed
+   * Load a view.
    */
   public function loadView($view_name, $display_id);
 
