@@ -1,0 +1,7 @@
+services:
+  logger.channel.ocha_viewsreference_filter:
+    parent: logger.channel_base
+    arguments: ['ocha_viewsreference_filter']
+  ocha_viewsreference_filter.views_utility:
+    class: Drupal\ocha_viewsreference_filter\OchaViewsRefFilterUtility
+    arguments: ['@logger.channel.ocha_viewsreference_filter', '@entity_type.manager', '@views.executable']
