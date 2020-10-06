@@ -59,10 +59,10 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
+    ocha_exposed_filters: ocha_exposed_filters
     limit: limit
     offset: 0
-    title: 0
     argument: 0
-    exposed_filters: 0
+    title: 0
     pager: 0
 field_type: viewsreference

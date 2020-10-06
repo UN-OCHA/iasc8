@@ -2,6 +2,7 @@
 
 namespace Drupal\iasc_content\EventSubscriber;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
 use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -12,6 +13,20 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  * @package Drupal\iasc_content\ParagraphSummaryAlter
  */
 class ParagraphSummaryAlter implements EventSubscriberInterface {
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Constructor.
+   */
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+    $this->entityTypeManager = $entity_type_manager;
+  }
 
   /**
    * {@inheritdoc}
@@ -48,7 +63,35 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
         foreach ($data as $key => $value) {
           if (!empty($value)) {
             if (is_array($value)) {
-              $event->appendTextToSummary($key . ': ' . reset($value));
+              if ($key == 'ocha_exposed_filters') {
+                $tids = [];
+                foreach ($value as $filter_values) {
+                  if (!is_array($filter_values)) {
+                    if (!empty($filter_values)) {
+                      $filter_values = [$filter_values];
+                    }
+                    else {
+                      $filter_values = [];
+                    }
+                  }
+                  elseif (isset($filter_values[0]['target_id'])) {
+                    $filter_values = array_column($filter_values, 'target_id');
+                  }
+                  $tids = array_merge($tids, $filter_values);
+                }
+
+                $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($tids);
+                $labels = [];
+                /** @var \Drupal\taxonomy\Entity\Term $term */
+                foreach ($terms as $term) {
+                  $labels[] = $term->getName();
+                }
+
+                $event->appendTextToSummary('Filter(s): ' . implode(', ', $labels));
+              }
+              else {
+                $event->appendTextToSummary($key . ': ' . reset($value));
+              }
             }
             else {
               $event->appendTextToSummary($key . ': ' . $value);
