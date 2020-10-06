@@ -4,7 +4,6 @@ namespace Drupal\iasc_content\EventSubscriber;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
-use Drupal\taxonomy\Entity\Term;
 use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
