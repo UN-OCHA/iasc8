@@ -106,8 +106,13 @@ class OchaViewsReferenceExposedFilters extends PluginBase implements ViewsRefere
               if (isset($current_values[$filter_name])) {
                 if ($form_field[$filter_name]['#type'] == 'entity_autocomplete') {
                   // Set values for taxonomy autocomplete field.
-                  $taxonomy_auto_default = $this->viewsUtility->buildAutocompleteTerms($current_values[$filter_name]);
-                  $form_field[$filter_name]['#default_value'] = $taxonomy_auto_default;
+                  if (is_array($current_values[$filter_name])) {
+                    $taxonomy_auto_default = $this->viewsUtility->buildAutocompleteTerms($current_values[$filter_name]);
+                    $form_field[$filter_name]['#default_value'] = $taxonomy_auto_default;
+                  }
+                  else {
+                    $form_field[$filter_name]['#default_value'] = $current_values[$filter_name];
+                  }
                 }
                 else {
                   $form_field[$filter_name]['#default_value'] = $current_values[$filter_name];
