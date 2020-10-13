@@ -10,7 +10,7 @@ id: node.service.field_relevant_hpc_stage
 field_name: field_relevant_hpc_stage
 entity_type: node
 bundle: service
-label: 'Relevant HPC Stage'
+label: 'Humanitarian Programme Cycle'
 description: ''
 required: false
 translatable: false
