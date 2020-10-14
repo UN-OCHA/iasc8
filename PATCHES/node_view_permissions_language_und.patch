@@ -1,0 +1,11 @@
+--- node_view_permissions/node_view_permissions.module	2020-10-14 08:18:56.000000000 +1100
++++ node_view_permissions/node_view_permissions.module	2020-10-14 08:17:50.000000000 +1100
+@@ -20,7 +20,7 @@
+   // We don't want to override view published permissions.
+   $languages = $node->getTranslationLanguages();
+   foreach ($languages as $langcode => $language) {
+-    if ($langcode === Language::LANGCODE_NOT_APPLICABLE) {
++    if ($langcode === Language::LANGCODE_NOT_APPLICABLE || $langcode === Language::LANGCODE_NOT_SPECIFIED) {
+       // If node is not translatable, check the publish status of it.
+       if ($node->isPublished()) {
+         $grants[] = [

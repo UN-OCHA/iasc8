@@ -12,6 +12,9 @@
     },
     "drupal/core": {
       "Attempt to debug intermittent 'The \"\" entity type does not exist.'": "PATCHES/core_backtrace_entitymanager.patch"
+    },
+    "drupal/node_view_permissions": {
+      "Handle accessfor Language::LANGCODE_NOT_SPECIFIED": "PATCHES/node_view_permissions_language_und.patch"
     }
   }
 }
