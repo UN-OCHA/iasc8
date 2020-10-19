@@ -74,7 +74,7 @@ class IascServicesBulkImport extends FormBase {
         'overwrite' => $this->t('Remove all services first'),
         'clear' => $this->t('Remove all services and reference data first'),
       ],
-      '#default_vaTerms' => 'append',
+      '#default_value' => 'append',
     ];
 
     $form['submit'] = [
@@ -392,7 +392,7 @@ class IascServicesBulkImport extends FormBase {
       }
     }
 
-    // Relevant HPC Stage.relevant hpc stage.
+    // Relevant HPC Stage.
     if (isset($item['relevant hpc stage']) && !empty($item['relevant hpc stage'])) {
       // Split and trim.
       $values = array_map('trim', explode(';', $item['relevant hpc stage']));
