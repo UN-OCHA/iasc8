@@ -141,7 +141,7 @@ class IascServicesCreateTemplate extends FormBase {
         }
         $worksheet->setCellValue('E' . $row, implode(';', $output));
 
-        // Service Description
+        // Service Description.
         $worksheet->setCellValue('F' . $row, $service->field_service_description->value);
 
         // Service Coverage.
@@ -170,7 +170,7 @@ class IascServicesCreateTemplate extends FormBase {
         // Links to Relevant Docs.
         $output = [];
         foreach ($service->field_links_to_relevant_docs->getValue() as $item) {
-          if (!empty($item['title'])){
+          if (!empty($item['title'])) {
             $output[] = $item['title'] . ': ' . $item['uri'];
           }
           else {

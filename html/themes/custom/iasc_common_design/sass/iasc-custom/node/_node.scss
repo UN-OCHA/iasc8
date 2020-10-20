@@ -46,6 +46,12 @@
   }
 }
 
+body:not(.path-frontpage) .paragraph.paragraph--type--hero {
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+}
+
 .field--name-field-sidebar,
 .field--name-field-content,
 .field--name-field-footer {
