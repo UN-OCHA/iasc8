@@ -2852,8 +2852,7 @@
             "homepage": "https://www.drupal.org/project/colors",
             "support": {
                 "source": "https://git.drupalcode.org/project/colors"
-            },
-            "time": "2020-04-20T14:02:54+00:00"
+            }
         },
         {
             "name": "drupal/comment_alter",
@@ -5608,7 +5607,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.2",
-                    "datestamp": "1588260599",
+                    "datestamp": "1588260035",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5634,6 +5633,22 @@
                     "name": "Lucas Hedding",
                     "homepage": "https://www.drupal.org/u/heddn",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "ksenzee",
+                    "homepage": "https://www.drupal.org/user/139855"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                },
+                {
+                    "name": "ultimike",
+                    "homepage": "https://www.drupal.org/user/51132"
+                },
+                {
+                    "name": "xjm",
+                    "homepage": "https://www.drupal.org/user/65776"
                 }
             ],
             "description": "Drush support for direct upgrades from older Drupal versions.",
@@ -13547,16 +13562,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.8.3",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "e3504beb62a5385e165d566bd46e646e98589882"
+                "reference": "1cff3c7ba158366ca82588af2bdd98b3afa81fa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/e3504beb62a5385e165d566bd46e646e98589882",
-                "reference": "e3504beb62a5385e165d566bd46e646e98589882",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/1cff3c7ba158366ca82588af2bdd98b3afa81fa4",
+                "reference": "1cff3c7ba158366ca82588af2bdd98b3afa81fa4",
                 "shasum": ""
             },
             "require": {
@@ -13567,7 +13582,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-08-20T12:46:02+00:00"
+            "time": "2020-10-22T08:41:56+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -14532,5 +14547,6 @@
     "platform": {
         "php": ">=7.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
