@@ -8,7 +8,7 @@ use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class IascServicesBulkImport.
+ * Class Iasc Services Search.
  */
 class IascServicesSearch extends ControllerBase {
 
@@ -31,7 +31,7 @@ class IascServicesSearch extends ControllerBase {
     }
 
     // Redirect to results page.
-    $url = Url::fromUserInput('/services', [
+    $url = Url::fromUserInput('/rg2/service-directory/services', [
       'query' => [
         'f' => $filters,
       ],
