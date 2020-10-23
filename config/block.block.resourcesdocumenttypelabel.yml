@@ -12,7 +12,7 @@ dependencies:
 id: resourcesdocumenttypelabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -12
+weight: -14
 provider: null
 plugin: 'facet_block:resources_document_type_label'
 settings:

@@ -1,0 +1,29 @@
+uuid: ce4a0125-2472-40bb-852f-3314237a4be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_coverage_country
+    - node.type.service
+    - taxonomy.vocabulary.service_coverage_country
+id: node.service.field_service_coverage_country
+field_name: field_service_coverage_country
+entity_type: node
+bundle: service
+label: 'Service Coverage Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      service_coverage_country: service_coverage_country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

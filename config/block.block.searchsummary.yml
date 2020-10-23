@@ -12,7 +12,7 @@ dependencies:
 id: searchsummary
 theme: iasc_common_design
 region: sidebar_first
-weight: -7
+weight: -9
 provider: null
 plugin: 'facets_summary_block:search_summary'
 settings:

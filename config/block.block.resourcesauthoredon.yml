@@ -12,7 +12,7 @@ dependencies:
 id: resourcesauthoredon
 theme: iasc_common_design
 region: sidebar_first
-weight: -14
+weight: -16
 provider: null
 plugin: 'facet_block:resources_authored_on'
 settings:

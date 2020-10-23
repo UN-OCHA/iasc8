@@ -12,7 +12,7 @@ dependencies:
 id: productcategorylabel
 theme: iasc_common_design
 region: sidebar_first
-weight: -9
+weight: -11
 provider: null
 plugin: 'facet_block:product_category_label'
 settings:

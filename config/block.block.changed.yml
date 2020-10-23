@@ -12,7 +12,7 @@ dependencies:
 id: changed
 theme: iasc_common_design
 region: sidebar_first
-weight: -8
+weight: -10
 provider: null
 plugin: 'facet_block:changed'
 settings:

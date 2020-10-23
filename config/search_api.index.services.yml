@@ -12,7 +12,8 @@ dependencies:
     - field.storage.node.field_share_data
     - field.storage.node.field_global_focal_point
     - field.storage.node.field_relevant_hpc_stage
-    - field.storage.node.field_service_coverage
+    - field.storage.node.field_service_coverage_country
+    - field.storage.node.field_service_coverage_region
     - field.storage.node.field_services
     - field.storage.node.field_interest
     - field.storage.node.field_type_of_entity
@@ -110,14 +111,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_relevant_hpc_stage
-  field_service_coverage:
-    label: 'Service Coverage'
+  field_service_coverage_country:
+    label: 'Service Coverage Country'
     datasource_id: 'entity:node'
-    property_path: field_service_coverage
+    property_path: field_service_coverage_country
     type: integer
     dependencies:
       config:
-        - field.storage.node.field_service_coverage
+        - field.storage.node.field_service_coverage_country
+  field_service_coverage_region:
+    label: 'Service Coverage Region'
+    datasource_id: 'entity:node'
+    property_path: field_service_coverage_region
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_service_coverage_region
   field_services:
     label: Services
     datasource_id: 'entity:node'

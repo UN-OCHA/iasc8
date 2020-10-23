@@ -1,4 +1,4 @@
-uuid: a0969aaf-4c0a-4462-b9fd-57e31f45cd54
+uuid: a2bb7aed-eb7c-42d4-b72d-c6b304610bcf
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.iasc_services
   module:
     - search_api
-id: aap_service_coverage
-name: 'Service Coverage'
-url_alias: aap_service_coverage
+id: aap_service_coverage_country
+name: 'Service Coverage Country'
+url_alias: aap_service_coverage_country
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_service_coverage
+field_identifier: field_service_coverage_country
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 widget:
   type: select2

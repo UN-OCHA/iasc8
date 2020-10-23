@@ -13,7 +13,8 @@ dependencies:
     - field.field.node.service.field_kind_of_data
     - field.field.node.service.field_links_to_relevant_docs
     - field.field.node.service.field_relevant_hpc_stage
-    - field.field.node.service.field_service_coverage
+    - field.field.node.service.field_service_coverage_country
+    - field.field.node.service.field_service_coverage_region
     - field.field.node.service.field_service_description
     - field.field.node.service.field_services
     - field.field.node.service.field_share_data
@@ -112,8 +113,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_service_coverage:
-    weight: 106
+  field_service_coverage_country:
+    weight: 118
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_service_coverage_region:
+    weight: 117
     label: above
     settings:
       link: false

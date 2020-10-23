@@ -1,26 +1,26 @@
-uuid: 69532cf7-3b60-4626-8104-f82094c85a97
+uuid: c96c2e4e-5024-40f7-9a5f-991d9aab4f1f
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.services_relevant_hpc_stage
+    - facets.facet.aap_service_coverage_region
   module:
     - facets
     - system
   theme:
     - iasc_common_design
-id: relevanthpcstage
+id: servicecoverageregion
 theme: iasc_common_design
 region: sidebar_first
-weight: 1
+weight: -1
 provider: null
-plugin: 'facet_block:services_relevant_hpc_stage'
+plugin: 'facet_block:aap_service_coverage_region'
 settings:
-  id: 'facet_block:services_relevant_hpc_stage'
-  label: 'Humanitarian Programme Cycle'
+  id: 'facet_block:aap_service_coverage_region'
+  label: 'Service Coverage Region'
   provider: facets
   label_display: visible
-  block_id: relevanthpcstage
+  block_id: servicecoverageregion
 visibility:
   request_path:
     id: request_path
