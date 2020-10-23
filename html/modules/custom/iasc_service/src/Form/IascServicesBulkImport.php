@@ -194,7 +194,8 @@ class IascServicesBulkImport extends FormBase {
       'agency_initiative_or_group',
       'type_of_entity',
       'services',
-      'service_coverage',
+      'service_coverage_region',
+      'service_coverage_country',
       'complaints_and_feedback_mechanis',
       'interest',
       'share_data',
@@ -232,7 +233,8 @@ class IascServicesBulkImport extends FormBase {
       'field_description' => [],
       'field_share_data' => [],
       'field_global_focal_point' => [],
-      'field_service_coverage' => [],
+      'field_service_coverage_region' => [],
+      'field_service_coverage_country' => [],
       'field_service_description' => [],
       'field_services' => [],
       'field_interest' => [],
@@ -295,13 +297,24 @@ class IascServicesBulkImport extends FormBase {
       ];
     }
 
-    // Service Coverage.
-    if (isset($item['service coverage']) && !empty($item['service coverage'])) {
+    // Service Coverage Region.
+    if (isset($item['service coverage region']) && !empty($item['service coverage region'])) {
       // Split and trim.
-      $values = array_map('trim', explode(';', $item['service coverage']));
+      $values = array_map('trim', explode(';', $item['service coverage region']));
       foreach ($values as $input) {
-        $data['field_service_coverage'][] = [
-          'target_id' => $this->fetchOrCreateTerm($input, 'service_coverage'),
+        $data['field_service_coverage_region'][] = [
+          'target_id' => $this->fetchOrCreateTerm($input, 'service_coverage_region'),
+        ];
+      }
+    }
+
+    // Service Coverage Country.
+    if (isset($item['service coverage country']) && !empty($item['service coverage country'])) {
+      // Split and trim.
+      $values = array_map('trim', explode(';', $item['service coverage country']));
+      foreach ($values as $input) {
+        $data['field_service_coverage_country'][] = [
+          'target_id' => $this->fetchOrCreateTerm($input, 'service_coverage_country'),
         ];
       }
     }
@@ -380,7 +393,7 @@ class IascServicesBulkImport extends FormBase {
         $parts = explode(': ', $input);
         if (count($parts) > 1) {
           $data['field_links_to_relevant_docs'][] = [
-            'title' => $parts[0],
+            'title' => substr($parts[0], 0, 250),
             'uri' => $parts[1],
           ];
         }

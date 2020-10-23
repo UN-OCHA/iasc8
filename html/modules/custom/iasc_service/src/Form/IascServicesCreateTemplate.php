@@ -144,12 +144,19 @@ class IascServicesCreateTemplate extends FormBase {
         // Service Description.
         $worksheet->setCellValue('F' . $row, $service->field_service_description->value);
 
-        // Service Coverage.
+        // Service Coverage Region.
         $output = [];
-        foreach ($service->field_service_coverage->referencedEntities() as $item) {
+        foreach ($service->field_service_coverage_region->referencedEntities() as $item) {
           $output[] = $item->getName();
         }
         $worksheet->setCellValue('G' . $row, implode(';', $output));
+
+        // Service Coverage Country.
+        $output = [];
+        foreach ($service->field_service_coverage_country->referencedEntities() as $item) {
+          $output[] = $item->getName();
+        }
+        $worksheet->setCellValue('H' . $row, implode(';', $output));
 
         // Global Focal Point, First Name, Last Name, Website.
         $email = [];
@@ -162,10 +169,10 @@ class IascServicesCreateTemplate extends FormBase {
           $lastname[] = $item->field_last_name->value;
           $website[] = $item->field_homepage->value;
         }
-        $worksheet->setCellValue('H' . $row, implode(';', $email));
-        $worksheet->setCellValue('I' . $row, implode(';', $firstname));
-        $worksheet->setCellValue('J' . $row, implode(';', $lastname));
-        $worksheet->setCellValue('K' . $row, implode(';', $website));
+        $worksheet->setCellValue('I' . $row, implode(';', $email));
+        $worksheet->setCellValue('J' . $row, implode(';', $firstname));
+        $worksheet->setCellValue('K' . $row, implode(';', $lastname));
+        $worksheet->setCellValue('L' . $row, implode(';', $website));
 
         // Links to Relevant Docs.
         $output = [];
@@ -177,49 +184,49 @@ class IascServicesCreateTemplate extends FormBase {
             $output[] = $item['uri'];
           }
         }
-        $worksheet->setCellValue('L' . $row, implode(';', $output));
+        $worksheet->setCellValue('M' . $row, implode(';', $output));
 
         // Examples and Case Studies.
         $html = $service->field_examples_and_case_studies->value;
         $html = str_replace('</li><li>', ';', $html);
         $html = str_replace('<ul><li>', '', $html);
         $html = str_replace('</li></ul>', '', $html);
-        $worksheet->setCellValue('M' . $row, $html);
+        $worksheet->setCellValue('N' . $row, $html);
 
         // CFMs implemented at country level?.
         $output = [];
         foreach ($service->field_complaints_and_feedback->referencedEntities() as $item) {
           $output[] = $item->getName();
         }
-        $worksheet->setCellValue('N' . $row, implode(';', $output));
+        $worksheet->setCellValue('O' . $row, implode(';', $output));
 
         // This entity has indicated interest in….
         $output = [];
         foreach ($service->field_interest->referencedEntities() as $item) {
           $output[] = $item->getName();
         }
-        $worksheet->setCellValue('O' . $row, implode(';', $output));
+        $worksheet->setCellValue('P' . $row, implode(';', $output));
 
         // Data Sharing Requirements.
         $output = [];
         foreach ($service->field_share_data->referencedEntities() as $item) {
           $output[] = $item->getName();
         }
-        $worksheet->setCellValue('P' . $row, implode(';', $output));
+        $worksheet->setCellValue('Q' . $row, implode(';', $output));
 
         // Type(s) of Data Available.
         $output = [];
         foreach ($service->field_kind_of_data->referencedEntities() as $item) {
           $output[] = $item->getName();
         }
-        $worksheet->setCellValue('Q' . $row, implode(';', $output));
+        $worksheet->setCellValue('R' . $row, implode(';', $output));
 
         // Inter-Agency CFM Resources.
         $html = $service->field_inter_agency_cfm_resources->value;
         $html = str_replace('</li><li>', ';', $html);
         $html = str_replace('<ul><li>', '', $html);
         $html = str_replace('</li></ul>', '', $html);
-        $worksheet->setCellValue('R' . $row, $html);
+        $worksheet->setCellValue('S' . $row, $html);
       }
     }
 
