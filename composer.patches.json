@@ -12,9 +12,6 @@
     },
     "drupal/search_api": {
       "Facets query part is lost in views": "https://www.drupal.org/files/issues/2020-04-22/search_api-facets_query_lost_non_saved_source_config-3130004-2.patch"
-    },
-    "drupal/core": {
-      "Attempt to debug intermittent 'The \"\" entity type does not exist.'": "PATCHES/core_backtrace_entitymanager.patch"
     }
   }
 }
