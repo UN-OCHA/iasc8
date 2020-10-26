@@ -1,0 +1,29 @@
+uuid: 18f839b1-f9ca-4fea-b598-60a8f758fcb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complaints_and_feedback
+    - node.type.service
+    - taxonomy.vocabulary.complaints_and_feedback_mechanis
+id: node.service.field_complaints_and_feedback
+field_name: field_complaints_and_feedback
+entity_type: node
+bundle: service
+label: 'CFMs implemented at country level?'
+description: "Does your entity usually implement a complaints and feedback mechanism (CFM) for programs at the country level?\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      complaints_and_feedback_mechanis: complaints_and_feedback_mechanis
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

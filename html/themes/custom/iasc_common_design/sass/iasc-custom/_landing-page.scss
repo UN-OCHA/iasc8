@@ -1,0 +1,39 @@
+.operations.form-actions {
+  margin: 4rem 0;
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 16rem;
+    }
+  }
+}
+
+.paragraph--type--services-landing-block {
+  form {
+    border-bottom: 1px solid $cd-mid-bluey-grey;
+    margin-bottom: 4rem;
+
+    @include desktop {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .cd-form__group {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    color: $iasc-primary;
+  }
+
+  select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 12c5a9f2-a6a0-4f94-bf1d-350c4b974da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_text_and_link
+    - field.storage.block_content.field_block_title
+id: block_content.block_with_text_and_link.field_block_title
+field_name: field_block_title
+entity_type: block_content
+bundle: block_with_text_and_link
+label: 'Block title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

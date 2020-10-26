@@ -1,0 +1,8 @@
+uuid: 46d36b5f-9606-478a-8e29-71d631369d44
+langcode: en
+status: true
+dependencies: {  }
+name: 'Complaints and feedback mechanism'
+vid: complaints_and_feedback_mechanis
+description: ''
+weight: 0

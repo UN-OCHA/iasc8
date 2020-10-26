@@ -5,11 +5,11 @@ dependencies: {  }
 name: hero
 label: Hero
 effects:
-  5dc09fb3-b1a8-4d1f-911b-aec85f4b07f7:
-    uuid: 5dc09fb3-b1a8-4d1f-911b-aec85f4b07f7
+  c3ae1b73-aee4-4925-8a7c-7005bcdf3e53:
+    uuid: c3ae1b73-aee4-4925-8a7c-7005bcdf3e53
     id: image_scale
-    weight: 1
+    weight: -10
     data:
-      width: 1280
+      width: 1136
       height: null
       upscale: false

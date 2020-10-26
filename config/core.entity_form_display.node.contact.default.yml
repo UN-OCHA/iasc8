@@ -231,3 +231,4 @@ content:
 hidden:
   field_legacy_id: true
   field_photo: true
+  field_xyzzy: true

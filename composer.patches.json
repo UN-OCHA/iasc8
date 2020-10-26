@@ -10,11 +10,11 @@
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
       "https://www.drupal.org/project/group/issues/2873212 - Add a status to the group (Publish/Unpublish)": "https://www.drupal.org/files/issues/2019-11-19/group-status-2873212-17.patch"
     },
+    "drupal/search_api": {
+      "Facets query part is lost in views": "https://www.drupal.org/files/issues/2020-04-22/search_api-facets_query_lost_non_saved_source_config-3130004-2.patch"
+    },
     "drupal/core": {
       "Attempt to debug intermittent 'The \"\" entity type does not exist.'": "PATCHES/core_backtrace_entitymanager.patch"
-    },
-    "drupal/node_view_permissions": {
-      "Handle accessfor Language::LANGCODE_NOT_SPECIFIED": "PATCHES/node_view_permissions_language_und.patch"
     }
   }
 }

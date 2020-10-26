@@ -10,7 +10,6 @@
 
       <div class="cd-layout-content">
 
-        <h1 class="page-title">404</h1>
         <p>{% trans %}Sorry, the page you are looking for cannot be found.{% endtrans %}</p>
 
         <form action="/search" method="get" accept-charset="UTF-8">
@@ -24,10 +23,6 @@
         </form>
 
       </div>{# /.cd-layout-content #}
-
-      <aside class="cd-layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
 
     </main>
   {% endblock %}

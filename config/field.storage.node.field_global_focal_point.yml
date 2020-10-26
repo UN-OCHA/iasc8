@@ -1,0 +1,19 @@
+uuid: 50c515e0-59f6-4f30-a637-f662ed1925d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_global_focal_point
+field_name: field_global_focal_point
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

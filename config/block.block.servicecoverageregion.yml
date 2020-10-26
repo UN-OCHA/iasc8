@@ -1,0 +1,29 @@
+uuid: c96c2e4e-5024-40f7-9a5f-991d9aab4f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.aap_service_coverage_region
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: servicecoverageregion
+theme: iasc_common_design
+region: sidebar_first
+weight: -1
+provider: null
+plugin: 'facet_block:aap_service_coverage_region'
+settings:
+  id: 'facet_block:aap_service_coverage_region'
+  label: 'Service Coverage Region'
+  provider: facets
+  label_display: visible
+  block_id: servicecoverageregion
+visibility:
+  request_path:
+    id: request_path
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
+    negate: false
+    context_mapping: {  }

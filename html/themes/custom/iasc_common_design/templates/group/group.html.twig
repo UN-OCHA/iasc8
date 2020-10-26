@@ -46,13 +46,21 @@
   view_mode ? 'group--view-mode-' ~ view_mode|clean_class
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes) }}>
 
-    {{ title_prefix }}
-    <h2{{ title_attributes.addClass('page-title') }}>
-      {{ label }}
-    </h2>
-    {{ title_suffix }}
+  {{ title_prefix }}
+  {% if label %}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% else %}
+      <h1{{ title_attributes.addClass('page-title') }}>
+        {{ label }}
+      </h1>
+    {% endif %}
+  {% endif %}
+  {{ title_suffix }}
 
   <div{{ content_attributes.addClass('node__content') }}>
 
@@ -91,4 +99,4 @@
 
   </div>
 
-</div>
+</article>

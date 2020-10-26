@@ -1,0 +1,10 @@
+uuid: e9f0e445-401b-4ea5-b683-e0c7dac4af03
+langcode: en
+status: true
+dependencies: {  }
+id: services_landing_block
+label: 'Services landing block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -33,7 +33,8 @@
 .view-iasc-group-content,
 .view-search-content,
 .view-updates,
-.view-resources {
+.view-resources,
+.view-iasc-services {
   .views-exposed-form .form--inline {
     display: flex;
     margin-bottom: 2rem;
@@ -43,13 +44,112 @@
       margin: 0;
     }
 
+    .form-text:focus {
+      outline: 2px solid $cd-bright-blue;
+    }
+
     .form-actions input[type='submit'] {
       line-height: 37px;
       padding: 0 1rem;
     }
 
+    .form-actions input:focus {
+      outline: 2px solid $cd-bright-blue;
+    }
+
     label {
       @include visually-hidden;
+    }
+  }
+}
+
+.region-sidebar-first,
+.region-sidebar-second {
+  .block-search {
+    margin-bottom: 2rem;
+  }
+
+  .block-search h2 {
+    @extend .cd-heading-3;
+    margin-top: 0;
+  }
+
+  .views-exposed-form .form--inline {
+
+    label {
+      @include visually-hidden;
+    }
+
+    .form-item {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .form-actions {
+      margin: 0;
+    }
+
+    .form-text {
+      width: 100%;
+
+      &:focus {
+        outline: 2px solid $cd-bright-blue;
+      }
+    }
+
+    .form-actions input[type='submit'] {
+      width: 100%;
+
+      @include sm {
+        max-width: 16rem;
+      }
+
+      @include desktop {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Services table
+.views-table {
+  @media (min-width: 576px) {
+    .views-field-field-service-coverage {
+      width: 30%;
+    }
+  }
+}
+
+// Adjust height to accommodate height of long th.
+@media (max-width: 575px) {
+  .cd-table--responsive td.views-field-field-share-data {
+    min-height: 8rem;
+  }
+
+  .cd-table--responsive td.views-field-field-service-coverage {
+    min-height: 4rem;
+  }
+}
+
+.view-header > p {
+  margin-top: 0;
+}
+
+.view-iasc-services {
+  .view-header h2 {
+    @media (max-width: 1023px) {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $cd-mid-bluey-grey;
+    }
+  }
+
+  .pager {
+    margin-bottom: 4rem;
+
+    @include desktop {
+      margin-bottom: 6rem;
     }
   }
 }

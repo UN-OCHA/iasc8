@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.resources_content_type
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: resourcescontenttype
 theme: iasc_common_design
-region: sidebar_second
-weight: -3
+region: sidebar_first
+weight: -15
 provider: null
 plugin: 'facet_block:resources_content_type'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: resourcescontenttype
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources
+    negate: false
+    context_mapping: {  }

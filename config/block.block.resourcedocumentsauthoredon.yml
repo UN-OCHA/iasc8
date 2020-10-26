@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.resource_documents_authored_on
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: resourcedocumentsauthoredon
 theme: iasc_common_design
-region: sidebar_second
-weight: -5
+region: sidebar_first
+weight: 5
 provider: null
 plugin: 'facet_block:resource_documents_authored_on'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: resourcedocumentsauthoredon
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/meeting-documents
+    negate: false
+    context_mapping: {  }
