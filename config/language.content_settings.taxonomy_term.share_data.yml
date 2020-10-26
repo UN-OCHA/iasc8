@@ -1,0 +1,11 @@
+uuid: 5be2fac0-68a8-4132-b312-ecbec6902d75
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.share_data
+id: taxonomy_term.share_data
+target_entity_type_id: taxonomy_term
+target_bundle: share_data
+default_langcode: site_default
+language_alterable: false

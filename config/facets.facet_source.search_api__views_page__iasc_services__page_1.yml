@@ -1,0 +1,12 @@
+uuid: b73677e9-21ac-448a-b6dc-4e347f732344
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__iasc_services__page_1
+name: 'search_api:views_page__iasc_services__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

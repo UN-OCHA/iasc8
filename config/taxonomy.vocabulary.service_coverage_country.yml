@@ -1,0 +1,8 @@
+uuid: 83d0c8bc-e46d-4533-97f1-94821c8f4875
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Coverage Country'
+vid: service_coverage_country
+description: ''
+weight: 0

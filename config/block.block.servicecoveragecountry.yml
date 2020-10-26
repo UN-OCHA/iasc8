@@ -1,0 +1,29 @@
+uuid: 50fb4663-b208-4f8f-8442-c341cf62574b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.aap_service_coverage_country
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: servicecoveragecountry
+theme: iasc_common_design
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:aap_service_coverage_country'
+settings:
+  id: 'facet_block:aap_service_coverage_country'
+  label: 'Service Coverage Country'
+  provider: facets
+  label_display: visible
+  block_id: servicecoveragecountry
+visibility:
+  request_path:
+    id: request_path
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
+    negate: false
+    context_mapping: {  }

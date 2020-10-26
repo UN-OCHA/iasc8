@@ -1,0 +1,8 @@
+uuid: 345526b5-40d4-479d-aaf8-14ad56ea8253
+langcode: en
+status: true
+dependencies: {  }
+id: block_with_text_and_link
+label: 'Block with text and link'
+revision: 0
+description: ''

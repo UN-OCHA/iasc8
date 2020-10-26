@@ -1,0 +1,11 @@
+uuid: 9bba75b7-24f7-4756-a88b-6e86c4fd7e7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.agency_initiative_or_group
+id: taxonomy_term.agency_initiative_or_group
+target_entity_type_id: taxonomy_term
+target_bundle: agency_initiative_or_group
+default_langcode: site_default
+language_alterable: false

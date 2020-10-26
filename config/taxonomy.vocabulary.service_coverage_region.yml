@@ -1,0 +1,8 @@
+uuid: 5e008202-0a9a-41c2-9857-9e42a4bbe966
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Coverage Region'
+vid: service_coverage_region
+description: ''
+weight: 0

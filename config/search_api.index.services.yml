@@ -1,0 +1,193 @@
+uuid: b2cb7bbe-d287-4e68-b248-1f22b3402d39
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_solr
+    - node
+    - search_api
+  config:
+    - field.storage.node.field_agency_initiative_or_group
+    - field.storage.node.field_complaints_and_feedback
+    - field.storage.node.field_share_data
+    - field.storage.node.field_global_focal_point
+    - field.storage.node.field_relevant_hpc_stage
+    - field.storage.node.field_service_coverage_country
+    - field.storage.node.field_service_coverage_region
+    - field.storage.node.field_services
+    - field.storage.node.field_interest
+    - field.storage.node.field_type_of_entity
+    - field.storage.node.field_kind_of_data
+    - search_api.server.default_solr_server
+    - core.entity_view_mode.node.full
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+id: services
+name: Services
+description: ''
+read_only: false
+field_settings:
+  field_agency_initiative_or_group:
+    label: 'Agency, Initiative or Group'
+    datasource_id: 'entity:node'
+    property_path: field_agency_initiative_or_group
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_agency_initiative_or_group
+  field_complaints_and_feedback:
+    label: 'Complaints and feedback mechanism'
+    datasource_id: 'entity:node'
+    property_path: field_complaints_and_feedback
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_complaints_and_feedback
+  field_global_focal_point:
+    label: 'Global Focal Point'
+    datasource_id: 'entity:node'
+    property_path: field_global_focal_point
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_global_focal_point
+  field_interest:
+    label: 'The entity I am representing may be interested in...'
+    datasource_id: 'entity:node'
+    property_path: field_interest
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_interest
+  field_kind_of_data:
+    label: 'What kind of data do you collect that you share/may be interested in sharing for the purposes of collective AAP?'
+    datasource_id: 'entity:node'
+    property_path: field_kind_of_data
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_kind_of_data
+  field_relevant_hpc_stage:
+    label: 'Relevant HPC Stage'
+    datasource_id: 'entity:node'
+    property_path: field_relevant_hpc_stage
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relevant_hpc_stage
+  field_service_coverage_country:
+    label: 'Service Coverage Country'
+    datasource_id: 'entity:node'
+    property_path: field_service_coverage_country
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_service_coverage_country
+  field_service_coverage_region:
+    label: 'Service Coverage Region'
+    datasource_id: 'entity:node'
+    property_path: field_service_coverage_region
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_service_coverage_region
+  field_services:
+    label: Services
+    datasource_id: 'entity:node'
+    property_path: field_services
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_services
+  field_share_data:
+    label: 'Does your entity share data with the humanitarian community?'
+    datasource_id: 'entity:node'
+    property_path: field_share_data
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_share_data
+  field_type_of_entity:
+    label: 'Type of Entity'
+    datasource_id: 'entity:node'
+    property_path: field_type_of_entity
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_type_of_entity
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          service: full
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - service
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_solr_server

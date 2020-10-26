@@ -1,0 +1,7 @@
+iasc_service.iasc_service_create_template:
+  title: Export template or data
+  description: Create xlsx file with a template or with data
+  route_name: iasc_service.iasc_service_create_template
+  appears_on:
+    - iasc_service.iasc_service_bulk_import
+  weight: 15

@@ -1,0 +1,11 @@
+uuid: 5b8a223b-7470-4aba-ba59-43374c06a4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.relevant_hpc_stage
+id: taxonomy_term.relevant_hpc_stage
+target_entity_type_id: taxonomy_term
+target_bundle: relevant_hpc_stage
+default_langcode: site_default
+language_alterable: false

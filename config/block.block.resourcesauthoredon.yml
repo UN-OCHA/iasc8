@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.resources_authored_on
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: resourcesauthoredon
 theme: iasc_common_design
-region: sidebar_second
-weight: -7
+region: sidebar_first
+weight: -16
 provider: null
 plugin: 'facet_block:resources_authored_on'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: resourcesauthoredon
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources
+    negate: false
+    context_mapping: {  }

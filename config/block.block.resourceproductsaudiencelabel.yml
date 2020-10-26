@@ -6,12 +6,13 @@ dependencies:
     - facets.facet.resource_products_audience_label
   module:
     - facets
+    - system
   theme:
     - iasc_common_design
 id: resourceproductsaudiencelabel
 theme: iasc_common_design
-region: sidebar_second
-weight: -11
+region: sidebar_first
+weight: -4
 provider: null
 plugin: 'facet_block:resource_products_audience_label'
 settings:
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: resourceproductsaudiencelabel
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/iasc-products
+    negate: false
+    context_mapping: {  }
