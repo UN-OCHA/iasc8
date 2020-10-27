@@ -1,9 +1,9 @@
-uuid: 421bdf91-ff70-4f52-b5db-4511aa965661
+uuid: 90eb6ec9-1e64-4eee-8c0e-377fca56bde0
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:block_with_text_and_link:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+    - 'block_content:block_with_text_and_link:842ea753-7b32-4b4a-aa13-cd33501583ac'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: feedback
 theme: iasc_common_design
 region: content
-weight: -22
+weight: -19
 provider: null
-plugin: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+plugin: 'block_content:842ea753-7b32-4b4a-aa13-cd33501583ac'
 settings:
-  id: 'block_content:e4154bcc-06cf-4ae1-b2c0-4bfcb14af2ec'
+  id: 'block_content:842ea753-7b32-4b4a-aa13-cd33501583ac'
   label: 'Have feedback on the Service Directory?'
   provider: block_content
   label_display: '0'

@@ -9,7 +9,7 @@ dependencies:
 id: mainpagecontent
 theme: iasc_common_design
 region: content
-weight: -24
+weight: -20
 provider: null
 plugin: system_main_block
 settings:
