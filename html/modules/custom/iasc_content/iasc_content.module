@@ -22,6 +22,7 @@ use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\entityqueue\Entity\EntitySubqueue;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
@@ -1093,4 +1094,18 @@ function iasc_content_fix_entities($entity_type, $bundle, $field_name) {
   $map = $field_map_kv_store->get($entity_type);
   unset($map[$field_name]['bundles'][$bundle]);
   $field_map_kv_store->set($entity_type, $map);
+}
+
+/**
+ * Implemtents hook_views_pre_render().
+ */
+function iasc_content_views_pre_render(ViewExecutable $view) {
+  if ($view->id() === 'iasc_group_content') {
+    $group_id = $view->args[0];
+    if ($group_id) {
+      if ($group = entity_load('group', $group_id)) {
+        $view->setTitle($view->getTitle() . $group->label());
+      }
+    }
+  }
 }
