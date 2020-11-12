@@ -70,6 +70,7 @@
         "drupal/pathauto": "^1.4",
         "drupal/realname": "^1.0@RC",
         "drupal/redirect": "^1.4",
+        "drupal/redis": "^1.4",
         "drupal/search_api": "^1.14",
         "drupal/search_api_attachments": "^1.0@beta",
         "drupal/search_api_solr": "^3.2",
