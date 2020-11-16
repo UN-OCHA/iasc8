@@ -1,9 +1,9 @@
-uuid: a8079cdd-4d31-45b8-8e23-9b2d97ceaf0f
+uuid: 6c8b0a16-98cc-42ba-a104-621b71c64390
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:block_with_text_and_link:963d3fef-f775-4a29-8d29-6ae049bc065c'
+    - 'block_content:block_with_text_and_link:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: feature_request
 theme: iasc_common_design
 region: content
-weight: -21
+weight: -18
 provider: null
-plugin: 'block_content:963d3fef-f775-4a29-8d29-6ae049bc065c'
+plugin: 'block_content:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
 settings:
-  id: 'block_content:963d3fef-f775-4a29-8d29-6ae049bc065c'
+  id: 'block_content:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
   label: 'Does your entity offer a service not featured here?'
   provider: block_content
   label_display: '0'
