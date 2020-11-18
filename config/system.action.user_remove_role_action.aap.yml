@@ -1,0 +1,14 @@
+uuid: 7f425a51-2511-42b0-90e3-cf3c31545290
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.aap
+  module:
+    - user
+id: user_remove_role_action.aap
+label: 'Remove the AAP role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: aap
