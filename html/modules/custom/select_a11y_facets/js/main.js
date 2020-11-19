@@ -7,7 +7,7 @@
         // Add change handler.
         $(this).on('change', function (e) {
           var url = this.options[e.detail].value;
-          $(this).trigger('facets_filter', [ url ]);
+          window.location = url;
         });
 
         // Get Id.
