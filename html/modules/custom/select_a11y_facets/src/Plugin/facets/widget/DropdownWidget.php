@@ -11,7 +11,7 @@ use Drupal\facets\Widget\WidgetPluginBase;
  *
  * @FacetsWidget(
  *   id = "select_a11y_dropdown",
- *   label = @Translation("Dropdown (Multiple"),
+ *   label = @Translation("Dropdown (Multiple)"),
  *   description = @Translation("A configurable widget that shows a dropdown, allowing multiple values."),
  * )
  */
