@@ -26,7 +26,7 @@
 #}
 
 <div class="facets-widget- {{- facet.widget.type -}} ">
-  <label for="facet_{{ facet.id }}" id="facet_{{ facet.id }}_label">{{ 'Facet'|t }} {{ facet.label }}</label>
+  <label for="facet_{{ facet.id }}" id="facet_{{ facet.id }}_label">{{ facet.label }}</label>
   <select {{ attributes }} id="facet_{{ facet.id }}" multiple="multiple" data-select-a11y>
     {%- for item in items -%}
       <option value="{{ item.value }}" {{ item.active ? ' selected="selected"' }}>{{ item.label }}</li>
