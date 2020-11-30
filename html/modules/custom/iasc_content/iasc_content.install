@@ -887,3 +887,65 @@ function iasc_content_update_8025() {
   $installedStorageSchema = \Drupal::keyValue('entity.storage_schema.sql');
   $installedStorageSchema->set($key, $schema);
 }
+
+/**
+ * Update content aliases.
+ */
+function iasc_content_update_8026() {
+  $nids = [
+    120,
+    17281,
+    17286,
+    28874,
+    28914,
+    29548,
+    29553,
+    3923,
+    40180,
+    41258,
+    41784,
+    42007,
+    42159,
+    4249,
+    5186,
+    5981,
+    7730,
+    7732,
+    7733,
+    7735,
+    7736,
+    898,
+    9436,
+    99,
+  ];
+
+  foreach ($nids as $nid) {
+    $node = node_load($nid);
+    \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'bulkupdate');
+  }
+}
+
+/**
+ * Update group aliases.
+ */
+function iasc_content_update_8027() {
+  $gids = [
+    18899,
+    2663,
+    2683,
+    2687,
+    2695,
+    2699,
+    2703,
+    2763,
+    2828,
+    3546,
+    40018,
+    6232,
+  ];
+
+  foreach ($gids as $gid) {
+    $group = entity_load('group', $gid);
+    \Drupal::service('pathauto.generator')->updateEntityAlias($group, 'bulkupdate');
+  }
+}
