@@ -85,7 +85,7 @@ module:
   search_api_solr_admin: 0
   select2: 0
   select2_facets: 0
-  select_a11y_facets: 0
+  select_a11y: 0
   select_or_other: 0
   shortcut: 0
   social_api: 0
