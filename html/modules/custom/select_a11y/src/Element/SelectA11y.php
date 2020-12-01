@@ -3,13 +3,9 @@
 namespace Drupal\select_a11y\Element;
 
 use Drupal\Component\Serialization\Json;
-use Drupal\Core\Entity\Element\EntityAutocomplete;
-use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\OptGroup;
 use Drupal\Core\Render\Element\Select;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
-use Drupal\Core\Url;
 
 /**
  * Provides an select_a11y form element.
