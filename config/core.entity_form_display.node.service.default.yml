@@ -26,6 +26,7 @@ dependencies:
     - link
     - path
     - select2
+    - select_a11y
     - select_or_other
     - text
 id: node.service.default
@@ -49,9 +50,10 @@ content:
     region: content
   field_complaints_and_feedback:
     weight: 128
-    settings: {  }
+    settings:
+      width: 100%
     third_party_settings: {  }
-    type: options_select
+    type: select_a11y
     region: content
   field_description:
     weight: 132
