@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\select_a11y_facets\Plugin\facets\widget;
+namespace Drupal\select_a11y\Plugin\facets\widget;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\facets\FacetInterface;
@@ -11,7 +11,7 @@ use Drupal\facets\Widget\WidgetPluginBase;
  *
  * @FacetsWidget(
  *   id = "select_a11y_dropdown",
- *   label = @Translation("Dropdown (Multiple)"),
+ *   label = @Translation("Select a11y dropdown"),
  *   description = @Translation("A configurable widget that shows a dropdown, allowing multiple values."),
  * )
  */

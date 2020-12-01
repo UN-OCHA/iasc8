@@ -1,4 +1,4 @@
-name: Select A11y Facets
+name: Select A11y
 type: module
 description: Provides a multiple select widget.
 package: Search

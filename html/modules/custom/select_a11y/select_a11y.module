@@ -8,7 +8,7 @@
 /**
  * Implements hook_theme().
  */
-function select_a11y_facets_theme($existing, $type, $theme, $path) {
+function select_a11y_theme($existing, $type, $theme, $path) {
   return [
     'select_a11y_facet' => [
       'variables' => [

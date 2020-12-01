@@ -1,0 +1,25 @@
+select_a11y.widget:
+  version: VERSION
+  js:
+    js/select-a11y.min.js: ''
+    js/select-a11y-widget.js: ''
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+  css:
+    theme:
+      css/style.css: {}
+
+select_a11y_facets.widget:
+  version: VERSION
+  js:
+    js/select-a11y.min.js: ''
+    js/select-a11y-facets.js: ''
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+  css:
+    theme:
+      css/style.css: {}
