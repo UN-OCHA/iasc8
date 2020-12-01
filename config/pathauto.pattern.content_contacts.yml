@@ -1,0 +1,22 @@
+uuid: a4eaca2d-a401-4c4a-bf4b-99d21540c230
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_contacts
+label: 'Content - Contacts'
+type: 'canonical_entities:node'
+pattern: 'contacts/[node:title]'
+selection_criteria:
+  0207d4de-1cef-494b-9629-5a14785d8548:
+    id: node_type
+    bundles:
+      contact: contact
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0207d4de-1cef-494b-9629-5a14785d8548
+selection_logic: and
+weight: -9
+relationships: {  }
