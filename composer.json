@@ -73,7 +73,7 @@
         "drupal/redis": "^1.4",
         "drupal/search_api": "^1.14",
         "drupal/search_api_attachments": "^1.0@beta",
-        "drupal/search_api_solr": "^3.2",
+        "drupal/search_api_solr": "^4.1",
         "drupal/select2": "^1.6",
         "drupal/select_or_other": "^1.0@alpha",
         "drupal/social_auth_hid": "^2.2",
