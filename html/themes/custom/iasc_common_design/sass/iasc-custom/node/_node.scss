@@ -126,20 +126,20 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
     margin-bottom: 0.5rem;
   }
 
-  // Comma separated.
-  .field--name-field-service-coverage .field__items,
-  .field--name-field-relevant-hpc-stage .field__items {
-    display: flex;
-    flex-wrap: wrap;
-
-    .field__item::after {
-      content: ',';
-      padding-right: 0.25rem;
-    }
-
-    .field__item:last-child::after {
-      content: none;
-      padding-right: 0;
-    }
-  }
+  //// Comma separated.
+  //.field--name-field-service-coverage .field__items,
+  //.field--name-field-relevant-hpc-stage .field__items {
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //
+  //  .field__item::after {
+  //    content: ',';
+  //    padding-right: 0.25rem;
+  //  }
+  //
+  //  .field__item:last-child::after {
+  //    content: none;
+  //    padding-right: 0;
+  //  }
+  //}
 }
