@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1367f25e9d5023c35a65365fd31d88ae",
+    "content-hash": "23684c3e44614a51a07a2dbee5c9c829",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3873,30 +3873,30 @@
         },
         {
             "name": "drupal/date_recur_modular",
-            "version": "1.1.0",
+            "version": "2.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/date_recur_modular.git",
-                "reference": "8.x-1.1"
+                "reference": "2.0.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/date_recur_modular-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "05e2a86ba281aacae6a91afb002d7b8e06ae8c9e"
+                "url": "https://ftp.drupal.org/files/projects/date_recur_modular-2.0.0-rc1.zip",
+                "reference": "2.0.0-rc1",
+                "shasum": "7cc5be0d9feb2f3350eed7acc555827df826f1c7"
             },
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8.9",
                 "drupal/date_recur": "^2.0@beta"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1586003964",
+                    "version": "2.0.0-rc1",
+                    "datestamp": "1586003091",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
