@@ -21,9 +21,8 @@
     ],
     "require": {
         "php": ">=7.2",
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6.5",
-        "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "^1.6",
         "drupal/admin_denied": "^1.0",
         "drupal/chosen": "^2.7",
@@ -35,9 +34,11 @@
         "drupal/conditional_styles": "^1.0",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.8.6",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-dev": "^8.8",
+        "drupal/core-recommended": "^8.8",
         "drupal/date_recur": "^2.0@beta",
-        "drupal/date_recur_modular": "^1.0",
+        "drupal/date_recur_modular": "^2.0.0",
         "drupal/diff": "^1.0@RC",
         "drupal/dream_block_manager": "^1.0",
         "drupal/dynamic_entity_reference": "^1.7",
@@ -55,12 +56,10 @@
         "drupal/geofield_map": "^2.38",
         "drupal/geophp": "^1.0@beta",
         "drupal/google_tag": "^1.2",
-        "drupal/group": "1.x-dev#f64e11d8",
+        "drupal/group": "^1.0.0",
         "drupal/linkit": "^4.3",
         "drupal/maintenance200": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
-        "drupal/migrate_plus": "^4.2",
-        "drupal/migrate_tools": "^4.1",
         "drupal/migrate_upgrade": "^3",
         "drupal/node_view_permissions": "^1.4",
         "drupal/paragraphs": "^1.8",
@@ -73,7 +72,7 @@
         "drupal/redis": "^1.4",
         "drupal/search_api": "^1.14",
         "drupal/search_api_attachments": "^1.0@beta",
-        "drupal/search_api_solr": "^3.2",
+        "drupal/search_api_solr": "^4.1",
         "drupal/select2": "^1.6",
         "drupal/select_or_other": "^1.0@alpha",
         "drupal/social_auth_hid": "^2.2",
@@ -84,13 +83,13 @@
         "drupal/token_filter": "^1.2",
         "drupal/twig_tweak": "^2.8",
         "drupal/variationcache": "^1.0",
-        "drupal/viewsreference": "2.0-alpha6",
+        "drupal/viewsreference": "^2.0.0",
         "drupal/webform": "^5.19",
         "drush/drush": "^9.0.0",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "phpoffice/phpspreadsheet": "1.11",
-        "symfony/event-dispatcher": "4.3.4 as 3.4.99",
+        "symfony/event-dispatcher": "4.3.3 as 3.4.41",
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
         "unocha/common_design": "^2.8.4",
@@ -104,7 +103,6 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/devel": "^2.1",
-        "drupal/devel_entity_updates": "^1.0@RC",
         "drupal/devel_php": "^1.1",
         "phpmd/phpmd": "^2.6",
         "phpunit/phpunit": "^7",
@@ -171,6 +169,9 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            },
+            "locations": {
+                "web-root": "html/"
             }
         }
     }
