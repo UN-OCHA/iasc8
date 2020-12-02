@@ -59,8 +59,6 @@
         "drupal/linkit": "^4.3",
         "drupal/maintenance200": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
-        "drupal/migrate_plus": "^4.2",
-        "drupal/migrate_tools": "^4.1",
         "drupal/migrate_upgrade": "^3",
         "drupal/node_view_permissions": "^1.4",
         "drupal/paragraphs": "^1.8",
@@ -104,7 +102,6 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/devel": "^2.1",
-        "drupal/devel_entity_updates": "^1.0@RC",
         "drupal/devel_php": "^1.1",
         "phpmd/phpmd": "^2.6",
         "phpunit/phpunit": "^7",
