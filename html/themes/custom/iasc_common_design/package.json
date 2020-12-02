@@ -9,7 +9,6 @@
     "autoprefixer": "^8.6.5",
     "browser-sync": "^2.26.12",
     "browserslist": "^4.14.0",
-    "caniuse-lite": "^1.0.30001116",
     "chalk": "^3.0.0",
     "child_process": "^1.0.2",
     "cssnano": "^4.1.8",
