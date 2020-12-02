@@ -84,7 +84,7 @@
         "drupal/token_filter": "^1.2",
         "drupal/twig_tweak": "^2.8",
         "drupal/variationcache": "^1.0",
-        "drupal/viewsreference": "2.0-alpha6",
+        "drupal/viewsreference": "^2.0.0",
         "drupal/webform": "^5.19",
         "drush/drush": "^9.0.0",
         "npm-asset/select2": "^4.0",
