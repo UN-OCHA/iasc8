@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: services_relevant_hpc_stage
-name: 'Relevant HPC Stage'
+name: 'Stages of HPC'
 url_alias: relevant_hpc_stage
 weight: 0
 min_count: 1
