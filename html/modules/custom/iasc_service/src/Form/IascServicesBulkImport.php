@@ -252,7 +252,7 @@ class IascServicesBulkImport extends FormBase {
       }
       else {
         $data['field_updated'][0] = [
-          'value' => date('Y-m-d\TH:i:s', Date::excelToTimestamp($item['updated'])),
+          'value' => date('d F Y', Date::excelToTimestamp($item['updated'])),
         ];
       }
     }
