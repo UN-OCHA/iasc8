@@ -1,0 +1,14 @@
+uuid: 1c328b71-611a-45d4-82db-e9d9d884a0cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.aap
+  module:
+    - user
+id: user_add_role_action.aap
+label: 'Add the AAP role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: aap

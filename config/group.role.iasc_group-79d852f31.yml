@@ -1,0 +1,17 @@
+uuid: a13e2063-4022-4f04-87b4-67c737de91bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_group
+  enforced:
+    config:
+      - user.role.aap
+id: iasc_group-79d852f31
+label: AAP
+weight: 10
+internal: true
+audience: outsider
+group_type: iasc_group
+permissions_ui: false
+permissions: {  }

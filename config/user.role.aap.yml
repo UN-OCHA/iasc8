@@ -1,0 +1,15 @@
+uuid: b037c9ab-ddda-4f82-83c9-b99ffaab64e1
+langcode: en
+status: true
+dependencies: {  }
+id: aap
+label: AAP
+weight: 10
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'create service content'
+  - 'delete own service content'
+  - 'edit any service content'
+  - 'edit own service content'
+  - 'iasc service bulk import'
