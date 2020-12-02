@@ -35,7 +35,6 @@ function iasc_service_landing_block_facets() {
   return [
     'aap_services',
     'aap_service_coverage_region',
-    'aap_service_coverage_country',
     'services_relevant_hpc_stage',
   ];
 }
