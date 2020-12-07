@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: resourcedocumentsdocumenttypelabel
 theme: iasc_common_design
-region: sidebar_first
-weight: 6
+region: facets
+weight: 2
 provider: null
 plugin: 'facet_block:resource_documents_document_type_label'
 settings:
