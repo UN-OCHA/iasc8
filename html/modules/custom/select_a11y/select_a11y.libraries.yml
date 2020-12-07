@@ -7,6 +7,7 @@ select_a11y.widget:
     - core/jquery
     - core/drupal
     - core/jquery.once
+    - select_a11y/custom-event-polyfill
   css:
     theme:
       css/style.css: {}
@@ -20,6 +21,11 @@ select_a11y_facets.widget:
     - core/jquery
     - core/drupal
     - core/jquery.once
+    - select_a11y/custom-event-polyfill
   css:
     theme:
       css/style.css: {}
+
+custom-event-polyfill:
+  js:
+    js/custom-event-polyfill.js: { attributes: { nomodule: true } }
