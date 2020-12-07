@@ -7,9 +7,9 @@ select_a11y.widget:
     - core/jquery
     - core/drupal
     - core/jquery.once
-#  css:
-#    theme:
-#      css/style.css: {}
+  css:
+    theme:
+      css/style.css: {}
 
 select_a11y_facets.widget:
   version: VERSION
@@ -20,6 +20,6 @@ select_a11y_facets.widget:
     - core/jquery
     - core/drupal
     - core/jquery.once
-#  css:
-#    theme:
-#      css/style.css: {}
+  css:
+    theme:
+      css/style.css: {}
