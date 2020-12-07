@@ -1,7 +1,7 @@
 global-styling:
   js:
     js/login_destination.js: {}
-    js/region_num_childs.js: {}
+#    js/region_num_childs.js: {}
   css:
     theme:
       css/styles.css: {}

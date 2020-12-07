@@ -93,3 +93,7 @@ main.cd-container aside:empty {
     margin-bottom: 1rem;
   }
 }
+
+.region-sidebar-first:empty {
+  display: none;
+}
