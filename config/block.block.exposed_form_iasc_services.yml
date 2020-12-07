@@ -11,7 +11,7 @@ dependencies:
     - iasc_common_design
 id: exposed_form_iasc_services
 theme: iasc_common_design
-region: sidebar_first
+region: facets
 weight: -22
 provider: null
 plugin: 'views_exposed_filter_block:iasc_services-page_1'
