@@ -18,7 +18,7 @@
     <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(group_layout_classes) }}>
 
       {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.sidebar_first }}{{ page.facets }}</aside>
+        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>
       {% endif %}
 
       <div class="cd-layout-content">
