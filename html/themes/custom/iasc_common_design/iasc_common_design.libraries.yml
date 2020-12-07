@@ -51,14 +51,7 @@ select2:
     theme:
       /libraries/select2/dist/css/select2.css: {}
 
-select_a11y_facets:
-  js:
-    /modules/custom/select_a11y_facets/js/select-a11y.min.js: {}
-    /modules/custom/select_a11y_facets/js/main.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/jquery.once
+cd-select-a11y:
   css:
     theme:
-      /modules/custom/select_a11y_facets/css/style.css: {}
+      components/cd-select-a11y/cd-select-a11y.css: {}

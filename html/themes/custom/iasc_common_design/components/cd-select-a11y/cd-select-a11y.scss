@@ -1,3 +1,5 @@
+@import 'sass/cd/cd-variables';
+
 // select-a11y
 // ==========================================================
 /* if you use Scampi (https://gitlab.com/pidila/scampi),
@@ -158,7 +160,7 @@ $a11y-suggestion-border:      $gray-5 !default;
   }
 
   .a11y-suggestion {
-    padding: 0 (8em/16) 0 (26em/16);
+    padding: 0 0.5rem;
     color: $a11y-suggestion-color;
     cursor: pointer;
     text-align: left;
@@ -222,6 +224,11 @@ $a11y-suggestion-border:      $gray-5 !default;
       }
     }
   }
+}
+
+.btn,
+.btn {
+  font-size: 1rem;
 }
 
 .btn:focus,
