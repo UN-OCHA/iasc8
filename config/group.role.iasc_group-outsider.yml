@@ -13,3 +13,8 @@ group_type: iasc_group
 permissions_ui: true
 permissions:
   - 'view group'
+  - 'view group_node:announcement entity'
+  - 'view group_node:oa_event entity'
+  - 'view group_node:oa_section entity'
+  - 'view group_node:oa_wiki_page entity'
+  - 'view group_node:oa_worktracker_task entity'
