@@ -46,7 +46,7 @@
 {%
   set layout_classes = [
   'cd-container',
-  page.sidebar_first|render|striptags|trim or page.facets and not page.sidebar_second|render|striptags|trim ? 'cd-layout-with-region-sidebar-first cd-layout-with-sidebar-first',
+  page.sidebar_first|render|striptags|trim or page.facets|render|striptags|trim and not page.sidebar_second|render|striptags|trim ? 'cd-layout-with-region-sidebar-first cd-layout-with-sidebar-first',
   page.sidebar_second|render|striptags|trim and not page.sidebar_first|render|striptags|trim ? 'cd-layout-with-sidebar-second',
   page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim ? 'cd-layout-with-sidebar-both',
   node.getType == 'oa_event' ? 'cd-layout-with-sidebar',
@@ -103,7 +103,7 @@
     {# Link to skip to the main content is in html.html.twig #}
     <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
-      {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
+      {% if (page.sidebar_first|render|striptags|trim) or page.facets|render|striptags|trim %}
         <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>
       {% endif %}
 
