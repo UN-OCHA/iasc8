@@ -97,3 +97,10 @@ main.cd-container aside:empty {
 .region-sidebar-first:empty {
   display: none;
 }
+
+.region-facets + .region-sidebar-first {
+  margin-top: 2rem;
+  @include tablet {
+    margin-top: 1rem;
+  }
+}
