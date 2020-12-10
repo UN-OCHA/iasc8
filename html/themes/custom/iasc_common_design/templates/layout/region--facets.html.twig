@@ -15,7 +15,8 @@
 {%
   set classes = [
   'region',
-  'region-' ~ region|clean_class
+  'region-' ~ region|clean_class,
+  'cd-filter'
 ]
 %}
 
@@ -23,17 +24,14 @@
 {{ attach_library('common_design/cd-filter') }}
 
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-      <div {{ attributes
-        .setAttribute('id', 'cd-filter')
-        .setAttribute('class', 'cd-filter')
-        .setAttribute('data-cd-toggable','Modify your search'|t)
-        .setAttribute('data-cd-icon', 'arrow-down')
-        .setAttribute('data-cd-component', 'cd-filter')
-        .setAttribute('data-cd-toggable-keep', 'true')
-      }}>
-        {{ content }}
-      </div>
+  <div{{ attributes
+    .setAttribute('id', 'cd-filter')
+    .setAttribute('data-cd-toggable','Modify your search'|t)
+    .setAttribute('data-cd-icon', 'arrow-down')
+    .setAttribute('data-cd-component', 'cd-filter')
+    .setAttribute('data-cd-toggable-keep', 'true')
+    .addClass(classes)
+  }}>
+    {{ content }}
   </div>
-
 {% endif %}
