@@ -47,7 +47,8 @@
   ]
 %}
 
-{{ attach_library('iasc_common_design/select2') }}
+{{ attach_library('select_a11y/select_a11y.widget') }}
+{{ attach_library('iasc_common_design/select_a11y_facets') }}
 
 {% if (facets) %}
   {% block paragraph %}
@@ -57,7 +58,7 @@
           {% for facet in facets %}
             <div class="cd-form__group">
               <label for="{{ facet.name }}">{{ facet.label }}</label>
-              <select class="{{ facet.name }}" name="{{ facet.name }}[]" multiple id="{{ facet.name }}">
+              <select class="{{ facet.name }} select-a11y-widget" name="{{ facet.name }}[]" multiple id="{{ facet.name }}" data-select-a11y-config="{'multiple':true,'placeholder':{'id':','text':'Select'}}">
                 {% for option in facet.options %}
                   <option value="{{ option.key }}">{{ option.label }}</option>
                 {% endfor %}

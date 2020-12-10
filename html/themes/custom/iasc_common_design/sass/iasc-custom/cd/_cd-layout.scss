@@ -93,3 +93,17 @@ main.cd-container aside:empty {
     margin-bottom: 1rem;
   }
 }
+
+.region-sidebar-first:empty,
+.region-facets:empty,
+.region[data-num-childs="0"] {
+  display: none;
+}
+
+.region-facets + .region-sidebar-first {
+  margin-top: 2rem;
+
+  @include desktop {
+    margin-top: 1rem;
+  }
+}

@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: productssummary
 theme: iasc_common_design
-region: sidebar_first
-weight: -5
+region: facets
+weight: -6
 provider: null
 plugin: 'facets_summary_block:products_summary'
 settings:

@@ -1,0 +1,7 @@
+name: Select A11y
+type: module
+description: Provides a multiple select widget.
+package: Search
+core_version_requirement: ^8.8 || ^9
+dependencies:
+- facets:facets (>=8.x-1.5)
