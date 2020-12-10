@@ -149,6 +149,10 @@
   &[data-cd-hidden="false"] {
     background: $cd-light-grey;
   }
+
+  &:empty {
+    display: none;
+  }
 }
 
 .cd-filter__btn {
@@ -201,9 +205,10 @@
 
 .cd-filter[data-cd-toggable] {
   // When there is only one block, do not collapse on mobile.
-  //&[data-num-childs="1"] {
-  //  --dropdown: false;
-  //}
+  &[data-num-childs="0"],
+  &[data-num-childs="1"] {
+    --dropdown: false;
+  }
 
   @include desktop {
     --dropdown: false;

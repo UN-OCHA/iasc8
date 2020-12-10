@@ -94,13 +94,16 @@ main.cd-container aside:empty {
   }
 }
 
-.region-sidebar-first:empty {
+.region-sidebar-first:empty,
+.region-facets:empty,
+.region[data-num-childs="0"] {
   display: none;
 }
 
 .region-facets + .region-sidebar-first {
   margin-top: 2rem;
-  @include tablet {
+
+  @include desktop {
     margin-top: 1rem;
   }
 }
