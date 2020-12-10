@@ -160,7 +160,7 @@ $a11y-suggestion-border:      $gray-5 !default;
   }
 
   .a11y-suggestion {
-    padding: 0 0.5rem;
+    padding: 0 (8em/16) 0 (26em/16);
     color: $a11y-suggestion-color;
     cursor: pointer;
     text-align: left;
