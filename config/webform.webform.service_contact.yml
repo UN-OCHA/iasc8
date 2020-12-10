@@ -12,7 +12,7 @@ id: service_contact
 title: 'Service contact'
 description: 'Request contact info of a service'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#size': 22\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#size': 22\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': Organization\n  '#size': 22\n  '#required': true\nreason:\n  '#type': textarea\n  '#title': Reason\n  '#size': 15\n  '#required': true\nto:\n  '#type': value\n  '#title': to"
+elements: "name:\n  '#type': textfield\n  '#title': 'Your name'\n  '#size': 22\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your email'\n  '#size': 22\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Your organization'\n  '#size': 22\n  '#required': true\nreason:\n  '#type': textarea\n  '#title': 'Your reason'\n  '#size': 15\n  '#required': true\nto:\n  '#type': value\n  '#title': to"
 css: ''
 javascript: ''
 settings:
@@ -191,6 +191,7 @@ handlers:
   email_focal_point:
     id: email
     label: 'Focal point'
+    notes: ''
     handler_id: email_focal_point
     status: true
     conditions: {  }
