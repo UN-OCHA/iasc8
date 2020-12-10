@@ -129,8 +129,8 @@ function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variabl
 /**
  * Implements template_preprocess_region().
  */
-function iasc_common_design_preprocess_region(&$variables) {
-
+//function iasc_common_design_preprocess_region(&$variables) {
+//
 //  $variables['has_filter'] = FALSE;
 //
 //  if (isset($variables['region']) && $variables['region'] == 'facets') {
@@ -145,7 +145,7 @@ function iasc_common_design_preprocess_region(&$variables) {
 //  // Create the $content variable that templates expect.
 //  $variables['content'] = $variables['elements']['#children'];
 //  $variables['region'] = $variables['elements']['#region'];
-}
+//}
 
 
 /**
