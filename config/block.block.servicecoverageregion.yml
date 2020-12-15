@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: servicecoverageregion
 theme: iasc_common_design
-region: sidebar_first
-weight: -1
+region: facets
+weight: -19
 provider: null
 plugin: 'facet_block:aap_service_coverage_region'
 settings:

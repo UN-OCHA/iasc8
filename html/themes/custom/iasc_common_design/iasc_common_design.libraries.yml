@@ -50,3 +50,8 @@ select2:
   css:
     theme:
       /libraries/select2/dist/css/select2.css: {}
+
+cd-select-a11y:
+  css:
+    theme:
+      components/cd-select-a11y/cd-select-a11y.css: {}

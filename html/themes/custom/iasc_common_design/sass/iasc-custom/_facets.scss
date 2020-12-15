@@ -140,10 +140,18 @@
 }
 
 .cd-filter {
-  padding: 2rem 0 0;
+  padding: 1rem 0.5rem;
 
   @include desktop {
     padding: 0;
+  }
+
+  &[data-cd-hidden="false"] {
+    background: $cd-light-grey;
+  }
+
+  &:empty {
+    display: none;
   }
 }
 
@@ -197,6 +205,7 @@
 
 .cd-filter[data-cd-toggable] {
   // When there is only one block, do not collapse on mobile.
+  &[data-num-childs="0"],
   &[data-num-childs="1"] {
     --dropdown: false;
   }

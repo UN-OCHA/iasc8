@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: changed
 theme: iasc_common_design
-region: sidebar_first
-weight: -10
+region: facets
+weight: -7
 provider: null
 plugin: 'facet_block:changed'
 settings:

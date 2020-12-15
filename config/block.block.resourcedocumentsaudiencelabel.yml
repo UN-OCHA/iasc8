@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: resourcedocumentsaudiencelabel
 theme: iasc_common_design
-region: sidebar_first
-weight: 4
+region: facets
+weight: 0
 provider: null
 plugin: 'facet_block:resource_documents_audience_label'
 settings:

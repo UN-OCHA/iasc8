@@ -11,8 +11,8 @@ dependencies:
     - iasc_common_design
 id: resourcesauthoredon
 theme: iasc_common_design
-region: sidebar_first
-weight: -16
+region: facets
+weight: -14
 provider: null
 plugin: 'facet_block:resources_authored_on'
 settings:
