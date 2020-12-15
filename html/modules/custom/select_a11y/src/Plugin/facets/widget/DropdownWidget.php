@@ -45,7 +45,7 @@ class DropdownWidget extends WidgetPluginBase {
 
     $build['#attributes']['class'][] = 'js-facets-widget';
     $build['#attached']['drupalSettings']['facets']['dropdown_widget'][$facet->id()]['facet-default-option-label'] = $this->getConfiguration()['default_option_label'];
-    $build['#attached']['library'][] = 'select_a11y_facets/select_a11y_facets.widget';
+    $build['#attached']['library'][] = 'select_a11y/select_a11y_facets.widget';
     $build['#attached']['library'][] = 'facets/drupal.facets.general';
     $build['#theme'] = 'select_a11y_facet__' . $facet->getWidget()['type'] . '__' . $facet->id();
 
