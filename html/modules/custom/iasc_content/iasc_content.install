@@ -7,6 +7,7 @@
 
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\file\Entity\File;
 use Drupal\group\Entity\Group;
 use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
@@ -948,4 +949,54 @@ function iasc_content_update_8027() {
     $group = entity_load('group', $gid);
     \Drupal::service('pathauto.generator')->updateEntityAlias($group, 'bulkupdate');
   }
+}
+
+/**
+ * Make media files private.
+ */
+function iasc_content_update_8028() {
+  if (!file_exists('private://diff.txt')) {
+    \Drupal::logger('iasc_content')->error('Diff file is missing');
+    return;
+  }
+
+  $handle = fopen('private://diff.txt', 'r');
+  while ($line = fgets($handle, 4096)) {
+    $line = trim($line);
+    $destination = 'private://' . $line;
+    $mime_type = \Drupal::service('file.mime_type.guesser')->guess($destination);
+
+    // Check if file exists on disk.
+    if (!file_exists($destination)) {
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('File not found: %s', $line)
+      );
+      continue;
+    }
+
+    // Check if file does not exists in the database.
+    $files = \Drupal::entityTypeManager()
+      ->getStorage('file')
+      ->loadByProperties(['uri' => $destination]);
+    if (!empty($files)) {
+      \Drupal::logger('iasc_content')->notice(
+        sprintf('File exists in database: %s', $line)
+      );
+      continue;
+    }
+
+    $file = File::create();
+    $file->setOwnerId(1);
+    $file->setMimeType($mime_type);
+    $file->setFileName($line);
+    $file->setFileUri($destination);
+    $file->setPermanent();
+    $file->save();
+
+    \Drupal::logger('iasc_content')->notice(
+      sprintf('File added to database: %s', $line)
+    );
+  }
+
+  fclose($handle);
 }
