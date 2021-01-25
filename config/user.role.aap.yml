@@ -8,8 +8,13 @@ weight: 10
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'create image media'
+  - 'create media'
   - 'create service content'
+  - 'delete media'
   - 'delete own service content'
   - 'edit any service content'
+  - 'edit own image media'
   - 'edit own service content'
   - 'iasc service bulk import'
+  - 'update media'
