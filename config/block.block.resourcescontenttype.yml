@@ -12,7 +12,7 @@ dependencies:
 id: resourcescontenttype
 theme: iasc_common_design
 region: facets
-weight: -13
+weight: -14
 provider: null
 plugin: 'facet_block:resources_content_type'
 settings:

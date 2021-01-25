@@ -12,7 +12,7 @@ dependencies:
 id: resourceaudiencelabel
 theme: iasc_common_design
 region: facets
-weight: -15
+weight: -16
 provider: null
 plugin: 'facet_block:resource_audience_label'
 settings:

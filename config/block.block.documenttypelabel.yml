@@ -12,7 +12,7 @@ dependencies:
 id: documenttypelabel
 theme: iasc_common_design
 region: facets
-weight: -9
+weight: -10
 provider: null
 plugin: 'facet_block:document_type_label'
 settings:
