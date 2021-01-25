@@ -29,15 +29,3 @@ conditions:
     negate: 0
     context_mapping:
       group: '@group.group_route_context:group'
-  'entity_bundle:group':
-    id: 'entity_bundle:group'
-    bundles: {  }
-    negate: false
-    context_mapping:
-      group: '@group.group_route_context:group'
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles: {  }
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
