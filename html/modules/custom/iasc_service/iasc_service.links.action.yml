@@ -5,3 +5,11 @@ iasc_service.iasc_service_create_template:
   appears_on:
     - iasc_service.iasc_service_bulk_import
   weight: 15
+
+iasc_service.iasc_service_export:
+  title: Export data
+  description: Create xlsx file with data
+  route_name: iasc_service.iasc_service_export
+  appears_on:
+    - iasc_service.iasc_service_bulk_import
+  weight: 20
