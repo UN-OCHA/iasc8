@@ -12,7 +12,7 @@ dependencies:
 id: servicecoveragecountry
 theme: iasc_common_design
 region: facets
-weight: -18
+weight: -19
 provider: null
 plugin: 'facet_block:aap_service_coverage_country'
 settings:

@@ -1,26 +1,26 @@
-uuid: 0cd3f7e7-b964-414d-b936-9d791dbfc1aa
+uuid: 8dab2eb3-7641-4f17-85aa-a4ba087552b1
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.iasc_services
+    - facets.facet.aap_type_of_entity
   module:
+    - facets
     - system
-    - views
   theme:
     - iasc_common_design
-id: exposed_form_iasc_services
+id: typeofentity
 theme: iasc_common_design
 region: facets
-weight: -23
+weight: 7
 provider: null
-plugin: 'views_exposed_filter_block:iasc_services-page_1'
+plugin: 'facet_block:aap_type_of_entity'
 settings:
-  id: 'views_exposed_filter_block:iasc_services-page_1'
-  label: ''
-  provider: views
+  id: 'facet_block:aap_type_of_entity'
+  label: Organisation/Entity
+  provider: facets
   label_display: visible
-  views_label: 'Looking for something specific?'
+  block_id: typeofentity
 visibility:
   request_path:
     id: request_path
