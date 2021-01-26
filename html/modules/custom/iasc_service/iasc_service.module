@@ -33,10 +33,10 @@ function iasc_service_preprocess_paragraph(&$vars) {
  */
 function iasc_service_landing_block_facets() {
   return [
-    'aap_services',
-    'aap_service_coverage_region',
-    'services_relevant_hpc_stage',
-    'aap_agency_initiative_or_group',
+    'aap_services' => 'label',
+    'aap_service_coverage_region' => 'label',
+    'services_relevant_hpc_stage' => 'no-sort',
+    'aap_agency_initiative_or_group' => 'label',
   ];
 }
 
@@ -55,7 +55,7 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
   $server = $index->getServerInstance();
   if ($server->supportsFeature('search_api_facets')) {
     $facet_options = [];
-    foreach ($active_facets as $facet_name) {
+    foreach ($active_facets as $facet_name => $sort_by) {
       $facet = Facet::load($facet_name);
       if ($facet) {
         $field_name = $facet->getFieldIdentifier();
@@ -80,29 +80,42 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
   $results = $query->execute();
   $facets = $results->getExtraData('search_api_facets', []);
 
-  foreach ($facets as $field_name => $facet_values) {
-    $tids = [];
-    foreach ($facet_values as $facet) {
-      $id = trim($facet['filter'], '"');
-      $tids[] = $id;
-    }
+  foreach ($active_facets as $facet_name => $sort_by) {
+    $facet = Facet::load($facet_name);
+    if ($facet) {
+      $field_name = $facet->getFieldIdentifier();
+      $facet_values = $facets[$field_name];
 
-    $terms = Term::loadMultiple($tids);
-
-    $options = [];
-    foreach ($facet_values as $facet) {
-      $id = trim($facet['filter'], '"');
-      if (isset($terms[$id])) {
-        $options[] = [
-          'key' => $lookup[$field_name]['key'] . ':' . $id,
-          'label' => $terms[$id]->getName() . ' (' . $facet['count'] . ')',
-        ];
+      $tids = [];
+      foreach ($facet_values as $facet_value) {
+        $id = trim($facet_value['filter'], '"');
+        $tids[] = $id;
       }
-    }
 
-    $vars['facets'][$field_name]['label'] = $lookup[$field_name]['label'];
-    $vars['facets'][$field_name]['name'] = $lookup[$field_name]['name'];
-    $vars['facets'][$field_name]['options'] = $options;
+      $terms = Term::loadMultiple($tids);
+
+      $options = [];
+      foreach ($facet_values as $facet_value) {
+        $id = trim($facet_value['filter'], '"');
+        if (isset($terms[$id])) {
+          $options[] = [
+            'key' => $lookup[$field_name]['key'] . ':' . $id,
+            'label' => $terms[$id]->getName() . ' (' . $facet_value['count'] . ')',
+          ];
+        }
+      }
+
+      // Sort options.
+      if ($sort_by === 'label') {
+        uasort($options, function ($a, $b) {
+          return strnatcasecmp($a['label'], $b['label']);
+        });
+      }
+
+      $vars['facets'][$field_name]['label'] = $lookup[$field_name]['label'];
+      $vars['facets'][$field_name]['name'] = $lookup[$field_name]['name'];
+      $vars['facets'][$field_name]['options'] = $options;
+    }
   }
 }
 
