@@ -36,7 +36,7 @@ function iasc_service_landing_block_facets() {
     'aap_services',
     'aap_service_coverage_region',
     'services_relevant_hpc_stage',
-    'aap_type_of_entity',
+    'aap_agency_initiative_or_group',
   ];
 }
 

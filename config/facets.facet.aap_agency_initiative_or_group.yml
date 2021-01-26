@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: aap_agency_initiative_or_group
-name: 'Agency, Initiative or Group'
+name: Organisation/Entity
 url_alias: aap_agency_initiative_or_group
 weight: 0
 min_count: 1
