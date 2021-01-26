@@ -8,7 +8,6 @@ use Drupal\Core\File\FileSystem;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Style\Protection;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx as XlsxWriter;
 use Symfony\Component\HttpFoundation\Response;
 
