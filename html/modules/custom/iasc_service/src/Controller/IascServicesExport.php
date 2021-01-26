@@ -8,7 +8,6 @@ use Drupal\Core\File\FileSystem;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Style\Protection;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx as XlsxWriter;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -180,16 +179,6 @@ class IascServicesExport extends ControllerBase {
       $html = str_replace('</li></ul>', '', $html);
       $worksheet->setCellValue('S' . $row, $html);
     }
-
-    // Protect headers.
-    $spreadsheet->getDefaultStyle()->getProtection()->setLocked(TRUE);
-    $worksheet = $spreadsheet->getSheetByName('Services');
-    $worksheet->getProtection()
-      ->setSheet(TRUE)
-      ->setInsertColumns(TRUE)
-      ->setInsertRows(TRUE)
-      ->setFormatCells(TRUE);
-    $worksheet->getStyle('A2:X999')->getProtection()->setLocked(Protection::PROTECTION_UNPROTECTED);
 
     // Freeze.
     $worksheet = $spreadsheet->getSheetByName('Services');
