@@ -181,16 +181,6 @@ class IascServicesExport extends ControllerBase {
       $worksheet->setCellValue('S' . $row, $html);
     }
 
-    // Protect headers.
-    $spreadsheet->getDefaultStyle()->getProtection()->setLocked(TRUE);
-    $worksheet = $spreadsheet->getSheetByName('Services');
-    $worksheet->getProtection()
-      ->setSheet(TRUE)
-      ->setInsertColumns(TRUE)
-      ->setInsertRows(TRUE)
-      ->setFormatCells(TRUE);
-    $worksheet->getStyle('A2:X999')->getProtection()->setLocked(Protection::PROTECTION_UNPROTECTED);
-
     // Freeze.
     $worksheet = $spreadsheet->getSheetByName('Services');
     $worksheet->freezePane('A2');
