@@ -12,7 +12,7 @@ dependencies:
 id: resourcesproductcategorylabel
 theme: iasc_common_design
 region: facets
-weight: -11
+weight: -12
 provider: null
 plugin: 'facet_block:resources_product_category_label'
 settings:

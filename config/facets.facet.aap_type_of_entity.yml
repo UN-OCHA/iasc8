@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: aap_type_of_entity
-name: 'Type of Entity'
+name: 'Type of entity'
 url_alias: aap_type_of_entity
 weight: 0
 min_count: 1

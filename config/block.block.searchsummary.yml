@@ -12,7 +12,7 @@ dependencies:
 id: searchsummary
 theme: iasc_common_design
 region: facets
-weight: 4
+weight: 3
 provider: null
 plugin: 'facets_summary_block:search_summary'
 settings:

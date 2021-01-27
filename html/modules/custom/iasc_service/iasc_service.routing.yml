@@ -20,4 +20,11 @@ iasc_service.iasc_service_search:
     _permission: 'access content'
   options:
     no_cache: 'TRUE'
-
+iasc_service.iasc_service_export:
+  path: '/rg2/service-directory/export'
+  defaults:
+    _controller: 'iasc_service.iasc_service_export_controller:export'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
