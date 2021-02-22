@@ -45,6 +45,8 @@
   'cd-layout-with-section-sidebar',
   view_mode ? 'group--view-mode-' ~ view_mode|clean_class
 ]
+%}{%
+  set local_tasks = local_tasks ? local_tasks|render
 %}
 <article{{ attributes.addClass(classes) }}>
 
@@ -67,7 +69,7 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <section class="cd-layout-two-col">
+      <div class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
@@ -92,7 +94,7 @@
           {{ content.field_sidebar }}
         </aside>
 
-      </section>
+      </div>
     {% endblock %}
 
     {% if content.field_footer|render %}

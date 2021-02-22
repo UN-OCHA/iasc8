@@ -84,7 +84,6 @@
 
 {% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
-{{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
   {% if display_submitted %}
@@ -100,7 +99,7 @@
     {{ content|without('body', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      <section class="cd-layout-two-col">
+      <div class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
           {{ content.body }}
@@ -109,7 +108,7 @@
 
         <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_sidebar }}</aside>
 
-      </section>
+      </div>
     {% endblock %}
 
 

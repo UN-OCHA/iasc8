@@ -1,7 +1,7 @@
 {% embed 'node--full.html.twig' %}
 
   {% block section %}
-    <section class="cd-layout-two-col">
+    <div class="cd-layout-two-col">
 
       <div class="cd-layout-main-content">
         {{ content|without('field_global_focal_point', 'field_updated', 'field_agency_initiative_or_group', 'field_type_of_entity') }}
@@ -30,7 +30,7 @@
         {% endif %}
       </aside>
 
-    </section>
+    </div>
   {% endblock %}
 
 {% endembed %}

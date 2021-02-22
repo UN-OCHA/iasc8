@@ -84,7 +84,6 @@
 
 {% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
-{{ attach_library('classy/node') }}
 {{ attach_library('common_design/cd-table') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -102,6 +101,8 @@
   {% endif %}
   {{ title_suffix }}
 
+  {{ local_tasks }}
+
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
@@ -114,7 +115,7 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <section class="cd-layout-two-col">
+      <div class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_section', 'field_category', 'og_group_ref', 'field_contact') }}
@@ -129,7 +130,7 @@
           {{ content.field_sidebar }}
         </aside>
 
-      </section>
+      </div>
     {% endblock %}
 
     {% if content.field_footer|render %}

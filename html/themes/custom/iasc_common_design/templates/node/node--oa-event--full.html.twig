@@ -81,7 +81,6 @@
     'cd-layout-with-section-sidebar',
   ]
 %}
-{{ attach_library('classy/node') }}
 {{ attach_library('common_design/cd-alert') }}
 {% set dialIn = node.field_dial_in_meeting.0.value %}
 
@@ -114,14 +113,14 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-    <section class="cd-layout-two-col">
+    <div class="cd-layout-two-col">
 
       <div class="cd-layout-main-content">
 
-        <div class="cd-teaser__date">
+        <div class="cd-teaser__date clearfix">
           {{ content.field_oa_date }}
 
-          <div class="cd-date-time">{{ event_time.output }}</div>
+          {{ event_time.output }}
 
           {% if content.field_oa_date %}
             {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
@@ -138,21 +137,23 @@
         </div>
 
         {% if not logged_in %}
-            <div class="cd-alert cd-alert--attn">
-              <svg class="cd-icon cd-icon--alert" width="16" height="16" aria-hidden="true" focusable="false">
-                <use xlink:href="#cd-icon--alert"></use>
+          <div class="cd-alert">
+            <div aria-live="polite">
+              <svg class="cd-icon cd-icon--about" aria-hidden="true" focusable="false" width="16" height="16">
+                <use xlink:href="#cd-icon--about"></use>
               </svg>
-              <div class="cd-alert__message">
+              <div class="cd-alert__container cd-max-width [ cd-flow ]">
                 <div class="cd-alert__title">
                   {% trans %}
                     Please log in for full Document listing.
                   {% endtrans %}
                 </div>
-                <p>
-                  {% trans %}Meetings often reference non-public documents. Please&nbsp{% endtrans %}<a href="/user/login/hid?destination={{ path('<current>') }}">{% trans %}log in</a> to see all available content.{% endtrans %}
-                </p>
+                <div class="cd-alert__message">
+                  <p>{% trans %}Meetings often reference non-public documents. Please&nbsp{% endtrans %}<a href="/user/login/hid?destination={{ path('<current>') }}">{% trans %}log in</a> to see all available content.{% endtrans %}</p>
+                </div>
               </div>
             </div>
+          </div>
         {% endif %}
 
         {{ content|without('field_oa_date', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_additional_locations', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes', 'field_dial_in_meeting', 'field_info_private') }}
@@ -160,12 +161,19 @@
 
         {% if logged_in %}
           {% if dialIn or content.field_info_private|render %}
-            <div class="cd-alert cd-message">
-              <div class="cd-alert__message">
-                {% if dialIn %}
-                  {{ content.field_dial_in_meeting }}
-                {% endif %}
-                {{ content.field_info_private }}
+            <div class="cd-alert">
+              <div aria-live="polite">
+                <svg class="cd-icon cd-icon--about" aria-hidden="true" focusable="false" width="16" height="16">
+                  <use xlink:href="#cd-icon--about"></use>
+                </svg>
+                <div class="cd-alert__container cd-max-width [ cd-flow ]">
+                  <div class="cd-alert__message">
+                    {% if dialIn %}
+                      {{ content.field_dial_in_meeting }}
+                    {% endif %}
+                    {{ content.field_info_private }}
+                  </div>
+                </div>
               </div>
             </div>
           {% endif %}
@@ -191,7 +199,7 @@
         {{ content.field_sidebar }}
       </aside>
 
-    </section>
+    </div>
     {% endblock %}
 
     {% if content.field_footer|render %}

@@ -1,7 +1,7 @@
 {% embed 'node--full.html.twig' %}
 
   {% block section %}
-    <section class="cd-layout-two-col">
+    <div class="cd-layout-two-col">
 
       {% if user.hasPermission('edit any contact content') %}
       <div class="cd-layout-main-content">
@@ -20,7 +20,7 @@
       </div>
       {% endif %}
 
-    </section>
+    </div>
   {% endblock %}
 
 {% endembed %}

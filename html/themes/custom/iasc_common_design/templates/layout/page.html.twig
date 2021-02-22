@@ -97,7 +97,7 @@
     {# Link to skip to the main content is in html.html.twig #}
     <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
-      {% if page.page_title|render %}
+      {% if page.page_title %}
         {% block page_title %}
           <div class="cd-page-title">
             {{ page.page_title }}
@@ -107,7 +107,6 @@
 
       <div class="cd-layout-content-wrapper">
 
-        sidebar
 {#        {% if (page.sidebar_first|render|striptags|trim) or page.facets|render|striptags|trim %}#}
 {#          <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>#}
 {#        {% endif %}#}
