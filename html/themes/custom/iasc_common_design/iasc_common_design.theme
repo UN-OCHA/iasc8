@@ -69,16 +69,40 @@ function iasc_common_design_preprocess_node(&$variables) {
       $variables['event_time']['output'] = $variables['event_time']['start'] . ' to ' . $variables['event_time']['end'];
     }
   }
+
+  $node = $variables['node'];
+
+  // Prepare the title and local tasks so we have better control over where
+  // to display them for content in full node.
+  $view_mode = $variables['view_mode'] ?? '';
+  if ($view_mode === 'full') {
+    $variables['title'] = iasc_common_design_get_block_render_array('page_title_block');
+    $variables['local_tasks'] = iasc_common_design_get_block_render_array('local_tasks_block', FALSE);
+  }
 }
 
 /**
  * Implements template_preprocess_page().
  */
-function disabled_iasc_common_design_preprocess_page(&$variables) {
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if ($node->getType() == 'page') {
-      $variables['has_hero_image'] = TRUE;
-      $variables['hero_image'] = $node->get('field_featured_image')->view();
+function iasc_common_design_preprocess_page(&$variables) {
+//  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+//    if ($node->getType() == 'page') {
+//      $variables['has_hero_image'] = TRUE;
+//      $variables['hero_image'] = $node->get('field_featured_image')->view();
+//    }
+//  }
+  if (isset($variables['node'])) {
+    $rendered = &drupal_static('iasc_common_design_rendered_blocks');
+
+    // If the block has already been rendered (from the page title block) then
+    // we remove the default page title block.
+    if (isset($rendered['page_title_block'])) {
+      unset($variables['page']['content']['iasc_common_design_page_title']);
+    }
+
+    // Same for the local tasks block.
+    if (isset($rendered['local_tasks_block'])) {
+      unset($variables['page']['content']['iasc_common_design_local_tasks']);
     }
   }
 }
@@ -161,14 +185,14 @@ function iasc_common_design_preprocess_block(&$variables) {
 }
 
 
-function iasc_common_design_preprocess_page_title(&$vars) {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node) {
-    if (!($node->getType() == 'panopoly_landing_page')) {
-      $vars['title'] = "";
-    }
-  }
-}
+//function iasc_common_design_preprocess_page_title(&$vars) {
+//  $node = \Drupal::routeMatch()->getParameter('node');
+//  if ($node) {
+//    if (!($node->getType() == 'panopoly_landing_page')) {
+//      $vars['title'] = "";
+//    }
+//  }
+//}
 
 
 /**
@@ -197,4 +221,51 @@ function iasc_common_design_preprocess_select(&$variables) {
     $variables['attributes']['id'] = $new_id;
     $variables['attributes']['aria-labelledby'] = $variables['element']['#attributes']['data-drupal-facet-id'];
   }
+}
+
+/**
+ * Render a block.
+ *
+ * We cache a flag indicating the block has already been redendered and return
+ * an empty array in that case to ensure that the block is displayed only one
+ * on the page.
+ *
+ * @param string $id
+ *   Block ID.
+ * @param bool $translate
+ *   Translate the block or not. This allows to keep some elements of the page
+ *   in the site's default language for example like the local tasks (view, edit
+ *   etc.).
+ *
+ * @return array
+ *   Renderable array of the block. Empty array if this was already called
+ *   before to avoid displaying the block several times.
+ *
+ * @see https://drupal.stackexchange.com/a/171733
+ */
+function iasc_common_design_get_block_render_array($id, $translate = TRUE) {
+  $rendered = &drupal_static('iasc_common_design_rendered_blocks');
+
+  if (!isset($rendered[$id])) {
+    // Prevent rendering the block several times.
+    $rendered[$id] = TRUE;
+
+    // Generate an instance of the plugin block.
+    $block_manager = \Drupal::service('plugin.manager.block');
+    $plugin_block = $block_manager->createInstance($id, []);
+
+    // Skip if there is no block matching the id.
+    if (empty($plugin_block)) {
+      return [];
+    }
+
+    // Check if the block is accessible to the current user.
+    $access = $plugin_block->access(\Drupal::currentUser());
+    // This can be a boolean or an object implementing AccessResultInterface.
+    if ($access === TRUE || ($access instanceof AccessResultInterface && $access->isAllowed())) {
+      return $plugin_block->build();
+    }
+  }
+
+  return [];
 }
