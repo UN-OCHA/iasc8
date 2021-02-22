@@ -45,7 +45,7 @@
     }
 
     .form-text:focus {
-      outline: 2px solid $cd-bright-blue;
+      outline: 2px solid $cd-blue--bright;
     }
 
     .form-actions input[type='submit'] {
@@ -54,7 +54,7 @@
     }
 
     .form-actions input:focus {
-      outline: 2px solid $cd-bright-blue;
+      outline: 2px solid $cd-blue--bright;
     }
 
     label {
@@ -94,7 +94,7 @@
       width: 100%;
 
       &:focus {
-        outline: 2px solid $cd-bright-blue;
+        outline: 2px solid $cd-blue--bright;
       }
     }
 
@@ -145,7 +145,7 @@
     @media (max-width: 1023px) {
       margin-bottom: 1rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid $cd-mid-bluey-grey;
+      border-bottom: 1px solid $cd-blue-grey;
     }
   }
 
@@ -156,4 +156,9 @@
       margin-bottom: 6rem;
     }
   }
+}
+
+.more-link {
+  display: block;
+  text-align: right;
 }

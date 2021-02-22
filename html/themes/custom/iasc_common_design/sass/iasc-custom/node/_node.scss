@@ -26,7 +26,7 @@
   .block,
   .field--type-viewsreference {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid $cd-mid-bluey-grey;
+    border-bottom: 1px solid $cd-blue-grey;
     margin-bottom: 3rem;
   }
 
@@ -100,7 +100,7 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
 
 // Contact block on Service node.
 .field--name-field-global-focal-point {
-  background: $cd-light-bluey-grey;
+  background: $cd-blue-grey--light;
   padding: 1rem;
 }
 
@@ -115,7 +115,7 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
     margin-bottom: 2rem;
   }
 
-  &.node--view-mode-teaser .cd-article-teaser__description {
+  &.node--view-mode-teaser .cd-teaser__description {
     padding-top: 1rem;
   }
 

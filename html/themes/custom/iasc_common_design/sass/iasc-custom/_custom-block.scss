@@ -26,7 +26,7 @@
       text-decoration: none;
       color: $cd-white;
       border: 1px solid $cd-ocha-blue;
-      padding: $cd-base-unit * 1.5;
+      padding: 1.5rem;
       transition: background 0.3s ease;
       width: 100%;
 
@@ -57,7 +57,7 @@
       }
 
       &:focus {
-        outline: 3px solid $cd-bright-blue;
+        outline: 3px solid $cd-blue--bright;
       }
     }
   }

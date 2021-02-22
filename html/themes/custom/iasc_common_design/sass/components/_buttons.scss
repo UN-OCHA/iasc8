@@ -5,7 +5,7 @@ button,
 input[type='submit'] {
   -webkit-appearance: none;
   @include font-size($cd-font-size-small);
-  color: $cd-dark-grey;
+  color: $cd-grey--dark;
   background: none;
   border: 0 none;
   border-radius: 0;
@@ -22,7 +22,7 @@ input[type='submit'] {
   text-decoration: none;
   color: $cd-white;
   border: 1px solid $cd-ocha-blue;
-  padding: $cd-base-unit * 1.5;
+  padding: 1.5rem;
   transition: background 0.3s ease;
 
   &:hover,
@@ -32,7 +32,7 @@ input[type='submit'] {
   }
 
   &:focus {
-    outline: 3px solid $cd-bright-blue;
+    outline: 3px solid $cd-blue--bright;
   }
 }
 

@@ -1,16 +1,16 @@
 .node--type-oa-event {
 
   &.node--view-mode-teaser {
-    .cd-article-teaser__image {
+    .cd-teaser__image {
       min-height: 80px; // Height of calendar
       position: relative;
     }
 
-    .cd-date {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+    //.cd-date {
+    //  position: absolute;
+    //  left: 0;
+    //  top: 0;
+    //}
 
     h3 {
       margin-top: 0;

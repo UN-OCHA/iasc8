@@ -66,7 +66,7 @@
 //}
 
 .block-facets-summary {
-  background-color: $cd-light-grey;
+  background-color: $cd-grey--light;
   font-size: 0.8rem;
   padding: 1rem 1rem 0.5rem;
   margin-bottom: 2rem;
@@ -138,91 +138,91 @@
     word-wrap: normal;
   }
 }
-
-.cd-filter {
-  padding: 1rem 0.5rem;
-
-  @include desktop {
-    padding: 0;
-  }
-
-  &[data-cd-hidden="false"] {
-    background: $cd-light-grey;
-  }
-
-  &:empty {
-    display: none;
-  }
-}
-
-.cd-filter__btn {
-  background: $iasc-primary;
-  color: $cd-light-grey;
-  -webkit-appearance: none;
-  border-radius: 0;
-  box-shadow: none;
-  border: 0;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-weight: bold;
-  text-transform: uppercase;
-
-  svg {
-    width: 2rem;
-    height: 2rem;
-    padding: 0 0 0 0.5rem;
-  }
-
-  &:hover,
-  &:focus {
-    background: $iasc-secondary;
-  }
-
-  &:focus {
-    outline: 3px solid $cd-bright-blue;
-  }
-
-  &[aria-expanded] .cd-icon--arrow-down {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  @include tablet {
-    // This is needed for IE11
-    // No support for CSS custom properties means
-    // --dropdown: false; property on nav container is not recognised
-    // so the cd-dropdown.js creates a toggler button on desktop
-    // This hides it when that happens.
-    @media all and (-ms-high-contrast: none) {
-      display: none;
-    }
-  }
-}
-
-.cd-filter[data-cd-toggable] {
-  // When there is only one block, do not collapse on mobile.
-  &[data-num-childs="0"],
-  &[data-num-childs="1"] {
-    --dropdown: false;
-  }
-
-  @include desktop {
-    --dropdown: false;
-
-    // This is needed for IE11
-    // No support for CSS custom properties means
-    // --dropdown: false; property on the dropdown container is not recognised
-    // so the cd-dropdown.js does not run the updateToggler function
-    // which toggles the data-cd-hidden attribute.
-    // This displays the dropdown regardless of that attribute value.
-    @media all and (-ms-high-contrast: none) {
-      &[data-cd-hidden='true'] {
-        display: block;
-      }
-    }
-  }
-}
+//
+//.cd-filter {
+//  padding: 1rem 0.5rem;
+//
+//  @include desktop {
+//    padding: 0;
+//  }
+//
+//  &[data-cd-hidden="false"] {
+//    background: $cd-grey--light;
+//  }
+//
+//  &:empty {
+//    display: none;
+//  }
+//}
+//
+//.cd-filter__btn {
+//  background: $iasc-primary;
+//  color: $cd-grey--light;
+//  -webkit-appearance: none;
+//  border-radius: 0;
+//  box-shadow: none;
+//  border: 0;
+//  padding: 0.5rem 1rem;
+//  transition: background 0.3s ease;
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//  width: 100%;
+//  font-weight: bold;
+//  text-transform: uppercase;
+//
+//  svg {
+//    width: 2rem;
+//    height: 2rem;
+//    padding: 0 0 0 0.5rem;
+//  }
+//
+//  &:hover,
+//  &:focus {
+//    background: $iasc-secondary;
+//  }
+//
+//  &:focus {
+//    outline: 3px solid $cd-blue--bright;
+//  }
+//
+//  &[aria-expanded] .cd-icon--arrow-down {
+//    width: 2rem;
+//    height: 2rem;
+//  }
+//
+//  @include tablet {
+//    // This is needed for IE11
+//    // No support for CSS custom properties means
+//    // --dropdown: false; property on nav container is not recognised
+//    // so the cd-dropdown.js creates a toggler button on desktop
+//    // This hides it when that happens.
+//    @media all and (-ms-high-contrast: none) {
+//      display: none;
+//    }
+//  }
+//}
+//
+//.cd-filter[data-cd-toggable] {
+//  // When there is only one block, do not collapse on mobile.
+//  &[data-num-childs="0"],
+//  &[data-num-childs="1"] {
+//    --dropdown: false;
+//  }
+//
+//  @include desktop {
+//    --dropdown: false;
+//
+//    // This is needed for IE11
+//    // No support for CSS custom properties means
+//    // --dropdown: false; property on the dropdown container is not recognised
+//    // so the cd-dropdown.js does not run the updateToggler function
+//    // which toggles the data-cd-hidden attribute.
+//    // This displays the dropdown regardless of that attribute value.
+//    @media all and (-ms-high-contrast: none) {
+//      &[data-cd-hidden='true'] {
+//        display: block;
+//      }
+//    }
+//  }
+//}

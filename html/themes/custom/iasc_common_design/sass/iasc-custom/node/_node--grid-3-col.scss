@@ -33,7 +33,7 @@
   //}
 
   footer {
-    background-color: $cd-site-bg-color--dark;
+    background-color: $cd-blue-grey--dark;
     margin-left: -1rem;
     margin-right: -1rem;
     padding: 1rem;
@@ -142,7 +142,7 @@
 
   .cd-grid-3-col .views-row {
     @extend .grid-item;
-    background-color: $cd-site-bg-color;
+    background-color: $cd-blue-grey;
   }
 }
 

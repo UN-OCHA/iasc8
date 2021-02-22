@@ -3,7 +3,7 @@
   display: none;
 }
 
-.cd-page-title {
+.cd-page-title:not(:empty) {
   margin-top: 2rem;
 
   @include tablet {

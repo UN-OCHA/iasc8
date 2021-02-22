@@ -71,28 +71,22 @@ h5 {
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 1.875rem;
-}
+  color: $cd-default-text-color;
+  font-weight: 300;
+  @include font-size($cd-font-size-xxlarge);
 
-h2 {
-  font-weight: 400;
-  font-size: 1.5rem;
-
-  .region-sidebar-first & {
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-
-  &:first-of-type {
-    margin-top: 0;
+  @include desktop {
+    @include font-size($cd-font-size-xlarge);
   }
 }
 
-h3 {
-  font-size: 1.125rem;
+.page-title {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $cd-blue-grey;
+  margin-bottom: 2rem;
 }
 
+h2,
 h4,
 h5 {
   font-weight: 400;
@@ -105,43 +99,48 @@ h4,
 h5,
 ol,
 dl {
-  margin-bottom: $cd-base-unit;
+  margin-bottom: 1rem;
 }
 
-.page-title {
-  font-size: 1.875rem;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  padding-bottom: 0;
-  border-bottom: 0 none;
-  color: $iasc-primary;
-
-  &::after {
-    background-color: $iasc-highlight;
-    content: '';
-    display: block;
-    height: 6px;
-    margin: calc(1rem - 6px) auto 0 0;
-    width: 80px;
-  }
-
-  @include min-width(sm) {
-    font-size: 1.875rem;
-  }
-
-  @include desktop {
-    margin-top: 1rem;
+@include tablet {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ol,
+  dl {
+    margin-bottom: 1.5rem;
   }
 }
+
+//h2 {
+//  @include font-size($cd-font-size-large);
+//}
+//
+//h3 {
+//  @include font-size($cd-font-size-medium);
+//}
+//
+//h4 {
+//  @include font-size($cd-font-size-base);
+//}
+//
+//h5 {
+//  @include font-size($cd-font-size-small);
+//}
+//
+//h6 {
+//  @include font-size($cd-font-size-base);
+//}
+
 
 a {
-  color: $iasc-secondary;
+  color: $cd-blue--dark;
 
   &:hover,
   &:focus {
-    color: $iasc-primary;
+    color: $cd-ocha-blue;
     text-decoration: none;
   }
 }
@@ -154,30 +153,12 @@ em {
   font-style: italic;
 }
 
+// The Unarticulated Annotation.
 u {
   text-decoration: none;
   font-weight: bold;
 }
 
-dt {
-  font-weight: 400;
-}
-
-dd {
-  margin-bottom: $cd-base-unit;
-}
-
-@include min-width(sm) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  ol,
-  dl {
-    margin-bottom: $cd-base-unit * 2;
-  }
-}
 
 .cd-heading-2 {
   font-size: 1.5rem;
@@ -185,7 +166,7 @@ dd {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   color: $iasc-primary;
-  border-bottom: 3px solid $cd-mid-bluey-grey;
+  border-bottom: 3px solid $cd-blue-grey;
 
   .path-frontpage & {
     font-size: 1.8rem;
