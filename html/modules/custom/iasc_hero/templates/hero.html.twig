@@ -19,7 +19,7 @@
 {% set hero_image_url = file_url(content.field_hero_image[0]['#media'].field_media_image.entity.uri.value|image_style('hero')) %}
 {% set hero_image_alt = file_url(content.field_hero_image[0]['#media'].field_media_image.alt) %}
 
-{{ attach_library('common_design/cd-hero') }}
+{{ attach_library('iasc_common_design/cd-hero') }}
 
 <div{{ attributes.addClass('hero') }}>
   <figure class="cd-hero">
