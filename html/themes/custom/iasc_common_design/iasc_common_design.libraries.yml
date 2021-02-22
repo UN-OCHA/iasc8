@@ -6,15 +6,15 @@ global-styling:
     theme:
       css/styles.css: {}
 
-cd-alert:
+cd-list:
   css:
     theme:
-      components/cd-alert/cd-alert.css: {}
+      components/cd-list/cd-list.css: {}
 
-cd-article-teaser:
+cd-teaser:
   css:
     theme:
-      components/cd-article-teaser/cd-article-teaser.css: {}
+      components/cd-teaser/cd-teaser.css: {}
 
 cd-bullet-list:
   css:
@@ -30,16 +30,18 @@ cd-hero:
   css:
     theme:
       components/cd-hero/cd-hero.css: {}
+      components/cd-hero/cd-hero-iasc.css: {}
 
-cd-list:
+cd-styled-list:
   css:
     theme:
-      components/cd-list/cd-list.css: {}
+      components/cd-styled-list/cd-styled-list.css: {}
 
 cd-user-list:
   css:
     theme:
       components/cd-user-list/cd-user-list.css: {}
+      components/cd-user-list/cd-user-list-iasc.css: {}
 
 select2:
   js:
