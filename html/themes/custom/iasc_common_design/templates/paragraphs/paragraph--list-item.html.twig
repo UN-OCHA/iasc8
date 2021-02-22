@@ -43,27 +43,31 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'cd-styled-list__item [ cd-bumper ]'
   ]
 %}
+{{ attach_library('common_design/cd-flow') }}
+{{ attach_library('common_design/cd-styled-list') }}
+
 {% block paragraph %}
   <li{{ attributes.addClass(classes) }}>
 
     {% if content.field_list_item_icon|render %}
-    <div class="cd-list__image">
+    <div class="cd-styled-list__image">
       {{ content.field_list_item_icon }}
     </div>
     {% endif %}
 
-    <div class="cd-list__container">
+    <div class="cd-styled-list__container">
 
-      <h3 class="cd-list__title">
+      <h3 class="cd-styled-list__title">
         <a href="{{ content.field_list_item_link.0['#url'] }}">
           {{ content.field_list_item_title }}
         </a>
       </h3>
 
-      <div class="cd-list__description">
+      <div class="cd-styled-list__description">
       {% block content %}
         {{ content|without('field_list_item_link', 'field_list_item_title', 'field_list_item_icon') }}
       {% endblock %}
@@ -71,8 +75,8 @@
     </div>
 
     {% if content.field_list_item_link|render %}
-    <div class="cd-list__footer">
-      <div class="cd-list__link node__read-more">
+    <div class="cd-styled-list__footer">
+      <div class="cd-styled-list__link node__read-more">
         <a href="{{ content.field_list_item_link.0['#url'] }}" rel="tag">
           {{ content.field_list_item_link.0['#title'] }}
           <span class="visually-hidden">Read more about {{ content.field_list_item_link.0['#title'] }}</span>

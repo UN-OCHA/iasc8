@@ -20,18 +20,25 @@
 ]
 %}
 
+{{ attach_library('common_design/cd-flow') }}
 {{ attach_library('common_design/cd-dropdown') }}
 {{ attach_library('common_design/cd-filter') }}
+{{ attach_library('common_design/cd-facets') }}
 
 {% if content %}
   <div{{ attributes
     .setAttribute('id', 'cd-filter')
-    .setAttribute('data-cd-toggable','Modify your search'|t)
-    .setAttribute('data-cd-icon', 'arrow-down')
-    .setAttribute('data-cd-component', 'cd-filter')
-    .setAttribute('data-cd-toggable-keep', 'true')
-    .addClass(classes)
+  .setAttribute('data-cd-toggable','Modify your search'|t)
+  .setAttribute('data-cd-icon', 'arrow-down')
+  .setAttribute('data-cd-component', 'cd-filter')
+  .setAttribute('data-cd-toggable-keep', 'true')
+  .addClass(classes)
   }}>
-    {{ content }}
+    <div class="cd-filter__container [ cd-flow ]">
+      <h2 class="visually-hidden">{% trans %}Filter results{% endtrans %}</h2>
+      <div class="cd-filter__form [ cd-flow ]">
+        {{ content }}
+      </div>
+    </div>
   </div>
 {% endif %}

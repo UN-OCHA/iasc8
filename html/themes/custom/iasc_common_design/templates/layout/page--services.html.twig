@@ -17,17 +17,29 @@
     {# Link to skip to the main content is in html.html.twig #}
     <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(group_layout_classes) }}>
 
-      {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>
+      {% if page.page_title|render %}
+        {% block page_title %}
+          <div class="cd-page-title">
+            {{ page.page_title }}
+          </div>
+        {% endblock %}
       {% endif %}
 
-      <div class="cd-layout-content">
-        {{ page.content }}
-      </div>{# /.cd-layout-content #}
+      <div class="cd-layout-content-wrapper">
 
-      {% if page.sidebar_second  %}
-        <aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
-      {% endif %}
+          {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
+            <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>
+          {% endif %}
+
+          <div class="cd-layout-content">
+            {{ page.content }}
+          </div>{# /.cd-layout-content #}
+
+          {% if page.sidebar_second  %}
+            <aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
+          {% endif %}
+
+      </div>
 
     </main>
   {% endblock %}

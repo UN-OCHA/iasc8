@@ -44,10 +44,19 @@
 #}
 
 {%
-  set group_layout_classes = [
+  set layout_classes = [
   'cd-container',
-  page.sidebar_first|render|striptags|trim ? 'cd-layout-with-region-sidebar'
-]
+  page.sidebar_first|render|striptags|trim or page.facets|render|striptags|trim and not page.sidebar_second|render|striptags|trim ? 'cd-layout-with-region-sidebar-first cd-layout-with-sidebar-first',
+  page.sidebar_second|render|striptags|trim and not page.sidebar_first|render|striptags|trim ? 'cd-layout-with-sidebar-second',
+  page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim ? 'cd-layout-with-sidebar-both',
+  node.getType == 'oa_event' ? 'cd-layout-with-sidebar',
+  node.getType == 'oa_wiki_page' ? 'cd-layout-with-sidebar',
+  node.getType == 'panopoly_page' ? 'cd-layout-with-sidebar',
+  node.getType == 'oa_section' ? 'cd-layout-with-sidebar',
+  node.getType == 'announcement' ? 'cd-layout-with-sidebar',
+  node.getType == 'action_point' ? 'cd-layout-with-sidebar',
+  node.getType == 'panopoly_landing_page' ? 'cd-layout-with-sidebar'
+  ]
 %}
 
 {% block attach %}
@@ -61,16 +70,18 @@
 
   {{ page.help }}
 
-  {% block hero %}
-    <div class="cd-layout-hero cd-container">
-      {{ page.hero }}
-      {% if hero_image %}
-        <div class="hero-image">
-          {{ hero_image }}
-        </div>
-      {% endif %}
-    </div>
-  {% endblock %}
+  {% if page.hero %}
+    {% block hero %}
+      <div class="cd-layout-hero cd-container">
+        {{ page.hero }}
+        {% if hero_image %}
+          <div class="hero-image">
+            {{ hero_image }}
+          </div>
+        {% endif %}
+      </div>
+    {% endblock %}
+  {% endif %}
 
   {% if page.highlighted %}
     {% block highlighted %}
@@ -82,19 +93,32 @@
 
 
   {% block main %}
+
     {# Link to skip to the main content is in html.html.twig #}
-    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(group_layout_classes) }}>
+    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
-      {% if page.sidebar_first|render|striptags|trim %}
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.sidebar_first }}</aside>
+      {% if page.page_title|render %}
+        {% block page_title %}
+          <div class="cd-page-title">
+            {{ page.page_title }}
+          </div>
+        {% endblock %}
       {% endif %}
 
-      <div class="cd-layout-content">
-        {{ page.content }}
-      </div>{# /.cd-layout-content #}
+      <div class="cd-layout-content-wrapper">
 
-      {% if page.sidebar_second|render|striptags|trim %}<aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
-      {% endif %}
+        sidebar
+{#        {% if (page.sidebar_first|render|striptags|trim) or page.facets|render|striptags|trim %}#}
+{#          <aside class="cd-layout-sidebar-first" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>#}
+{#        {% endif %}#}
+
+        <div class="cd-layout-content">
+          {{ page.content }}
+        </div>{# /.cd-layout-content #}
+
+        {% if page.sidebar_second|render|striptags|trim %}<aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>{% endif %}
+
+      </div>
 
     </main>
   {% endblock %}

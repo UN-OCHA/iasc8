@@ -37,37 +37,43 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('common_design/cd-date') }}
-<div class="cd-date">
-  {% if label_hidden == false %}
-    <h3 class="field__label">{{ label }}</h3>
-  {% endif %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
 
-  {% if items|length > 0 %}
-    <div class="cd-date__wrapper">
-      <span class="cd-date__day">
-        {% if min_date.day != max_date.day %}
-          {{ min_date.day }} - {{ max_date.day }}
-        {% else %}
-          {{ min_date.day }}
-        {% endif %}
-      </span>
-    </div>
-    <div class="cd-date__wrapper">
-      <span class="cd-date__month">
-        {% if min_date.month != max_date.month %}
-          {{ min_date.month }} - {{ max_date.month }}
-        {% else %}
-          {{ min_date.month }}
-        {% endif %}
-      </span>
-      <span class="cd-date__year">
-        {% if min_date.year != max_date.year %}
-          {{ min_date.year }} - {{ max_date.year }}
-        {% else %}
-          {{ min_date.year }}
-        {% endif %}
-      </span>
-    </div>
+{% if label_hidden %}
+  {% if multiple %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  {% else %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
   {% endif %}
-</div>
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

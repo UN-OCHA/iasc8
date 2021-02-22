@@ -83,30 +83,30 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'cd-article-teaser'
+  'cd-teaser [ cd-flow cd-bumper ]'
 ]
 %}
-{{ attach_library('classy/node') }}
-{{ attach_library('common_design/cd-article-teaser') }}
-<article{{ attributes.addClass(classes) }}>
+{{ attach_library('common_design/cd-flow') }}
+{{ attach_library('common_design/cd-teaser') }}
+<article{{ attributes.addClass(classes) }} >
 
   {% if content.field_oa_date|render %}
-    <div class="cd-article-teaser__image">
+    <div class="cd-teaser__date">
       {{ content.field_oa_date }}
     </div>
   {% endif %}
 
-  <div class="cd-article-teaser__container">
+  <div class="cd-teaser__container">
 
     {{ title_prefix }}
     {% if label and not page %}
-      <h3{{ title_attributes.addClass('cd-article-teaser__title') }}>
+      <h3{{ title_attributes.addClass('cd-teaser__title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
 
-    <div{{ content_attributes.addClass('cd-article-teaser__description node__content') }}>
+    <div{{ content_attributes.addClass('cd-teaser__description node__content') }}>
     {{ content|without('field_published_date','field_oa_date', 'body') }}
       {% set contentBody %}
         {{ content.body }}
