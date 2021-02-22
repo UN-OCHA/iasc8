@@ -1,0 +1,9 @@
+.cd-layout-sidebar-first {
+  .cd-teaser__image {
+    float: none;
+  }
+
+  .cd-teaser__image + .cd-teaser__container {
+    padding: 0;
+  }
+}

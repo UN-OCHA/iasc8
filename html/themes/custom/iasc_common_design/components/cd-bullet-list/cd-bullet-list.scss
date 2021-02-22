@@ -1,19 +1,17 @@
 @import '../../sass/cd/cd-variables';
 
-.cd-bullet-list {
-  padding: 0;
-}
-
-.cd-bullet-list li {
-  padding-left: 1.5rem;
-  background-image: url('../../img/icons/list-bullet.svg');
-  background-repeat: no-repeat;
-  background-size: 9px 9px;
-  background-position: top 7px left 0;
-}
+//.cd-bullet-list {
+//  padding: 0;
+//}
+//
+//.cd-bullet-list li {
+//  padding-left: 1.5rem;
+//  background-image: url('../../img/icons/list-bullet.svg');
+//  background-repeat: no-repeat;
+//  background-size: 9px 9px;
+//  background-position: top 7px left 0;
+//}
 
 .cd-bullet-list svg {
   fill: $iasc-highlight;
-  width: 9px;
-  height: 9px;
 }
