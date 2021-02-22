@@ -6,14 +6,14 @@
       position: relative;
     }
 
-    //.cd-date {
-    //  position: absolute;
-    //  left: 0;
-    //  top: 0;
-    //}
-
     h3 {
       margin-top: 0;
+    }
+  }
+
+  &.node--view-mode-full {
+    .cd-date {
+      margin-right: 1rem;
     }
   }
 }

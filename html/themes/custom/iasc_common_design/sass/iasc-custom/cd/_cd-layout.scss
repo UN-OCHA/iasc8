@@ -107,3 +107,9 @@
 //    margin-top: 1rem;
 //  }
 //}
+
+.cd-layout-two-col .cd-layout-main-content {
+  iframe {
+    max-width: 100%;
+  }
+}
