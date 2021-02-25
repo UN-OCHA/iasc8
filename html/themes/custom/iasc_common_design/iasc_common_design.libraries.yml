@@ -16,11 +16,6 @@ cd-teaser:
     theme:
       components/cd-teaser/cd-teaser.css: {}
 
-cd-bullet-list:
-  css:
-    theme:
-      components/cd-bullet-list/cd-bullet-list.css: {}
-
 cd-date:
   css:
     theme:
