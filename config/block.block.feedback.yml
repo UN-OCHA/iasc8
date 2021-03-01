@@ -12,7 +12,7 @@ dependencies:
 id: feedback
 theme: iasc_common_design
 region: content
-weight: -19
+weight: -20
 provider: null
 plugin: 'block_content:842ea753-7b32-4b4a-aa13-cd33501583ac'
 settings:

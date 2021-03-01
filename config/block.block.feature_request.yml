@@ -12,7 +12,7 @@ dependencies:
 id: feature_request
 theme: iasc_common_design
 region: content
-weight: -18
+weight: -19
 provider: null
 plugin: 'block_content:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
 settings:

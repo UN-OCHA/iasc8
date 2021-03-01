@@ -8,8 +8,8 @@ dependencies:
     - iasc_common_design
 id: messages
 theme: iasc_common_design
-region: content
-weight: -21
+region: highlighted
+weight: -23
 provider: null
 plugin: system_messages_block
 settings:
