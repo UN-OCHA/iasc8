@@ -12,7 +12,7 @@
 .view-updates,
 .view-iasc-group-content {
   .view-header {
-    @extend .page-title;
+    @extend .cd-page-title;
 
     @include xl {
       padding-right: 0;
@@ -35,26 +35,11 @@
 .view-updates,
 .view-resources,
 .view-iasc-services {
-  .views-exposed-form .form--inline {
-    display: flex;
-    margin-bottom: 2rem;
+  .views-exposed-form .cd-form--inline {
 
     .form-item,
     .form-actions {
       margin: 0;
-    }
-
-    .form-text:focus {
-      outline: 2px solid $cd-blue--bright;
-    }
-
-    .form-actions input[type='submit'] {
-      line-height: 37px;
-      padding: 0 1rem;
-    }
-
-    .form-actions input:focus {
-      outline: 2px solid $cd-blue--bright;
     }
 
     label {
@@ -66,54 +51,54 @@
 .region-facets,
 .region-sidebar-first,
 .region-sidebar-second {
-  .block-search {
-    margin-bottom: 2rem;
-  }
+  //.block-search {
+  //  margin-bottom: 2rem;
+  //}
 
   .block-search h2 {
     @extend .cd-heading-3;
     margin-top: 0;
   }
 
-  .views-exposed-form .form--inline {
-
-    label {
-      @include visually-hidden;
-    }
-
-    .form-item {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .form-actions {
-      margin: 0;
-    }
-
-    .form-text {
-      width: 100%;
-
-      &:focus {
-        outline: 2px solid $cd-blue--bright;
-      }
-    }
-
-    .form-actions input[type='submit'] {
-      width: 100%;
-
-      @include sm {
-        max-width: 16rem;
-      }
-
-      @include desktop {
-        // IE 11.
-        // sass-lint:disable no-duplicate-properties
-        max-width: 100%;
-        max-width: unset;
-        width: 100%;
-      }
-    }
-  }
+  //.views-exposed-form .cd-form--inline {
+  //
+  //  flex-wrap: wrap;
+  //
+  //  label {
+  //    @include visually-hidden;
+  //  }
+  //
+  //  .form-item,
+  //  .form-actions {
+  //    margin-top: 0;
+  //    margin-bottom: 0;
+  //    flex: 1 0 100%;
+  //  }
+  //
+  //  .form-text {
+  //    width: 100%;
+  //
+  //    &:focus {
+  //      outline: 2px solid $cd-blue--bright;
+  //    }
+  //  }
+  //
+  //  .form-actions input[type='submit'] {
+  //    width: 100%;
+  //
+  //    @include sm {
+  //      max-width: 16rem;
+  //    }
+  //
+  //    @include desktop {
+  //      // IE 11.
+  //      // sass-lint:disable no-duplicate-properties
+  //      max-width: 100%;
+  //      max-width: unset;
+  //      width: 100%;
+  //    }
+  //  }
+  //}
 }
 
 // Services table
@@ -161,4 +146,8 @@
 .more-link {
   display: block;
   text-align: right;
+}
+
+.view-filters {
+  margin-bottom: 2rem;
 }

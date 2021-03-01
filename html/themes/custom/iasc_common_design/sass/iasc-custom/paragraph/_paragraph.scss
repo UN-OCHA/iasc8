@@ -119,6 +119,19 @@
 
 .paragraph--type--teaser-item h3 {
   margin: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.2;
+
+  a {
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
 }
 
 .paragraph--type--section-menu > .cd-sidebar__label,
