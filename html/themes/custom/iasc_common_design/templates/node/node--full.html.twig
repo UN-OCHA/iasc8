@@ -81,10 +81,10 @@
     content.field_sidebar ? 'cd-layout-with-section-sidebar'
   ]
 %}
-
 {% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
 {{ attach_library('common_design/cd-table') }}
+
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -94,7 +94,7 @@
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
     {% else %}
-      <h1{{ title_attributes.addClass('page-title') }}>
+      <h1{{ title_attributes.addClass('cd-page-title') }}>
         {{ label }}
       </h1>
     {% endif %}

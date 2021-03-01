@@ -45,8 +45,6 @@
   'cd-layout-with-section-sidebar',
   view_mode ? 'group--view-mode-' ~ view_mode|clean_class
 ]
-%}{%
-  set local_tasks = local_tasks ? local_tasks|render
 %}
 <article{{ attributes.addClass(classes) }}>
 
