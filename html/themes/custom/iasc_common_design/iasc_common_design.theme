@@ -70,39 +70,34 @@ function iasc_common_design_preprocess_node(&$variables) {
     }
   }
 
-//  $node = $variables['node'];
+  $node = $variables['node'];
 
   // Prepare the title and local tasks so we have better control over where
   // to display them for content in full node.
-//  $view_mode = $variables['view_mode'] ?? '';
-//  if ($view_mode === 'full') {
-//    $variables['title'] = iasc_common_design_get_block_render_array('page_title_block');
-//    $variables['local_tasks'] = iasc_common_design_get_block_render_array('local_tasks_block', FALSE);
-//  }
+  $view_mode = $variables['view_mode'] ?? '';
+  if ($view_mode === 'full') {
+    $variables['title'] = iasc_common_design_get_block_render_array('page_title_block');
+    $variables['local_tasks'] = iasc_common_design_get_block_render_array('local_tasks_block', FALSE);
+  }
 }
 
 /**
  * Implements template_preprocess_page().
  */
 function iasc_common_design_preprocess_page(&$variables) {
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if ($node->getType() == 'page') {
-      $variables['has_hero_image'] = TRUE;
-      $variables['hero_image'] = $node->get('field_featured_image')->view();
-    }
-  }
+
   if (isset($variables['node'])) {
     $rendered = &drupal_static('iasc_common_design_rendered_blocks');
 
     // If the block has already been rendered (from the page title block) then
     // we remove the default page title block.
-    if (isset($rendered['page_title_block'])) {
-      unset($variables['page']['content']['iasc_common_design_page_title']);
+    if (isset($rendered['pagetitle'])) {
+      unset($variables['page']['page_title']['pagetitle']);
     }
 
     // Same for the local tasks block.
-    if (isset($rendered['local_tasks_block'])) {
-      unset($variables['page']['content']['iasc_common_design_local_tasks']);
+    if (isset($rendered['tabs'])) {
+      unset($variables['page']['page_title']['tabs']);
     }
   }
 }
@@ -149,29 +144,6 @@ function iasc_common_design_theme_suggestions_page_alter(&$suggestions, $variabl
   }
 }
 
-
-/**
- * Implements template_preprocess_region().
- */
-function iasc_common_design_preprocess_region(&$variables) {
-
-  $variables['has_filter'] = FALSE;
-
-  if (isset($variables['region']) && $variables['region'] == 'facets') {
-    $view_id = \Drupal::routeMatch()->getParameter('view_id');
-
-    if ($view_id === 'iasc_services' || $view_id === 'resources' || $view_id === 'iasc_group_content' || $view_id === 'search_content') {
-      $variables['attributes']['class'][] = 'cd-filter';
-      $variables['has_filter'] = TRUE;
-    }
-  }
-
-  // Create the $content variable that templates expect.
-  $variables['content'] = $variables['elements']['#children'];
-  $variables['region'] = $variables['elements']['#region'];
-}
-
-
 /**
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
@@ -185,14 +157,14 @@ function iasc_common_design_preprocess_block(&$variables) {
 }
 
 
-function iasc_common_design_preprocess_page_title(&$vars) {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node) {
-    if (!($node->getType() == 'panopoly_landing_page')) {
-      $vars['title'] = "";
-    }
-  }
-}
+//function iasc_common_design_preprocess_page_title(&$vars) {
+//  $node = \Drupal::routeMatch()->getParameter('node');
+//  if ($node) {
+//    if (!($node->getType() == 'panopoly_landing_page')) {
+//      $vars['title'] = "";
+//    }
+//  }
+//}
 
 
 /**
