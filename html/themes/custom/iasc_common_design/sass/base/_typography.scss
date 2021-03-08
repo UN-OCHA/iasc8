@@ -41,3 +41,54 @@ a {
   color: $iasc-primary;
   border-bottom: 1px solid $iasc-primary;
 }
+
+
+.cd-page-title {
+  @include xl {
+    .cd-layout-with-sidebar {
+      [dir='ltr'] & {
+        padding-right: 320px; // --cd-max-width minus padding, minus --cd-max-content-width.
+      }
+
+      [dir='rtl'] & {
+        padding-left: 320px;
+      }
+    }
+
+    .cd-layout-with-sidebar-first &,
+    .cd-layout-with-sidebar-second &,
+    .cd-layout-with-sidebar-both & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+//.cd-page-title {
+//  font-size: 1.875rem;
+//  font-weight: 600;
+//  line-height: 1.5;
+//  margin-top: 0;
+//  margin-bottom: 2rem;
+//  padding-bottom: 0;
+//  border-bottom: 0 none;
+//  color: $iasc-primary;
+//
+//  &::after {
+//    background-color: $iasc-highlight;
+//    content: '';
+//    display: block;
+//    height: 6px;
+//    margin: calc(1rem - 6px) auto 0 0;
+//    width: 80px;
+//  }
+//
+//  @include min-width(sm) {
+//    font-size: 1.875rem;
+//  }
+//
+//  @include desktop {
+//    margin-top: 1rem;
+//  }
+//}

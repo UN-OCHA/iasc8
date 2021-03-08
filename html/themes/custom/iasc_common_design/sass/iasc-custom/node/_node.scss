@@ -65,21 +65,30 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
 }
 
 .path-frontpage .field--name-field-content {
-  h2,
-  .viewsreference--view-title,
-  .cd-sidebar__label {
+  .viewsreference--view-title {
     @extend .cd-heading-3;
     margin-top: 1rem;
   }
 }
 
 .path-frontpage .cd-layout-sidebar-first {
-  h2,
-  .viewsreference--view-title,
-  .cd-sidebar__label {
+  .viewsreference--view-title {
     margin-top: 1rem;
   }
 }
+
+//.path-frontpage .field--name-field-content {
+//  h2 {
+//    @extend .cd-heading-3;
+//    margin-top: 1rem;
+//  }
+//}
+//
+//.path-frontpage .cd-layout-sidebar-first {
+//  h2 {
+//    margin-top: 1rem;
+//  }
+//}
 
 .node__meta {
   margin-bottom: 2rem;

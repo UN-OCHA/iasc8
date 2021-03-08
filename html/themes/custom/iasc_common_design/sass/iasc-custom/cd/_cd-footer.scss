@@ -4,13 +4,8 @@
 
 .cd-footer {
   // Position footer at the bottom of viewport. This might need adjusting based on page layout.
+  --cd-footer-row-number: 6;
   grid-row: var(--cd-footer-row-number) / var(--cd-footer-row-number);
   background: $cd-primary;
   color: $cd-white;
-}
-
-.path-frontpage .cd-footer {
-  // Position footer at the bottom of viewport. This might need adjusting based on page layout.
-  --cd-footer-row-number: 6;
-  grid-row: var(--cd-footer-row-number) / var(--cd-footer-row-number);
 }

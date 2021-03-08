@@ -12,7 +12,7 @@
 .view-updates,
 .view-iasc-group-content {
   .view-header {
-    @extend .cd-page-title;
+    //@extend .cd-page-title;
 
     @include xl {
       padding-right: 0;
@@ -150,4 +150,27 @@
 
 .view-filters {
   margin-bottom: 2rem;
+}
+
+// Event teaser grid adjustments.
+.cd-grid-2-col {
+  .cd-teaser__container {
+    margin-top: 0;
+  }
+
+  @include tablet {
+    .view-content {
+      .views-row {
+        // Reset cd-flow when 2 columns.
+        margin-top: 0;
+        // Horizontal spacing.
+        padding-left: 0.5rem;
+      }
+
+      .views-row:nth-child(2n+1) {
+        padding-left: 0;
+        padding-right: 0.5rem;
+      }
+    }
+  }
 }
