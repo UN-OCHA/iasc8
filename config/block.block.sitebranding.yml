@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: iasc_common_design
 region: header_logo
-weight: 0
+weight: -23
 provider: null
 plugin: system_branding_block
 settings:

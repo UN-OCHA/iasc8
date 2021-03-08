@@ -6,7 +6,7 @@ dependencies:
     - iasc_common_design
 id: pagetitle
 theme: iasc_common_design
-region: content
+region: page_title
 weight: -23
 provider: null
 plugin: page_title_block

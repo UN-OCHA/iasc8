@@ -9,7 +9,7 @@ dependencies:
 id: messages
 theme: iasc_common_design
 region: highlighted
-weight: -23
+weight: -24
 provider: null
 plugin: system_messages_block
 settings:
