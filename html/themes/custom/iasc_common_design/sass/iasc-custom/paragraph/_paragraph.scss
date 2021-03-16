@@ -90,7 +90,10 @@
   }
 
   &.paragraph__image--align-right {
+    text-align: left;
+
     .field--name-field-paragraph-text {
+
       @include tablet {
         margin-right: 2rem;
       }
@@ -125,7 +128,6 @@
   a {
     font-weight: 600;
     display: block;
-    text-decoration: none;
   }
 
   a:hover,
