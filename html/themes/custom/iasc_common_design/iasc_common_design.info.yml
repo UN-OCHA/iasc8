@@ -32,9 +32,6 @@ libraries-extend:
   common_design/cd-teaser:
     - iasc_common_design/cd-teaser
 
-  common_design/cd-date:
-    - iasc_common_design/cd-date
-
   common_design/cd-styled-list:
     - iasc_common_design/cd-styled-list
 
