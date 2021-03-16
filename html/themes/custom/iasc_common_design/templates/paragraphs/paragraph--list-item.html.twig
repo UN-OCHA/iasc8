@@ -48,6 +48,7 @@
   ]
 %}
 {{ attach_library('common_design/cd-flow') }}
+{{ attach_library('common_design/cd-typography') }}
 {{ attach_library('common_design/cd-styled-list') }}
 
 {% block paragraph %}
@@ -61,13 +62,13 @@
 
     <div class="cd-styled-list__container">
 
-      <h3 class="cd-styled-list__title">
+      <h3 class="cd-styled-list__title cd-max-width">
         <a href="{{ content.field_list_item_link.0['#url'] }}">
           {{ content.field_list_item_title }}
         </a>
       </h3>
 
-      <div class="cd-styled-list__description">
+      <div class="cd-styled-list__description cd-max-width">
       {% block content %}
         {{ content|without('field_list_item_link', 'field_list_item_title', 'field_list_item_icon') }}
       {% endblock %}
