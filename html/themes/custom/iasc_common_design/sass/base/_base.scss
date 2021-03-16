@@ -14,7 +14,7 @@ input {
 }
 
 body {
-  @include font-size($cd-font-size--base);
+  font-size: $cd-font-size--base;
   font-family: $cd-font--system;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

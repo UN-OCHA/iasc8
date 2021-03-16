@@ -20,7 +20,7 @@
       display: flex;
       justify-content: space-between;
       background: $cd-ocha-blue;
-      @include font-size($cd-font-size--small);
+      font-size: $cd-font-size--small;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
