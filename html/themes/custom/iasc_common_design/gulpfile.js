@@ -76,7 +76,7 @@ function sassCompileTask() {
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(postcss([
       prefix({
-        browsers: ['>1%', 'iOS 9'],
+        browsers: ['>1%', 'last 3 versions'],
         cascade: false,
       }),
       cssnano(),
@@ -98,7 +98,7 @@ function componentCompileTask() {
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(postcss([
       prefix({
-        browsers: ['>1%', 'iOS 9'],
+        browsers: ['>1%', 'last 3 versions'],
         cascade: false,
       }),
       cssnano(),
@@ -189,8 +189,8 @@ function jsLintTask() {
 //——————————————————————————————————————————————————————————————————————————————
 function jsBundleTask() {
   return gulp.src([
-      'js/*.js',
-    ])
+    'js/*.js',
+  ])
     .pipe(concat('ocha_bundle.js'))
     .pipe(gulpif(process.env.NODE_ENV === 'production', uglify()))
     .pipe(gulp.dest('js'))
