@@ -92,7 +92,7 @@
         "symfony/event-dispatcher": "4.3.3 as 3.4.41",
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
-        "unocha/common_design": "^2.8.9",
+        "unocha/common_design": "^3.0.0",
         "unocha/ocha_integrations": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
