@@ -132,6 +132,12 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
     margin-bottom: 0.5rem;
   }
 
+  .cd-layout-sidebar-first {
+    textarea {
+      width: 100%;
+    }
+  }
+
   //// Comma separated.
   //.field--name-field-service-coverage .field__items,
   //.field--name-field-relevant-hpc-stage .field__items {

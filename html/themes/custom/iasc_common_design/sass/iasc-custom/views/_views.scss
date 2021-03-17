@@ -60,45 +60,42 @@
     margin-top: 0;
   }
 
-  //.views-exposed-form .cd-form--inline {
-  //
-  //  flex-wrap: wrap;
-  //
-  //  label {
-  //    @include visually-hidden;
-  //  }
-  //
-  //  .form-item,
-  //  .form-actions {
-  //    margin-top: 0;
-  //    margin-bottom: 0;
-  //    flex: 1 0 100%;
-  //  }
-  //
-  //  .form-text {
-  //    width: 100%;
-  //
-  //    &:focus {
-  //      outline: 2px solid $cd-blue--bright;
-  //    }
-  //  }
-  //
-  //  .form-actions input[type='submit'] {
-  //    width: 100%;
-  //
-  //    @include sm {
-  //      max-width: 16rem;
-  //    }
-  //
-  //    @include desktop {
-  //      // IE 11.
-  //      // sass-lint:disable no-duplicate-properties
-  //      max-width: 100%;
-  //      max-width: unset;
-  //      width: 100%;
-  //    }
-  //  }
-  //}
+  form .cd-form--inline {
+    label {
+      @include visually-hidden;
+    }
+
+    .form-item,
+    .form-actions {
+      margin-top: 0;
+      margin-bottom: 0;
+      //flex: 1 0 100%;
+    }
+
+    .form-text {
+      width: 100%;
+
+      &:focus {
+        outline: 2px solid $cd-blue--bright;
+      }
+    }
+
+    .form-actions input[type='submit'] {
+      width: 100%;
+
+      @include sm {
+        max-width: 16rem;
+      }
+
+      @include desktop {
+        // IE 11.
+        // sass-lint:disable no-duplicate-properties
+        max-width: 100%;
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
 }
 
 // Services table
