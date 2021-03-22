@@ -25,3 +25,14 @@
 .paragraph--type--featured .cd-teaser__image img {
   width: 100%;
 }
+
+
+.cd-teaser .cd-date {
+  margin-right: 2rem;
+}
+
+@media (min-width: 576px) {
+  .cd-teaser .cd-date {
+    margin-right: 0;
+  }
+}
