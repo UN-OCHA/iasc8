@@ -1,4 +1,11 @@
-@import 'sass/cd/cd-variables';
+$cd-blue--bright: var(--cd-blue--bright);
+$cd-white: var(--cd-white);
+$iasc-primary: #272e67;
+$iasc-primary-dark: darken(#272e67, 8%);
+$iasc-highlight: #ff4d59;
+$iasc-red: #ff715b;
+$iasc-secondary: #3c4485;
+$iasc-secondary: #145f7b;
 
 // select-a11y
 // ==========================================================
@@ -44,8 +51,8 @@ $btn-select-a11y-symbol:      "\25BC" !default; // ▼
 
 $tag-item-border:             $gray-7 !default;
 $tag-item-supp-symbol:        "\2715" !default; // X
-$tag-item-supp-symbol-color:  $cd-highlight-red !default;
-$tag-item-supp-border:        $cd-highlight-red !default;
+$tag-item-supp-symbol-color:  $iasc-highlight !default;
+$tag-item-supp-border:        $iasc-highlight !default;
 
 $a11y-suggestions-bg:         $gray-7 !default;
 $a11y-suggestion-color:       $gray-3 !default;
@@ -68,7 +75,7 @@ $a11y-suggestion-border:      $gray-5 !default;
 
     .icon-select {
       position: absolute;
-      background-color: $cd-highlight-red;
+      background-color: $iasc-highlight;
       top: 50%;
       right: 0.5em;
       line-height: 0;

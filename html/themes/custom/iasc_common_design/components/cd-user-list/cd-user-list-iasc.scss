@@ -1,4 +1,5 @@
-@import '../../sass/cd/cd-variables';
+$iasc-secondary: #3c4485;
+$cd-blue-grey: var(--cd-blue-grey);
 
 .cd-user-list {
   // Hack to prevent float issue when text is shorter than image height.
