@@ -36,9 +36,7 @@
 
       {% if content.field_hero_date|render or content.field_hero_link|render %}
       <div class="cd-hero__footer">
-        <div class="cd-hero__date">
-          {{ content.field_hero_date }}
-        </div>
+        <div class="cd-hero__date">{{ content.field_hero_date }}</div>
 
         {% if content.field_hero_link|render %}
         <a class="cd-hero__link" href="{{ content.field_hero_link.0['#url'] }}">
