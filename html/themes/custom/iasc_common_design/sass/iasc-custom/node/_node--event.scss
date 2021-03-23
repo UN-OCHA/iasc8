@@ -15,6 +15,11 @@
     h3 {
       margin-top: 0;
     }
+
+    .cd-teaser__container {
+      // Reset cd-flow because the first element in the calendar.
+      margin-top: 0;
+    }
   }
 
   &.node--view-mode-full {
@@ -36,4 +41,9 @@
   .cd-date__year {
     color: $iasc-secondary;
   }
+}
+
+
+.cd-grid-2-col .node--type-oa-event.node--view-mode-teaser.cd-teaser {
+  border-bottom: 0 none;
 }

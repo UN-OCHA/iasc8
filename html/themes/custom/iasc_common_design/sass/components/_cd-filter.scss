@@ -22,3 +22,15 @@
     }
   }
 }
+
+.cd-filter__btn {
+  background-color: $iasc-primary;
+}
+
+.cd-filter__btn:hover {
+  background-color: $iasc-primary-dark;
+}
+
+.cd-filter__btn:focus {
+  border: 2px solid var(--cd-blue--bright);
+}

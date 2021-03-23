@@ -51,16 +51,16 @@
 .region-facets,
 .region-sidebar-first,
 .region-sidebar-second {
-  //.block-search {
-  //  margin-bottom: 2rem;
-  //}
-
   .block-search h2 {
     @extend .cd-heading-3;
     margin-top: 0;
   }
 
   form .cd-form--inline {
+    @include desktop {
+      flex-wrap: wrap;
+    }
+
     label {
       @include visually-hidden;
     }
@@ -69,7 +69,18 @@
     .form-actions {
       margin-top: 0;
       margin-bottom: 0;
-      //flex: 1 0 100%;
+
+      @include desktop {
+        flex: 1 0 100%;
+      }
+
+      input[type='text'] {
+        padding: 0.25rem 0.5rem;
+
+        @include desktop {
+          padding: 0.5rem;
+        }
+      }
     }
 
     .form-text {
@@ -171,3 +182,15 @@
     }
   }
 }
+
+
+.cd-pager__item.is-active a {
+  background-color: $iasc-primary;
+}
+
+.cd-pager__item a:hover,
+.cd-pager__item a:focus {
+  background-color: $iasc-secondary;
+}
+
+
