@@ -274,3 +274,7 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 .field--name-body.field--type-text-with-summary {
   max-width: var(--cd-max-content-width);
 }
+
+.field--name-field-email a {
+  word-break: break-word;
+}
