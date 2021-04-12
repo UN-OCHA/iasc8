@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1faad6ddc797ea1599e833cb6cddbff",
+    "content-hash": "22e8475b2ff7634732f44353e0569aec",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -14289,16 +14289,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.8.9",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "6612e044e53f18281db73868b9c97be26fe3a514"
+                "reference": "662fb828737e1feb019874a29e6d504b2b1f6df4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/6612e044e53f18281db73868b9c97be26fe3a514",
-                "reference": "6612e044e53f18281db73868b9c97be26fe3a514",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/662fb828737e1feb019874a29e6d504b2b1f6df4",
+                "reference": "662fb828737e1feb019874a29e6d504b2b1f6df4",
                 "shasum": ""
             },
             "require": {
@@ -14309,7 +14309,8 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2021-01-19T11:14:23+00:00"
+            "description": "OCHA Common Design base theme for Drupal 8",
+            "time": "2021-04-12T06:19:41+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
