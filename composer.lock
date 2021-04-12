@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90ee11d0b8b3bcb2a208edaebec294a9",
+    "content-hash": "e262ff1104ff120d88ea6f058432b602",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2802,8 +2802,16 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                },
+                {
                     "name": "jdwfly",
                     "homepage": "https://www.drupal.org/user/298179"
+                },
+                {
+                    "name": "rsmylski",
+                    "homepage": "https://www.drupal.org/user/1324348"
                 }
             ],
             "description": "A light-weight, customizable lightbox plugin for jQuery.",
@@ -3030,6 +3038,10 @@
                 {
                     "name": "itsekhmistro",
                     "homepage": "https://www.drupal.org/user/928152"
+                },
+                {
+                    "name": "mparker17",
+                    "homepage": "https://www.drupal.org/user/536298"
                 },
                 {
                     "name": "peterpoe",
@@ -4522,6 +4534,14 @@
                 {
                     "name": "borisson_",
                     "homepage": "https://www.drupal.org/user/2393360"
+                },
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "mkalkbrenner",
+                    "homepage": "https://www.drupal.org/user/124705"
                 }
             ],
             "description": "The Facet module allows site builders to easily create and manage faceted search interfaces.",
@@ -4571,8 +4591,8 @@
                     "version": "8.x-1.0",
                     "datestamp": "1568102885",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "composer-exit-on-patch-failure": true,
@@ -4627,8 +4647,8 @@
                     "homepage": "https://www.drupal.org/user/1885838"
                 },
                 {
-                    "name": "dasjo",
-                    "homepage": "https://www.drupal.org/user/228295"
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
                 }
             ],
             "description": "Facets Pretty Paths module.",
@@ -6302,7 +6322,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.18",
-                    "datestamp": "1603359374",
+                    "datestamp": "1605204423",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7017,7 +7037,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -14289,16 +14309,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v3.0.5",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "28656b9797ca2fde54e3a0a570e6da757b567841"
+                "reference": "662fb828737e1feb019874a29e6d504b2b1f6df4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/28656b9797ca2fde54e3a0a570e6da757b567841",
-                "reference": "28656b9797ca2fde54e3a0a570e6da757b567841",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/662fb828737e1feb019874a29e6d504b2b1f6df4",
+                "reference": "662fb828737e1feb019874a29e6d504b2b1f6df4",
                 "shasum": ""
             },
             "require": {
@@ -14310,7 +14330,7 @@
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
-            "time": "2021-03-30T13:43:22+00:00"
+            "time": "2021-04-12T06:19:41+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
