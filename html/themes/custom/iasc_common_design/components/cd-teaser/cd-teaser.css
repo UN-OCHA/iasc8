@@ -12,9 +12,9 @@
 }
 
 .paragraph--type--featured .cd-teaser__title a {
-  font-weight: 600;
   display: block;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .paragraph--type--featured .cd-teaser__title a:hover,
@@ -25,7 +25,6 @@
 .paragraph--type--featured .cd-teaser__image img {
   width: 100%;
 }
-
 
 .cd-teaser .cd-date {
   margin-right: 2rem;

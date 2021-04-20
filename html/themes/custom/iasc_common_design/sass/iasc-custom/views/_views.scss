@@ -1,9 +1,11 @@
 .viewsreference--view-title {
   @extend .cd-heading-2;
+
   margin-top: 0;
 
   .cd-layout-sidebar-first & {
     @extend .cd-heading-3;
+
     margin-top: 0;
     //margin-top: 1.5rem;
   }
@@ -53,13 +55,11 @@
 .region-sidebar-second {
   .block-search h2 {
     @extend .cd-heading-3;
+
     margin-top: 0;
   }
 
   form .cd-form--inline {
-    @include desktop {
-      flex-wrap: wrap;
-    }
 
     label {
       @include visually-hidden;
@@ -70,16 +70,16 @@
       margin-top: 0;
       margin-bottom: 0;
 
-      @include desktop {
-        flex: 1 0 100%;
-      }
-
-      input[type='text'] {
+      input[type="text"] {
         padding: 0.25rem 0.5rem;
 
         @include desktop {
           padding: 0.5rem;
         }
+      }
+
+      @include desktop {
+        flex: 1 0 100%;
       }
     }
 
@@ -91,7 +91,7 @@
       }
     }
 
-    .form-actions input[type='submit'] {
+    .form-actions input[type="submit"] {
       width: 100%;
 
       @include sm {
@@ -99,12 +99,16 @@
       }
 
       @include desktop {
+        width: 100%;
         // IE 11.
         // sass-lint:disable no-duplicate-properties
         max-width: 100%;
         max-width: unset;
-        width: 100%;
       }
+    }
+
+    @include desktop {
+      flex-wrap: wrap;
     }
   }
 }
@@ -176,13 +180,12 @@
       }
 
       .views-row:nth-child(2n+1) {
-        padding-left: 0;
         padding-right: 0.5rem;
+        padding-left: 0;
       }
     }
   }
 }
-
 
 .cd-pager__item.is-active a {
   background-color: $iasc-primary;
@@ -192,5 +195,3 @@
 .cd-pager__item a:focus {
   background-color: $iasc-secondary;
 }
-
-

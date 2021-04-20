@@ -6,7 +6,7 @@
     fill: $iasc-highlight;
   }
 
-  &[aria-expanded='true']  {
+  &[aria-expanded="true"] {
     &::before {
       background: $iasc-highlight;
     }

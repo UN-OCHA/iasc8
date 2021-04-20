@@ -2,10 +2,10 @@
   text-align: right;
 
   a {
-    font-weight: 600;
-    font-size: 1rem;
     display: block;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
 
     &:hover,
     &:focus {
@@ -14,27 +14,28 @@
   }
 
   svg {
-    fill: $iasc-highlight;
+    display: inline-block;
     width: 9px;
     height: 9px;
-    display: inline-block;
     margin-left: 1rem;
+    fill: $iasc-highlight;
   }
 }
 
 .field--name-field-header {
   .block,
   .field--type-viewsreference {
+    margin-bottom: 3rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $cd-blue-grey;
-    margin-bottom: 3rem;
   }
 
   h2,
   .viewsreference--view-title {
     @extend .cd-heading-2;
-    text-align: center;
+
     margin-top: 0;
+    text-align: center;
   }
 
   .paragraph {
@@ -67,6 +68,7 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
 .path-frontpage .field--name-field-content {
   .viewsreference--view-title {
     @extend .cd-heading-3;
+
     margin-top: 1rem;
   }
 }
@@ -109,8 +111,8 @@ body:not(.path-frontpage) .paragraph.paragraph--type--hero {
 
 // Contact block on Service node.
 .field--name-field-global-focal-point {
-  background: $cd-blue-grey--light;
   padding: 1rem;
+  background: $cd-blue-grey--light;
 }
 
 .node--view-mode-no-title {

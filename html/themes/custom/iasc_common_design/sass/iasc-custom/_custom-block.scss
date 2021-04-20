@@ -6,6 +6,7 @@
 
   .field--name-field-block-title {
     @extend .cd-heading-3;
+
     margin-top: 0;
   }
 
@@ -19,32 +20,23 @@
     a {
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      padding: 1.5rem;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $cd-white;
+      border: 1px solid $cd-ocha-blue;
       background: $cd-ocha-blue;
       font-size: $cd-font-size--small;
       font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $cd-white;
-      border: 1px solid $cd-ocha-blue;
-      padding: 1.5rem;
-      transition: background 0.3s ease;
-      width: 100%;
-
-      @include sm {
-        max-width: 16rem;
-      }
-
-      @include tablet {
-        max-width: unset;
-        width: 100%;
-      }
 
       &::after {
         display: inline-block;
-        height: 1rem;
         width: 1rem;
+        height: 1rem;
         margin-left: 1rem;
-        content: '';
+        content: "";
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23fff' d='M35,20.65V42H6V18H22.09l9-9H4.2A2.2,2.2,0,0,0,2,11.2V43.8A2.2,2.2,0,0,0,4.2,46H36.8A2.2,2.2,0,0,0,39,43.8V16.65ZM12.5,12A1.5,1.5,0,1,1,11,13.5,1.5,1.5,0,0,1,12.5,12Zm-5,0A1.5,1.5,0,1,1,6,13.5,1.5,1.5,0,0,1,7.5,12Z'/%3E%3Cpath fill='%23fff' d='M44,2H23a2,2,0,0,0,0,4H39L16.51,28.52a2.1,2.1,0,0,0,3,3L42,9V25a2,2,0,0,0,4,0V4A2,2,0,0,0,44,2Z'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: 0 0;
@@ -52,12 +44,21 @@
 
       &:hover,
       &:focus {
-        background: $cd-blue--dark;
         color: $cd-white;
+        background: $cd-blue--dark;
       }
 
       &:focus {
         outline: 3px solid $cd-blue--bright;
+      }
+
+      @include sm {
+        max-width: 16rem;
+      }
+
+      @include tablet {
+        width: 100%;
+        max-width: unset;
       }
     }
   }
@@ -72,10 +73,10 @@
   margin-bottom: 4rem;
 
   @include tablet {
-    max-width: 50%;
     float: left;
-    padding-right: 1rem;
+    max-width: 50%;
     margin-bottom: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -83,13 +84,13 @@
 @include desktop {
   .node--type-panopoly-landing-page .field--name-field-content .field__item:last-child {
     .paragraph--type--custom-block {
-      padding-left: 1rem;
       padding-right: 0;
+      padding-left: 1rem;
     }
   }
 
   .region-content > .block--type-block-with-text-and-link:last-child {
-    padding-left: 1rem;
     padding-right: 0;
+    padding-left: 1rem;
   }
 }

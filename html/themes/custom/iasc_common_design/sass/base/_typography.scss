@@ -14,18 +14,18 @@ a {
 
   &:hover,
   &:focus {
-    color: $iasc-primary;
     text-decoration: none;
+    color: $iasc-primary;
   }
 }
 
 .cd-heading-2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   color: $iasc-primary;
   border-bottom: 3px solid $cd-blue-grey;
+  font-size: 1.5rem;
+  font-weight: 400;
 
   .path-frontpage & {
     font-size: 1.8rem;
@@ -34,14 +34,13 @@ a {
 }
 
 .cd-heading-3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   color: $iasc-primary;
   border-bottom: 1px solid $iasc-primary;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
-
 
 //.cd-page-title {
 //  @include xl {
@@ -63,7 +62,6 @@ a {
 //    }
 //  }
 //}
-
 
 //.cd-page-title {
 //  font-size: 1.875rem;

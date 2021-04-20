@@ -5,8 +5,8 @@
 @include desktop {
   .grid-2-col {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .grid-2-col > * {
@@ -16,13 +16,12 @@
 }
 
 @supports (display: grid) {
-
   @include desktop {
 
     .grid-2-col {
       display: grid;
-      grid-gap: 1rem;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-gap: 1rem;
     }
   }
 }

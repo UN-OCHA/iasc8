@@ -1,2 +1,3 @@
-.cd-hero__link{color:#272e67;background-color:#ff4d59}.cd-hero__link:focus,.cd-hero__link:hover{color:#272e67;background-color:#ff715b}
-/*# sourceMappingURL=cd-hero-iasc.css.map */
+.cd-hero__link { color: #272e67; background-color: #ff4d59; }
+.cd-hero__link:focus,
+.cd-hero__link:hover { color: #272e67; background-color: #ff715b; }

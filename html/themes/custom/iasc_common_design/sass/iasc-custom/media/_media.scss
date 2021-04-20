@@ -1,13 +1,13 @@
 .media--type-remote-video {
   // Responsive media remote video embeds.
   .field--name-field-media-oembed-video {
+    position: relative;
     float: none;
     clear: both;
     width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
     height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
 
     iframe {
       position: absolute;

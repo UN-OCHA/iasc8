@@ -1,8 +1,8 @@
 .cd-hero {
-  margin: 0;
-  height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .cd-hero__image {
@@ -31,8 +31,8 @@
 .cd-hero__title {
   margin: 0 0 0.5rem;
   font-size: 1.125rem;
-  line-height: 1.2;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .cd-hero__description {
@@ -51,12 +51,12 @@
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
+  transition: background-color 1s ease-out;
   text-align: center;
-  font-weight: 700;
   text-decoration: none;
   color: white;
   background-color: var(--cd-ocha-blue);
-  transition: background-color 1s ease-out;
+  font-weight: 700;
 }
 
 .cd-hero__link:hover,
@@ -94,8 +94,8 @@
 
 @media (min-width: 768px) {
   .cd-hero {
-    height: 16rem;
     overflow: hidden;
+    height: 16rem;
   }
 
   .cd-hero__image {
@@ -105,19 +105,19 @@
     transform: translate(-50%, -50%);
   }
 
-  @supports (object-fit: cover) {
-    .cd-hero__image {
-      transform: none;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
-  }
-
   .cd-hero__container {
     position: absolute;
     bottom: 1rem;
     left: 0;
     width: 46%;
+  }
+
+  @supports (object-fit: cover) {
+    .cd-hero__image {
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: none;
+    }
   }
 }

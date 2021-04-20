@@ -5,8 +5,8 @@
 }
 
 .cd-user-list li {
-  padding-bottom: 1rem;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
   /* border-bottom: 1px solid var(--cd-site-bg-color); */
 }
 
