@@ -1,8 +1,7 @@
 name: IASC OCHA Common Design
 type: theme
 description: IASC OCHA Common Design drupal theme
-core: 8.x
-# Defines the base theme
+core_version_requirement: ^8.8 || ^9
 base theme: common_design
 logo: 'img/logos/logo.svg'
 
@@ -48,6 +47,7 @@ libraries-override:
 
 # CD components
 # Requires Components module
-components:
-  namespaces:
-    cd-components: components
+# component-libraries:
+#   cd-components:
+#     paths:
+#       - components
