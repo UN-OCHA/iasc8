@@ -101,7 +101,6 @@
       @include desktop {
         width: 100%;
         // IE 11.
-        // sass-lint:disable no-duplicate-properties
         max-width: 100%;
         max-width: unset;
       }
