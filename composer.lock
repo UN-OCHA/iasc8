@@ -2806,6 +2806,10 @@
                     "homepage": "https://www.drupal.org/user/1485048"
                 },
                 {
+                    "name": "frjo",
+                    "homepage": "https://www.drupal.org/user/5546"
+                },
+                {
                     "name": "jdwfly",
                     "homepage": "https://www.drupal.org/user/298179"
                 },
@@ -5399,7 +5403,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.4",
-                    "datestamp": "1591383264",
+                    "datestamp": "1593179846",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5542,7 +5546,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1597142372",
+                    "datestamp": "1597142482",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5912,6 +5916,10 @@
                 "GPL-2.0+"
             ],
             "authors": [
+                {
+                    "name": "bbrala",
+                    "homepage": "https://www.drupal.org/user/3366066"
+                },
                 {
                     "name": "casey",
                     "homepage": "https://www.drupal.org/user/32403"
@@ -6682,6 +6690,10 @@
                 {
                     "name": "himanshu-dixit",
                     "homepage": "https://www.drupal.org/user/3513954"
+                },
+                {
+                    "name": "wells",
+                    "homepage": "https://www.drupal.org/user/2452278"
                 }
             ],
             "description": "Harmonizes social networking services in Drupal",
@@ -14289,16 +14301,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "5397ad5c090e2fc80c06d1d28ad1044d8b300118"
+                "reference": "65c2fc09ece417113dd8915d11c63d004de4ad32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/5397ad5c090e2fc80c06d1d28ad1044d8b300118",
-                "reference": "5397ad5c090e2fc80c06d1d28ad1044d8b300118",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/65c2fc09ece417113dd8915d11c63d004de4ad32",
+                "reference": "65c2fc09ece417113dd8915d11c63d004de4ad32",
                 "shasum": ""
             },
             "require": {
@@ -14310,7 +14322,7 @@
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
-            "time": "2021-04-20T11:42:35+00:00"
+            "time": "2021-04-20T15:35:55+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
