@@ -5,7 +5,7 @@ COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --quiet --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml docker/redis.services.yml html/sites/default && \
-    composer run gulp
+    composer run sass
 
 FROM unocha/php7-k8s:7.3-NR-stable
 
