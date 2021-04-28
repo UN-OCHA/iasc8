@@ -43,26 +43,26 @@ a {
   font-weight: 600;
 }
 
-//.cd-page-title {
-//  @include xl {
-//    .cd-layout-with-sidebar & {
-//      [dir='ltr'] & {
-//        padding-right: 320px; // --cd-max-width minus padding, minus --cd-max-content-width.
-//      }
-//
-//      [dir='rtl'] & {
-//        padding-left: 320px;
-//      }
-//    }
-//
-//    .cd-layout-with-sidebar-first &,
-//    .cd-layout-with-sidebar-second &,
-//    .cd-layout-with-sidebar-both & {
-//      padding-left: 0;
-//      padding-right: 0;
-//    }
-//  }
-//}
+.cd-page-title {
+  @include xl {
+    .cd-layout-with-sidebar & {
+      [dir="ltr"] & {
+        padding-right: 320px; // --cd-max-width minus padding, minus --cd-max-content-width.
+      }
+
+      [dir="rtl"] & {
+        padding-left: 320px;
+      }
+    }
+
+    .cd-layout-with-sidebar-first &,
+    .cd-layout-with-sidebar-second &,
+    .cd-layout-with-sidebar-both & {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
 
 //.cd-page-title {
 //  font-size: 1.875rem;
