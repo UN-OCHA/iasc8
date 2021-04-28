@@ -30,7 +30,7 @@
 
   // Override cd-date component with brand colours.
   .cd-date__wrapper {
-    background-color: $iasc-secondary;
+    background-color: $iasc-primary;
   }
 
   .cd-date__wrapper + .cd-date__wrapper {
@@ -39,7 +39,7 @@
 
   .cd-date__month,
   .cd-date__year {
-    color: $iasc-secondary;
+    color: $iasc-primary;
   }
 }
 
