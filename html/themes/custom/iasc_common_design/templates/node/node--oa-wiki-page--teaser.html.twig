@@ -78,11 +78,10 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'cd-article-teaser'
+  'cd-teaser [ cd-flow cd-bumper ]'
 ]
 %}
-{{ attach_library('classy/node') }}
-{{ attach_library('common_design/cd-article-teaser') }}
+{{ attach_library('common_design/cd-teaser') }}
 
 {% set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
@@ -90,15 +89,15 @@
 <article{{ attributes.addClass(classes) }}>
 
   {% if content.field_thumbnail|render %}
-    <div class="cd-article-teaser__image">
+    <div class="cd-teaser__image">
       {{ content.field_thumbnail }}
     </div>
   {% endif %}
 
-  <div class="cd-article-teaser__container">
+  <div class="cd-teaser__container [ cd-flow ]">
     {{ title_prefix }}
     {% if label and not page %}
-      <h3{{ title_attributes.addClass('cd-article-teaser__title') }}>
+      <h3{{ title_attributes.addClass('cd-teaser__title') }}>
         {% if showPage %}
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         {% else %}
@@ -108,7 +107,7 @@
     {% endif %}
     {{ title_suffix }}
 
-    <div class="cd-article-teaser__description node__content">
+    <div class="cd-teaser__description node__content">
       {{ content|without('field_product_thumbnail','body', 'field_thumbnail','field_media_files') }}
 
       {% set contentBody %}

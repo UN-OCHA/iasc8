@@ -1,1 +1,0 @@
-{"version":3,"sources":["cd-article-teaser/cd-article-teaser.scss"],"names":[],"mappings":"AAAA,mDAEI,UAAW,CAFf,iFAMI,SAAU","file":"cd-article-teaser.css","sourcesContent":[".cd-layout-sidebar-first {\n  .cd-article-teaser__image {\n    float: none;\n  }\n\n  .cd-article-teaser__image + .cd-article-teaser__container {\n    padding: 0;\n  }\n}\n"]}

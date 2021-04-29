@@ -1,0 +1,8 @@
+.cd-styled-list {
+  padding: 0;
+}
+
+.cd-styled-list__image img {
+  width: 100%;
+  height: auto;
+}

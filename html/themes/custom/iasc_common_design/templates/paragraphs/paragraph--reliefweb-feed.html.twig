@@ -49,13 +49,15 @@
 
 {% if (feed_links) %}
   {{ attach_library('common_design/cd-bullet-list') }}
+  {{ attach_library('common_design/cd-typography') }}
+  {{ attach_library('common_design/cd-block-title') }}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
 
-    <h2>Reliefweb feed</h2>
+    <h2 class="cd-block-title">Reliefweb feed</h2>
 
       {% block content %}
-        <ul class="cd-bullet-list">
+        <ul class="cd-bullet-list cd-max-width [ cd-flow ]">
           {% for feed_link in feed_links %}
             <li>
               <a href="{{ feed_link.url }}">
@@ -66,7 +68,7 @@
         </ul>
 
         {% if more_link_url and more_link_label %}
-          <div class="cd-list__link more-link">
+          <div class="cd-styled-list__link more-link">
             <a href="{{ more_link_url }}" rel="tag">{{ more_link_label }}</a>
           </div>
         {% endif %}

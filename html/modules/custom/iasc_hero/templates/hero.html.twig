@@ -19,7 +19,7 @@
 {% set hero_image_url = file_url(content.field_hero_image[0]['#media'].field_media_image.entity.uri.value|image_style('hero')) %}
 {% set hero_image_alt = file_url(content.field_hero_image[0]['#media'].field_media_image.alt) %}
 
-{{ attach_library('common_design/cd-hero') }}
+{{ attach_library('iasc_common_design/cd-hero') }}
 
 <div{{ attributes.addClass('hero') }}>
   <figure class="cd-hero">
@@ -36,9 +36,7 @@
 
       {% if content.field_hero_date|render or content.field_hero_link|render %}
       <div class="cd-hero__footer">
-        <div class="cd-hero__date">
-          {{ content.field_hero_date }}
-        </div>
+        <div class="cd-hero__date">{{ content.field_hero_date }}</div>
 
         {% if content.field_hero_link|render %}
         <a class="cd-hero__link" href="{{ content.field_hero_link.0['#url'] }}">

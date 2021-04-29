@@ -11,7 +11,7 @@ dependencies:
 id: usermenu
 theme: iasc_common_design
 region: header_top
-weight: 0
+weight: -24
 provider: null
 plugin: 'system_menu_block:account'
 settings:

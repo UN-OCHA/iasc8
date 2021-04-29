@@ -3,10 +3,10 @@
   margin-bottom: 2rem;
 
   @include desktop {
+    float: left;
+    width: 31%;
     //padding: 0 1rem;
     margin-bottom: 1rem;
-    width: 31%;
-    float: left;
 
     &:nth-child(odd) {
       margin-right: 1rem;
@@ -33,31 +33,30 @@
   //}
 
   footer {
-    background-color: $cd-site-bg-color--dark;
-    margin-left: -1rem;
     margin-right: -1rem;
+    margin-left: -1rem;
     padding: 1rem;
+    background-color: $cd-blue-grey--dark;
   }
 }
 
 @supports (display: flex) {
-
   @include tablet {
 
     .grid-3-col {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .grid-item {
-      flex: 0 0 48%;
       display: flex;
+      flex: 0 0 48%;
     }
 
     .grid-item_article {
-      flex: 1 0 100%;
       display: flex;
+      flex: 1 0 100%;
       flex-direction: column;
 
       // Sticky footer.
@@ -71,41 +70,37 @@
 
     .grid-item {
       .cd-layout-highlighted & {
+        float: none;
         flex: 0 0 24%;
+
+        // Reset from no support layout.
+        width: unset;
         max-width: 24%;
 
-        // Reset from no support layout.
-        width: unset;
-        float: none;
-
         &:nth-child(odd) {
-          margin-right: unset;
           clear: initial;
+          margin-right: unset;
         }
       }
-    }
 
-    .grid-item {
       .cd-layout-content & {
+        float: none;
         flex: 0 0 32%;
-        max-width: 32%;
 
         // Reset from no support layout.
         width: unset;
-        float: none;
+        max-width: 32%;
 
         &:nth-child(odd) {
-          margin-right: unset;
           clear: initial;
+          margin-right: unset;
         }
       }
     }
   }
 }
 
-
 @supports (display: grid) {
-
   @include tablet {
 
     .grid-3-col {
@@ -142,7 +137,8 @@
 
   .cd-grid-3-col .views-row {
     @extend .grid-item;
-    background-color: $cd-site-bg-color;
+
+    background-color: $cd-blue-grey;
   }
 }
 

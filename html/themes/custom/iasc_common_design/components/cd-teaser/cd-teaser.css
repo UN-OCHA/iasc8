@@ -1,0 +1,37 @@
+.cd-layout-sidebar-first .cd-teaser__image {
+  float: none;
+}
+
+.cd-layout-sidebar-first .cd-teaser__image + .cd-teaser__container {
+  padding: 0;
+}
+
+.paragraph--type--featured h3.cd-teaser__title {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.paragraph--type--featured .cd-teaser__title a {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.paragraph--type--featured .cd-teaser__title a:hover,
+.paragraph--type--featured .cd-teaser__title a:focus {
+  text-decoration: underline;
+}
+
+.paragraph--type--featured .cd-teaser__image img {
+  width: 100%;
+}
+
+.cd-teaser .cd-date {
+  margin-right: 2rem;
+}
+
+@media (min-width: 576px) {
+  .cd-teaser .cd-date {
+    margin-right: 0;
+  }
+}

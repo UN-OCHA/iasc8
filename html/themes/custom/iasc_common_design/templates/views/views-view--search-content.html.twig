@@ -53,19 +53,21 @@
   {% endif %}
 
   {% if not logged_in %}
-    <div class="cd-alert cd-alert--attn">
-      <svg class="cd-icon cd-icon--alert" width="16" height="16" aria-hidden="true" focusable="false">
-        <use xlink:href="#cd-icon--alert"></use>
-      </svg>
-      <div class="cd-alert__message">
-        <div class="cd-alert__title">
-          {% trans %}
-            Please Log In for Full Search Results.
-          {% endtrans %}
+    <div class="cd-alert">
+      <div aria-live="polite">
+        <svg class="cd-icon cd-icon--about" aria-hidden="true" focusable="false" width="16" height="16">
+          <use xlink:href="#cd-icon--about"></use>
+        </svg>
+        <div class="cd-alert__container cd-max-width [ cd-flow ]">
+          <div class="cd-alert__title">
+            {% trans %}
+              Please Log In for Full Search Results.
+            {% endtrans %}
+          </div>
+          <div class="cd-alert__message">
+            <p>{% trans %}Please{% endtrans %}&nbsp<a href="/user/login/hid?destination={{ path('<current>') }}">{% trans %}log in </a> to see available search results.{% endtrans %}</p>
+          </div>
         </div>
-        <p>
-          {% trans %}Please{% endtrans %}&nbsp<a href="/user/login/hid?destination={{ path('<current>') }}">{% trans %}log in </a> to see available search results.{% endtrans %}
-        </p>
       </div>
     </div>
   {% endif %}
@@ -82,7 +84,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content">
+    <div class="view-content [ cd-flow ]">
       {{ rows }}
     </div>
   {% elseif empty %}

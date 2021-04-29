@@ -1,20 +1,16 @@
 {% embed 'node--full.html.twig' %}
 
   {% block section %}
-    <section class="cd-layout-two-col">
+    <div class="cd-layout-two-col">
 
       <div class="cd-layout-main-content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_category', 'field_iasc_audience') }}
         {{ content.field_content }}
       </div>
 
-      <aside class="cd-layout-sidebar-first" role="complementary">
-        {{ content.field_category }}
-        {{ content.field_iasc_audience }}
-        {{ content.field_sidebar }}
-      </aside>
+      <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_category }}{{ content.field_iasc_audience }}{{ content.field_sidebar }}</aside>
 
-    </section>
+    </div>
   {% endblock %}
 
 {% endembed %}
