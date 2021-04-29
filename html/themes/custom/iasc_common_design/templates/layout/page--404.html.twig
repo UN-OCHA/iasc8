@@ -1,0 +1,33 @@
+{% embed 'page.html.twig' %}
+
+  {% block main %}
+    {{ attach_library('common_design/cd-form') }}
+    {# Link to skip to the main content is in html.html.twig #}
+    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
+
+      {{ page.page_title }}
+
+      <div class="cd-layout-content-wrapper">
+
+        <div class="cd-layout-content">
+          <p>{% trans %}Sorry, the page you are looking for cannot be found.{% endtrans %}</p>
+
+          <form action="/search" method="get" accept-charset="UTF-8">
+            <div class="cd-form--inline">
+              <div class="cd-form__item">
+                <label for="edit-keys" class="visually-hidden">Search</label>
+                <input placeholder="What are you looking for?" type="text" id="cd-search" data-drupal-selector="edit-keys" name="keys" value="" size="30" maxlength="128">
+              </div>
+              <div class="cd-form__item">
+                <button data-twig-suggestion="search_submit" class="cd-button cd-button--submit js-form-submit form-submit" value="Search" data-drupal-selector="edit-submit-search-content" type="submit" id="edit-submit-search-content">Search</button>
+              </div>
+            </div>
+          </form>
+
+        </div>{# /.cd-layout-content #}
+
+      </div>
+    </main>
+  {% endblock %}
+
+{% endembed %}

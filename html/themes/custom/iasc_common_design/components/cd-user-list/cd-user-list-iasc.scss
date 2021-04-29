@@ -1,0 +1,49 @@
+$iasc-secondary: #3c4485;
+$cd-blue-grey: var(--cd-blue-grey);
+
+.cd-user-list {
+  // Hack to prevent float issue when text is shorter than image height.
+  clear: both;
+  overflow: hidden;
+}
+
+.cd-user-list li {
+  clear: left;
+  overflow: hidden;
+  border-bottom: 1px solid $cd-blue-grey;
+
+  &:only-of-type,
+  &:last-child {
+    border-bottom: 0 none;
+  }
+}
+
+.cd-user-list__image {
+  overflow: hidden;
+}
+
+.cd-user-list__image img {
+  width: 100%;
+}
+
+.cd-user-list__name {
+  font-size: 1rem;
+}
+
+.cd-user-list__position {
+  font-size: 0.875rem;
+}
+
+.cd-user-list__organization {
+  color: $iasc-secondary;
+  font-size: 0.875rem;
+}
+
+.cd-user-list__has-image {
+  .cd-user-list__name,
+  .cd-user-list__position,
+  .cd-user-list__organization,
+  .cd-user-list__city {
+    padding-left: 7rem; // width of image + margin-right.
+  }
+}

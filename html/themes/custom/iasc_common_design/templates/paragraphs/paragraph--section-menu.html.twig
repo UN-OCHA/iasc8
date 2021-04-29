@@ -47,14 +47,14 @@
   ]
 %}
 {% if (section_links) %}
-  {{ attach_library('common_design/cd-list') }}
+  {{ attach_library('common_design/cd-styled-list') }}
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
 
     <h2 class="cd-sidebar__label">Sections</h2>
 
       {% block content %}
-        <ul class="cd-list">
+        <ul class="cd-styled-list">
           {% for section_link in section_links %}
             <li>{{ section_link }}</li>
           {% endfor %}

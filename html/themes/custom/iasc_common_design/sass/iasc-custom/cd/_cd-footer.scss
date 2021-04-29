@@ -3,6 +3,10 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 .cd-footer {
-  background: $cd-primary-bg-color;
-  color: $cd-white-text-color;
+  // Position footer at the bottom of viewport. This might need adjusting based on page layout.
+  --cd-footer-row-number: 6;
+
+  grid-row: var(--cd-footer-row-number) / var(--cd-footer-row-number);
+  color: $cd-white;
+  background: $cd-primary;
 }

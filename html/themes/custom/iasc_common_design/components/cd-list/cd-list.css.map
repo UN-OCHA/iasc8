@@ -1,1 +1,0 @@
-{"version":3,"sources":["cd-list/cd-list.scss"],"names":[],"mappings":"AAEA,SACE,SAAU,CAGZ,oBACE,UAAW,CACX,WAAY","file":"cd-list.css","sourcesContent":["@import '../../sass/cd/cd-variables';\n\n.cd-list {\n  padding: 0;\n}\n\n.cd-list__image img {\n  width: 100%;\n  height: auto;\n}\n"]}

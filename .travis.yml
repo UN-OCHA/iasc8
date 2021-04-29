@@ -1,4 +1,4 @@
-dist: trusty
+dist: bionic
 language: php
 cache:
   directories:
@@ -15,6 +15,9 @@ mysql:
   database: drupal
   username: root
   encoding: utf8
+
+services:
+  - mysql
 
 env:
   global:
@@ -60,6 +63,9 @@ script:
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
   - set +e
+
+  # Theme build.
+  - composer run sass
 
   # Run unit, kernel tests
   - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel

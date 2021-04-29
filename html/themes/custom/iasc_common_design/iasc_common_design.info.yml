@@ -1,8 +1,7 @@
 name: IASC OCHA Common Design
 type: theme
 description: IASC OCHA Common Design drupal theme
-core: 8.x
-# Defines the base theme
+core_version_requirement: ^8.8 || ^9
 base theme: common_design
 logo: 'img/logos/logo.svg'
 
@@ -28,26 +27,12 @@ regions:
 
 # Add implementation-specific styles to base theme components
 libraries-extend:
-  common_design/cd-alert:
-    - iasc_common_design/cd-alert
 
-  common_design/cd-article-teaser:
-    - iasc_common_design/cd-article-teaser
+  common_design/cd-teaser:
+    - iasc_common_design/cd-teaser
 
-  common_design/cd-bullet-list:
-    - iasc_common_design/cd-bullet-list
-
-  common_design/cd-date:
-    - iasc_common_design/cd-date
-
-  common_design/cd-hero:
-    - iasc_common_design/cd-hero
-
-  common_design/cd-list:
-    - iasc_common_design/cd-list
-
-  common_design/cd-user-list:
-    - iasc_common_design/cd-user-list
+  common_design/cd-styled-list:
+    - iasc_common_design/cd-styled-list
 
 libraries-override:
   select_a11y/select_a11y_facets.widget:
@@ -61,7 +46,8 @@ libraries-override:
         css/style.css: components/cd-select-a11y/cd-select-a11y.css
 
 # CD components
-component-libraries:
-  cd-components:
-    paths:
-      - components
+# Requires Components module
+# component-libraries:
+#   cd-components:
+#     paths:
+#       - components

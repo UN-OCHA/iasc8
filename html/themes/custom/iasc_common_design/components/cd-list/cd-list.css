@@ -1,2 +1,133 @@
-.cd-list{padding:0}.cd-list__image img{width:100%;height:auto}
-/*# sourceMappingURL=cd-list.css.map */
+.cd-list {
+  margin: 0;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.cd-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cd-blue-grey);
+}
+
+.cd-list__image {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  max-height: 3rem;
+  padding-right: 1rem;
+}
+
+.cd-list__image svg {
+  max-width: 3rem;
+  max-height: 3rem;
+  fill: var(--cd-ocha-blue);
+}
+
+.cd-list__container {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.cd-list__title {
+  margin: 0 0 0.5rem;
+}
+
+.cd-list__description {
+  margin: 0 0 1rem;
+}
+
+.cd-list__date {
+  padding: 0 0 1rem;
+}
+
+.cd-list__footer {
+  flex: 1 0 100%;
+  padding-right: 1rem;
+}
+
+.cd-list__link {
+  padding-left: 1rem;
+  text-align: right;
+}
+
+.cd-list__link a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cd-list__link:hover,
+.cd-list__link:focus {
+  text-decoration: underline;
+}
+
+.cd-list__link svg {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 1rem;
+  fill: var(--cd-highlight-red);
+}
+
+@media (min-width: 576px) {
+  .cd-list li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .cd-list__image {
+    width: 4rem;
+    max-height: 4rem;
+  }
+
+  .cd-list__image svg {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+
+  .cd-list__date {
+    flex: 0 0 50%;
+    padding: 0.5rem 1rem 0.5rem 0;
+  }
+
+  .cd-list__footer {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .cd-list__container {
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .cd-layout-sidebar-first .cd-list li {
+    flex-wrap: wrap;
+  }
+
+  .cd-layout-sidebar-first .cd-list__image {
+    width: 3rem;
+    max-height: 3rem;
+    padding-right: 1rem;
+  }
+
+  .cd-layout-sidebar-first .cd-list__footer {
+    display: block;
+    flex: 1 0 100%;
+  }
+
+  .cd-layout-sidebar-first .cd-list__link {
+    padding-left: 0;
+    text-align: right;
+  }
+}

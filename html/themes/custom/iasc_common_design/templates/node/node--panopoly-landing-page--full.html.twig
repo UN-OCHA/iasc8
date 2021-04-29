@@ -84,8 +84,23 @@
 
 {% set longDate = node.getCreatedTime|format_date('custom', 'l, F j, Y') %}
 
-{{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if title %}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ title }}</a>
+      </h2>
+    {% else %}
+      {# This is not wrapped as this renders the page title block which
+         already wraps the node title in a <h1>. #}
+      {{ title }}
+    {% endif %}
+  {% endif %}
+  {{ title_suffix }}
+
+  {{ local_tasks }}
 
   {% if display_submitted %}
     <footer class="node__meta">
@@ -100,7 +115,7 @@
     {{ content|without('body', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      <section class="cd-layout-two-col">
+      <div class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
           {{ content.body }}
@@ -109,7 +124,7 @@
 
         <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_sidebar }}</aside>
 
-      </section>
+      </div>
     {% endblock %}
 
 

@@ -84,7 +84,7 @@
         "drupal/twig_tweak": "^2.8",
         "drupal/variationcache": "^1.0",
         "drupal/viewsreference": "^2.0.0",
-        "drupal/webform": "^5.19",
+        "drupal/webform": "^5.25",
         "drush/drush": "^9.0.0",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^1.1",
@@ -92,7 +92,7 @@
         "symfony/event-dispatcher": "4.3.3 as 3.4.41",
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
-        "unocha/common_design": "^2.8.9",
+        "unocha/common_design": "^4.0.0",
         "unocha/ocha_integrations": "^1.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -135,13 +135,13 @@
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
-        "gulp-prepare": "cd html/themes/custom/iasc_common_design && npm install",
-        "gulp-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/gulp build",
-        "gulp-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
-        "gulp": [
-            "@gulp-prepare",
-            "@gulp-build",
-            "@gulp-cleanup"
+        "sass-prepare": "cd html/themes/custom/iasc_common_design && npm install",
+        "sass-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/sass sass:build",
+        "sass-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
+        "sass": [
+            "@sass-prepare",
+            "@sass-build",
+            "@sass-cleanup"
         ]
 
     },

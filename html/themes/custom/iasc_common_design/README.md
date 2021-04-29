@@ -1,139 +1,36 @@
-# OCHA Common Design base theme for Drupal 8
+# OCHA Common Design sub theme for Drupal 8
 
-A base theme of the OCHA Common Design for Drupal 8.
+A sub theme, extending [common_design](https://github.com/UN-OCHA/common_design) base theme.
 
-Extend as needed.
+This can be used as a starting point for implementations. Add components, override and extend base theme as needed. Refer to [Drupal 8 Theming documentation](https://www.drupal.org/docs/8/theming) for more.
 
-**Releases**
+Copy this directory to `/themes/custom/` and optionally rename the folder and associated theme files from
+`common_design_subtheme` to your theme name.
 
-Refer to [Github releases](https://github.com/UN-OCHA/common_design/releases) for latest updates. We use [npm-version](https://docs.npmjs.com/cli/version) and [sematantic versioning](https://semver.org/)
-
-
-# @WIP Update below for D8
-
-## To do:
-
-* Grid for Views with view mode override
-* Logo as picture element for PNG fallback
-* Remove modernizr classes and replace with feature queries
-* Test Aggregation versus sass compilation to a single css file
-
-## This theme contains
-
-* Common Header
-* Common Footer
-* Common SVG Icons
-* Variables for breakpoints, colours, font-sizes, fonts, measurements and z-index
-* Mixins for clearfix, REM font sizes and media queries
-* Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
-
-**Drupal components:**
-
-* Normalise is in core
-* jQuery is in core but isn't loaded globally. We include it as a library when we need it.
-* hidden.module.css for display-related utility classes
-
-
-**Optional components:**
-
-* Grid (simplified version of Bootstrap v4 grid, https://v4-alpha.getbootstrap.com/layout/overview/)
-* Typography
-* Basic table styles
-* Basic form styles
-* Favicons
-* gulp.js workflow for frontend development
-  * Sass
-  * Sourcemaps (see which specific Sass file contains styles during local development)
-  * Autoprefixer
-  * JS linting
-
-## Getting started
-
-1. Clone this repo to themes/contrib or install using Composer (todo)
-2. If you want to renamne the theme, change the folder name, the filename of the .info file and find and replace for `ocha_basic` in the theme folder.
-3. In the Drupal Admin, go to Appearance, find 'OCHA Basic Starter Theme' (or whatever you've renamed it to), and select **Enable and set default**
-
-**To contribute to `common_design` development:**
-
-1. Run `nvm use` to ensure the correct node version.
-2. Install the dependencies: `npm install`
-3. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
-4. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
-5. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
-6. For twig debug and local development see [Disable Drupal 8 caching during development
-](https://www.drupal.org/node/2598914)
-
-Drupal 8 core has helper classes for accessibility [Hide content properly](https://www.drupal.org/docs/8/accessibility/hide-content-properly)
-
-## CSS
-
-This project uses [Sass](http://sass-lang.com/). To make changes edit the `.scss` files in the `sass/` folder, do NOT edit the files in `css/` directly.
-
-Run `gulp dev` in the theme folder to have gulp watch for changes and automatically rebuild the CSS.
-
-Preferably use Jenkins to run the Gulp task on build to generate the CSS. If this is possible on your project, add the `css/` folder to the `.gitignore` file and delete generated CSS from the repo.
-
-
-## JS
-
-Javascript files should be added to `js/` and to the scripts section of `ocha_basic.info`
-
-
-## Icons
-
-The available icons can be found in `img/icons`
-
-There are two techniques used, depending on context.
-
-1. SVG as a background-image value, usually on a pseudo element. The SVG fill colour is added as an attribute in the SVG file. We use this technique when using technique 2 isn't possible.
-The icons are black by default. If you need another color, it's best to copy the icon and manually adjust the fill/stroke to suit your needs. Rename the copy to include the color in the filename eg. `arrow-down--white.svg`.
-
-2. SVG symbol sprite using the `<use>` element. The SVG sprite is loaded as a single asset in the `html.tpl.php` before the closing body tag. Each icon within the sprite can be referenced by its ID eg.
+### Path of the libraries
+If the subtheme name changes, the path of the global style sheet in `common_design_subtheme.info.yml` needs to reflect the new sub theme name.
 ```
-<svg class="cd-icon cd-icon--arrow-down">
-  <use xlink:href="#cd-icon--arrow-down"></use>
-</svg>
-```
-Each icon should have the class `cd-icon` and a BEM selector if needed eg. `cd-icon--arrow-down`. We can create associated CSS rules to control dimension and fill. We're using https://github.com/jkphl/gulp-svg-sprite. See https://una.im/svg-icons for more details.
-
-### Generating the icons sprite
-As defined in the gulp task, all new icons should be placed in the `img/icons` directory.
-Run `gulp sprites` to generate a new sprite.
-This generates the sprite SVG and places it in `img/icons/icons-sprite.svg` and it creates an html page with all SVGs for reference `img/icons/sprite.symbol.html`.
-
-
-### Renaming icons
-When importing a new version of the Common Icons, there is a bulk-renaming command in `package.json` that can be invoked by running the following:
-
-```
-# first, cd to repo root
-npm run icon-rename
+libraries:
+- common_design_subtheme/global-styling
 ```
 
-This assumes that you have a tool compatible with http://brewformulas.org/Rename — you can install it on OSX using Homebrew:
+### Customise the logo
+- Set the logo `logo: 'img/logos/logo.svg'` in the `common_design_subtheme.info.yml` file, and in the `sass/cd-header/_cd-logo.scss` partial override file.
+- Adjust the grid column width in `sass/cd-header/_cd-header.scss` partial override file to accommodate the logo.
 
-```
-brew install rename
-```
+### Customise the favicon and homescreen icons
+Replace the favicon in the theme's root, and the homescreen icons in `img/` with branded versions
 
+### Customise colours
+- Change colour-related variable names and values in `sass/cd/_cd_variables.scss` and replace in all references to in partial overrides in `common_design_subtheme/sass/cd/`
 
-## Browser support
+### Other customisations
+Override sass partials and extend twig templates from the base theme as needed, copying them into the sub theme and linking them using `@import` for sass and `extend` or `embed` for twig templates.
 
-Progressive enhancement approach to layout, using Feature Queries to detect support for flexbox and grid.
+Add new components by defining new libraries in `common_design_subtheme.libraries.yml` and attaching them to relevant templates. Or use existing components from `common_design.libraries.yml` base theme by attaching the libraries to twig template overrides in the sub theme.
 
+Override theme preprocess functions by copying from `common_design.theme` and editing as needed. For example, if new icons are added, a new icon sprite will need to be generated and the `common_design_preprocess_html` hook used to attach the icon sprite to the page will need a new path to reflect the sub theme's icon sprite location.
 
-## Favicons
+Refer to [common_design README](https://github.com/UN-OCHA/common_design/#common-design-base-theme-for-drupal-8) for general details about base theme and instructions for compilation. There should be no need to compile the base theme, only the sub theme.
 
-OCHA default favicons are provided. Update these with your logo.
-
-http://realfavicongenerator.net/ is a good tool for generating favicons.
-
-
-## Add to Homescreen / manifest.json
-
-We support the [PWA Drupal module](https://www.drupal.org/project/pwa) instead of providing our own manifest.json file. The `hook_pwa_manifest_alter()` hook is implemented in `template.php` with our default colors/icons, which can be overridden using the normal PWA admin UI.
-
-
-## Styleguide
-
-See https://un-ocha.github.io/styleguide/ocha/ for documentation and examples of the styles used.
+Refer to [common_design README E2E testing](https://github.com/UN-OCHA/common_design/#e2e-testing) for information about running tests.

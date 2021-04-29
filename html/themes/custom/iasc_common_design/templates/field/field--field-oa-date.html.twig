@@ -38,40 +38,36 @@
  */
 #}
 {{ attach_library('common_design/cd-date') }}
-<div class="cd-date cd-date-wrapper">
+<div class="cd-date">
   {% if label_hidden == false %}
     <h3 class="field__label">{{ label }}</h3>
   {% endif %}
 
   {% if items|length > 0 %}
-  <div class="cd-date-month-wrapper">
-    <span class="cd-date-month">
-      {% if min_date.month != max_date.month %}
-        {{ min_date.month }} - {{ max_date.month }}
-      {% else %}
-        {{ min_date.month }}
-      {% endif %}
-    </span>
-  </div>
-
-  <div class="cd-date-day-wrapper">
-    <span class="cd-date-day">
-      {% if min_date.day != max_date.day %}
-        {{ min_date.day }} - {{ max_date.day }}
-      {% else %}
-        {{ min_date.day }}
-      {% endif %}
-    </span>
-  </div>
-
-  <div class="cd-date-year-wrapper">
-    <small class="cd-date-year">
-      {% if min_date.year != max_date.year %}
-        {{ min_date.year }} - {{ max_date.year }}
-      {% else %}
-        {{ min_date.year }}
-      {% endif %}
-    </small>
-  </div>
+    <div class="cd-date__wrapper">
+      <span class="cd-date__day">
+        {% if min_date.day != max_date.day %}
+          {{ min_date.day }} - {{ max_date.day }}
+        {% else %}
+          {{ min_date.day }}
+        {% endif %}
+      </span>
+    </div>
+    <div class="cd-date__wrapper">
+      <span class="cd-date__month">
+        {% if min_date.month != max_date.month %}
+          {{ min_date.month }} - {{ max_date.month }}
+        {% else %}
+          {{ min_date.month }}
+        {% endif %}
+      </span>
+      <span class="cd-date__year">
+        {% if min_date.year != max_date.year %}
+          {{ min_date.year }} - {{ max_date.year }}
+        {% else %}
+          {{ min_date.year }}
+        {% endif %}
+      </span>
+    </div>
   {% endif %}
 </div>

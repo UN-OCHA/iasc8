@@ -14,8 +14,8 @@
 
 .paragraph--type--services-landing-block {
   form {
-    border-bottom: 1px solid $cd-mid-bluey-grey;
     margin-bottom: 4rem;
+    border-bottom: 1px solid $cd-blue-grey;
 
     @include desktop {
       margin-bottom: 6rem;
@@ -27,10 +27,10 @@
   }
 
   label {
-    font-size: 1.5rem;
-    font-weight: 400;
     margin-bottom: 0.25rem;
     color: $iasc-primary;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 
   select {

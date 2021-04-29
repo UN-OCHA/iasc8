@@ -9,7 +9,7 @@ dependencies:
 id: headersearch
 theme: iasc_common_design
 region: header_search
-weight: 0
+weight: -23
 provider: null
 plugin: iasc_header_search_block
 settings:

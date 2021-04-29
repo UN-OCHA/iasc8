@@ -2,7 +2,7 @@
 // Common Design: Layout
 //——————————————————————————————————————————————————————————————————————————————
 //——————————————————————————————————————————————————————————————————————————————
-
+//
 // Assumes frontpage has hero as first element in header field.
 .path-frontpage:not(.user-logged-in) .cd-layout-container main.cd-container {
   //Hack for IE11. Hero component covers search so we want the padding to make it usable in IE11.
@@ -12,98 +12,8 @@
   }
 }
 
-.cd-layout-hero {
-  position: relative;
-}
-
-section.cd-layout-two-col .cd-layout-sidebar-first {
-  background-color: transparent;
-  padding: 0;
-}
-
-.page-wrapper > .cd-container {
-  padding-bottom: 40px;
-
-  @include tablet {
-    padding-bottom: 60px;
-  }
-
-  @include xlarge {
-    padding-bottom: 100px;
-  }
-}
-
-section.cd-layout-two-col .cd-layout-main-content {
-  @include desktop {
-    margin-right: 3rem;
-  }
-}
-
-main.cd-container aside:empty {
-  display: none;
-}
-
-// One sidebar.
-.cd-layout-with-sidebar-first .cd-layout-sidebar-first {
-  @include tablet {
-    flex-basis: 550px;
-  }
-
-  @include desktop {
-    flex-basis: 285px;
-  }
-}
-
-.cd-layout-content {
-  @include tablet {
-    .cd-layout-with-sidebar-first &,
-    .cd-layout-with-sidebar-second & {
-      min-width: 50%;
-    }
-  }
-
-  @include desktop {
-    .cd-layout-with-sidebar-first &,
-    .cd-layout-with-sidebar-second & {
-      min-width: 50%;
-    }
-  }
-
-  .cd-layout-with-sidebar-first & {
-    @include tablet {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    @include desktop {
-      margin-left: 3rem;
-      margin-right: 0;
-    }
-  }
-}
-
-.cd-page-title + main.cd-container {
-  padding-top: 0;
-}
-
-.cd-layout-sidebar-first {
-  margin-bottom: 3rem;
-
-  @include desktop {
-    margin-bottom: 1rem;
-  }
-}
-
-.region-sidebar-first:empty,
-.region-facets:empty,
-.region[data-num-childs="0"] {
-  display: none;
-}
-
-.region-facets + .region-sidebar-first {
-  margin-top: 2rem;
-
-  @include desktop {
-    margin-top: 1rem;
+.cd-layout-two-col .cd-layout-main-content {
+  iframe {
+    max-width: 100%;
   }
 }

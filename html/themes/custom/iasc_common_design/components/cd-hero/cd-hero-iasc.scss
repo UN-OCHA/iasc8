@@ -1,0 +1,20 @@
+$iasc-primary: #272e67;
+$iasc-primary-dark: darken(#272e67, 8%);
+$iasc-highlight: #ff4d59;
+$iasc-red: #ff715b;
+$iasc-secondary: #3c4485;
+$iasc-secondary: #145f7b;
+
+// Brand colours
+$cd-primary: $iasc-primary;
+$cd-primary--dark: $iasc-primary-dark;
+.cd-hero__link {
+  color: $iasc-primary;
+  background-color: $iasc-highlight;
+}
+
+.cd-hero__link:hover,
+.cd-hero__link:focus {
+  color: $iasc-primary;
+  background-color: $iasc-red;
+}

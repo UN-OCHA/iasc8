@@ -8,20 +8,19 @@
   background: rgba($iasc-primary, 0.9);
 
   .button {
-    background: $iasc-red;
-    color: $iasc-primary;
-    font-weight: 700;
-    text-transform: uppercase;
     padding: 10px 12px;
-    margin-top: 1rem;
-
-    @include tablet {
-      margin-top: 0;
-    }
+    text-transform: uppercase;
+    color: $iasc-primary;
+    background: $iasc-red;
+    font-weight: 700;
 
     &:hover,
     &:focus {
       background: darken($iasc-red, 5%);
+    }
+
+    @include tablet {
+      margin-top: 0;
     }
   }
 }
@@ -32,6 +31,10 @@
 
     form {
       margin-left: 20px;
+    }
+
+    input[type="email"] {
+      padding: 0.25rem 0.5rem;
     }
   }
 }

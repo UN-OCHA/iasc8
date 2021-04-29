@@ -18,18 +18,18 @@
   }
 
   &:focus {
-    color: $cd-highlight-red;
+    color: $iasc-highlight;
 
     svg {
-      fill: $cd-highlight-red;
+      fill: $iasc-highlight;
     }
   }
 
-  &[aria-expanded='true'] {
-    color: $cd-highlight-red;
+  &[aria-expanded="true"] {
+    color: $iasc-highlight;
 
     svg {
-      fill: $cd-highlight-red;
+      fill: $iasc-highlight;
     }
   }
 }
@@ -38,6 +38,6 @@
   background: $iasc-secondary;
 
   &:focus {
-    background-color: $cd-highlight-red;
+    background-color: $iasc-highlight;
   }
 }

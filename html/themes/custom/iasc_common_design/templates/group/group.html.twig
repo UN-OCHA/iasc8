@@ -49,23 +49,25 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-  {% if label %}
+  {% if title %}
     {% if not page %}
       <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}" rel="bookmark">{{ title }}</a>
       </h2>
     {% else %}
-      <h1{{ title_attributes.addClass('page-title') }}>
-        {{ label }}
-      </h1>
+      {# This is not wrapped as this renders the page title block which
+         already wraps the node title in a <h1>. #}
+      {{ title }}
     {% endif %}
   {% endif %}
   {{ title_suffix }}
 
+  {{ local_tasks }}
+
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <section class="cd-layout-two-col">
+      <div class="cd-layout-two-col">
 
         <div class="cd-layout-main-content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
@@ -90,7 +92,7 @@
           {{ content.field_sidebar }}
         </aside>
 
-      </section>
+      </div>
     {% endblock %}
 
     {% if content.field_footer|render %}

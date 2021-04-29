@@ -1,9 +1,11 @@
 .viewsreference--view-title {
   @extend .cd-heading-2;
+
   margin-top: 0;
 
   .cd-layout-sidebar-first & {
     @extend .cd-heading-3;
+
     margin-top: 0;
     //margin-top: 1.5rem;
   }
@@ -12,7 +14,7 @@
 .view-updates,
 .view-iasc-group-content {
   .view-header {
-    @extend .page-title;
+    //@extend .cd-page-title;
 
     @include xl {
       padding-right: 0;
@@ -35,26 +37,11 @@
 .view-updates,
 .view-resources,
 .view-iasc-services {
-  .views-exposed-form .form--inline {
-    display: flex;
-    margin-bottom: 2rem;
+  .views-exposed-form .cd-form--inline {
 
     .form-item,
     .form-actions {
       margin: 0;
-    }
-
-    .form-text:focus {
-      outline: 2px solid $cd-bright-blue;
-    }
-
-    .form-actions input[type='submit'] {
-      line-height: 37px;
-      padding: 0 1rem;
-    }
-
-    .form-actions input:focus {
-      outline: 2px solid $cd-bright-blue;
     }
 
     label {
@@ -66,39 +53,45 @@
 .region-facets,
 .region-sidebar-first,
 .region-sidebar-second {
-  .block-search {
-    margin-bottom: 2rem;
-  }
-
   .block-search h2 {
     @extend .cd-heading-3;
+
     margin-top: 0;
   }
 
-  .views-exposed-form .form--inline {
+  form .cd-form--inline {
 
     label {
       @include visually-hidden;
     }
 
-    .form-item {
+    .form-item,
+    .form-actions {
       margin-top: 0;
       margin-bottom: 0;
-    }
 
-    .form-actions {
-      margin: 0;
+      input[type="text"] {
+        padding: 0.25rem 0.5rem;
+
+        @include desktop {
+          padding: 0.5rem;
+        }
+      }
+
+      @include desktop {
+        flex: 1 0 100%;
+      }
     }
 
     .form-text {
       width: 100%;
 
       &:focus {
-        outline: 2px solid $cd-bright-blue;
+        outline: 2px solid $cd-blue--bright;
       }
     }
 
-    .form-actions input[type='submit'] {
+    .form-actions input[type="submit"] {
       width: 100%;
 
       @include sm {
@@ -106,12 +99,15 @@
       }
 
       @include desktop {
+        width: 100%;
         // IE 11.
-        // sass-lint:disable no-duplicate-properties
         max-width: 100%;
         max-width: unset;
-        width: 100%;
       }
+    }
+
+    @include desktop {
+      flex-wrap: wrap;
     }
   }
 }
@@ -145,7 +141,7 @@
     @media (max-width: 1023px) {
       margin-bottom: 1rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid $cd-mid-bluey-grey;
+      border-bottom: 1px solid $cd-blue-grey;
     }
   }
 
@@ -156,4 +152,45 @@
       margin-bottom: 6rem;
     }
   }
+}
+
+.more-link {
+  display: block;
+  text-align: right;
+}
+
+.view-filters {
+  margin-bottom: 2rem;
+}
+
+// Event teaser grid adjustments.
+.cd-grid-2-col {
+  .cd-teaser__container {
+    margin-top: 0;
+  }
+
+  @include tablet {
+    .view-content {
+      .views-row {
+        // Reset cd-flow when 2 columns.
+        margin-top: 0;
+        // Horizontal spacing.
+        padding-left: 0.5rem;
+      }
+
+      .views-row:nth-child(2n+1) {
+        padding-right: 0.5rem;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.cd-pager__item.is-active a {
+  background-color: $iasc-primary;
+}
+
+.cd-pager__item a:hover,
+.cd-pager__item a:focus {
+  background-color: $iasc-secondary;
 }

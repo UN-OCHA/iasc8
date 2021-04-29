@@ -1,7 +1,7 @@
-{% embed 'node--full.html.twig' %}
+{% embed '@iasc_common_design/node/node--full.html.twig' %}
 
   {% block section %}
-    <section class="cd-layout-two-col">
+    <div class="cd-layout-two-col">
 
       {% if user.hasPermission('edit any contact content') %}
       <div class="cd-layout-main-content">
@@ -9,18 +9,14 @@
         {{ content.field_content }}
       </div>
 
-      <aside class="cd-layout-sidebar-first" role="complementary">
-        {{ content.field_membership }}
-        {{ content.field_organisation }}
-        {{ content.field_sidebar }}
-      </aside>
+      <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_membership }}{{ content.field_organisation }}{{ content.field_sidebar }}</aside>
       {% else %}
       <div class="cd-layout-main-content">
         <p>To view more details, please login.</p>
       </div>
       {% endif %}
 
-    </section>
+    </div>
   {% endblock %}
 
 {% endembed %}

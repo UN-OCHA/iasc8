@@ -42,21 +42,21 @@
 {%
   set classes = [
   view_mode ? 'group--view-mode-' ~ view_mode|clean_class,
-  'cd-article-teaser'
+  'cd-teaser'
 ]
 %}
-{{ attach_library('common_design/cd-article-teaser') }}
+{{ attach_library('common_design/cd-teaser') }}
 <article{{ attributes.addClass(classes) }}>
-  <div class="cd-article-teaser__container">
+  <div class="cd-teaser__container">
     {{ title_prefix }}
     {% if label and not page %}
-      <h3{{ title_attributes.addClass('cd-article-teaser__title') }}>
+      <h3{{ title_attributes.addClass('cd-teaser__title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
 
-    <div class="cd-article-teaser__description node__content">
+    <div class="cd-teaser__description node__content">
       {{ content.field_description }}
     </div>
 
