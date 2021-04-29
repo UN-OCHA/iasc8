@@ -651,20 +651,6 @@
                 "dependency",
                 "package"
             ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2021-04-01T07:16:35+00:00"
         },
         {
@@ -957,20 +943,6 @@
             "keywords": [
                 "Xdebug",
                 "performance"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2021-03-25T17:01:18+00:00"
         },
@@ -14322,16 +14294,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v4.0.2",
+            "version": "v4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "f3c0961766d62e9b95893ca83386f55cc396c7d3"
+                "reference": "37f5a758195b2a9c54ee27b7160a383f8fd28c68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/f3c0961766d62e9b95893ca83386f55cc396c7d3",
-                "reference": "f3c0961766d62e9b95893ca83386f55cc396c7d3",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/37f5a758195b2a9c54ee27b7160a383f8fd28c68",
+                "reference": "37f5a758195b2a9c54ee27b7160a383f8fd28c68",
                 "shasum": ""
             },
             "require": {
@@ -14343,7 +14315,7 @@
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
-            "time": "2021-04-26T09:56:32+00:00"
+            "time": "2021-04-29T08:25:04+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -15066,6 +15038,5 @@
     "platform": {
         "php": ">=7.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
