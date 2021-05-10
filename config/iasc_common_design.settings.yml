@@ -8,11 +8,11 @@ logo:
 favicon:
   use_default: 1
 common_design_node_title:
+  full: full
   bio_long: 0
   bio_short: 0
   diff: 0
   featured: 0
-  full: 0
   notifications: 0
   rss: 0
   search_index: 0

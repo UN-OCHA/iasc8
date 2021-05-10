@@ -34,13 +34,10 @@
 .field--name-field-meeting-agendas,
 .field--name-field-oa-section,
 .field--name-field-iasc-audience,
-.field--name-field-links,
 .field--name-field-membership,
 .field--name-group-content-access,
 .field--name-field-ap-responsibility,
 .field--name-field-host,
-.field--name-field-agenda-items,
-.field--name-field-iasc-group-space,
 .field--name-field-info-private,
 .field--name-field-oa-media,
 .field--name-field-main-image,
@@ -49,7 +46,6 @@
 
   > .field__label {
     @extend .cd-heading-2;
-    //margin-top: 0;
   }
 
   .field__item {
@@ -78,7 +74,6 @@
     > .field__label,
     .cd-sidebar__label {
       @extend .cd-heading-3;
-      //margin-top: 1.5rem;
     }
   }
 
@@ -102,6 +97,10 @@
   margin-bottom: 1rem !important;
 }
 
+.field--name-field-iasc-group-space {
+  margin-top: 2rem;
+}
+
 .field--name-field-referenced-docs > .field__label {
   margin-bottom: 1rem;
 }
@@ -115,57 +114,33 @@
   font-style: italic;
 }
 
-// This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-.field--name-field-links,
-.field--name-field-referenced-docs,
-.field--name-field-iasc-group-space,
-.field--name-field-oa-related-content,
-.field--name-field-links-to-relevant-docs {
-  .field__item a {
-    position: relative;
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .field__item a::before {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    margin-right: 1rem;
-    content: "";
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-}
-
-// This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-.field--name-field-services,
-.field--name-field-interest,
+.field--name-field-service-coverage-region,
 .field--name-field-kind-of-data,
 .field--name-field-relevant-hpc-stage,
-.field--name-field-service-coverage-region {
-  .field__items {
-    .field__item {
-      position: relative;
-      display: block;
-      margin-bottom: 1rem;
-    }
+.field--name-field-services,
+.field--name-field-interest,
+.field--name-field-links-to-relevant-docs,
+.field--name-field-iasc-group-space,
+.field--name-field-referenced-docs,
+.field--name-field-links {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-    .field__item::before {
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      margin-right: 1rem;
-      content: "";
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  ul li {
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    background-image: url("../img/icons/list-bullet.svg");
+    background-repeat: no-repeat;
+    background-position: top 7px left 0;
+    background-size: 9px 9px;
   }
 }
 
 // This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
+// When a ul element is added to the text area field.
 .field--name-field-examples-and-case-studies {
   .field__item ul {
     margin: 0;
@@ -226,22 +201,6 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 .field__item p:first-child {
   margin-top: 0;
 }
-
-// Emulate circle bullet list on fields that are not ul elements.
-//.field--name-field-interest {
-//  > .field__items {
-//    margin: 1rem 0;
-//    padding-left: 1.5rem;
-//
-//    > .field__item::before {
-//      content: "•";
-//      vertical-align: middle;
-//      font-size: 1.5rem;
-//      line-height: 1.2;
-//      padding-right: 0.5rem;
-//    }
-//  }
-//}
 
 // Classy field.css styles.
 .field__label {
