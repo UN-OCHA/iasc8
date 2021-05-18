@@ -179,6 +179,72 @@ display:
           plugin_id: field
           entity_type: file
           entity_field: fid
+        uri:
+          id: uri
+          table: file_managed
+          field: uri
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_uri
+          settings:
+            link_to_file: false
+            file_download_path: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: file
+          entity_field: uri
+          plugin_id: field
         filename:
           id: filename
           table: file_managed
@@ -189,8 +255,8 @@ display:
           label: Name
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ filename }}<br />\r\n{{ uri }}"
             make_link: false
             path: ''
             absolute: false
@@ -229,6 +295,62 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: file_link
+          settings:
+            relationship: none
+            fieldsets:
+              - more
+              - admin_label
+            custom_label: 1
+            label: Name
+            element_label_colon: 1
+            exclude: 0
+            element_type_enable: 0
+            element_type: ''
+            element_class_enable: 0
+            element_class: ''
+            element_label_type_enable: 0
+            element_label_type: ''
+            element_label_class_enable: 0
+            element_label_class: ''
+            element_wrapper_type_enable: 0
+            element_wrapper_type: ''
+            element_wrapper_class_enable: 0
+            element_wrapper_class: ''
+            element_default_classes: 1
+            alter:
+              alter_text: 1
+              text: "{{ filename }}<br />\r\n{{ uri }}"
+              make_link: 0
+              path: ''
+              absolute: 0
+              replace_spaces: 0
+              external: 0
+              path_case: none
+              link_class: ''
+              alt: ''
+              rel: ''
+              prefix: ''
+              suffix: ''
+              target: ''
+              trim: 0
+              max_length: '0'
+              word_boundary: 0
+              ellipsis: 0
+              more_link: 0
+              more_link_text: ''
+              more_link_path: ''
+              html: 0
+              strip_tags: 0
+              preserve_tags: ''
+              trim_whitespace: 0
+              nl2br: 0
+            empty: ''
+            empty_zero: 0
+            hide_empty: 0
+            hide_alter_empty: 1
+            click_sort_column: value
+            type: file_link
+            field_api_classes: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -572,24 +694,26 @@ display:
           suffix: ''
           plugin_id: numeric
       filters:
-        filename:
-          id: filename
-          table: file_managed
-          field: filename
+        combine:
+          id: combine
+          table: views
+          field: combine
           relationship: none
           group_type: group
           admin_label: ''
-          operator: word
+          operator: allwords
           value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: filemime_op
-            label: Filename
-            description: ''
+            operator_id: combine_op
+            label: 'Filename or title'
+            description: 'Search the filename or title'
             use_operator: false
-            operator: filename_op
-            identifier: filename
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: combine
             required: false
             remember: false
             multiple: false
@@ -597,8 +721,15 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            operator_limit_selection: false
-            operator_list: {  }
+              editor: '0'
+              group_login: '0'
+              viewer: '0'
+              recommendations_editor: '0'
+              space_super_admin: '0'
+              focal_point: '0'
+              iasc: '0'
+              aap: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -611,9 +742,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
-          entity_type: file
-          entity_field: filename
+          fields:
+            filename: filename
+            uri: uri
+          plugin_id: combine
         filemime:
           id: filemime
           table: file_managed
@@ -724,6 +856,10 @@ display:
       group_by: true
       show_admin_links: true
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       contexts:
         - 'languages:language_content'
