@@ -37,7 +37,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-dev": "^8.8",
-        "drupal/core-recommended": "^8.8",
+        "drupal/core-recommended": "^8.9.16",
         "drupal/ctools": "^3.6",
         "drupal/date_recur": "^2.0@beta",
         "drupal/date_recur_modular": "^2.0.0",
