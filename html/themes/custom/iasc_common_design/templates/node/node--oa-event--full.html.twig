@@ -122,15 +122,20 @@
         <div class="cd-teaser__date clearfix">
           {{ content.field_oa_date }}
 
-          {{ event_time.output }}
+          <div class="cd-teaser__date__time-only">
+            {{ event_time.output }}
+          </div>
 
-          {% if content.field_oa_date %}
-            {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
-              {{ content.field_oa_date.0['#date'] }}
-            {% else %}
-              {{ content.field_oa_date.0['#date']['start_date'] }}
+          <div class="cd-teaser__date__time-user">
+            {% if content.field_oa_date %}
+              {% if content.field_oa_date.0['#date']['start_date']['#text'] != content.field_oa_date.0['#date']['end_date']['#text']  %}
+                {{ content.field_oa_date.0['#date'] }}
+              {% else %}
+                {{ content.field_oa_date.0['#date']['start_date'] }}
+              {% endif %}
+              ({{ datetime|date('T') }})
             {% endif %}
-          {% endif %}
+          </div>
 
           {% if content.field_city|render %}
             <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>

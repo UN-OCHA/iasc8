@@ -51,6 +51,7 @@ function iasc_common_design_preprocess_node(&$variables) {
       'end' => \Drupal::service('date.formatter')
         ->format(strtotime($node->field_oa_date->first()->end_value), 'custom', 'H:i'),
       'all_day' => FALSE,
+      'timezone' => $node->field_oa_date->first()->timezone,
     ];
 
     if ($variables['event_time']['start'] == $variables['event_time']['end']) {
@@ -68,7 +69,7 @@ function iasc_common_design_preprocess_node(&$variables) {
       $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'])[0];
     }
     else {
-      $variables['event_time']['output'] = $variables['event_time']['start'] . ' to ' . $variables['event_time']['end'];
+      $variables['event_time']['output'] = $variables['event_time']['start'] . ' to ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';
     }
   }
 }
