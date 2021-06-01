@@ -126,16 +126,18 @@
             {{ event_time.output }}
           </div>
 
-          <div class="cd-teaser__date__time-user">
-            {% if content.field_oa_date %}
-              {% if content.field_oa_date.0['#date']['start_date']['#text'] != content.field_oa_date.0['#date']['end_date']['#text']  %}
-                {{ content.field_oa_date.0['#date'] }}
-              {% else %}
-                {{ content.field_oa_date.0['#date']['start_date'] }}
+          {% if logged_in %}
+            <div class="cd-teaser__date__time-user">
+              {% if content.field_oa_date %}
+                {% if content.field_oa_date.0['#date']['start_date']['#text'] != content.field_oa_date.0['#date']['end_date']['#text']  %}
+                  {{ content.field_oa_date.0['#date'] }}
+                {% else %}
+                  {{ content.field_oa_date.0['#date']['start_date'] }}
+                {% endif %}
+                ({{ datetime|date('T') }})
               {% endif %}
-              ({{ datetime|date('T') }})
-            {% endif %}
-          </div>
+            </div>
+          {% endif %}
 
           {% if content.field_city|render %}
             <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.long
+    - core.date_format.medium
     - core.entity_view_mode.node.teaser
     - field.field.node.oa_event.body
     - field.field.node.oa_event.field_additional_locations
@@ -50,9 +50,9 @@ content:
     region: content
     label: hidden
     settings:
-      format_type: long
-      occurrence_format_type: long
-      same_end_date_format_type: long
+      format_type: medium
+      occurrence_format_type: medium
+      same_end_date_format_type: medium
       separator: '-'
       timezone_override: ''
       interpreter: ''
