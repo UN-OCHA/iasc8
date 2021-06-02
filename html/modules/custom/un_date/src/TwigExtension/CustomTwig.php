@@ -185,11 +185,10 @@ class CustomTwig extends AbstractExtension {
     return NULL;
   }
 
-
   /**
    * Format time.
    *
-   * @param Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date
+   * @param Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $daterange
    *   Drupal date time object.
    *
    * @return string
