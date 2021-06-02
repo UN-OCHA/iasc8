@@ -123,23 +123,12 @@
           {{ content.field_oa_date }}
 
           <div class="cd-teaser__date__time-only">
-            {{ event_time.output }}
+            {{ node.field_oa_date|un_daterange_times(true, true) }}
           </div>
 
-          {% if logged_in %}
+          {% if logged_in and node.field_oa_date[0].start_date|date('e') != 'UTC' %}
             <div class="cd-teaser__date__time-user">
-              {% if content.field_oa_date %}
-                {% if content.field_oa_date.0['#date']['start_date']['#text'] != content.field_oa_date.0['#date']['end_date']['#text']  %}
-                  {% if node.field_oa_date[0].start_date|date('Ymd') != node.field_oa_date[0].end_date|date('Ymd') %}
-                    {{ node.field_oa_date[0].start_date|date('d.m.Y h.i a') }} }}
-                  {% else %}
-                    {{ node.field_oa_date[0].start_date|date('d.m.Y h.i a') }} — {{ node.field_oa_date[0].end_date|date('h.i a') }}
-                  {% endif %}
-                {% else %}
-                  {{ node.field_oa_date[0].start_date|date('d.m.Y h.i a') }} }}
-                {% endif %}
-                ({{ datetime|date('T') }})
-              {% endif %}
+              {{ node.field_oa_date|un_daterange(false, true) }}
             </div>
           {% endif %}
 
