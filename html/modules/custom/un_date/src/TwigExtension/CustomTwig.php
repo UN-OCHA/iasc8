@@ -2,11 +2,12 @@
 
 namespace Drupal\un_date\TwigExtension;
 
-use Twig\Extension\AbstractExtension;
-use Twig\TwigFilter;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\date_recur\Plugin\Field\FieldType\DateRecurFieldItemList;
 use Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+use Twig\TwigFunction;
 
 /**
  * Custom twig filters for dates.
@@ -24,6 +25,16 @@ class CustomTwig extends AbstractExtension {
       new TwigFilter('un_daterange', [$this, 'getUnDaterange']),
       new TwigFilter('un_daterange_times', [$this, 'getUnDaterangeTimes']),
       new TwigFilter('un_daterange_named', [$this, 'getUnDaterangeNamed']),
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFunctions() {
+    return [
+      new TwigFunction('un_is_all_day', [$this, 'isAllDay']),
+      new TwigFunction('un_is_utc', [$this, 'isUtc']),
     ];
   }
 
@@ -141,6 +152,9 @@ class CustomTwig extends AbstractExtension {
     }
 
     if ($this->formatDate($daterange->start_date, $to_utc) === $this->formatDate($daterange->end_date, $to_utc)) {
+      if ($this->allDay($daterange)) {
+        return 'All day';
+      }
       return $this->formatTime($daterange->start_date, $to_utc, FALSE) . ' — ' . $this->formatTime($daterange->end_date, $to_utc, $show_timezone);
     }
     else {
@@ -198,13 +212,96 @@ class CustomTwig extends AbstractExtension {
     $to_utc = FALSE;
     $show_timezone = TRUE;
 
+
     // Only output time if dates are equal.
     if ($this->formatDate($daterange->start_date, TRUE) === $this->formatDate($daterange->start_date, FALSE)) {
+      if ($this->allDay($daterange)) {
+        return NULL;
+      }
       return $this->formatTime($daterange->start_date, $to_utc, FALSE) . ' — ' . $this->formatTime($daterange->end_date, $to_utc, $show_timezone);
     }
     else {
       return $this->formatDateTime($daterange->start_date, $to_utc, FALSE) . ' — ' . $this->formatDateTime($daterange->end_date, $to_utc, $show_timezone);
     }
+  }
+
+  /**
+   * Is all day event.
+   *
+   * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurFieldItemList|Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $daterange_list
+   *   Drupal date time object.
+   *
+   * @return bool
+   *   TRUE if it's an all day event.
+   */
+  public function isAllDay($daterange_list) {
+    $daterange = NULL;
+
+    if ($daterange_list instanceof DateRecurItem) {
+      $daterange = $daterange_list;
+    }
+
+    if ($daterange_list instanceof DateRecurFieldItemList) {
+      $daterange = $daterange_list->first();
+    }
+
+    if (!$daterange) {
+      return NULL;
+    }
+
+    return $this->allDay($daterange);
+  }
+
+  /**
+   * Is UTC timezone.
+   *
+   * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurFieldItemList|Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $daterange_list
+   *   Drupal date time object.
+   *
+   * @return bool
+   *   TRUE if timezone is UTC.
+   */
+  public function isUtc($daterange_list) {
+    $daterange = NULL;
+
+    if ($daterange_list instanceof DateRecurItem) {
+      $daterange = $daterange_list;
+    }
+
+    if ($daterange_list instanceof DateRecurFieldItemList) {
+      $daterange = $daterange_list->first();
+    }
+
+    if (!$daterange) {
+      return NULL;
+    }
+
+    return $daterange->timezone === 'UTC';
+  }
+
+  /**
+   * Is all day event.
+   *
+   * @param Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $daterange
+   *   Drupal date time object.
+   *
+   * @return bool
+   *   TRUE if it's an all day event.
+   */
+  protected function allDay(DateRecurItem $daterange) {
+    $options = [
+      'timezone' => 'UTC',
+    ];
+
+    if ($daterange->start_date->format('Hi', $options) === '0000' && $daterange->end_date->format('Hi', $options) === '0000') {
+      return TRUE;
+    }
+
+    if ($daterange->start_date->format('Hi', $options) === '0000' && $daterange->end_date->format('Hi', $options) === '2359') {
+      return TRUE;
+    }
+
+    return FALSE;
   }
 
   /**
@@ -299,4 +396,17 @@ class CustomTwig extends AbstractExtension {
     return '';
   }
 
+  /**
+   * Get timezone offset.
+   *
+   * @param \Drupal\Core\Datetime\DrupalDateTime $date
+   *   Drupal date time object.
+   *
+   * @return string
+   *   Offset.
+   */
+  protected function getTimezoneOffset(DrupalDateTime $date) {
+    dpm($date->getTimezone()->getName());
+    return $date->getTimezone()->getOffset($date->getPhpDateTime());
+  }
 }
