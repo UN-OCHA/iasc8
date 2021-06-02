@@ -212,7 +212,6 @@ class CustomTwig extends AbstractExtension {
     $to_utc = FALSE;
     $show_timezone = TRUE;
 
-
     // Only output time if dates are equal.
     if ($this->formatDate($daterange->start_date, TRUE) === $this->formatDate($daterange->start_date, FALSE)) {
       if ($this->allDay($daterange)) {
@@ -406,7 +405,7 @@ class CustomTwig extends AbstractExtension {
    *   Offset.
    */
   protected function getTimezoneOffset(DrupalDateTime $date) {
-    dpm($date->getTimezone()->getName());
     return $date->getTimezone()->getOffset($date->getPhpDateTime());
   }
+
 }
