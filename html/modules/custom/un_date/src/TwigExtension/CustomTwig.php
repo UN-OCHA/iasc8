@@ -23,6 +23,7 @@ class CustomTwig extends AbstractExtension {
       new TwigFilter('un_datetime', [$this, 'getUnDateTime']),
       new TwigFilter('un_daterange', [$this, 'getUnDaterange']),
       new TwigFilter('un_daterange_times', [$this, 'getUnDaterangeTimes']),
+      new TwigFilter('un_daterange_named', [$this, 'getUnDaterangeNamed']),
     ];
   }
 
@@ -148,6 +149,66 @@ class CustomTwig extends AbstractExtension {
   }
 
   /**
+   * Format daterange.
+   *
+   * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurFieldItemList|Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $daterange_list
+   *   Drupal date time object.
+   * @param string $format
+   *   Named format output.
+   *
+   * @return string
+   *   Formatted date.
+   */
+  public function getUnDaterangeNamed($daterange_list, $format = 'default') {
+    $daterange = NULL;
+
+    if ($daterange_list instanceof DateRecurItem) {
+      $daterange = $daterange_list;
+    }
+
+    if ($daterange_list instanceof DateRecurFieldItemList) {
+      $daterange = $daterange_list->first();
+    }
+
+    if (!$daterange) {
+      return NULL;
+    }
+
+    switch ($format) {
+      case 'local_times':
+        return $this->localTimes($daterange);
+
+      case 'default':
+        return $this->getUnDaterange($daterange);
+    }
+
+    return NULL;
+  }
+
+
+  /**
+   * Format time.
+   *
+   * @param Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date
+   *   Drupal date time object.
+   *
+   * @return string
+   *   Formatted time.
+   */
+  protected function localTimes(DateRecurItem $daterange) {
+    $to_utc = FALSE;
+    $show_timezone = TRUE;
+
+    // Only output time if dates are equal.
+    if ($this->formatDate($daterange->start_date, TRUE) === $this->formatDate($daterange->start_date, FALSE)) {
+      return $this->formatTime($daterange->start_date, $to_utc, FALSE) . ' — ' . $this->formatTime($daterange->end_date, $to_utc, $show_timezone);
+    }
+    else {
+      return $this->formatDateTime($daterange->start_date, $to_utc, FALSE) . ' — ' . $this->formatDateTime($daterange->end_date, $to_utc, $show_timezone);
+    }
+  }
+
+  /**
    * Format time.
    *
    * @param \Drupal\Core\Datetime\DrupalDateTime $date
@@ -173,7 +234,7 @@ class CustomTwig extends AbstractExtension {
       $ampm = 'p.m.';
     }
 
-    return $date->format('h.i', $options) . ' ' . $ampm . $this->formatTimezone($date, $to_utc, $show_timezone);
+    return $date->format('g.i', $options) . ' ' . $ampm . $this->formatTimezone($date, $to_utc, $show_timezone);
   }
 
   /**
@@ -231,9 +292,9 @@ class CustomTwig extends AbstractExtension {
   protected function formatTimezone(DrupalDateTime $date, bool $to_utc = FALSE, bool $show_timezone = FALSE) {
     if ($show_timezone) {
       if ($to_utc) {
-        return ' (UTC)';
+        return ' UTC';
       }
-      return ' (' . $date->format('e') . ')';
+      return ' ' . $date->getTimezone()->getName();
     }
 
     return '';
