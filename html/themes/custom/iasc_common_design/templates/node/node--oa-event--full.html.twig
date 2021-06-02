@@ -124,13 +124,12 @@
 
           <div class="cd-teaser__date__time-only">
             {{ node.field_oa_date|un_daterange_times(true, true) }}
+            {% if logged_in and node.field_oa_date[0].start_date|date('e') != 'UTC' %}
+              <span class="cd-teaser__date__time-user">
+                ({{ node.field_oa_date|un_daterange_named('local_times') }})
+              </span>
+            {% endif %}
           </div>
-
-          {% if logged_in and node.field_oa_date[0].start_date|date('e') != 'UTC' %}
-            <div class="cd-teaser__date__time-user">
-              {{ node.field_oa_date|un_daterange(false, true) }}
-            </div>
-          {% endif %}
 
           {% if content.field_city|render %}
             <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
