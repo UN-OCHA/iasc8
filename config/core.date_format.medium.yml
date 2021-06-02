@@ -7,4 +7,4 @@ _core:
 id: medium
 label: 'Default medium date'
 locked: false
-pattern: 'd.m.Y H.i'
+pattern: 'd.m.Y h.i a'
