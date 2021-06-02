@@ -124,10 +124,12 @@
 
           <div class="cd-teaser__date__time-only">
             {{ node.field_oa_date|un_daterange_times(true, true) }}
-            {% if logged_in and node.field_oa_date[0].start_date|date('e') != 'UTC' %}
-              <span class="cd-teaser__date__time-user">
-                ({{ node.field_oa_date|un_daterange_named('local_times') }})
-              </span>
+            {% if logged_in and not un_is_all_day(node.field_oa_date) %}
+              {% if datetime|date('e') != node.field_oa_date[0].timezone %}
+                <span class="cd-teaser__date__time-user">
+                  ({{ node.field_oa_date|un_daterange_named('local_times') }})
+                </span>
+              {% endif %}
             {% endif %}
           </div>
 
