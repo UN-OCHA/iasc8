@@ -1,0 +1,5 @@
+services:
+  un_date.CustomTwig:
+    class: Drupal\un_date\TwigExtension\CustomTwig
+    tags:
+      - { name: twig.extension }

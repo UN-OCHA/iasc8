@@ -1,0 +1,4 @@
+name: UN date formatter
+type: module
+description: Provides a twig filter to format dates according to UN guidelines.
+core_version_requirement: ^8.8 || ^9
