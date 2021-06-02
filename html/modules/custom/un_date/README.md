@@ -2,7 +2,7 @@
 
 ## Todo
 
-- Addd support for *all day*
+- Add support for *all day*
 
 All filter allow options
 
