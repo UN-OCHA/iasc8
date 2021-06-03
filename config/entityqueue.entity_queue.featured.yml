@@ -14,6 +14,8 @@ entity_settings:
   handler_settings:
     target_bundles:
       announcement: announcement
+      panopoly_page: panopoly_page
+      oa_wiki_page: oa_wiki_page
     sort:
       field: _none
     auto_create: false
