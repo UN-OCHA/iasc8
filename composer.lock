@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "699f05094f3b8ae40cf4c6ccea82e446",
+    "content-hash": "46351f71a913fb4167f96cc96157a8d4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9634,48 +9634,6 @@
             ]
         },
         {
-            "name": "oomphinc/composer-installers-extender",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oomphinc/composer-installers-extender.git",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "composer/installers": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "OomphInc\\ComposerInstallersExtender\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Beemsterboer",
-                    "email": "stephen@oomphinc.com",
-                    "homepage": "https://github.com/balbuf"
-                }
-            ],
-            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
-            "homepage": "http://www.oomphinc.com/",
-            "time": "2017-03-31T16:57:39+00:00"
-        },
-        {
             "name": "paragonie/random_compat",
             "version": "v9.99.99",
             "source": {
@@ -14984,6 +14942,35 @@
             "time": "2020-09-07T13:02:14+00:00"
         },
         {
+            "name": "unocha/un_date",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/un_date.git",
+                "reference": "51ffa62d2e301396f258c92a1337abdff2484128"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/51ffa62d2e301396f258c92a1337abdff2484128",
+                "reference": "51ffa62d2e301396f258c92a1337abdff2484128",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "description": "UN date and time twig filters for Drupal 8",
+            "support": {
+                "issues": "https://github.com/UN-OCHA/un_date/issues",
+                "source": "https://github.com/UN-OCHA/un_date/tree/1.0.0"
+            },
+            "time": "2021-06-03T07:45:01+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.6.6",
             "source": {
@@ -15661,10 +15648,10 @@
     ],
     "aliases": [
         {
-            "alias": "3.4.41",
-            "alias_normalized": "3.4.41.0",
+            "package": "symfony/event-dispatcher",
             "version": "4.3.3.0",
-            "package": "symfony/event-dispatcher"
+            "alias": "3.4.41",
+            "alias_normalized": "3.4.41.0"
         }
     ],
     "minimum-stability": "dev",
@@ -15694,5 +15681,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
