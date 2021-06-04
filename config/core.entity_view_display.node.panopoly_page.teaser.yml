@@ -12,7 +12,9 @@ dependencies:
     - field.field.node.panopoly_page.field_featured_status
     - field.field.node.panopoly_page.field_footer
     - field.field.node.panopoly_page.field_header
+    - field.field.node.panopoly_page.field_oa_banner_text
     - field.field.node.panopoly_page.field_sidebar
+    - field.field.node.panopoly_page.field_thumbnail
     - node.type.panopoly_page
   module:
     - text
@@ -38,7 +40,9 @@ hidden:
   field_featured_status: true
   field_footer: true
   field_header: true
+  field_oa_banner_text: true
   field_sidebar: true
+  field_thumbnail: true
   langcode: true
   links: true
   search_api_excerpt: true

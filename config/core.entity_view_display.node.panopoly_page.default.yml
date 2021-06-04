@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.panopoly_page.field_header
     - field.field.node.panopoly_page.field_oa_banner_text
     - field.field.node.panopoly_page.field_sidebar
+    - field.field.node.panopoly_page.field_thumbnail
     - node.type.panopoly_page
   module:
     - entity_reference_revisions
@@ -90,6 +91,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_thumbnail:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 8

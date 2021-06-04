@@ -45,6 +45,59 @@ function iasc_common_design_preprocess_node(&$variables) {
   $node = $variables['elements']['#node'];
 
   if ($node->hasField('field_oa_date') && $node->field_oa_date->first() && is_numeric(strtotime($node->field_oa_date->first()->value))) {
+    // Check if all paragraph fields are empty. If so, remove instance.
+    if (count($node->field_agenda_items) > 0) {
+      $entity = $node->field_agenda_items->first()->entity;
+      $field_definitions = $entity->getFieldDefinitions();
+      $all_empty = TRUE;
+      foreach ($node->field_agenda_items->referencedEntities() as $delta => $entity) {
+        $this_empty = TRUE;
+        foreach ($field_definitions as $field_name => $definition) {
+          if (!method_exists($definition, 'isBaseField')) {
+            $field_instance = $entity->get($field_name);
+            if (!$field_instance->isEmpty()) {
+              $all_empty = FALSE;
+              $this_empty = FALSE;
+            }
+          }
+        }
+
+        if ($this_empty) {
+          unset($variables['content']['field_agenda_items'][$delta]);
+        }
+      }
+
+      if ($all_empty) {
+        unset($variables['content']['field_agenda_items']);
+      }
+    }
+
+    if (count($node->field_additional_locations) > 0) {
+      $entity = $node->field_additional_locations->first()->entity;
+      $field_definitions = $entity->getFieldDefinitions();
+      $all_empty = TRUE;
+      foreach ($node->field_additional_locations->referencedEntities() as $delta => $entity) {
+        $this_empty = TRUE;
+        foreach ($field_definitions as $field_name => $definition) {
+          if (!method_exists($definition, 'isBaseField')) {
+            $field_instance = $entity->get($field_name);
+            if (!$field_instance->isEmpty()) {
+              $all_empty = FALSE;
+              $this_empty = FALSE;
+            }
+          }
+        }
+
+        if ($this_empty) {
+          unset($variables['content']['field_additional_locations'][$delta]);
+        }
+      }
+
+      if ($all_empty) {
+        unset($variables['content']['field_additional_locations']);
+      }
+    }
+
     $variables['event_time'] = [
       'start' => \Drupal::service('date.formatter')
         ->format(strtotime($node->field_oa_date->first()->value), 'custom', 'h.i a'),
