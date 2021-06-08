@@ -2,8 +2,7 @@ name: Check for outdated Drupal packages
 
 on:
   schedule:
-    - cron: '1 0 1 1,7 *'
-    - cron: '5 5 8 6 *'
+    - cron: '30 5 8 6 *'
 
 jobs:
   build:
