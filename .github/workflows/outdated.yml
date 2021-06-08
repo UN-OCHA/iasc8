@@ -1,3 +1,4 @@
+---
 name: Check for outdated Drupal packages
 
 on:
@@ -9,33 +10,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        ref: develop
-    - name: Composer Outdated
-      uses: docker://composer:2
-      with:
-        args: outdated drupal/*
-    - name: Composer Update
-      uses: docker://composer:2
-      with:
-        args: update drupal/* --with-dependencies
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
-      with:
-        token: ${{ secrets.PAT }}
-        commit-message: [OUTDATED] Automatic pull request after updating all outdated drupal packages.
-        title: [OUTDATED] Automagic Updates
-        body: Automatic pull request after trying to run composer update drupal/* on all the Drupal packages.
-        committer: unocha-jenkins
-        author: unocha-jenkins <ops+github@reliefweb.int>
-        branch: outdated/twice-yearly-full-update
-        base: develop
-    - name: Flowdock Notify
-      uses: docker://unocha/actions:flowdock-notify-main
-      env:
-        FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
-        FLOWDOCK_ICON: 'jeans'
-        FLOWDOCK_MESSAGE: 'Trying to automagically generated an up to date pull request for [UN-OCHA/iasc-site](https://github.com/UN-OCHA/iasc8) image from ${{ github.ref }}.'
-        FLOWDOCK_TAGS: 'pull,${{ github.actor }}'
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+      - name: Composer Outdated
+        uses: docker://composer:2
+        with:
+          args: outdated drupal/*
+      - name: Composer Update
+        uses: docker://composer:2
+        with:
+          args: update drupal/* --with-dependencies
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PAT }}
+          commit-message: [OUTDATED] Automatic pull request after updating all outdated drupal packages.
+          title: [OUTDATED] Automagic Updates
+          body: |
+            - Automatic pull request after trying to run composer update drupal/* on all the Drupal packages.
+          committer: unocha-jenkins
+          author: unocha-jenkins <ops+github@reliefweb.int>
+          branch: outdated/twice-yearly-full-update
+          base: develop
+      - name: Flowdock Notify
+        uses: docker://unocha/actions:flowdock-notify-main
+        env:
+          FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
+          FLOWDOCK_ICON: 'jeans'
+          FLOWDOCK_MESSAGE: 'Trying to automagically generated an up to date pull request for [UN-OCHA/iasc-site](https://github.com/UN-OCHA/iasc8) image from ${{ github.ref }}.'
+          FLOWDOCK_TAGS: 'pull,${{ github.actor }}'
