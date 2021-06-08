@@ -1,10 +1,9 @@
----
 name: Check for outdated Drupal packages
 
 on:
   schedule:
-    - cron '1 0 1 1,7 *'
-    - cron '5 0 8 6 *'
+    - cron: '1 0 1 1,7 *'
+    - cron: '5 5 8 6 *'
 
 jobs:
   build:
@@ -26,8 +25,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PAT }}
-          commit-message: [OUTDATED] Automatic pull request after updating all outdated drupal packages.
-          title: [OUTDATED] Automagic Updates
+          commit-message: "[OUTDATED] Automatic pull request after updating all outdated drupal packages."
+          title: "[OUTDATED] Automagic Updates"
           body: |
             - Automatic pull request after trying to run composer update drupal/* on all the Drupal packages.
           committer: unocha-jenkins
