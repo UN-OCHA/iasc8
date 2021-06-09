@@ -47,6 +47,10 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
     if ($event->getFieldType() == 'viewsreference') {
       $paragraph = $event->getParagraph();
       $item = $paragraph->get($event->getFieldName())->first();
+      if (!$item) {
+        return;
+      }
+
       $view_name = $item->getValue()['target_id'];
 
       if (!$view_name) {
