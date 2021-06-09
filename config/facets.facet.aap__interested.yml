@@ -16,14 +16,13 @@ show_only_one_result: false
 field_identifier: field_interest
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 widget:
-  type: select2
+  type: select_a11y_dropdown
   config:
-    show_numbers: false
-    width: 100%
-    autocomplete: false
-    match_operator: CONTAINS
+    show_numbers: true
+    default_option_label: Choose
 query_operator: or
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
