@@ -2,7 +2,7 @@ name: Check for outdated Drupal packages
 
 on:
   schedule:
-    - cron: '30 1 10 6 *'
+    - cron: '0 3 10 6 *'
 
 jobs:
   build:
@@ -13,11 +13,11 @@ jobs:
         with:
           ref: develop
       - name: Composer Outdated
-        uses: docker://ghcr.io/mileschou/composer:7.3-v1
+        uses: docker://unocha/actions:composer-7.3-v1
         with:
           args: outdated drupal/*
       - name: Composer Update
-        uses: docker://ghcr.io/mileschou/composer:7.3-v1
+        uses: docker://unocha/actions:composer-7.3-v1
         with:
           args: update --with-dependencies drupal/* 
       - name: Create Pull Request
