@@ -1,8 +1,8 @@
-name: Check for outdated Drupal packages
+name: Composer Update
 
 on:
   schedule:
-    - cron: '0 3 10 6 *'
+    - cron: '15 3 10 6 *'
 
 jobs:
   build:
