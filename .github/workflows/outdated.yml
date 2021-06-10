@@ -15,14 +15,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: develop
-      - name: Composer Outdated
-        uses: docker://unocha/actions:composer-7.3-v2
-        with:
-          args: outdated drupal/*
       - name: Composer Update
-        uses: docker://unocha/actions:composer-7.3-v2
+        uses: docker://unocha/unified-builder:7.3-stable
         with:
-          args: update --with-dependencies drupal/* 
+          args: composer update --with-dependencies drupal/* 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
