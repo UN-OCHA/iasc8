@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resources_document_type_label
-name: 'Resources - Document Type label'
+name: 'Document Type'
 url_alias: document_type
 weight: 0
 min_count: 1

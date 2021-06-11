@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resources_content_type
-name: 'Resources - Content type'
+name: 'Content type'
 url_alias: content_type
 weight: 0
 min_count: 1
