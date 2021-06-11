@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resource_products_audience_label
-name: 'Resource Products - Audience label'
+name: 'Authoring body'
 url_alias: resource_audience_label
 weight: 0
 min_count: 1

@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resource_documents_audience_label
-name: 'Resource documents - Audience label'
+name: Audience
 url_alias: resource_audience_label
 weight: 0
 min_count: 1

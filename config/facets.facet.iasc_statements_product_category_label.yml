@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: iasc_statements_product_category_label
-name: 'Product Category label'
+name: 'Product Category'
 url_alias: iasc_statements_product_category_label
 weight: 0
 min_count: 1

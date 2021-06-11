@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resource_products_product_category_label
-name: 'Resource Products - Product Category label'
+name: 'Product Category'
 url_alias: product_category
 weight: 0
 min_count: 1
