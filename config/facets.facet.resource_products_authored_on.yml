@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: resource_products_authored_on
-name: 'Resource Products - Authored on'
+name: 'Authored on'
 url_alias: resources_authored_on
 weight: 0
 min_count: 1
