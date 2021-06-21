@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32c4833d6fcf71f89e221f7d1e8379ea",
+    "content-hash": "53560c9ea93b881e70734beb2a8fbbfc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -14497,16 +14497,16 @@
         },
         {
             "name": "unocha/un_date",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/un_date.git",
-                "reference": "51ffa62d2e301396f258c92a1337abdff2484128"
+                "reference": "68c33a271e34c7b356a067893abf0ea5979c4632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/51ffa62d2e301396f258c92a1337abdff2484128",
-                "reference": "51ffa62d2e301396f258c92a1337abdff2484128",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/68c33a271e34c7b356a067893abf0ea5979c4632",
+                "reference": "68c33a271e34c7b356a067893abf0ea5979c4632",
                 "shasum": ""
             },
             "require": {
@@ -14518,7 +14518,11 @@
                 "GPL-2.0-only"
             ],
             "description": "UN date and time twig filters for Drupal 8",
-            "time": "2021-06-03T07:45:01+00:00"
+            "support": {
+                "issues": "https://github.com/UN-OCHA/un_date/issues",
+                "source": "https://github.com/UN-OCHA/un_date/tree/1.0.1"
+            },
+            "time": "2021-06-21T11:43:32+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -15203,10 +15207,10 @@
     ],
     "aliases": [
         {
-            "alias": "3.4.41",
-            "alias_normalized": "3.4.41.0",
+            "package": "symfony/event-dispatcher",
             "version": "4.3.3.0",
-            "package": "symfony/event-dispatcher"
+            "alias": "3.4.41",
+            "alias_normalized": "3.4.41.0"
         }
     ],
     "minimum-stability": "dev",
@@ -15236,5 +15240,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
