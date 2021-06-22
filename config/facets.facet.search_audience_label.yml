@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: search_audience_label
-name: 'Audience label'
+name: Audience
 url_alias: search_audience_label
 weight: 0
 min_count: 1

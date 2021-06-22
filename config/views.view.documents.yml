@@ -536,6 +536,7 @@ display:
         row: false
         pager: false
         sorts: false
+        query: false
       row:
         type: 'entity:node'
         options:
@@ -574,6 +575,14 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: null
     cache_metadata:
       max-age: -1
       contexts:

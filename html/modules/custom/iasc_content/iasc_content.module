@@ -1108,3 +1108,79 @@ function iasc_content_views_pre_render(ViewExecutable $view) {
     }
   }
 }
+
+/**
+ * Implements hook_views_pre_build().
+ *
+ * @see https://www.drupal.org/project/drupal/issues/2769407
+ */
+function iasc_content_views_pre_build(ViewExecutable $view) {
+  if ($view->storage->id() != 'updates') {
+    return;
+  }
+
+  if (!isset($view->filter['field_grand_bargain_content_value'])) {
+    return;
+  }
+
+  if ($view->filter['field_grand_bargain_content_value']->value == 0) {
+    $view->filter['field_grand_bargain_content_value']->accept_null = TRUE;
+  }
+}
+
+/**
+ * Implements hook_group_content_insert().
+ */
+function iasc_content_group_content_insert(GroupContent $entity) {
+  iasc_content_group_content_update($entity);
+}
+
+/**
+ * Implements hook_group_content_insert().
+ */
+function iasc_content_group_content_update(GroupContent $entity) {
+  $group_content_type = $entity->getGroupContentType();
+  if ($group_content_type->get('content_plugin') !== 'group_node:announcement') {
+    return;
+  }
+
+  $group = $entity->getGroup();
+  if ($group->id() != 19568) {
+    return;
+  }
+
+  /** @var Drupal\node\Entity\Node $node */
+  $node = $entity->getEntity();
+  $current_status = $node->get('field_grand_bargain_content')->getValue()[0]['value'];
+  if ($current_status) {
+    return;
+  }
+
+  $node->set('field_grand_bargain_content', TRUE);
+  $node->save();
+}
+
+/**
+ * Implements hook_group_content_delete().
+ */
+function iasc_content_group_content_delete(GroupContent $entity) {
+  $group_content_type = $entity->getGroupContentType();
+  if ($group_content_type->get('content_plugin') !== 'group_node:announcement') {
+    return;
+  }
+
+  $group = $entity->getGroup();
+  if ($group->id() != 19568) {
+    return;
+  }
+
+  /** @var Drupal\node\Entity\Node $node */
+  $node = $entity->getEntity();
+  $current_status = $node->get('field_grand_bargain_content')->getValue()[0]['value'];
+  if (!$current_status) {
+    return;
+  }
+
+  $node->set('field_grand_bargain_content', FALSE);
+  $node->save();
+}
