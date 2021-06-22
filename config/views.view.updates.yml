@@ -590,18 +590,15 @@ display:
             title: title
             body: body
           plugin_id: combine
-        field_iasc_audience_target_id:
-          id: field_iasc_audience_target_id
-          table: node__field_iasc_audience
-          field: field_iasc_audience_target_id
+        field_grand_bargain_content_value:
+          id: field_grand_bargain_content_value
+          table: node__field_grand_bargain_content
+          field: field_grand_bargain_content_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '!='
-          value:
-            min: ''
-            max: ''
-            value: '19568'
+          operator: '='
+          value: '0'
           group: 1
           exposed: false
           expose:
@@ -618,9 +615,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -633,7 +627,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
+          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
