@@ -14,12 +14,14 @@ entity_settings:
   handler_settings:
     target_bundles:
       announcement: announcement
+      panopoly_page: panopoly_page
+      oa_wiki_page: oa_wiki_page
     sort:
       field: _none
     auto_create: false
     auto_create_bundle: announcement
 queue_settings:
   min_size: 0
-  max_size: 0
+  max_size: 4
   act_as_queue: false
   reverse: true

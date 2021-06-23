@@ -122,20 +122,20 @@
         <div class="cd-teaser__date clearfix">
           {{ content.field_oa_date }}
 
-          {{ event_time.output }}
-
-          {% if content.field_oa_date %}
-            {% if content.field_oa_date.0['#date']['start_date']['#text']  != content.field_oa_date.0['#date']['end_date']['#text']  %}
-              {{ content.field_oa_date.0['#date'] }}
-            {% else %}
-              {{ content.field_oa_date.0['#date']['start_date'] }}
+          <div class="cd-teaser__date__time-only">
+            {{ node.field_oa_date|un_daterange_times(true, true) }}
+            {% if logged_in and not un_is_all_day(node.field_oa_date) %}
+              {% if datetime|date('e') != node.field_oa_date[0].timezone %}
+                <span class="cd-teaser__date__time-user">
+                  ({{ node.field_oa_date|un_daterange_named('local_times') }})
+                </span>
+              {% endif %}
             {% endif %}
-          {% endif %}
+          </div>
 
           {% if content.field_city|render %}
             <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
           {% endif %}
-
         </div>
 
         {% if not logged_in %}

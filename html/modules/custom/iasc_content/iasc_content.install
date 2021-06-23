@@ -1000,3 +1000,10 @@ function iasc_content_update_8028() {
 
   fclose($handle);
 }
+
+/**
+ * Mark grand bargain content.
+ */
+function iasc_content_update_8029() {
+  // @see iasc_content_post_update_grand_bargain_for_announcements
+}

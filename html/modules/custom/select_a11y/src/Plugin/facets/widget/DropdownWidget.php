@@ -35,8 +35,13 @@ class DropdownWidget extends WidgetPluginBase {
     // Rebuild items.
     $items = [];
     foreach ($build['#items'] as $item) {
+      $label = $item['#title']['#value'];
+      if ($item['#title']['#show_count']) {
+        $label .= ' (' . $item['#title']['#count'] . ')';
+      }
+
       $items[] = [
-        'label' => $item['#title']['#value'],
+        'label' => $label,
         'value' => $item['#url']->toString(),
         'active' => $item['#title']['#is_active'],
       ];

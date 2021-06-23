@@ -12,7 +12,9 @@ dependencies:
     - field.field.node.panopoly_page.field_featured_status
     - field.field.node.panopoly_page.field_footer
     - field.field.node.panopoly_page.field_header
+    - field.field.node.panopoly_page.field_oa_banner_text
     - field.field.node.panopoly_page.field_sidebar
+    - field.field.node.panopoly_page.field_thumbnail
     - node.type.panopoly_page
   module:
     - user
@@ -21,14 +23,14 @@ targetEntityType: node
 bundle: panopoly_page
 mode: featured
 content:
-  field_banner_image:
+  field_thumbnail:
     type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      view_mode: product_thumbnail
-      link: false
+      link: true
+      view_mode: default
     third_party_settings: {  }
   links:
     weight: 1
@@ -37,12 +39,14 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_banner_image: true
   field_content: true
   field_featured_categories: true
   field_featured_image: true
   field_featured_status: true
   field_footer: true
   field_header: true
+  field_oa_banner_text: true
   field_sidebar: true
   langcode: true
   search_api_excerpt: true
