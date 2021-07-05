@@ -102,16 +102,13 @@
     }
   }
 }
-
-.cd-layout-main-content .paragraph--type--teaser-grid {
+// Reset the grid layout to a single column when Teaser Grid paragraph type is used in sidebar.
+.cd-layout-sidebar-first .paragraph--type--teaser-grid {
   .field--type-entity-reference-revisions {
-    @extend .grid-3-col;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 
   .field--type-entity-reference-revisions .paragraph--type--teaser-item {
-    @extend .grid-item;
-    @extend .grid-item_article;
-
     margin-bottom: 1rem;
     padding: 0;
   }
