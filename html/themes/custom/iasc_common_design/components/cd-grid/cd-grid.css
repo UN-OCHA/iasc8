@@ -1,0 +1,33 @@
+.cd-grid > * {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .cd-grid--2-col > * {
+    margin-bottom: 1rem;
+  }
+
+  .cd-grid--2-col > *:nth-child(odd) {
+    margin-right: 1rem;
+  }
+}
+
+.cd-grid-3-col .views-row article > h3 {
+  text-transform: unset;
+}
+
+.cd-grid-3-col .views-row article footer {
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding: 1rem;
+  background-color: var(--cd-blue-grey--dark);
+}
+
+.cd-layout-content .cd-grid--3-col .views-row,
+.cd-layout-highlighted .cd-grid--3-col .views-row {
+  background-color: var(--cd-blue-grey);
+}
+
+.cd-grid > * .node__content {
+  padding: 0 0 1rem;
+}

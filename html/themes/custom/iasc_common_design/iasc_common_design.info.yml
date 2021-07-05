@@ -28,6 +28,9 @@ regions:
 # Add implementation-specific styles to base theme components
 libraries-extend:
 
+  common_design/cd-grid:
+    - iasc_common_design/cd-grid
+
   common_design/cd-image-grid:
     - iasc_common_design/cd-image-grid
 
