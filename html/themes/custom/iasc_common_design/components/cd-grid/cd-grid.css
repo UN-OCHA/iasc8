@@ -1,15 +1,5 @@
-.cd-grid > * {
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .cd-grid--2-col > * {
-    margin-bottom: 1rem;
-  }
-
-  .cd-grid--2-col > *:nth-child(odd) {
-    margin-right: 1rem;
-  }
+.cd-grid > .field__item {
+  margin-bottom: 0;
 }
 
 .cd-grid-3-col .views-row article > h3 {
@@ -28,6 +18,6 @@
   background-color: var(--cd-blue-grey);
 }
 
-.cd-grid > * .node__content {
+.cd-grid > * .node__content:not(:empty) {
   padding: 0 0 1rem;
 }
