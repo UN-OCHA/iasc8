@@ -21,3 +21,24 @@
 .cd-grid > * .node__content:not(:empty) {
   padding: 0 0 1rem;
 }
+
+/* Grid Layout overrides for Featured on mobile */
+@media (max-width: 575px) {
+  .cd-grid--4-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cd-grid--4-col > * {
+    flex: 0 0 48%;
+  }
+
+  @supports (display: grid) {
+    .cd-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+}
