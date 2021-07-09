@@ -4,8 +4,9 @@ const config = {
   launch: {
     slowMo: 10,
     headless: true,
+    ignoreHTTPSErrors: true,
   },
-  testTimeout: 5000,
+  testTimeout: 10000,
 };
 
 // Determine which mode we're running.
