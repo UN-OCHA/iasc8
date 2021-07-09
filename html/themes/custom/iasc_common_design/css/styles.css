@@ -1107,18 +1107,6 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
   }
 }
 
-.cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid > * {
-  flex: 0 0 100%;
-}
-.cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid .field--type-entity-reference-revisions .paragraph--type--teaser-item {
-  padding: 0;
-}
-
-@supports (display: grid) {
-  .cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-  }
-}
 .paragraph--type--teaser-item h3 {
   margin: 0.5rem 0;
   font-size: 1.125rem;
@@ -1146,6 +1134,7 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 .cd-layout-main-content .paragraph--type--contact-list .field--name-field-list-title {
   margin-top: 0;
 }
+.cd-layout-sidebar-first .paragraph--type--teaser-item,
 .cd-layout-sidebar-first .paragraph--type--twitter,
 .cd-layout-sidebar-first .paragraph--type--content-item,
 .cd-layout-sidebar-first .paragraph--type--paragraph-content {
@@ -1197,6 +1186,22 @@ aside .paragraph--type--content-item .group--view-mode-teaser .field__label {
 
 .cd-layout-sidebar-first .paragraph--type--content-item .field--name-field-category {
   margin-bottom: 1rem !important;
+}
+
+.cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid > * {
+  flex: 0 0 100%;
+}
+.cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid .field--type-entity-reference-revisions .paragraph--type--teaser-item {
+  padding: 0;
+}
+
+@supports (display: grid) {
+  .cd-layout-sidebar-first .paragraph--type--teaser-grid .cd-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+.cd-layout-sidebar-first .paragraph--type--teaser-grid .field__item:last-child .paragraph--type--teaser-item {
+  margin-bottom: 0;
 }
 
 .addressHighlight .address {
