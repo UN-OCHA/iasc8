@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53560c9ea93b881e70734beb2a8fbbfc",
+    "content-hash": "1847b163a209b8d5b772169c0d6676a8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -14444,28 +14444,31 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v4.0.5",
+            "version": "dev-cd-297-grid",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "d15c29cce2459a817446e9f37c73feab27a7e8d8"
+                "reference": "f6df0f814a7b88473dc70be1452483bfb2d0f41f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/d15c29cce2459a817446e9f37c73feab27a7e8d8",
-                "reference": "d15c29cce2459a817446e9f37c73feab27a7e8d8",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/f6df0f814a7b88473dc70be1452483bfb2d0f41f",
+                "reference": "f6df0f814a7b88473dc70be1452483bfb2d0f41f",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.2"
             },
             "type": "drupal-theme",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
-            "time": "2021-05-11T12:00:48+00:00"
+            "support": {
+                "source": "https://github.com/UN-OCHA/common_design/tree/cd-297-grid",
+                "issues": "https://github.com/UN-OCHA/common_design/issues"
+            },
+            "time": "2021-07-06T09:31:29+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -15232,7 +15235,8 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 5,
         "drupal/search_api_attachments": 10,
-        "drupal/select_or_other": 15
+        "drupal/select_or_other": 15,
+        "unocha/common_design": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
