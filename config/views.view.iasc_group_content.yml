@@ -465,6 +465,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      render_pager: true
     cache_metadata:
       max-age: -1
       contexts:
