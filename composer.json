@@ -17,10 +17,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "require": {
@@ -98,7 +94,7 @@
         "symfony/event-dispatcher": "4.3.3 as 3.4.41",
         "symfony/filesystem": "^3.4",
         "symfony/finder": "^3.4",
-        "unocha/common_design": "dev-cd-297-grid",
+        "unocha/common_design": "^4.1.0",
         "unocha/ocha_integrations": "^1.0",
         "unocha/un_date": "^1.0.1",
         "vlucas/phpdotenv": "^2.4",

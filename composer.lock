@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1847b163a209b8d5b772169c0d6676a8",
+    "content-hash": "af63e4035b1082147462e358a2781b1d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -14444,31 +14444,32 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "dev-cd-297-grid",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "f6df0f814a7b88473dc70be1452483bfb2d0f41f"
+                "reference": "c9daa46bb76e02cbca0e68cb9799ee2966e16e10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/f6df0f814a7b88473dc70be1452483bfb2d0f41f",
-                "reference": "f6df0f814a7b88473dc70be1452483bfb2d0f41f",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/c9daa46bb76e02cbca0e68cb9799ee2966e16e10",
+                "reference": "c9daa46bb76e02cbca0e68cb9799ee2966e16e10",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.2"
             },
             "type": "drupal-theme",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
             "support": {
-                "source": "https://github.com/UN-OCHA/common_design/tree/cd-297-grid",
-                "issues": "https://github.com/UN-OCHA/common_design/issues"
+                "issues": "https://github.com/UN-OCHA/common_design/issues",
+                "source": "https://github.com/UN-OCHA/common_design/tree/v4.1.0"
             },
-            "time": "2021-07-06T09:31:29+00:00"
+            "time": "2021-07-22T11:00:53+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -15235,8 +15236,7 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 5,
         "drupal/search_api_attachments": 10,
-        "drupal/select_or_other": 15,
-        "unocha/common_design": 20
+        "drupal/select_or_other": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -15244,5 +15244,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
