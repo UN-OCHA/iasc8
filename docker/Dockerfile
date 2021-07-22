@@ -1,4 +1,4 @@
-FROM unocha/unified-builder:7.3-stable as builder
+FROM unocha/unified-builder:7.4-develop as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
@@ -7,7 +7,7 @@ RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml docker/redis.services.yml html/sites/default && \
     composer run sass
 
-FROM unocha/php7-k8s:7.3-NR-stable
+FROM unocha/php-k8s:7.4-NR-develop
 
 ARG VCS_REF
 ARG VCS_URL
