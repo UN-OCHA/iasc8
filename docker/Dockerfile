@@ -3,8 +3,7 @@ ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
 WORKDIR /srv/www
-RUN composer self-update --2 && \
-    composer install --quiet --no-dev --prefer-dist && \
+RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml docker/redis.services.yml html/sites/default && \
     composer run sass
 
