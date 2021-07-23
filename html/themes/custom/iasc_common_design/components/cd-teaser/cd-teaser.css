@@ -22,8 +22,10 @@
   text-decoration: underline;
 }
 
-.paragraph--type--featured .cd-teaser__image img {
-  width: 100%;
+@media (min-width: 576px) {
+  .paragraph--type--featured .cd-teaser__image img {
+    width: 100%;
+  }
 }
 
 .cd-teaser .cd-date {

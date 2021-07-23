@@ -119,8 +119,6 @@
     </h3>
   {{ title_suffix }}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_thumbnail','field_published_date','field_oa_date') }}
-  </div>
+  <div{{ content_attributes.addClass('node__content') }}>{{ content|without('field_thumbnail','field_published_date','field_oa_date') }}</div>
 
 </article>
