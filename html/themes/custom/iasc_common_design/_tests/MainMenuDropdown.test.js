@@ -1,8 +1,10 @@
-import env from './_env';
+import env from './_env'
+
+// IASC Main Menu currently has no menu items with children so this test fails.
 
 describe('MainMenuDropdown', () => {
   beforeAll(async() => {
-    await page.goto(`${env.baseUrl}`);
+    await page.goto(env.baseUrl);
   });
 
   it('should expand when clicked', async() => {
