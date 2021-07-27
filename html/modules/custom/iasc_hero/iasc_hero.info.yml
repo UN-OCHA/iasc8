@@ -2,4 +2,4 @@ name: IASC Hero
 type: module
 description: 'IASC Hero.'
 package: IASC
-core: '8.x'
+core_version_requirement: ^8 || ^9
