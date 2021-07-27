@@ -1,7 +1,7 @@
 name: 'OCHA Views Reference Filter'
 type: module
 description: 'Expose filters for editors to configure referenced views'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: 'Views'
 dependencies:
   - drupal:views

@@ -2,4 +2,4 @@ name: IASC Reliefweb
 type: module
 description: 'IASC Reliefweb.'
 package: IASC
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
