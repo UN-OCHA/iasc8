@@ -33,7 +33,7 @@ before_script:
 
   # Code sniff
   - cd $TRAVIS_BUILD_DIR
-  - composer install
+  - composer -vvv install
 
   # LightHouseBot
   # - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
