@@ -1,9 +1,6 @@
 name: Composer Update
 
 on:
-  push:
-    branches:
-      - develop
   schedule:
     - cron: '0 3 2 */3 *'
 
