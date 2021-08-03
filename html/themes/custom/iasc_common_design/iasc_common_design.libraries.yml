@@ -6,6 +6,16 @@ global-styling:
     theme:
       css/styles.css: {}
 
+cd-grid:
+  css:
+    theme:
+      components/cd-grid/cd-grid.css: {}
+
+cd-image-grid:
+  css:
+    theme:
+      components/cd-image-grid/cd-image-grid.css: {}
+
 cd-list:
   css:
     theme:

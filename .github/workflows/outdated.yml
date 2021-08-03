@@ -1,9 +1,6 @@
 name: Composer Update
 
 on:
-  push:
-    branches:
-      - develop
   schedule:
     - cron: '0 3 2 */3 *'
 
@@ -16,7 +13,7 @@ jobs:
         with:
           ref: develop
       - name: Composer Update
-        uses: docker://unocha/unified-builder:7.3-stable
+        uses: docker://unocha/unified-builder:7.4-develop
         with:
           args: composer update --with-dependencies drupal/* 
       - name: Create Pull Request
