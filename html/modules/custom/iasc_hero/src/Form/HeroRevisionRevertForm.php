@@ -136,7 +136,7 @@ class HeroRevisionRevertForm extends ConfirmFormBase {
   protected function prepareRevertedRevision(HeroInterface $revision, FormStateInterface $form_state) {
     $revision->setNewRevision();
     $revision->isDefaultRevision(TRUE);
-    $revision->setRevisionCreationTime(REQUEST_TIME);
+    $revision->setRevisionCreationTime(time());
 
     return $revision;
   }

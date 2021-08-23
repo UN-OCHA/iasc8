@@ -11,17 +11,18 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\Url;
+use Drupal\entityqueue\Entity\EntitySubqueue;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\file\FileInterface;
 use Drupal\group\Entity\Group;
 use Drupal\group\Entity\GroupContent;
 use Drupal\media\Entity\Media;
-use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
-use Drupal\entityqueue\Entity\EntitySubqueue;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -45,7 +46,7 @@ function iasc_content_form_alter(&$form, &$form_state, $form_id) {
  * Add default sidebar blocks to a space.
  */
 function iasc_content_space_sidebar_defaults($id) {
-  $group = entity_load('group', $id);
+  $group = \Drupal::entityTypeManager()->getStorage('group')->load($id);
   $current = $group->get('field_sidebar')->getValue();
 
   // Bail out if we already have some blocks.
@@ -108,7 +109,7 @@ function iasc_content_space_sidebar_defaults($id) {
  * Add default content blocks to a space.
  */
 function iasc_content_space_content_defaults($id) {
-  $group = entity_load('group', $id);
+  $group = \Drupal::entityTypeManager()->getStorage('group')->load($id);
   $current = $group->get('field_content')->getValue();
 
   // Bail out if we already have some blocks.
@@ -1008,7 +1009,7 @@ function iasc_content_file_download($uri) {
     ],
   ];
   // Only check private files.
-  $scheme = file_uri_scheme($uri);
+  $scheme = StreamWrapperManager::getScheme($uri);
   if ($scheme != 'private') {
     return;
   }
@@ -1029,7 +1030,7 @@ function iasc_content_file_download($uri) {
       $referencing_entity_is_accessible = FALSE;
       $references = empty($usage_list['file']) ? [] : $usage_list['file'];
       foreach ($references as $entity_type => $entity_ids_usage_count) {
-        $referencing_entities = entity_load_multiple($entity_type, array_keys($entity_ids_usage_count));
+        $referencing_entities = \Drupal::entityTypeManager()->getStorage($entity_type)->load(array_keys($entity_ids_usage_count));
 
         /** @var \Drupal\Core\Entity\EntityInterface $referencing_entity */
         foreach ($referencing_entities as $referencing_entity) {
@@ -1102,7 +1103,7 @@ function iasc_content_views_pre_render(ViewExecutable $view) {
   if ($view->id() === 'iasc_group_content') {
     $group_id = $view->args[0];
     if ($group_id) {
-      if ($group = entity_load('group', $group_id)) {
+      if ($group = $group = \Drupal::entityTypeManager()->getStorage('group')->load($group_id)) {
         $view->setTitle($view->getTitle() . $group->label());
       }
     }

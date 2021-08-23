@@ -89,7 +89,7 @@ class HeroRevisionRevertTranslationForm extends HeroRevisionRevertForm {
 
     $latest_revision_translation->setNewRevision();
     $latest_revision_translation->isDefaultRevision(TRUE);
-    $revision->setRevisionCreationTime(REQUEST_TIME);
+    $revision->setRevisionCreationTime(time());
 
     return $latest_revision_translation;
   }

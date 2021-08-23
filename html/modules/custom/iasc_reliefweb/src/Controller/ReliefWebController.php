@@ -87,7 +87,7 @@ class ReliefWebController extends ControllerBase {
       }
 
       if (!empty($data)) {
-        $this->cacheBackend->set($cid, $data, REQUEST_TIME + (60 * 60 * $this->config->get('updates.max_age')));
+        $this->cacheBackend->set($cid, $data, time() + (60 * 60 * $this->config->get('updates.max_age')));
       }
 
       // Invalidate.
@@ -125,7 +125,7 @@ class ReliefWebController extends ControllerBase {
       }
 
       if (!empty($feeds)) {
-        $this->cacheBackend->set($cid, $feeds, REQUEST_TIME + (60 * 60 * $this->config->get('updates.max_age')), [
+        $this->cacheBackend->set($cid, $feeds, time() + (60 * 60 * $this->config->get('updates.max_age')), [
           'iasc_reliefweb',
           'iasc_reliefweb:latestUpdates',
         ]);

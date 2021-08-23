@@ -31,12 +31,21 @@ class HeroController extends ControllerBase implements ContainerInjectionInterfa
   protected $renderer;
 
   /**
+   * The link generator.
+   *
+   * @var \Drupal\Core\Utility\LinkGenerator
+   */
+  protected $linkGenerator;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
     $instance = parent::create($container);
     $instance->dateFormatter = $container->get('date.formatter');
     $instance->renderer = $container->get('renderer');
+    $instance->linkGenerator = $container->get('link_generator');
+
     return $instance;
   }
 
@@ -121,13 +130,13 @@ class HeroController extends ControllerBase implements ContainerInjectionInterfa
         // Use revision link to link to revisions that are not active.
         $date = $this->dateFormatter->format($revision->getRevisionCreationTime(), 'short');
         if ($vid != $hero->getRevisionId()) {
-          $link = $this->l($date, new Url('entity.hero.revision', [
+          $link = $this->linkGenerator->generate($date, new Url('entity.hero.revision', [
             'hero' => $hero->id(),
             'hero_revision' => $vid,
           ]));
         }
         else {
-          $link = $hero->link($date);
+          $link = $hero->toLink($date);
         }
 
         $row = [];
