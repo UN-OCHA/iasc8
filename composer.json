@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.4",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "^1.6",
         "drupal/admin_denied": "^1.0",
@@ -157,6 +157,10 @@
             "html/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
+        "preserve-paths": [
+            "html/modules/custom",
+            "html/themes/custom"
+        ],
         "drupal-scaffold": {
             "initial": {
                 ".editorconfig": "../.editorconfig",
