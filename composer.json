@@ -28,7 +28,7 @@
         "drupal/colorbox": "^1.4",
         "drupal/colors": "1.x-dev",
         "drupal/components": "^2.4",
-        "drupal/conditional_fields": "^1.0@alpha",
+        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_split": "^1.4",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
