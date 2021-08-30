@@ -12,7 +12,30 @@ id: service_contact
 title: 'Service contact'
 description: 'Request contact info of a service'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': 'Your name'\n  '#size': 22\n  '#required': true\nemail:\n  '#type': email\n  '#title': 'Your email'\n  '#size': 22\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Your organization'\n  '#size': 22\n  '#required': true\nreason:\n  '#type': textarea\n  '#title': 'Your reason'\n  '#size': 15\n  '#required': true\nto:\n  '#type': value\n  '#title': to"
+elements: |-
+  name:
+    '#type': textfield
+    '#title': 'Your name'
+    '#size': 22
+    '#required': true
+  email:
+    '#type': email
+    '#title': 'Your email'
+    '#size': 22
+    '#required': true
+  organization:
+    '#type': textfield
+    '#title': 'Your organization'
+    '#size': 22
+    '#required': true
+  reason:
+    '#type': textarea
+    '#title': 'Your reason'
+    '#size': 15
+    '#required': true
+  to:
+    '#type': value
+    '#title': to
 css: ''
 javascript: ''
 settings:
@@ -33,7 +56,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -85,6 +108,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -140,6 +165,8 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
