@@ -23,7 +23,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
+      allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-entity-substitution> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -42,3 +42,10 @@ filters:
     weight: 0
     settings:
       replace_empty: '1'
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -11
+    settings:
+      title: false
