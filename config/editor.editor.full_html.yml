@@ -55,10 +55,11 @@ settings:
       styles: ''
     language:
       language_list: un
-    linkit:
-      linkit_profile: ''
     tokenbrowser:
       token_types: {  }
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: ''
 image_upload:
   status: true
   scheme: public
