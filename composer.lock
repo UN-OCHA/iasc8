@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b4b84b8a4e0e6f8bedf82e1e677ceaa",
+    "content-hash": "99734e1d70f83aad59e1036cb4aa2fc0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6090,17 +6090,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.1.0-beta1",
+            "version": "6.1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.1.0-beta1"
+                "reference": "6.1.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.1.0-beta1.zip",
-                "reference": "6.1.0-beta1",
-                "shasum": "eecaacac2cf59a8ef2a018e6b0f96488ef52e7b3"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.1.0-beta2.zip",
+                "reference": "6.1.0-beta2",
+                "shasum": "dde8d65582ddf97e9da998725d68d3ae37598a91"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -6148,8 +6148,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.1.0-beta1",
-                    "datestamp": "1626269425",
+                    "version": "6.1.0-beta2",
+                    "datestamp": "1629907247",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -17338,7 +17338,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4"
+        "php": ">=8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
