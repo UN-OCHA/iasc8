@@ -48,17 +48,7 @@
 %}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if title and page %}
-    {# This is not wrapped as this renders the page title block which
-       already wraps the node title in a <h1>. #}
-    {{ title }}
-  {% else %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+
 
   {{ local_tasks }}
 
