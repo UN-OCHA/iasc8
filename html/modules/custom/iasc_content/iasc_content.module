@@ -1030,7 +1030,7 @@ function iasc_content_file_download($uri) {
       $referencing_entity_is_accessible = FALSE;
       $references = empty($usage_list['file']) ? [] : $usage_list['file'];
       foreach ($references as $entity_type => $entity_ids_usage_count) {
-        $referencing_entities = \Drupal::entityTypeManager()->getStorage($entity_type)->load(array_keys($entity_ids_usage_count));
+        $referencing_entities = \Drupal::entityTypeManager()->getStorage($entity_type)->loadMultiple(array_keys($entity_ids_usage_count));
 
         /** @var \Drupal\Core\Entity\EntityInterface $referencing_entity */
         foreach ($referencing_entities as $referencing_entity) {
