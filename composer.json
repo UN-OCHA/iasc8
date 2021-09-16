@@ -84,7 +84,7 @@
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "phpoffice/phpspreadsheet": "^1.16",
-        "unocha/common_design": "^4.0.0",
+        "unocha/common_design": "^5.0.0",
         "unocha/ocha_integrations": "^1.0",
         "unocha/un_date": "^1.0.1",
         "vlucas/phpdotenv": "^2.4",
