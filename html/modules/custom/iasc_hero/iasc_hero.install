@@ -6,7 +6,7 @@
  */
 
 /**
- * Rename revision metadata key column from 'revision_log' to 'revision_log_message'.
+ * Rename revision metadata key.
  */
 function iasc_hero_update_8106() {
   $entity_type_id = 'hero';
