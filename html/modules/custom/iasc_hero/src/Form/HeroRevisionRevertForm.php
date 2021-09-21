@@ -102,7 +102,7 @@ class HeroRevisionRevertForm extends ConfirmFormBase {
     $original_revision_timestamp = $this->revision->getRevisionCreationTime();
 
     $this->revision = $this->prepareRevertedRevision($this->revision, $form_state);
-    $this->revision->revision_log = $this->t('Copy of the revision from %date.', [
+    $this->revision->revision_log_message = $this->t('Copy of the revision from %date.', [
       '%date' => $this->dateFormatter->format($original_revision_timestamp),
     ]);
     $this->revision->save();

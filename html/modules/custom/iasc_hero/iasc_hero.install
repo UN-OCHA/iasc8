@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * IASC Content helpers.
+ */
+
+/**
+ * Rename revision metadata key column from 'revision_log' to 'revision_log_message'.
+ */
+function iasc_hero_update_8106() {
+  $entity_type_id = 'hero';
+  $current_field_name = 'revision_log';
+  $target_field_name = 'revision_log_message';
+
+  // Get the table name.
+  $definition = \Drupal::entityTypeManager()->getDefinition($entity_type_id);
+  $table_name = $definition->getRevisionTable();
+
+  // Check if the change should be applied.
+  $schema = \Drupal::database()->schema();
+  if (!$schema->fieldExists($table_name, $current_field_name)) {
+    // We are good the column 'revision_log' does not exist.
+    return;
+  }
+
+  // Rename the revision metadata key in the entity type.
+  iasc_hero_rename_metadata_key($entity_type_id, $target_field_name);
+
+  // Rename the field in the last installed field storage definitions.
+  iasc_hero_rename_field_storage_definition($entity_type_id, $current_field_name, $target_field_name);
+
+  // Rename the field in the entity storage schema.
+  $field_schema = iasc_hero_rename_field_entity_storage_schema($entity_type_id, $current_field_name, $target_field_name, $table_name);
+
+  // Update the column name in the database table.
+  if (!empty($field_schema)) {
+    $schema->changeField($table_name, $current_field_name, $target_field_name, $field_schema);
+  }
+}
+
+/**
+ * Rename the 'revision_log_message' revision metadata key in the entity type.
+ *
+ * @param string $entity_type_id
+ *   The entity type ID.
+ * @param string $target_field_name
+ *   The target field name.
+ */
+function iasc_hero_rename_metadata_key($entity_type_id, $target_field_name) {
+  // Change the Revision metadata key in the entity type.
+  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+
+  /** @var \Drupal\Core\Entity\ContentEntityType $entity_type */
+  $entity_type = $definition_update_manager->getEntityType($entity_type_id);
+
+  $metadata_key = 'revision_log_message';
+  $metadata_key_value = $entity_type->getRevisionMetadataKey($metadata_key);
+  if ($metadata_key_value == $target_field_name) {
+    // The metadata key already has the target value, we are good.
+    return;
+  }
+
+  // Set the metadata key value.
+  $entity_type->setRevisionMetadataKey($metadata_key, $target_field_name);
+
+  /** @var \Drupal\Core\Entity\EntityLastInstalledSchemaRepositoryInterface $schema_repository */
+  $schema_repository = \Drupal::service('entity.last_installed_schema.repository');
+
+  // Store the changes in the last installed definition.
+  $schema_repository->setLastInstalledDefinition($entity_type);
+}
+
+/**
+ * Rename a given field in its last installed field storage definitions.
+ *
+ * @param string $entity_type_id
+ *   The entity type ID.
+ * @param string $current_field_name
+ *   The current field name.
+ * @param string $target_field_name
+ *   The target field name.
+ */
+function iasc_hero_rename_field_storage_definition($entity_type_id, $current_field_name, $target_field_name) {
+  /** @var \Drupal\Core\Entity\EntityLastInstalledSchemaRepositoryInterface $schema_repository */
+  $schema_repository = \Drupal::service('entity.last_installed_schema.repository');
+  $field_storage_definitions = $schema_repository->getLastInstalledFieldStorageDefinitions($entity_type_id);
+  $field_definition_changed = FALSE;
+
+  /** @var \Drupal\Core\Field\BaseFieldDefinition $target_field_definition */
+  $target_field_definition = NULL;
+  if (isset($field_storage_definitions[$current_field_name])) {
+    $target_field_definition = $field_storage_definitions[$current_field_name];
+    // Delete the old field definition.
+    unset($field_storage_definitions[$current_field_name]);
+    $field_definition_changed = TRUE;
+  }
+
+  if (!$target_field_definition) {
+    return;
+  }
+
+  // Rename the field in the field definition.
+  $target_field_definition->setName($target_field_name);
+  if (!isset($field_storage_definitions[$target_field_name])) {
+    // Add the new field definition.
+    $field_storage_definitions[$target_field_name] = $target_field_definition;
+    $field_definition_changed = TRUE;
+  }
+  if ($field_definition_changed) {
+    // Stores the changes.
+    $schema_repository->setLastInstalledFieldStorageDefinitions($entity_type_id, $field_storage_definitions);
+  }
+}
+
+/**
+ * Rename a given field entity storage schema.
+ *
+ * @param string $entity_type_id
+ *   The entity type ID.
+ * @param string $current_field_name
+ *   The current field name.
+ * @param string $target_field_name
+ *   The target field name.
+ * @param string $table_name
+ *   The table name.
+ *
+ * @return array|null
+ *   The field schema.
+ */
+function iasc_hero_rename_field_entity_storage_schema($entity_type_id, $current_field_name, $target_field_name, $table_name) {
+  $key_value = \Drupal::keyValue('entity.storage_schema.sql');
+  $key_name = $entity_type_id . '.field_schema_data.' . $current_field_name;
+  $table_storage_schema = $key_value->get($key_name);
+  $field_schema = $table_storage_schema[$table_name]['fields'][$current_field_name] ?? NULL;
+
+  if (empty($field_schema)) {
+    // The 'revision_log' schema does not exist, therefore stop here.
+    return NULL;
+  }
+
+  // Delete the current field schema.
+  unset($table_storage_schema[$table_name]['fields'][$current_field_name]);
+
+  // Add the target field schema.
+  $table_storage_schema[$table_name]['fields'][$target_field_name] = $field_schema;
+
+  // Stores the changes.
+  $key_value->delete($key_name);
+  $new_key_name = $entity_type_id . '.field_schema_data.' . $target_field_name;
+  $key_value->set($new_key_name, $table_storage_schema);
+
+  // Return the field schema.
+  return $field_schema;
+}
