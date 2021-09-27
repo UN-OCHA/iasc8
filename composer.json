@@ -55,7 +55,6 @@
         "drupal/linkit": "^6.0@beta",
         "drupal/maintenance200": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
-        "drupal/migrate_upgrade": "^3",
         "drupal/node_view_permissions": "^1.4",
         "drupal/paragraphs": "^1.8",
         "drupal/paragraphs_edit": "^2.0@alpha",
