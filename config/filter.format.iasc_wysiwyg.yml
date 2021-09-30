@@ -1,7 +1,11 @@
 uuid: 648f1709-4772-4d9b-9c36-d6ab58adcd4e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - linkit
+    - media
+    - token_filter
 name: 'IASC wysiwyg'
 format: iasc_wysiwyg
 weight: 0
@@ -21,4 +25,20 @@ filters:
     status: true
     weight: -11
     settings:
-      title: false
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: false
+    weight: 0
+    settings:
+      replace_empty: '0'

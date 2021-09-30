@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - linkit
     - media
     - spamspan
     - token_filter
@@ -107,4 +108,4 @@ filters:
     status: true
     weight: -50
     settings:
-      title: false
+      title: true
