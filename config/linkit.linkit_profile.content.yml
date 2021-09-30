@@ -1,0 +1,52 @@
+uuid: 0cbe5ea5-33a9-4d70-8e02-38eed72799aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content
+label: Content
+description: ''
+matchers:
+  5e852c7f-03dd-4a7d-a85f-733c6b7e745a:
+    uuid: 5e852c7f-03dd-4a7d-a85f-733c6b7e745a
+    id: 'entity:node'
+    weight: 0
+    settings:
+      include_unpublished: false
+      metadata: ''
+      bundles:
+        announcement: announcement
+        oa_event: oa_event
+        oa_wiki_page: oa_wiki_page
+        panopoly_landing_page: panopoly_landing_page
+        panopoly_page: panopoly_page
+        service: service
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 20
+  1941feed-c3cd-487c-9866-580195e55f3d:
+    uuid: 1941feed-c3cd-487c-9866-580195e55f3d
+    id: front_page
+    weight: 0
+    settings: {  }
+  da52eea3-2b6d-4bb2-8a12-68484cf9337c:
+    uuid: da52eea3-2b6d-4bb2-8a12-68484cf9337c
+    id: 'entity:group'
+    weight: 0
+    settings:
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 20
+  86c33064-df3a-44d7-b931-3479ea10b411:
+    uuid: 86c33064-df3a-44d7-b931-3479ea10b411
+    id: 'entity:group_content'
+    weight: 0
+    settings:
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 20
