@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf1ba7187d2440588380490270876f34",
+    "content-hash": "54bce3737358a0766cad8fefe5da8064",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4211,17 +4211,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "6.0.0-beta2",
+            "version": "6.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "6.0.0-beta2"
+                "reference": "6.0.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-beta2.zip",
-                "reference": "6.0.0-beta2",
-                "shasum": "388cd47159eef6c505646c7d5a96e7e653439a94"
+                "url": "https://ftp.drupal.org/files/projects/linkit-6.0.0-beta3.zip",
+                "reference": "6.0.0-beta3",
+                "shasum": "39a5bf54cbc88324d788a573df7b3fecf7622065"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -4232,8 +4232,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-beta2",
-                    "datestamp": "1608957496",
+                    "version": "6.0.0-beta3",
+                    "datestamp": "1632933683",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -4984,17 +4984,17 @@
         },
         {
             "name": "drupal/search_api_attachments",
-            "version": "1.0.0-beta17",
+            "version": "1.0.0-beta18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_attachments.git",
-                "reference": "8.x-1.0-beta17"
+                "reference": "8.x-1.0-beta18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-8.x-1.0-beta17.zip",
-                "reference": "8.x-1.0-beta17",
-                "shasum": "0fee0212aa35270543d350446292617f6a708bb4"
+                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-8.x-1.0-beta18.zip",
+                "reference": "8.x-1.0-beta18",
+                "shasum": "e770ae27a7f5c2f9a7c3064d14a1f110ae98acf0"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5003,8 +5003,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta17",
-                    "datestamp": "1612013394",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1632333998",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -5127,6 +5127,67 @@
                 "source": "http://git.drupal.org/project/search_api_solr.git",
                 "issues": "https://www.drupal.org/project/issues/search_api_solr",
                 "chat": "https://drupalchat.me/channel/search"
+            }
+        },
+        {
+            "name": "drupal/seckit",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/seckit.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/seckit-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "d5356230b2de7d1e8a2e68eb81e70619a2e36c1e"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1598609351",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "badjava",
+                    "homepage": "https://www.drupal.org/user/83372"
+                },
+                {
+                    "name": "jweowu",
+                    "homepage": "https://www.drupal.org/user/152788"
+                },
+                {
+                    "name": "mcdruid",
+                    "homepage": "https://www.drupal.org/user/255969"
+                },
+                {
+                    "name": "p0deje",
+                    "homepage": "https://www.drupal.org/user/529960"
+                }
+            ],
+            "description": "SecKit provides Drupal with various security-hardening options.",
+            "homepage": "https://www.drupal.org/project/seckit",
+            "keywords": [
+                "Drupal",
+                "security"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/seckit",
+                "issues": "http://drupal.org/project/issues/seckit"
             }
         },
         {
@@ -5734,17 +5795,17 @@
         },
         {
             "name": "drupal/token_filter",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token_filter.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token_filter-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "4d22feb0c96aeb747152d947499258e49769c237"
+                "url": "https://ftp.drupal.org/files/projects/token_filter-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "6ac6ae8349731512696d2c3d1cd11846a95cd1a7"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5753,8 +5814,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1588029999",
+                    "version": "8.x-1.3",
+                    "datestamp": "1632199659",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5763,13 +5824,9 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
-                {
-                    "name": "Darvanen",
-                    "homepage": "https://www.drupal.org/user/1068770"
-                },
                 {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
@@ -5785,6 +5842,10 @@
                 {
                     "name": "asciikewl",
                     "homepage": "https://www.drupal.org/user/147292"
+                },
+                {
+                    "name": "darvanen",
+                    "homepage": "https://www.drupal.org/user/1068770"
                 },
                 {
                     "name": "pescetti",
@@ -12567,16 +12628,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.10",
+            "version": "1.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "9fdb22c2e97a614657716178093cd1da90a64aa8"
+                "reference": "0b072d51c5a9c6f3412f7ea3ab043d6603cb2582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/9fdb22c2e97a614657716178093cd1da90a64aa8",
-                "reference": "9fdb22c2e97a614657716178093cd1da90a64aa8",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0b072d51c5a9c6f3412f7ea3ab043d6603cb2582",
+                "reference": "0b072d51c5a9c6f3412f7ea3ab043d6603cb2582",
                 "shasum": ""
             },
             "require": {
@@ -12588,7 +12649,7 @@
                 "phpstan/phpstan": "^0.12.55",
                 "psr/log": "^1.0",
                 "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -12623,7 +12684,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.2.10"
+                "source": "https://github.com/composer/ca-bundle/tree/1.2.11"
             },
             "funding": [
                 {
@@ -12639,20 +12700,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-07T13:58:28+00:00"
+            "time": "2021-09-25T20:32:43+00:00"
         },
         {
             "name": "composer/composer",
-            "version": "2.1.8",
+            "version": "2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "24d38e9686092de05214cafa187dc282a5d89497"
+                "reference": "e558c88f28d102d497adec4852802c0dc14c7077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/24d38e9686092de05214cafa187dc282a5d89497",
-                "reference": "24d38e9686092de05214cafa187dc282a5d89497",
+                "url": "https://api.github.com/repos/composer/composer/zipball/e558c88f28d102d497adec4852802c0dc14c7077",
+                "reference": "e558c88f28d102d497adec4852802c0dc14c7077",
                 "shasum": ""
             },
             "require": {
@@ -12721,7 +12782,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.1.8"
+                "source": "https://github.com/composer/composer/tree/2.1.9"
             },
             "funding": [
                 {
@@ -12737,7 +12798,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-15T11:55:15+00:00"
+            "time": "2021-10-05T07:47:38+00:00"
         },
         {
             "name": "composer/metadata-minifier",
