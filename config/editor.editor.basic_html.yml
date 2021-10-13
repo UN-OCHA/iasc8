@@ -43,15 +43,15 @@ settings:
           items:
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: content
     stylescombo:
       styles: ''
     language:
       language_list: un
     tokenbrowser:
       token_types: {  }
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: ''
 image_upload:
   status: true
   scheme: public
