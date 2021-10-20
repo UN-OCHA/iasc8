@@ -12,6 +12,11 @@ The html directory is the document root. The vendor directories contains librari
 - Run `composer install`. This will download Drupal core, contributed modules, contributed themes and libraries.
 - Deploy the html and vendor directories to the web server(s).
 
+For local development, add this line to settings.local.php:
+`$config['config_split.config_split.config_dev']['status'] = TRUE;`
+After importing a fresh database, run `drush csim` to enable devel, database
+log and stage_file_proxy.
+
 ### Initialisation
 
 Use drush to bootstrap your site and import the initial configuration from the config subdirectory.
