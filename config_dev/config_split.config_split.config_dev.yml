@@ -1,23 +1,20 @@
-uuid: 720e180a-cef3-42e6-8b4f-60f60e68208b
+uuid: 4b2b4b9a-32d2-44d1-af21-9f281aed2408
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: config_dev
-label: 'Config dev'
-description: ''
+label: config_dev
+description: 'Dev modules and settings not suitable for production.'
+weight: 0
+storage: folder
 folder: ../config_dev
 module:
   config_filter: 0
   config_split: 0
+  dblog: 0
   devel: 0
-  devel_entity_updates: 0
-  devel_php: 0
+  stage_file_proxy: 0
+  views_ui: 0
 theme: {  }
-blacklist: {  }
-graylist:
-  - migrate_plus.migration.upgrade_d7_file
-  - migrate_plus.migration.upgrade_d7_file_private
-  - migrate_plus.migration_group.migrate_drupal_7
-graylist_dependents: true
-graylist_skip_equal: true
-weight: 0
+complete_list: {  }
+partial_list: {  }
