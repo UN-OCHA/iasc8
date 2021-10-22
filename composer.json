@@ -3,7 +3,7 @@
     "description": "IASC 8",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "version": "10.4.0",
+    "version": "10.3.2",
     "authors": [
         {
             "name": "UNOCHA",
@@ -107,7 +107,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-		"bin-dir": "vendor/bin/",
+        "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
     "autoload": {
@@ -129,8 +129,12 @@
             "@sass-prepare",
             "@sass-build",
             "@sass-cleanup"
-        ]
-
+        ],
+        "changelog": "conventional-changelog",
+        "release": "conventional-changelog --commit",
+        "release:patch": "conventional-changelog --patch --commit",
+        "release:minor": "conventional-changelog --minor --commit",
+        "release:major": "conventional-changelog --major --commit"
     },
     "extra": {
         "enable-patching": true,
@@ -139,18 +143,31 @@
             "drupal/core": "-p2"
         },
         "patches-file": "composer.patches.json",
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "html/core": ["type:drupal-core"],
+            "html/core": [
+                "type:drupal-core"
+            ],
             "html/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "html/modules/contrib/{$name}": ["type:drupal-module"],
-            "html/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "html/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "html/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "preserve-paths": [
             "html/modules/custom",
@@ -165,9 +182,9 @@
                 "web-root": "html/"
             },
             "file-mapping": {
-              "[web-root]/robots.txt": {
-                "append": "PATCHES/robots.txt.append"
-              }
+                "[web-root]/robots.txt": {
+                    "append": "PATCHES/robots.txt.append"
+                }
             }
         }
     }

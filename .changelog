@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'ignoreTypes' => ['build', 'chore', 'ci', 'docs', 'refactor', 'revert', 'style', 'test'],
+  'ignoreTypes' => ['build', 'ci', 'docs', 'refactor', 'revert', 'style', 'test'],
   'tagPrefix' => 'v',
   'tagSuffix' => '',
   'commitUrlFormat' => '{{host}}/{{repository}}/commit/{{hash}}',
