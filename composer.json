@@ -97,6 +97,7 @@
         "drupal/core-dev": "^9.2.6",
         "drupal/upgrade_rector": "1.x-dev@dev",
         "drupal/upgrade_status": "^3.8",
+        "marcocesarato/php-conventional-changelog": "^1.12.1",
         "phpmd/phpmd": "^2.6",
         "weitzman/drupal-test-traits": "^1.5",
         "weitzman/logintrait": "^1.1"
