@@ -12,6 +12,7 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   date_recur: 0
