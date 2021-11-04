@@ -12,6 +12,7 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   date_recur: 0
@@ -105,7 +106,6 @@ module:
   update: 0
   user: 0
   variationcache: 0
-  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0
