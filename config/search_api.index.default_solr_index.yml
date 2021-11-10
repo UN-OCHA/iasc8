@@ -298,7 +298,6 @@ processor_settings:
     weights:
       add_properties: 0
       pre_index_save: -10
-  reverse_entity_references: {  }
   solr_date_range:
     weights:
       preprocess_index: 0

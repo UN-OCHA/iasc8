@@ -3,10 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_published_date
     - search_api.index.default_solr_index
   module:
-    - datetime
     - search_api
 _core:
   default_config_hash: WL4w5mZNKQaKr_LN6ix_lTtr-GqNDdB468D-WjlTtD0
