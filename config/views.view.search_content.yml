@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_published_date
     - search_api.index.default_solr_index
   module:
+    - datetime
     - search_api
 _core:
   default_config_hash: WL4w5mZNKQaKr_LN6ix_lTtr-GqNDdB468D-WjlTtD0
@@ -135,10 +137,10 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts:
-        field_published_date:
-          id: field_published_date
+        search_api_relevance:
+          id: search_api_relevance
           table: search_api_index_default_solr_index
-          field: field_published_date
+          field: search_api_relevance
           relationship: none
           group_type: group
           admin_label: ''
