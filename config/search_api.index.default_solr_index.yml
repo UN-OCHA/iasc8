@@ -21,7 +21,7 @@ dependencies:
     - field.storage.node.field_category
     - field.storage.node.field_published_date
     - search_api.server.default_solr_server
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.search_index
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -186,6 +186,8 @@ field_settings:
           iasc_group: default
           iasc_space: default
         'entity:node':
+          article: search_index
+          page: search_index
           action_point: full
           announcement: full
           oa_event: full
