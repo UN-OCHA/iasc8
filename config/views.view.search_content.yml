@@ -177,6 +177,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      fields: {  }
     cache_metadata:
       contexts:
         - 'languages:language_interface'

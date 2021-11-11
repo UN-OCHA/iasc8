@@ -190,7 +190,7 @@ field_settings:
           announcement: full
           oa_event: full
           oa_wiki_page: full
-          oa_worktracker_task: full
+          oa_worktracker_task: default
           panopoly_landing_page: full
           panopoly_page: full
   saa_field_media_files:
