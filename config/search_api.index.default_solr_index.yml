@@ -7,21 +7,21 @@ dependencies:
     - group
     - node
     - user
-    - taxonomy
     - media
+    - taxonomy
     - search_api
     - search_api_attachments
   config:
-    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
-    - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
     - field.storage.media.field_media_file
     - field.storage.node.field_media_files
-    - field.storage.node.field_category
+    - field.storage.node.field_document_type
+    - field.storage.group.field_description
+    - field.storage.node.field_oa_date
     - field.storage.node.field_published_date
+    - field.storage.node.field_category
     - search_api.server.default_solr_server
-    - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.node.full
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -56,6 +56,9 @@ third_party_settings:
       maxntp: 2000
       boost: false
       interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
     advanced:
       index_prefix: ''
       collection: ''
@@ -186,8 +189,6 @@ field_settings:
           iasc_group: default
           iasc_space: default
         'entity:node':
-          article: search_index
-          page: search_index
           action_point: full
           announcement: full
           oa_event: full
@@ -248,12 +249,9 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - action_point
         - announcement
-        - oa_discussion_post
         - oa_event
         - oa_wiki_page
-        - oa_worktracker_task
         - panopoly_landing_page
         - panopoly_page
     languages:
@@ -300,6 +298,7 @@ processor_settings:
     weights:
       add_properties: 0
       pre_index_save: -10
+  reverse_entity_references: {  }
   solr_date_range:
     weights:
       preprocess_index: 0
@@ -311,11 +310,9 @@ processor_settings:
         datasource_boost: !!float 1
         bundle_boosts:
           announcement: !!float 3
-          oa_event: !!float 5
           oa_wiki_page: !!float 5
-          oa_worktracker_task: !!float 0
-          panopoly_landing_page: !!float 2
-          panopoly_page: !!float 8
+          panopoly_landing_page: !!float 8
+          panopoly_page: !!float 5
     weights:
       preprocess_index: 0
 tracker_settings:
@@ -323,5 +320,6 @@ tracker_settings:
     indexing_order: fifo
 options:
   index_directly: true
+  track_changes_in_references: 0
   cron_limit: 50
 server: default_solr_server

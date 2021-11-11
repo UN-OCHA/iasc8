@@ -76,8 +76,6 @@ display:
             'entity:node':
               action_point: teaser
               announcement: teaser
-              contact: teaser
-              oa_discussion_post: teaser
               oa_event: teaser
               oa_wiki_page: teaser
               oa_worktracker_task: teaser
