@@ -109,21 +109,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-		"bin-dir": "vendor/bin/",
+    "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
     "scripts": {
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
         "sass-prepare": "cd html/themes/custom/iasc_common_design && npm install",
         "sass-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/sass sass:build",
         "sass-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
