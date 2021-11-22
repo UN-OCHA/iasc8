@@ -158,7 +158,7 @@
             },
             "file-mapping": {
               "[web-root]/robots.txt": {
-                "append": "PATCHES/robots.txt.append"
+                "append": "../PATCHES/robots.txt.append"
               }
             }
         }
