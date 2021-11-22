@@ -83,6 +83,7 @@
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "phpoffice/phpspreadsheet": "^1.16",
+        "symfony/flex": "^1.17",
         "unocha/common_design": "^5.0.0",
         "unocha/ocha_integrations": "^1.0",
         "unocha/un_date": "^1.0.1",
@@ -109,21 +110,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-		"bin-dir": "vendor/bin/",
+    "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
     "scripts": {
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
         "sass-prepare": "cd html/themes/custom/iasc_common_design && npm install",
         "sass-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/sass sass:build",
         "sass-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
