@@ -12,6 +12,7 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   date_recur: 0
@@ -80,6 +81,7 @@ module:
   search_api_db: 0
   search_api_solr: 0
   search_api_solr_admin: 0
+  seckit: 0
   select2: 0
   select2_facets: 0
   select_a11y: 0
@@ -104,7 +106,6 @@ module:
   update: 0
   user: 0
   variationcache: 0
-  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0
