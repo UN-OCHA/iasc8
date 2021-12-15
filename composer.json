@@ -52,6 +52,7 @@
         "drupal/geophp": "^1.0@beta",
         "drupal/google_tag": "^1.2",
         "drupal/group": "^1.0.0",
+        "drupal/honeypot": "^2.0",
         "drupal/linkit": "^6.0@beta",
         "drupal/maintenance200": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
@@ -89,7 +90,8 @@
         "unocha/un_date": "^1.0.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3"
+        "webmozart/path-util": "^2.3",
+        "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
@@ -143,6 +145,14 @@
             "html/profiles/contrib/{$name}": ["type:drupal-profile"],
             "html/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "merge-plugin": {
+          "include": [
+            "html/modules/contrib/webform/composer.libraries.json"
+          ],
+          "merge-extra": true,
+          "merge-extra-deep": true,
+          "merge-scripts": true
         },
         "preserve-paths": [
             "html/modules/custom",

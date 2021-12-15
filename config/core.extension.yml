@@ -46,6 +46,7 @@ module:
   group: 0
   help: 0
   history: 0
+  honeypot: 0
   iasc_content: 0
   iasc_hero: 0
   iasc_reliefweb: 0
