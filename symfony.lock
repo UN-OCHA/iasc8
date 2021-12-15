@@ -40,5 +40,8 @@
         "files": [
             ".env"
         ]
+    },
+    "wikimedia/composer-merge-plugin": {
+        "version": "v2.0.1"
     }
 }
