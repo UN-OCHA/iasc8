@@ -41,6 +41,9 @@
             ".env"
         ]
     },
+    "unocha/file_checker": {
+        "version": "dev-8.x-1.x"
+    },
     "wikimedia/composer-merge-plugin": {
         "version": "v2.0.1"
     }

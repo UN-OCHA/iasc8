@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a3daec5eb344d9e8a261e196f821c7a",
+    "content-hash": "26f4dc109dea5cfe5da7cd8ddc618556",
     "packages": [
         {
             "name": "algolia/places",
@@ -12289,6 +12289,32 @@
             "time": "2021-09-16T09:30:14+00:00"
         },
         {
+            "name": "unocha/file_checker",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/file_checker.git",
+                "reference": "776bee6a40265d911669ce661a477ab818a909d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/file_checker/zipball/776bee6a40265d911669ce661a477ab818a909d3",
+                "reference": "776bee6a40265d911669ce661a477ab818a909d3",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Verifies that files managed by Drupal actually exist at the location where Drupal believes they are.",
+            "support": {
+                "source": "https://github.com/UN-OCHA/file_checker/tree/8.x-1.x",
+                "issues": "https://github.com/UN-OCHA/file_checker/issues"
+            },
+            "time": "2022-01-03T14:48:07+00:00"
+        },
+        {
             "name": "unocha/ocha_integrations",
             "version": "1.0.4",
             "source": {
@@ -18340,6 +18366,7 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 10,
         "drupal/search_api_attachments": 10,
+        "unocha/file_checker": 20,
         "drupal/upgrade_rector": 20
     },
     "prefer-stable": true,
