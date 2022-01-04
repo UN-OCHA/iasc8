@@ -1,0 +1,50 @@
+{
+    "doctrine/cache": {
+        "version": "1.12.1"
+    },
+    "doctrine/common": {
+        "version": "2.13.3"
+    },
+    "doctrine/event-manager": {
+        "version": "1.1.1"
+    },
+    "doctrine/inflector": {
+        "version": "1.4.4"
+    },
+    "doctrine/persistence": {
+        "version": "1.3.8"
+    },
+    "drupal/devel": {
+        "version": "4.1.1"
+    },
+    "drupal/honeypot": {
+        "version": "2.0.2"
+    },
+    "drupal/seckit": {
+        "version": "2.0.0"
+    },
+    "kint-php/kint": {
+        "version": "3.3"
+    },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.2.0"
+    },
+    "symfony/flex": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
+        },
+        "files": [
+            ".env"
+        ]
+    },
+    "unocha/file_checker": {
+        "version": "dev-8.x-1.x"
+    },
+    "wikimedia/composer-merge-plugin": {
+        "version": "v2.0.1"
+    }
+}
