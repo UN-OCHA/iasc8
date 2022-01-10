@@ -3929,17 +3929,17 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.35.0",
+            "version": "1.36.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.35"
+                "reference": "8.x-1.36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.35.zip",
-                "reference": "8.x-1.35",
-                "shasum": "9565fb799451f3cbad243979f9d2372e3456fe27"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.36.zip",
+                "reference": "8.x-1.36",
+                "shasum": "4aa5f6b6f60f33506a7044f11d7ed68bd4e75009"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -3948,8 +3948,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.35",
-                    "datestamp": "1637015166",
+                    "version": "8.x-1.36",
+                    "datestamp": "1641134825",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3977,24 +3977,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "davidseth",
-                    "homepage": "https://www.drupal.org/user/254857"
-                },
-                {
-                    "name": "itamair",
-                    "homepage": "https://www.drupal.org/user/1179076"
-                },
-                {
                     "name": "phayes",
                     "homepage": "https://www.drupal.org/user/47098"
                 },
                 {
                     "name": "plopesc",
                     "homepage": "https://www.drupal.org/user/282415"
-                },
-                {
-                    "name": "zzolo",
-                    "homepage": "https://www.drupal.org/user/147331"
                 }
             ],
             "description": "Stores geographic and location data (points, lines, and polygons).",
@@ -4007,17 +3995,17 @@
         },
         {
             "name": "drupal/geofield_map",
-            "version": "2.70.0",
+            "version": "2.71.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield_map.git",
-                "reference": "8.x-2.70"
+                "reference": "8.x-2.71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.70.zip",
-                "reference": "8.x-2.70",
-                "shasum": "d01e5527240ac90631116decb45d195dd372c799"
+                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.71.zip",
+                "reference": "8.x-2.71",
+                "shasum": "df8424ee6c4a0e8a3315bd366e792bfb99832553"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -4026,8 +4014,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.70",
-                    "datestamp": "1626553818",
+                    "version": "8.x-2.71",
+                    "datestamp": "1639781659",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4553,17 +4541,17 @@
         },
         {
             "name": "drupal/paragraphs_edit",
-            "version": "2.0.0-alpha8",
+            "version": "2.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs_edit.git",
-                "reference": "8.x-2.0-alpha8"
+                "reference": "8.x-2.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs_edit-8.x-2.0-alpha8.zip",
-                "reference": "8.x-2.0-alpha8",
-                "shasum": "7447a72afc3ef528afa51996bbf7c8dbf3d822b8"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_edit-8.x-2.0-beta1.zip",
+                "reference": "8.x-2.0-beta1",
+                "shasum": "99b89234d438e5a970be308bfbff72472b08d7ab"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4572,11 +4560,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-alpha8",
-                    "datestamp": "1592930672",
+                    "version": "8.x-2.0-beta1",
+                    "datestamp": "1640269230",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
