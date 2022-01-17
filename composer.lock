@@ -5525,28 +5525,28 @@
         },
         {
             "name": "drupal/social_auth_hid",
-            "version": "2.7.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_auth_hid.git",
-                "reference": "8.x-2.7"
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth_hid-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "f9c8384fb81b3fcfd2df50450dcb25161672622b"
+                "url": "https://ftp.drupal.org/files/projects/social_auth_hid-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "2d7f88dbdc3e5ec780735788901915facfeda10d"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^9 || ^10",
                 "drupal/social_auth": "^3.0",
                 "un-ocha/oauth2-hid": "^1.0.2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1629377857",
+                    "version": "8.x-3.0",
+                    "datestamp": "1641290573",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14142,17 +14142,17 @@
         },
         {
             "name": "drupal/devel",
-            "version": "4.1.1",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.1.1"
+                "reference": "4.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.1.1.zip",
-                "reference": "4.1.1",
-                "shasum": "88e5d49dda26a3136291ecd97bc6c8e897b24198"
+                "url": "https://ftp.drupal.org/files/projects/devel-4.1.3.zip",
+                "reference": "4.1.3",
+                "shasum": "f82261ca19a43379742e1df4c5a3795ef7a70441"
             },
             "require": {
                 "doctrine/common": "^2.7",
@@ -14171,8 +14171,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.1",
-                    "datestamp": "1631968537",
+                    "version": "4.1.3",
+                    "datestamp": "1639534069",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14250,17 +14250,17 @@
         },
         {
             "name": "drupal/upgrade_status",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/upgrade_status.git",
-                "reference": "8.x-3.12"
+                "reference": "8.x-3.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.12.zip",
-                "reference": "8.x-3.12",
-                "shasum": "760665fd62fea68c9649adaffbcf3324f317d43f"
+                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.13.zip",
+                "reference": "8.x-3.13",
+                "shasum": "7dd12034dad9fb5e58b6c3e4dd1ea0c530442e8d"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -14274,8 +14274,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.12",
-                    "datestamp": "1637076799",
+                    "version": "8.x-3.13",
+                    "datestamp": "1639504710",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15834,6 +15834,58 @@
                 "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
             },
             "time": "2021-09-10T09:02:12+00:00"
+        },
+        {
+            "name": "phpspec/prophecy-phpunit",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/prophecy-phpunit.git",
+                "reference": "2d7a9df55f257d2cba9b1d0c0963a54960657177"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/prophecy-phpunit/zipball/2d7a9df55f257d2cba9b1d0c0963a54960657177",
+                "reference": "2d7a9df55f257d2cba9b1d0c0963a54960657177",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8",
+                "phpspec/prophecy": "^1.3",
+                "phpunit/phpunit": "^9.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prophecy\\PhpUnit\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Integrating the Prophecy mocking library in PHPUnit test cases",
+            "homepage": "http://phpspec.net",
+            "keywords": [
+                "phpunit",
+                "prophecy"
+            ],
+            "support": {
+                "issues": "https://github.com/phpspec/prophecy-phpunit/issues",
+                "source": "https://github.com/phpspec/prophecy-phpunit/tree/v2.0.1"
+            },
+            "time": "2020-07-09T08:33:42+00:00"
         },
         {
             "name": "phpstan/phpstan",
