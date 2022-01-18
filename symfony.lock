@@ -23,6 +23,9 @@
     "codemirror/codemirror": {
         "version": "5.61.1"
     },
+    "composer/pcre": {
+        "version": "1.0.0"
+    },
     "doctrine/cache": {
         "version": "1.12.1"
     },
