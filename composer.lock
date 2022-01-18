@@ -12371,12 +12371,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/file_checker.git",
-                "reference": "f4598265e4540213b8aab5b9ae3de4099aef35fa"
+                "reference": "a5084abf9d7388efe1839292f2dfacf4e5768a3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/file_checker/zipball/f4598265e4540213b8aab5b9ae3de4099aef35fa",
-                "reference": "f4598265e4540213b8aab5b9ae3de4099aef35fa",
+                "url": "https://api.github.com/repos/UN-OCHA/file_checker/zipball/a5084abf9d7388efe1839292f2dfacf4e5768a3c",
+                "reference": "a5084abf9d7388efe1839292f2dfacf4e5768a3c",
                 "shasum": ""
             },
             "default-branch": true,
@@ -12396,7 +12396,7 @@
                 "source": "https://github.com/UN-OCHA/file_checker/tree/8.x-1.x",
                 "issues": "https://github.com/UN-OCHA/file_checker/issues"
             },
-            "time": "2022-01-17T23:24:20+00:00"
+            "time": "2022-01-18T00:02:01+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
