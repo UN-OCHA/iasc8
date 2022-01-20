@@ -76,8 +76,6 @@ display:
             'entity:node':
               action_point: teaser
               announcement: teaser
-              contact: teaser
-              oa_discussion_post: teaser
               oa_event: teaser
               oa_wiki_page: teaser
               oa_worktracker_task: teaser
@@ -135,10 +133,10 @@ display:
           fields: {  }
           plugin_id: search_api_fulltext
       sorts:
-        field_published_date:
-          id: field_published_date
+        search_api_relevance:
+          id: search_api_relevance
           table: search_api_index_default_solr_index
-          field: field_published_date
+          field: search_api_relevance
           relationship: none
           group_type: group
           admin_label: ''
@@ -177,6 +175,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      fields: {  }
     cache_metadata:
       contexts:
         - 'languages:language_interface'
