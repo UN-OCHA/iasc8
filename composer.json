@@ -34,9 +34,9 @@
         "drupal/components": "^2.4",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_split": "^2.0.0-beta4",
-        "drupal/core-composer-scaffold": "^9.2.6",
-        "drupal/core-project-message": "^9.2.6",
-        "drupal/core-recommended": "^9.2.6",
+        "drupal/core-composer-scaffold": "^9.3.3",
+        "drupal/core-project-message": "^9.3.3",
+        "drupal/core-recommended": "^9.3.3",
         "drupal/ctools": "^3.7",
         "drupal/date_recur": "^3.0",
         "drupal/date_recur_modular": "^3.0",
@@ -102,7 +102,7 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/config_filter": "^2.2",
-        "drupal/core-dev": "^9.2.6",
+        "drupal/core-dev": "^9.3.3",
         "drupal/devel": "^4.1",
         "drupal/upgrade_rector": "1.x-dev@dev",
         "drupal/upgrade_status": "^3.8",
@@ -119,7 +119,18 @@
     "prefer-stable": true,
     "config": {
     "bin-dir": "vendor/bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal-composer/preserve-paths": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/console-extend-plugin": true,
+            "oomphinc/composer-installers-extender": true,
+            "symfony/flex": true,
+            "wikimedia/composer-merge-plugin": true
+        }
     },
     "scripts": {
         "sass-prepare": "cd html/themes/custom/iasc_common_design && npm install",
