@@ -85,10 +85,9 @@
 
 {# // Only try to set the file url if there is a file. #}
 {% if content.field_media_files[0]['#media'] %}
-{%   set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
-{% else %}
-{%   set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
+  {% set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
 {% endif %}
+{% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
 
@@ -102,7 +101,9 @@
     {{ title_prefix }}
     {% if label and not page %}
       <h3{{ title_attributes.addClass('cd-teaser__title') }}>
-        {% if showPage %}
+        {% if showPage is same as '1' %}
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        {% elseif showPage is same as '0' and fileURL is null %}
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         {% else %}
           <a href="{{ fileUrl }}" title="Download">{{ label }}</a>
