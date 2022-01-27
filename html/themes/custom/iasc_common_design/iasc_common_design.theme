@@ -137,7 +137,7 @@ function iasc_common_design_preprocess_node(&$variables) {
       $variables['document_file'] = $entity->field_media_file->entity->getFileUri();
     }
 
-    dpm($variables['$document_file']);
+    dpm($variables['document_file']);
   }
 }
 
