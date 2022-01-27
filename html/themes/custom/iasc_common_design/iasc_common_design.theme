@@ -129,7 +129,7 @@ function iasc_common_design_preprocess_node(&$variables) {
 
   $bundle = $node->bundle();
 
-  if ($bundle == 'oa_wiki_page' && $variables['elements']['#view_mode'] == 'teaser') {
+  if ($bundle == 'oa_wiki_page' && ($variables['elements']['#view_mode'] == 'teaser' || $variables['elements']['#view_mode'] == 'title')) {
     $document_file = $node->get('field_media_files')->getValue();
 
     if (!empty($document_file)) {
