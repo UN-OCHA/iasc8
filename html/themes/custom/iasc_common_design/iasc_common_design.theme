@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\Entity\Media;
 
 /**
  * Implements template_preprocess_field().
@@ -123,6 +124,17 @@ function iasc_common_design_preprocess_node(&$variables) {
     }
     else {
       $variables['event_time']['output'] = $variables['event_time']['start'] . ' — ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';
+    }
+  }
+
+  $bundle = $node->bundle();
+
+  if ($bundle == 'oa_wiki_page' && ($variables['elements']['#view_mode'] == 'teaser' || $variables['elements']['#view_mode'] == 'title')) {
+    $document_file = $node->get('field_media_files')->getValue();
+
+    if (!empty($document_file)) {
+      $entity = Media::load($document_file[0]['target_id']);
+      $variables['document_file'] = $entity->field_media_file->entity->createFileUrl();
     }
   }
 }
