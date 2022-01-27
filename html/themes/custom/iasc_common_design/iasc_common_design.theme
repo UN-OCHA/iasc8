@@ -134,7 +134,7 @@ function iasc_common_design_preprocess_node(&$variables) {
 
     if (!empty($document_file)) {
       $entity = Media::load($document_file[0]['target_id']);
-      $variables['$document_file'] = $entity->field_media_file->entity->getFileUri();
+      $variables['document_file'] = $entity->field_media_file->entity->getFileUri();
     }
 
     dpm($variables['$document_file']);
