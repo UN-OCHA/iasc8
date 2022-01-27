@@ -85,10 +85,6 @@
 
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
 
-{{ dpm(showPage) }}
-{{ dpm(document_file) }}
-{{ dpm() }}
-
 <article{{ attributes.addClass(classes) }}>
 
   {% if content.field_thumbnail|render %}
