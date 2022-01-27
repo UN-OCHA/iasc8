@@ -82,12 +82,7 @@
 %}
 {{ attach_library('common_design/cd-bullet-list') }}
 
-{% set fileUrl = document_file  %}
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
-
-{{ dpm(showPage) }}
-{{ dpm(document_file) }}
-{{ dpm() }}
 
 <article{{ attributes.addClass(classes) }}>
 
@@ -95,7 +90,7 @@
   {% if showPage %}
     <a href="{{ url }}" rel="bookmark">
   {% else %}
-    <a href="{{ fileUrl }}" title="Download">
+    <a href="{{ document_file }}" title="Download">
   {% endif %}
       {{ label }}
     </a>
