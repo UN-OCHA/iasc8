@@ -231,7 +231,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 8
+    boost: !!float 3
     dependencies:
       module:
         - node
@@ -315,6 +315,22 @@ processor_settings:
       add_properties: 0
       pre_index_save: -10
   reverse_entity_references: {  }
+  solr_boost_more_recent:
+    weights:
+      preprocess_query: 0
+    boosts:
+      created:
+        boost: !!float 5
+        resolution: NOW
+        m: '3.16e-13'
+        a: !!float 10
+        b: 0.1
+      field_published_date:
+        boost: !!float 21
+        resolution: NOW
+        m: '3.16e-13'
+        a: !!float 10
+        b: !!float 1
   solr_date_range:
     weights:
       preprocess_index: 0
@@ -323,11 +339,15 @@ processor_settings:
       preprocess_index: 0
     boosts:
       'entity:group':
-        datasource_boost: !!float 1
+        datasource_boost: !!float 0
+        bundle_boosts:
+          iasc_group: !!float 0
+          iasc_space: !!float 0
       'entity:node':
-        datasource_boost: !!float 1
+        datasource_boost: !!float 0
         bundle_boosts:
           announcement: !!float 3
+          oa_event: !!float 0
           oa_wiki_page: !!float 5
           panopoly_landing_page: !!float 8
           panopoly_page: !!float 5
