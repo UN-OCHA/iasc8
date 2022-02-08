@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
-    - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
     - field.storage.media.field_media_file
     - field.storage.node.field_media_files
-    - field.storage.node.field_category
+    - field.storage.node.field_document_type
+    - field.storage.group.field_description
+    - field.storage.node.field_oa_date
     - field.storage.node.field_published_date
+    - field.storage.node.field_category
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.full
   module:
@@ -18,8 +18,8 @@ dependencies:
     - group
     - node
     - user
-    - taxonomy
     - media
+    - taxonomy
     - search_api
     - search_api_attachments
 third_party_settings:
@@ -320,17 +320,17 @@ processor_settings:
       preprocess_query: 0
     boosts:
       created:
-        boost: !!float 8
-        resolution: NOW
-        m: '3.16e-13'
+        boost: !!float 5
+        resolution: NOW/DAY
+        m: '3.16e-11'
         a: !!float 10
         b: 0.1
       field_published_date:
-        boost: !!float 3
-        resolution: NOW
-        m: '3.16e-13'
+        boost: !!float 21
+        resolution: NOW/DAY
+        m: '3.16e-11'
         a: !!float 10
-        b: !!float 1
+        b: 0.1
   solr_date_range:
     weights:
       preprocess_index: 0
