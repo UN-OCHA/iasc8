@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
+    - field.storage.node.field_document_type
+    - field.storage.node.field_oa_date
     - field.storage.media.field_media_file
     - field.storage.node.field_media_files
-    - field.storage.node.field_document_type
-    - field.storage.group.field_description
-    - field.storage.node.field_oa_date
-    - field.storage.node.field_published_date
     - field.storage.node.field_category
+    - field.storage.node.field_published_date
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.full
   module:
@@ -18,8 +18,8 @@ dependencies:
     - group
     - node
     - user
-    - media
     - taxonomy
+    - media
     - search_api
     - search_api_attachments
 third_party_settings:
@@ -196,7 +196,7 @@ field_settings:
   rendered_item:
     label: 'Rendered item'
     property_path: rendered_item
-    type: text
+    type: solr_text_omit_norms
     configuration:
       roles:
         anonymous: anonymous
@@ -230,7 +230,7 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: text
+    type: solr_text_omit_norms
     boost: !!float 3
     dependencies:
       module:
