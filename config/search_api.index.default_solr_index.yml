@@ -196,7 +196,7 @@ field_settings:
   rendered_item:
     label: 'Rendered item'
     property_path: rendered_item
-    type: text
+    type: solr_text_omit_norms
     configuration:
       roles:
         anonymous: anonymous
@@ -230,7 +230,7 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: text
+    type: solr_text_omit_norms
     boost: !!float 3
     dependencies:
       module:
@@ -320,17 +320,17 @@ processor_settings:
       preprocess_query: 0
     boosts:
       created:
-        boost: !!float 8
-        resolution: NOW
-        m: '3.16e-13'
+        boost: !!float 5
+        resolution: NOW/DAY
+        m: '3.16e-11'
         a: !!float 10
         b: 0.1
       field_published_date:
-        boost: !!float 3
-        resolution: NOW
-        m: '3.16e-13'
+        boost: !!float 21
+        resolution: NOW/DAY
+        m: '3.16e-11'
         a: !!float 10
-        b: !!float 1
+        b: 0.1
   solr_date_range:
     weights:
       preprocess_index: 0
