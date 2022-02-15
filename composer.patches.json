@@ -17,7 +17,7 @@
       "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch"
     },
     "drupal/webform": {
-      "https://www.drupal.org/project/webform/issues/3264249 - Composer library error": "https://www.drupal.org/files/issues/2022-02-14/3264249-6.1.x.patch"
+      "https://www.drupal.org/project/webform/issues/3264249 - Composer library error": "https://git.drupalcode.org/project/webform/-/commit/54b0d2afbcdd61f8db51c90abb913a61d3dc67bb.diff"
     }
   }
 }
