@@ -145,6 +145,11 @@
 
     },
     "extra": {
+        "drush": {
+          "services": {
+            "drush.services.yml": "^10"
+          }
+        },
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
