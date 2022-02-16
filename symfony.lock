@@ -26,6 +26,9 @@
     "composer/pcre": {
         "version": "1.0.0"
     },
+    "dealerdirect/phpcodesniffer-composer-installer": {
+        "version": "v0.7.2"
+    },
     "doctrine/cache": {
         "version": "1.12.1"
     },
@@ -98,11 +101,17 @@
     "phpspec/prophecy-phpunit": {
         "version": "v2.0.1"
     },
+    "phpstan/phpdoc-parser": {
+        "version": "1.2.0"
+    },
     "progress-tracker/progress-tracker": {
         "version": "2.0.6"
     },
     "signature_pad/signature_pad": {
         "version": "2.3.0"
+    },
+    "slevomat/coding-standard": {
+        "version": "7.0.18"
     },
     "svg-pan-zoom/svg-pan-zoom": {
         "version": "3.6.1"
