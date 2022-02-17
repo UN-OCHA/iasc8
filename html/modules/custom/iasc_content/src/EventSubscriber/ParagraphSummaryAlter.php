@@ -66,7 +66,9 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
 
       $event->appendTextToSummary($view_label . ' -- ' . $display_label);
 
-      $data = unserialize($item->getValue()['data']);
+      $data = unserialize($item->getValue()['data'], [
+        'allowed_classes' => FALSE,
+      ]);
       if (is_array($data)) {
         foreach ($data as $key => $value) {
           if (!empty($value)) {

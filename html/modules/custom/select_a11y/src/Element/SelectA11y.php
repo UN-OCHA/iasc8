@@ -70,7 +70,7 @@ class SelectA11y extends Select {
     // array structure instead of a string.
     if ($input !== FALSE && is_array($input)) {
       $input = array_map(function ($item) {
-        return isset($item['target_id']) ? $item['target_id'] : $item;
+        return $item['target_id'] ?? $item;
       }, $input);
       return array_combine($input, $input);
     }

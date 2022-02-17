@@ -108,6 +108,7 @@
         "kint-php/kint": "^3.3",
         "phpmd/phpmd": "^2.6",
         "phpspec/prophecy-phpunit": "^2",
+        "slevomat/coding-standard": "^7.0",
         "weitzman/drupal-test-traits": "^1.5",
         "weitzman/logintrait": "^1.1"
     },
@@ -122,6 +123,7 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal-composer/preserve-paths": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
@@ -143,6 +145,11 @@
 
     },
     "extra": {
+        "drush": {
+          "services": {
+            "drush.services.yml": "^10"
+          }
+        },
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
