@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   address: 0
   admin_denied: 0
@@ -107,6 +109,7 @@ module:
   un_date: 0
   update: 0
   user: 0
+  user_expire: 0
   variationcache: 0
   viewsreference: 0
   webform: 0
@@ -124,5 +127,3 @@ theme:
   common_design: 0
   iasc_common_design: 0
 profile: minimal
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -53,6 +53,9 @@
     "drupal/seckit": {
         "version": "2.0.0"
     },
+    "drupal/user_expire": {
+        "version": "1.0.0"
+    },
     "drupal/webform": {
         "version": "6.1.3"
     },
