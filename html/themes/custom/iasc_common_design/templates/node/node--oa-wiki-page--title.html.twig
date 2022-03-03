@@ -72,16 +72,16 @@
 #}
 {%
   set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class
-]
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class
+  ]
 %}
 {{ attach_library('common_design/cd-bullet-list') }}
-{% set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
+
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -90,7 +90,7 @@
   {% if showPage %}
     <a href="{{ url }}" rel="bookmark">
   {% else %}
-    <a href="{{ fileUrl }}" title="Download">
+    <a href="{{ document_file }}" title="Download">
   {% endif %}
       {{ label }}
     </a>

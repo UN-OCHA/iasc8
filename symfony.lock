@@ -1,0 +1,146 @@
+{
+    "algolia/places": {
+        "version": "1.19.0"
+    },
+    "choices/choices": {
+        "version": "9.0.1"
+    },
+    "ckeditor/autogrow": {
+        "version": "4.17.1"
+    },
+    "ckeditor/codemirror": {
+        "version": "v1.17.12"
+    },
+    "ckeditor/fakeobjects": {
+        "version": "4.17.1"
+    },
+    "ckeditor/image": {
+        "version": "4.17.1"
+    },
+    "ckeditor/link": {
+        "version": "4.17.1"
+    },
+    "codemirror/codemirror": {
+        "version": "5.61.1"
+    },
+    "composer/pcre": {
+        "version": "1.0.0"
+    },
+    "dealerdirect/phpcodesniffer-composer-installer": {
+        "version": "v0.7.2"
+    },
+    "doctrine/cache": {
+        "version": "1.12.1"
+    },
+    "doctrine/common": {
+        "version": "2.13.3"
+    },
+    "doctrine/event-manager": {
+        "version": "1.1.1"
+    },
+    "doctrine/inflector": {
+        "version": "1.4.4"
+    },
+    "doctrine/persistence": {
+        "version": "1.3.8"
+    },
+    "drupal/devel": {
+        "version": "4.1.1"
+    },
+    "drupal/honeypot": {
+        "version": "2.0.2"
+    },
+    "drupal/seckit": {
+        "version": "2.0.0"
+    },
+    "drupal/webform": {
+        "version": "6.1.3"
+    },
+    "jquery/chosen": {
+        "version": "1.8.7"
+    },
+    "jquery/geocomplete": {
+        "version": "1.7.0"
+    },
+    "jquery/hotkeys": {
+        "version": "0.2.0"
+    },
+    "jquery/icheck": {
+        "version": "1.0.2 "
+    },
+    "jquery/image-picker": {
+        "version": "0.3.1"
+    },
+    "jquery/inputmask": {
+        "version": "5.0.6"
+    },
+    "jquery/intl-tel-input": {
+        "version": "16.1.0"
+    },
+    "jquery/rateit": {
+        "version": "1.1.3"
+    },
+    "jquery/select2": {
+        "version": "4.0.13"
+    },
+    "jquery/textcounter": {
+        "version": "0.9.0"
+    },
+    "jquery/timepicker": {
+        "version": "1.13.18"
+    },
+    "jquery/toggles": {
+        "version": "4.0.0"
+    },
+    "kint-php/kint": {
+        "version": "3.3"
+    },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.2.0"
+    },
+    "phpspec/prophecy-phpunit": {
+        "version": "v2.0.1"
+    },
+    "phpstan/phpdoc-parser": {
+        "version": "1.2.0"
+    },
+    "progress-tracker/progress-tracker": {
+        "version": "2.0.6"
+    },
+    "signature_pad/signature_pad": {
+        "version": "2.3.0"
+    },
+    "slevomat/coding-standard": {
+        "version": "7.0.18"
+    },
+    "svg-pan-zoom/svg-pan-zoom": {
+        "version": "3.6.1"
+    },
+    "symfony/flex": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
+        },
+        "files": [
+            ".env"
+        ]
+    },
+    "tabby/tabby": {
+        "version": "12.0.3"
+    },
+    "tippyjs/5.x": {
+        "version": "5.2.1"
+    },
+    "tippyjs/6.x": {
+        "version": "6.2.6"
+    },
+    "unocha/file_checker": {
+        "version": "dev-8.x-1.x"
+    },
+    "wikimedia/composer-merge-plugin": {
+        "version": "v2.0.1"
+    }
+}

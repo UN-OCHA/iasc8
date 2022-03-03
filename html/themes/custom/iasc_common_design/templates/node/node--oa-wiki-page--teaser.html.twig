@@ -83,7 +83,6 @@
 %}
 {{ attach_library('common_design/cd-teaser') }}
 
-{% set fileUrl = file_url(content.field_media_files[0]['#media'].field_media_file.entity.uri.value) %}
 {% set showPage = node.field_oa_wiki_page_no_redirect.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -101,7 +100,7 @@
         {% if showPage %}
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         {% else %}
-          <a href="{{ fileUrl }}" title="Download">{{ label }}</a>
+          <a href="{{ document_file }}" title="Download">{{ label }}</a>
         {% endif %}
       </h3>
     {% endif %}
