@@ -3,6 +3,7 @@
     "description": "IASC 8",
     "type": "project",
     "license": "GPL-2.0-or-later",
+    "version": "10.3.2",
     "authors": [
         {
             "name": "UNOCHA",
@@ -106,6 +107,7 @@
         "drupal/upgrade_rector": "1.x-dev@dev",
         "drupal/upgrade_status": "^3.8",
         "kint-php/kint": "^3.3",
+        "marcocesarato/php-conventional-changelog": "^1.12.1",
         "phpmd/phpmd": "^2.6",
         "phpspec/prophecy-phpunit": "^2",
         "slevomat/coding-standard": "^7.0",
@@ -118,7 +120,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-    "bin-dir": "vendor/bin/",
+        "bin-dir": "vendor/bin/",
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
@@ -141,8 +143,12 @@
             "@sass-prepare",
             "@sass-build",
             "@sass-cleanup"
-        ]
-
+        ],
+        "changelog": "conventional-changelog",
+        "release": "conventional-changelog --commit",
+        "release:patch": "conventional-changelog --patch --commit",
+        "release:minor": "conventional-changelog --minor --commit",
+        "release:major": "conventional-changelog --major --commit"
     },
     "extra": {
         "drush": {
@@ -156,18 +162,31 @@
             "drupal/core": "-p2"
         },
         "patches-file": "composer.patches.json",
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "html/core": ["type:drupal-core"],
+            "html/core": [
+                "type:drupal-core"
+            ],
             "html/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "html/modules/contrib/{$name}": ["type:drupal-module"],
-            "html/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "html/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "html/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "merge-plugin": {
           "include": [
@@ -190,9 +209,9 @@
                 "web-root": "html/"
             },
             "file-mapping": {
-              "[web-root]/robots.txt": {
-                "append": "PATCHES/robots.txt.append"
-              }
+                "[web-root]/robots.txt": {
+                    "append": "PATCHES/robots.txt.append"
+                }
             }
         }
     }
