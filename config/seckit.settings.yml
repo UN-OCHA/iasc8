@@ -8,7 +8,7 @@ seckit_xss:
     default-src: ''
     script-src: '''self'' ''unsafe-inline'' fonts.googleapis.com www.gstatic.com platform.twitter.com *.twimg.com www.google.com www.googletagmanager.com www.google-analytics.com cdn.jsdelivr.net'
     object-src: ''
-    img-src: '''self'' data: *.twimg.com *.twitter.com *.google-analytics.com *.ytimg.com *.google.com'
+    img-src: '''self'' data: *.twimg.com *.twitter.com *.google-analytics.com www.googletagmanager.com *.ytimg.com *.google.com mcusercontent.com *.mailchimp.com *.gstatic.com'
     media-src: ''
     frame-src: ''
     frame-ancestors: ''
