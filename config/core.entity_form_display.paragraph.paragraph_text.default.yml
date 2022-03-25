@@ -18,11 +18,11 @@ bundle: paragraph_text
 mode: default
 content:
   field_image_align:
+    type: options_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_para_title:
     type: string_textfield
     weight: 0
@@ -32,20 +32,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_text:
-    weight: 1
     type: text_textarea
+    weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_teaser_image:
+    type: media_library_widget
     weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
 hidden:
   created: true
   field_paragraph_layout: true

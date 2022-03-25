@@ -18,12 +18,12 @@ plugin: 'facet_block:product_category_label'
 settings:
   id: 'facet_block:product_category_label'
   label: 'Product Category'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: productcategorylabel
 visibility:
   request_path:
     id: request_path
-    pages: '/group/*/documents'
     negate: false
     context_mapping: {  }
+    pages: '/group/*/documents'

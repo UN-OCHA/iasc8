@@ -15,6 +15,6 @@ plugin: iasc_section_menu_block
 settings:
   id: iasc_section_menu_block
   label: 'Section menu block'
-  provider: iasc_content
   label_display: visible
+  provider: iasc_content
 visibility: {  }

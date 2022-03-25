@@ -19,26 +19,18 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
+      title: Contacts
+      fields: {  }
+      pager:
+        type: some
         options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
+          offset: 0
+          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -49,11 +41,92 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-      pager:
-        type: some
+      access:
+        type: perm
         options:
-          items_per_page: 5
-          offset: 0
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      arguments:
+        field_body_membership_target_id:
+          id: field_body_membership_target_id
+          table: paragraph__field_body_membership
+          field: field_body_membership_target_id
+          relationship: field_membership
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: group_id_from_url
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            contact: contact
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       style:
         type: html_list
         options:
@@ -68,53 +141,14 @@ display:
         options:
           relationship: none
           view_mode: bio_long
-      fields: {  }
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            contact: contact
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: Contacts
-      header: {  }
-      footer: {  }
-      empty: {  }
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
       relationships:
         field_membership:
           id: field_membership
@@ -123,45 +157,12 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_membership: Paragraph'
-          required: true
           plugin_id: standard
-      arguments:
-        field_body_membership_target_id:
-          id: field_body_membership_target_id
-          table: paragraph__field_body_membership
-          field: field_body_membership_target_id
-          relationship: field_membership
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: group_id_from_url
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: numeric
-      display_extenders: {  }
+          required: true
       use_ajax: false
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -172,43 +173,35 @@ display:
         - user.permissions
       tags: {  }
   chair:
-    display_plugin: block
     id: chair
     display_title: Chair
+    display_plugin: block
     position: 1
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: Chair
-      defaults:
-        title: false
-        relationships: true
-        filters: false
-        filter_groups: false
-        arguments: true
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            contact: contact
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            contact: contact
           group: 1
           expose:
             operator_limit_selection: false
@@ -220,6 +213,7 @@ display:
           relationship: field_membership
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value:
             chair: chair
@@ -231,6 +225,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -238,8 +234,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -253,11 +247,18 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        title: false
+        relationships: true
+        arguments: true
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -268,105 +269,12 @@ display:
         - user.permissions
       tags: {  }
   co_chair:
-    display_plugin: block
     id: co_chair
     display_title: Co-chair
+    display_plugin: block
     position: 2
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: Co-Chairs
-      defaults:
-        title: false
-        relationships: false
-        filters: false
-        filter_groups: false
-        arguments: false
-      relationships:
-        field_membership:
-          id: field_membership
-          table: node__field_membership
-          field: field_membership
-          relationship: none
-          group_type: group
-          admin_label: 'field_membership: Paragraph'
-          required: true
-          plugin_id: standard
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            contact: contact
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          group: 1
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_member_position_value:
-          id: field_member_position_value
-          table: paragraph__field_member_position
-          field: field_member_position_value
-          relationship: field_membership
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            co-chair: co-chair
-            'co-chair hftt': 'co-chair hftt'
-            'co-chair, revitalizing principled humanitarian action task team': 'co-chair, revitalizing principled humanitarian action task team'
-            co-champion: co-champion
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       arguments:
         field_body_membership_target_id:
           id: field_body_membership_target_id
@@ -375,6 +283,7 @@ display:
           relationship: field_membership
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           default_action: default
           exception:
             value: all
@@ -388,8 +297,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -401,7 +310,99 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          plugin_id: numeric
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            contact: contact
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_member_position_value:
+          id: field_member_position_value
+          table: paragraph__field_member_position
+          field: field_member_position_value
+          relationship: field_membership
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            co-chair: co-chair
+            'co-chair hftt': 'co-chair hftt'
+            'co-chair, revitalizing principled humanitarian action task team': 'co-chair, revitalizing principled humanitarian action task team'
+            co-champion: co-champion
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        relationships: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      relationships:
+        field_membership:
+          id: field_membership
+          table: node__field_membership
+          field: field_membership
+          relationship: none
+          group_type: group
+          admin_label: 'field_membership: Paragraph'
+          plugin_id: standard
+          required: true
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -412,36 +413,34 @@ display:
         - user.permissions
       tags: {  }
   contact_list:
-    display_plugin: block
     id: contact_list
     display_title: 'Short bio'
+    display_plugin: block
     position: 3
     display_options:
-      display_extenders: {  }
-      display_description: ''
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            contact: contact
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            contact: contact
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -452,6 +451,7 @@ display:
           relationship: field_membership
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: not
           value:
             chair: chair
@@ -467,6 +467,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -474,8 +476,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -489,14 +489,15 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
-      defaults:
-        filters: false
-        filter_groups: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -507,55 +508,34 @@ display:
         - user.permissions
       tags: {  }
   contact_list_long:
-    display_plugin: block
     id: contact_list_long
     display_title: 'Long bio'
+    display_plugin: block
     position: 4
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      style:
-        type: html_list
-        options:
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-          type: ul
-          wrapper_class: ''
-          class: cd-user-list
-      defaults:
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: bio_long
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            contact: contact
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            contact: contact
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -566,6 +546,7 @@ display:
           relationship: field_membership
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: not
           value:
             chair: chair
@@ -581,6 +562,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -588,8 +571,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -603,11 +584,31 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
           1: AND
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: cd-user-list
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: bio_long
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

@@ -16,27 +16,27 @@ bundle: membership
 mode: default
 content:
   field_body_membership:
-    weight: 2
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_contact_category:
-    label: inline
-    weight: 1
     type: string
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
   field_member_position:
-    weight: 0
+    type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
 hidden:
   field_position: true

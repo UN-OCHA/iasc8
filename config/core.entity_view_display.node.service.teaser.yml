@@ -31,20 +31,20 @@ mode: teaser
 content:
   field_relevant_hpc_stage:
     type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
     weight: 2
     region: content
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
   field_services:
     type: entity_reference_label
-    weight: 0
-    region: content
     label: above
     settings:
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_agency_initiative_or_group: true
   field_complaints_and_feedback: true

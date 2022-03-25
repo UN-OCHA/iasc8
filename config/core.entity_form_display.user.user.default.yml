@@ -35,57 +35,57 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_first_name:
-    weight: 6
     type: string_textfield
+    weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_iasc_group_space:
+    type: entity_reference_autocomplete
     weight: 11
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_last_name:
-    weight: 7
     type: string_textfield
+    weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_user_about:
-    weight: 2
     type: text_textarea_with_summary
+    weight: 2
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_user_display_name:
-    weight: 3
     type: string_textfield
+    weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_user_picture:
-    weight: 4
     type: image_image
+    weight: 4
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   language:
     weight: 1
     region: content
@@ -103,13 +103,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   user_picture:
+    type: image_image
+    weight: 5
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    type: image_image
-    weight: 5
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   og_user_node: true

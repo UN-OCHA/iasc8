@@ -18,12 +18,12 @@ plugin: 'facet_block:aap_service_coverage_region'
 settings:
   id: 'facet_block:aap_service_coverage_region'
   label: 'Service Coverage Region'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: servicecoverageregion
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

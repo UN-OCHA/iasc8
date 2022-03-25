@@ -14,11 +14,11 @@ bundle: paragraph_media
 mode: default
 content:
   field_image_alignment:
-    label: hidden
-    weight: 1
     type: list_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   field_media: true

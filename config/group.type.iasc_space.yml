@@ -5,8 +5,8 @@ dependencies: {  }
 id: iasc_space
 label: Space
 description: ''
+new_revision: false
 creator_membership: true
 creator_wizard: false
 creator_roles:
   - iasc_space-admin
-new_revision: false

@@ -9,25 +9,6 @@ dependencies:
     - search_api
 id: document_summary
 name: 'Document summary'
-facets:
-  changed:
-    checked: true
-    label: Changed
-    separator: ', '
-    weight: 0
-    show_count: false
-  document_type_label:
-    checked: true
-    label: 'Document Type label'
-    separator: ', '
-    weight: 0
-    show_count: false
-  product_category_label:
-    checked: true
-    label: 'Product Category label'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__iasc_group_content__page_documents'
 processor_configs:
   hide_when_not_rendered:
@@ -60,3 +41,22 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets:
+  changed:
+    checked: true
+    label: Changed
+    separator: ', '
+    show_count: false
+    weight: 0
+  document_type_label:
+    checked: true
+    label: 'Document Type label'
+    separator: ', '
+    show_count: false
+    weight: 0
+  product_category_label:
+    checked: true
+    label: 'Product Category label'
+    separator: ', '
+    show_count: false
+    weight: 0

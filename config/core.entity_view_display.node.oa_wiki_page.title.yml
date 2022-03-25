@@ -33,21 +33,21 @@ mode: title
 content:
   field_media_files:
     type: entity_reference_entity_view
-    weight: 1
-    region: content
     label: hidden
     settings:
       view_mode: link
       link: false
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_published_date:
-    label: inline
-    weight: 0
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: published_date
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   body: true

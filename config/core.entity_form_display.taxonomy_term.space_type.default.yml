@@ -25,33 +25,33 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_oa_clone_enabled:
-    weight: 3
     type: options_buttons
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_oa_clone_space:
-    weight: 3
     type: entity_reference_autocomplete
+    weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   field_oa_node_types:
-    weight: 34
     type: options_buttons
+    weight: 34
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_oa_section_layout:
-    weight: 32
     type: options_select
+    weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -75,9 +75,9 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 100
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden: {  }

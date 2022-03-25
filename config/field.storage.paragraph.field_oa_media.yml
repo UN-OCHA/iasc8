@@ -10,10 +10,10 @@ field_name: field_oa_media
 entity_type: paragraph
 type: file
 settings:
-  display_default: false
-  display_field: false
-  uri_scheme: private
   target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: private
 module: file
 locked: false
 cardinality: -1

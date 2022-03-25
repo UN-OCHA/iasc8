@@ -13,11 +13,11 @@ bundle: custom_block
 mode: default
 content:
   field_custom_block:
+    type: dynamic_entity_reference_options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: dynamic_entity_reference_options_select
-    region: content
 hidden:
   created: true
   status: true

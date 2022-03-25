@@ -15,6 +15,6 @@ plugin: iasc_header_search_block
 settings:
   id: iasc_header_search_block
   label: 'Header search'
-  provider: iasc_content
   label_display: visible
+  provider: iasc_content
 visibility: {  }

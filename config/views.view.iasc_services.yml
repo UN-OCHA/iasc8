@@ -16,66 +16,12 @@ base_table: search_api_index_services
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          skip_access: 0
-          bypass_access: 0
-          preserve_facet_query_args: 1
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Search
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: false
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 6
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
-      row:
-        type: search_api
-        options:
-          view_modes:
-            'entity:node':
-              service: teaser
+      title: 'Global Accountability and Inclusion'
       fields:
         title:
           id: title
@@ -84,6 +30,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: Title
           exclude: false
           alter:
@@ -146,7 +93,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         field_share_data:
           id: field_share_data
           table: search_api_index_services
@@ -154,6 +100,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: 'Does your entity share data with the humanitarian community?'
           exclude: false
           alter:
@@ -255,7 +202,6 @@ display:
                 display_method: label
               type_of_entity:
                 display_method: label
-          plugin_id: search_api_field
         field_service_coverage:
           id: field_service_coverage
           table: search_api_index_services
@@ -263,6 +209,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: 'Service Coverage'
           exclude: false
           alter:
@@ -364,7 +311,59 @@ display:
                 display_method: label
               type_of_entity:
                 display_method: label
-          plugin_id: search_api_field
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 6
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'There are no services matching your criteria. Please remove some of the filters for your search to see more results.'
+            format: basic_html
+          tokenize: false
+      sorts: {  }
+      arguments: {  }
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -373,6 +372,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: and
           value: ''
           group: 1
@@ -416,9 +416,26 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
-          plugin_id: search_api_fulltext
-      sorts: {  }
-      title: 'Global Accountability and Inclusion'
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              service: teaser
+      query:
+        type: views_query
+        options:
+          skip_access: 0
+          bypass_access: 0
+          preserve_facet_query_args: 1
+      relationships: {  }
+      css_class: 'cd-table cd-table--row-numbers cd-table--responsive cd-table--striped'
       header:
         area:
           id: area
@@ -427,31 +444,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: true
-          tokenize: false
           content:
             value: "<h2>Services</h2>\r\n<h3>Please check your filters on the left-hand pane to make sure you're getting the right results.</h3>"
             format: basic_html
-          plugin_id: text
-      footer: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
           tokenize: false
-          content:
-            value: 'There are no services matching your criteria. Please remove some of the filters for your search to see more results.'
-            format: basic_html
-          plugin_id: text
-      relationships: {  }
-      arguments: {  }
+      footer: {  }
       display_extenders: {  }
-      css_class: 'cd-table cd-table--row-numbers cd-table--responsive cd-table--striped'
     cache_metadata:
       max-age: -1
       contexts:
@@ -464,9 +464,9 @@ display:
         - 'config:field.storage.node.field_share_data'
         - 'config:search_api.index.services'
   block_1:
-    display_plugin: block
     id: block_1
     display_title: Block
+    display_plugin: block
     position: 2
     display_options:
       display_extenders: {  }
@@ -482,18 +482,18 @@ display:
         - 'config:field.storage.node.field_share_data'
         - 'config:search_api.index.services'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: rg2/service-directory/services
       cache:
         type: none
       defaults:
         cache: false
       exposed_block: true
+      display_extenders: {  }
+      path: rg2/service-directory/services
     cache_metadata:
       max-age: -1
       contexts:

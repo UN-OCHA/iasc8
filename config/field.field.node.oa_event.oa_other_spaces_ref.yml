@@ -18,14 +18,14 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
+    target_bundles: {  }
+    sort:
+      field: _none
+      direction: ASC
     behaviors:
       og_behavior:
         status: false
       views-select-list:
         status: 1
     membership_type: og_membership_type_default
-    sort:
-      field: _none
-      direction: ASC
-    target_bundles: {  }
 field_type: entity_reference

@@ -19,31 +19,31 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       membership: membership
+    negate: 0
     target_bundles_drag_drop:
-      membership:
-        enabled: true
-        weight: 1
       additional_locations:
-        enabled: false
         weight: 2
+        enabled: false
       agenda_items:
-        enabled: false
         weight: 3
+        enabled: false
+      membership:
+        weight: 1
+        enabled: true
       paragraph_content:
-        enabled: false
         weight: 4
+        enabled: false
       paragraph_media:
-        enabled: false
         weight: 5
+        enabled: false
       paragraph_snippet:
-        enabled: false
         weight: 6
-      paragraph_text:
         enabled: false
+      paragraph_text:
         weight: 7
-  handler: 'default:paragraph'
+        enabled: false
 field_type: entity_reference_revisions

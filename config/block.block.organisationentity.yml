@@ -18,12 +18,12 @@ plugin: 'facet_block:aap_agency_initiative_or_group'
 settings:
   id: 'facet_block:aap_agency_initiative_or_group'
   label: Organisation/Entity
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: organisationentity
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

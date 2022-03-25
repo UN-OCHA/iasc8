@@ -13,7 +13,7 @@ bundle: custom_block
 mode: default
 content:
   field_custom_block:
-    weight: 1
+    type: dynamic_entity_reference_entity_view
     label: hidden
     settings:
       node:
@@ -74,7 +74,7 @@ content:
         view_mode: default
         link: false
     third_party_settings: {  }
-    type: dynamic_entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

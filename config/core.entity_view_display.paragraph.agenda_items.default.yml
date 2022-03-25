@@ -17,35 +17,35 @@ bundle: agenda_items
 mode: default
 content:
   field_ai_description:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_ai_title:
-    label: hidden
-    weight: 0
     type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_contact:
-    label: inline
-    weight: 3
     type: entity_reference_label
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: 3
     region: content
   field_referenced_docs:
-    label: above
-    weight: 5
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   field_presenter_external: true
