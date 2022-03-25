@@ -6,9 +6,9 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    parent: 'main:'
     available_menus:
       - main
+    parent: 'main:'
 name: 'Document Page'
 type: oa_wiki_page
 description: 'An Open Atrium Document/Wiki page'

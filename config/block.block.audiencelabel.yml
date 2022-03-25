@@ -18,12 +18,12 @@ plugin: 'facet_block:search_audience_label'
 settings:
   id: 'facet_block:search_audience_label'
   label: 'Authoring body'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: audiencelabel
 visibility:
   request_path:
     id: request_path
-    pages: /search
     negate: false
     context_mapping: {  }
+    pages: /search

@@ -16,23 +16,23 @@ bundle: list_item
 mode: default
 content:
   field_list_item_description:
-    weight: 2
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
   field_list_item_icon:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: icon
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_list_item_link:
-    weight: 3
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -41,15 +41,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 3
     region: content
   field_list_item_title:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

@@ -5,8 +5,8 @@ dependencies: {  }
 id: iasc_group
 label: Group
 description: ''
+new_revision: false
 creator_membership: true
 creator_wizard: true
 creator_roles:
   - iasc_group-admin
-new_revision: false

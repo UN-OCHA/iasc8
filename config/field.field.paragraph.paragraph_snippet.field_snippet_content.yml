@@ -18,13 +18,13 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
     behaviors:
       views-select-list:
         status: 0
     lock_revision: 0
     reference_revisions: 1
-    sort:
-      field: _none
-      direction: ASC
-    target_bundles: null
 field_type: entity_reference

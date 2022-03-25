@@ -19,15 +19,15 @@ bundle: hero
 mode: default
 content:
   field_hero:
+    type: select2_entity_reference
     weight: 0
+    region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      autocomplete: false
-      width: 100%
     third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
 hidden:
   created: true
   field_hero_caption: true

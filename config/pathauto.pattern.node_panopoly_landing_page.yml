@@ -11,12 +11,12 @@ pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5:
     id: node_type
-    bundles:
-      panopoly_landing_page: panopoly_landing_page
     negate: false
+    uuid: 7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5
     context_mapping:
       node: node
-    uuid: 7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5
+    bundles:
+      panopoly_landing_page: panopoly_landing_page
 selection_logic: and
 weight: -5
 relationships: {  }

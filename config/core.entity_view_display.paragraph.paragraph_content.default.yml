@@ -13,20 +13,20 @@ bundle: paragraph_content
 mode: default
 content:
   field_oa_related_content:
-    label: hidden
-    weight: 1
     type: entity_reference_label
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
+    weight: 1
     region: content
   field_para_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
 hidden:
   field_oa_content_layout: true

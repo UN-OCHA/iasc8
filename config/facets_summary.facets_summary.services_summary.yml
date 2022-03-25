@@ -9,31 +9,6 @@ dependencies:
     - search_api
 id: services_summary
 name: 'Services summary'
-facets:
-  aap_services:
-    checked: true
-    label: Services
-    separator: ', '
-    weight: -10
-    show_count: false
-  aap_service_coverage_region:
-    checked: true
-    label: 'Service Coverage Region'
-    separator: ', '
-    weight: -9
-    show_count: false
-  aap_service_coverage_country:
-    checked: true
-    label: 'Service Coverage Country'
-    separator: ', '
-    weight: -8
-    show_count: false
-  services_relevant_hpc_stage:
-    checked: true
-    label: 'Relevant HPC Stage'
-    separator: ', '
-    weight: -7
-    show_count: false
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 processor_configs:
   hide_when_not_rendered:
@@ -66,3 +41,28 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets:
+  aap_services:
+    checked: true
+    label: Services
+    separator: ', '
+    show_count: false
+    weight: -10
+  aap_service_coverage_region:
+    checked: true
+    label: 'Service Coverage Region'
+    separator: ', '
+    show_count: false
+    weight: -9
+  aap_service_coverage_country:
+    checked: true
+    label: 'Service Coverage Country'
+    separator: ', '
+    show_count: false
+    weight: -8
+  services_relevant_hpc_stage:
+    checked: true
+    label: 'Relevant HPC Stage'
+    separator: ', '
+    show_count: false
+    weight: -7

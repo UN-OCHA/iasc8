@@ -18,14 +18,14 @@ plugin: 'block_content:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
 settings:
   id: 'block_content:c4a8b976-f0e5-469a-b8da-5d651fa4b4e7'
   label: 'Does your entity offer a service not featured here?'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

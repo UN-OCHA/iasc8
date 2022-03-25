@@ -21,22 +21,22 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       list_item: list_item
+    negate: 0
     target_bundles_drag_drop:
-      list:
-        weight: 13
-        enabled: false
       additional_locations:
         weight: 14
         enabled: false
       agenda_items:
         weight: 15
         enabled: false
+      list:
+        weight: 13
+        enabled: false
       list_item:
-        enabled: true
         weight: 16
+        enabled: true
       membership:
         weight: 17
         enabled: false

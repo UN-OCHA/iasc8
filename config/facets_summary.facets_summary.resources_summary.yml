@@ -9,37 +9,6 @@ dependencies:
     - search_api
 id: resources_summary
 name: 'Resources summary'
-facets:
-  resource_audience_label:
-    checked: true
-    label: 'Resource - Audience label'
-    separator: ', '
-    weight: 0
-    show_count: false
-  resources_authored_on:
-    checked: true
-    label: 'Resources - Authored on'
-    separator: ', '
-    weight: 0
-    show_count: false
-  resources_content_type:
-    checked: true
-    label: 'Resources - Content type'
-    separator: ', '
-    weight: 0
-    show_count: false
-  resources_document_type_label:
-    checked: true
-    label: 'Resources - Document Type label'
-    separator: ', '
-    weight: 0
-    show_count: false
-  resources_product_category_label:
-    checked: true
-    label: 'Resources - Product Category label'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__resources__page_resources'
 processor_configs:
   hide_when_not_rendered:
@@ -72,3 +41,34 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets:
+  resource_audience_label:
+    checked: true
+    label: 'Resource - Audience label'
+    separator: ', '
+    show_count: false
+    weight: 0
+  resources_authored_on:
+    checked: true
+    label: 'Resources - Authored on'
+    separator: ', '
+    show_count: false
+    weight: 0
+  resources_content_type:
+    checked: true
+    label: 'Resources - Content type'
+    separator: ', '
+    show_count: false
+    weight: 0
+  resources_document_type_label:
+    checked: true
+    label: 'Resources - Document Type label'
+    separator: ', '
+    show_count: false
+    weight: 0
+  resources_product_category_label:
+    checked: true
+    label: 'Resources - Product Category label'
+    separator: ', '
+    show_count: false
+    weight: 0

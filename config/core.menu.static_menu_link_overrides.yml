@@ -1,93 +1,93 @@
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
 definitions:
   contact__site_page:
-    enabled: false
     menu_name: footer
     parent: ''
-    expanded: false
     weight: 0
-  user__page:
+    expanded: false
     enabled: false
+  user__page:
     menu_name: account
     parent: ''
-    expanded: false
     weight: -10
-  block__admin_display:
-    weight: -80
-    menu_name: admin
-    parent: system.admin_structure
-    enabled: true
     expanded: false
-  entity__node_type__collection:
-    weight: -78
+    enabled: false
+  block__admin_display:
     menu_name: admin
     parent: system.admin_structure
+    weight: -80
+    expanded: false
+    enabled: true
+  entity__node_type__collection:
+    menu_name: admin
+    parent: system.admin_structure
+    weight: -78
     expanded: false
     enabled: true
   field_ui__display_mode:
-    weight: -77
     menu_name: admin
     parent: system.admin_structure
+    weight: -77
     expanded: false
     enabled: true
   entity__entity_queue__collection:
-    weight: -76
     menu_name: admin
     parent: system.admin_structure
+    weight: -76
     expanded: false
     enabled: true
   flag__admin__structure__flag:
-    weight: -75
     menu_name: admin
     parent: system.admin_structure
+    weight: -75
     expanded: false
     enabled: true
   hero__admin__structure__settings:
-    weight: -74
     menu_name: admin
     parent: system.admin_structure
+    weight: -74
     expanded: false
     enabled: true
   entity__media_type__collection:
-    weight: -73
     menu_name: admin
     parent: system.admin_structure
+    weight: -73
     expanded: false
     enabled: true
   entity__menu__collection:
-    weight: -72
     menu_name: admin
     parent: system.admin_structure
+    weight: -72
     expanded: false
     enabled: true
   entity__paragraphs_type__collection:
-    weight: -71
     menu_name: admin
     parent: system.admin_structure
+    weight: -71
     expanded: false
     enabled: true
   entity__taxonomy_vocabulary__collection:
-    weight: -70
     menu_name: admin
     parent: system.admin_structure
+    weight: -70
     expanded: false
     enabled: true
   entity__view__collection:
-    weight: -69
     menu_name: admin
     parent: system.admin_structure
+    weight: -69
     expanded: false
     enabled: true
   config__conditional_field:
-    weight: -68
     menu_name: admin
     parent: system.admin_structure
+    weight: -68
     expanded: false
     enabled: true
   entity__hero__collection:
-    enabled: false
     menu_name: admin
     parent: system.admin_content
-    expanded: false
     weight: 100
-_core:
-  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
+    expanded: false
+    enabled: false

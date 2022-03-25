@@ -18,11 +18,11 @@ plugin: 'facets_summary_block:resources_summary'
 settings:
   id: 'facets_summary_block:resources_summary'
   label: 'Resources summary'
-  provider: facets_summary
   label_display: visible
+  provider: facets_summary
 visibility:
   request_path:
     id: request_path
-    pages: /resources
     negate: false
     context_mapping: {  }
+    pages: /resources

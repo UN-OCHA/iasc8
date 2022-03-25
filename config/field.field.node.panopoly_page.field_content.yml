@@ -29,7 +29,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       list: list
       paragraph_content: paragraph_content
@@ -40,6 +39,7 @@ settings:
       view: view
       reliefweb_feed: reliefweb_feed
       video: video
+    negate: 0
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
@@ -47,12 +47,18 @@ settings:
       agenda_items:
         weight: 15
         enabled: false
+      contact_list:
+        weight: 22
+        enabled: true
+      content_item:
+        weight: 23
+        enabled: true
       hero:
         weight: 16
         enabled: false
       list:
-        enabled: true
         weight: 17
+        enabled: true
       list_item:
         weight: 18
         enabled: false
@@ -60,42 +66,36 @@ settings:
         weight: 19
         enabled: false
       paragraph_content:
-        enabled: true
         weight: 20
+        enabled: true
       paragraph_media:
         weight: 21
         enabled: false
-      contact_list:
-        enabled: true
-        weight: 22
       paragraph_snippet:
         weight: 22
         enabled: false
-      content_item:
-        enabled: true
-        weight: 23
       paragraph_text:
-        enabled: true
         weight: 23
-      teaser_grid:
         enabled: true
-        weight: 24
-      teaser_item:
-        weight: 25
-        enabled: false
-      view:
-        enabled: true
-        weight: 26
       reliefweb_feed:
-        enabled: true
         weight: 32
+        enabled: true
       section_menu:
         weight: 33
+        enabled: false
+      teaser_grid:
+        weight: 24
+        enabled: true
+      teaser_item:
+        weight: 25
         enabled: false
       twitter:
         weight: 36
         enabled: false
       video:
-        enabled: true
         weight: 37
+        enabled: true
+      view:
+        weight: 26
+        enabled: true
 field_type: entity_reference_revisions

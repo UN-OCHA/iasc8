@@ -26,21 +26,21 @@ bundle: iasc_space
 mode: search_result
 content:
   field_description:
-    weight: 1
+    type: text_trimmed
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    type: text_trimmed
+    weight: 1
     region: content
   label:
-    label: hidden
     type: string
-    weight: 0
-    region: content
+    label: hidden
     settings:
       link_to_entity: true
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   changed: true
   created: true

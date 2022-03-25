@@ -37,116 +37,116 @@ bundle: oa_worktracker_task
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_addressee:
-    label: above
-    weight: 11
     type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 11
     region: content
   field_date:
-    label: inline
-    weight: 5
     type: datetime_default
+    label: inline
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
+    weight: 5
     region: content
   field_description_implementation:
-    label: above
-    weight: 6
     type: string
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 6
     region: content
   field_evaluation_title:
-    label: inline
-    weight: 9
     type: string
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 9
     region: content
   field_oa_media:
-    label: above
-    weight: 13
     type: file_default
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
+    weight: 13
     region: content
   field_oa_worktracker_assigned_to:
-    label: inline
-    weight: 12
     type: entity_reference_label
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 12
     region: content
   field_oa_worktracker_priority:
-    label: inline
-    weight: 1
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_oa_worktracker_task_status:
-    label: inline
-    weight: 0
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_oa_worktracker_task_type:
-    label: inline
-    weight: 2
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_recomendation:
-    label: above
-    weight: 4
     type: string
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 4
     region: content
   field_summary_of_recommendat:
-    label: above
-    weight: 8
     type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 8
     region: content
   field_timeframe:
-    label: inline
-    weight: 10
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 10
     region: content
   field_worktracker_country:
-    label: inline
-    weight: 7
     type: entity_reference_label
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 7
     region: content
   links:
-    weight: 14
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 14
+    region: content
 hidden:
   field_iasc_audience: true
   field_media_files: true

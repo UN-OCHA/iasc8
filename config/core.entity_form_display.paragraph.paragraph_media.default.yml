@@ -14,18 +14,18 @@ bundle: paragraph_media
 mode: default
 content:
   field_image_alignment:
-    weight: 3
     type: options_select
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_oa_media:
-    weight: 2
     type: file_generic
+    weight: 2
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   field_media: true
