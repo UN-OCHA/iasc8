@@ -25,18 +25,18 @@ mode: featured
 content:
   field_thumbnail:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: true
     third_party_settings: {  }
-  links:
-    weight: 1
+    weight: 0
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_banner_image: true

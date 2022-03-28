@@ -28,25 +28,24 @@ bundle: announcement
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_contact:
-    label: above
-    weight: 3
     type: entity_reference_entity_view
+    label: above
     settings:
       view_mode: bio_long
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_links:
-    label: above
-    weight: 2
     type: link
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -54,39 +53,40 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 2
     region: content
   field_published_date:
-    label: inline
-    weight: 0
     type: datetime_default
+    label: inline
     settings:
       timezone_override: ''
       format_type: published_date
     third_party_settings: {  }
+    weight: 0
     region: content
   field_referenced_docs:
-    label: above
-    weight: 5
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 5
     region: content
   oa_section_ref:
-    label: above
-    weight: 6
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 6
     region: content
   og_group_ref:
-    label: above
-    weight: 4
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   field_grand_bargain_content: true

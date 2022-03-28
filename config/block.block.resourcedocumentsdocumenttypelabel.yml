@@ -18,12 +18,12 @@ plugin: 'facet_block:resource_documents_document_type_label'
 settings:
   id: 'facet_block:resource_documents_document_type_label'
   label: 'Document Type'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: resourcedocumentsdocumenttypelabel
 visibility:
   request_path:
     id: request_path
-    pages: /resources/meeting-documents
     negate: false
     context_mapping: {  }
+    pages: /resources/meeting-documents

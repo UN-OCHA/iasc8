@@ -18,14 +18,14 @@ plugin: 'block_content:842ea753-7b32-4b4a-aa13-cd33501583ac'
 settings:
   id: 'block_content:842ea753-7b32-4b4a-aa13-cd33501583ac'
   label: 'Have feedback on the Service Directory?'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

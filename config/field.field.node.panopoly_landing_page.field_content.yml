@@ -28,7 +28,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       additional_locations: additional_locations
       agenda_items: agenda_items
@@ -38,13 +37,14 @@ settings:
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
+    negate: 1
     target_bundles_drag_drop:
       additional_locations:
-        enabled: true
         weight: 9
-      agenda_items:
         enabled: true
+      agenda_items:
         weight: 10
+        enabled: true
       contact_list:
         weight: 18
         enabled: false
@@ -58,26 +58,26 @@ settings:
         weight: 27
         enabled: false
       hero:
-        enabled: true
         weight: 19
+        enabled: true
       list:
         weight: 20
         enabled: false
       list_item:
-        enabled: true
         weight: 21
-      membership:
         enabled: true
+      membership:
         weight: 11
+        enabled: true
       paragraph_content:
         weight: 12
         enabled: false
       paragraph_media:
-        enabled: true
         weight: 13
-      paragraph_snippet:
         enabled: true
+      paragraph_snippet:
         weight: 14
+        enabled: true
       paragraph_text:
         weight: 15
         enabled: false
@@ -94,8 +94,8 @@ settings:
         weight: 27
         enabled: false
       teaser_item:
-        enabled: true
         weight: 28
+        enabled: true
       twitter:
         weight: 29
         enabled: false

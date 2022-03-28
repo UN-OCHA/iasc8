@@ -11,11 +11,11 @@ pattern: 'group/[node:title]'
 selection_criteria:
   -
     id: node_type
-    bundles:
-      oa_group: oa_group
     negate: false
     context_mapping:
       node: node
+    bundles:
+      oa_group: oa_group
 selection_logic: and
 weight: 3
 relationships: {  }

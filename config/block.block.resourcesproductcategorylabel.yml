@@ -18,12 +18,12 @@ plugin: 'facet_block:resources_product_category_label'
 settings:
   id: 'facet_block:resources_product_category_label'
   label: 'Product Category'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: resourcesproductcategorylabel
 visibility:
   request_path:
     id: request_path
-    pages: /resources
     negate: false
     context_mapping: {  }
+    pages: /resources

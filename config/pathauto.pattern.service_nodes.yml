@@ -11,12 +11,12 @@ pattern: '/rg2/service-directory/service/[node:title]'
 selection_criteria:
   48a81cbd-1cda-49c1-9918-edb8f0271fe8:
     id: node_type
-    bundles:
-      service: service
     negate: false
+    uuid: 48a81cbd-1cda-49c1-9918-edb8f0271fe8
     context_mapping:
       node: node
-    uuid: 48a81cbd-1cda-49c1-9918-edb8f0271fe8
+    bundles:
+      service: service
 selection_logic: and
 weight: -10
 relationships: {  }

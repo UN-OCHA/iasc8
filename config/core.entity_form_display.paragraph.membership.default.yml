@@ -16,28 +16,28 @@ bundle: membership
 mode: default
 content:
   field_body_membership:
+    type: select2_entity_reference
     weight: 0
+    region: content
     settings:
       width: element
-      match_operator: CONTAINS
       autocomplete: false
+      match_operator: CONTAINS
     third_party_settings: {  }
-    type: select2_entity_reference
-    region: content
   field_contact_category:
-    weight: 2
     type: string_textfield
+    weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_member_position:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
   field_position: true

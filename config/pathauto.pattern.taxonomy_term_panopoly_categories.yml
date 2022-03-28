@@ -12,11 +12,11 @@ pattern: 'categories/[term:name]'
 selection_criteria:
   -
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      panopoly_categories: panopoly_categories
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
+    bundles:
+      panopoly_categories: panopoly_categories
 selection_logic: and
 weight: -2
 relationships: {  }

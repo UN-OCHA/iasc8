@@ -24,12 +24,12 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       hero: hero
       list: list
       teaser_grid: teaser_grid
       view: view
+    negate: 0
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
@@ -38,11 +38,11 @@ settings:
         weight: 15
         enabled: false
       hero:
-        enabled: true
         weight: 16
-      list:
         enabled: true
+      list:
         weight: 17
+        enabled: true
       list_item:
         weight: 18
         enabled: false
@@ -62,12 +62,12 @@ settings:
         weight: 23
         enabled: false
       teaser_grid:
-        enabled: true
         weight: 24
+        enabled: true
       teaser_item:
         weight: 25
         enabled: false
       view:
-        enabled: true
         weight: 26
+        enabled: true
 field_type: entity_reference_revisions

@@ -18,12 +18,12 @@ plugin: 'facet_block:changed'
 settings:
   id: 'facet_block:changed'
   label: Changed
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: changed
 visibility:
   request_path:
     id: request_path
-    pages: '/group/*/documents'
     negate: false
     context_mapping: {  }
+    pages: '/group/*/documents'

@@ -18,12 +18,12 @@ plugin: 'facet_block:resources_content_type'
 settings:
   id: 'facet_block:resources_content_type'
   label: 'Content type'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: resourcescontenttype
 visibility:
   request_path:
     id: request_path
-    pages: /resources
     negate: false
     context_mapping: {  }
+    pages: /resources

@@ -19,12 +19,12 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    behaviors:
-      og_behavior:
-        status: true
-    membership_type: og_membership_type_default
     target_bundles: null
     sort:
       field: _none
       direction: ASC
+    behaviors:
+      og_behavior:
+        status: true
+    membership_type: og_membership_type_default
 field_type: entity_reference

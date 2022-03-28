@@ -13,23 +13,23 @@ bundle: paragraph_content
 mode: default
 content:
   field_oa_related_content:
-    weight: 1
     type: entity_reference_autocomplete_tags
+    weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   field_para_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   field_oa_content_layout: true

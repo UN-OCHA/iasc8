@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: x6bhN6WZwfVUI_LLMvRJIUW_2c26VTaBozbfXmJWmro
 seckit_xss:
   csp:
     checkbox: true
@@ -8,6 +10,7 @@ seckit_xss:
     default-src: ''
     script-src: '''self'' ''unsafe-inline'' fonts.googleapis.com www.gstatic.com platform.twitter.com *.twimg.com www.google.com www.googletagmanager.com www.google-analytics.com cdn.jsdelivr.net'
     object-src: ''
+    style-src: ''
     img-src: '''self'' data: *.twimg.com *.twitter.com *.google-analytics.com www.googletagmanager.com *.ytimg.com *.google.com mcusercontent.com *.mailchimp.com *.gstatic.com'
     media-src: ''
     frame-src: ''
@@ -18,7 +21,6 @@ seckit_xss:
     report-uri: /report-csp-violation
     upgrade-req: false
     policy-uri: ''
-    style-src: ''
   x_xss:
     seckit_x_xss_option_disable: Disabled
     seckit_x_xss_option_0: '0'
@@ -27,7 +29,7 @@ seckit_xss:
     select: 0
 seckit_csrf:
   origin: false
-  origin_whitelist: 'fonts.gstatic.com'
+  origin_whitelist: fonts.gstatic.com
 seckit_clickjacking:
   js_css_noscript: false
   noscript_message: 'Sorry, you need to enable JavaScript to visit this website.'
@@ -52,5 +54,3 @@ seckit_various:
   referrer_policy: false
   referrer_policy_policy: no-referrer-when-downgrade
   disable_autocomplete: false
-_core:
-  default_config_hash: x6bhN6WZwfVUI_LLMvRJIUW_2c26VTaBozbfXmJWmro

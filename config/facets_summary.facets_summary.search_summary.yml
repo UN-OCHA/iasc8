@@ -9,25 +9,6 @@ dependencies:
     - search_api
 id: search_summary
 name: 'Search summary'
-facets:
-  search_audience_label:
-    checked: true
-    label: 'Audience label'
-    separator: ', '
-    weight: 0
-    show_count: false
-  search_authored_on:
-    checked: true
-    label: 'Authored on'
-    separator: ', '
-    weight: 0
-    show_count: false
-  search_content_type:
-    checked: true
-    label: 'Content type'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__search_content__search'
 processor_configs:
   hide_when_not_rendered:
@@ -60,3 +41,22 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets:
+  search_audience_label:
+    checked: true
+    label: 'Audience label'
+    separator: ', '
+    show_count: false
+    weight: 0
+  search_authored_on:
+    checked: true
+    label: 'Authored on'
+    separator: ', '
+    show_count: false
+    weight: 0
+  search_content_type:
+    checked: true
+    label: 'Content type'
+    separator: ', '
+    show_count: false
+    weight: 0

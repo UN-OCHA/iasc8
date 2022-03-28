@@ -9,25 +9,28 @@ dependencies:
     - search_api
 id: iasc_statements_product_category_label
 name: 'Product Category'
-url_alias: iasc_statements_product_category_label
 weight: 0
 min_count: 1
-show_only_one_result: false
-field_identifier: product_category_label
+url_alias: iasc_statements_product_category_label
 facet_source_id: 'search_api:views_page__resources__page_statements'
+field_identifier: product_category_label
+query_operator: or
+hard_limit: 0
+exclude: false
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
 widget:
   type: select_a11y_dropdown
   config:
     show_numbers: true
     default_option_label: Choose
-query_operator: or
-use_hierarchy: false
-keep_hierarchy_parents_active: false
-expand_hierarchy: false
-enable_parent_when_child_gets_disabled: true
-hard_limit: 0
-exclude: false
+empty_behavior:
+  behavior: none
 only_visible_when_facet_source_is_visible: true
+show_only_one_result: false
+show_title: true
 processor_configs:
   display_value_widget_order:
     processor_id: display_value_widget_order
@@ -41,6 +44,3 @@ processor_configs:
       pre_query: 50
       build: 15
     settings: {  }
-empty_behavior:
-  behavior: none
-show_title: true

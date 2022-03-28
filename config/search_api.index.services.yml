@@ -2,10 +2,6 @@ uuid: b2cb7bbe-d287-4e68-b248-1f22b3402d39
 langcode: en
 status: true
 dependencies:
-  module:
-    - search_api_solr
-    - node
-    - search_api
   config:
     - field.storage.node.field_agency_initiative_or_group
     - field.storage.node.field_complaints_and_feedback
@@ -20,24 +16,25 @@ dependencies:
     - field.storage.node.field_kind_of_data
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.full
+  module:
+    - search_api_solr
+    - node
+    - search_api
 third_party_settings:
   search_api_solr:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
-    multilingual:
-      limit_to_content_language: false
-      include_language_independent: true
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
       regex:
         slop: 0.5
         pattern: blank
         maxAnalyzedChars: 10000
-      usePhraseHighlighter: true
-      highlightMultiTerm: true
-      preserveMulti: false
       highlight:
         mergeContiguous: false
         requireFieldMatch: false
@@ -58,6 +55,9 @@ third_party_settings:
       index_prefix: ''
       collection: ''
       timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
 id: services
 name: Services
 description: ''
@@ -188,6 +188,6 @@ tracker_settings:
   default:
     indexing_order: fifo
 options:
-  index_directly: true
   cron_limit: 50
+  index_directly: true
 server: default_solr_server
