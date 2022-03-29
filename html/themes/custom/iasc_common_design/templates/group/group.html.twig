@@ -47,6 +47,11 @@
 ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {% if is_archived %}
+    <div class="group--archived">
+      {{ archive_message|raw }}
+    </div>
+  {% endif %}
 
   {{ title_prefix }}
   {% if page %}

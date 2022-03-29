@@ -1185,3 +1185,55 @@ function iasc_content_group_content_delete(GroupContent $entity) {
   $node->set('field_grand_bargain_content', FALSE);
   $node->save();
 }
+
+/**
+ * Implements hook_preprocess_group().
+ */
+function iasc_content_preprocess_group(&$vars) {
+  $group = $vars['group'];
+
+  if (!($group instanceof Group)) {
+    return;
+  }
+
+  if (!$group->hasField('field_archive_group')) {
+    return;
+  }
+
+  $vars['is_archived'] = FALSE;
+  if (!$group->field_archive_group->value) {
+    return;
+  }
+
+  $vars['is_archived'] = TRUE;
+  $vars['archive_message'] = $group->field_archive_message->value;
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function iasc_content_preprocess_node(&$vars) {
+  $node = $vars['node'];
+
+  if (!($node instanceof Node)) {
+    return;
+  }
+
+  $vars['is_archived'] = FALSE;
+  $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+  $activGroupListEntity = $storage->loadByEntity($node);
+  foreach ($activGroupListEntity as $groupContent) {
+    $group = $groupContent->getGroup();
+    if (!$group->hasField('field_archive_group')) {
+      continue;
+    }
+
+    // If the entity is part of multiple groups AND one of those groups is NOT archived it should NOT show the banner.
+    if (!$group->field_archive_group->value) {
+      return;
+    }
+  }
+
+  $vars['is_archived'] = TRUE;
+  $vars['archive_message'] = $group->field_archive_message->value;
+}

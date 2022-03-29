@@ -1,6 +1,12 @@
 {% embed 'node--full.html.twig' %}
 
   {% block section %}
+    {% if is_archived %}
+      <div class="group--archived">
+        {{ archive_message|raw }}
+      </div>
+    {% endif %}
+
     <div class="cd-layout-two-col">
 
       <div class="cd-layout-main-content">
