@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class IascContentConfigForm.
+ * Iasc settings form.
  */
 class IascContentConfigForm extends ConfigFormBase {
 
