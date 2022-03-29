@@ -1231,7 +1231,7 @@ function iasc_content_preprocess_node(&$vars) {
       continue;
     }
 
-    // If the entity is part of multiple groups AND one of those groups is NOT archived it should NOT show the banner.
+    // Allow it if part of at least 1 non-archived group.
     if (!$group->field_archive_group->value) {
       return;
     }

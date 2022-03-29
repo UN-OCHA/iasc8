@@ -1,0 +1,7 @@
+iasc_content.settings:
+  type: config_object
+  label: 'IASC content settings'
+  mapping:
+    archive_message:
+      type: string
+      label: 'Default archive message'
