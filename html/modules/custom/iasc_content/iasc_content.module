@@ -1206,7 +1206,10 @@ function iasc_content_preprocess_group(&$vars) {
   }
 
   $vars['is_archived'] = TRUE;
-  $vars['archive_message'] = $group->field_archive_message->value;
+  $vars['archive_message'] = \Drupal::config('iasc_content.settings')->get('archive_message') ?? 'This group has been archived.';
+  if (!$group->field_archive_message->isEmpty()) {
+    $vars['archive_message'] = $group->field_archive_message->value;
+  }
 }
 
 /**
@@ -1235,5 +1238,8 @@ function iasc_content_preprocess_node(&$vars) {
   }
 
   $vars['is_archived'] = TRUE;
-  $vars['archive_message'] = $group->field_archive_message->value;
+  $vars['archive_message'] = \Drupal::config('iasc_content.settings')->get('archive_message') ?? 'This group has been archived.';
+  if (!$group->field_archive_message->isEmpty()) {
+    $vars['archive_message'] = $group->field_archive_message->value;
+  }
 }
