@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.group.iasc_group.field_archive_group
+    - field.field.group.iasc_group.field_archive_message
     - field.field.group.iasc_group.field_description
     - field.field.group.iasc_group.field_group_banner
     - field.field.group.iasc_group.field_parent_space
@@ -21,7 +23,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: -4
+    weight: 1
     region: content
   field_group_banner:
     type: entity_reference_entity_view
@@ -30,7 +32,7 @@ content:
       view_mode: hero
       link: false
     third_party_settings: {  }
-    weight: -1
+    weight: 4
     region: content
   field_parent_space:
     type: entity_reference_label
@@ -38,7 +40,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: -2
+    weight: 3
     region: content
   field_primary_image:
     type: image
@@ -47,7 +49,7 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: -3
+    weight: 2
     region: content
   label:
     type: string
@@ -55,11 +57,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -5
+    weight: 0
     region: content
 hidden:
   changed: true
   created: true
+  field_archive_group: true
+  field_archive_message: true
   langcode: true
   search_api_excerpt: true
   uid: true
