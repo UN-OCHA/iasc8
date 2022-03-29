@@ -44,6 +44,9 @@
     "doctrine/persistence": {
         "version": "1.3.8"
     },
+    "drupal/dev_mode": {
+        "version": "2.3.0"
+    },
     "drupal/devel": {
         "version": "4.1.1"
     },
