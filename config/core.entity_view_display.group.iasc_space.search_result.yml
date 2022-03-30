@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.group.search_result
+    - field.field.group.iasc_space.field_archive_group
+    - field.field.group.iasc_space.field_archive_message
     - field.field.group.iasc_space.field_banner_image
     - field.field.group.iasc_space.field_banner_position
     - field.field.group.iasc_space.field_banner_text
@@ -44,6 +46,8 @@ content:
 hidden:
   changed: true
   created: true
+  field_archive_group: true
+  field_archive_message: true
   field_banner_image: true
   field_banner_position: true
   field_banner_text: true

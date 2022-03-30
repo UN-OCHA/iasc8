@@ -1,0 +1,23 @@
+uuid: e0638076-e98b-4417-8ed6-65d8c54ead9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_archive_group
+    - group.type.iasc_group
+id: group.iasc_group.field_archive_group
+field_name: field_archive_group
+entity_type: group
+bundle: iasc_group
+label: 'Display archive banner'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

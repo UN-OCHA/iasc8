@@ -101,7 +101,9 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/config_filter": "^2.2",
+        "drupal/console": "~1.0",
         "drupal/core-dev": "^9.3.8",
+        "drupal/dev_mode": "^2.3",
         "drupal/devel": "^4.1",
         "drupal/upgrade_rector": "1.x-dev@dev",
         "drupal/upgrade_status": "^3.8",

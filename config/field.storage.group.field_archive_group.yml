@@ -1,0 +1,18 @@
+uuid: edbea792-818a-45ed-bbc5-2912ab698068
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_archive_group
+field_name: field_archive_group
+entity_type: group
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
