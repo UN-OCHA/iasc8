@@ -2,9 +2,20 @@
 
   {% block section %}
     {% if is_archived %}
-      <div class="group--archived">
-        {{ archive_message|raw }}
+    <div class="group--archived">
+      <div class="cd-alert">
+        <div aria-live="polite">
+          <svg class="cd-icon cd-icon--about" aria-hidden="true" focusable="false" width="16" height="16">
+            <use xlink:href="#cd-icon--about"></use>
+          </svg>
+          <div class="cd-alert__container cd-max-width [ cd-flow ]">
+            <div class="cd-alert__message">
+              {{ archive_message|raw }}
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
     {% endif %}
 
     <div class="cd-layout-two-col">
