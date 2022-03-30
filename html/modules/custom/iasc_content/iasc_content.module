@@ -1225,6 +1225,12 @@ function iasc_content_preprocess_node(&$vars) {
   $vars['is_archived'] = FALSE;
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
   $activGroupListEntity = $storage->loadByEntity($node);
+
+  // Not a group node.
+  if (empty($activGroupListEntity)) {
+    return;
+  }
+
   foreach ($activGroupListEntity as $groupContent) {
     $group = $groupContent->getGroup();
     if (!$group->hasField('field_archive_group')) {
