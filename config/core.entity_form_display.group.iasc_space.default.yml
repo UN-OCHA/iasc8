@@ -33,14 +33,14 @@ mode: default
 content:
   field_archive_group:
     type: boolean_checkbox
-    weight: 14
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_archive_message:
     type: text_textarea
-    weight: 16
+    weight: 13
     region: content
     settings:
       rows: 5
@@ -92,7 +92,7 @@ content:
     third_party_settings: {  }
   field_date_closed:
     type: datetime_default
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,7 +106,7 @@ content:
     third_party_settings: {  }
   field_external_link:
     type: link_default
-    weight: 11
+    weight: 14
     region: content
     settings:
       placeholder_url: ''
@@ -144,7 +144,7 @@ content:
     third_party_settings: {  }
   field_sidebar:
     type: paragraphs
-    weight: 12
+    weight: 10
     region: content
     settings:
       title: Paragraph
@@ -184,7 +184,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
+    weight: 15
     region: content
     settings:
       display_label: true

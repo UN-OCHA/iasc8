@@ -9,7 +9,7 @@ id: group.iasc_group.field_archive_group
 field_name: field_archive_group
 entity_type: group
 bundle: iasc_group
-label: 'Archive group'
+label: 'Display archive banner'
 description: ''
 required: false
 translatable: true
