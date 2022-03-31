@@ -18,12 +18,12 @@ bundle: section_type
 mode: featured
 content:
   description:
-    label: hidden
     type: text_default
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_icon_image: true
   field_oa_icon_class: true

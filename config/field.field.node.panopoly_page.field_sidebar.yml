@@ -30,7 +30,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       twitter: twitter
       list: list
@@ -42,62 +41,63 @@ settings:
       view: view
       section_menu: section_menu
       video: video
+    negate: 0
     target_bundles_drag_drop:
       additional_locations:
         weight: 14
         enabled: false
-      twitter:
-        enabled: true
-        weight: 15
       agenda_items:
         weight: 15
         enabled: false
+      contact_list:
+        weight: 22
+        enabled: true
+      content_item:
+        weight: 23
+        enabled: true
       hero:
         weight: 16
         enabled: false
       list:
-        enabled: true
         weight: 17
+        enabled: true
       list_item:
         weight: 18
         enabled: false
       membership:
-        enabled: true
         weight: 19
-      paragraph_content:
         enabled: true
+      paragraph_content:
         weight: 20
+        enabled: true
       paragraph_media:
         weight: 21
         enabled: false
       paragraph_snippet:
         weight: 22
         enabled: false
-      contact_list:
-        enabled: true
-        weight: 22
-      content_item:
-        enabled: true
-        weight: 23
       paragraph_text:
-        enabled: true
         weight: 23
+        enabled: true
+      reliefweb_feed:
+        weight: 32
+        enabled: false
+      section_menu:
+        weight: 33
+        enabled: true
       teaser_grid:
         weight: 24
         enabled: false
       teaser_item:
         weight: 25
         enabled: false
-      view:
+      twitter:
+        weight: 15
         enabled: true
-        weight: 26
-      reliefweb_feed:
-        weight: 32
-        enabled: false
-      section_menu:
-        enabled: true
-        weight: 33
       video:
-        enabled: true
         weight: 37
+        enabled: true
+      view:
+        weight: 26
+        enabled: true
 field_type: entity_reference_revisions

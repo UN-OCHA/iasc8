@@ -21,13 +21,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       teaser_item: teaser_item
+    negate: 0
     target_bundles_drag_drop:
-      teaser_grid:
-        weight: 11
-        enabled: false
       additional_locations:
         weight: 12
         enabled: false
@@ -49,9 +46,12 @@ settings:
       paragraph_text:
         weight: 18
         enabled: false
+      teaser_grid:
+        weight: 11
+        enabled: false
       teaser_item:
-        enabled: true
         weight: 19
+        enabled: true
       view:
         weight: 20
         enabled: false

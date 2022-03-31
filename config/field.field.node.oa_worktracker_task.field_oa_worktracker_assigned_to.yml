@@ -18,11 +18,11 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
-    behaviors:
-      views-select-list:
-        status: 0
     target_bundles: null
     sort:
       field: _none
       direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
 field_type: entity_reference

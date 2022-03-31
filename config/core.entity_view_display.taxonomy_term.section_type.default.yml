@@ -19,49 +19,49 @@ bundle: section_type
 mode: default
 content:
   description:
-    label: hidden
     type: text_default
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_oa_icon_class:
-    label: above
-    weight: 2
     type: string
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_oa_icon_image:
-    label: above
-    weight: 3
     type: image
+    label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_oa_node_types:
-    label: above
-    weight: 1
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_oa_section_layout:
-    label: above
-    weight: 0
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_oa_section_type_menu:
-    label: above
-    weight: 4
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 4
     region: content
 hidden:
   field_icon_image: true

@@ -18,12 +18,12 @@ plugin: 'facet_block:resource_products_product_category_label'
 settings:
   id: 'facet_block:resource_products_product_category_label'
   label: 'Product Category'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: resourceproductsproductcategorylabel
 visibility:
   request_path:
     id: request_path
-    pages: /resources/iasc-products
     negate: false
     context_mapping: {  }
+    pages: /resources/iasc-products

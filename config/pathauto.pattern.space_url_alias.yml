@@ -12,12 +12,12 @@ pattern: '[group:title]'
 selection_criteria:
   17f66e41-bf49-4c24-b494-31e47479bc70:
     id: 'entity_bundle:group'
-    bundles:
-      iasc_space: iasc_space
     negate: false
+    uuid: 17f66e41-bf49-4c24-b494-31e47479bc70
     context_mapping:
       group: group
-    uuid: 17f66e41-bf49-4c24-b494-31e47479bc70
+    bundles:
+      iasc_space: iasc_space
 selection_logic: and
 weight: -7
 relationships: {  }

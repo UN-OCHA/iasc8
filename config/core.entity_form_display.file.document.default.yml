@@ -12,13 +12,13 @@ bundle: document
 mode: default
 content:
   field_file_title:
-    weight: -4
     type: string_textfield
+    weight: -4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 2

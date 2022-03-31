@@ -18,49 +18,49 @@ bundle: paragraph_snippet
 mode: default
 content:
   field_paragraph_layout:
-    label: hidden
-    weight: 1
     type: list_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_paragraph_lock_revision:
-    label: above
-    weight: 2
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_snippet_content:
-    label: hidden
-    weight: 0
     type: entity_reference_entity_view
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_snippet_showtitle:
-    label: above
-    weight: 3
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_snippet_title_override:
-    label: above
-    weight: 4
     type: string
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 4
     region: content
   field_snippet_viewmode:
-    label: above
-    weight: 5
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   search_api_excerpt: true

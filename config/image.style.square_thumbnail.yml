@@ -12,5 +12,5 @@ effects:
     data:
       width: 100
       height: 100
-      weight: 0
       anchor: center-center
+      weight: 0

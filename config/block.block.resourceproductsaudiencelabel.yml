@@ -18,12 +18,12 @@ plugin: 'facet_block:resource_products_audience_label'
 settings:
   id: 'facet_block:resource_products_audience_label'
   label: 'Authoring body'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: resourceproductsaudiencelabel
 visibility:
   request_path:
     id: request_path
-    pages: /resources/iasc-products
     negate: false
     context_mapping: {  }
+    pages: /resources/iasc-products

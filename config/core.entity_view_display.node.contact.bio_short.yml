@@ -34,29 +34,29 @@ mode: bio_short
 content:
   field_media_photo:
     type: media_thumbnail
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: thumbnail
       image_link: ''
+      image_style: thumbnail
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_organisation:
-    label: hidden
-    weight: 2
     type: entity_reference_label
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_position:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_address: true

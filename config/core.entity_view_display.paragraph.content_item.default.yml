@@ -14,15 +14,15 @@ bundle: content_item
 mode: default
 content:
   field_para_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_piece_of_content:
-    weight: 1
+    type: dynamic_entity_reference_entity_view
     label: hidden
     settings:
       node:
@@ -72,7 +72,7 @@ content:
         view_mode: default
         link: false
     third_party_settings: {  }
-    type: dynamic_entity_reference_entity_view
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

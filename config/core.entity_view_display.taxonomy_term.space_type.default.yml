@@ -17,40 +17,40 @@ bundle: space_type
 mode: default
 content:
   description:
-    label: hidden
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field_oa_clone_enabled:
-    label: inline
-    weight: 3
     type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_oa_clone_space:
-    label: inline
-    weight: 2
     type: entity_reference_label
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
     region: content
   field_oa_node_types:
-    label: above
-    weight: 1
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_oa_section_layout:
-    label: above
-    weight: 0
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   langcode: true

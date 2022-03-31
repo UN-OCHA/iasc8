@@ -18,6 +18,10 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
     behaviors:
       views-autocomplete:
         status: 0
@@ -27,8 +31,4 @@ settings:
       args: {  }
       display_name: entityreference_1
       view_name: open_atrium_user_filters
-    target_bundles: null
-    sort:
-      field: _none
-      direction: ASC
 field_type: entity_reference

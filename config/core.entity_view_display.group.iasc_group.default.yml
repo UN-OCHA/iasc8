@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.group.iasc_group.field_archive_group
+    - field.field.group.iasc_group.field_archive_message
     - field.field.group.iasc_group.field_description
     - field.field.group.iasc_group.field_group_banner
     - field.field.group.iasc_group.field_parent_space
@@ -17,49 +19,51 @@ bundle: iasc_group
 mode: default
 content:
   field_description:
-    weight: -4
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_group_banner:
     type: entity_reference_entity_view
-    weight: -1
     label: hidden
     settings:
       view_mode: hero
       link: false
     third_party_settings: {  }
+    weight: 4
     region: content
   field_parent_space:
-    weight: -2
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_primary_image:
-    weight: -3
+    type: image
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 2
     region: content
   label:
-    label: hidden
     type: string
-    weight: -5
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   changed: true
   created: true
+  field_archive_group: true
+  field_archive_message: true
   langcode: true
   search_api_excerpt: true
   uid: true

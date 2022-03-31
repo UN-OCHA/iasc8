@@ -18,12 +18,12 @@ plugin: 'facet_block:newsletter_authored_on'
 settings:
   id: 'facet_block:newsletter_authored_on'
   label: 'Authored on'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: newsletterauthoredon
 visibility:
   request_path:
     id: request_path
-    pages: /resources/iasc-newsletter
     negate: false
     context_mapping: {  }
+    pages: /resources/iasc-newsletter

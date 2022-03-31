@@ -12,12 +12,12 @@ bundle: document
 mode: default
 content:
   field_file_title:
-    label: hidden
-    weight: 0
     type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   langcode: true

@@ -19,6 +19,11 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
+    target_bundles:
+      contact: contact
+    sort:
+      field: title
+      direction: ASC
     behaviors:
       views-autocomplete:
         status: 0
@@ -26,9 +31,4 @@ settings:
         status: 1
     lock_revision: 0
     reference_revisions: 0
-    sort:
-      field: title
-      direction: ASC
-    target_bundles:
-      contact: contact
 field_type: entity_reference

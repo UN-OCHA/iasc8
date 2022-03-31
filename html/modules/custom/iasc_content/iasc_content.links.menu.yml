@@ -1,0 +1,6 @@
+iasc_content.config_form:
+  title: 'IASC settings'
+  parent: system.admin_config_system
+  description: 'Configure IASC'
+  weight: 1
+  route_name: iasc_content.iasc_content_config_form

@@ -18,11 +18,11 @@ plugin: 'facets_summary_block:products_summary'
 settings:
   id: 'facets_summary_block:products_summary'
   label: 'Products summary'
-  provider: facets_summary
   label_display: visible
+  provider: facets_summary
 visibility:
   request_path:
     id: request_path
-    pages: /resources/iasc-products
     negate: false
     context_mapping: {  }
+    pages: /resources/iasc-products

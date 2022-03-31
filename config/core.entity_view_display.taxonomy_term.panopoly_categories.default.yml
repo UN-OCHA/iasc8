@@ -14,20 +14,20 @@ bundle: panopoly_categories
 mode: default
 content:
   description:
-    label: hidden
     type: text_default
-    weight: 0
-    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_featured_image:
-    label: hidden
     weight: 0
+    region: content
+  field_featured_image:
     type: image
+    label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   field_featured_media: true

@@ -17,7 +17,7 @@ plugin: 'facet_block:iasc_statements_product_category_label'
 settings:
   id: 'facet_block:iasc_statements_product_category_label'
   label: 'Product Category'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: iasc_statements_productcategorylabel
 visibility: {  }
