@@ -18,12 +18,12 @@ plugin: 'views_exposed_filter_block:iasc_services-page_1'
 settings:
   id: 'views_exposed_filter_block:iasc_services-page_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Looking for something specific?'
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

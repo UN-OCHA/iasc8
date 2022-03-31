@@ -38,13 +38,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 24
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 11
@@ -52,67 +52,67 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_address:
-    weight: 16
     type: address_default
+    weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_branch:
+    type: string_textfield
     weight: 19
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_department:
+    type: string_textfield
     weight: 18
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_email:
+    type: string_textfield
     weight: 12
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_fax:
+    type: string_textfield
     weight: 10
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_first_name:
-    weight: 4
     type: string_textfield
+    weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_homepage:
-    weight: 20
     type: link_default
+    weight: 20
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    region: content
   field_last_name:
-    weight: 5
     type: string_textfield
+    weight: 5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_media_photo:
     type: media_library_widget
     weight: 2
@@ -121,8 +121,9 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_membership:
-    weight: 7
     type: entity_reference_paragraphs
+    weight: 7
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -131,46 +132,45 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_mobile:
+    type: string_textfield
     weight: 9
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_organisation:
-    weight: 15
     type: select2_entity_reference
+    weight: 15
+    region: content
     settings:
-      match_operator: CONTAINS
-      autocomplete: false
       width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
     third_party_settings: {  }
-    region: content
   field_phone:
+    type: string_textfield
     weight: 8
-    type: string_textfield
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_position:
-    weight: 17
     type: string_textfield
+    weight: 17
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_title:
-    weight: 3
     type: options_select
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -186,24 +186,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 13
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 23
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 14
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -216,12 +216,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 22

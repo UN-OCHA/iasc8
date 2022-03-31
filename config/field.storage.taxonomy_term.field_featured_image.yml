@@ -11,12 +11,12 @@ field_name: field_featured_image
 entity_type: taxonomy_term
 type: image
 settings:
-  default_image:
-    uuid: ''
-  uri_scheme: public
   target_type: file
   display_field: false
   display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
 module: image
 locked: false
 cardinality: 1

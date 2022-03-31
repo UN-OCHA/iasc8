@@ -1185,3 +1185,67 @@ function iasc_content_group_content_delete(GroupContent $entity) {
   $node->set('field_grand_bargain_content', FALSE);
   $node->save();
 }
+
+/**
+ * Implements hook_preprocess_group().
+ */
+function iasc_content_preprocess_group(&$vars) {
+  $group = $vars['group'];
+
+  if (!($group instanceof Group)) {
+    return;
+  }
+
+  if (!$group->hasField('field_archive_group')) {
+    return;
+  }
+
+  $vars['is_archived'] = FALSE;
+  if (!$group->field_archive_group->value) {
+    return;
+  }
+
+  $vars['is_archived'] = TRUE;
+  $vars['archive_message'] = \Drupal::config('iasc_content.settings')->get('archive_message') ?? 'This group has been archived.';
+  if (!$group->field_archive_message->isEmpty()) {
+    $vars['archive_message'] = $group->field_archive_message->value;
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function iasc_content_preprocess_node(&$vars) {
+  $node = $vars['node'];
+
+  if (!($node instanceof Node)) {
+    return;
+  }
+
+  $vars['is_archived'] = FALSE;
+  $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+  $activGroupListEntity = $storage->loadByEntity($node);
+
+  // Not a group node.
+  if (empty($activGroupListEntity)) {
+    return;
+  }
+
+  foreach ($activGroupListEntity as $groupContent) {
+    $group = $groupContent->getGroup();
+    if (!$group->hasField('field_archive_group')) {
+      continue;
+    }
+
+    // Allow it if part of at least 1 non-archived group.
+    if (!$group->field_archive_group->value) {
+      return;
+    }
+  }
+
+  $vars['is_archived'] = TRUE;
+  $vars['archive_message'] = \Drupal::config('iasc_content.settings')->get('archive_message') ?? 'This group has been archived.';
+  if (!$group->field_archive_message->isEmpty()) {
+    $vars['archive_message'] = $group->field_archive_message->value;
+  }
+}

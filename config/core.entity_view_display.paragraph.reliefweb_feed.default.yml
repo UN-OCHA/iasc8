@@ -13,11 +13,11 @@ bundle: reliefweb_feed
 mode: default
 content:
   field_reliefweb_feed_limit:
-    weight: 0
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
 hidden:
   search_api_excerpt: true

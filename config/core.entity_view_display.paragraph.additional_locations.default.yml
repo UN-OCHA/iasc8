@@ -11,12 +11,12 @@ bundle: additional_locations
 mode: default
 content:
   field_additional_city:
-    label: inline
-    weight: 0
     type: string
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   search_api_excerpt: true

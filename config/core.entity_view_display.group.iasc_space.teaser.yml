@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.group.teaser
+    - field.field.group.iasc_space.field_archive_group
+    - field.field.group.iasc_space.field_archive_message
     - field.field.group.iasc_space.field_banner_image
     - field.field.group.iasc_space.field_banner_position
     - field.field.group.iasc_space.field_banner_text
@@ -26,33 +28,35 @@ bundle: iasc_space
 mode: teaser
 content:
   field_description:
-    weight: 2
+    type: text_trimmed
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    type: text_trimmed
+    weight: 2
     region: content
   field_group_banner:
     type: entity_reference_entity_view
-    weight: 1
-    region: content
     label: hidden
     settings:
       view_mode: product_thumbnail
       link: false
     third_party_settings: {  }
-  label:
-    label: hidden
-    type: string
-    weight: 0
+    weight: 1
     region: content
+  label:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   changed: true
   created: true
+  field_archive_group: true
+  field_archive_message: true
   field_banner_image: true
   field_banner_position: true
   field_banner_text: true

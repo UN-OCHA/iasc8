@@ -18,12 +18,12 @@ plugin: 'facet_block:services_relevant_hpc_stage'
 settings:
   id: 'facet_block:services_relevant_hpc_stage'
   label: 'Stages of HPC'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: relevanthpcstage
 visibility:
   request_path:
     id: request_path
-    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
     negate: false
     context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

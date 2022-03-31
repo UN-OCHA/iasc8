@@ -29,7 +29,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 1
     target_bundles:
       additional_locations: additional_locations
       agenda_items: agenda_items
@@ -40,59 +39,60 @@ settings:
       list_item: list_item
       teaser_item: teaser_item
       section_menu: section_menu
+    negate: 1
     target_bundles_drag_drop:
       additional_locations:
-        enabled: true
         weight: 9
+        enabled: true
       agenda_items:
-        enabled: true
         weight: 10
-      membership:
         enabled: true
-        weight: 11
-      paragraph_content:
-        weight: 12
-        enabled: false
-      paragraph_media:
-        enabled: true
-        weight: 13
-      paragraph_snippet:
-        enabled: true
-        weight: 14
-      paragraph_text:
-        weight: 15
-        enabled: false
-      hero:
-        enabled: true
-        weight: 16
-      view:
-        weight: 16
-        enabled: false
-      list:
-        weight: 17
-        enabled: false
-      list_item:
-        enabled: true
-        weight: 18
       contact_list:
         weight: 19
         enabled: false
       content_item:
         weight: 22
         enabled: false
+      hero:
+        weight: 16
+        enabled: true
+      list:
+        weight: 17
+        enabled: false
+      list_item:
+        weight: 18
+        enabled: true
+      membership:
+        weight: 11
+        enabled: true
+      paragraph_content:
+        weight: 12
+        enabled: false
+      paragraph_media:
+        weight: 13
+        enabled: true
+      paragraph_snippet:
+        weight: 14
+        enabled: true
+      paragraph_text:
+        weight: 15
+        enabled: false
+      section_menu:
+        weight: 28
+        enabled: true
       teaser_grid:
         weight: 24
         enabled: false
       teaser_item:
-        enabled: true
         weight: 25
-      section_menu:
         enabled: true
-        weight: 28
       twitter:
         weight: 31
         enabled: false
       video:
         weight: 33
+        enabled: false
+      view:
+        weight: 16
         enabled: false
 field_type: entity_reference_revisions

@@ -9,3 +9,12 @@ iasc_content.hero_to_announcement:
         type: entity:hero
   requirements:
     _permission: 'add hero entities'
+iasc_content.iasc_content_config_form:
+  path: '/admin/config/system/iasc_config'
+  defaults:
+    _form: '\Drupal\iasc_content\Form\IascContentConfigForm'
+    _title: 'IASC Config'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

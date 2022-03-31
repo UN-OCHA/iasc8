@@ -37,27 +37,27 @@ bundle: oa_event
 mode: title
 content:
   field_city:
-    label: inline
-    weight: 1
     type: string
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
     region: content
   field_oa_date:
-    weight: 0
+    type: date_recur_basic_formatter
     label: inline
     settings:
-      format_type: medium
-      occurrence_format_type: medium
-      same_end_date_format_type: medium
-      separator: '-'
       timezone_override: ''
-      interpreter: ''
+      format_type: medium
+      separator: '-'
       show_next: 5
       count_per_item: true
+      occurrence_format_type: medium
+      same_end_date_format_type: medium
+      interpreter: ''
     third_party_settings: {  }
-    type: date_recur_basic_formatter
+    weight: 0
     region: content
 hidden:
   body: true

@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.group.iasc_space.field_archive_group
+    - field.field.group.iasc_space.field_archive_message
     - field.field.group.iasc_space.field_banner_image
     - field.field.group.iasc_space.field_banner_position
     - field.field.group.iasc_space.field_banner_text
@@ -29,39 +31,39 @@ mode: default
 content:
   field_banner_text:
     type: string
-    weight: 2
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 6
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 6
     region: content
   field_date_closed:
-    weight: 7
+    type: datetime_default
     label: above
     settings:
       timezone_override: ''
       format_type: teaser
     third_party_settings: {  }
-    type: datetime_default
+    weight: 7
     region: content
   field_description:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_external_link:
-    weight: 8
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -70,53 +72,55 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 8
     region: content
   field_group_banner:
-    weight: 1
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: banner
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 1
     region: content
   field_main_image:
     type: entity_reference_entity_view
-    weight: 5
     label: hidden
     settings:
       view_mode: full
       link: false
     third_party_settings: {  }
+    weight: 5
     region: content
   field_responsibilities:
-    weight: 4
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 4
     region: content
   field_sidebar:
     type: entity_reference_revisions_entity_view
-    weight: 9
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 9
     region: content
   label:
-    label: hidden
     type: string
-    weight: 0
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   changed: true
   created: true
+  field_archive_group: true
+  field_archive_message: true
   field_banner_image: true
   field_banner_position: true
   field_primary_image: true

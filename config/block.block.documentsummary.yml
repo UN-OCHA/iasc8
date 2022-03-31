@@ -18,11 +18,11 @@ plugin: 'facets_summary_block:document_summary'
 settings:
   id: 'facets_summary_block:document_summary'
   label: 'Document summary'
-  provider: facets_summary
   label_display: visible
+  provider: facets_summary
 visibility:
   request_path:
     id: request_path
-    pages: '/group/*/documents'
     negate: false
     context_mapping: {  }
+    pages: '/group/*/documents'

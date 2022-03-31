@@ -18,11 +18,11 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    behaviors:
-      views-select-list:
-        status: 0
+    target_bundles: {  }
     sort:
       field: title
       direction: ASC
-    target_bundles: {  }
+    behaviors:
+      views-select-list:
+        status: 0
 field_type: entity_reference

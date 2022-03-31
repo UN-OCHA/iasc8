@@ -1,0 +1,21 @@
+uuid: 5eb71cfe-bf51-414f-8e84-f01de91b4e23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_archive_message
+    - group.type.iasc_space
+  module:
+    - text
+id: group.iasc_space.field_archive_message
+field_name: field_archive_message
+entity_type: group
+bundle: iasc_space
+label: 'Archive message'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

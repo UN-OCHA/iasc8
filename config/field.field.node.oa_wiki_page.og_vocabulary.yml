@@ -18,13 +18,13 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
     behaviors:
       og_vocab:
         status: true
       taxonomy-index:
         status: true
-    target_bundles: null
-    sort:
-      field: _none
-      direction: ASC
 field_type: entity_reference

@@ -18,12 +18,12 @@ plugin: 'facet_block:search_authored_on'
 settings:
   id: 'facet_block:search_authored_on'
   label: 'Authored on'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: authoredon
 visibility:
   request_path:
     id: request_path
-    pages: /search
     negate: false
     context_mapping: {  }
+    pages: /search

@@ -41,3 +41,8 @@
     background-color: $iasc-highlight;
   }
 }
+
+/* Override webform.form.css */
+.cd-search .form--inline .form-item {
+  float: none;
+}

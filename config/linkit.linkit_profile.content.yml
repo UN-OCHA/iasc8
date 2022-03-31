@@ -4,16 +4,14 @@ status: true
 dependencies:
   module:
     - node
-id: content
 label: Content
+id: content
 description: ''
 matchers:
   5e852c7f-03dd-4a7d-a85f-733c6b7e745a:
-    uuid: 5e852c7f-03dd-4a7d-a85f-733c6b7e745a
     id: 'entity:node'
-    weight: 0
+    uuid: 5e852c7f-03dd-4a7d-a85f-733c6b7e745a
     settings:
-      include_unpublished: false
       metadata: ''
       bundles:
         announcement: announcement
@@ -25,28 +23,30 @@ matchers:
       group_by_bundle: false
       substitution_type: canonical
       limit: 20
+      include_unpublished: false
+    weight: 0
   1941feed-c3cd-487c-9866-580195e55f3d:
-    uuid: 1941feed-c3cd-487c-9866-580195e55f3d
     id: front_page
-    weight: 0
+    uuid: 1941feed-c3cd-487c-9866-580195e55f3d
     settings: {  }
+    weight: 0
   da52eea3-2b6d-4bb2-8a12-68484cf9337c:
-    uuid: da52eea3-2b6d-4bb2-8a12-68484cf9337c
     id: 'entity:group'
-    weight: 0
+    uuid: da52eea3-2b6d-4bb2-8a12-68484cf9337c
     settings:
       metadata: ''
       bundles: {  }
       group_by_bundle: false
       substitution_type: canonical
       limit: 20
+    weight: 0
   86c33064-df3a-44d7-b931-3479ea10b411:
-    uuid: 86c33064-df3a-44d7-b931-3479ea10b411
     id: 'entity:group_content'
-    weight: 0
+    uuid: 86c33064-df3a-44d7-b931-3479ea10b411
     settings:
       metadata: ''
       bundles: {  }
       group_by_bundle: false
       substitution_type: canonical
       limit: 20
+    weight: 0

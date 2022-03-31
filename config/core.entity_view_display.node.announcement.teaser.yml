@@ -29,30 +29,30 @@ mode: teaser
 content:
   body:
     type: text_summary_or_trimmed
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_published_date:
     type: datetime_default
-    weight: 1
-    region: content
     label: inline
     settings:
       timezone_override: ''
       format_type: published_date
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_thumbnail:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: product_thumbnail
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_contact: true
   field_grand_bargain_content: true

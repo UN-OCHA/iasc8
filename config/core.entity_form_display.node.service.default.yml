@@ -41,144 +41,144 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_agency_initiative_or_group:
+    type: select_or_other_reference
     weight: 122
+    region: content
     settings:
       select_element_type: select_or_other_select
       sort_options: ''
     third_party_settings: {  }
-    type: select_or_other_reference
-    region: content
   field_complaints_and_feedback:
-    weight: 128
-    settings:
-      width: 100%
-    third_party_settings: {  }
     type: select_a11y
+    weight: 128
     region: content
-  field_description:
-    weight: 132
     settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_examples_and_case_studies:
-    weight: 134
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_global_focal_point:
-    weight: 127
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      autocomplete: false
       width: 100%
     third_party_settings: {  }
-    type: select2_entity_reference
+  field_description:
+    type: string_textarea
+    weight: 132
     region: content
-  field_inter_agency_cfm_resources:
-    weight: 135
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_examples_and_case_studies:
     type: text_textarea
+    weight: 134
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_global_focal_point:
+    type: select2_entity_reference
+    weight: 127
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+  field_inter_agency_cfm_resources:
+    type: text_textarea
+    weight: 135
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_interest:
+    type: entity_reference_autocomplete
     weight: 129
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_kind_of_data:
+    type: entity_reference_autocomplete
     weight: 131
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_links_to_relevant_docs:
+    type: link_default
     weight: 133
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_relevant_hpc_stage:
+    type: entity_reference_autocomplete
     weight: 136
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_service_coverage_country:
+    type: options_buttons
     weight: 138
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_service_coverage_region:
+    type: options_buttons
     weight: 137
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_service_description:
+    type: string_textarea
     weight: 125
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_services:
+    type: select_or_other_reference
     weight: 124
+    region: content
     settings:
       select_element_type: select_or_other_buttons
       sort_options: ''
     third_party_settings: {  }
-    type: select_or_other_reference
-    region: content
   field_share_data:
+    type: entity_reference_autocomplete
     weight: 130
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_type_of_entity:
+    type: select_or_other_reference
     weight: 123
+    region: content
     settings:
       select_element_type: select_or_other_select
       sort_options: ''
     third_party_settings: {  }
-    type: select_or_other_reference
-    region: content
   field_updated:
+    type: datetime_default
     weight: 121
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -194,24 +194,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 120
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -224,12 +224,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

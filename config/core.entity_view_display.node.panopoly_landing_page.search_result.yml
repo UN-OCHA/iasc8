@@ -17,10 +17,10 @@ bundle: panopoly_landing_page
 mode: search_result
 content:
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   field_content: true
