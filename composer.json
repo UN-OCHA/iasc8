@@ -81,6 +81,7 @@
         "drupal/token": "^1.5",
         "drupal/token_filter": "^1.2",
         "drupal/twig_tweak": "^2.8",
+        "drupal/user_expire": "^1.0",
         "drupal/variationcache": "^1.0",
         "drupal/viewsreference": "^2.0.0",
         "drupal/webform": "^6.1.2",

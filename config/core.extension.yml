@@ -109,6 +109,7 @@ module:
   un_date: 0
   update: 0
   user: 0
+  user_expire: 0
   variationcache: 0
   viewsreference: 0
   webform: 0
