@@ -74,6 +74,9 @@
     "drupal/honeypot": {
         "version": "2.0.2"
     },
+    "drupal/memcache": {
+        "version": "2.3.0"
+    },
     "drupal/seckit": {
         "version": "2.0.0"
     },
