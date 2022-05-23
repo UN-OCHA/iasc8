@@ -3,8 +3,9 @@ language: php
 
 php:
   - 8.0
-node_js:
-  - "16.14"
+
+env:
+  - NODE_VERSION="16.14"
 
 # Make sure we have a recent version of docker-compose and chrome.
 addons:
@@ -21,8 +22,11 @@ mysql:
 services:
   - mysql
 
-# install:
-#  - test -n "${SSH_AGENT_PID}" && ssh-agent -k
+# Add the specified nodejs via nvm, as Travis can only specify a single language.
+install:
+  - nvm install $NODE_VERSION
+  - nvm use $NODE_VERSION
+  # - test -n "${SSH_AGENT_PID}" && ssh-agent -k
 
 before_script:
   # Install the AWS CLI and login to the ECR. Credentials are secrets set via the UI.
