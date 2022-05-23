@@ -3,6 +3,8 @@ language: php
 
 php:
   - 8.0
+node_js:
+  - "16.14"
 
 # Make sure we have a recent version of docker-compose and chrome.
 addons:
@@ -43,7 +45,7 @@ before_script:
   # - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
 
   # PWMetrics
-  # - npm i
+  - npm i --verbose
 
 script:
   # PHP linting
@@ -85,7 +87,6 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - # npm run lh -- http://127.0.0.1:8080
-  - npm i
   - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
