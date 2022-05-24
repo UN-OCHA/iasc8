@@ -64,7 +64,6 @@ module:
   media_entity_file_replace: 0
   media_library: 0
   memcache: 0
-  memcache_admin: 0
   menu_ui: 0
   node: 0
   node_view_permissions: 0
