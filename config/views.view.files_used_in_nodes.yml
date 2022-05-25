@@ -30,7 +30,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Files used on nodes'
+      title: 'Private files used on nodes'
       fields:
         title:
           id: title
@@ -603,7 +603,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'Private files used on nodes with Visibility (field_section_audience) set to either: IASC, Donor or Member.'
+            value: '<p>Private files used on nodes with Visibility (field_section_audience) set to either: IASC, Donor or Member.</p>'
             format: basic_html
           tokenize: false
         result:
@@ -1167,7 +1167,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'Private files used on nodes with "Section (legacy)" (oa_section_ref) ponting to a group containing either: "(IASC)" or "(Donor)"'
+            value: "<p>Private files used on nodes with \"Section (legacy)\" (oa_section_ref) ponting to a group containing either: \"(IASC)\" or \"(Donor)\"</p>\r\n\r\n"
             format: basic_html
           tokenize: false
         result:
