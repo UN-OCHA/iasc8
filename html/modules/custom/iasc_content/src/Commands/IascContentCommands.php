@@ -81,7 +81,7 @@ class IascContentCommands extends DrushCommands {
     $this->logger->info("Finished: Archive banner activated for $counter groups.");
   }
 
-    /**
+  /**
    * List all files that are not available for anon download.
    *
    * @command iasc_content:private-files
