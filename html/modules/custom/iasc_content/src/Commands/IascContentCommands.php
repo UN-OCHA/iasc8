@@ -81,4 +81,34 @@ class IascContentCommands extends DrushCommands {
     $this->logger->info("Finished: Archive banner activated for $counter groups.");
   }
 
+    /**
+   * List all files that are not available for anon download.
+   *
+   * @command iasc_content:private-files
+   * @usage iasc_content:private-files
+   *   Add archive banners to closed groups.
+   * @validate-module-enabled iasc_content
+   */
+  public function listPrivates() {
+
+    $account = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    if ($account->id != 0) {
+      die("Must be anonymous.");
+    }
+
+    // List of all files.
+    $query = \Drupal::database()->select('file_managed', 'f');
+    $query->distinct();
+    $query->fields('f', ['uri']);
+    $list = $query->execute()->fetchCol();
+
+    // Use the download hook to check if the anon user can access this file. If not, it's protected!
+    foreach ($list as $uri) {
+      $access = iasc_content_file_download($uri);
+      if ($access === -1)
+        $url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+        echo "$url\n";
+    }
+  }
+
 }
