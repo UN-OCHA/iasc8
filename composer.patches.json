@@ -1,27 +1,30 @@
 {
   "patches": {
-    "drupal/paragraphs": {
-      "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
-    },
-    "drupal/viewsreference": {
-      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "https://www.drupal.org/files/issues/2020-09-02/viewsreference-ajax_after_display_selection-3166490-3.patch"
+    "drupal/core": {
+      "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
+      "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch"
     },
     "drupal/group": {
       "https://www.drupal.org/project/group/issues/2817109 - How to redirect to the owning group after adding a gnode?": "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch"
     },
+    "drupal/paragraphs": {
+      "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
+    },
     "drupal/search_api": {
       "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "https://git.drupalcode.org/project/search_api/-/merge_requests/8.diff"
+    },
+    "drupal/seckit": {
+      "https://www.drupal.org/project/seckit/issues/2844205#comment-14455849": "https://www.drupal.org/files/issues/2021-09-13/2844205-alter-csp-directives-10.patch"
     },
     "drupal/user_expire": {
       "Allow the notification email to be customised": "https://git.drupalcode.org/project/user_expire/-/merge_requests/5.diff",
       "Reset expiration when user is reactivated": "https://git.drupalcode.org/project/user_expire/-/merge_requests/6.diff"
     },
-    "drupal/core": {
-      "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
-      "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch"
-    },
     "drupal/views_data_export": {
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"
+    },
+    "drupal/viewsreference": {
+      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "https://www.drupal.org/files/issues/2020-09-02/viewsreference-ajax_after_display_selection-3166490-3.patch"
     }
   }
 }

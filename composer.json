@@ -21,6 +21,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/UN-OCHA/file_checker"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/ocha_security.git"
         }
     ],
     "require": {
@@ -93,6 +97,7 @@
         "unocha/common_design": "^5.0.0",
         "unocha/file_checker": "dev-8.x-1.x",
         "unocha/ocha_integrations": "^1.0",
+        "unocha/ocha_security": "^1.0",
         "unocha/un_date": "^1.0.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

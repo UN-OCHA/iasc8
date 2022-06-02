@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e6af235d7be5d7e6a4c82cb56ffb684",
+    "content-hash": "6aad375f94809a09992ddc63a2b37f1c",
     "packages": [
         {
             "name": "algolia/places",
@@ -12620,6 +12620,37 @@
                 "source": "https://github.com/UN-OCHA/ocha_integrations/tree/1.0.4"
             },
             "time": "2021-09-03T07:45:25+00:00"
+        },
+        {
+            "name": "unocha/ocha_security",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/ocha_security.git",
+                "reference": "7d254cc87cf6ef1973a472dfad2c37e763ed0879"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_security/zipball/7d254cc87cf6ef1973a472dfad2c37e763ed0879",
+                "reference": "7d254cc87cf6ef1973a472dfad2c37e763ed0879",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "sebastian/phpcpd": "^6.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "support": {
+                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1",
+                "issues": "https://github.com/UN-OCHA/ocha_security/issues"
+            },
+            "time": "2022-06-01T09:48:10+00:00"
         },
         {
             "name": "unocha/un_date",
