@@ -8,7 +8,7 @@ seckit_xss:
       webkit: false
     report-only: true
     default-src: ''
-    script-src: '''self'' ''unsafe-inline'' fonts.googleapis.com www.gstatic.com platform.twitter.com *.twimg.com www.google.com www.googletagmanager.com www.google-analytics.com cdn.jsdelivr.net'
+    script-src: '''self'' fonts.googleapis.com www.gstatic.com platform.twitter.com *.twimg.com www.google.com www.googletagmanager.com www.google-analytics.com cdn.jsdelivr.net'
     object-src: ''
     style-src: ''
     img-src: '''self'' data: *.twimg.com *.twitter.com *.google-analytics.com www.googletagmanager.com *.ytimg.com *.google.com mcusercontent.com *.mailchimp.com *.gstatic.com'
