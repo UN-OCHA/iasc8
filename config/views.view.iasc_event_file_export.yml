@@ -9,12 +9,16 @@ dependencies:
     - field.storage.node.field_oa_date
     - node.type.oa_event
   module:
+    - csv_serialization
     - date_recur
     - datetime
     - file
     - group
     - node
+    - rest
+    - serialization
     - user
+    - views_data_export
 id: iasc_event_file_export
 label: 'IASC Event File Export'
 module: views
@@ -29,6 +33,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
+      title: 'IASC Event files'
       fields:
         title:
           id: title
@@ -656,6 +661,80 @@ display:
           content: 'Displaying @start - @end of @total'
       footer: {  }
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_meeting_agendas'
+        - 'config:field.storage.node.field_meeting_notes'
+        - 'config:field.storage.node.field_oa_date'
+  data_export_1:
+    id: data_export_1
+    display_title: 'Data export'
+    display_plugin: data_export
+    position: 2
+    display_options:
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      display_extenders: {  }
+      path: admin/content/iasc-event-files/export
+      displays:
+        page_1: page_1
+        default: '0'
+      filename: iasc_event_files.csv
+      automatic_download: false
+      export_method: batch
+      export_batch_size: 100
+      store_in_public_file_directory: true
+      custom_redirect_path: false
+      redirect_to_display: page_1
+      include_query_params: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_meeting_agendas'
+        - 'config:field.storage.node.field_meeting_notes'
+        - 'config:field.storage.node.field_oa_date'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: admin/content/iasc-event-files
+      menu:
+        type: tab
+        title: 'IASC Event files'
+        description: ''
+        weight: 900
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
