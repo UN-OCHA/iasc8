@@ -2,20 +2,12 @@
 
 namespace Drupal\iasc_content\Controller;
 
-use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Pager\PagerManagerInterface;
-use Drupal\Core\Routing\TrustedRedirectResponse;
 use Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem;
 use Drupal\group\Entity\Group;
-use Drupal\node\Entity\Node;
 use Drupal\search_api\Entity\Index;
-use GuzzleHttp\ClientInterface;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Page controller for tabs.
