@@ -116,6 +116,7 @@ module:
   user_expire: 0
   variationcache: 0
   views_data_export: 0
+  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0
