@@ -75,7 +75,7 @@ class GroupMeetings extends ControllerBase {
   }
 
   /**
-   * Get page title,
+   * Get page title.
    */
   public function getTitle(Group $group) {
     return 'Meeting of ' . $group->label();
@@ -87,7 +87,7 @@ class GroupMeetings extends ControllerBase {
    * @param \Drupal\group\Entity\Group $group
    *   Group.
    *
-   * @return array<string, mixed>
+   * @return array
    *   Render array.
    */
   public function getEvents(Group $group) : array {
@@ -139,7 +139,7 @@ class GroupMeetings extends ControllerBase {
 
     // Extratc Ids.
     $ids = [];
-    foreach ($results AS $item) {
+    foreach ($results as $item) {
       $data = explode(':', $item->getId());
       $data = explode('/', $data[1]);
       $ids[] = $data[1];
@@ -169,7 +169,7 @@ class GroupMeetings extends ControllerBase {
       }
 
       // Sort the meetings.
-      usort($meetings, function($a, $b) {
+      usort($meetings, function ($a, $b) {
         return strcmp($b->field_oa_date->first()->getValue()['value'], $a->field_oa_date->first()->getValue()['value']);
       });
 
@@ -191,7 +191,7 @@ class GroupMeetings extends ControllerBase {
 
     // Extract Ids.
     $ids = [];
-    foreach ($results AS $item) {
+    foreach ($results as $item) {
       $data = explode(':', $item->getId());
       $data = explode('/', $data[1]);
       $ids[] = $data[1];
@@ -221,7 +221,7 @@ class GroupMeetings extends ControllerBase {
       }
 
       // Sort the meetings.
-      usort($meetings, function($a, $b) {
+      usort($meetings, function ($a, $b) {
         return strcmp($a->field_oa_date->first()->getValue()['value'], $b->field_oa_date->first()->getValue()['value']);
       });
 
@@ -261,4 +261,5 @@ class GroupMeetings extends ControllerBase {
     $until = (new \DateTime('now'))->add(new \DateInterval(static::MAX_FUTURE_DURATION));
     return $item->getHelper()->getOccurrences($from, $until);
   }
+
 }
