@@ -91,7 +91,7 @@ class GroupMeetings extends ControllerBase {
    *   Render array.
    */
   public function getEvents(Group $group) : array {
-    $past_pager_id = 1;
+    $past_pager_id = 0;
     $future_pager_id = 1;
 
     // Create pagers.
@@ -163,7 +163,7 @@ class GroupMeetings extends ControllerBase {
               'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
               'timezone' => $date->getStart()->getTimezone()->getName(),
             ]);
-            $meetings[] = $new_event;
+            $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
           }
         }
       }
@@ -215,7 +215,7 @@ class GroupMeetings extends ControllerBase {
               'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
               'timezone' => $date->getStart()->getTimezone()->getName(),
             ]);
-            $meetings[] = $new_event;
+            $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
           }
         }
       }
