@@ -1222,6 +1222,13 @@ function iasc_content_preprocess_node(&$vars) {
     return;
   }
 
+  /** @var \Drupal\node\Entity\Node $node */
+  if (isset($node->original_nid)) {
+    // Restore original nid and url.
+    $node->nid = $node->original_nid;
+    $vars['url'] = Url::fromUri('internal:/node/' . $node->original_nid)->toString();
+  }
+
   $vars['is_archived'] = FALSE;
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
   $activGroupListEntity = $storage->loadByEntity($node);

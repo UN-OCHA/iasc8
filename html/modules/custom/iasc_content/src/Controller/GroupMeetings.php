@@ -158,7 +158,8 @@ class GroupMeetings extends ControllerBase {
         foreach ($event->field_oa_date as $date_item) {
           foreach ($this->getPastReccurrences($date_item) as $date) {
             $new_event = clone $event;
-            $new_event->enforceIsNew();
+            $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
+            $new_event->original_nid = $event->id();
             $new_event->set('field_oa_date', [
               'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
               'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
@@ -211,7 +212,8 @@ class GroupMeetings extends ControllerBase {
         foreach ($event->field_oa_date as $date_item) {
           foreach ($this->getFutureReccurrences($date_item) as $date) {
             $new_event = clone $event;
-            $new_event->enforceIsNew();
+            $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
+            $new_event->original_nid = $event->id();
             $new_event->set('field_oa_date', [
               'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
               'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
