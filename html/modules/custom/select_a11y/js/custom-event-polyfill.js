@@ -7,7 +7,7 @@
   }
 
   function CustomEvent(event, params){
-    params = params || {bubbles: FALSE, cancelable: FALSE, detail: null};
+    params = params || {bubbles: FALSE, cancelable: FALSE, detail: NULL};
     var evt = document.createEvent('CustomEvent');
     evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
     return evt;
