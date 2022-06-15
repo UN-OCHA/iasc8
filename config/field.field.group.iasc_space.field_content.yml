@@ -32,67 +32,85 @@ settings:
     target_bundles:
       additional_locations: additional_locations
       agenda_items: agenda_items
-      membership: membership
-      paragraph_media: paragraph_media
-      paragraph_snippet: paragraph_snippet
       hero: hero
       list_item: list_item
-      teaser_item: teaser_item
+      paragraph_media: paragraph_media
+      membership: membership
       section_menu: section_menu
+      paragraph_snippet: paragraph_snippet
+      teaser_item: teaser_item
     negate: 1
     target_bundles_drag_drop:
       additional_locations:
-        weight: 9
+        weight: -49
         enabled: true
       agenda_items:
-        weight: 10
+        weight: -48
         enabled: true
       contact_list:
-        weight: 19
+        weight: -39
         enabled: false
       content_item:
-        weight: 22
+        weight: -38
+        enabled: false
+      custom_block:
+        weight: -37
+        enabled: false
+      featured:
+        weight: -36
         enabled: false
       hero:
-        weight: 16
+        weight: -47
         enabled: true
       list:
-        weight: 17
+        weight: -35
         enabled: false
       list_item:
-        weight: 18
+        weight: -46
         enabled: true
+      meetings_past:
+        weight: -34
+        enabled: false
+      meetings_upcoming:
+        weight: -28
+        enabled: false
       membership:
-        weight: 11
+        weight: -44
         enabled: true
       paragraph_content:
-        weight: 12
+        weight: -43
         enabled: false
       paragraph_media:
-        weight: 13
+        weight: -45
         enabled: true
       paragraph_snippet:
-        weight: 14
+        weight: -41
         enabled: true
       paragraph_text:
-        weight: 15
+        weight: -30
+        enabled: false
+      reliefweb_feed:
+        weight: -33
         enabled: false
       section_menu:
-        weight: 28
+        weight: -42
         enabled: true
+      services_landing_block:
+        weight: -32
+        enabled: false
       teaser_grid:
-        weight: 24
+        weight: -31
         enabled: false
       teaser_item:
-        weight: 25
+        weight: -40
         enabled: true
       twitter:
-        weight: 31
+        weight: -29
         enabled: false
       video:
-        weight: 33
+        weight: -27
         enabled: false
       view:
-        weight: 16
+        weight: -26
         enabled: false
 field_type: entity_reference_revisions

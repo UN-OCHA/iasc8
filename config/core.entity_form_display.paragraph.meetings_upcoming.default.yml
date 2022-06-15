@@ -1,0 +1,30 @@
+uuid: fd96d361-3f8c-4dc0-a137-4a8179ae72e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.meetings_upcoming.field_link_to_all_meetings
+    - field.field.paragraph.meetings_upcoming.field_max_number_of_events
+    - paragraphs.paragraphs_type.meetings_upcoming
+id: paragraph.meetings_upcoming.default
+targetEntityType: paragraph
+bundle: meetings_upcoming
+mode: default
+content:
+  field_link_to_all_meetings:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_max_number_of_events:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

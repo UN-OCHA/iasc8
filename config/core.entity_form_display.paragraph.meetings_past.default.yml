@@ -1,0 +1,30 @@
+uuid: b4264e3e-c58a-4048-8d92-b5ea0f4bc9c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.meetings_past.field_link_to_all_meetings
+    - field.field.paragraph.meetings_past.field_max_number_of_events
+    - paragraphs.paragraphs_type.meetings_past
+id: paragraph.meetings_past.default
+targetEntityType: paragraph
+bundle: meetings_past
+mode: default
+content:
+  field_link_to_all_meetings:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_max_number_of_events:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
