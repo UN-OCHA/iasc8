@@ -1,0 +1,25 @@
+uuid: b1add166-06d0-44a9-9259-2499670445ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_max_number_of_events
+    - paragraphs.paragraphs_type.meetings_past
+id: paragraph.meetings_past.field_max_number_of_events
+field_name: field_max_number_of_events
+entity_type: paragraph
+bundle: meetings_past
+label: 'Max number of events'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

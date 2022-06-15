@@ -1,0 +1,23 @@
+uuid: 0bb93c05-94c0-4c08-ae13-3ffa21b8df86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_to_all_meetings
+    - paragraphs.paragraphs_type.meetings_upcoming
+id: paragraph.meetings_upcoming.field_link_to_all_meetings
+field_name: field_link_to_all_meetings
+entity_type: paragraph
+bundle: meetings_upcoming
+label: 'Link to all meetings'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
