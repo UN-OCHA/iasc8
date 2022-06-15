@@ -4,7 +4,25 @@ global-styling:
     js/region_num_childs.js: {}
   css:
     theme:
+      css/brand.css: {}
+      css/typography.css: {}
       css/styles.css: {}
+
+iasc-cd-header-footer:
+  css:
+    theme:
+      components/iasc-cd-header-footer/cd-dropdown.css: {}
+      components/iasc-cd-header-footer/cd-footer.css: {}
+      components/iasc-cd-header-footer/cd-header.css: {}
+      components/iasc-cd-header-footer/cd-language-switcher.css: {}
+      components/iasc-cd-header-footer/cd-layout.css: {}
+      components/iasc-cd-header-footer/cd-logo.css: {}
+      components/iasc-cd-header-footer/cd-menu--main.css: {}
+      components/iasc-cd-header-footer/cd-nav.css: {}
+      components/iasc-cd-header-footer/cd-ocha.css: {}
+      components/iasc-cd-header-footer/cd-search.css: {}
+      components/iasc-cd-header-footer/cd-soft-footer.css: {}
+      components/iasc-cd-header-footer/cd-user-menu.css: {}
 
 cd-grid:
   css:
