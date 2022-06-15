@@ -1,40 +1,34 @@
-//——————————————————————————————————————————————————————————————————————————————
-// Common Design: Soft Footer
-//
-// Optional space for a CTA, newsletter sign-up, etc
-//——————————————————————————————————————————————————————————————————————————————
-
-.cd-soft-footer {
-  background: rgba($iasc-primary, 0.9);
-
-  .button {
-    padding: 10px 12px;
-    text-transform: uppercase;
-    color: $iasc-primary;
-    background: $iasc-red;
-    font-weight: 700;
-
-    &:hover,
-    &:focus {
-      background: darken($iasc-red, 5%);
-    }
-
-    @include tablet {
-      margin-top: 0;
-    }
-  }
+.cd-soft-footer::before {
+  background: var(--brand-primary);
 }
 
-@include tablet {
+.cd-soft-footer .button {
+  padding: 10px 12px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  background: var(--iasc-red);
+  font-weight: 700;
+}
+
+.cd-soft-footer .button:hover,
+.cd-soft-footer .button:focus {
+  background: var(--iasc-red);
+}
+
+@media (min-width: 768px) {
+  .cd-soft-footer .button {
+    margin-top: 0;
+  }
+
   .cd-soft-footer__inner {
     justify-content: flex-start;
+  }
 
-    form {
-      margin-left: 20px;
-    }
+  .cd-soft-footer__inner form {
+    margin-left: 20px;
+  }
 
-    input[type="email"] {
-      padding: 0.25rem 0.5rem;
-    }
+  .cd-soft-footer__inner input[type="email"] {
+    padding: 0.25rem 0.5rem;
   }
 }

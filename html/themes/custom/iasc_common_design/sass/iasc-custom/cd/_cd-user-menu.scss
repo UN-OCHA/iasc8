@@ -1,41 +1,27 @@
-//——————————————————————————————————————————————————————————————————————————————
-// Common Design: User Menu
-//
-// Includes user-centered settings and/or actions.
-//
-//——————————————————————————————————————————————————————————————————————————————
-
-.cd-user-menu__item {
-  &::after {
-    background: $cd-white;
-  }
+.cd-user-menu__item::after {
+  background: var(--cd-white);
 }
 
 .cd-user-menu {
   margin: 0;
   padding: 0;
   list-style: none;
-
-  li {
-    position: relative;
-    float: left;
-  }
-
-  &--no-language-switcher {
-    li:last-child a {
-      padding-right: 0;
-
-      &::after {
-        content: none;
-      }
-    }
-  }
 }
 
-.region-header-top .menu {
-  @extend .cd-user-menu;
-
-  // If there's no language switcher in the Global Header, uncomment this line
-  // to apply special treatment to the last link in the list.
-  @extend .cd-user-menu--no-language-switcher;
+.cd-user-menu li {
+  position: relative;
+  float: left;
 }
+
+.cd-user-menu--no-language-switcher li:last-child a {
+  padding-right: 0;
+}
+
+.cd-user-menu--no-language-switcher li:last-child a::after {
+  content: none;
+}
+
+// .region-header-top .menu {
+//   @extend .cd-user-menu;
+//   @extend .cd-user-menu--no-language-switcher;
+// }

@@ -1,46 +1,41 @@
-.node--type-oa-event {
+.node--type-oa-event.node--view-mode-teaser {
+    min-height: 8rem; /* Height of calendar */
+}
 
-  &.node--view-mode-teaser {
-    min-height: 8rem; // Height of calendar
+.node--type-oa-event.node--view-mode-teaser .cd-teaser__image {
+  position: relative;
+  min-height: 80px; /* Height of calendar */
+}
 
-    .cd-teaser__image {
-      position: relative;
-      min-height: 80px; // Height of calendar
-    }
+.node--type-oa-event.node--view-mode-teaser .cd-date {
+  margin-bottom: 1rem;
+}
 
-    .cd-date {
-      margin-bottom: 1rem;
-    }
+.node--type-oa-event.node--view-mode-teaser h3 {
+  margin-top: 0;
+}
 
-    h3 {
-      margin-top: 0;
-    }
+.node--type-oa-event.node--view-mode-teaser .cd-teaser__container {
+  /* Reset cd-flow because the first element in the calendar. */
+  margin-top: 0;
+}
 
-    .cd-teaser__container {
-      // Reset cd-flow because the first element in the calendar.
-      margin-top: 0;
-    }
-  }
+.node--type-oa-event.node--view-mode-full .cd-date {
+  margin-right: 1rem;
+}
 
-  &.node--view-mode-full {
-    .cd-date {
-      margin-right: 1rem;
-    }
-  }
+/* Override cd-date component with brand colours. */
+.cd-date__wrapper {
+  background-color: var(--brand-primary);
+}
 
-  // Override cd-date component with brand colours.
-  .cd-date__wrapper {
-    background-color: $iasc-primary;
-  }
+.cd-date__wrapper + .cd-date__wrapper {
+  background-color: transparent;
+}
 
-  .cd-date__wrapper + .cd-date__wrapper {
-    background-color: transparent;
-  }
-
-  .cd-date__month,
-  .cd-date__year {
-    color: $iasc-primary;
-  }
+.cd-date__month,
+.cd-date__year {
+  color: var(--brand-primary);
 }
 
 .cd-grid--2-col .node--type-oa-event.node--view-mode-teaser.cd-teaser {

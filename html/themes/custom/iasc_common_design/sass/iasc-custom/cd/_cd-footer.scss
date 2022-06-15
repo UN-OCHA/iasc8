@@ -7,6 +7,6 @@
   --cd-footer-row-number: 6;
 
   grid-row: var(--cd-footer-row-number) / var(--cd-footer-row-number);
-  color: $cd-white;
-  background: $cd-primary;
+  color: var(--cd-white);
+  background: var(--brand-primary);
 }

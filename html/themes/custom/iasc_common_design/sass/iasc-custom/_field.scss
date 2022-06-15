@@ -1,18 +1,13 @@
-.group--view-mode-full,
-.node--view-mode-full {
-
-  .field {
-    margin-bottom: 1rem;
-  }
-
-  .field--label-inline {
-    overflow: hidden;
-  }
+.group--view-mode-full .field,
+.node--view-mode-full .field {
+  margin-bottom: 1rem;
+}
+.group--view-mode-full .field--label-inline,
+.node--view-mode-full .field--label-inline {
+  overflow: hidden;
 }
 
 .field--name-field-ai-title {
-  @extend .cd-heading-3;
-
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -43,48 +38,106 @@
 .field--name-field-main-image,
 .field--name-field-media-files {
   margin-bottom: 2rem !important;
+}
 
-  > .field__label {
-    @extend .cd-heading-2;
-  }
-
-  .field__item {
+.field--name-field-meeting-notes >.field__label,
+.field--name-field-meeting-agendas >.field__label,
+.field--name-field-oa-section >.field__label,
+.field--name-field-iasc-audience >.field__label,
+.field--name-field-membership >.field__label,
+.field--name-group-content-access >.field__label,
+.field--name-field-ap-responsibility >.field__label,
+.field--name-field-host >.field__label,
+.field--name-field-info-private >.field__label,
+.field--name-field-oa-media >.field__label,
+.field--name-field-main-image >.field__label,
+.field--name-field-media-files > .field__label {
     margin-bottom: 1rem;
-  }
+    padding-bottom: 0.5rem;
+    color: var(--brand-primary);
+    border-bottom: 3px solid var(--cd-blue-grey);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.cd-layout-sidebar-first {
-  .cd-location,
-  .field--name-field-contact,
-  .field--name-field-meeting-notes,
-  .field--name-field-meeting-agendas,
-  .field--name-field-oa-section,
-  .field--name-field-iasc-audience,
-  .field--name-field-links,
-  .field--name-field-membership,
-  .field--name-field-date-closed,
-  .field--name-field-external-link,
-  .field--name-group-content-access,
-  .field--name-field-ap-responsibility,
-  .field--name-field-referenced-docs,
-  .field--name-field-host,
-  .field--name-field-category {
-    margin-bottom: 2rem !important;
-
-    > .field__label,
-    .cd-sidebar__label {
-      @extend .cd-heading-3;
-    }
-  }
-
-  // Margin resets because nested fields are hard.
-  .node--view-mode-bio-long .field--name-field-organisation,
-  .node--view-mode-bio-short .field--name-field-organisation {
-    margin-bottom: 0 !important;
-  }
+.field--name-field-meeting-notes .field__item,
+.field--name-field-meeting-agendas .field__item,
+.field--name-field-oa-section .field__item,
+.field--name-field-iasc-audience .field__item,
+.field--name-field-membership .field__item,
+.field--name-group-content-access .field__item,
+.field--name-field-ap-responsibility .field__item,
+.field--name-field-host .field__item,
+.field--name-field-info-private .field__item,
+.field--name-field-oa-media .field__item,
+.field--name-field-main-image .field__item,
+.field--name-field-media-files .field__item {
+  margin-bottom: 1rem;
 }
 
+.cd-layout-sidebar-first .cd-location,
+.cd-layout-sidebar-first.field--name-field-contact,
+.cd-layout-sidebar-first.field--name-field-meeting-notes,
+.cd-layout-sidebar-first.field--name-field-meeting-agendas,
+.cd-layout-sidebar-first.field--name-field-oa-section,
+.cd-layout-sidebar-first.field--name-field-iasc-audience,
+.cd-layout-sidebar-first.field--name-field-links,
+.cd-layout-sidebar-first.field--name-field-membership,
+.cd-layout-sidebar-first.field--name-field-date-closed,
+.cd-layout-sidebar-first.field--name-field-external-link,
+.cd-layout-sidebar-first.field--name-group-content-access,
+.cd-layout-sidebar-first.field--name-field-ap-responsibility,
+.cd-layout-sidebar-first.field--name-field-referenced-docs,
+.cd-layout-sidebar-first.field--name-field-host,
+.cd-layout-sidebar-first.field--name-field-category {
+  margin-bottom: 2rem !important;
+}
+
+.cd-layout-sidebar-first .cd-location > .field__label,
+.cd-layout-sidebar-first.field--name-field-contact > .field__label,
+.cd-layout-sidebar-first.field--name-field-meeting-notes > .field__label,
+.cd-layout-sidebar-first.field--name-field-meeting-agendas > .field__label,
+.cd-layout-sidebar-first.field--name-field-oa-section > .field__label,
+.cd-layout-sidebar-first.field--name-field-iasc-audience > .field__label,
+.cd-layout-sidebar-first.field--name-field-links > .field__label,
+.cd-layout-sidebar-first.field--name-field-membership > .field__label,
+.cd-layout-sidebar-first.field--name-field-date-closed > .field__label,
+.cd-layout-sidebar-first.field--name-field-external-link > .field__label,
+.cd-layout-sidebar-first.field--name-group-content-access > .field__label,
+.cd-layout-sidebar-first.field--name-field-ap-responsibility > .field__label,
+.cd-layout-sidebar-first.field--name-field-referenced-docs > .field__label,
+.cd-layout-sidebar-first.field--name-field-host > .field__label,
+.cd-layout-sidebar-first.field--name-field-category > .field__label,
+.cd-layout-sidebar-first .cd-location>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-contact>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-meeting-notes>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-meeting-agendas>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-oa-section>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-iasc-audience>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-links>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-membership>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-date-closed>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-external-link>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-group-content-access>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-ap-responsibility>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-referenced-docs>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-host>.cd-sidebar__label,
+.cd-layout-sidebar-first.field--name-field-category>.cd-sidebar__label,
+.field--name-field-ai-title {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    color: var(--brand-primary);
+    border-bottom: 1px solid var(--brand-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
 // Margin resets because nested fields are hard.
+.node--view-mode-bio-long .field--name-field-organisation,
+.node--view-mode-bio-short .field--name-field-organisation {
+  margin-bottom: 0 !important;
+}
+
+/* Margin resets because nested fields are hard. */
 .node--view-mode-bio-long .field,
 .node--view-mode-bio-short .field,
 .node--type-contact .field--name-field-organisation,
@@ -105,68 +158,72 @@
   margin-bottom: 1rem;
 }
 
-// Banner caption.
+/* Banner caption. */
 .field--name-field-banner-text,
 .field--name-field-oa-banner-text {
-  margin-top: -1rem; // assumes banner_image field has bottom margin.
+  margin-top: -1rem; /* assumes banner_image field has bottom margin. */
   text-align: right;
   font-size: 0.9rem;
   font-style: italic;
 }
 
-.field--name-field-service-coverage-region,
-.field--name-field-kind-of-data,
-.field--name-field-relevant-hpc-stage,
-.field--name-field-services,
-.field--name-field-interest,
-.field--name-field-links-to-relevant-docs,
-.field--name-field-iasc-group-space,
-.field--name-field-referenced-docs,
-.field--name-field-links {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  ul li {
-    padding-bottom: 1rem;
-    padding-left: 1.5rem;
-    background-image: url("../img/icons/list-bullet.svg");
-    background-repeat: no-repeat;
-    background-position: top 7px left 0;
-    background-size: 9px 9px;
-  }
+.field--name-field-service-coverage-region ul,
+.field--name-field-kind-of-data ul,
+.field--name-field-relevant-hpc-stage ul,
+.field--name-field-services ul,
+.field--name-field-interest ul,
+.field--name-field-links-to-relevant-docs ul,
+.field--name-field-iasc-group-space ul,
+.field--name-field-referenced-docs ul,
+.field--name-field-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-// This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-// When a ul element is added to the text area field.
-.field--name-field-examples-and-case-studies {
-  .field__item ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .field__item ul li {
-    position: relative;
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .field__item ul li::before {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    margin-right: 1rem;
-    content: "";
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+.field--name-field-service-coverage-region ul li,
+.field--name-field-kind-of-data ul li,
+.field--name-field-relevant-hpc-stage ul li,
+.field--name-field-services ul li,
+.field--name-field-interest ul li,
+.field--name-field-links-to-relevant-docs ul li,
+.field--name-field-iasc-group-space ul li,
+.field--name-field-referenced-docs ul li,
+.field--name-field-links ul li {
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  background-image: url("../../img/icons/list-bullet.svg");
+  background-repeat: no-repeat;
+  background-position: top 7px left 0;
+  background-size: 9px 9px;
 }
 
-// This emulates the cd-bullet-list component without being able to output as a ul.
+/* This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
+When a ul element is added to the text area field.*/
+.field--name-field-examples-and-case-studies .field__item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.field--name-field-examples-and-case-studies .field__item ul li {
+  position: relative;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.field--name-field-examples-and-case-studies .field__item ul li::before {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 1rem;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* This emulates the cd-bullet-list component without being able to output as a ul. */
 .field--name-field-meeting-notes > .field__items > .field__item,
 .field--name-field-meeting-agendas > .field__items > .field__item {
   padding-bottom: 1rem;
@@ -186,7 +243,7 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
   width: 9px;
   height: 9px;
   margin-right: 1rem;
-  fill: var(--iasc-highlight);
+  fill: var(--brand-highlight);
 }
 
 // Multiple members separated by hr.
@@ -195,7 +252,7 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
 .field--name-field-contacts > .field__item + .field__item {
   margin: 1rem 0;
   padding-top: 1rem;
-  border-top: 1px solid $cd-blue-grey;
+  border-top: 1px solid var(--cd-blue-grey);
 }
 
 .field__item p:first-child {

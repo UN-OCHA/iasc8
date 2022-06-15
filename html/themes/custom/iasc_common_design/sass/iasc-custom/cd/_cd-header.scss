@@ -1,23 +1,16 @@
-//——————————————————————————————————————————————————————————————————————————————
-// Common Design: Header
-//——————————————————————————————————————————————————————————————————————————————
-
-//
-// Global Header.
-// Top header bar, contains Sites Menu ('OCHA Services') and User Menu.
-//
 .cd-global-header {
-  color: $cd-white;
-  background: $cd-primary;
-  background-image: linear-gradient(-180deg, $cd-primary 67%, $cd-primary--dark 97%);
+  color: var(--cd-white);
+  background: var(--brand-primary);
 }
 
-.cd-site-header__inner {
-  @supports (display: grid) {
+@supports (display: grid) {
+  .cd-site-header__inner {
     grid-template-columns: 100px 1fr;
+  }
 
-    @include tablet {
-      grid-template-columns: 220px 1fr;
+  @media (min-width: 768px) {
+    .cd-site-header__inner {
+     grid-template-columns: 220px 1fr;
     }
   }
 }

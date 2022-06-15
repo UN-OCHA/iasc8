@@ -1,6 +1,3 @@
-//——————————————————————————————————————————————————————————————————————————————
-// Common Design: Drupal dropdowns for nested menus
-//——————————————————————————————————————————————————————————————————————————————
 .menu--main button[aria-expanded] .cd-icon--arrow-down {
-  fill: $iasc-highlight;
+  fill: var(--brand-highlight);
 }

@@ -4,7 +4,7 @@
 // Imports everything in the `cd` folder and ensures that the templates provided
 // in this theme for the Header/Footer will carry Common Design branding.
 //——————————————————————————————————————————————————————————————————————————————
-@import "cd/cd";
+// @import "cd/cd";
 
 //——————————————————————————————————————————————————————————————————————————————
 // Theme extras
@@ -12,8 +12,6 @@
 // These optional Sass files can be used to start out with a more complete theme
 // if you want something to get you started quickly.
 //——————————————————————————————————————————————————————————————————————————————
-
-@import "base/_typography";
 
 // IASC CD overrides
 @import "iasc-custom/cd/cd-dropdowns";

@@ -1,13 +1,16 @@
 .block-facets h2 {
-  @extend .cd-heading-3;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--brand-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
-.block-facets {
-  .form-item,
-  .form-actions {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+.block-facets .form-item,
+.block-facets .form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .block-facets select {
@@ -31,5 +34,5 @@
 .select2-container--open,
 .select2-container--focus,
 .item-list__dropdown:focus {
-  outline: 2px solid $cd-blue--bright;
+  outline: 2px solid var(--cd-blue--bright);
 }

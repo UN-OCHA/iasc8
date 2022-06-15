@@ -1,127 +1,178 @@
 .viewsreference--view-title {
-  @extend .cd-heading-2;
-
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 3px solid var(--cd-blue-grey);
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-top: 0;
+}
 
-  .cd-layout-sidebar-first & {
-    @extend .cd-heading-3;
+.cd-layout-sidebar-first .viewsreference--view-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--brand-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 0;
+}
 
-    margin-top: 0;
-    //margin-top: 1.5rem;
+@media (min-width: 1200px) {
+  .view-updates .view-header,
+  .view-iasc-group-content .view-header {
+    padding-right: 0;
   }
 }
 
-.view-updates,
-.view-iasc-group-content {
-  .view-header {
-    //@extend .cd-page-title;
+.cd-layout-sidebar-first .views-exposed-form .form--inline {
+  margin-bottom: 1rem;
+}
 
-    @include xl {
-      padding-right: 0;
-    }
+.cd-layout-sidebar-first .views-exposed-form label {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--brand-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-item,
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-actions,
+.view-search-content .views-exposed-form .cd-form--inline .form-item,
+.view-search-content .views-exposed-form .cd-form--inline .form-actions,
+.view-updates .views-exposed-form .cd-form--inline .form-item,
+.view-updates .views-exposed-form .cd-form--inline .form-actions,
+.view-resources .views-exposed-form .cd-form--inline .form-item,
+.view-resources .views-exposed-form .cd-form--inline .form-actions,
+.view-iasc-services .views-exposed-form .cd-form--inline .form-item,
+.view-iasc-services .views-exposed-form .cd-form--inline .form-actions {
+  margin: 0;
+}
+
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-item,
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-actions,
+.view-search-content .views-exposed-form .cd-form--inline .form-item,
+.view-search-content .views-exposed-form .cd-form--inline .form-actions,
+.view-updates .views-exposed-form .cd-form--inline .form-item,
+.view-updates .views-exposed-form .cd-form--inline .form-actions,
+.view-resources .views-exposed-form .cd-form--inline .form-item,
+.view-resources .views-exposed-form .cd-form--inline .form-actions,
+.view-iasc-services .views-exposed-form .cd-form--inline .form-item,
+.view-iasc-services .views-exposed-form .cd-form--inline .form-actions label {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.region-facets .block-search h2,
+.region-sidebar-first .block-search h2,
+.region-sidebar-second .block-search h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 1px solid var(--brand-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.region-facets .block-search form .cd-form--inline label,
+.region-sidebar-first .block-search form .cd-form--inline label,
+.region-sidebar-second .block-search form .cd-form--inline label {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.region-facets .block-search form .cd-form--inline .form-item,
+.region-sidebar-first .block-search form .cd-form--inline .form-item,
+.region-sidebar-second .block-search form .cd-form--inline .form-item,
+.region-facets .block-search form .cd-form--inline .form-actions,
+.region-sidebar-first .block-search form .cd-form--inline .form-actions,
+.region-sidebar-second .block-search form .cd-form--inline .form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.region-facets .block-search form .cd-form--inline .form-item input[type="text"],
+.region-sidebar-first .block-search form .cd-form--inline .form-item input[type="text"],
+.region-sidebar-second .block-search form .cd-form--inline .form-item input[type="text"],
+.region-facets .block-search form .cd-form--inline .form-actions input[type="text"],
+.region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="text"],
+.region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="text"] {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .region-facets .block-search form .cd-form--inline .form-item input[type="text"],
+  .region-sidebar-first .block-search form .cd-form--inline .form-item input[type="text"],
+  .region-sidebar-second .block-search form .cd-form--inline .form-item input[type="text"],
+  .region-facets .block-search form .cd-form--inline .form-actions input[type="text"],
+  .region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="text"],
+  .region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="text"] {
+    padding: 0.5rem;
+    flex: 1 0 100%;
   }
 }
 
-.cd-layout-sidebar-first .views-exposed-form {
-  .form--inline {
-    margin-bottom: 1rem;
-  }
+.region-facets .block-search form .cd-form--inline .form-item  .form-text,
+.region-sidebar-first .block-search form .cd-form--inline .form-item  .form-text,
+.region-sidebar-second .block-search form .cd-form--inline .form-item .form-text {
+  width: 100%;
+}
+.region-facets .block-search form .cd-form--inline .form-item .form-text:focus,
+.region-sidebar-first .block-search form .cd-form--inline .form-item .form-text:focus,
+.region-sidebar-second .block-search form .cd-form--inline .form-item .form-text:focus {
+  outline: 2px solid var(--cd-blue--bright);
+}
 
-  label {
-    @extend .cd-heading-3;
+.region-facets .block-search form .cd-form--inline .form-actions input[type="submit"],
+.region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="submit"],
+.region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="submit"] {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .region-facets .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="submit"] {
+    max-width: 16rem;
   }
 }
 
-.view-iasc-group-content,
-.view-search-content,
-.view-updates,
-.view-resources,
-.view-iasc-services {
-  .views-exposed-form .cd-form--inline {
-
-    .form-item,
-    .form-actions {
-      margin: 0;
-    }
-
-    label {
-      @include visually-hidden;
-    }
+@media (min-width: 1024px) {
+  .region-facets .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="submit"] {
+    width: 100%;
+    /* IE 11. */
+    max-width: 100%;
+    max-width: unset;
+  }
+}
+@media (min-width: 1200px) {
+  .region-facets .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-first .block-search form .cd-form--inline .form-actions input[type="submit"],
+  .region-sidebar-second .block-search form .cd-form--inline .form-actions input[type="submit"] {
+    flex-wrap: wrap;
   }
 }
 
-.region-facets,
-.region-sidebar-first,
-.region-sidebar-second {
-  .block-search h2 {
-    @extend .cd-heading-3;
-
-    margin-top: 0;
-  }
-
-  form .cd-form--inline {
-
-    label {
-      @include visually-hidden;
-    }
-
-    .form-item,
-    .form-actions {
-      margin-top: 0;
-      margin-bottom: 0;
-
-      input[type="text"] {
-        padding: 0.25rem 0.5rem;
-
-        @include desktop {
-          padding: 0.5rem;
-        }
-      }
-
-      @include desktop {
-        flex: 1 0 100%;
-      }
-    }
-
-    .form-text {
-      width: 100%;
-
-      &:focus {
-        outline: 2px solid $cd-blue--bright;
-      }
-    }
-
-    .form-actions input[type="submit"] {
-      width: 100%;
-
-      @include sm {
-        max-width: 16rem;
-      }
-
-      @include desktop {
-        width: 100%;
-        // IE 11.
-        max-width: 100%;
-        max-width: unset;
-      }
-    }
-
-    @include desktop {
-      flex-wrap: wrap;
-    }
+/* Services table */
+@media (min-width: 576px) {
+.views-table .views-field-field-service-coverage {
+    width: 30%;
   }
 }
 
-// Services table
-.views-table {
-  @media (min-width: 576px) {
-    .views-field-field-service-coverage {
-      width: 30%;
-    }
-  }
-}
-
-// Adjust height to accommodate height of long th.
+/* Adjust height to accommodate height of long th. */
 @media (max-width: 575px) {
   .cd-table--responsive td.views-field-field-share-data {
     min-height: 8rem;
@@ -136,21 +187,21 @@
   margin-top: 0;
 }
 
-.view-iasc-services {
-  .view-header h2 {
-    @media (max-width: 1023px) {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid $cd-blue-grey;
-    }
+@media (max-width: 1023px) {
+.view-iasc-services .view-header h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cd-blue-grey);
   }
+}
 
-  .pager {
-    margin-bottom: 4rem;
+.pager {
+  margin-bottom: 4rem;
+}
 
-    @include desktop {
-      margin-bottom: 6rem;
-    }
+@media (min-width: 1024px) {
+.pager {
+    margin-bottom: 6rem;
   }
 }
 
@@ -163,34 +214,30 @@
   margin-bottom: 2rem;
 }
 
-// Event teaser grid adjustments.
-.cd-grid--2-col {
-  .cd-teaser__container {
+/* Event teaser grid adjustments. */
+.cd-grid--2-col .cd-teaser__container {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .cd-grid--2-col .cd-teaser__container .view-content .views-row {
+    /* Reset cd-flow when 2 columns. */
     margin-top: 0;
+    /* Horizontal spacing. */
+    padding-left: 0.5rem;
   }
 
-  @include tablet {
-    .view-content {
-      .views-row {
-        // Reset cd-flow when 2 columns.
-        margin-top: 0;
-        // Horizontal spacing.
-        padding-left: 0.5rem;
-      }
-
-      .views-row:nth-child(2n+1) {
-        padding-right: 0.5rem;
-        padding-left: 0;
-      }
-    }
+  .cd-grid--2-col .cd-teaser__container .view-content .views-row:nth-child(2n+1) {
+    padding-right: 0.5rem;
+    padding-left: 0;
   }
 }
 
 .cd-pager__item.is-active a {
-  background-color: $iasc-primary;
+  background-color: var(--brand-primary);
 }
 
 .cd-pager__item a:hover,
 .cd-pager__item a:focus {
-  background-color: $iasc-secondary;
+  background-color: var(--iasc-secondary);
 }

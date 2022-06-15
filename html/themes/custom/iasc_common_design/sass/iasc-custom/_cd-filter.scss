@@ -1,9 +1,9 @@
 .cd-filter__btn {
-  background-color: $iasc-primary;
+  background-color: var(--brand-primary);
 }
 
 .cd-filter__btn:hover {
-  background-color: $iasc-primary-dark;
+  background-color: var(--brand-primary-dark);
 }
 
 .cd-filter__btn:focus {

@@ -1,6 +1,4 @@
-.media--type-remote-video {
-  // Responsive media remote video embeds.
-  .field--name-field-media-oembed-video {
+.media--type-remote-video .field--name-field-media-oembed-video {
     position: relative;
     float: none;
     clear: both;
@@ -8,13 +6,12 @@
     height: 0;
     padding-top: 25px;
     padding-bottom: 56.25%;
+}
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
+.media--type-remote-video .field--name-field-media-oembed-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

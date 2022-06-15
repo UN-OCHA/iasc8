@@ -6,19 +6,16 @@
 
 .cd-site-logo {
   width: 100px;
-  background: url("../img/logos/logo-mobile.svg") center no-repeat;
+  background: url("../../img/logos/logo-mobile.svg") center no-repeat;
   background-size: contain;
 }
 
-@include tablet {
+@media (min-width: 768px) {
   .cd-site-logo {
-    //background: url('../img/logos/logo.svg') center no-repeat;
-    //background-size: contain;
-    width: 220px; // width may need to be adjusted depending on logo width.
+    width: 220px;
     background: none;
-
-    img {
-      width: auto; // Fixes placement in IE11.
-    }
+  }
+  .cd-site-logo img {
+    width: auto; /* Fixes placement in IE11.*/
   }
 }

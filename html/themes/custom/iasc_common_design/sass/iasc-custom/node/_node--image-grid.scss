@@ -22,9 +22,7 @@
   }
 }
 
-.cd-layout-content,
-.cd-layout-highlighted {
-  .cd-image-grid .view-content {
-    @extend .with-image-grid;
-  }
+.cd-layout-content .cd-image-grid .view-content,
+.cd-layout-highlighted .cd-image-grid .view-content {
+  @extend .with-image-grid;
 }
