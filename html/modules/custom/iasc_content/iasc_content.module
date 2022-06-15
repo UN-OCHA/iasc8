@@ -994,6 +994,13 @@ function iasc_content_theme() {
       ],
       'template' => 'block--iasc-header-search-block',
     ],
+    'iasc_content_pager' => [
+      'variables' => [
+        'pager_id' => NULL,
+        'links' => NULL,
+      ],
+      'template' => 'iasc-content-pager',
+    ],
     'iasc_content_alpha_widget' => [
       'render element' => 'widget',
       'template' => 'iasc-content-alpha-widget',
