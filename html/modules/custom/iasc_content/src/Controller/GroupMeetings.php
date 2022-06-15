@@ -81,6 +81,8 @@ class GroupMeetings extends ControllerBase {
   /**
    * Return all events of an operation, sector or cluster.
    *
+   * @param \Symfony\Component\HttpFoundation\Request $request
+   *   Current request.
    * @param \Drupal\group\Entity\Group $group
    *   Group.
    *
@@ -179,7 +181,7 @@ class GroupMeetings extends ControllerBase {
       $pager_links = [];
       if ($future_offset > 0) {
         $pager_links[] = [
-          'text' => t('Previous @months months', [
+          'text' => $this->t('Previous @months months', [
             '@months' => $months_per_page,
           ]),
           'href' => Url::fromUserInput($current_uri, [
@@ -193,7 +195,7 @@ class GroupMeetings extends ControllerBase {
 
       if ($has_future_meetings) {
         $pager_links[] = [
-          'text' => t('Next @months months', [
+          'text' => $this->t('Next @months months', [
             '@months' => $months_per_page,
           ]),
           'href' => Url::fromUserInput($current_uri, [
@@ -275,7 +277,7 @@ class GroupMeetings extends ControllerBase {
         $pager_links = [];
         if ($has_past_meetings) {
           $pager_links[] = [
-            'text' => t('Previous @months months', [
+            'text' => $this->t('Previous @months months', [
               '@months' => $months_per_page,
             ]),
             'href' => Url::fromUserInput($current_uri, [
@@ -289,7 +291,7 @@ class GroupMeetings extends ControllerBase {
 
         if ($past_offset > 0) {
           $pager_links[] = [
-            'text' => t('Next @months months', [
+            'text' => $this->t('Next @months months', [
               '@months' => $months_per_page,
             ]),
             'href' => Url::fromUserInput($current_uri, [
