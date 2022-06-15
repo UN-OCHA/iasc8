@@ -1,0 +1,10 @@
+uuid: 08ef9f7d-7f1c-4449-b8e8-c7ad4c6a66ef
+langcode: en
+status: true
+dependencies: {  }
+id: meetings_upcoming
+label: 'Upcoming meetings'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

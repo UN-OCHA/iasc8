@@ -81,6 +81,8 @@ class GroupMeetings extends ControllerBase {
   /**
    * Return all events of an operation, sector or cluster.
    *
+   * @param \Symfony\Component\HttpFoundation\Request $request
+   *   Current request.
    * @param \Drupal\group\Entity\Group $group
    *   Group.
    *
@@ -179,43 +181,29 @@ class GroupMeetings extends ControllerBase {
       $pager_links = [];
       if ($future_offset > 0) {
         $pager_links[] = [
-          'title' => t('Previous @months months', [
+          'text' => $this->t('Previous @months months', [
             '@months' => $months_per_page,
           ]),
-          'url' => Url::fromUserInput($current_uri, [
+          'href' => Url::fromUserInput($current_uri, [
             'query' => [
               'past' => $past_offset,
               'future' => $future_offset - 1,
             ],
-          ]),
-          'attributes' => [
-            'class' => [
-              'pager__link',
-              'pager__link__previous',
-              'cd-pager__item',
-            ],
-          ],
+          ])->toString(),
         ];
       }
 
       if ($has_future_meetings) {
         $pager_links[] = [
-          'title' => t('Next @months months', [
+          'text' => $this->t('Next @months months', [
             '@months' => $months_per_page,
           ]),
-          'url' => Url::fromUserInput($current_uri, [
+          'href' => Url::fromUserInput($current_uri, [
             'query' => [
               'past' => $past_offset,
               'future' => $future_offset + 1,
             ],
-          ]),
-          'attributes' => [
-            'class' => [
-              'pager__link',
-              'pager__link__next',
-              'cd-pager__item',
-            ],
-          ],
+          ])->toString(),
         ];
       }
 
@@ -229,22 +217,8 @@ class GroupMeetings extends ControllerBase {
         ],
         'future' => $view_builder->viewMultiple($meetings, 'teaser'),
         'future_pager' => [
-          '#theme' => 'links',
-          '#heading' => [
-            'text' => $this->t('Pagination'),
-            'level' => 'h4',
-            'attributes' => [
-              'class' => [
-                'visually-hidden',
-              ],
-            ],
-          ],
-          '#attributes' => [
-            'class' => [
-              'pager',
-              'cd-pager__items',
-            ],
-          ],
+          '#theme' => 'iasc_content_pager',
+          '#pager_id' => 1,
           '#links' => $pager_links,
         ],
       ];
@@ -303,43 +277,29 @@ class GroupMeetings extends ControllerBase {
         $pager_links = [];
         if ($has_past_meetings) {
           $pager_links[] = [
-            'title' => t('Previous @months months', [
+            'text' => $this->t('Previous @months months', [
               '@months' => $months_per_page,
             ]),
-            'url' => Url::fromUserInput($current_uri, [
+            'href' => Url::fromUserInput($current_uri, [
               'query' => [
                 'past' => $past_offset + 1,
                 'future' => $future_offset,
               ],
-            ]),
-            'attributes' => [
-              'class' => [
-                'pager__link',
-                'pager__link__previous',
-                'cd-pager__item',
-              ],
-            ],
+            ])->toString(),
           ];
         }
 
         if ($past_offset > 0) {
           $pager_links[] = [
-            'title' => t('Next @months months', [
+            'text' => $this->t('Next @months months', [
               '@months' => $months_per_page,
             ]),
-            'url' => Url::fromUserInput($current_uri, [
+            'href' => Url::fromUserInput($current_uri, [
               'query' => [
                 'past' => $past_offset - 1,
                 'future' => $future_offset,
               ],
-            ]),
-            'attributes' => [
-              'class' => [
-                'pager__link',
-                'pager__link__next',
-                'cd-pager__item',
-              ],
-            ],
+            ])->toString(),
           ];
         }
 
@@ -353,22 +313,8 @@ class GroupMeetings extends ControllerBase {
           ],
           'past' => $view_builder->viewMultiple($meetings, 'teaser'),
           'past_pager' => [
-            '#theme' => 'links',
-            '#heading' => [
-              'text' => $this->t('Pagination'),
-              'level' => 'h4',
-              'attributes' => [
-                'class' => [
-                  'visually-hidden',
-                ],
-              ],
-            ],
-            '#attributes' => [
-              'class' => [
-                'pager',
-                'cd-pager__items',
-              ],
-            ],
+            '#theme' => 'iasc_content_pager',
+            '#pager_id' => 2,
             '#links' => $pager_links,
           ],
         ];
