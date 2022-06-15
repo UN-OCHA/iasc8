@@ -27,12 +27,7 @@ class StoreAllDates extends ProcessorPluginBase {
   /**
    * How far into the future we should create occurrences should be indexed.
    */
-  const MAX_FUTURE_DURATION = 'P2Y';
-
-  /**
-   * How far into the past we should create occurrences should be indexed.
-   */
-  const MAX_PAST_DURATION = 'P1Y';
+  const MAX_FUTURE_DURATION = 'P4Y';
 
   /**
    * {@inheritdoc}
@@ -100,8 +95,8 @@ class StoreAllDates extends ProcessorPluginBase {
    *   A list of occurrences.
    */
   protected function getApplicableItemReccurrences(DateRecurItem $item): array {
-    $from = (new \DateTime('now'))->sub(new \DateInterval(static::MAX_PAST_DURATION));
-    $until = (new \DateTime('now'))->add(new \DateInterval(static::MAX_FUTURE_DURATION));
+    $from = $item->start_date->getPhpDateTime();
+    $until = $item->start_date->add(new \DateInterval(static::MAX_FUTURE_DURATION))->getPhpDateTime();
     return $item->getHelper()->getOccurrences($from, $until);
   }
 

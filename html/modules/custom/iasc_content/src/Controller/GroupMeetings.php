@@ -246,9 +246,8 @@ class GroupMeetings extends ControllerBase {
    *   A list of occurrences.
    */
   protected function getPastReccurrences(DateRecurItem $item): array {
-    $from = (new \DateTime('now'))->sub(new \DateInterval(static::MAX_PAST_DURATION));
     $until = (new \DateTime('now'));
-    return $item->getHelper()->getOccurrences($from, $until);
+    return $item->getHelper()->getOccurrences(NULL, $until);
   }
 
   /**
@@ -262,8 +261,7 @@ class GroupMeetings extends ControllerBase {
    */
   protected function getFutureReccurrences(DateRecurItem $item): array {
     $from = (new \DateTime('now'));
-    $until = (new \DateTime('now'))->add(new \DateInterval(static::MAX_FUTURE_DURATION));
-    return $item->getHelper()->getOccurrences($from, $until);
+    return $item->getHelper()->getOccurrences($from, NULL);
   }
 
 }
