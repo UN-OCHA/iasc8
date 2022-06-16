@@ -1436,7 +1436,6 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
   $variables['content']['meetings'] = $build;
 }
 
-
 /**
  * Change old meeting paragraphs to new ones.
  */
@@ -1448,8 +1447,8 @@ function iasc_content_migrate_meetings_paragraphs() {
   $ids = $query->execute();
 
   $paragraphs = \Drupal::entityTypeManager()
-  ->getStorage('paragraph')
-  ->loadMultiple($ids);
+    ->getStorage('paragraph')
+    ->loadMultiple($ids);
 
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   foreach ($paragraphs as $paragraph) {
