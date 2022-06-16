@@ -230,3 +230,13 @@ aside .paragraph--type--content-item .group--view-mode-teaser {
 .cd-layout-sidebar-first .paragraph--type--teaser-grid .field__item:last-child .paragraph--type--teaser-item {
   margin-bottom: 0;
 }
+
+.paragraph--type--meetings-upcoming > h2,
+.paragraph--type--meetings-past > h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: $iasc-primary;
+  border-bottom: 3px solid $cd-blue-grey;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
