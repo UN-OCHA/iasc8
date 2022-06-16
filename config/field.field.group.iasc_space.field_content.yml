@@ -72,7 +72,7 @@ settings:
         weight: -34
         enabled: false
       meetings_upcoming:
-        weight: -28
+        weight: -33
         enabled: false
       membership:
         weight: -44
@@ -87,25 +87,25 @@ settings:
         weight: -41
         enabled: true
       paragraph_text:
-        weight: -30
+        weight: -29
         enabled: false
       reliefweb_feed:
-        weight: -33
+        weight: -32
         enabled: false
       section_menu:
         weight: -42
         enabled: true
       services_landing_block:
-        weight: -32
+        weight: -31
         enabled: false
       teaser_grid:
-        weight: -31
+        weight: -30
         enabled: false
       teaser_item:
         weight: -40
         enabled: true
       twitter:
-        weight: -29
+        weight: -28
         enabled: false
       video:
         weight: -27

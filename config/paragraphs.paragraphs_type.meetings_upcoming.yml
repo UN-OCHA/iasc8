@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: meetings_upcoming
-label: 'Upcoming meetings'
+label: 'Meetings (upcoming)'
 icon_uuid: null
 icon_default: null
 description: ''
