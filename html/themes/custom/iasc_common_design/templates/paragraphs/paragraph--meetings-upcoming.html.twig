@@ -52,12 +52,12 @@
 {% block paragraph %}
 	<div{{attributes.addClass(classes)}}>
 		{% block content %}
-			{{ content.meetings.upcoming_title }}
+			{{ content.meetings.future_title }}
 			<div class="cd-grid cd-grid--2-col">
-				{{ content.meetings|without('upcoming_title', 'upcoming_link') }}
+				{{ content.meetings|without('future_title', 'future_link') }}
 			</div>
 			<div class="more-link">
-				{{ content.meetings.upcoming_link }}
+				{{ content.meetings.future_link }}
 			</div>
 		{% endblock %}
 	</div>
