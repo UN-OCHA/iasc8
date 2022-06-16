@@ -207,7 +207,13 @@ class GroupMeetings extends ControllerBase {
         ];
       }
 
-      $build += [
+      $build['meetings_wrapper']['meetings_wrapper_future'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => [
+            'meetings_wrapper__future [ cd-flow ]',
+          ],
+        ],
         'future_title' => [
           '#type' => 'markup',
           '#markup' => $this->t('<h2>Upcoming meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
@@ -303,7 +309,13 @@ class GroupMeetings extends ControllerBase {
           ];
         }
 
-        $build += [
+        $build['meetings_wrapper']['meetings_wrapper_past'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => [
+              'meetings_wrapper__past [ cd-flow ]',
+            ],
+          ],
           'past_title' => [
             '#type' => 'markup',
             '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
@@ -329,6 +341,8 @@ class GroupMeetings extends ControllerBase {
    *
    * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item
    *   The field item.
+   * @param int $end
+   *   Timestamp.
    *
    * @return \Drupal\date_recur\DateRange[]
    *   A list of occurrences.
@@ -343,6 +357,8 @@ class GroupMeetings extends ControllerBase {
    *
    * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item
    *   The field item.
+   * @param int $start
+   *   Timestamp.
    *
    * @return \Drupal\date_recur\DateRange[]
    *   A list of occurrences.
