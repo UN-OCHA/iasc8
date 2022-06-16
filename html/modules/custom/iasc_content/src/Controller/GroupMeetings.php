@@ -220,7 +220,7 @@ class GroupMeetings extends ControllerBase {
         '#type' => 'container',
         '#attributes' => [
           'class' => [
-            'meetings_wrapper__future',
+            'meetings_wrapper__future [ cd-flow ]',
           ],
         ],
         'future_title' => [
@@ -322,7 +322,7 @@ class GroupMeetings extends ControllerBase {
           '#type' => 'container',
           '#attributes' => [
             'class' => [
-              'meetings_wrapper__future',
+              'meetings_wrapper__past [ cd-flow ]',
             ],
           ],
           'past_title' => [
