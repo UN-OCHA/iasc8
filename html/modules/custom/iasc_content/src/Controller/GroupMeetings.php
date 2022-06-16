@@ -125,16 +125,7 @@ class GroupMeetings extends ControllerBase {
     $index = Index::load('default_solr_index');
 
     // Render array.
-    $build = [
-      'meetings_wrapper' => [
-        '#type' => 'container',
-        '#attributes' => [
-          'class' => [
-            'meetings_wrapper',
-          ],
-        ],
-      ],
-    ];
+    $build = [];
 
     // Create list of events with all future occurences.
     $query = $index->query();
