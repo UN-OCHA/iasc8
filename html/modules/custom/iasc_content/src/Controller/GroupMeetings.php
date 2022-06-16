@@ -125,7 +125,16 @@ class GroupMeetings extends ControllerBase {
     $index = Index::load('default_solr_index');
 
     // Render array.
-    $build = [];
+    $build = [
+      'meetings_wrapper' => [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => [
+            'meetings_wrapper',
+          ],
+        ],
+      ],
+    ];
 
     // Create list of events with all future occurences.
     $query = $index->query();
@@ -207,7 +216,13 @@ class GroupMeetings extends ControllerBase {
         ];
       }
 
-      $build += [
+      $build['meetings_wrapper']['meetings_wrapper_future'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => [
+            'meetings_wrapper__future',
+          ],
+        ],
         'future_title' => [
           '#type' => 'markup',
           '#markup' => $this->t('<h2>Upcoming meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
@@ -303,7 +318,13 @@ class GroupMeetings extends ControllerBase {
           ];
         }
 
-        $build += [
+        $build['meetings_wrapper']['meetings_wrapper_past'] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => [
+              'meetings_wrapper__future',
+            ],
+          ],
           'past_title' => [
             '#type' => 'markup',
             '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
@@ -329,6 +350,8 @@ class GroupMeetings extends ControllerBase {
    *
    * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item
    *   The field item.
+   * @param int $end
+   *   Timestamp.
    *
    * @return \Drupal\date_recur\DateRange[]
    *   A list of occurrences.
@@ -343,6 +366,8 @@ class GroupMeetings extends ControllerBase {
    *
    * @param \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item
    *   The field item.
+   * @param int $start
+   *   Timestamp.
    *
    * @return \Drupal\date_recur\DateRange[]
    *   A list of occurrences.
