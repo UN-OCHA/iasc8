@@ -84,6 +84,10 @@ function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
     $facet = Facet::load($facet_name);
     if ($facet) {
       $field_name = $facet->getFieldIdentifier();
+      if (!isset($facets[$field_name])) {
+        continue;
+      }
+
       $facet_values = $facets[$field_name];
 
       $tids = [];

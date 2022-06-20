@@ -11,3 +11,10 @@
 function iasc_content_update_8029() {
   // @see iasc_content_post_update_grand_bargain_for_announcements
 }
+
+/**
+ * Change old meeting blocks to new ones.
+ */
+function iasc_content_update_8030() {
+  iasc_content_migrate_meetings_paragraphs();
+}

@@ -9,6 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.agenda_items
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.list_item
+    - paragraphs.paragraphs_type.meetings_past
+    - paragraphs.paragraphs_type.meetings_upcoming
     - paragraphs.paragraphs_type.membership
     - paragraphs.paragraphs_type.paragraph_media
     - paragraphs.paragraphs_type.paragraph_snippet
@@ -37,6 +39,8 @@ settings:
       hero: hero
       list_item: list_item
       teaser_item: teaser_item
+      meetings_past: meetings_past
+      meetings_upcoming: meetings_upcoming
     negate: 1
     target_bundles_drag_drop:
       additional_locations:
@@ -51,6 +55,12 @@ settings:
       content_item:
         weight: 22
         enabled: false
+      custom_block:
+        weight: 29
+        enabled: false
+      featured:
+        weight: 30
+        enabled: false
       hero:
         weight: 16
         enabled: true
@@ -59,6 +69,12 @@ settings:
         enabled: false
       list_item:
         weight: 18
+        enabled: true
+      meetings_past:
+        weight: 34
+        enabled: true
+      meetings_upcoming:
+        weight: 35
         enabled: true
       membership:
         weight: 11
@@ -75,8 +91,14 @@ settings:
       paragraph_text:
         weight: 15
         enabled: false
+      reliefweb_feed:
+        weight: 41
+        enabled: false
       section_menu:
         weight: 28
+        enabled: false
+      services_landing_block:
+        weight: 43
         enabled: false
       teaser_grid:
         weight: 24

@@ -21,6 +21,7 @@ dependencies:
     - taxonomy
     - media
     - search_api
+    - iasc_content
     - search_api_attachments
 third_party_settings:
   search_api_solr:
@@ -70,6 +71,10 @@ name: 'Default Solr content index'
 description: 'Default content index created by the Solr Search Defaults module'
 read_only: false
 field_settings:
+  all_dates:
+    label: 'All dates'
+    property_path: all_dates
+    type: date
   audience_label:
     label: 'Audience label'
     datasource_id: 'entity:node'
@@ -287,6 +292,7 @@ processor_settings:
   entity_status:
     weights:
       preprocess_index: -10
+  entity_type: {  }
   file_attachments:
     excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
     number_indexed: 0
@@ -309,6 +315,7 @@ processor_settings:
       h2: 3
       h3: 2
       string: 2
+  iasc_content_store_all_dates: {  }
   language_with_fallback: {  }
   rendered_item:
     weights:

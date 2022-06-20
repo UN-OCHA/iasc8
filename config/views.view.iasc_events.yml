@@ -610,6 +610,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      enabled: false
       title: 'Past meetings'
       filters:
         status:
@@ -708,6 +709,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      enabled: false
       sorts:
         field_oa_date_value:
           id: field_oa_date_value

@@ -23,6 +23,7 @@ use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\search_api\Entity\Index;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -119,11 +120,13 @@ function iasc_content_space_content_defaults($id) {
 
   // Add upcoming meetings.
   $paragraph = Paragraph::create([
-    'type' => 'view',
+    'type' => 'meetings_upcoming',
   ]);
-  $paragraph->set('field_view', [
-    'target_id' => 'iasc_events',
-    'display_id' => 'upcoming_meetings',
+  $paragraph->set('field_max_number_of_events', [
+    'value' => 5,
+  ]);
+  $paragraph->set('field_link_to_all_meetings', [
+    'value' => TRUE,
   ]);
 
   $paragraph->isNew();
@@ -136,11 +139,13 @@ function iasc_content_space_content_defaults($id) {
 
   // Add past meetings.
   $paragraph = Paragraph::create([
-    'type' => 'view',
+    'type' => 'meetings_past',
   ]);
-  $paragraph->set('field_view', [
-    'target_id' => 'iasc_events',
-    'display_id' => 'past_meetings',
+  $paragraph->set('field_max_number_of_events', [
+    'value' => 5,
+  ]);
+  $paragraph->set('field_link_to_all_meetings', [
+    'value' => TRUE,
   ]);
 
   $paragraph->isNew();
@@ -719,23 +724,6 @@ function _iasc_content_section_audience_present($entity_type, $bundle, $field_na
 }
 
 /**
- * Post migrate steps.
- */
-function iasc_content_post_migrate_steps() {
-  module_load_install('iasc_content');
-
-  iasc_content_update_8001();
-  iasc_content_update_8002();
-  iasc_content_update_8003();
-  iasc_content_update_8004();
-  iasc_content_update_8005();
-  iasc_content_update_8006();
-  iasc_content_update_8007();
-  iasc_content_update_8008();
-  iasc_content_update_8009();
-}
-
-/**
  * Legacy command from Drupal 7 version.
  */
 function iasc_content_oa_buttons_get_command_buttons_options(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
@@ -989,6 +977,13 @@ function iasc_content_theme() {
       ],
       'template' => 'block--iasc-header-search-block',
     ],
+    'iasc_content_pager' => [
+      'variables' => [
+        'pager_id' => NULL,
+        'links' => NULL,
+      ],
+      'template' => 'iasc-content-pager',
+    ],
     'iasc_content_alpha_widget' => [
       'render element' => 'widget',
       'template' => 'iasc-content-alpha-widget',
@@ -1222,6 +1217,13 @@ function iasc_content_preprocess_node(&$vars) {
     return;
   }
 
+  /** @var \Drupal\node\Entity\Node $node */
+  if (isset($node->original_nid)) {
+    // Restore original nid and url.
+    $node->nid = $node->original_nid;
+    $vars['url'] = Url::fromUri('internal:/node/' . $node->original_nid)->toString();
+  }
+
   $vars['is_archived'] = FALSE;
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
   $activGroupListEntity = $storage->loadByEntity($node);
@@ -1247,5 +1249,222 @@ function iasc_content_preprocess_node(&$vars) {
   $vars['archive_message'] = \Drupal::config('iasc_content.settings')->get('archive_message') ?? 'This group has been archived.';
   if (!$group->field_archive_message->isEmpty()) {
     $vars['archive_message'] = $group->field_archive_message->value;
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph__type().
+ */
+function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $group = $paragraph->getParentEntity();
+
+  if (!$group) {
+    return;
+  }
+
+  // Set max number of items to 5 by default.
+  $max_number_of_items = $paragraph->field_max_number_of_events->value ?? 5;
+
+  // Load index.
+  $index = Index::load('default_solr_index');
+
+  // Create list of events with all future occurences.
+  $query = $index->query();
+  $query->addCondition('field_iasc_audience', $group->id());
+  $query->addCondition('type', 'oa_event');
+  $query->addCondition('all_dates', time(), '>=');
+  $query->range(0, $max_number_of_items);
+  $query->sort('all_dates', 'ASC');
+  $query->sort('changed', 'ASC');
+
+  // Execute the search.
+  $results = $query->execute();
+
+  // Extract Ids.
+  $ids = [];
+  foreach ($results as $item) {
+    $data = explode(':', $item->getId());
+    $data = explode('/', $data[1]);
+    $ids[] = $data[1];
+  }
+
+  if (empty($ids)) {
+    return;
+  }
+
+  $events = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($ids);
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+  $meetings = [];
+  foreach ($events as $event) {
+    foreach ($event->field_oa_date as $date_item) {
+      foreach ($date_item->getHelper()->getOccurrences(new \DateTime(), NULL) as $date) {
+        if ($date->getStart()->getTimestamp() >= time()) {
+          $new_event = clone $event;
+          $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
+          $new_event->original_nid = $event->id();
+          $new_event->set('field_oa_date', [
+            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
+            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'timezone' => $date->getStart()->getTimezone()->getName(),
+          ]);
+          $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
+        }
+      }
+    }
+  }
+
+  // Sort the meetings.
+  usort($meetings, function ($a, $b) {
+    return strcmp($a->field_oa_date->first()->getValue()['value'], $b->field_oa_date->first()->getValue()['value']);
+  });
+
+  $meetings = array_splice($meetings, 0, $max_number_of_items);
+
+  $build = [
+    'future_title' => [
+      '#type' => 'markup',
+      '#markup' => t('<h2>Upcoming meetings</h2>'),
+    ],
+    'future' => $view_builder->viewMultiple($meetings, 'teaser'),
+  ];
+
+  // Link to all meetings.
+  if ($paragraph->field_link_to_all_meetings->value) {
+    $build['future_link'] = [
+      '#type' => 'link',
+      '#title' => 'View more meetings',
+      '#url' => Url::fromRoute('iasc_content.group.meetings', [
+        'group' => $group->id(),
+      ]),
+    ];
+  }
+
+  $variables['content']['meetings'] = $build;
+}
+
+/**
+ * Implements hook_preprocess_paragraph__type().
+ */
+function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $group = $paragraph->getParentEntity();
+
+  if (!$group) {
+    return;
+  }
+
+  // Set max number of items to 5 by default.
+  $max_number_of_items = $paragraph->field_max_number_of_events->value ?? 5;
+
+  // Load index.
+  $index = Index::load('default_solr_index');
+
+  // Create list of events with all future occurences.
+  $query = $index->query();
+  $query->addCondition('field_iasc_audience', $group->id());
+  $query->addCondition('type', 'oa_event');
+  $query->addCondition('all_dates', time(), '<');
+  $query->range(0, $max_number_of_items);
+  $query->sort('all_dates', 'DESC');
+  $query->sort('changed', 'DESC');
+
+  // Execute the search.
+  $results = $query->execute();
+
+  // Extract Ids.
+  $ids = [];
+  foreach ($results as $item) {
+    $data = explode(':', $item->getId());
+    $data = explode('/', $data[1]);
+    $ids[] = $data[1];
+  }
+
+  if (empty($ids)) {
+    return;
+  }
+
+  $events = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($ids);
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+  $meetings = [];
+  foreach ($events as $event) {
+    foreach ($event->field_oa_date as $date_item) {
+      foreach ($date_item->getHelper()->getOccurrences(NULL, new \DateTime()) as $date) {
+        if ($date->getStart()->getTimestamp() < time()) {
+          $new_event = clone $event;
+          $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
+          $new_event->original_nid = $event->id();
+          $new_event->set('field_oa_date', [
+            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
+            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'timezone' => $date->getStart()->getTimezone()->getName(),
+          ]);
+          $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
+        }
+      }
+    }
+  }
+
+  // Sort the meetings.
+  usort($meetings, function ($a, $b) {
+    return strcmp($b->field_oa_date->first()->getValue()['value'], $a->field_oa_date->first()->getValue()['value']);
+  });
+
+  $meetings = array_splice($meetings, 0, $max_number_of_items);
+
+  $build = [
+    'past_title' => [
+      '#type' => 'markup',
+      '#markup' => t('<h2>Past meetings</h2>'),
+    ],
+    'past' => $view_builder->viewMultiple($meetings, 'teaser'),
+  ];
+
+  // Link to all meetings.
+  if ($paragraph->field_link_to_all_meetings->value) {
+    $build['past_link'] = [
+      '#type' => 'link',
+      '#title' => 'View more meetings',
+      '#url' => Url::fromRoute('iasc_content.group.meetings', [
+        'group' => $group->id(),
+      ]),
+    ];
+  }
+
+  $variables['content']['meetings'] = $build;
+}
+
+/**
+ * Change old meeting paragraphs to new ones.
+ */
+function iasc_content_migrate_meetings_paragraphs() {
+  $query = \Drupal::entityQuery('paragraph');
+  $query->condition('type', 'view');
+  $query->exists('field_view');
+  $query->condition('field_view', 'iasc_events');
+  $ids = $query->execute();
+
+  $paragraphs = \Drupal::entityTypeManager()
+    ->getStorage('paragraph')
+    ->loadMultiple($ids);
+
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  foreach ($paragraphs as $paragraph) {
+    $display = $paragraph->field_view->getValue()[0]['display_id'];
+
+    switch ($display) {
+      case 'upcoming_meetings':
+        $paragraph->type = 'meetings_upcoming';
+        $paragraph->save();
+        break;
+
+      case 'past_meetings':
+        $paragraph->type = 'meetings_past';
+        $paragraph->save();
+        break;
+
+    }
   }
 }
