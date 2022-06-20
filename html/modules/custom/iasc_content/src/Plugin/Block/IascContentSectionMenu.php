@@ -64,8 +64,18 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
    */
   public function build() {
     $parameters = $this->routeMatch->getParameters();
+    $needed = FALSE;
 
-    if (($parameters->get('view_id', '') == 'iasc_group_content') && ($group_id = $parameters->get('group', ''))) {
+    if ($parameters->get('view_id', '') == 'iasc_group_content') {
+      $needed = TRUE;
+      $group_id = $parameters->get('group', '');
+    }
+    elseif ($this->routeMatch->getRouteName() == 'iasc_content.group.meetings') {
+      $needed = TRUE;
+      $group_id = $parameters->get('group')->id();
+    }
+
+    if ($needed) {
       $group = Group::load($group_id);
       $urls = iasc_content_build_section_menu($group, TRUE);
 

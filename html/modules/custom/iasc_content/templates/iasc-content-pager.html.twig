@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override to display a date pager.
+ */
+#}
+<nav class="pager" role="navigation" aria-labelledby="pager-id-{{ pager_id }}">
+  <h4 id="pager-id-{{ pager_id }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
+  <ul class="cd-pager__items js-pager__items">
+    {% for link in links %}
+      <li class="cd-pager__item">
+        <a href="{{ link.href }}" title="{{ link.text }}">
+          <span class="visually-hidden">{{ link.text }}</span>
+          <span aria-hidden="true">{{ link.text }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

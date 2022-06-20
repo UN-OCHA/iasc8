@@ -4,3 +4,6 @@ services:
     arguments: ['@entity_type.manager']
     tags:
       - { name: 'event_subscriber' }
+  iasc_content.group_meetings_controller:
+    class: \Drupal\iasc_content\Controller\GroupMeetings
+    arguments: ['@entity_type.manager', '@pager.manager']

@@ -660,6 +660,7 @@ display:
     display_plugin: page
     position: 3
     display_options:
+      enabled: false
       title: 'Meetings of '
       sorts:
         field_oa_date:
