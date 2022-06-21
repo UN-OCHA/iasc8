@@ -74,6 +74,9 @@
     "drupal/devel": {
         "version": "4.1.1"
     },
+    "drupal/devel_php": {
+        "version": "1.5.0"
+    },
     "drupal/honeypot": {
         "version": "2.0.2"
     },
@@ -130,9 +133,6 @@
     },
     "kint-php/kint": {
         "version": "3.3"
-    },
-    "laminas/laminas-zendframework-bridge": {
-        "version": "1.2.0"
     },
     "league/csv": {
         "version": "9.8.0"
