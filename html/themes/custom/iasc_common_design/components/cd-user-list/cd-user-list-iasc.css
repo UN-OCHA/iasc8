@@ -1,13 +1,50 @@
-.cd-user-list { clear: both; overflow: hidden; }
-.cd-user-list li { clear: left; overflow: hidden; border-bottom: 1px solid var(--cd-blue-grey); }
-.cd-user-list li:last-child,
-.cd-user-list li:only-of-type { border-bottom: 0; }
-.cd-user-list__image { overflow: hidden; }
-.cd-user-list__image img { width: 100%; }
-.cd-user-list__name { font-size: 1rem; }
-.cd-user-list__position { font-size: 0.875rem; }
-.cd-user-list__organization { color: #3c4485; font-size: 0.875rem; }
-.cd-user-list__has-image .cd-user-list__city,
-.cd-user-list__has-image .cd-user-list__name,
-.cd-user-list__has-image .cd-user-list__organization,
-.cd-user-list__has-image .cd-user-list__position { padding-left: 7rem; }
+:root {
+  --iasc-secondary: #3c4485;
+}
+
+.cd-user-list {
+  /* Hack to prevent float issue when text is shorter than image height. */
+  clear: both;
+  overflow: hidden;
+}
+
+.cd-user-list li {
+  clear: left;
+  overflow: hidden;
+  border-bottom: 1px solid var(--cd-blue-grey);
+}
+
+.cd-user-list li:only-of-type,
+.cd-user-list li:last-child {
+  border-bottom: 0 none;
+}
+
+.cd-user-list__image {
+  overflow: hidden;
+}
+
+.cd-user-list__image img {
+  width: 100%;
+}
+
+.cd-user-list__name {
+  font-size: 1rem;
+}
+
+.cd-user-list__position {
+  font-size: 0.875rem;
+}
+
+.cd-user-list__organization {
+  color: var(--iasc-secondary);
+  font-size: 0.875rem;
+}
+
+.cd-user-list__has-image {
+  .cd-user-list__name,
+  .cd-user-list__position,
+  .cd-user-list__organization,
+  .cd-user-list__city {
+    padding-left: 7rem; /* width of image + margin-right */
+  }
+}

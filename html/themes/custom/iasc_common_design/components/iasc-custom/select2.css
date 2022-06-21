@@ -1,4 +1,4 @@
-// Control select2 select element width when options are wider than parent element.
+/* Control select2 select element width when options are wider than parent element. */
 .select2-container--default .select2-search--inline .select2-search__field {
   width: auto !important;
 }

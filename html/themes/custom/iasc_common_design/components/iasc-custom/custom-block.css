@@ -68,9 +68,9 @@
   }
 }
 
-// .paragraph--type--custom-block {
-//   @extend .block--type-block-with-text-and-link;
-// }
+/* .paragraph--type--custom-block {
+  @extend .block--type-block-with-text-and-link;
+} */
 
 .cd-layout-content .block--type-block-with-text-and-link,
 .cd-layout-main-content .block--type-block-with-text-and-link {
