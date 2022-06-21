@@ -1,0 +1,30 @@
+.cd-soft-footer .button {
+  padding: 10px 12px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  background: var(--iasc-red);
+  font-weight: 700;
+}
+
+.cd-soft-footer .button:hover,
+.cd-soft-footer .button:focus {
+  background: var(--iasc-red);
+}
+
+@media (min-width: 768px) {
+  .cd-soft-footer .button {
+    margin-top: 0;
+  }
+
+  .cd-soft-footer__inner {
+    justify-content: flex-start;
+  }
+
+  .cd-soft-footer__inner form {
+    margin-left: 20px;
+  }
+
+  .cd-soft-footer__inner input[type="email"] {
+    padding: 0.25rem 0.5rem;
+  }
+}

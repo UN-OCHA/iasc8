@@ -1,0 +1,13 @@
+// Control select2 select element width when options are wider than parent element.
+.select2-container--default .select2-search--inline .select2-search__field {
+  width: auto !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  white-space: normal;
+}
+
+.select2-container--focus,
+.select2-container--open {
+  outline: 2px solid var(--cd-blue--bright) !important;
+}

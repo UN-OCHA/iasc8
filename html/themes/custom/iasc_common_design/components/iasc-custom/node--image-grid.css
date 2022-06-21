@@ -1,0 +1,28 @@
+/* Component styles */
+
+.with-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.with-image-grid > * {
+  display: flex;
+  flex: 0 0 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+@supports (display: grid) {
+  .with-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+.cd-layout-content .cd-image-grid .view-content,
+.cd-layout-highlighted .cd-image-grid .view-content {
+  @extend .with-image-grid;
+}

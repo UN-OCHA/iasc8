@@ -1,0 +1,19 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Sites Menu ('OCHA Services')
+//——————————————————————————————————————————————————————————————————————————————
+
+.cd-ocha-dropdown__link a:hover,
+.cd-ocha-dropdown__link a:focus {
+  border-color: var(--cd-white);
+}
+
+a.cd-ocha-dropdown__see-all {
+  color: var(--brand-primary);
+  background: var(--iasc-red);
+}
+
+a.cd-ocha-dropdown__see-all:hover,
+a.cd-ocha-dropdown__see-all:focus {
+  color: var(--brand-primary-dark);
+  background: var(--brand-highlight);
+}
