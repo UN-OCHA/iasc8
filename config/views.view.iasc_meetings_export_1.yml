@@ -7,13 +7,18 @@ dependencies:
     - field.storage.node.field_oa_date
     - node.type.oa_event
     - node.type.oa_wiki_page
+    - user.role.administrator
   module:
+    - csv_serialization
     - date_recur
     - datetime
     - file
     - group
     - node
+    - rest
+    - serialization
     - user
+    - views_data_export
 id: iasc_meetings_export_1
 label: 'IASC Meetings Export 1'
 module: views
@@ -384,9 +389,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -644,6 +650,45 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user.permissions
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_oa_date'
+  data_export_1:
+    id: data_export_1
+    display_title: 'Data export'
+    display_plugin: data_export
+    position: 1
+    display_options:
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      display_extenders: {  }
+      path: admin/content/iasc-events/meeting-files-1.csv
+      auth:
+        - cookie
+      filename: meeting-files-1.csv
+      automatic_download: true
+      store_in_public_file_directory: false
+      custom_redirect_path: false
+      redirect_to_display: none
+      include_query_params: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - user.roles
       tags:
         - 'config:field.storage.node.field_oa_date'
