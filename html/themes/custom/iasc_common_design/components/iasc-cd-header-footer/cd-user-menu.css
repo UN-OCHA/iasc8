@@ -20,8 +20,3 @@
 .cd-user-menu--no-language-switcher li:last-child a::after {
   content: none;
 }
-
-// .region-header-top .menu {
-//   @extend .cd-user-menu;
-//   @extend .cd-user-menu--no-language-switcher;
-// }

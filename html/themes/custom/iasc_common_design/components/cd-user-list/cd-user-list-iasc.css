@@ -1,7 +1,3 @@
-:root {
-  --iasc-secondary: #3c4485;
-}
-
 .cd-user-list {
   /* Hack to prevent float issue when text is shorter than image height. */
   clear: both;
