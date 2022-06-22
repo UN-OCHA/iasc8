@@ -318,9 +318,9 @@ class GroupMeetings extends ControllerBase {
           ],
           'past_title' => [
             '#type' => 'markup',
-            '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
+            '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
               '@from' => $past_start->format($date_format),
-              '@untill' => $past_end->format($date_format),
+              '@until' => $past_end->format($date_format),
             ]),
           ],
           'past' => $view_builder->viewMultiple($meetings, 'teaser'),
