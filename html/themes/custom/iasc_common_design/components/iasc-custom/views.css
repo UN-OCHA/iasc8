@@ -51,15 +51,15 @@
   margin: 0;
 }
 
-.view-iasc-group-content .views-exposed-form .cd-form--inline .form-item,
-.view-iasc-group-content .views-exposed-form .cd-form--inline .form-actions,
-.view-search-content .views-exposed-form .cd-form--inline .form-item,
-.view-search-content .views-exposed-form .cd-form--inline .form-actions,
-.view-updates .views-exposed-form .cd-form--inline .form-item,
-.view-updates .views-exposed-form .cd-form--inline .form-actions,
-.view-resources .views-exposed-form .cd-form--inline .form-item,
-.view-resources .views-exposed-form .cd-form--inline .form-actions,
-.view-iasc-services .views-exposed-form .cd-form--inline .form-item,
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-item label,
+.view-iasc-group-content .views-exposed-form .cd-form--inline .form-actions label,
+.view-search-content .views-exposed-form .cd-form--inline .form-item label,
+.view-search-content .views-exposed-form .cd-form--inline .form-actions label,
+.view-updates .views-exposed-form .cd-form--inline .form-item label,
+.view-updates .views-exposed-form .cd-form--inline .form-actions label,
+.view-resources .views-exposed-form .cd-form--inline .form-item label,
+.view-resources .views-exposed-form .cd-form--inline .form-actions label,
+.view-iasc-services .views-exposed-form .cd-form--inline .form-item label,
 .view-iasc-services .views-exposed-form .cd-form--inline .form-actions label {
   position: absolute !important;
   overflow: hidden;
@@ -195,12 +195,12 @@
   }
 }
 
-.pager {
+.view-iasc-services .pager {
   margin-bottom: 4rem;
 }
 
 @media (min-width: 1024px) {
-.pager {
+.view-iasc-services .pager {
     margin-bottom: 6rem;
   }
 }
