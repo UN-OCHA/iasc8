@@ -181,8 +181,8 @@
       </div>
 
       <aside class="cd-layout-sidebar-first" role="complementary">
-        <div class="cd-location">
-          {% if content.field_city|render or content.field_additional_locations|render or content.field_venue|render or content.field_room|render %}
+        {% if content.field_city|render or content.field_additional_locations|render or content.field_venue|render or content.field_room|render %}
+          <div class="cd-location">
             <div class="cd-sidebar__label">{% trans %}Location{% endtrans %}</div>
             {{ content.field_city }}
             {{ content.field_additional_locations }}
