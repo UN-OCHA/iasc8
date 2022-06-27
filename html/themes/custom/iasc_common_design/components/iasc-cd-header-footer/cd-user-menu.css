@@ -20,3 +20,7 @@
 .cd-user-menu--no-language-switcher li:last-child a::after {
   content: none;
 }
+
+.cd-global-header .menu > li a::after {
+  content: none;
+}
