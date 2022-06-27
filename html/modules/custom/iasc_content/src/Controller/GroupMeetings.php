@@ -216,9 +216,9 @@ class GroupMeetings extends ControllerBase {
         ],
         'future_title' => [
           '#type' => 'markup',
-          '#markup' => $this->t('<h2>Upcoming meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
+          '#markup' => $this->t('<h2>Upcoming meetings</h2><h3>Meetings from @from until @until.</h3>', [
             '@from' => $future_start->format($date_format),
-            '@untill' => $future_end->format($date_format),
+            '@until' => $future_end->format($date_format),
           ]),
         ],
         'future' => $view_builder->viewMultiple($meetings, 'teaser'),
@@ -318,9 +318,9 @@ class GroupMeetings extends ControllerBase {
           ],
           'past_title' => [
             '#type' => 'markup',
-            '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from untill @untill.</h3>', [
+            '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
               '@from' => $past_start->format($date_format),
-              '@untill' => $past_end->format($date_format),
+              '@until' => $past_end->format($date_format),
             ]),
           ],
           'past' => $view_builder->viewMultiple($meetings, 'teaser'),
