@@ -24,10 +24,10 @@
 
 .field--name-field-header .block,
 .field--name-field-header .field--type-viewsreference {
-    margin-bottom: 3rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--cd-blue-grey);
-  }
+  margin-bottom: 3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cd-blue-grey);
+}
 
 .field--name-field-header h2,
 .field--name-field-header .field--type-viewsreference .viewsreference--view-title {

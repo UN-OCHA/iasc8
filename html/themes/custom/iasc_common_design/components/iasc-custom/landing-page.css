@@ -3,9 +3,9 @@
 }
 
 .operations.form-actions input[type="submit"] {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {

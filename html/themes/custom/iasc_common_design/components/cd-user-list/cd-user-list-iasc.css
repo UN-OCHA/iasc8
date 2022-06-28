@@ -36,11 +36,9 @@
   font-size: 0.875rem;
 }
 
-.cd-user-list__has-image {
-  .cd-user-list__name,
-  .cd-user-list__position,
-  .cd-user-list__organization,
-  .cd-user-list__city {
-    padding-left: 7rem; /* width of image + margin-right */
-  }
+.cd-user-list__has-image .cd-user-list__name,
+.cd-user-list__has-image .cd-user-list__position,
+.cd-user-list__has-image .cd-user-list__organization,
+.cd-user-list__has-image .cd-user-list__city {
+  padding-left: 7rem; /* width of image + margin-right */
 }

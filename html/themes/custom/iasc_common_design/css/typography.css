@@ -43,8 +43,8 @@ a:focus {
 
 @media (min-width: 1200px) {
   [dir="ltr"] .cd-layout-with-sidebar .cd-page-title{
-      padding-right: 320px; /* --cd-max-width minus padding, minus --cd-max-content-width */
-    }
+    padding-right: 320px; /* --cd-max-width minus padding, minus --cd-max-content-width */
+  }
 
   [dir="rtl"] .cd-page-title {
     padding-left: 320px;
