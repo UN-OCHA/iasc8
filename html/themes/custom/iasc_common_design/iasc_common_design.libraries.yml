@@ -4,7 +4,54 @@ global-styling:
     js/region_num_childs.js: {}
   css:
     theme:
-      css/styles.css: {}
+      css/brand.css: {}
+      css/typography.css: {}
+  dependencies:
+    - iasc_common_design/iasc-cd-header-footer
+    - iasc_common_design/iasc-custom
+    - iasc_common_design/cd-filter
+
+iasc-cd-header-footer:
+  css:
+    theme:
+      components/iasc-cd-header-footer/cd-dropdowns.css: {}
+      components/iasc-cd-header-footer/cd-footer.css: {}
+      components/iasc-cd-header-footer/cd-header.css: {}
+      components/iasc-cd-header-footer/cd-language-switcher.css: {}
+      components/iasc-cd-header-footer/cd-layout.css: {}
+      components/iasc-cd-header-footer/cd-logo.css: {}
+      components/iasc-cd-header-footer/cd-menu--main.css: {}
+      components/iasc-cd-header-footer/cd-nav.css: {}
+      components/iasc-cd-header-footer/cd-ocha.css: {}
+      components/iasc-cd-header-footer/cd-search.css: {}
+      components/iasc-cd-header-footer/cd-soft-footer.css: {}
+      components/iasc-cd-header-footer/cd-user-menu.css: {}
+
+iasc-custom:
+  css:
+    theme:
+      components/iasc-custom/custom-block.css: {}
+      components/iasc-custom/facets.css: {}
+      components/iasc-custom/field.css: {}
+      components/iasc-custom/group.css: {}
+      components/iasc-custom/landing-page.css: {}
+      components/iasc-custom/media.css: {}
+      components/iasc-custom/more-link.css: {}
+      components/iasc-custom/node--event.css: {}
+      components/iasc-custom/node--image-grid.css: {}
+      components/iasc-custom/node.css: {}
+      components/iasc-custom/paragraph.css: {}
+      components/iasc-custom/secretariat.css: {}
+      components/iasc-custom/section-menu.css: {}
+      components/iasc-custom/select2.css: {}
+      components/iasc-custom/taxonomy.css: {}
+      components/iasc-custom/user.css: {}
+      components/iasc-custom/views.css: {}
+
+cd-filter:
+  css:
+    theme:
+      components/cd-filter/cd-filter.css: {}
 
 cd-grid:
   css:

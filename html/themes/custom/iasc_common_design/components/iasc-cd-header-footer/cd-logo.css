@@ -1,0 +1,15 @@
+.cd-site-logo {
+  width: 100px;
+  background: url("../../img/logos/logo-mobile.svg") center no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .cd-site-logo {
+    width: 220px;
+    background: none;
+  }
+  .cd-site-logo img {
+    width: auto; /* Fixes placement in IE11.*/
+  }
+}

@@ -1,0 +1,40 @@
+.operations.form-actions {
+  margin: 4rem 0;
+}
+
+.operations.form-actions input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+.operations.form-actions input[type="submit"] {
+    max-width: 16rem;
+  }
+}
+
+.paragraph--type--services-landing-block form {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--cd-blue-grey);
+}
+@media (min-width: 1024px) {
+  .paragraph--type--services-landing-block form {
+    margin-bottom: 6rem;
+  }
+}
+
+.paragraph--type--services-landing-block .cd-form__group {
+  margin-bottom: 2rem;
+}
+
+.paragraph--type--services-landing-block label {
+  margin-bottom: 0.25rem;
+  color: var(--brand-primary);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.paragraph--type--services-landing-block select {
+  width: 100%;
+}

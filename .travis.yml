@@ -64,9 +64,6 @@ script:
   - # test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
   - set +e
 
-  # Theme build.
-  - composer run sass
-
   # Run unit, kernel tests
   - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel
 
