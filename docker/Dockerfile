@@ -5,8 +5,7 @@ COPY . /srv/www
 WORKDIR /srv/www
 RUN composer self-update --2 && \
     composer install --no-dev --prefer-dist && \
-    cp -a docker/settings.php docker/services.yml docker/memcache.services.yml html/sites/default && \
-    composer run sass
+    cp -a docker/settings.php docker/services.yml docker/memcache.services.yml html/sites/default
 
 FROM public.ecr.aws/unocha/php-k8s:8.0-NR-stable
 
