@@ -1,13 +1,9 @@
-.cd-filter__btn {
-  background-color: var(--brand-primary);
-}
-
 .cd-filter__btn:hover {
-  background-color: var(--brand-primary-dark);
+  background-color: var(--brand-primary--dark);
 }
 
 .cd-filter__btn:focus {
-  border: 2px solid var(--cd-blue--bright);
+  border: 2px solid var(--brand-primary--light);
 }
 
 /* Correct cd-filter when filters are in sidebar */
