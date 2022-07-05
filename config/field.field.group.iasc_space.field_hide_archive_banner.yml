@@ -1,0 +1,23 @@
+uuid: e10872b3-098c-4870-80e6-8f57472267f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_hide_archive_banner
+    - group.type.iasc_space
+id: group.iasc_space.field_hide_archive_banner
+field_name: field_hide_archive_banner
+entity_type: group
+bundle: iasc_space
+label: 'Hide archive banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node_type'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

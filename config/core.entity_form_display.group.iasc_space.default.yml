@@ -13,6 +13,8 @@ dependencies:
     - field.field.group.iasc_space.field_description
     - field.field.group.iasc_space.field_external_link
     - field.field.group.iasc_space.field_group_banner
+    - field.field.group.iasc_space.field_hide_archive_banner
+    - field.field.group.iasc_space.field_hide_on_document_type
     - field.field.group.iasc_space.field_main_image
     - field.field.group.iasc_space.field_primary_image
     - field.field.group.iasc_space.field_responsibilities
@@ -106,7 +108,7 @@ content:
     third_party_settings: {  }
   field_external_link:
     type: link_default
-    weight: 14
+    weight: 16
     region: content
     settings:
       placeholder_url: ''
@@ -118,6 +120,18 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_hide_archive_banner:
+    type: options_buttons
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hide_on_document_type:
+    type: options_buttons
+    weight: 15
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_main_image:
     type: media_library_widget
@@ -184,7 +198,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 17
     region: content
     settings:
       display_label: true

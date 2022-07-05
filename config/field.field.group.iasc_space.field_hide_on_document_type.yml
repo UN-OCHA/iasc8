@@ -1,0 +1,29 @@
+uuid: b6583892-df5a-482c-94be-92a4b7794c5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_hide_on_document_type
+    - group.type.iasc_space
+    - taxonomy.vocabulary.document_types
+id: group.iasc_space.field_hide_on_document_type
+field_name: field_hide_on_document_type
+entity_type: group
+bundle: iasc_space
+label: 'Hide on document type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      document_types: document_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
