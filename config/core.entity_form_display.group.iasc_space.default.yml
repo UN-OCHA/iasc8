@@ -22,6 +22,7 @@ dependencies:
     - field.field.group.iasc_space.field_sidebar
     - group.type.iasc_space
   module:
+    - conditional_fields
     - datetime
     - link
     - media_library
@@ -126,13 +127,47 @@ content:
     weight: 14
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        68de63df-36fb-4871-ace0-52090b26bbe6:
+          entity_type: group
+          bundle: iasc_space
+          dependee: field_archive_group
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_hide_on_document_type:
     type: options_buttons
     weight: 15
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields:
+        6bc2deaf-0e28-443d-943c-6f1e441287c1:
+          entity_type: group
+          bundle: iasc_space
+          dependee: field_archive_group
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_main_image:
     type: media_library_widget
     weight: 8
