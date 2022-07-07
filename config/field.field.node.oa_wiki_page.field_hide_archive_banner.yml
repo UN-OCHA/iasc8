@@ -1,0 +1,23 @@
+uuid: aefe3234-7fb2-438b-9f66-85aabdcb8969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_archive_banner
+    - node.type.oa_wiki_page
+id: node.oa_wiki_page.field_hide_archive_banner
+field_name: field_hide_archive_banner
+entity_type: node
+bundle: oa_wiki_page
+label: 'Hide archive banner'
+description: 'Enable this to never display the archive banner.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -13,6 +13,8 @@ dependencies:
     - field.field.group.iasc_space.field_description
     - field.field.group.iasc_space.field_external_link
     - field.field.group.iasc_space.field_group_banner
+    - field.field.group.iasc_space.field_hide_archive_banner
+    - field.field.group.iasc_space.field_hide_on_document_type
     - field.field.group.iasc_space.field_main_image
     - field.field.group.iasc_space.field_primary_image
     - field.field.group.iasc_space.field_responsibilities
@@ -123,6 +125,8 @@ hidden:
   field_archive_message: true
   field_banner_image: true
   field_banner_position: true
+  field_hide_archive_banner: true
+  field_hide_on_document_type: true
   field_primary_image: true
   field_short_name: true
   langcode: true
