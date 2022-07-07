@@ -10,7 +10,7 @@ field_name: field_hide_archive_banner
 entity_type: node
 bundle: oa_wiki_page
 label: 'Hide archive banner'
-description: ''
+description: 'Enable this to never display the archive banner.'
 required: false
 translatable: false
 default_value:

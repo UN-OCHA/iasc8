@@ -11,7 +11,7 @@ field_name: field_hide_on_document_type
 entity_type: group
 bundle: iasc_space
 label: 'Hide on document type'
-description: ''
+description: 'Check boxes to hide archive banner on these types of document within this group.'
 required: false
 translatable: false
 default_value: {  }
