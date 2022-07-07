@@ -848,9 +848,9 @@ function iasc_content_node_field_group_form_alter(&$form, FormStateInterface $fo
     if ($form_state->getFormObject()->getEntity()) {
       $node = $form_state->getFormObject()->getEntity();
       $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-      $activGroupListEntity = $storage->loadByEntity($node);
+      $activeGroupListEntity = $storage->loadByEntity($node);
       $gids_existing = [];
-      foreach ($activGroupListEntity as $groupContent) {
+      foreach ($activeGroupListEntity as $groupContent) {
         $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->label();
       }
 
@@ -916,8 +916,8 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
 
   // Loads all groups with a relation to the node.
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-  $activGroupListEntity = $storage->loadByEntity($node);
-  foreach ($activGroupListEntity as $groupContent) {
+  $activeGroupListEntity = $storage->loadByEntity($node);
+  foreach ($activeGroupListEntity as $groupContent) {
     $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->id();
     $gnodes_existing[$groupContent->getGroup()->id()] = $groupContent;
   }
@@ -1233,14 +1233,14 @@ function iasc_content_preprocess_node(&$vars) {
 
   $vars['is_archived'] = FALSE;
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-  $activGroupListEntity = $storage->loadByEntity($node);
+  $activeGroupListEntity = $storage->loadByEntity($node);
 
   // Not a group node.
-  if (empty($activGroupListEntity)) {
+  if (empty($activeGroupListEntity)) {
     return;
   }
 
-  foreach ($activGroupListEntity as $groupContent) {
+  foreach ($activeGroupListEntity as $groupContent) {
     $group = $groupContent->getGroup();
     if (!$group->hasField('field_archive_group')) {
       continue;
@@ -1253,7 +1253,7 @@ function iasc_content_preprocess_node(&$vars) {
   }
 
   // Check for exclude on archive.
-  foreach ($activGroupListEntity as $groupContent) {
+  foreach ($activeGroupListEntity as $groupContent) {
     $group = $groupContent->getGroup();
     if (!$group->hasField('field_hide_archive_banner')) {
       continue;
