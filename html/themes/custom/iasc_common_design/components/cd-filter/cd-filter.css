@@ -1,0 +1,14 @@
+.cd-filter__btn:hover {
+  background-color: var(--brand-primary--dark);
+}
+
+.cd-filter__btn:focus {
+  border: 2px solid var(--brand-primary--light);
+}
+
+/* Correct cd-filter when filters are in sidebar */
+@media (min-width: 1024px) {
+  [dir="ltr"] .cd-filter__form > .block {
+    padding-right: 0;
+  }
+}

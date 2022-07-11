@@ -1,0 +1,20 @@
+uuid: 8a4c011c-fab3-47d5-847b-ec081a8529f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - taxonomy
+id: group.field_hide_on_document_type
+field_name: field_hide_on_document_type
+entity_type: group
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

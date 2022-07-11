@@ -1,3 +1,11 @@
-.cd-hero__link { color: #272e67; background-color: #ff4d59; }
-.cd-hero__link:focus,
-.cd-hero__link:hover { color: #272e67; background-color: #ff715b; }
+/* Brand colours */
+.cd-hero__link {
+  color: var(--brand-primary);
+  background-color: var(--brand-highlight);
+}
+
+.cd-hero__link:hover,
+.cd-hero__link:focus {
+  color: var(--brand-primary);
+  background-color: var(--iasc-red);
+}

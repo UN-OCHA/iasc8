@@ -66,6 +66,7 @@ module:
   media_library: 0
   memcache: 0
   menu_ui: 0
+  mysql: 0
   node: 0
   node_view_permissions: 0
   ocha_integrations: 0

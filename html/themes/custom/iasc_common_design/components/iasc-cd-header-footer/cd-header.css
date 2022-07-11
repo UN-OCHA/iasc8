@@ -1,0 +1,20 @@
+.cd-global-header {
+  color: var(--cd-white);
+  background: var(--brand-primary);
+}
+
+@supports (display: grid) {
+  .cd-site-header__inner {
+    grid-template-columns: 100px 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .cd-site-header__inner {
+     grid-template-columns: 220px 1fr;
+    }
+  }
+}
+
+.cd-header {
+  margin-bottom: 20px;
+}

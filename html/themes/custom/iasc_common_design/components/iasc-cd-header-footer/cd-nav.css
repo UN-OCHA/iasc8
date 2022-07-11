@@ -1,0 +1,7 @@
+.cd-nav__btn[aria-expanded] .cd-icon--arrow-down {
+  fill: var(--brand-highlight);
+}
+
+.cd-nav__btn[aria-expanded] .cd-icon--arrow-down[aria-expanded="true"]::before {
+  background: var(--brand-highlight);
+}

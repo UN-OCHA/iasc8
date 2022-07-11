@@ -848,9 +848,9 @@ function iasc_content_node_field_group_form_alter(&$form, FormStateInterface $fo
     if ($form_state->getFormObject()->getEntity()) {
       $node = $form_state->getFormObject()->getEntity();
       $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-      $activGroupListEntity = $storage->loadByEntity($node);
+      $activeGroupListEntity = $storage->loadByEntity($node);
       $gids_existing = [];
-      foreach ($activGroupListEntity as $groupContent) {
+      foreach ($activeGroupListEntity as $groupContent) {
         $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->label();
       }
 
@@ -916,8 +916,8 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
 
   // Loads all groups with a relation to the node.
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-  $activGroupListEntity = $storage->loadByEntity($node);
-  foreach ($activGroupListEntity as $groupContent) {
+  $activeGroupListEntity = $storage->loadByEntity($node);
+  foreach ($activeGroupListEntity as $groupContent) {
     $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->id();
     $gnodes_existing[$groupContent->getGroup()->id()] = $groupContent;
   }
@@ -1224,16 +1224,23 @@ function iasc_content_preprocess_node(&$vars) {
     $vars['url'] = Url::fromUri('internal:/node/' . $node->original_nid)->toString();
   }
 
+  // Check for node override.
+  if ($node->hasField('field_hide_archive_banner')) {
+    if ($node->field_hide_archive_banner->value) {
+      return;
+    }
+  }
+
   $vars['is_archived'] = FALSE;
   $storage = \Drupal::entityTypeManager()->getStorage('group_content');
-  $activGroupListEntity = $storage->loadByEntity($node);
+  $activeGroupListEntity = $storage->loadByEntity($node);
 
   // Not a group node.
-  if (empty($activGroupListEntity)) {
+  if (empty($activeGroupListEntity)) {
     return;
   }
 
-  foreach ($activGroupListEntity as $groupContent) {
+  foreach ($activeGroupListEntity as $groupContent) {
     $group = $groupContent->getGroup();
     if (!$group->hasField('field_archive_group')) {
       continue;
@@ -1242,6 +1249,29 @@ function iasc_content_preprocess_node(&$vars) {
     // Allow it if part of at least 1 non-archived group.
     if (!$group->field_archive_group->value) {
       return;
+    }
+  }
+
+  // Check for exclude on archive.
+  foreach ($activeGroupListEntity as $groupContent) {
+    $group = $groupContent->getGroup();
+    if (!$group->hasField('field_hide_archive_banner')) {
+      continue;
+    }
+
+    // Allow it if part of at least 1 non-archived group.
+    foreach ($group->field_hide_archive_banner->referencedEntities() as $content_type) {
+      if ($content_type->id() == $node->bundle()) {
+        if (!$group->hasField('field_hide_on_document_type')) {
+          return;
+        }
+
+        foreach ($group->field_hide_on_document_type->referencedEntities() as $doc_type) {
+          if ($node->field_document_type->entity->id() == $doc_type->id()) {
+            return;
+          }
+        }
+      }
     }
   }
 

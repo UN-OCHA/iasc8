@@ -40,7 +40,7 @@
         "drupal/core-composer-scaffold": "^9.3.8",
         "drupal/core-project-message": "^9.3.8",
         "drupal/core-recommended": "^9.3.8",
-        "drupal/ctools": "^3.7",
+        "drupal/ctools": "^4.0",
         "drupal/date_recur": "^3.0",
         "drupal/date_recur_modular": "^3.0",
         "drupal/diff": "^1.0@RC",
@@ -94,7 +94,7 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "phpoffice/phpspreadsheet": "^1.16",
         "symfony/flex": "^1.17",
-        "unocha/common_design": "^5.0.0",
+        "unocha/common_design": "^7.2",
         "unocha/file_checker": "dev-8.x-1.x",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_security": "^1.0",
@@ -142,17 +142,6 @@
             "symfony/flex": true,
             "wikimedia/composer-merge-plugin": true
         }
-    },
-    "scripts": {
-        "sass-prepare": "cd html/themes/custom/iasc_common_design && npm install",
-        "sass-build": "cd html/themes/custom/iasc_common_design && ./node_modules/.bin/sass sass:build",
-        "sass-cleanup": "cd html/themes/custom/iasc_common_design && rm -rf ./node_modules",
-        "sass": [
-            "@sass-prepare",
-            "@sass-build",
-            "@sass-cleanup"
-        ]
-
     },
     "extra": {
         "drush": {

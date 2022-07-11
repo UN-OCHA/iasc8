@@ -1,0 +1,20 @@
+uuid: de36ee03-e508-44e5-914e-a6d12a191433
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - node
+id: group.field_hide_archive_banner
+field_name: field_hide_archive_banner
+entity_type: group
+type: entity_reference
+settings:
+  target_type: node_type
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

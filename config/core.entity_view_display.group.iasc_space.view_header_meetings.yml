@@ -14,6 +14,8 @@ dependencies:
     - field.field.group.iasc_space.field_description
     - field.field.group.iasc_space.field_external_link
     - field.field.group.iasc_space.field_group_banner
+    - field.field.group.iasc_space.field_hide_archive_banner
+    - field.field.group.iasc_space.field_hide_on_document_type
     - field.field.group.iasc_space.field_main_image
     - field.field.group.iasc_space.field_primary_image
     - field.field.group.iasc_space.field_responsibilities
@@ -46,6 +48,8 @@ hidden:
   field_description: true
   field_external_link: true
   field_group_banner: true
+  field_hide_archive_banner: true
+  field_hide_on_document_type: true
   field_main_image: true
   field_primary_image: true
   field_responsibilities: true

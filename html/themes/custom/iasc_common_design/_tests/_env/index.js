@@ -4,7 +4,7 @@
 //
 const environments = {
   'local': {
-    baseUrl: 'http://iasc.docksal',
+    baseUrl: 'http://iasc.test',
     testTimeout: 10000,
   },
   'travis': {
