@@ -113,7 +113,12 @@
       {% endset %}
       {{ contentBody|striptags }}
 
-      <div class="cd-date-time">{{ node.field_oa_date|un_daterange_times(true, true) }}</div>
+      <div class="cd-date-time">
+        {{ event_time.output }}
+        <span class="cd-teaser__date__time-user">
+          ({{ node.field_oa_date|un_daterange_named('local_times') }})
+        </span>
+      </div>
     </div>
 
   </div>
