@@ -330,7 +330,7 @@ class GroupMeetings extends ControllerBase {
    */
   protected function getPastReccurrences(DateRecurItem $item, int $end): array {
     $until = (new \DateTime('@' . $end));
-    return $item->getHelper()->getOccurrences(NULL, $until);
+    return $item->getHelper()->getOccurrences(NULL, $until, 99);
   }
 
   /**
@@ -346,7 +346,7 @@ class GroupMeetings extends ControllerBase {
    */
   protected function getFutureReccurrences(DateRecurItem $item, int $start): array {
     $from = (new \DateTime('@' . $start));
-    return $item->getHelper()->getOccurrences($from, NULL);
+    return $item->getHelper()->getOccurrences($from, NULL, 99);
   }
 
 }
