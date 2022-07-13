@@ -43,27 +43,6 @@ class GroupMeetings extends ControllerBase {
   protected $pagerManager;
 
   /**
-   * Ical controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\IcalController
-   */
-  protected $icalController;
-
-  /**
-   * Reliefweb controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\ReliefwebController
-   */
-  protected $reliefwebController;
-
-  /**
-   * Hdx controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\HdxController
-   */
-  protected $hdxController;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(EntityTypeManager $entity_type_manager, PagerManagerInterface $pager_manager) {
@@ -132,6 +111,7 @@ class GroupMeetings extends ControllerBase {
     $query->addCondition('field_iasc_audience', $group->id());
     $query->addCondition('type', 'oa_event');
     $query->addCondition('all_dates', $future_start->getTimestamp(), '>=');
+    $query->range(0, 99);
     $query->sort('all_dates', 'ASC');
     $query->sort('changed', 'ASC');
 
@@ -234,6 +214,7 @@ class GroupMeetings extends ControllerBase {
       $query->addCondition('field_iasc_audience', $group->id());
       $query->addCondition('type', 'oa_event');
       $query->addCondition('all_dates', $past_end->getTimestamp(), '<');
+      $query->range(0, 99);
       $query->sort('all_dates', 'DESC');
       $query->sort('changed', 'DESC');
 
@@ -349,7 +330,7 @@ class GroupMeetings extends ControllerBase {
    */
   protected function getPastReccurrences(DateRecurItem $item, int $end): array {
     $until = (new \DateTime('@' . $end));
-    return $item->getHelper()->getOccurrences(NULL, $until);
+    return $item->getHelper()->getOccurrences(NULL, $until, 99);
   }
 
   /**
@@ -365,7 +346,7 @@ class GroupMeetings extends ControllerBase {
    */
   protected function getFutureReccurrences(DateRecurItem $item, int $start): array {
     $from = (new \DateTime('@' . $start));
-    return $item->getHelper()->getOccurrences($from, NULL);
+    return $item->getHelper()->getOccurrences($from, NULL, 99);
   }
 
 }

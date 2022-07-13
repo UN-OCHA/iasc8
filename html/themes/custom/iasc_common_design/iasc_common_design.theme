@@ -5,8 +5,8 @@
  * Template overrides, preprocess, and alter hooks for the OCHA Basic theme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
+use RRule\RRule;
 
 /**
  * Implements template_preprocess_field().
@@ -17,12 +17,55 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
       return;
     }
 
+    // Assume it ends.
+    $variables['is_infinite'] = FALSE;
+
+    // Calculate first/original date.
     $min_date = strtotime($variables['element']['#items'][0]->value);
     $max_date = strtotime($variables['element']['#items'][0]->end_value);
 
+    // Expose it to twig.
+    $variables['first_date'] = [
+      'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
+      'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
+      'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
+    ];
+
     foreach ($variables['element']['#items'] as $item) {
-      $min_date = min($min_date, strtotime($item->value));
-      $max_date = max($max_date, strtotime($item->end_value));
+      if (get_class($item) == 'Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem') {
+        /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item */
+
+        // Infinite?
+        $variables['is_infinite'] = $variables['is_infinite'] || $item->getHelper()->isInfinite();
+
+        // Recurring.
+        if ($item->isRecurring()) {
+          // Generate all occurences.
+          foreach ($item->getHelper()->getOccurrences(NULL, NULL, 99) as $date) {
+            $min_date = min($min_date, $date->getStart()->getTimestamp());
+            $max_date = max($max_date, $date->getEnd()->getTimestamp());
+          }
+
+          // Translate to text.
+          $rule = $item->rrule;
+          if ($rule) {
+            $parser = new RRule($rule);
+            $variables['human_readable'] = $parser->humanReadable([
+              'date_formatter' => function ($date) {
+                return $date->format('d.m.Y');
+              },
+            ]);
+          }
+        }
+        else {
+          $min_date = min($min_date, strtotime($item->value));
+          $max_date = max($max_date, strtotime($item->end_value));
+        }
+      }
+      else {
+        $min_date = min($min_date, strtotime($item->value));
+        $max_date = max($max_date, strtotime($item->end_value));
+      }
     }
 
     $variables['min_date'] = [
