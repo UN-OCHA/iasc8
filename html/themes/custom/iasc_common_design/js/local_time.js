@@ -28,7 +28,7 @@
       }
       hours = hours % 12;
       hours = hours ? hours : 12;
-      span.innerHTML += ' — ' + hours.toString().padStart(2, '0') + '.' + end.getMinutes().toString().padStart(2, '0');
+      span.innerHTML += ' — ' + hours.toString().padStart(2, '0') + '.' + end.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
       span.innerHTML += ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')';
     });
   }

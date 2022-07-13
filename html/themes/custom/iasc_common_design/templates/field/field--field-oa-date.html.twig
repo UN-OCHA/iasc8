@@ -60,5 +60,15 @@
     <div class="date__human_readable">
       {{ human_readable }}
     </div>
+    {% if next_5|length > 0 %}
+      <div class="next-5">
+        <h3>Next upcoming dates</h3>
+        <ul>
+          {% for next_event in next_5 %}
+            <li>{{ next_event.day }} {{ next_event.month }} {{ next_event.year }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
   {% endif %}
 </div>
