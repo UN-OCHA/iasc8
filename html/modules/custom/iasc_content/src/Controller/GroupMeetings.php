@@ -43,27 +43,6 @@ class GroupMeetings extends ControllerBase {
   protected $pagerManager;
 
   /**
-   * Ical controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\IcalController
-   */
-  protected $icalController;
-
-  /**
-   * Reliefweb controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\ReliefwebController
-   */
-  protected $reliefwebController;
-
-  /**
-   * Hdx controller.
-   *
-   * @var \Drupal\hr_paragraphs\Controller\HdxController
-   */
-  protected $hdxController;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(EntityTypeManager $entity_type_manager, PagerManagerInterface $pager_manager) {
