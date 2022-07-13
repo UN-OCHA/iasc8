@@ -21,8 +21,36 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
     $max_date = strtotime($variables['element']['#items'][0]->end_value);
 
     foreach ($variables['element']['#items'] as $item) {
-      $min_date = min($min_date, strtotime($item->value));
-      $max_date = max($max_date, strtotime($item->end_value));
+      if (get_class($item) == 'Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem') {
+        /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item */
+
+        if ($item->isRecurring()) {
+          // Generate all occurences.
+          foreach ($item->getHelper()->generateOccurrences() as $date) {
+            $min_date = min($min_date, $date->getStart()->getTimestamp());
+            $max_date = max($max_date, $date->getEnd()->getTimestamp());
+          }
+
+          // Translate to text.
+          $rule = $item->rrule;
+          if ($rule) {
+            $parser = new \RRule\RRule($rule);
+            $variables['human_readable'] = $parser->humanReadable([
+              'date_formatter' => function ($date) {
+                return $date->format('d.m.Y');
+              },
+            ]);
+          }
+        }
+        else {
+          $min_date = min($min_date, strtotime($item->value));
+          $max_date = max($max_date, strtotime($item->end_value));
+        }
+      }
+      else {
+        $min_date = min($min_date, strtotime($item->value));
+        $max_date = max($max_date, strtotime($item->end_value));
+      }
     }
 
     $variables['min_date'] = [
