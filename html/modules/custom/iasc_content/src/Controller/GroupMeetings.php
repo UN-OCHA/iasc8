@@ -111,6 +111,7 @@ class GroupMeetings extends ControllerBase {
     $query->addCondition('field_iasc_audience', $group->id());
     $query->addCondition('type', 'oa_event');
     $query->addCondition('all_dates', $future_start->getTimestamp(), '>=');
+    $query->range(0,99);
     $query->sort('all_dates', 'ASC');
     $query->sort('changed', 'ASC');
 
@@ -213,6 +214,7 @@ class GroupMeetings extends ControllerBase {
       $query->addCondition('field_iasc_audience', $group->id());
       $query->addCondition('type', 'oa_event');
       $query->addCondition('all_dates', $past_end->getTimestamp(), '<');
+      $query->range(0,99);
       $query->sort('all_dates', 'DESC');
       $query->sort('changed', 'DESC');
 
