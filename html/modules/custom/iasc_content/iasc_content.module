@@ -1329,7 +1329,7 @@ function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
   $meetings = [];
   foreach ($events as $event) {
     foreach ($event->field_oa_date as $date_item) {
-      foreach ($date_item->getHelper()->getOccurrences(new \DateTime(), NULL) as $date) {
+      foreach ($date_item->getHelper()->getOccurrences(new \DateTime(), NULL, 99) as $date) {
         if ($date->getStart()->getTimestamp() >= time()) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
@@ -1421,7 +1421,7 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
   $meetings = [];
   foreach ($events as $event) {
     foreach ($event->field_oa_date as $date_item) {
-      foreach ($date_item->getHelper()->getOccurrences(NULL, new \DateTime()) as $date) {
+      foreach ($date_item->getHelper()->getOccurrences(NULL, new \DateTime(), 99) as $date) {
         if ($date->getStart()->getTimestamp() < time()) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
