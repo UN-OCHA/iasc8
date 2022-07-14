@@ -101,7 +101,7 @@
     {{ title_prefix }}
     {% if label and not page %}
       <h3{{ title_attributes.addClass('cd-teaser__title') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}?ts={{ event_time.timestamp_start }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
@@ -113,7 +113,12 @@
       {% endset %}
       {{ contentBody|striptags }}
 
-      <div class="cd-date-time">{{ node.field_oa_date|un_daterange_times(true, true) }}</div>
+      <div class="cd-date-time">
+        {{ event_time.output }}
+        <span class="cd-teaser__date__time-user">
+          ({{ node.field_oa_date|un_daterange_named('local_times') }})
+        </span>
+      </div>
     </div>
 
   </div>

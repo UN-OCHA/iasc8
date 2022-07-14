@@ -29,7 +29,15 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
       'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
       'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
       'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
+      'timestamp' => $variables['element']['#items'][0]->value,
     ];
+
+    // Expose next date.
+    $now = strtotime('now');
+    $variables['next_date'] = NULL;
+
+    // Expose next 5 occurrences.
+    $variables['next_5'] = [];
 
     foreach ($variables['element']['#items'] as $item) {
       if (get_class($item) == 'Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem') {
@@ -44,6 +52,30 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
           foreach ($item->getHelper()->getOccurrences(NULL, NULL, 99) as $date) {
             $min_date = min($min_date, $date->getStart()->getTimestamp());
             $max_date = max($max_date, $date->getEnd()->getTimestamp());
+
+            if ($date->getStart()->getTimestamp() > $now) {
+              if (empty($variables['next_date']) || $date->getStart()->getTimestamp() < $variables['next_date']['timestamp']) {
+                // Cache till next date.
+                $variables['element']['#cache']['max-age'] = $date->getStart()->getTimestamp() - $now;
+
+                // Set next date.
+                $variables['next_date'] = [
+                  'day' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'd'),
+                  'month' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'M'),
+                  'year' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'Y'),
+                  'timestamp' => $date->getStart()->getTimestamp(),
+                ];
+
+              }
+              if (count($variables['next_5']) < 5) {
+                $variables['next_5'][] = [
+                  'day' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'd'),
+                  'month' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'M'),
+                  'year' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'Y'),
+                  'timestamp' => $date->getStart()->getTimestamp(),
+                ];
+              }
+            }
           }
 
           // Translate to text.
@@ -51,6 +83,10 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
           if ($rule) {
             $parser = new RRule($rule);
             $variables['human_readable'] = $parser->humanReadable([
+              'explicit_inifite' => FALSE,
+              'dtstart' => FALSE,
+              'include_start' => FALSE,
+              'include_until' => TRUE,
               'date_formatter' => function ($date) {
                 return $date->format('d.m.Y');
               },
@@ -78,6 +114,10 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
       'month' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'M'),
       'year' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'Y'),
     ];
+
+    if (empty($variables['next_date'])) {
+      $variables['next_date'] = $variables['min_date'];
+    }
   }
 }
 
@@ -141,29 +181,39 @@ function iasc_common_design_preprocess_node(&$variables) {
         unset($variables['content']['field_additional_locations']);
       }
     }
+    $timezone = new \DateTimeZone($node->field_oa_date->first()->timezone);
+    $start = new \DateTime($node->field_oa_date->first()->value, $timezone);
+    if ($start->getOffset() > 0) {
+      $start->add(new \DateInterval('PT' . $start->getOffset() . 'S'));
+    }
+    else {
+      $start->sub(new \DateInterval('PT' . abs($start->getOffset()) . 'S'));
+    }
+
+    $end = new \DateTime($node->field_oa_date->first()->end_value, $timezone);
+    if ($end->getOffset() > 0) {
+      $end->add(new \DateInterval('PT' . $end->getOffset() . 'S'));
+    }
+    else {
+      $end->sub(new \DateInterval('PT' . abs($end->getOffset()) . 'S'));
+    }
 
     $variables['event_time'] = [
-      'start' => \Drupal::service('date.formatter')
-        ->format(strtotime($node->field_oa_date->first()->value), 'custom', 'h.i a'),
-      'end' => \Drupal::service('date.formatter')
-        ->format(strtotime($node->field_oa_date->first()->end_value), 'custom', 'h.i a'),
+      'start' => $start->format('h.i a'),
+      'end' => $end->format('h.i a'),
       'all_day' => FALSE,
       'timezone' => $node->field_oa_date->first()->timezone,
+      'timestamp_start' => strtotime($node->field_oa_date->first()->value),
+      'timestamp_end' => strtotime($node->field_oa_date->first()->end_value),
     ];
 
     if ($variables['event_time']['start'] == $variables['event_time']['end']) {
       $variables['event_time']['all_day'] = TRUE;
       $variables['event_time']['output'] = '(All day)';
-      if (isset($variables['content']['field_oa_date'][0]['#date']['start_date'])) {
-        $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'])[0];
-        $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'])[0];
-      }
     }
     elseif ($variables['event_time']['start'] == '00:00' && $variables['event_time']['end'] == '23:59') {
       $variables['event_time']['all_day'] = TRUE;
       $variables['event_time']['output'] = '(All day)';
-      $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['start_date']['#text'])[0];
-      $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'] = explode(' - ', $variables['content']['field_oa_date'][0]['#date']['end_date']['#text'])[0];
     }
     else {
       $variables['event_time']['output'] = $variables['event_time']['start'] . ' — ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';

@@ -82,6 +82,7 @@
   ]
 %}
 {{ attach_library('common_design/cd-alert') }}
+{{ attach_library('iasc_common_design/local-time') }}
 {% set dialIn = node.field_dial_in_meeting.0.value %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -140,20 +141,15 @@
           {{ content.field_oa_date }}
 
           <div class="cd-teaser__date__time-only">
-            {{ node.field_oa_date|un_daterange_times(true, true) }}
-            {% if logged_in and not un_is_all_day(node.field_oa_date) %}
-              {% if datetime|date('e') != node.field_oa_date[0].timezone %}
-                <span class="cd-teaser__date__time-user">
-                  ({{ node.field_oa_date|un_daterange_named('local_times') }})
-                </span>
-              {% endif %}
-            {% endif %}
+            {{ event_time.output }}
+            <span class="cd-teaser__date__time-user" data-timestamp-start="{{ event_time.timestamp_start }}" data-timestamp-end="{{ event_time.timestamp_end }}">
+            </span>
           </div>
-
-          {% if content.field_city|render %}
-            <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
-          {% endif %}
         </div>
+
+        {% if content.field_city|render %}
+          <p><strong>{{ content.field_city[0]['#context']['value'] }}</strong></p>
+        {% endif %}
 
         {{ content|without('field_oa_date', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_additional_locations', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes', 'field_dial_in_meeting', 'field_info_private') }}
         {{ content.field_content }}
