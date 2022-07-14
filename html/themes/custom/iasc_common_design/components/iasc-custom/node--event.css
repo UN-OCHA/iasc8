@@ -80,6 +80,10 @@
   list-style-position: inside;
 }
 
+.cd-date-time {
+  font-size: 1rem;
+}
+
 @media (min-width: 576px) {
   .date__human_readable {
     flex: 0 1 25%;
