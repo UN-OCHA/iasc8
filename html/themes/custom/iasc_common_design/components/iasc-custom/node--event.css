@@ -20,6 +20,14 @@
   margin-top: 0;
 }
 
+.node--type-oa-event.node--view-mode-full .cd-teaser__date {
+  min-height: 80px;
+  /* height of calendar icon, helps clear elements below.*/
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .node--type-oa-event.node--view-mode-full .cd-date {
   margin-right: 1rem;
 }
@@ -40,4 +48,55 @@
 
 .cd-grid--2-col .node--type-oa-event.node--view-mode-teaser.cd-teaser {
   border-bottom: 0 none;
+}
+
+.cd-teaser__date .next-5 {
+  clear: both;
+  padding-top: 1rem;
+}
+
+.cd-teaser__date .next-5 h3 {
+  margin: 0;
+}
+
+.cd-teaser__date .next-5 {
+  padding-top: 2rem;
+  order: 4;
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+.date__human_readable {
+  flex: 1 0 25%;
+}
+
+.cd-teaser__date__time-only {
+  flex: 1 0 100%;
+  padding: 1rem 0 0;
+}
+
+.cd-teaser__date .next-5 ul {
+  padding: 0;
+  list-style-position: inside;
+}
+
+@media (min-width: 576px) {
+  .date__human_readable {
+    flex: 0 1 25%;
+    border-right: 1px dotted var(--iasc-secondary);
+    padding-right: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  .cd-teaser__date .next-5 {
+    padding-top: 2rem;
+    order: 4;
+    flex: 1 0 100%;
+    width: 100%;
+  }
+
+  .cd-teaser__date__time-only {
+    flex: 1 0 25%;
+    padding: 0;
+  }
 }
