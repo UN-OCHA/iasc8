@@ -57,9 +57,11 @@
         {{ next_date.year }}
       </span>
     </div>
-    <div class="date__human_readable">
-      {{ human_readable }}
-    </div>
+    {% if human_readable %}
+      <div class="date__human_readable">
+        {{ human_readable }}
+      </div>
+    {% endif %}
     {% if next_5|length > 0 %}
       <div class="next-5">
         <h3>Next upcoming dates</h3>
