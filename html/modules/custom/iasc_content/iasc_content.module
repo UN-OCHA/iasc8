@@ -1515,3 +1515,100 @@ function iasc_content_migrate_meetings_paragraphs() {
     }
   }
 }
+
+/**
+ * Format time according the UN standards.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $date
+ *   Date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_format_time($date, $timezone = 'UTC') {
+  if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $date = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($date);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  $ampm = 'a.m.';
+  if ($date->format('a', $options) === 'pm') {
+    $ampm = 'p.m.';
+  }
+
+  // Hide zero minutes.
+  if ($date->format('i', $options) === '00') {
+    return $date->format('g', $options) . ' ' . $ampm;
+  }
+  else {
+    return $date->format('g.i', $options) . ' ' . $ampm;
+  }
+}
+
+/**
+ * Format date according the UN standards.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $date
+ *   Date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_format_date($date, $timezone = 'UTC') {
+  if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $date = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($date);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  return $date->format('d.m.Y', $options);
+}
+
+/**
+ * Is multiple days.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $start
+ *   Start date.
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $end
+ *   End date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_is_multiple_days($start, $end, $timezone = 'UTC') {
+  if (get_class($start) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $start = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($start);
+  }
+  if (get_class($end) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $end = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($end);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  return $start->format('d.m.Y', $options) != $end->format('d.m.Y', $options);
+}
+
+/**
+ * Get first upcoming occurrence of a date.
+ */
+function iasc_content_first_upcoming_as_daterange(\Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item) {
+  if (!$item->isRecurring()) {
+    return $item->getHelper()->getOccurrences()[0];
+  }
+
+  // Generate all occurences.
+  $today = new \DateTime('now');
+  $today->setTime(0, 0, 0, 0);
+  foreach ($item->getHelper()->getOccurrences($today, NULL, 99) as $date) {
+    if ($date->getStart()->getTimestamp() >= $today->getTimestamp()) {
+      return $date;
+    }
+  }
+
+  // Return first one, if no future one is found.
+  return $item->getHelper()->getOccurrences()[0];
+}

@@ -91,7 +91,7 @@ class GroupMeetings extends ControllerBase {
     $past_end->add(new \DateInterval('P' . $months_per_page . 'M'));
 
     // Calculate future dates.
-    $future_start = new \DateTime();
+    $future_start = new \DateTime('now');
     $future_start->setTime(0, 0, 0);
     if ($future_offset > 0) {
       $future_start->add(new \DateInterval('P' . $future_offset * $months_per_page . 'M'));
@@ -345,7 +345,7 @@ class GroupMeetings extends ControllerBase {
    *   A list of occurrences.
    */
   protected function getPastReccurrences(DateRecurItem $item, int $end): array {
-    $until = (new \DateTime('@' . $end));
+    $until = new \DateTime('@' . $end);
     return $item->getHelper()->getOccurrences(NULL, $until, 99);
   }
 
@@ -361,7 +361,7 @@ class GroupMeetings extends ControllerBase {
    *   A list of occurrences.
    */
   protected function getFutureReccurrences(DateRecurItem $item, int $start): array {
-    $from = (new \DateTime('@' . $start));
+    $from = new \DateTime('@' . $start);
     return $item->getHelper()->getOccurrences($from, NULL, 99);
   }
 

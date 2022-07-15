@@ -10,6 +10,9 @@
       let start = new Date(parseInt(span.getAttribute('data-timestamp-start'), 10) * 1000);
       let end = new Date(parseInt(span.getAttribute('data-timestamp-end'), 10) * 1000);
       let allDay = span.getAttribute('data-all-day');
+      if (allDay) {
+        return;
+      }
 
       span.innerHTML = '<br>';
 
@@ -20,35 +23,31 @@
         span.innerHTML += day_start + ' — ' + day_end + ', ';
       }
 
-      if (allDay) {
-        let hours = start.getHours();
-        let ampm = 'am';
-        if (hours >= 12 ) {
-          ampm = 'pm';
-        }
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        span.innerHTML += 'starting at ' + hours.toString().padStart(2, '0') + '.' + start.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+      let hours = start.getHours();
+      let ampm = 'a.m.';
+      if (hours >= 12 ) {
+        ampm = 'p.m.';
       }
-      else {
-        let hours = start.getHours();
-        let ampm = 'am';
-        if (hours >= 12 ) {
-          ampm = 'pm';
-        }
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        span.innerHTML += hours.toString().padStart(2, '0') + '.' + start.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      span.innerHTML += hours.toString();
+      if (start.getMinutes() > 0) {
+        span.innerHTML += '.' + start.getMinutes().toString().padStart(2, '0');
+      }
+      span.innerHTML += ' ' + ampm;
 
-        hours = end.getHours();
-        ampm = 'am';
-        if (hours >= 12 ) {
-          ampm = 'pm';
-        }
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        span.innerHTML += ' — ' + hours.toString().padStart(2, '0') + '.' + end.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+      hours = end.getHours();
+      ampm = 'a.m.';
+      if (hours >= 12 ) {
+        ampm = 'p.m.';
       }
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      span.innerHTML += ' — ' + hours.toString();
+      if (start.getMinutes() > 0) {
+        span.innerHTML += '.' + start.getMinutes().toString().padStart(2, '0');
+      }
+      span.innerHTML += ' ' + ampm;
 
       if (Intl.DateTimeFormat().resolvedOptions().timeZone) {
         span.innerHTML += ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')';
