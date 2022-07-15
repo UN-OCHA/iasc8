@@ -80,7 +80,9 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
                   'timestamp' => $date->getStart()->getTimestamp(),
                 ];
               }
-              elseif (count($variables['next_5']) < 5) {
+
+              // Add first to next 5 as well, date might be changed by javascript.
+              if (count($variables['next_5']) < 5) {
                 $variables['next_5'][] = [
                   'day' => $date->getStart()->format('d'),
                   'month' => $date->getStart()->format('M'),
