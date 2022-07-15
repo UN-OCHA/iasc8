@@ -138,11 +138,19 @@ class GroupMeetings extends ControllerBase {
               $new_event = clone $event;
               $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
               $new_event->original_nid = $event->id();
+
+              // Needed for timezone offset.
+              $new_start = $date->getStart()->getTimestamp();
+              $new_start = new \DateTime('@' . $new_start);
+              $new_end = $date->getEnd()->getTimestamp();
+              $new_end = new \DateTime('@' . $new_end);
+
               $new_event->set('field_oa_date', [
-                'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-                'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+                'value' => $new_start->format('Y-m-d\TH:i:s'),
+                'end_value' => $new_end->format('Y-m-d\TH:i:s'),
                 'timezone' => $date->getStart()->getTimezone()->getName(),
               ]);
+
               $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
             }
             elseif ($date->getStart()->getTimestamp() > $future_end->getTimestamp()) {
@@ -241,11 +249,19 @@ class GroupMeetings extends ControllerBase {
                 $new_event = clone $event;
                 $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
                 $new_event->original_nid = $event->id();
+
+                // Needed for timezone offset.
+                $new_start = $date->getStart()->getTimestamp();
+                $new_start = new \DateTime('@' . $new_start);
+                $new_end = $date->getEnd()->getTimestamp();
+                $new_end = new \DateTime('@' . $new_end);
+
                 $new_event->set('field_oa_date', [
-                  'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-                  'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+                  'value' => $new_start->format('Y-m-d\TH:i:s'),
+                  'end_value' => $new_end->format('Y-m-d\TH:i:s'),
                   'timezone' => $date->getStart()->getTimezone()->getName(),
                 ]);
+
                 $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
               }
               elseif ($date->getStart()->getTimestamp() < $past_start->getTimestamp()) {

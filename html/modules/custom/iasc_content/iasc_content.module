@@ -1329,16 +1329,25 @@ function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
   $meetings = [];
   foreach ($events as $event) {
     foreach ($event->field_oa_date as $date_item) {
+      /** @var \Drupal\date_recur\DateRange $date */
       foreach ($date_item->getHelper()->getOccurrences(new \DateTime(), NULL, 99) as $date) {
         if ($date->getStart()->getTimestamp() >= time()) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
           $new_event->original_nid = $event->id();
+
+          // Needed for timezone offset.
+          $new_start = $date->getStart()->getTimestamp();
+          $new_start = new \DateTime('@' . $new_start);
+          $new_end = $date->getEnd()->getTimestamp();
+          $new_end = new \DateTime('@' . $new_end);
+
           $new_event->set('field_oa_date', [
-            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'value' => $new_start->format('Y-m-d\TH:i:s'),
+            'end_value' => $new_end->format('Y-m-d\TH:i:s'),
             'timezone' => $date->getStart()->getTimezone()->getName(),
           ]);
+
           $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
         }
       }
@@ -1426,11 +1435,19 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
           $new_event->original_nid = $event->id();
+
+          // Needed for timezone offset.
+          $new_start = $date->getStart()->getTimestamp();
+          $new_start = new \DateTime('@' . $new_start);
+          $new_end = $date->getEnd()->getTimestamp();
+          $new_end = new \DateTime('@' . $new_end);
+
           $new_event->set('field_oa_date', [
-            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'value' => $new_start->format('Y-m-d\TH:i:s'),
+            'end_value' => $new_end->format('Y-m-d\TH:i:s'),
             'timezone' => $date->getStart()->getTimezone()->getName(),
           ]);
+
           $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
         }
       }

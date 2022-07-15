@@ -9,26 +9,47 @@
     spans.forEach(function (span) {
       let start = new Date(parseInt(span.getAttribute('data-timestamp-start'), 10) * 1000);
       let end = new Date(parseInt(span.getAttribute('data-timestamp-end'), 10) * 1000);
+      let allDay = span.getAttribute('data-all-day');
 
       span.innerHTML = '<br>';
 
-      let hours = start.getHours();
-      let ampm = 'am';
-      if (hours >= 12 ) {
-        ampm = 'pm';
+      // Check if we have multiple days.
+      let day_start = start.getDate().toString().padStart(2, '0') + '.' + (start.getMonth() + 1).toString().padStart(2, '0') + '.' + start.getFullYear().toString();
+      let day_end = end.getDate().toString().padStart(2, '0') + '.' + (end.getMonth() + 1).toString().padStart(2, '0') + '.' + end.getFullYear().toString();
+      if (day_start != day_end) {
+        span.innerHTML += day_start + ' — ' + day_end + ', ';
       }
-      hours = hours % 12;
-      hours = hours ? hours : 12;
-      span.innerHTML += hours.toString().padStart(2, '0') + '.' + start.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
 
-      hours = end.getHours();
-      ampm = 'am';
-      if (hours >= 12 ) {
-        ampm = 'pm';
+      if (allDay) {
+        let hours = start.getHours();
+        let ampm = 'am';
+        if (hours >= 12 ) {
+          ampm = 'pm';
+        }
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        span.innerHTML += 'starting at ' + hours.toString().padStart(2, '0') + '.' + start.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
       }
-      hours = hours % 12;
-      hours = hours ? hours : 12;
-      span.innerHTML += ' — ' + hours.toString().padStart(2, '0') + '.' + end.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+      else {
+        let hours = start.getHours();
+        let ampm = 'am';
+        if (hours >= 12 ) {
+          ampm = 'pm';
+        }
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        span.innerHTML += hours.toString().padStart(2, '0') + '.' + start.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+
+        hours = end.getHours();
+        ampm = 'am';
+        if (hours >= 12 ) {
+          ampm = 'pm';
+        }
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        span.innerHTML += ' — ' + hours.toString().padStart(2, '0') + '.' + end.getMinutes().toString().padStart(2, '0') + ' ' + ampm;
+      }
+
       if (Intl.DateTimeFormat().resolvedOptions().timeZone) {
         span.innerHTML += ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')';
       }
