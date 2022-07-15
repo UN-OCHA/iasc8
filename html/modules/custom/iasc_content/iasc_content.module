@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -13,6 +14,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\Url;
+use Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
@@ -1526,7 +1528,7 @@ function iasc_content_migrate_meetings_paragraphs() {
  */
 function iasc_content_format_time($date, $timezone = 'UTC') {
   if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
-    $date = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($date);
+    $date = DrupalDateTime::createFromDateTime($date);
   }
 
   $options = [
@@ -1557,7 +1559,7 @@ function iasc_content_format_time($date, $timezone = 'UTC') {
  */
 function iasc_content_format_date($date, $timezone = 'UTC') {
   if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
-    $date = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($date);
+    $date = DrupalDateTime::createFromDateTime($date);
   }
 
   $options = [
@@ -1579,10 +1581,10 @@ function iasc_content_format_date($date, $timezone = 'UTC') {
  */
 function iasc_content_is_multiple_days($start, $end, $timezone = 'UTC') {
   if (get_class($start) != 'Drupal\Core\Datetime\DrupalDateTime') {
-    $start = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($start);
+    $start = DrupalDateTime::createFromDateTime($start);
   }
   if (get_class($end) != 'Drupal\Core\Datetime\DrupalDateTime') {
-    $end = \Drupal\Core\Datetime\DrupalDateTime::createFromDateTime($end);
+    $end = DrupalDateTime::createFromDateTime($end);
   }
 
   $options = [
@@ -1595,7 +1597,7 @@ function iasc_content_is_multiple_days($start, $end, $timezone = 'UTC') {
 /**
  * Get first upcoming occurrence of a date.
  */
-function iasc_content_first_upcoming_as_daterange(\Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $item) {
+function iasc_content_first_upcoming_as_daterange(DateRecurItem $item) {
   if (!$item->isRecurring()) {
     return $item->getHelper()->getOccurrences()[0];
   }
