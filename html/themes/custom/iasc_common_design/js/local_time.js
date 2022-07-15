@@ -44,8 +44,8 @@
       hours = hours % 12;
       hours = hours ? hours : 12;
       span.innerHTML += ' — ' + hours.toString();
-      if (start.getMinutes() > 0) {
-        span.innerHTML += '.' + start.getMinutes().toString().padStart(2, '0');
+      if (end.getMinutes() > 0) {
+        span.innerHTML += '.' + end.getMinutes().toString().padStart(2, '0');
       }
       span.innerHTML += ' ' + ampm;
 
