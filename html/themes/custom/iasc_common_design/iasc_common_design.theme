@@ -20,20 +20,30 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
     // Assume it ends.
     $variables['is_infinite'] = FALSE;
 
+    /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date_item */
+    $date_item = $variables['element']['#items'][0];
+
+    // Entered timezone.
+    $timezone = $date_item->timezone;
+    $format_options = ['timezone' => $timezone];
+
     // Calculate first/original date.
-    $min_date = strtotime($variables['element']['#items'][0]->value);
-    $max_date = strtotime($variables['element']['#items'][0]->end_value);
+    $min_date = $date_item->start_date;
+    $max_date = $date_item->end_date;
 
     // Expose it to twig.
     $variables['first_date'] = [
-      'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
-      'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
-      'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
-      'timestamp' => $variables['element']['#items'][0]->value,
+      'day' => $min_date->format('d', $format_options),
+      'month' => $min_date->format('M', $format_options),
+      'year' => $min_date->format('Y', $format_options),
+      'timestamp' => $min_date->getTimestamp(),
     ];
 
     // Expose next date.
-    $now = strtotime('now');
+    $today = new \DateTime('now');
+    $today->setTime(0, 0, 0, 0);
+
+    // Track next date.
     $variables['next_date'] = NULL;
 
     // Expose next 5 occurrences.
@@ -50,28 +60,31 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
         if ($item->isRecurring()) {
           // Generate all occurences.
           foreach ($item->getHelper()->getOccurrences(NULL, NULL, 99) as $date) {
-            $min_date = min($min_date, $date->getStart()->getTimestamp());
-            $max_date = max($max_date, $date->getEnd()->getTimestamp());
+            if ($date->getStart()->getTimestamp() < $min_date->getTimestamp()) {
+              $min_date = $date->getStart();
+            }
+            if ($date->getEnd()->getTimestamp() > $max_date->getTimestamp()) {
+              $max_date = $date->getEnd();
+            }
 
-            if ($date->getStart()->getTimestamp() > $now) {
+            if ($date->getStart()->getTimestamp() >= $today->getTimestamp()) {
               if (empty($variables['next_date']) || $date->getStart()->getTimestamp() < $variables['next_date']['timestamp']) {
                 // Cache till next date.
-                $variables['element']['#cache']['max-age'] = $date->getStart()->getTimestamp() - $now;
+                $variables['element']['#cache']['max-age'] = $date->getStart()->getTimestamp() - time();
 
                 // Set next date.
                 $variables['next_date'] = [
-                  'day' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'd'),
-                  'month' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'M'),
-                  'year' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'Y'),
+                  'day' => $date->getStart()->format('d'),
+                  'month' => $date->getStart()->format('M'),
+                  'year' => $date->getStart()->format('Y'),
                   'timestamp' => $date->getStart()->getTimestamp(),
                 ];
-
               }
-              if (count($variables['next_5']) < 5) {
+              elseif (count($variables['next_5']) < 5) {
                 $variables['next_5'][] = [
-                  'day' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'd'),
-                  'month' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'M'),
-                  'year' => \Drupal::service('date.formatter')->format($date->getStart()->getTimestamp(), 'custom', 'Y'),
+                  'day' => $date->getStart()->format('d'),
+                  'month' => $date->getStart()->format('M'),
+                  'year' => $date->getStart()->format('Y'),
                   'timestamp' => $date->getStart()->getTimestamp(),
                 ];
               }
@@ -94,25 +107,36 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
           }
         }
         else {
-          $min_date = min($min_date, strtotime($item->value));
-          $max_date = max($max_date, strtotime($item->end_value));
+          if ($item->start_date->getTimestamp() < $min_date->getTimestamp()) {
+            $min_date = $item->start_date;
+          }
+          if ($item->end_date->getTimestamp() > $max_date->getTimestamp()) {
+            $max_date = $item->end_date;
+          }
         }
       }
       else {
-        $min_date = min($min_date, strtotime($item->value));
-        $max_date = max($max_date, strtotime($item->end_value));
+        /** @var \DateTimeInterface $item */
+        if ($item->getTimestamp() < $min_date->getTimestamp()) {
+          $min_date = $item;
+        }
+        if ($item->getTimestamp() > $max_date->getTimestamp()) {
+          $max_date = $item;
+        }
       }
     }
 
     $variables['min_date'] = [
-      'day' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'd'),
-      'month' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'M'),
-      'year' => \Drupal::service('date.formatter')->format($min_date, 'custom', 'Y'),
+      'day' => $min_date->format('d', $format_options),
+      'month' => $min_date->format('M', $format_options),
+      'year' => $min_date->format('Y', $format_options),
+      'timestamp' => $min_date->getTimestamp(),
     ];
     $variables['max_date'] = [
-      'day' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'd'),
-      'month' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'M'),
-      'year' => \Drupal::service('date.formatter')->format($max_date, 'custom', 'Y'),
+      'day' => $max_date->format('d'),
+      'month' => $max_date->format('M'),
+      'year' => $max_date->format('Y'),
+      'timestamp' => $max_date->getTimestamp(),
     ];
 
     if (empty($variables['next_date'])) {
@@ -127,6 +151,7 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
 function iasc_common_design_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['elements']['#node'];
+  $bundle = $node->bundle();
 
   if ($node->hasField('field_oa_date') && $node->field_oa_date->first() && is_numeric(strtotime($node->field_oa_date->first()->value))) {
     // Check if all paragraph fields are empty. If so, remove instance.
@@ -181,46 +206,47 @@ function iasc_common_design_preprocess_node(&$variables) {
         unset($variables['content']['field_additional_locations']);
       }
     }
-    $timezone = new \DateTimeZone($node->field_oa_date->first()->timezone);
-    $start = new \DateTime($node->field_oa_date->first()->value, $timezone);
-    if ($start->getOffset() > 0) {
-      $start->add(new \DateInterval('PT' . $start->getOffset() . 'S'));
-    }
-    else {
-      $start->sub(new \DateInterval('PT' . abs($start->getOffset()) . 'S'));
-    }
 
-    $end = new \DateTime($node->field_oa_date->first()->end_value, $timezone);
-    if ($end->getOffset() > 0) {
-      $end->add(new \DateInterval('PT' . $end->getOffset() . 'S'));
-    }
-    else {
-      $end->sub(new \DateInterval('PT' . abs($end->getOffset()) . 'S'));
-    }
+    /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date_item */
+    $date_item = $node->field_oa_date->first();
+    $timezone = $date_item->timezone;
+
+    /** @var \Drupal\date_recur\DateRange $daterange */
+    $daterange = iasc_content_first_upcoming_as_daterange($date_item);
+
+    $start = $daterange->getStart();
+    $end = $daterange->getEnd();
 
     $variables['event_time'] = [
-      'start' => $start->format('h.i a'),
-      'end' => $end->format('h.i a'),
+      'start' => iasc_content_format_time($start, $timezone),
+      'end' => iasc_content_format_time($end, $timezone),
+      'start_day' => iasc_content_format_date($start, $timezone),
+      'end_day' => iasc_content_format_date($end, $timezone),
       'all_day' => FALSE,
-      'timezone' => $node->field_oa_date->first()->timezone,
-      'timestamp_start' => strtotime($node->field_oa_date->first()->value),
-      'timestamp_end' => strtotime($node->field_oa_date->first()->end_value),
+      'multiple_days' => iasc_content_is_multiple_days($start, $end, $timezone),
+      'timezone' => $timezone,
+      'timestamp_start' => $start->getTimestamp(),
+      'timestamp_end' => $end->getTimestamp(),
+      'output' => '',
     ];
+
+    // Add dates for multiple day events.
+    if ($variables['event_time']['multiple_days']) {
+      $variables['event_time']['output'] = $variables['event_time']['start_day'] . ' — ' . $variables['event_time']['end_day'] . ', ';
+    }
 
     if ($variables['event_time']['start'] == $variables['event_time']['end']) {
       $variables['event_time']['all_day'] = TRUE;
-      $variables['event_time']['output'] = '(All day)';
+      $variables['event_time']['output'] .= 'All day';
     }
-    elseif ($variables['event_time']['start'] == '00:00' && $variables['event_time']['end'] == '23:59') {
+    elseif ($variables['event_time']['start'] == '12 a.m.' && $variables['event_time']['end'] == '11.59 p.m.') {
       $variables['event_time']['all_day'] = TRUE;
-      $variables['event_time']['output'] = '(All day)';
+      $variables['event_time']['output'] .= 'All day';
     }
     else {
-      $variables['event_time']['output'] = $variables['event_time']['start'] . ' — ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';
+      $variables['event_time']['output'] .= $variables['event_time']['start'] . ' — ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';
     }
   }
-
-  $bundle = $node->bundle();
 
   if ($bundle == 'oa_wiki_page' && ($variables['elements']['#view_mode'] == 'teaser' || $variables['elements']['#view_mode'] == 'title')) {
     $document_file = $node->get('field_media_files')->getValue();

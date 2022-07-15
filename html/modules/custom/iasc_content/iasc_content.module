@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -13,6 +14,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\Url;
+use Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
@@ -1329,16 +1331,25 @@ function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
   $meetings = [];
   foreach ($events as $event) {
     foreach ($event->field_oa_date as $date_item) {
+      /** @var \Drupal\date_recur\DateRange $date */
       foreach ($date_item->getHelper()->getOccurrences(new \DateTime(), NULL, 99) as $date) {
         if ($date->getStart()->getTimestamp() >= time()) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
           $new_event->original_nid = $event->id();
+
+          // Needed for timezone offset.
+          $new_start = $date->getStart()->getTimestamp();
+          $new_start = new \DateTime('@' . $new_start);
+          $new_end = $date->getEnd()->getTimestamp();
+          $new_end = new \DateTime('@' . $new_end);
+
           $new_event->set('field_oa_date', [
-            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'value' => $new_start->format('Y-m-d\TH:i:s'),
+            'end_value' => $new_end->format('Y-m-d\TH:i:s'),
             'timezone' => $date->getStart()->getTimezone()->getName(),
           ]);
+
           $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
         }
       }
@@ -1426,11 +1437,19 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
           $new_event = clone $event;
           $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
           $new_event->original_nid = $event->id();
+
+          // Needed for timezone offset.
+          $new_start = $date->getStart()->getTimestamp();
+          $new_start = new \DateTime('@' . $new_start);
+          $new_end = $date->getEnd()->getTimestamp();
+          $new_end = new \DateTime('@' . $new_end);
+
           $new_event->set('field_oa_date', [
-            'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-            'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+            'value' => $new_start->format('Y-m-d\TH:i:s'),
+            'end_value' => $new_end->format('Y-m-d\TH:i:s'),
             'timezone' => $date->getStart()->getTimezone()->getName(),
           ]);
+
           $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
         }
       }
@@ -1497,4 +1516,101 @@ function iasc_content_migrate_meetings_paragraphs() {
 
     }
   }
+}
+
+/**
+ * Format time according the UN standards.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $date
+ *   Date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_format_time($date, $timezone = 'UTC') {
+  if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $date = DrupalDateTime::createFromDateTime($date);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  $ampm = 'a.m.';
+  if ($date->format('a', $options) === 'pm') {
+    $ampm = 'p.m.';
+  }
+
+  // Hide zero minutes.
+  if ($date->format('i', $options) === '00') {
+    return $date->format('g', $options) . ' ' . $ampm;
+  }
+  else {
+    return $date->format('g.i', $options) . ' ' . $ampm;
+  }
+}
+
+/**
+ * Format date according the UN standards.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $date
+ *   Date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_format_date($date, $timezone = 'UTC') {
+  if (get_class($date) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $date = DrupalDateTime::createFromDateTime($date);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  return $date->format('d.m.Y', $options);
+}
+
+/**
+ * Is multiple days.
+ *
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $start
+ *   Start date.
+ * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $end
+ *   End date.
+ * @param string $timezone
+ *   Timezone.
+ */
+function iasc_content_is_multiple_days($start, $end, $timezone = 'UTC') {
+  if (get_class($start) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $start = DrupalDateTime::createFromDateTime($start);
+  }
+  if (get_class($end) != 'Drupal\Core\Datetime\DrupalDateTime') {
+    $end = DrupalDateTime::createFromDateTime($end);
+  }
+
+  $options = [
+    'timezone' => $timezone,
+  ];
+
+  return $start->format('d.m.Y', $options) != $end->format('d.m.Y', $options);
+}
+
+/**
+ * Get first upcoming occurrence of a date.
+ */
+function iasc_content_first_upcoming_as_daterange(DateRecurItem $item) {
+  if (!$item->isRecurring()) {
+    return $item->getHelper()->getOccurrences()[0];
+  }
+
+  // Generate all occurences.
+  $today = new \DateTime('now');
+  $today->setTime(0, 0, 0, 0);
+  foreach ($item->getHelper()->getOccurrences($today, NULL, 99) as $date) {
+    if ($date->getStart()->getTimestamp() >= $today->getTimestamp()) {
+      return $date;
+    }
+  }
+
+  // Return first one, if no future one is found.
+  return $item->getHelper()->getOccurrences()[0];
 }

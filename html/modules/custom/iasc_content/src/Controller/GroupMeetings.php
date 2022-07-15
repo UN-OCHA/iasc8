@@ -91,7 +91,7 @@ class GroupMeetings extends ControllerBase {
     $past_end->add(new \DateInterval('P' . $months_per_page . 'M'));
 
     // Calculate future dates.
-    $future_start = new \DateTime();
+    $future_start = new \DateTime('now');
     $future_start->setTime(0, 0, 0);
     if ($future_offset > 0) {
       $future_start->add(new \DateInterval('P' . $future_offset * $months_per_page . 'M'));
@@ -138,11 +138,19 @@ class GroupMeetings extends ControllerBase {
               $new_event = clone $event;
               $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
               $new_event->original_nid = $event->id();
+
+              // Needed for timezone offset.
+              $new_start = $date->getStart()->getTimestamp();
+              $new_start = new \DateTime('@' . $new_start);
+              $new_end = $date->getEnd()->getTimestamp();
+              $new_end = new \DateTime('@' . $new_end);
+
               $new_event->set('field_oa_date', [
-                'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-                'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+                'value' => $new_start->format('Y-m-d\TH:i:s'),
+                'end_value' => $new_end->format('Y-m-d\TH:i:s'),
                 'timezone' => $date->getStart()->getTimezone()->getName(),
               ]);
+
               $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
             }
             elseif ($date->getStart()->getTimestamp() > $future_end->getTimestamp()) {
@@ -241,11 +249,19 @@ class GroupMeetings extends ControllerBase {
                 $new_event = clone $event;
                 $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
                 $new_event->original_nid = $event->id();
+
+                // Needed for timezone offset.
+                $new_start = $date->getStart()->getTimestamp();
+                $new_start = new \DateTime('@' . $new_start);
+                $new_end = $date->getEnd()->getTimestamp();
+                $new_end = new \DateTime('@' . $new_end);
+
                 $new_event->set('field_oa_date', [
-                  'value' => $date->getStart()->format('Y-m-d\TH:i:s'),
-                  'end_value' => $date->getEnd()->format('Y-m-d\TH:i:s'),
+                  'value' => $new_start->format('Y-m-d\TH:i:s'),
+                  'end_value' => $new_end->format('Y-m-d\TH:i:s'),
                   'timezone' => $date->getStart()->getTimezone()->getName(),
                 ]);
+
                 $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
               }
               elseif ($date->getStart()->getTimestamp() < $past_start->getTimestamp()) {
@@ -329,7 +345,7 @@ class GroupMeetings extends ControllerBase {
    *   A list of occurrences.
    */
   protected function getPastReccurrences(DateRecurItem $item, int $end): array {
-    $until = (new \DateTime('@' . $end));
+    $until = new \DateTime('@' . $end);
     return $item->getHelper()->getOccurrences(NULL, $until, 99);
   }
 
@@ -345,7 +361,7 @@ class GroupMeetings extends ControllerBase {
    *   A list of occurrences.
    */
   protected function getFutureReccurrences(DateRecurItem $item, int $start): array {
-    $from = (new \DateTime('@' . $start));
+    $from = new \DateTime('@' . $start);
     return $item->getHelper()->getOccurrences($from, NULL, 99);
   }
 
