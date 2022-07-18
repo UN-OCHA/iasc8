@@ -216,118 +216,118 @@ class GroupMeetings extends ControllerBase {
           '#links' => $pager_links,
         ],
       ];
+    }
 
-      // Create list of events with all past occurences.
-      $query = $index->query();
-      $query->addCondition('field_iasc_audience', $group->id());
-      $query->addCondition('type', 'oa_event');
-      $query->addCondition('all_dates', $past_end->getTimestamp(), '<');
-      $query->range(0, 99);
-      $query->sort('all_dates', 'DESC');
-      $query->sort('changed', 'DESC');
+    // Create list of events with all past occurences.
+    $query = $index->query();
+    $query->addCondition('field_iasc_audience', $group->id());
+    $query->addCondition('type', 'oa_event');
+    $query->addCondition('all_dates', $past_end->getTimestamp(), '<');
+    $query->range(0, 99);
+    $query->sort('all_dates', 'DESC');
+    $query->sort('changed', 'DESC');
 
-      // Execute the search.
-      $results = $query->execute();
+    // Execute the search.
+    $results = $query->execute();
 
-      // Extratc Ids.
-      $ids = [];
-      foreach ($results as $item) {
-        $data = explode(':', $item->getId());
-        $data = explode('/', $data[1]);
-        $ids[] = $data[1];
-      }
+    // Extratc Ids.
+    $ids = [];
+    foreach ($results as $item) {
+      $data = explode(':', $item->getId());
+      $data = explode('/', $data[1]);
+      $ids[] = $data[1];
+    }
 
-      if (!empty($ids)) {
-        $has_past_meetings = FALSE;
-        $events = $this->entityTypeManager->getStorage('node')->loadMultiple($ids);
-        $view_builder = $this->entityTypeManager->getViewBuilder('node');
-        $meetings = [];
-        foreach ($events as $event) {
-          foreach ($event->field_oa_date as $date_item) {
-            foreach ($this->getPastReccurrences($date_item, $past_end->getTimestamp()) as $date) {
-              if ($date->getStart()->getTimestamp() >= $past_start->getTimestamp() && $date->getStart()->getTimestamp() < $past_end->getTimestamp()) {
-                $new_event = clone $event;
-                $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
-                $new_event->original_nid = $event->id();
+    if (!empty($ids)) {
+      $has_past_meetings = FALSE;
+      $events = $this->entityTypeManager->getStorage('node')->loadMultiple($ids);
+      $view_builder = $this->entityTypeManager->getViewBuilder('node');
+      $meetings = [];
+      foreach ($events as $event) {
+        foreach ($event->field_oa_date as $date_item) {
+          foreach ($this->getPastReccurrences($date_item, $past_end->getTimestamp()) as $date) {
+            if ($date->getStart()->getTimestamp() >= $past_start->getTimestamp() && $date->getStart()->getTimestamp() < $past_end->getTimestamp()) {
+              $new_event = clone $event;
+              $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
+              $new_event->original_nid = $event->id();
 
-                // Needed for timezone offset.
-                $new_start = $date->getStart()->getTimestamp();
-                $new_start = new \DateTime('@' . $new_start);
-                $new_end = $date->getEnd()->getTimestamp();
-                $new_end = new \DateTime('@' . $new_end);
+              // Needed for timezone offset.
+              $new_start = $date->getStart()->getTimestamp();
+              $new_start = new \DateTime('@' . $new_start);
+              $new_end = $date->getEnd()->getTimestamp();
+              $new_end = new \DateTime('@' . $new_end);
 
-                $new_event->set('field_oa_date', [
-                  'value' => $new_start->format('Y-m-d\TH:i:s'),
-                  'end_value' => $new_end->format('Y-m-d\TH:i:s'),
-                  'timezone' => $date->getStart()->getTimezone()->getName(),
-                ]);
+              $new_event->set('field_oa_date', [
+                'value' => $new_start->format('Y-m-d\TH:i:s'),
+                'end_value' => $new_end->format('Y-m-d\TH:i:s'),
+                'timezone' => $date->getStart()->getTimezone()->getName(),
+              ]);
 
-                $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
-              }
-              elseif ($date->getStart()->getTimestamp() < $past_start->getTimestamp()) {
-                $has_past_meetings = TRUE;
-              }
+              $meetings[$event->id() . ':' . $date->getStart()->getTimestamp()] = $new_event;
+            }
+            elseif ($date->getStart()->getTimestamp() < $past_start->getTimestamp()) {
+              $has_past_meetings = TRUE;
             }
           }
         }
+      }
 
-        // Sort the meetings.
-        usort($meetings, function ($a, $b) {
-          return strcmp($b->field_oa_date->first()->getValue()['value'], $a->field_oa_date->first()->getValue()['value']);
-        });
+      // Sort the meetings.
+      usort($meetings, function ($a, $b) {
+        return strcmp($b->field_oa_date->first()->getValue()['value'], $a->field_oa_date->first()->getValue()['value']);
+      });
 
-        // Build pager links.
-        $pager_links = [];
-        if ($has_past_meetings) {
-          $pager_links[] = [
-            'text' => $this->t('Previous @months months', [
-              '@months' => $months_per_page,
-            ]),
-            'href' => Url::fromUserInput($current_uri, [
-              'query' => [
-                'past' => $past_offset + 1,
-                'future' => $future_offset,
-              ],
-            ])->toString(),
-          ];
-        }
-
-        if ($past_offset > 0) {
-          $pager_links[] = [
-            'text' => $this->t('Next @months months', [
-              '@months' => $months_per_page,
-            ]),
-            'href' => Url::fromUserInput($current_uri, [
-              'query' => [
-                'past' => $past_offset - 1,
-                'future' => $future_offset,
-              ],
-            ])->toString(),
-          ];
-        }
-
-        $build['meetings_wrapper']['meetings_wrapper_past'] = [
-          '#type' => 'container',
-          '#attributes' => [
-            'class' => [
-              'meetings_wrapper__past [ cd-flow ]',
+      // Build pager links.
+      $pager_links = [];
+      if ($has_past_meetings) {
+        $pager_links[] = [
+          'text' => $this->t('Previous @months months', [
+            '@months' => $months_per_page,
+          ]),
+          'href' => Url::fromUserInput($current_uri, [
+            'query' => [
+              'past' => $past_offset + 1,
+              'future' => $future_offset,
             ],
-          ],
-          'past_title' => [
-            '#type' => 'markup',
-            '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
-              '@from' => $past_start->format($date_format),
-              '@until' => $past_end->format($date_format),
-            ]),
-          ],
-          'past' => $view_builder->viewMultiple($meetings, 'teaser'),
-          'past_pager' => [
-            '#theme' => 'iasc_content_pager',
-            '#pager_id' => 2,
-            '#links' => $pager_links,
-          ],
+          ])->toString(),
         ];
       }
+
+      if ($past_offset > 0) {
+        $pager_links[] = [
+          'text' => $this->t('Next @months months', [
+            '@months' => $months_per_page,
+          ]),
+          'href' => Url::fromUserInput($current_uri, [
+            'query' => [
+              'past' => $past_offset - 1,
+              'future' => $future_offset,
+            ],
+          ])->toString(),
+        ];
+      }
+
+      $build['meetings_wrapper']['meetings_wrapper_past'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => [
+            'meetings_wrapper__past [ cd-flow ]',
+          ],
+        ],
+        'past_title' => [
+          '#type' => 'markup',
+          '#markup' => $this->t('<h2>Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
+            '@from' => $past_start->format($date_format),
+            '@until' => $past_end->format($date_format),
+          ]),
+        ],
+        'past' => $view_builder->viewMultiple($meetings, 'teaser'),
+        'past_pager' => [
+          '#theme' => 'iasc_content_pager',
+          '#pager_id' => 2,
+          '#links' => $pager_links,
+        ],
+      ];
     }
 
     return $build;
