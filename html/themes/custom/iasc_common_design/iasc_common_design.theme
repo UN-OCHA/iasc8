@@ -5,8 +5,10 @@
  * Template overrides, preprocess, and alter hooks for the OCHA Basic theme.
  */
 
+use Drupal\iasc_content\RRuleHumanReadable;
 use Drupal\media\Entity\Media;
-use RRule\RRule;
+
+use function PHPUnit\Framework\assertSame;
 
 /**
  * Implements template_preprocess_field().
@@ -96,9 +98,10 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
           // Translate to text.
           $rule = $item->rrule;
           if ($rule) {
-            $parser = new RRule($rule);
+            $parser = new RRuleHumanReadable($rule);
             $variables['human_readable'] = $parser->humanReadable([
-              'explicit_inifite' => FALSE,
+              'use_intl' => FALSE,
+              'explicit_inifite' => TRUE,
               'dtstart' => FALSE,
               'include_start' => FALSE,
               'include_until' => TRUE,
