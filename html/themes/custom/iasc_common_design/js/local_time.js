@@ -12,21 +12,24 @@
 
       let container = document.querySelector('.node__content .cd-date');
       let date = new Date(parseInt(searchParams.get('ts'), 10) * 1000);
-      let date_end = new Date(parseInt(searchParams.get('tse'), 10) * 1000);
-
-      let day = date.getDate();
-      if (date.getDate() != date_end.getDate()) {
-        day = day + ' - ' + date_end.getDate();
+      let date_end = date;
+      if (searchParams.has('tse')) {
+        date_end = new Date(parseInt(searchParams.get('tse'), 10) * 1000);
       }
 
-      let month = month_names_short[date.getMonth()];
-      if (date.getMonth() != date_end.getMonth()) {
+      let day = date.getUTCDate();
+      if (date.getUTCDate() != date_end.getUTCDate()) {
+        day = day + ' - ' + date_end.getUTCDate();
+      }
+
+      let month = month_names_short[date.getUTCMonth()];
+      if (date.getUTCMonth() != date_end.getUTCMonth()) {
         month = month + ' - ' + month_names_short[date_end.getDate()];
       }
 
-      let year = date.getFullYear();
-      if (date.getFullYear() != date_end.getFullYear()) {
-        year = year + ' - ' + date_end.getFullYear();
+      let year = date.getUTCFullYear();
+      if (date.getUTCFullYear() != date_end.getUTCFullYear()) {
+        year = year + ' - ' + date_end.getUTCFullYear();
       }
 
       container.querySelector('.cd-date__day').innerHTML = day;
