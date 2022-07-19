@@ -240,7 +240,7 @@ class RRuleHumanReadable extends RRule {
         $tmp = $this->byweekday_nth;
         foreach ($tmp as & $value) {
 
-          list($day, $n) = $value;
+          [$day, $n] = $value;
           $value = strtr(self::i18nSelect($i18n[$n > 0 ? 'nth_weekday' : '-nth_weekday'], $n), [
             '%{weekday}' => $i18n['weekdays'][$day],
             '%{n}' => abs($n),

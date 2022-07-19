@@ -95,4 +95,5 @@ class RRuleHumanReadableTest extends UnitTestCase {
 
     return $tests;
   }
+
 }
