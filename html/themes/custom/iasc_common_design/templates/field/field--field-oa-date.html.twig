@@ -46,15 +46,15 @@
   {% if items|length > 0 %}
     <div class="cd-date__wrapper">
       <span class="cd-date__day">
-        {{ next_date.day }}
+        {{ next_date.day }}{% if next_date.day != next_date_end.day %} - {{ next_date_end.day }}{% endif %}
       </span>
     </div>
     <div class="cd-date__wrapper">
       <span class="cd-date__month">
-        {{ next_date.month }}
+        {{ next_date.month }}{% if next_date.month != next_date_end.month %} - {{ next_date_end.month }}{% endif %}
       </span>
       <span class="cd-date__year">
-        {{ next_date.year }}
+        {{ next_date.year }}{% if next_date.year != next_date_end.year %} - {{ next_date_end.year }}{% endif %}
       </span>
     </div>
   {% endif %}

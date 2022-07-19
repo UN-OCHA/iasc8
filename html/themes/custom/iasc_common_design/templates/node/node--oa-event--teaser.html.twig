@@ -102,7 +102,7 @@
     {{ title_prefix }}
     {% if label and not page %}
       <h3{{ title_attributes.addClass('cd-teaser__title') }}>
-        <a href="{{ url }}?ts={{ event_time.timestamp_start }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}?ts={{ event_time.timestamp_start }}&tse={{ event_time.timestamp_end }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
