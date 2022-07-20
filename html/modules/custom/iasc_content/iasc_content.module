@@ -1375,9 +1375,11 @@ function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
   if ($paragraph->field_link_to_all_meetings->value) {
     $build['future_link'] = [
       '#type' => 'link',
-      '#title' => 'View more meetings',
+      '#title' => 'View more upcoming meetings',
       '#url' => Url::fromRoute('iasc_content.group.meetings', [
         'group' => $group->id(),
+      ], [
+        'fragment' => 'meetings-upcoming',
       ]),
     ];
   }
@@ -1475,9 +1477,11 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
   if ($paragraph->field_link_to_all_meetings->value) {
     $build['past_link'] = [
       '#type' => 'link',
-      '#title' => 'View more meetings',
+      '#title' => 'View more past meetings',
       '#url' => Url::fromRoute('iasc_content.group.meetings', [
         'group' => $group->id(),
+      ], [
+        'fragment' => 'meetings-past',
       ]),
     ];
   }
