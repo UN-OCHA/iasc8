@@ -1519,6 +1519,59 @@ function iasc_content_migrate_meetings_paragraphs() {
 }
 
 /**
+ * Change old meeting paragraphs to new ones.
+ */
+function iasc_content_migrate_all_meetings_paragraphs() {
+  $query = \Drupal::entityQuery('paragraph');
+  $query->condition('type', 'view');
+  $query->exists('field_view');
+  $query->condition('field_view', 'iasc_events');
+  $ids = $query->execute();
+
+  $paragraphs = \Drupal::entityTypeManager()
+    ->getStorage('paragraph')
+    ->loadMultiple($ids);
+
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  foreach ($paragraphs as $paragraph) {
+    $display = $paragraph->field_view->getValue()[0]['display_id'];
+
+    switch ($display) {
+      case 'all_upcoming_meetings':
+        $paragraph->type = 'meetings_upcoming';
+        $paragraph->save();
+        $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($paragraph->id());
+
+        $paragraph->set('field_max_number_of_events', [
+          'value' => 20,
+        ]);
+        $paragraph->set('field_link_to_all_meetings', [
+          'value' => TRUE,
+        ]);
+
+        $paragraph->save();
+        break;
+
+      case 'all_past_meetings':
+        $paragraph->type = 'meetings_past';
+        $paragraph->save();
+        $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($paragraph->id());
+
+        $paragraph->set('field_max_number_of_events', [
+          'value' => 20,
+        ]);
+        $paragraph->set('field_link_to_all_meetings', [
+          'value' => TRUE,
+        ]);
+
+        $paragraph->save();
+        break;
+
+    }
+  }
+}
+
+/**
  * Format time according the UN standards.
  *
  * @param \DateTimeInterface|\Drupal\Core\Datetime\DrupalDateTime $date
