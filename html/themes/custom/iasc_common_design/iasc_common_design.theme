@@ -110,10 +110,10 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
             $parser = new RRuleHumanReadable($rule);
             $variables['human_readable'] = $parser->humanReadable([
               'use_intl' => FALSE,
-              'explicit_inifite' => TRUE,
+              'explicit_inifite' => FALSE,
               'dtstart' => FALSE,
               'include_start' => FALSE,
-              'include_until' => TRUE,
+              'include_until' => FALSE,
               'date_formatter' => function ($date) {
                 return $date->format('d.m.Y');
               },
