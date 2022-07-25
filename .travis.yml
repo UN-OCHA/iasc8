@@ -65,7 +65,7 @@ script:
   - set +e
 
   # Run unit, kernel tests
-  - # ./vendor/bin/phpunit --debug --colors --testsuite=unit,kernel
+  - ./vendor/bin/phpunit --debug --colors --testsuite=unit
 
   # Drupal install
   - mysql -e "CREATE DATABASE drupal;"
