@@ -46,28 +46,35 @@
   {% if items|length > 0 %}
     <div class="cd-date__wrapper">
       <span class="cd-date__day">
-        {% if min_date.day != max_date.day %}
-          {{ min_date.day }} - {{ max_date.day }}
-        {% else %}
-          {{ min_date.day }}
-        {% endif %}
+        {{ next_date.day }}{% if next_date.day != next_date_end.day %} - {{ next_date_end.day }}{% endif %}
       </span>
     </div>
     <div class="cd-date__wrapper">
       <span class="cd-date__month">
-        {% if min_date.month != max_date.month %}
-          {{ min_date.month }} - {{ max_date.month }}
-        {% else %}
-          {{ min_date.month }}
-        {% endif %}
+        {{ next_date.month }}{% if next_date.month != next_date_end.month %} - {{ next_date_end.month }}{% endif %}
       </span>
       <span class="cd-date__year">
-        {% if min_date.year != max_date.year %}
-          {{ min_date.year }} - {{ max_date.year }}
-        {% else %}
-          {{ min_date.year }}
-        {% endif %}
+        {{ next_date.year }}{% if next_date.year != next_date_end.year %} - {{ next_date_end.year }}{% endif %}
       </span>
     </div>
   {% endif %}
 </div>
+
+{% if human_readable %}
+  <div class="date__human_readable">
+    {{ human_readable }}
+  </div>
+{% endif %}
+
+{% if next_5|length > 0 %}
+	<div class="next-5">
+		<h3>Next upcoming dates</h3>
+		<ul>
+			{% for next_event in next_5 %}
+				<li>{{ next_event.day }}
+					{{ next_event.month }}
+					{{ next_event.year }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}

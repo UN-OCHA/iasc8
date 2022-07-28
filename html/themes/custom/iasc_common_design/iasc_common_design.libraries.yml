@@ -104,3 +104,7 @@ cd-select-a11y:
   css:
     theme:
       components/cd-select-a11y/cd-select-a11y.css: {}
+
+local-time:
+  js:
+    js/local_time.js: {}

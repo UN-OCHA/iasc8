@@ -97,7 +97,7 @@ class StoreAllDates extends ProcessorPluginBase {
   protected function getApplicableItemReccurrences(DateRecurItem $item): array {
     $from = $item->start_date->getPhpDateTime();
     $until = $item->start_date->add(new \DateInterval(static::MAX_FUTURE_DURATION))->getPhpDateTime();
-    return $item->getHelper()->getOccurrences($from, $until);
+    return $item->getHelper()->getOccurrences($from, $until, 99);
   }
 
 }

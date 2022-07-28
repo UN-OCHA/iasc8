@@ -16,6 +16,7 @@ module:
   config: 0
   config_split: 0
   contextual: 0
+  csp: 0
   csv_serialization: 0
   ctools: 0
   date_recur: 0
@@ -70,7 +71,6 @@ module:
   node: 0
   node_view_permissions: 0
   ocha_integrations: 0
-  ocha_security: 0
   ocha_viewsreference_filter: 0
   options: 0
   page_cache: 0
@@ -89,7 +89,6 @@ module:
   search_api_db: 0
   search_api_solr: 0
   search_api_solr_admin: 0
-  seckit: 0
   select2: 0
   select2_facets: 0
   select_a11y: 0
@@ -117,7 +116,6 @@ module:
   user_expire: 0
   variationcache: 0
   views_data_export: 0
-  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0

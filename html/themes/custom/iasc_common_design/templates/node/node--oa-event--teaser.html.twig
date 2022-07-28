@@ -87,6 +87,7 @@
 ]
 %}
 {{ attach_library('common_design/cd-teaser') }}
+{{ attach_library('iasc_common_design/local-time') }}
 
 <article{{ attributes.addClass(classes) }} >
 
@@ -101,7 +102,7 @@
     {{ title_prefix }}
     {% if label and not page %}
       <h3{{ title_attributes.addClass('cd-teaser__title') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}?ts={{ event_time.timestamp_start }}&tse={{ event_time.timestamp_end }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
     {{ title_suffix }}
@@ -113,7 +114,10 @@
       {% endset %}
       {{ contentBody|striptags }}
 
-      <div class="cd-date-time">{{ node.field_oa_date|un_daterange_times(true, true) }}</div>
+      <div class="cd-date-time">
+        {{ event_time.output }}
+        <span class="cd-teaser__date__time-user" data-all-day="{{ event_time.all_day }}" data-timestamp-start="{{ event_time.timestamp_start }}" data-timestamp-end="{{ event_time.timestamp_end }}"></span>
+      </div>
     </div>
 
   </div>

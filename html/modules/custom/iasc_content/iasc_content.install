@@ -18,3 +18,10 @@ function iasc_content_update_8029() {
 function iasc_content_update_8030() {
   iasc_content_migrate_meetings_paragraphs();
 }
+
+/**
+ * Change old all meeting blocks to new ones.
+ */
+function iasc_content_update_8031() {
+  iasc_content_migrate_all_meetings_paragraphs();
+}
