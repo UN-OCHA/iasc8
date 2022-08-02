@@ -7,6 +7,9 @@ report-only:
       base: self
       sources:
         - www.google-analytics.com
+        - https://analytics.google.com
+        - https://region1.analytics.google.com
+        - '*.analytics.google.com'
     font-src:
       base: self
       sources:
@@ -43,12 +46,26 @@ report-only:
       base: self
     script-src-elem:
       base: self
+      sources:
+        - https://www.googletagmanager.com
+        - https://www.google-analytics.com
+        - '*.googletagmanager.com'
+        - '*.google-analytics.com'
+        - '*.twimg.com'
+        - '*.twitter.com'
     style-src:
       base: self
+      sources:
+        - '*.twimg.com'
     style-src-attr:
       base: self
     style-src-elem:
       base: self
+      sources:
+        - fonts.googleapis.com
+        - https://fonts.googleapis.com
+        - '*.twimg.com'
+        - '*.twitter.com'
     frame-ancestors:
       base: self
   reporting:
