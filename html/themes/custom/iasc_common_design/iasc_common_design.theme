@@ -5,8 +5,10 @@
  * Template overrides, preprocess, and alter hooks for the OCHA Basic theme.
  */
 
+use Drupal\iasc_content\RRuleHumanReadable;
 use Drupal\media\Entity\Media;
-use RRule\RRule;
+
+use function PHPUnit\Framework\assertSame;
 
 /**
  * Implements template_preprocess_field().
@@ -45,6 +47,7 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
 
     // Track next date.
     $variables['next_date'] = NULL;
+    $variables['next_date_end'] = NULL;
 
     // Expose next 5 occurrences.
     $variables['next_5'] = [];
@@ -79,6 +82,14 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
                   'year' => $date->getStart()->format('Y'),
                   'timestamp' => $date->getStart()->getTimestamp(),
                 ];
+
+                // Set next date.
+                $variables['next_date_end'] = [
+                  'day' => $date->getEnd()->format('d'),
+                  'month' => $date->getEnd()->format('M'),
+                  'year' => $date->getEnd()->format('Y'),
+                  'timestamp' => $date->getEnd()->getTimestamp(),
+                ];
               }
 
               // Add first to next 5 as well, date might be changed by javascript.
@@ -96,12 +107,13 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
           // Translate to text.
           $rule = $item->rrule;
           if ($rule) {
-            $parser = new RRule($rule);
+            $parser = new RRuleHumanReadable($rule);
             $variables['human_readable'] = $parser->humanReadable([
+              'use_intl' => FALSE,
               'explicit_inifite' => FALSE,
               'dtstart' => FALSE,
               'include_start' => FALSE,
-              'include_until' => TRUE,
+              'include_until' => FALSE,
               'date_formatter' => function ($date) {
                 return $date->format('d.m.Y');
               },
@@ -143,6 +155,7 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
 
     if (empty($variables['next_date'])) {
       $variables['next_date'] = $variables['min_date'];
+      $variables['next_date_end'] = $variables['max_date'];
     }
   }
 }
@@ -232,11 +245,7 @@ function iasc_common_design_preprocess_node(&$variables) {
       'output' => '',
     ];
 
-    // Add dates for multiple day events.
-    if ($variables['event_time']['multiple_days']) {
-      $variables['event_time']['output'] = $variables['event_time']['start_day'] . ' — ' . $variables['event_time']['end_day'] . ', ';
-    }
-
+    $variables['event_time']['output'] = '';
     if ($variables['event_time']['start'] == $variables['event_time']['end']) {
       $variables['event_time']['all_day'] = TRUE;
       $variables['event_time']['output'] .= 'All day';

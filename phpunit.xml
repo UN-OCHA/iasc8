@@ -3,9 +3,9 @@
 <!-- Using this project's bootstrap file allows tests in `ExistingSite`,
     `ExistingSiteSelenium2DriverTest`, and `ExistingSiteWebDriverTest`
      to run alongside core's test types. -->
-<phpunit bootstrap="vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php">
+<phpunit bootstrap="./html/core/tests/bootstrap.php">
     <php>
-        <env name="DTT_BASE_URL" value="http://iasc8.local.docksal"/>
+        <env name="DTT_BASE_URL" value="http://iasc8.docksal.site"/>
         <env name="DTT_API_URL" value="http://localhost:9222"/>
         <env name="DTT_MINK_DRIVER_ARGS" value='["chrome", null, "http://localhost:4444/wd/hub"]'/>
         <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/tmp"/>
