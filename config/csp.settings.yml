@@ -33,6 +33,8 @@ report-only:
       base: none
     script-src:
       base: self
+      flags:
+        - unsafe-inline
       sources:
         - fonts.googleapis.com
         - www.gstatic.com
@@ -46,6 +48,8 @@ report-only:
       base: self
     script-src-elem:
       base: self
+      flags:
+        - unsafe-inline
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
@@ -55,7 +59,10 @@ report-only:
         - '*.twitter.com'
     style-src:
       base: self
+      flags:
+        - unsafe-inline
       sources:
+        - fonts.googleapis.com
         - '*.twimg.com'
     style-src-attr:
       base: self
