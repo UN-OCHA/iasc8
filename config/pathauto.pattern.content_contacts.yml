@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: 'contacts/[node:title]'
 selection_criteria:
   0207d4de-1cef-494b-9629-5a14785d8548:
-    id: node_type
+    id: entity_bundle:node
     negate: false
     uuid: 0207d4de-1cef-494b-9629-5a14785d8548
     context_mapping:
