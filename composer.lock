@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c9359983aab6845c43e71a362a1e773",
+    "content-hash": "0c5b3526b74242c84eb9dfeba248ae71",
     "packages": [
         {
             "name": "algolia/places",
@@ -4361,26 +4361,26 @@
         },
         {
             "name": "drupal/memcache",
-            "version": "2.4.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/memcache.git",
-                "reference": "8.x-2.4"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "200c3a95d535549459091f061203d22f8b47d44a"
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "b2f9715612be74f9ce55daaf838f6f17a9eb2f5a"
             },
             "require": {
-                "drupal/core": "^9.1 || ^10"
+                "drupal/core": "^8.9 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1659633918",
+                    "version": "8.x-2.3",
+                    "datestamp": "1614802365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19402,10 +19402,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "drupal/colors": 20,
         "drupal/conditional_fields": 15,
+        "drupal/config_split": 10,
         "drupal/diff": 5,
         "drupal/field_permissions": 5,
         "drupal/file_entity": 10,
@@ -19417,6 +19418,7 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 10,
         "drupal/search_api_attachments": 10,
+        "drupal/viewsreference": 10,
         "unocha/file_checker": 20,
         "drupal/upgrade_rector": 20
     },
