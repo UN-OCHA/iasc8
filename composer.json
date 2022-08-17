@@ -39,7 +39,7 @@
         "drupal/config_split": "^2.0.0-beta4",
         "drupal/core-composer-scaffold": "^9.3.8",
         "drupal/core-project-message": "^9.3.8",
-        "drupal/core-recommended": "^9.3.8",
+        "drupal/core-recommended": "^9.4.5",
         "drupal/csp": "^1.16",
         "drupal/ctools": "^4.0",
         "drupal/date_recur": "^3.0",
@@ -64,7 +64,7 @@
         "drupal/linkit": "^6.0@beta",
         "drupal/maintenance200": "^1.0",
         "drupal/media_entity_file_replace": "^1.0",
-        "drupal/memcache": "^2.3",
+        "drupal/memcache": "2.3.0",
         "drupal/node_view_permissions": "^1.4",
         "drupal/paragraphs": "^1.8",
         "drupal/paragraphs_edit": "^2.0@alpha",
@@ -88,7 +88,7 @@
         "drupal/user_expire": "^1.0",
         "drupal/variationcache": "^1.0",
         "drupal/views_data_export": "^1.1",
-        "drupal/viewsreference": "^2.0.0",
+        "drupal/viewsreference": "^2.0.0-beta3",
         "drupal/webform": "^6.1.2",
         "drush/drush": "^10.0.0",
         "npm-asset/select2": "^4.0",
@@ -126,7 +126,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
     "bin-dir": "vendor/bin/",
