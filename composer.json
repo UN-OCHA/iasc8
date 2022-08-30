@@ -20,10 +20,6 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/UN-OCHA/file_checker"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/UN-OCHA/ocha_security.git"
         }
     ],

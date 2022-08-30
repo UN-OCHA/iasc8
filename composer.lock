@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "457ec11f3a4a98f37292e898e4ab5948",
+    "content-hash": "55940eb3fa0ab4e0890f367627f7fb7b",
     "packages": [
         {
             "name": "algolia/places",
@@ -12602,13 +12602,14 @@
                     }
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Verifies that files managed by Drupal actually exist at the location where Drupal believes they are.",
             "support": {
-                "source": "https://github.com/UN-OCHA/file_checker/tree/8.x-1.x",
-                "issues": "https://github.com/UN-OCHA/file_checker/issues"
+                "issues": "https://github.com/UN-OCHA/file_checker/issues",
+                "source": "https://github.com/UN-OCHA/file_checker/tree/8.x-1.x"
             },
             "time": "2022-01-18T02:18:28+00:00"
         },
