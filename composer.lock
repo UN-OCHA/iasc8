@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c28702ffe0e3d8f05a5913b3bb6c442e",
+    "content-hash": "fa4d616638da22a3b38a3915dd5c9986",
     "packages": [
         {
             "name": "algolia/places",
@@ -3144,10 +3144,6 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "TR",
-                    "homepage": "https://www.drupal.org/user/202830"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
                 },
@@ -3166,6 +3162,10 @@
                 {
                     "name": "mglaman",
                     "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
                 }
             ],
             "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
@@ -12712,12 +12712,13 @@
                 "sebastian/phpcpd": "^6.0"
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "support": {
-                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1",
-                "issues": "https://github.com/UN-OCHA/ocha_security/issues"
+                "issues": "https://github.com/UN-OCHA/ocha_security/issues",
+                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1"
             },
             "time": "2022-06-01T09:48:10+00:00"
         },
