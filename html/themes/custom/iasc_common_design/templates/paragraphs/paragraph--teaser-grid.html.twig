@@ -50,10 +50,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
 
-{# Check if the title field has content #}
-{% if content.field_teaser_grid_title.0 %}
-  <h2>{{ content.field_teaser_grid_title }}</h2>
-{% endif %}
+    {# Check if the title field has content #}
+    {% if content.field_teaser_grid_title.0 %}
+      <h2>{{ content.field_teaser_grid_title }}</h2>
+    {% endif %}
 
     {% block content %}
       {{ content|without('field_teaser_grid_title') }}
