@@ -17,10 +17,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/UN-OCHA/ocha_security.git"
         }
     ],
     "require": {
@@ -74,6 +70,7 @@
         "drupal/search_api_solr": "^4.2.3",
         "drupal/seckit": "^2.0",
         "drupal/select2": "^1.6",
+        "drupal/select_a11y": "^1.0",
         "drupal/select_or_other": "^4.0",
         "drupal/social_auth_hid": "^3.1",
         "drupal/spamspan": "^1.2",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55940eb3fa0ab4e0890f367627f7fb7b",
+    "content-hash": "fa4d616638da22a3b38a3915dd5c9986",
     "packages": [
         {
             "name": "algolia/places",
@@ -5312,6 +5312,51 @@
             "homepage": "https://www.drupal.org/project/select2",
             "support": {
                 "source": "https://git.drupalcode.org/project/select2"
+            }
+        },
+        {
+            "name": "drupal/select_a11y",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/select_a11y.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/select_a11y-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "f1ac78beefac5487b04e297a82ba4372bb1c24bf"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/facets": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1652967183",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "attiks",
+                    "homepage": "https://www.drupal.org/user/105002"
+                }
+            ],
+            "description": "Provides a multiple select widget.",
+            "homepage": "https://www.drupal.org/project/select_a11y",
+            "support": {
+                "source": "https://git.drupalcode.org/project/select_a11y"
             }
         },
         {
@@ -12666,12 +12711,13 @@
                 "sebastian/phpcpd": "^6.0"
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "support": {
-                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1",
-                "issues": "https://github.com/UN-OCHA/ocha_security/issues"
+                "issues": "https://github.com/UN-OCHA/ocha_security/issues",
+                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1"
             },
             "time": "2022-06-01T09:48:10+00:00"
         },
