@@ -300,9 +300,6 @@
     "unocha/file_checker": {
         "version": "dev-8.x-1.x"
     },
-    "unocha/ocha_security": {
-        "version": "v1.0.1"
-    },
     "wikimedia/composer-merge-plugin": {
         "version": "v2.0.1"
     }
