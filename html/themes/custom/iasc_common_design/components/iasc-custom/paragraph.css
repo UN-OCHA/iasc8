@@ -262,3 +262,16 @@ aside .paragraph--type--content-item .group--view-mode-teaser .field__label {
 	font-size: 1.5rem;
 	font-weight: 400;
 }
+
+.paragraph--type--list .cd-styled-list,
+.paragraph--type--teaser-grid .cd-grid {
+	padding-top: 1rem;
+	border-top: 3px solid var(--cd-blue-grey);
+}
+
+/* No top border if there is a heading */
+.paragraph--type--list h2 + .cd-styled-list,
+.paragraph--type--teaser-grid h2 + .cd-grid {
+	padding-top: 0;
+	border-top: 0 solid var(--cd-blue-grey);
+}
