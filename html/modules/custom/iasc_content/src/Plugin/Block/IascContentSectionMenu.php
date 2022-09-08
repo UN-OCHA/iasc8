@@ -77,6 +77,17 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
 
     if ($needed) {
       $group = Group::load($group_id);
+      // This causes an error if the group doesn't exist. Bail early.
+      if (empty($group)) {
+        return [
+          '#cache' => [
+            'contexts' => [
+              'url',
+              'user',
+            ],
+          ],
+        ];
+      }
       $urls = iasc_content_build_section_menu($group, TRUE);
 
       return [
