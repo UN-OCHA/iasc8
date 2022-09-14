@@ -17,6 +17,9 @@
         "drupal/search_api": {
           "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "https://git.drupalcode.org/project/search_api/-/merge_requests/8.diff"
         },
+        "drupal/select_a11y": {
+          "Patch the contrib v1.0.1 module so the code matches what used to be in custom": "PATCHES/select_a11ly.patch"
+        },
         "drupal/user_expire": {
           "Allow the notification email to be customised": "https://git.drupalcode.org/project/user_expire/-/merge_requests/5.diff",
           "Reset expiration when user is reactivated": "https://git.drupalcode.org/project/user_expire/-/merge_requests/6.diff"

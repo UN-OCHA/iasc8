@@ -50,7 +50,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
 
-    <h2>{{ content.field_list_title }}</h2>
+    {# Check if the title field has content #}
+    {% if content.field_list_title.0 %}
+      <h2>{{ content.field_list_title }}</h2>
+    {% endif %}
 
     {% block content %}
       <ul class="cd-styled-list">
