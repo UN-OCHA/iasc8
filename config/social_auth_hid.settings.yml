@@ -7,4 +7,4 @@ disable_password_fields: true
 disable_email_field: true
 disable_user_field: true
 maintenance_access: false
-disable_user_create: 1
+disable_user_create: false
