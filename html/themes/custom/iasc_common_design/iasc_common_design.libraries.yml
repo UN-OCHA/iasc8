@@ -108,3 +108,8 @@ cd-select-a11y:
 local-time:
   js:
     js/local_time.js: {}
+
+google-cse:
+  css:
+    theme:
+      components/google-cse/google-cse.css: {}
