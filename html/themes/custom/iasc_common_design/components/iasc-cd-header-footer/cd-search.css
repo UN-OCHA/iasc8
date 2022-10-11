@@ -34,6 +34,8 @@
 
 .cd-search__submit {
   background: var(--iasc-secondary);
+  /* Temp override cd-form input z-index - see CD-420 */
+  z-index: 11;
 }
 
 .cd-search__submit:focus {
