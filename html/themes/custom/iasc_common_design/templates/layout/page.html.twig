@@ -107,16 +107,6 @@
         <div class="cd-layout-content">
           {{ page.content }}
 
-            {# BEGIN Google embed code #}
-            <script async defer src="https://cse.google.com/cse.js?cx=077aef2e37d404230"></script>
-            <div class="gcse-searchbox-only"></div>
-            {# END Google embed code #}
-
-          <div class="google-search-results">
-            <script async defer src="https://cse.google.com/cse.js?cx=077aef2e37d404230"></script>
-            <div class="gcse-searchresults-only"></div>
-          </div>
-
         </div>{# /.cd-layout-content #}
 
         {% if page.sidebar_second|render|striptags|trim %}<aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>{% endif %}
