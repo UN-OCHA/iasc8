@@ -46,19 +46,17 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{{ attach_library('common_design/cd-styled-list') }}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
 
-    {# Check if the title field has content #}
-    {% if content.field_list_title.0 %}
-      <h2 class="cd-block-title">{{ content.field_list_title }}</h2>
-    {% endif %}
+    <div class="cd-block-title cd-content--compact">
+      {{ content.field_para_title }}
+    </div>
 
     {% block content %}
-      <ul class="cd-styled-list">
-        {{ content|without('field_list_title') }}
-      </ul>
+      {{ content|without('field_para_title') }}
     {% endblock %}
+
   </div>
 {% endblock paragraph %}
