@@ -33,11 +33,11 @@
 .field--name-field-header .field--type-viewsreference .viewsreference--view-title {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  color: var(--brand-primary);
+  /* color: var(--brand-primary);
   border-bottom: 3px solid var(--cd-blue-grey);
   font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 0;
+  margin-top: 0; */
   text-align: center;
 }
 
