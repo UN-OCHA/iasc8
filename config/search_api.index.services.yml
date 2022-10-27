@@ -58,8 +58,7 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-      specific_languages:
-        en: '0'
+      specific_languages: { }
 id: services
 name: Services
 description: ''
