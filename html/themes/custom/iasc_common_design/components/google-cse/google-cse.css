@@ -87,3 +87,12 @@ form.gsc-search-box {
 .gs-webResult.gs-result a.gs-title:link {
   color: var(--brand-primary--dark) !important;
 }
+
+.gs-image-box {
+  margin-inline-end: 0.5rem !important;
+}
+
+.gsc-control-cse,
+.gsc-control-cse .gsc-table-result {
+  font-family: var(--cd-font--roboto) !important;
+}
