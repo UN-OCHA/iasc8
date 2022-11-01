@@ -52,7 +52,7 @@
     {% block content %}
       {# Check if the title field has content #}
       {% if content.field_twitter_feed_title.0 %}
-        <h2 class="cd-sidebar__label">{{ content.field_twitter_feed_title }}</h2>
+        <h2 class="cd-block-title cd-block-title--underline cd-sidebar__label">{{ content.field_twitter_feed_title }}</h2>
       {% endif %}
       {% if content.field_twitter_list.0 %}
         <a class="twitter-timeline" data-height="500" href="https://twitter.com/{{ content.field_twitter_handle.0 }}/lists/{{ content.field_twitter_list.0 }}">A Twitter list by {{ content.field_twitter_handle.0 }}</a>
