@@ -67,7 +67,7 @@
   margin-bottom: 2rem;
 }
 
-.path-frontpage .field--name-field-content .viewsreference--view-title {
+/* .path-frontpage .field--name-field-content .viewsreference--view-title {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
@@ -75,7 +75,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-top: 1rem;
-}
+} */
 
 .path-frontpage .cd-layout-sidebar-first .viewsreference--view-title {
   margin-top: 1rem;
