@@ -16,17 +16,20 @@ class IascServicesSearch extends ControllerBase {
    * {@inheritdoc}
    */
   public static function execute(Request $request) {
-    $active_facets = iasc_service_landing_block_facets();
+    $active_facets = array_keys(iasc_service_landing_block_facets());
     $filters = [];
 
     foreach ($active_facets as $facet_name) {
-      $facets = $request->get($facet_name);
+      $facets = $request->get($facet_name, []);
+
       if (!is_array($facets)) {
         $facets = [$facets];
       }
 
       foreach ($facets as $facet) {
-        $filters[] = $facet;
+        if (!empty($facet)) {
+          $filters[] = $facet;
+        }
       }
     }
 
