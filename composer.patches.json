@@ -17,6 +17,9 @@
     "drupal/search_api": {
       "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "https://git.drupalcode.org/project/search_api/-/merge_requests/8.diff"
     },
+    "drupal/search_api_attachments": {
+      "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
+    },
     "drupal/search_api_solr": {
       "#3314711-21: empty specific languages": "https://www.drupal.org/files/issues/2022-10-24/search_api_solr-empty-specific-languages-3314711-21.patch"
     },
