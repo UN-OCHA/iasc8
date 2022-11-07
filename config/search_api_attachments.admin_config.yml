@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 9o2nyVLLLeuFsboLJzHBTA0DoHb4TmUj6rGPG_cLXHY
 extraction_method: solr_extractor
+cache_backend: search_api_attachments.cache_files
 tika_extractor_configuration:
   java_path: java
   tika_path: ''
@@ -19,3 +20,4 @@ python_pdf2txt_extractor_configuration:
 pdftotext_extractor_configuration:
   pdftotext_path: pdftotext
 preserve_cache: true
+read_text_files_directly: false
