@@ -1,7 +1,3 @@
-.group--view-mode-full .field,
-.node--view-mode-full .field {
-  margin-bottom: 1rem;
-}
 .group--view-mode-full .field--label-inline,
 .node--view-mode-full .field--label-inline {
   overflow: hidden;
@@ -18,6 +14,9 @@
 
 /* WYSIWYG body field on nodes. */
 .field--name-field-description {
+  margin-bottom: 2rem;
+}
+.cd-layout-main-content .field--type-text-with-summary {
   margin-bottom: 2rem;
 }
 
@@ -40,7 +39,7 @@
   margin-bottom: 2rem !important;
 }
 
-.field--name-field-meeting-notes > .field__label,
+/* .field--name-field-meeting-notes > .field__label,
 .field--name-field-meeting-agendas > .field__label,
 .field--name-field-oa-section > .field__label,
 .field--name-field-iasc-audience > .field__label,
@@ -58,7 +57,7 @@
     border-bottom: 3px solid var(--cd-blue-grey);
     font-size: 1.5rem;
     font-weight: 400;
-}
+} */
 
 .field--name-field-meeting-notes .field__item,
 .field--name-field-meeting-agendas .field__item,
@@ -93,7 +92,7 @@
   margin-bottom: 2rem !important;
 }
 
-.cd-layout-sidebar-first .cd-location > .field__label,
+/* .cd-layout-sidebar-first .cd-location > .field__label,
 .cd-layout-sidebar-first .field--name-field-contact > .field__label,
 .cd-layout-sidebar-first .field--name-field-meeting-notes > .field__label,
 .cd-layout-sidebar-first .field--name-field-meeting-agendas > .field__label,
@@ -130,7 +129,7 @@
   border-bottom: 1px solid var(--brand-primary);
   font-size: 1.125rem;
   font-weight: 600;
-}
+} */
 /* Margin resets because nested fields are hard. */
 .node--view-mode-bio-long .field--name-field-organisation,
 .node--view-mode-bio-short .field--name-field-organisation {
@@ -155,9 +154,19 @@
 }
 
 .field--name-field-referenced-docs > .field__label {
+  margin-bottom: 0;
+}
+
+.field--name-field-group-banner,
+.field--name-field-banner-image .field__item,
+.field--name-field-published-date {
   margin-bottom: 1rem;
 }
 
+.field--name-field-banner-text,
+.field--name-field-oa-banner-text {
+  margin-bottom: 2rem;
+}
 /* Banner caption. */
 .field--name-field-banner-text,
 .field--name-field-oa-banner-text {
@@ -167,6 +176,7 @@
   font-style: italic;
 }
 
+/* AAP Services fields with cd-bullet-list styles */
 .field--name-field-service-coverage-region ul,
 .field--name-field-kind-of-data ul,
 .field--name-field-relevant-hpc-stage ul,
@@ -175,7 +185,8 @@
 .field--name-field-links-to-relevant-docs ul,
 .field--name-field-iasc-group-space ul,
 .field--name-field-referenced-docs ul,
-.field--name-field-links ul {
+.field--name-field-links ul,
+.field--name-field-service-coverage-country ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -189,13 +200,26 @@
 .field--name-field-links-to-relevant-docs ul li,
 .field--name-field-iasc-group-space ul li,
 .field--name-field-referenced-docs ul li,
-.field--name-field-links ul li {
+.field--name-field-links ul li,
+.field--name-field-service-coverage-country ul li {
+  margin-top: 0 !important;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
   background-image: url("../../img/icons/list-bullet.svg");
   background-repeat: no-repeat;
   background-position: top 7px left 0;
   background-size: 9px 9px;
+}
+
+/* AAP Services fields in sidebar */
+.cd-layout-sidebar-first .field--name-field-updated,
+.cd-layout-sidebar-first .field--name-field-agency-initiative-or-group,
+.cd-layout-sidebar-first .field--name-field-type-of-entity,
+.cd-layout-sidebar-first .field--name-field-focal-point,
+.cd-layout-sidebar-first .field--name-field-featured-categories
+
+{
+  margin-bottom: 2rem;
 }
 
 /* This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
@@ -246,14 +270,14 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
   fill: var(--brand-highlight);
 }
 
-/*Multiple members separated by hr. */
-.field--name-field-membership > .field__items > .field__item + .field__item,
+/* Multiple members separated by hr. */
+/* .field--name-field-membership > .field__items > .field__item + .field__item,
 .field--name-field-contact > .field__items > .field__item + .field__item,
 .field--name-field-contacts > .field__item + .field__item {
   margin: 1rem 0;
   padding-top: 1rem;
   border-top: 1px solid var(--cd-blue-grey);
-}
+} */
 
 .field__item p:first-child {
   margin-top: 0;

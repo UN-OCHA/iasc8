@@ -25,6 +25,10 @@
   }
 }
 
+.cd-layout-content .view-header {
+  margin-bottom: 2rem;
+}
+
 .cd-layout-sidebar-first .views-exposed-form .form--inline {
   margin-bottom: 1rem;
 }
@@ -69,7 +73,7 @@
   word-wrap: normal;
 }
 
-.region-facets .block-search h2,
+/* .region-facets .block-search h2,
 .region-sidebar-first .block-search h2,
 .region-sidebar-second .block-search h2 {
   margin-bottom: 1rem;
@@ -79,7 +83,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-top: 0;
-}
+} */
 
 .region-facets .block-search form .cd-form--inline label,
 .region-sidebar-first .block-search form .cd-form--inline label,
@@ -205,6 +209,10 @@
 .view-iasc-services .pager {
     margin-bottom: 6rem;
   }
+}
+
+.cd-layout-sidebar-first .more-link {
+  margin: -1rem 0 2rem;
 }
 
 .more-link {
