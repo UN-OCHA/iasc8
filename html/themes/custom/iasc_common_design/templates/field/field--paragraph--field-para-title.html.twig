@@ -37,10 +37,23 @@
  * @see template_preprocess_field()
  */
 #}
-<div class="field__items">
-  {% for item in items %}
-    {% if item.content|render|striptags|trim %}
-      <div class="field__item">{{ item.content }}</div>
-    {% endif %}
-  {% endfor %}
-</div>
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+    'cd-block-title cd-block-title--underline'
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{% for item in items %}
+  <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+{% endfor %}

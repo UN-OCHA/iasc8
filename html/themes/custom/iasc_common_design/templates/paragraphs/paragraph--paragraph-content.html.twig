@@ -50,12 +50,8 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
 
-    <div class="cd-block-title cd-content--compact">
-      {{ content.field_para_title }}
-    </div>
-
     {% block content %}
-      {{ content|without('field_para_title') }}
+      {{ content }}
     {% endblock %}
 
   </div>

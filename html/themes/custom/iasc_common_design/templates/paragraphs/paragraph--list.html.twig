@@ -52,7 +52,7 @@
 
     {# Check if the title field has content #}
     {% if content.field_list_title.0 %}
-      <h2 class="cd-block-title cd-block-title--underline">{{ content.field_list_title }}</h2>
+      {{ content.field_list_title }}
     {% endif %}
 
     {% block content %}

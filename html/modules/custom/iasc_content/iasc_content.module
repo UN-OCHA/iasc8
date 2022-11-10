@@ -1366,7 +1366,7 @@ function iasc_content_preprocess_paragraph__meetings_upcoming(&$variables) {
   $build = [
     'future_title' => [
       '#type' => 'markup',
-      '#markup' => t('<h2>Upcoming meetings</h2>'),
+      '#markup' => t('<h2 class="cd-block-title cd-block-title--underline">Upcoming meetings</h2>'),
     ],
     'future' => $view_builder->viewMultiple($meetings, 'teaser'),
   ];
@@ -1468,7 +1468,7 @@ function iasc_content_preprocess_paragraph__meetings_past(&$variables) {
   $build = [
     'past_title' => [
       '#type' => 'markup',
-      '#markup' => t('<h2>Past meetings</h2>'),
+      '#markup' => t('<h2 class="cd-block-title cd-block-title--underline">Past meetings</h2>'),
     ],
     'past' => $view_builder->viewMultiple($meetings, 'teaser'),
   ];
