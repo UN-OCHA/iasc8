@@ -277,18 +277,18 @@ aside .paragraph--type--content-item .group--view-mode-teaser .field__label {
 	font-weight: 400;
 } */
 
-/* .paragraph--type--list .cd-styled-list,
+.paragraph--type--list .cd-styled-list,
 .paragraph--type--teaser-grid .cd-grid {
 	padding-top: 1rem;
 	border-top: 3px solid var(--cd-blue-grey);
-} */
+}
 
 /* No top border if there is a heading */
-/* .paragraph--type--list h2 + .cd-styled-list,
+.paragraph--type--list h2 + .cd-styled-list,
 .paragraph--type--teaser-grid h2 + .cd-grid {
 	padding-top: 0;
 	border-top: 0 solid var(--cd-blue-grey);
-} */
+}
 
 .paragraph--type--list .cd-styled-list {
 	padding-top: 1rem;
@@ -300,6 +300,7 @@ aside .paragraph--type--content-item .group--view-mode-teaser .field__label {
 	border-top: 0 solid var(--cd-blue-grey);
 }
 
+.paragraph--type--teaser-item,
 .paragraph--type--list-item {
   margin-bottom: 1rem;
 }

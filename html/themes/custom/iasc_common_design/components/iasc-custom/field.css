@@ -159,7 +159,7 @@
 
 .field--name-field-group-banner,
 .field--name-field-banner-image .field__item,
-.field--name-field-published-date {
+.node--view-mode-full .field--name-field-published-date {
   margin-bottom: 1rem;
 }
 
