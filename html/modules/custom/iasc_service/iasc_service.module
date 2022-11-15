@@ -5,10 +5,8 @@
  * IASC Services.
  */
 
-use Drupal\facets\Entity\Facet;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\search_api\Entity\Index;
-use Drupal\Taxonomy\Entity\Term;
 
 /**
  * Implements hook_preprocess_paragraph().
