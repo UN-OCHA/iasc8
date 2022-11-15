@@ -14,27 +14,7 @@
   }
 }
 
-.paragraph--type--services-landing-block form {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid var(--cd-blue-grey);
-}
-@media (min-width: 1024px) {
-  .paragraph--type--services-landing-block form {
-    margin-bottom: 6rem;
-  }
-}
-
-.paragraph--type--services-landing-block .cd-form__group {
-  margin-bottom: 2rem;
-}
-
-.paragraph--type--services-landing-block label {
-  margin-bottom: 0.25rem;
-  color: var(--brand-primary);
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.paragraph--type--services-landing-block select {
-  width: 100%;
+/* Restrict width so it match the body text field on AAP landing page */
+.paragraph--type--services-landing-block {
+  max-width: var(--cd-max-content-width);
 }
