@@ -46,12 +46,13 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+{{ attach_library('iasc_common_design/google-cse') }}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <script async defer src="https://cse.google.com/cse.js?cx=c772ac676b07a47e3"></script>
       <div class="gcse-searchbox-only"></div>
-      <script async src="https://cse.google.com/cse.js?cx=c772ac676b07a47e3"></script>
     {% endblock %}
   </div>
 {% endblock paragraph %}
