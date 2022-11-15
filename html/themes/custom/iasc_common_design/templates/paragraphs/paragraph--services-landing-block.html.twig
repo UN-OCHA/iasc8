@@ -47,28 +47,11 @@
   ]
 %}
 
-{{ attach_library('select_a11y/select_a11y.widget') }}
-
-{% if (facets) %}
-  {% block paragraph %}
-    <div{{ attributes.addClass(classes) }}>
-      {% block content %}
-        <form method="POST" action="/services-search">
-          {% for facet in facets %}
-            <div class="cd-form__group">
-              <label for="{{ facet.name }}">{{ facet.label }}</label>
-              <select class="{{ facet.name }} select-a11y-widget" name="{{ facet.name }}[]" multiple id="{{ facet.name }}" data-select-a11y-config="{'multiple':true,'placeholder':{'id':','text':'Select'}}">
-                {% for option in facet.options %}
-                  <option value="{{ option.key }}">{{ option.label }}</option>
-                {% endfor %}
-              </select>
-            </div>
-          {% endfor %}
-          <div class="operations form-actions">
-            <input class="cd-button cd-button--bold cd-button--uppercase cd-button--wide" type="submit" value="{% trans %}Show Results{% endtrans %}">
-          </div>
-        </form>
-      {% endblock %}
-    </div>
-  {% endblock paragraph %}
-{% endif %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="gcse-searchbox-only"></div>
+      <script async src="https://cse.google.com/cse.js?cx=c772ac676b07a47e3"></script>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
