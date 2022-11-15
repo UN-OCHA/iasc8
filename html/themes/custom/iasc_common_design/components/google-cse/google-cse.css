@@ -96,3 +96,7 @@ form.gsc-search-box {
 .gsc-control-cse .gsc-table-result {
   font-family: var(--cd-font--roboto) !important;
 }
+
+.gcsc-more-maybe-branding-root {
+  display: none !important;
+}
