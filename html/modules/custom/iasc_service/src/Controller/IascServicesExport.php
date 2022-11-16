@@ -4,6 +4,7 @@ namespace Drupal\iasc_service\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\File\FileSystem;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
@@ -32,12 +33,19 @@ class IascServicesExport extends ControllerBase {
    */
   protected $entityQuery;
 
+  /** The module extension list.
+   *
+   * @var \Drupal\Core\Extension\ModuleExtensionList
+   */
+  protected $moduleExtensionList;
+
   /**
    * Class constructor.
    */
-  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityTypeManager) {
+  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityTypeManager, ModuleExtensionList $moduleExtensionList) {
     $this->fileSystem = $fileSystem;
     $this->entityTypeManager = $entityTypeManager;
+    $this->moduleExtensionList = $moduleExtensionList;
   }
 
   /**
@@ -46,7 +54,7 @@ class IascServicesExport extends ControllerBase {
   public function export() {
     // Set paths.
     $destination_name = 'template_' . date('Ymdhni') . '.xlsx';
-    $source = drupal_get_path('module', 'iasc_service') . '/bulk_template.xlsx';
+    $source = $this->moduleExtensionList->getPath('iasc_service') . '/bulk_template.xlsx';
     $filename = $this->fileSystem->realpath($source);
 
     $reader = new Xlsx();
