@@ -33,7 +33,8 @@ class IascServicesExport extends ControllerBase {
    */
   protected $entityQuery;
 
-  /** The module extension list.
+  /**
+   * The module extension list.
    *
    * @var \Drupal\Core\Extension\ModuleExtensionList
    */
