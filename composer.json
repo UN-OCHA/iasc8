@@ -83,6 +83,7 @@
         "drupal/views_data_export": "^1.1",
         "drupal/viewsreference": "^2.0.0-beta3",
         "drupal/webform": "^6.1.2",
+        "drupal/xmlsitemap": "^1.4",
         "drush/drush": "^10.0.0",
         "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^2.0",
