@@ -42,12 +42,17 @@
 
 .paragraph--type--paragraph-content ul li,
 .paragraph--type--paragraph-text ul li {
-	padding-bottom: 0.75rem;
-  padding-left: 1.5rem;
-	background-image: url("../../img/icons/list-bullet.svg");
-	background-repeat: no-repeat;
-	background-position: top 7px left 0;
-	background-size: 9px 9px;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%5C %3Cpath fill='%23ff4d59' d='M14,48a4,4,0,0,1-2.83-6.83L28.34,24,11.17,6.83a4,4,0,0,1,5.66-5.66l20,20a4,4,0,0,1,0,5.66l-20,20A4,4,0,0,1,14,48Z'/%3E%5C %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0.75rem;
+  background-size: 0.5rem 0.5rem;
+}
+
+/* Override the generic .cd-layout-sidebar-first ul */
+.cd-layout-sidebar-first .paragraph--type--paragraph-content ul li,
+.cd-layout-sidebar-first .paragraph--type--paragraph-text ul li {
+  margin-top: 0;
 }
 
 .paragraph--type--paragraph-content.paragraph__image--align-left .field--name-field-paragraph-text p:last-child,
@@ -284,23 +289,26 @@ aside .paragraph--type--content-item .group--view-mode-teaser .field__label {
 }
 
 /* No top border if there is a heading */
-.paragraph--type--list h2 + .cd-styled-list,
+.paragraph--type--list .cd-block-title + .cd-styled-list,
+.paragraph--type--teaser-grid h2 + .cd-grid {
+	border-top: 0 solid var(--cd-blue-grey);
+}
 .paragraph--type--teaser-grid h2 + .cd-grid {
 	padding-top: 0;
-	border-top: 0 solid var(--cd-blue-grey);
-}
-
-.paragraph--type--list .cd-styled-list {
-	padding-top: 1rem;
-	border-top: 3px solid var(--cd-blue-grey);
-}
-/* No top border if there is a heading */
-.paragraph--type--list h2 + .cd-styled-list {
-	padding-top: 0;
-	border-top: 0 solid var(--cd-blue-grey);
 }
 
 .paragraph--type--teaser-item,
 .paragraph--type--list-item {
   margin-bottom: 1rem;
+}
+
+.path-frontpage .paragraph--type--featured .cd-block-title,
+.path-frontpage .paragraph--type--list .cd-block-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: var(--brand-primary);
+  border-bottom: 3px solid var(--cd-blue-grey);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
 }

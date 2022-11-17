@@ -19,7 +19,9 @@
 .cd-layout-main-content .field--type-text-with-summary {
   margin-bottom: 2rem;
 }
-
+.cd-layout-main-content > .field {
+  margin-bottom: 1rem;
+}
 .group--view-mode-search-result .field--name-field-description {
   margin-bottom: 0;
 }
@@ -70,12 +72,12 @@
 .field--name-field-info-private .field__item,
 .field--name-field-oa-media .field__item,
 .field--name-field-main-image .field__item,
-.field--name-field-media-files .field__item {
+.field--name-field-media-files .field__item,
+.field--name-field-contact {
   margin-bottom: 1rem;
 }
 
 .cd-layout-sidebar-first .cd-location,
-.cd-layout-sidebar-first .field--name-field-contact,
 .cd-layout-sidebar-first .field--name-field-meeting-notes,
 .cd-layout-sidebar-first .field--name-field-meeting-agendas,
 .cd-layout-sidebar-first .field--name-field-oa-section,
@@ -216,9 +218,7 @@
 .cd-layout-sidebar-first .field--name-field-agency-initiative-or-group,
 .cd-layout-sidebar-first .field--name-field-type-of-entity,
 .cd-layout-sidebar-first .field--name-field-focal-point,
-.cd-layout-sidebar-first .field--name-field-featured-categories
-
-{
+.cd-layout-sidebar-first .field--name-field-featured-categories {
   margin-bottom: 2rem;
 }
 
