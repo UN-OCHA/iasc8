@@ -1,0 +1,29 @@
+uuid: 69532cf7-3b60-4626-8104-f82094c85a97
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.services_relevant_hpc_stage
+  module:
+    - facets
+    - system
+  theme:
+    - iasc_common_design
+id: relevanthpcstage
+theme: iasc_common_design
+region: facets
+weight: -18
+provider: null
+plugin: 'facet_block:services_relevant_hpc_stage'
+settings:
+  id: 'facet_block:services_relevant_hpc_stage'
+  label: 'Stages of HPC'
+  label_display: visible
+  provider: facets
+  block_id: relevanthpcstage
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"

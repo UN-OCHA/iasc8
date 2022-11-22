@@ -1,0 +1,68 @@
+uuid: 24cfbb53-852b-4bad-b0ac-af67f6140bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.services
+    - views.view.iasc_services
+  module:
+    - search_api
+id: services_summary
+name: 'Services summary'
+facet_source_id: 'search_api:views_page__iasc_services__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '-10'
+    settings: {  }
+  reset_facets_pretty_path:
+    processor_id: reset_facets_pretty_path
+    weights:
+      build: '-3'
+    settings:
+      link_text: 'Reset all filters'
+      clear_string: 1
+  reset_string_ocha:
+    processor_id: reset_string_ocha
+    weights:
+      build: '-7'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-9'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-8'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text
+facets:
+  aap_services:
+    checked: true
+    label: Services
+    separator: ', '
+    show_count: false
+    weight: -10
+  aap_service_coverage_region:
+    checked: true
+    label: 'Service Coverage Region'
+    separator: ', '
+    show_count: false
+    weight: -9
+  aap_service_coverage_country:
+    checked: true
+    label: 'Service Coverage Country'
+    separator: ', '
+    show_count: false
+    weight: -8
+  services_relevant_hpc_stage:
+    checked: true
+    label: 'Relevant HPC Stage'
+    separator: ', '
+    show_count: false
+    weight: -7

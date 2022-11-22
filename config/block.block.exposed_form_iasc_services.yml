@@ -1,0 +1,29 @@
+uuid: 0cd3f7e7-b964-414d-b936-9d791dbfc1aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.iasc_services
+  module:
+    - system
+    - views
+  theme:
+    - iasc_common_design
+id: exposed_form_iasc_services
+theme: iasc_common_design
+region: facets
+weight: -23
+provider: null
+plugin: 'views_exposed_filter_block:iasc_services-page_1'
+settings:
+  id: 'views_exposed_filter_block:iasc_services-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'Looking for something specific?'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/rg2/service-directory/services\r\n/rg2/service-directory/services/*"
