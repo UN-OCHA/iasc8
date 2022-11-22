@@ -42,11 +42,85 @@ function iasc_service_landing_block_facets() {
 
 /**
  * Build services landing block.
- *
- * @see html/themes/custom/iasc_common_design/templates/paragraphs/paragraph--services-landing-block.html.twig
  */
 function iasc_service_preprocess_paragraph_services_landing_block(&$vars) {
-  // Logic is inside template.
+  $active_facets = iasc_service_landing_block_facets();
+  $lookup = [];
+
+  $index = Index::load('services');
+  $query = $index->query([
+    'limit' => 0,
+  ]);
+
+  $server = $index->getServerInstance();
+  if ($server->supportsFeature('search_api_facets')) {
+    $facet_options = [];
+    foreach ($active_facets as $facet_name => $sort_by) {
+      $facet = Facet::load($facet_name);
+      if ($facet) {
+        $field_name = $facet->getFieldIdentifier();
+        $lookup[$field_name] = [
+          'key' => $facet->getUrlAlias(),
+          'name' => $facet_name,
+          'label' => $facet->label(),
+        ];
+        $facet_options[$field_name] = [
+          'field' => $field_name,
+          'limit' => 0,
+          'operator' => 'OR',
+          'min_count' => 1,
+          'missing' => TRUE,
+        ];
+      }
+    }
+
+    $query->setOption('search_api_facets', $facet_options);
+  }
+
+  $results = $query->execute();
+  $facets = $results->getExtraData('search_api_facets', []);
+
+  foreach ($active_facets as $facet_name => $sort_by) {
+    $facet = Facet::load($facet_name);
+    if ($facet) {
+      $field_name = $facet->getFieldIdentifier();
+      if (!isset($facets[$field_name])) {
+        continue;
+      }
+
+      $facet_values = $facets[$field_name];
+
+      $tids = [];
+      foreach ($facet_values as $facet_value) {
+        $id = trim($facet_value['filter'], '"');
+        $tids[] = $id;
+      }
+
+      $terms = Term::loadMultiple($tids);
+
+      $options = [];
+      foreach ($facet_values as $facet_value) {
+        $id = trim($facet_value['filter'], '"');
+        if (isset($terms[$id])) {
+          $options[] = [
+            'key' => $lookup[$field_name]['key'] . ':' . $id,
+            'label' => $terms[$id]->getName() . ' (' . $facet_value['count'] . ')',
+          ];
+        }
+      }
+
+      // Sort options.
+      if ($sort_by === 'label') {
+        uasort($options, function ($a, $b) {
+          return strnatcasecmp($a['label'], $b['label']);
+        });
+      }
+
+      $vars['facets'][$field_name]['label'] = $lookup[$field_name]['label'];
+      $vars['facets'][$field_name]['name'] = $lookup[$field_name]['name'];
+      $vars['facets'][$field_name]['options'] = $options;
+    }
+  }
 }
 
 /**
