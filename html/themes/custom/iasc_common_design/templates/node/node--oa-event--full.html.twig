@@ -153,26 +153,6 @@
 
         {{ content|without('field_oa_date', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image', 'field_contact', 'field_city', 'field_additional_locations', 'field_venue', 'field_room', 'field_host', 'field_contact', 'field_iasc_audience', 'field_meeting_agendas', 'field_meeting_notes', 'field_dial_in_meeting') }}
         {{ content.field_content }}
-
-        {% if logged_in %}
-          {% if dialIn %}
-            <div class="cd-alert">
-              <div aria-live="polite">
-                <svg class="cd-icon cd-icon--about" aria-hidden="true" focusable="false" width="16" height="16">
-                  <use xlink:href="#cd-icon--about"></use>
-                </svg>
-                <div class="cd-alert__container cd-max-width [ cd-flow ]">
-                  <div class="cd-alert__message">
-                    {% if dialIn %}
-                      {{ content.field_dial_in_meeting }}
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
-          {% endif %}
-        {% endif %}
-
       </div>
 
       <aside class="cd-layout-sidebar-first" role="complementary">
