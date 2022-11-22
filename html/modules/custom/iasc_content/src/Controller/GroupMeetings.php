@@ -204,7 +204,7 @@ class GroupMeetings extends ControllerBase {
         ],
         'future_title' => [
           '#type' => 'markup',
-          '#markup' => $this->t('<h2 id="meetings-upcoming">Upcoming meetings</h2><h3>Meetings from @from until @until.</h3>', [
+          '#markup' => $this->t('<h2 id="meetings-upcoming" class="cd-block-title cd-block-title--underline">Upcoming meetings</h2><h3>Meetings from @from until @until.</h3>', [
             '@from' => $future_start->format($date_format),
             '@until' => $future_end->format($date_format),
           ]),
@@ -316,7 +316,7 @@ class GroupMeetings extends ControllerBase {
         ],
         'past_title' => [
           '#type' => 'markup',
-          '#markup' => $this->t('<h2 id="meetings-past">Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
+          '#markup' => $this->t('<h2 id="meetings-past" class="cd-block-title cd-block-title--underline">Past meetings</h2><h3>Meetings from @from until @until.</h3>', [
             '@from' => $past_start->format($date_format),
             '@until' => $past_end->format($date_format),
           ]),

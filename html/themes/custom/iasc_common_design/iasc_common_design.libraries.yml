@@ -48,6 +48,11 @@ iasc-custom:
       components/iasc-custom/user.css: {}
       components/iasc-custom/views.css: {}
 
+cd-block-title:
+  css:
+    theme:
+      components/cd-block-title/cd-block-title.css: {}
+
 cd-filter:
   css:
     theme:

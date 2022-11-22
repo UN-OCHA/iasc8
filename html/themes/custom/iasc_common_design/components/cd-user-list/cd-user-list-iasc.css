@@ -27,7 +27,9 @@
   font-size: 1rem;
 }
 
-.cd-user-list__position {
+.cd-user-list__position,
+.cd-user-list__city,
+.cd-user-list__extra {
   font-size: 0.875rem;
 }
 

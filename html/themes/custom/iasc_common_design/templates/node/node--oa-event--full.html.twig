@@ -179,7 +179,7 @@
       <aside class="cd-layout-sidebar-first" role="complementary">
         {% if content.field_city|render or content.field_additional_locations|render or content.field_venue|render or content.field_room|render %}
           <div class="cd-location">
-            <div class="cd-sidebar__label">{% trans %}Location{% endtrans %}</div>
+            <div class="cd-sidebar__label cd-block-title cd-block-title--underline">{% trans %}Location{% endtrans %}</div>
             {{ content.field_city }}
             {{ content.field_additional_locations }}
             {{ content.field_venue }}

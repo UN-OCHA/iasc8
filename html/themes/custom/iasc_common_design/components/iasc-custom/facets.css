@@ -1,11 +1,11 @@
-.block-facets h2 {
+/* .block-facets h2 {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
   border-bottom: 1px solid var(--brand-primary);
   font-size: 1.125rem;
   font-weight: 600;
-}
+} */
 
 .block-facets .form-item,
 .block-facets .form-actions {
