@@ -3,23 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
-    - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
     - field.storage.media.field_media_file
     - field.storage.node.field_media_files
-    - field.storage.node.field_category
+    - field.storage.node.field_document_type
+    - field.storage.group.field_description
+    - field.storage.node.field_oa_date
     - field.storage.node.field_published_date
-    - search_api.server.default_solr_server
+    - field.storage.node.field_category
+    - search_api.server.local
     - core.entity_view_mode.node.full
   module:
     - search_api_solr
     - group
     - node
     - user
-    - taxonomy
     - media
+    - taxonomy
     - search_api
     - iasc_content
     - search_api_attachments
@@ -28,6 +28,7 @@ third_party_settings:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
+    debug_finalize: false
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: regex
@@ -64,7 +65,8 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-      specific_languages: { }
+      specific_languages:
+        en: '0'
 _core:
   default_config_hash: UxSOP7yd3TuBoCjjk6VjP8UcKfEWhAyiAYII6ZSAJx4
 id: default_solr_index
@@ -205,7 +207,7 @@ field_settings:
     type: solr_text_omit_norms
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:group':
           iasc_group: default
@@ -286,6 +288,7 @@ processor_settings:
   aggregated_field:
     weights:
       add_properties: 20
+  auto_aggregated_fulltext_field: {  }
   content_access:
     weights:
       preprocess_index: -6
@@ -366,4 +369,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: false
-server: default_solr_server
+server: local

@@ -11,6 +11,8 @@ id: iasc_statements_product_category_label
 name: 'Product Category'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: iasc_statements_product_category_label
 facet_source_id: 'search_api:views_page__resources__page_statements'
 field_identifier: product_category_label

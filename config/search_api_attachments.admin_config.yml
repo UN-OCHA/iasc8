@@ -1,7 +1,7 @@
 _core:
   default_config_hash: 9o2nyVLLLeuFsboLJzHBTA0DoHb4TmUj6rGPG_cLXHY
 extraction_method: solr_extractor
-cache_backend: search_api_attachments.cache_files
+cache_backend: search_api_attachments.cache_keyvalue
 tika_extractor_configuration:
   java_path: java
   tika_path: ''

@@ -11,6 +11,8 @@ id: aap_complaints_and_feedback_mechanism
 name: 'Complaints and feedback mechanism'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: aap_complaints_and_feedback_mechanism
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 field_identifier: field_complaints_and_feedback

@@ -5,26 +5,28 @@ dependencies:
   config:
     - field.storage.node.field_agency_initiative_or_group
     - field.storage.node.field_complaints_and_feedback
-    - field.storage.node.field_share_data
     - field.storage.node.field_global_focal_point
+    - field.storage.node.field_interest
+    - field.storage.node.field_kind_of_data
     - field.storage.node.field_relevant_hpc_stage
     - field.storage.node.field_service_coverage_country
     - field.storage.node.field_service_coverage_region
     - field.storage.node.field_services
-    - field.storage.node.field_interest
+    - field.storage.node.field_share_data
     - field.storage.node.field_type_of_entity
-    - field.storage.node.field_kind_of_data
-    - search_api.server.default_solr_server
+    - search_api.server.local
     - core.entity_view_mode.node.full
   module:
     - search_api_solr
     - node
     - search_api
+    - iasc_content
 third_party_settings:
   search_api_solr:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
+    debug_finalize: false
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
@@ -51,6 +53,9 @@ third_party_settings:
       maxntp: 2000
       boost: false
       interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
     advanced:
       index_prefix: ''
       collection: ''
@@ -58,7 +63,8 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-      specific_languages: { }
+      specific_languages:
+        en: '0'
 id: services
 name: Services
 description: ''
@@ -158,7 +164,7 @@ field_settings:
     type: text
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:node':
           service: full
@@ -182,6 +188,9 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  entity_type: {  }
+  iasc_content_store_all_dates: {  }
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range: {  }
@@ -191,4 +200,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
-server: default_solr_server
+  track_changes_in_references: false
+server: local
