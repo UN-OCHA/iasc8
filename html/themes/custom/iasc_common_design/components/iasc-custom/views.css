@@ -1,4 +1,4 @@
-.viewsreference--view-title {
+/* .viewsreference--view-title {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
@@ -6,9 +6,9 @@
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 0;
-}
+} */
 
-.cd-layout-sidebar-first .viewsreference--view-title {
+/* .cd-layout-sidebar-first .viewsreference--view-title {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
@@ -16,13 +16,17 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-top: 0;
-}
+} */
 
 @media (min-width: 1200px) {
   .view-updates .view-header,
   .view-iasc-group-content .view-header {
     padding-right: 0;
   }
+}
+
+.cd-layout-content .view-header {
+  margin-bottom: 2rem;
 }
 
 .cd-layout-sidebar-first .views-exposed-form .form--inline {
@@ -69,7 +73,7 @@
   word-wrap: normal;
 }
 
-.region-facets .block-search h2,
+/* .region-facets .block-search h2,
 .region-sidebar-first .block-search h2,
 .region-sidebar-second .block-search h2 {
   margin-bottom: 1rem;
@@ -79,7 +83,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-top: 0;
-}
+} */
 
 .region-facets .block-search form .cd-form--inline label,
 .region-sidebar-first .block-search form .cd-form--inline label,
@@ -205,6 +209,10 @@
 .view-iasc-services .pager {
     margin-bottom: 6rem;
   }
+}
+
+.cd-layout-sidebar-first .more-link {
+  margin: -1rem 0 2rem;
 }
 
 .more-link {
