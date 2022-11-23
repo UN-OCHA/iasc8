@@ -15,24 +15,6 @@ a:focus {
   color: var(--brand-primary);
 }
 
-/* .cd-heading-2 {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 3px solid var(--cd-blue-grey);
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.cd-heading-3 {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--iasc-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-} */
-
 @media (min-width: 1200px) {
   [dir="ltr"] .cd-layout-with-sidebar .cd-page-title{
     padding-right: 320px; /* --cd-max-width minus padding, minus --cd-max-content-width */
