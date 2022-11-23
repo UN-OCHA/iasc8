@@ -41,26 +41,6 @@
   margin-bottom: 2rem !important;
 }
 
-/* .field--name-field-meeting-notes > .field__label,
-.field--name-field-meeting-agendas > .field__label,
-.field--name-field-oa-section > .field__label,
-.field--name-field-iasc-audience > .field__label,
-.field--name-field-membership > .field__label,
-.field--name-group-content-access > .field__label,
-.field--name-field-ap-responsibility > .field__label,
-.field--name-field-host > .field__label,
-.field--name-field-info-private > .field__label,
-.field--name-field-oa-media > .field__label,
-.field--name-field-main-image > .field__label,
-.field--name-field-media-files > .field__label {
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    color: var(--brand-primary);
-    border-bottom: 3px solid var(--cd-blue-grey);
-    font-size: 1.5rem;
-    font-weight: 400;
-} */
-
 .field--name-field-meeting-notes .field__item,
 .field--name-field-meeting-agendas .field__item,
 .field--name-field-oa-section .field__item,
@@ -94,44 +74,6 @@
   margin-bottom: 2rem !important;
 }
 
-/* .cd-layout-sidebar-first .cd-location > .field__label,
-.cd-layout-sidebar-first .field--name-field-contact > .field__label,
-.cd-layout-sidebar-first .field--name-field-meeting-notes > .field__label,
-.cd-layout-sidebar-first .field--name-field-meeting-agendas > .field__label,
-.cd-layout-sidebar-first .field--name-field-oa-section > .field__label,
-.cd-layout-sidebar-first .field--name-field-iasc-audience > .field__label,
-.cd-layout-sidebar-first .field--name-field-links > .field__label,
-.cd-layout-sidebar-first .field--name-field-membership > .field__label,
-.cd-layout-sidebar-first .field--name-field-date-closed > .field__label,
-.cd-layout-sidebar-first .field--name-field-external-link > .field__label,
-.cd-layout-sidebar-first .field--name-group-content-access > .field__label,
-.cd-layout-sidebar-first .field--name-field-ap-responsibility > .field__label,
-.cd-layout-sidebar-first .field--name-field-referenced-docs > .field__label,
-.cd-layout-sidebar-first .field--name-field-host > .field__label,
-.cd-layout-sidebar-first .field--name-field-category > .field__label,
-.cd-layout-sidebar-first .cd-location > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-contact > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-meeting-notes > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-meeting-agendas > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-oa-section > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-iasc-audience > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-links > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-membership > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-date-closed > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-external-link > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-group-content-access > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-ap-responsibility > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-referenced-docs > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-host > .cd-sidebar__label,
-.cd-layout-sidebar-first .field--name-field-category > .cd-sidebar__label,
-.field--name-field-ai-title {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-} */
 /* Margin resets because nested fields are hard. */
 .node--view-mode-bio-long .field--name-field-organisation,
 .node--view-mode-bio-short .field--name-field-organisation {
@@ -269,15 +211,6 @@ aside .field--name-field-meeting-agendas .field__items .field__item .field--name
   margin-right: 1rem;
   fill: var(--brand-highlight);
 }
-
-/* Multiple members separated by hr. */
-/* .field--name-field-membership > .field__items > .field__item + .field__item,
-.field--name-field-contact > .field__items > .field__item + .field__item,
-.field--name-field-contacts > .field__item + .field__item {
-  margin: 1rem 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--cd-blue-grey);
-} */
 
 .field__item p:first-child {
   margin-top: 0;
