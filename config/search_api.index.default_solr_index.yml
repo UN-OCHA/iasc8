@@ -22,7 +22,6 @@ dependencies:
     - taxonomy
     - search_api
     - iasc_content
-    - search_api_attachments
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -220,10 +219,6 @@ field_settings:
           oa_worktracker_task: default
           panopoly_landing_page: full
           panopoly_page: full
-  saa_field_media_files:
-    label: 'Search api attachments: Media field for file'
-    property_path: saa_field_media_files
-    type: text
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -297,13 +292,6 @@ processor_settings:
     weights:
       preprocess_index: -10
   entity_type: {  }
-  file_attachments:
-    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
-    number_indexed: 0
-    number_first_bytes: '0'
-    max_filesize: '0'
-    excluded_private: 0
-    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   html_filter:
     weights:
       preprocess_index: -3
