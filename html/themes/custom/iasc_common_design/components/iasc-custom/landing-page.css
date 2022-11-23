@@ -19,6 +19,14 @@
   max-width: var(--cd-max-content-width);
 }
 
+.paragraph--type--services-landing-block .cd-form__group {
+  margin-bottom: 2rem;
+}
+
+.paragraph--type--services-landing-block form {
+  border-bottom: 1px solid var(--cd-blue-grey);
+}
+
 .export-services {
   margin-top: 2rem;
 }
