@@ -105,7 +105,7 @@
         "drupal/console": "~1.0",
         "drupal/core-dev": "^9.3.8",
         "drupal/dev_mode": "^2.3",
-        "drupal/devel": "^4.1",
+        "drupal/devel": "^5.0.2",
         "drupal/devel_php": "^1.5",
         "drupal/stage_file_proxy": "^1.2",
         "drupal/upgrade_rector": "1.x-dev@dev",
