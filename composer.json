@@ -66,7 +66,7 @@
         "drupal/realname": "^2.0@beta",
         "drupal/redirect": "^1.7",
         "drupal/search_api": "^1.14",
-        "drupal/search_api_attachments": "^1.0@beta",
+        "drupal/search_api_attachments": "^9.0",
         "drupal/search_api_solr": "^4.2.3",
         "drupal/seckit": "^2.0",
         "drupal/select2": "^1.6",
