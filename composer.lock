@@ -635,16 +635,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.7.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "423715c6c5156d007e6d3357f7793d9dad510cd4"
+                "reference": "fd263e3e9341d29758025b1a9b2878e3247525be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/423715c6c5156d007e6d3357f7793d9dad510cd4",
-                "reference": "423715c6c5156d007e6d3357f7793d9dad510cd4",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/fd263e3e9341d29758025b1a9b2878e3247525be",
+                "reference": "fd263e3e9341d29758025b1a9b2878e3247525be",
                 "shasum": ""
             },
             "require": {
@@ -685,9 +685,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.7.0"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.7.1"
             },
-            "time": "2022-11-22T21:28:39+00:00"
+            "time": "2022-12-06T22:57:25+00:00"
         },
         {
             "name": "consolidation/config",
@@ -2264,16 +2264,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.4.8",
+            "version": "9.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4"
+                "reference": "5fa639a3ddf0241db08b270f429f9da91d06fdfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a627d1b2a00f2cef0572e37b94dea298800541f4",
-                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4",
+                "url": "https://api.github.com/repos/drupal/core/zipball/5fa639a3ddf0241db08b270f429f9da91d06fdfc",
+                "reference": "5fa639a3ddf0241db08b270f429f9da91d06fdfc",
                 "shasum": ""
             },
             "require": {
@@ -2425,13 +2425,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.4.8"
+                "source": "https://github.com/drupal/core/tree/9.4.9"
             },
-            "time": "2022-10-06T15:57:08+00:00"
+            "time": "2022-12-07T13:36:57+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.4.8",
+            "version": "9.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2475,13 +2475,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.4.8"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.4.9"
             },
             "time": "2022-06-19T16:14:23+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.4.8",
+            "version": "9.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2516,22 +2516,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.5.0-beta2"
+                "source": "https://github.com/drupal/core-project-message/tree/9.5.0-rc1"
             },
             "time": "2022-02-24T17:40:53+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.4.8",
+            "version": "9.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502"
+                "reference": "20a9b373c4b3fc23a56d9d0a591a3c3b3415d433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/684cc844f7b729286f5d62f1ee4b20ab12586502",
-                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/20a9b373c4b3fc23a56d9d0a591a3c3b3415d433",
+                "reference": "20a9b373c4b3fc23a56d9d0a591a3c3b3415d433",
                 "shasum": ""
             },
             "require": {
@@ -2540,7 +2540,7 @@
                 "doctrine/annotations": "~1.13.2",
                 "doctrine/lexer": "~1.2.3",
                 "doctrine/reflection": "~1.2.3",
-                "drupal/core": "9.4.8",
+                "drupal/core": "9.4.9",
                 "egulias/email-validator": "~3.2",
                 "guzzlehttp/guzzle": "~6.5.8",
                 "guzzlehttp/promises": "~1.5.1",
@@ -2602,9 +2602,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.4.8"
+                "source": "https://github.com/drupal/core-recommended/tree/9.4.9"
             },
-            "time": "2022-10-06T15:57:08+00:00"
+            "time": "2022-12-07T13:36:57+00:00"
         },
         {
             "name": "drupal/csp",
@@ -9702,16 +9702,16 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "6.2.7",
+            "version": "6.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "6d6d13b4eda222e7bdb9616545aa67efbe8c6cec"
+                "reference": "0bca4fdcd53e86dea19754b0081f91fe17248a9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/6d6d13b4eda222e7bdb9616545aa67efbe8c6cec",
-                "reference": "6d6d13b4eda222e7bdb9616545aa67efbe8c6cec",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/0bca4fdcd53e86dea19754b0081f91fe17248a9d",
+                "reference": "0bca4fdcd53e86dea19754b0081f91fe17248a9d",
                 "shasum": ""
             },
             "require": {
@@ -9725,11 +9725,13 @@
             },
             "require-dev": {
                 "escapestudios/symfony2-coding-standard": "^3.11",
+                "ext-iconv": "*",
                 "guzzlehttp/guzzle": "^7.2",
                 "nyholm/psr7": "^1.2",
                 "php-http/guzzle7-adapter": "^0.1",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
                 "roave/security-advisories": "dev-master",
@@ -9760,9 +9762,9 @@
             ],
             "support": {
                 "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/6.2.7"
+                "source": "https://github.com/solariumphp/solarium/tree/6.2.8"
             },
-            "time": "2022-09-12T09:20:39+00:00"
+            "time": "2022-12-06T10:22:19+00:00"
         },
         {
             "name": "stack/builder",
@@ -15072,7 +15074,7 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "9.4.8",
+            "version": "9.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -15116,7 +15118,7 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev/tree/9.4.8"
+                "source": "https://github.com/drupal/core-dev/tree/9.4.9"
             },
             "time": "2022-04-14T00:37:13+00:00"
         },
@@ -15888,16 +15890,16 @@
         },
         {
             "name": "laminas/laminas-servicemanager",
-            "version": "3.19.0",
+            "version": "3.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-servicemanager.git",
-                "reference": "ed160729bb8721127efdaac799f9a298963345b1"
+                "reference": "bc2c2cbe2dd90db8b9d16b0618f542692b76ab59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/ed160729bb8721127efdaac799f9a298963345b1",
-                "reference": "ed160729bb8721127efdaac799f9a298963345b1",
+                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/bc2c2cbe2dd90db8b9d16b0618f542692b76ab59",
+                "reference": "bc2c2cbe2dd90db8b9d16b0618f542692b76ab59",
                 "shasum": ""
             },
             "require": {
@@ -15920,14 +15922,14 @@
             "require-dev": {
                 "composer/package-versions-deprecated": "^1.11.99.5",
                 "laminas/laminas-coding-standard": "~2.4.0",
-                "laminas/laminas-container-config-test": "^0.7",
+                "laminas/laminas-container-config-test": "^0.8",
                 "laminas/laminas-dependency-plugin": "^2.2",
                 "mikey179/vfsstream": "^1.6.11@alpha",
                 "ocramius/proxy-manager": "^2.14.1",
-                "phpbench/phpbench": "^1.2.6",
-                "phpunit/phpunit": "^9.5.25",
-                "psalm/plugin-phpunit": "^0.17.0",
-                "vimeo/psalm": "^4.28"
+                "phpbench/phpbench": "^1.2.7",
+                "phpunit/phpunit": "^9.5.26",
+                "psalm/plugin-phpunit": "^0.18.0",
+                "vimeo/psalm": "^5.0.0"
             },
             "suggest": {
                 "ocramius/proxy-manager": "ProxyManager ^2.1.1 to handle lazy initialization of services"
@@ -15974,7 +15976,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-10-10T20:59:22+00:00"
+            "time": "2022-12-01T17:03:38+00:00"
         },
         {
             "name": "laminas/laminas-text",
@@ -16913,16 +16915,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "df1a79430e14e30cd192fe6c05842133d076e58d"
+                "reference": "6ff970a7101acfe99b3048e4bbfbc094e55c5b04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/df1a79430e14e30cd192fe6c05842133d076e58d",
-                "reference": "df1a79430e14e30cd192fe6c05842133d076e58d",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6ff970a7101acfe99b3048e4bbfbc094e55c5b04",
+                "reference": "6ff970a7101acfe99b3048e4bbfbc094e55c5b04",
                 "shasum": ""
             },
             "require": {
@@ -16952,9 +16954,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.14.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.15.0"
             },
-            "time": "2022-11-27T19:09:16+00:00"
+            "time": "2022-12-07T16:12:39+00:00"
         },
         {
             "name": "phpstan/phpstan",
