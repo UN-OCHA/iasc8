@@ -15,6 +15,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/ocha_search.git"
+        },
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
@@ -92,6 +96,7 @@
         "unocha/common_design": "^7.3",
         "unocha/file_checker": "dev-8.x-1.x",
         "unocha/ocha_integrations": "^1.0",
+        "unocha/ocha_search": "^1.0",
         "unocha/ocha_security": "^1.0",
         "unocha/un_date": "^1.0.1",
         "vlucas/phpdotenv": "^2.4",
