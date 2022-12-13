@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 768px) {
-.operations.form-actions input[type="submit"] {
+  .operations.form-actions input[type="submit"] {
     max-width: 16rem;
   }
 }
@@ -18,6 +18,7 @@
   margin-bottom: 4rem;
   border-bottom: 1px solid var(--cd-blue-grey);
 }
+
 @media (min-width: 1024px) {
   .paragraph--type--services-landing-block form {
     margin-bottom: 6rem;

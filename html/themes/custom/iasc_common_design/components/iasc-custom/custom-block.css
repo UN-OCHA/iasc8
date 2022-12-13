@@ -4,13 +4,13 @@
 }
 
 .block--type-block-with-text-and-link .field--name-field-block-title {
+  margin-top: 0;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
   border-bottom: 1px solid var(--brand-primary);
   font-size: 1.125rem;
   font-weight: 600;
-  margin-top: 0;
 }
 
 .block--type-block-with-text-and-link .field--name-field-description {
@@ -56,11 +56,13 @@
 .block--type-block-with-text-and-link .field--name-field-link a:focus {
   outline: 3px solid var(--cd-blue--bright);
 }
+
 @media (min-width: 576px) {
   .block--type-block-with-text-and-link .field--name-field-link a {
     max-width: 16rem;
   }
 }
+
 @media (min-width: 768px) {
   .block--type-block-with-text-and-link .field--name-field-link a {
     width: 100%;

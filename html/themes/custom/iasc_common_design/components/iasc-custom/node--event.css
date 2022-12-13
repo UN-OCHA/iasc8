@@ -20,7 +20,7 @@
   margin-top: 0;
 }
 
-.node--type-oa-event.node--view-mode-teaser .cd-teaser__description > .field  {
+.node--type-oa-event.node--view-mode-teaser .cd-teaser__description > .field {
   margin-bottom: 0;
 }
 
@@ -29,11 +29,11 @@
 }
 
 .node--type-oa-event.node--view-mode-full .cd-teaser__date {
-  min-height: 80px;
-  /* height of calendar icon, helps clear elements below.*/
-  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
+  min-height: 80px;
+  /* height of calendar icon, helps clear elements below. */
+  margin-bottom: 1rem;
 }
 
 .node--type-oa-event.node--view-mode-full .cd-date {
@@ -60,18 +60,14 @@
 
 .cd-teaser__date .next-5 {
   clear: both;
-  padding-top: 1rem;
+  flex: 1 0 100%;
+  order: 4;
+  width: 100%;
+  padding-top: 2rem;
 }
 
 .cd-teaser__date .next-5 h3 {
   margin: 0;
-}
-
-.cd-teaser__date .next-5 {
-  padding-top: 2rem;
-  order: 4;
-  flex: 1 0 100%;
-  width: 100%;
 }
 
 .date__human_readable {
@@ -95,16 +91,16 @@
 @media (min-width: 576px) {
   .date__human_readable {
     flex: 0 1 25%;
-    border-right: 1px dotted var(--iasc-secondary);
-    padding-right: 0.5rem;
     margin-right: 1rem;
+    padding-right: 0.5rem;
+    border-right: 1px dotted var(--iasc-secondary);
   }
 
   .cd-teaser__date .next-5 {
-    padding-top: 2rem;
-    order: 4;
     flex: 1 0 100%;
+    order: 4;
     width: 100%;
+    padding-top: 2rem;
   }
 
   .cd-teaser__date__time-only {

@@ -10,6 +10,6 @@
     background: none;
   }
   .cd-site-logo img {
-    width: auto; /* Fixes placement in IE11.*/
+    width: auto; /* Fixes placement in IE11. */
   }
 }
