@@ -12796,16 +12796,16 @@
         },
         {
             "name": "unocha/ocha_search",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_search.git",
-                "reference": "c289579aa69670394a29899283316cff1b9117ed"
+                "reference": "09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_search/zipball/c289579aa69670394a29899283316cff1b9117ed",
-                "reference": "c289579aa69670394a29899283316cff1b9117ed",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_search/zipball/09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8",
+                "reference": "09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8",
                 "shasum": ""
             },
             "require": {
@@ -12820,10 +12820,10 @@
                 "GPL-2.0-only"
             ],
             "support": {
-                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.5",
+                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.6",
                 "issues": "https://github.com/UN-OCHA/ocha_search/issues"
             },
-            "time": "2022-12-07T16:38:53+00:00"
+            "time": "2022-12-13T11:42:20+00:00"
         },
         {
             "name": "unocha/ocha_security",
