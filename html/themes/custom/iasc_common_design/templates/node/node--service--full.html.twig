@@ -14,18 +14,20 @@
         {% if logged_in %}
           {{ content.field_global_focal_point }}
         {% else %}
-          <div class="field__label">Global Focal Point</div>
-          <div class="field__item">
-            <p>Request for contact info</p>
-            {{
-              {
-                '#type': 'webform',
-                '#webform': 'service_contact',
-                '#default_data': {
-                  'to': node.field_global_focal_point.entity.field_email.value
+          <div class="field field--name-field-focal-point">
+            <div class="field__label">Global Focal Point</div>
+            <div class="field__item">
+              <p>Request for contact info</p>
+              {{
+                {
+                  '#type': 'webform',
+                  '#webform': 'service_contact',
+                  '#default_data': {
+                    'to': node.field_global_focal_point.entity.field_email.value
+                  }
                 }
-              }
-            }}
+              }}
+            </div>
           </div>
         {% endif %}
       </aside>

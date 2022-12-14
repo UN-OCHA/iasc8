@@ -33,11 +33,11 @@
 .field--name-field-header .field--type-viewsreference .viewsreference--view-title {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  color: var(--brand-primary);
+  /* color: var(--brand-primary);
   border-bottom: 3px solid var(--cd-blue-grey);
   font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 0;
+  margin-top: 0; */
   text-align: center;
 }
 
@@ -55,26 +55,10 @@
   }
 }
 
-.field--name-field-sidebar .paragraph,
-.field--name-field-content .paragraph,
-.field--name-field-footer .paragraph {
-  margin-bottom: 1rem;
-}
-
 .field--name-field-sidebar .paragraph--type--contact-list,
 .field--name-field-content .paragraph--type--contact-list,
 .field--name-field-footer .paragraph--type--contact-list {
   margin-bottom: 2rem;
-}
-
-.path-frontpage .field--name-field-content .viewsreference--view-title {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-top: 1rem;
 }
 
 .path-frontpage .cd-layout-sidebar-first .viewsreference--view-title {
@@ -93,7 +77,7 @@
   margin-left: 1rem;
 }
 
-/* Contact block on Service node.*/
+/* Contact block on Service node. */
 .field--name-field-global-focal-point {
   background: var(--cd-blue-grey--light);
 }

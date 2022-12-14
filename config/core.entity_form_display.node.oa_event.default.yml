@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.oa_event.field_dial_in_meeting
     - field.field.node.oa_event.field_host
     - field.field.node.oa_event.field_iasc_audience
-    - field.field.node.oa_event.field_info_private
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
     - field.field.node.oa_event.field_meeting_notes
@@ -133,14 +132,6 @@ content:
       width: 100%
       autocomplete: true
       match_operator: CONTAINS
-    third_party_settings: {  }
-  field_info_private:
-    type: text_textarea
-    weight: 17
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_meeting_agendas:
     type: select2_entity_reference

@@ -1,7 +1,14 @@
 .cd-list {
   margin: 0;
-  padding: 1rem 0;
+  padding: 0;
   list-style: none;
+}
+
+/* Override the generic .cd-layout-sidebar-first ul */
+.cd-layout-sidebar-first .cd-list,
+.cd-layout-sidebar-second .cd-list {
+  margin: 0;
+  padding-inline-start: 0;
 }
 
 .cd-list li {

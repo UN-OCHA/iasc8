@@ -1,12 +1,3 @@
-.block-facets h2 {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
 .block-facets .form-item,
 .block-facets .form-actions {
   margin-top: 0;
@@ -17,7 +8,7 @@
   width: 100%;
 }
 
-/* Various overrides to control select2 elements widths when options are wider than parent element.*/
+/* Various overrides to control select2 elements widths when options are wider than parent element. */
 .block-facets .select2-container {
   overflow: hidden;
 }

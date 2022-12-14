@@ -1,28 +1,12 @@
-.viewsreference--view-title {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 3px solid var(--cd-blue-grey);
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 0;
-}
-
-.cd-layout-sidebar-first .viewsreference--view-title {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-top: 0;
-}
-
 @media (min-width: 1200px) {
   .view-updates .view-header,
   .view-iasc-group-content .view-header {
     padding-right: 0;
   }
+}
+
+.cd-layout-content .view-header {
+  margin-bottom: 2rem;
 }
 
 .cd-layout-sidebar-first .views-exposed-form .form--inline {
@@ -69,18 +53,6 @@
   word-wrap: normal;
 }
 
-.region-facets .block-search h2,
-.region-sidebar-first .block-search h2,
-.region-sidebar-second .block-search h2 {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  color: var(--brand-primary);
-  border-bottom: 1px solid var(--brand-primary);
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-top: 0;
-}
-
 .region-facets .block-search form .cd-form--inline label,
 .region-sidebar-first .block-search form .cd-form--inline label,
 .region-sidebar-second .block-search form .cd-form--inline label {
@@ -114,8 +86,8 @@
   .region-facets .block-search form .cd-form--inline .form-item input[type="text"],
   .region-sidebar-first .block-search form .cd-form--inline .form-item input[type="text"],
   .region-sidebar-second .block-search form .cd-form--inline .form-item input[type="text"] {
-    padding: 0.5rem;
     flex: 1 0 100%;
+    padding: 0.5rem;
   }
 
   .region-facets .block-search form .cd-form--inline .form-actions,
@@ -169,7 +141,7 @@
 
 /* Services table */
 @media (min-width: 576px) {
-.views-table .views-field-field-service-coverage {
+  .views-table .views-field-field-service-coverage {
     width: 30%;
   }
 }
@@ -190,7 +162,7 @@
 }
 
 @media (max-width: 1023px) {
-.view-iasc-services .view-header h2 {
+  .view-iasc-services .view-header h2 {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--cd-blue-grey);
@@ -202,9 +174,13 @@
 }
 
 @media (min-width: 1024px) {
-.view-iasc-services .pager {
+  .view-iasc-services .pager {
     margin-bottom: 6rem;
   }
+}
+
+.cd-layout-sidebar-first .more-link {
+  margin: -1rem 0 2rem;
 }
 
 .more-link {

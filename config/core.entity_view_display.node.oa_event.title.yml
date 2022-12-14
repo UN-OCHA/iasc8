@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.oa_event.field_dial_in_meeting
     - field.field.node.oa_event.field_host
     - field.field.node.oa_event.field_iasc_audience
-    - field.field.node.oa_event.field_info_private
     - field.field.node.oa_event.field_legacy_publish
     - field.field.node.oa_event.field_meeting_agendas
     - field.field.node.oa_event.field_meeting_notes
@@ -67,7 +66,6 @@ hidden:
   field_dial_in_meeting: true
   field_host: true
   field_iasc_audience: true
-  field_info_private: true
   field_legacy_publish: true
   field_meeting_agendas: true
   field_meeting_notes: true

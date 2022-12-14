@@ -6,3 +6,8 @@
   width: 100%;
   height: auto;
 }
+
+/* Override the generic .cd-layout-sidebar-first ul */
+.cd-layout-sidebar-first .cd-styled-list li {
+  margin-top: 0;
+}
