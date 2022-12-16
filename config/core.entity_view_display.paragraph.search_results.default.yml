@@ -1,0 +1,22 @@
+uuid: 0d9adf07-18ec-437f-8d71-933fde53e7d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.search_results.field_gcse_id
+    - paragraphs.paragraphs_type.search_results
+id: paragraph.search_results.default
+targetEntityType: paragraph
+bundle: search_results
+mode: default
+content:
+  field_gcse_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

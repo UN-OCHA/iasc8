@@ -11,6 +11,8 @@ id: iasc_statements_authored_on
 name: 'Authored on'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: iasc_statements_authored_on
 facet_source_id: 'search_api:views_page__resources__page_statements'
 field_identifier: created

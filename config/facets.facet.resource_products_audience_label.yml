@@ -11,6 +11,8 @@ id: resource_products_audience_label
 name: 'Authoring body'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: resource_audience_label
 facet_source_id: 'search_api:views_page__resources__page_resources_products'
 field_identifier: audience_label
