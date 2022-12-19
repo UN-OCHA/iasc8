@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 768px) {
-.operations.form-actions input[type="submit"] {
+  .operations.form-actions input[type="submit"] {
     max-width: 16rem;
   }
 }

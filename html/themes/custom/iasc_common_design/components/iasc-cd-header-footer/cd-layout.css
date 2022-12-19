@@ -1,7 +1,7 @@
 /* Assumes frontpage has hero as first element in header field. */
 @supports (object-fit: cover) {
   .path-frontpage:not(.user-logged-in) .cd-layout-container main.cd-container {
-  /* Hack for IE11. Hero component covers search so we want the padding to make it usable in IE11. */
+    /* Hack for IE11. Hero component covers search so we want the padding to make it usable in IE11. */
     padding-top: 0;
   }
 }

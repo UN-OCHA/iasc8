@@ -107,10 +107,6 @@
   margin-bottom: 1rem;
 }
 
-.field--name-field-banner-text,
-.field--name-field-oa-banner-text {
-  margin-bottom: 2rem;
-}
 /* Banner caption. */
 .field--name-field-banner-text,
 .field--name-field-oa-banner-text {
@@ -165,7 +161,7 @@
 }
 
 /* This emulates the cd-bullet-list component using CSS bg image instead of SVG element in markup.
-When a ul element is added to the text area field.*/
+When a ul element is added to the text area field. */
 .field--name-field-examples-and-case-studies .field__item ul {
   margin: 0;
   padding: 0;

@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-/* Various overrides to control select2 elements widths when options are wider than parent element.*/
+/* Various overrides to control select2 elements widths when options are wider than parent element. */
 .block-facets .select2-container {
   overflow: hidden;
 }
