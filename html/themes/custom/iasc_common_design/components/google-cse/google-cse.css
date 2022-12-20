@@ -1,0 +1,17 @@
+/* stylelint-disable selector-id-pattern, selector-class-pattern */
+/**
+ * Override Google custom search engine
+ *
+ * All selectors are exact duplicates of the Google-provided selectors so that
+ * we can override them.
+ */
+.gsc-search-button-v2,
+.gsc-search-button-v2:hover,
+.gsc-search-button-v2:focus {
+  border-color: var(--brand-secondary) !important;
+  background-color: var(--brand-secondary) !important;
+}
+
+.gs-webResult.gs-result a.gs-title:link {
+  color: var(--brand-primary--dark) !important;
+}

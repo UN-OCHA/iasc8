@@ -15,6 +15,8 @@ id: aap_services
 name: Services
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: aap_services
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 field_identifier: field_services

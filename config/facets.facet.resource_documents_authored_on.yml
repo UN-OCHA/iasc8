@@ -11,6 +11,8 @@ id: resource_documents_authored_on
 name: 'Authored on'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: resources_authored_on
 facet_source_id: 'search_api:views_page__resources__page_resources_documents'
 field_identifier: created

@@ -11,6 +11,8 @@ id: resource_documents_product_category_label
 name: 'Product Category'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: product_category
 facet_source_id: 'search_api:views_page__resources__page_resources_documents'
 field_identifier: product_category_label

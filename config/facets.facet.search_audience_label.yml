@@ -11,6 +11,8 @@ id: search_audience_label
 name: Audience
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: search_audience_label
 facet_source_id: 'search_api:views_page__search_content__search'
 field_identifier: audience_label

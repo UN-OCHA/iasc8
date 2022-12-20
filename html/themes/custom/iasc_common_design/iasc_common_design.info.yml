@@ -43,6 +43,9 @@ libraries-extend:
   common_design/cd-styled-list:
     - iasc_common_design/cd-styled-list
 
+  ocha_search/google-cse:
+    - iasc_common_design/google-cse
+
 libraries-override:
   select_a11y/select_a11y_facets.widget:
     css:
