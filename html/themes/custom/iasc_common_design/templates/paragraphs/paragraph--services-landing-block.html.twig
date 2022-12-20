@@ -68,6 +68,10 @@
             <input class="cd-button cd-button--bold cd-button--uppercase cd-button--wide" type="submit" value="{% trans %}Show Results{% endtrans %}">
           </div>
         </form>
+
+        <div class="export-services">
+          <a href="{{ url('iasc_service.iasc_service_export') }}" class="cd-button">Download all services (xlsx)</a>
+        </div>
       {% endblock %}
     </div>
   {% endblock paragraph %}

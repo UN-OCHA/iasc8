@@ -3,31 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.group.field_description
     - field.storage.node.field_iasc_audience
-    - field.storage.node.field_document_type
-    - field.storage.node.field_oa_date
     - field.storage.media.field_media_file
     - field.storage.node.field_media_files
-    - field.storage.node.field_category
+    - field.storage.node.field_document_type
+    - field.storage.group.field_description
+    - field.storage.node.field_oa_date
     - field.storage.node.field_published_date
-    - search_api.server.default_solr_server
+    - field.storage.node.field_category
+    - search_api.server.local
     - core.entity_view_mode.node.full
   module:
     - search_api_solr
     - group
     - node
     - user
-    - taxonomy
     - media
+    - taxonomy
     - search_api
     - iasc_content
-    - search_api_attachments
 third_party_settings:
   search_api_solr:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
+    debug_finalize: false
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: regex
@@ -64,7 +64,8 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
-      specific_languages: { }
+      specific_languages:
+        en: '0'
 _core:
   default_config_hash: UxSOP7yd3TuBoCjjk6VjP8UcKfEWhAyiAYII6ZSAJx4
 id: default_solr_index
@@ -205,7 +206,7 @@ field_settings:
     type: solr_text_omit_norms
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:group':
           iasc_group: default
@@ -218,10 +219,6 @@ field_settings:
           oa_worktracker_task: default
           panopoly_landing_page: full
           panopoly_page: full
-  saa_field_media_files:
-    label: 'Search api attachments: Media field for file'
-    property_path: saa_field_media_files
-    type: text
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -286,6 +283,7 @@ processor_settings:
   aggregated_field:
     weights:
       add_properties: 20
+  auto_aggregated_fulltext_field: {  }
   content_access:
     weights:
       preprocess_index: -6
@@ -294,13 +292,6 @@ processor_settings:
     weights:
       preprocess_index: -10
   entity_type: {  }
-  file_attachments:
-    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
-    number_indexed: 0
-    number_first_bytes: '0'
-    max_filesize: '0'
-    excluded_private: 0
-    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
   html_filter:
     weights:
       preprocess_index: -3
@@ -366,4 +357,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: false
-server: default_solr_server
+server: local

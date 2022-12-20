@@ -1,0 +1,20 @@
+uuid: d4de86e8-d140-4567-989a-69e3202adc6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ocha_search
+  theme:
+    - iasc_common_design
+id: ochasearch
+theme: iasc_common_design
+region: header_search
+weight: 0
+provider: null
+plugin: ocha_search_block
+settings:
+  id: ocha_search_block
+  label: 'OCHA Search'
+  label_display: visible
+  provider: ocha_search
+visibility: {  }

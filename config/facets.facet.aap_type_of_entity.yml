@@ -11,6 +11,8 @@ id: aap_type_of_entity
 name: 'Type of entity'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: aap_type_of_entity
 facet_source_id: 'search_api:views_page__iasc_services__page_1'
 field_identifier: field_type_of_entity

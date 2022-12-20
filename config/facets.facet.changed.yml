@@ -11,6 +11,8 @@ id: changed
 name: Changed
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: changed
 facet_source_id: 'search_api:views_page__iasc_group_content__page_documents'
 field_identifier: changed

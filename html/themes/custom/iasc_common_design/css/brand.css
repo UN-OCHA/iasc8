@@ -16,6 +16,7 @@
   --brand-primary: var(--iasc-primary);
   --brand-primary--light: var(--cd-blue--bright);
   --brand-primary--dark: var(--iasc-primary-dark);
+  --brand-secondary: var(--iasc-secondary);
   --brand-highlight: var(--iasc-highlight);
   --brand-grey: var(--cd-blue-grey);
   --brand-logo-width: 220px;

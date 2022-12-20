@@ -1,0 +1,12 @@
+uuid: 4d48dfa3-627b-4928-82d9-64240fc366c1
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__iasc_services__block_1
+name: 'search_api:views_block__iasc_services__block_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false
