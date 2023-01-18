@@ -25,3 +25,11 @@ function iasc_content_update_8030() {
 function iasc_content_update_8031() {
   iasc_content_migrate_all_meetings_paragraphs();
 }
+
+/**
+ * Remove private files.
+ */
+function iasc_content_update_8032() {
+  iasc_content_remove_private_files_1();
+  iasc_content_remove_private_files_2();
+}
