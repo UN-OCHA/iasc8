@@ -20,7 +20,6 @@ iasc_content.iasc_content_config_form:
     _admin_route: TRUE
 iasc_content.group.meetings:
   path: '/group/{group}/meetings'
-  title: 'Events'
   defaults:
     _controller: 'iasc_content.group_meetings_controller:getEvents'
     _title_callback: 'iasc_content.group_meetings_controller:getTitle'
