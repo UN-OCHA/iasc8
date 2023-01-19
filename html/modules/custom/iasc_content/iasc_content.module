@@ -1745,8 +1745,7 @@ function iasc_content_remove_private_files_2() {
             // Check if media is in use on nodes.
             $query = \Drupal::entityQuery('node');
             $query->exists('field_media_files');
-            $query->condition('field_media_files.entity.mid', );
-            $query->exists('field_media_files');
+            $query->condition('field_media_files.entity.mid');
             $ids = $query->execute();
 
             if (count($ids) != 0) {
