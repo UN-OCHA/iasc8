@@ -1708,17 +1708,10 @@ function iasc_content_remove_private_files_1() {
 /**
  * Remove private files 2.
  */
-function iasc_content_remove_private_files_2() {
+function iasc_content_remove_private_files_2($ids = []) {
   /** @var \Drupal\file\FileUsage\FileUsageBase $file_usage */
   $file_usage = \Drupal::service('file.usage');
-
-  $query = \Drupal::entityQuery('node');
-  $query->exists('oa_section_ref');
-  $query->condition('oa_section_ref.entity.title', '%iasc%', 'like');
-  $query->exists('field_media_files');
-  $ids = $query->execute();
-
-  $ids = array_slice($ids, 0, 150);
+  $deleted_nids = [];
 
   $nodes = \Drupal::entityTypeManager()
     ->getStorage('node')
@@ -1726,40 +1719,86 @@ function iasc_content_remove_private_files_2() {
 
   /** @var \Drupal\node\Entity\Node $node */
   foreach ($nodes as $node) {
-    $delete_node = FALSE;
-    if ($node->hasField('field_oa_media')) {
+    // Assume node has no files.
+    $delete_node = TRUE;
+
+    if ($node->hasField('field_oa_media') && count($node->field_oa_media->referencedEntities()) > 0) {
+      $delete_node = FALSE;
+
       /** @var \Drupal\file\Entity\File $file */
       foreach ($node->field_oa_media->referencedEntities() as $file) {
         $list = $file_usage->listUsage($file);
+
         // Make sure file isn't used anywhere else.
-        if (count($list) == 1 && count($list['file']) == 1 && count($list['file']['node']) == 1 && isset($list['file']['node'][$node->id()])) {
+        if (count($list) == 1 && count($list['file']) == 1 && isset($list['file']['node']) && count($list['file']['node']) == 1 && isset($list['file']['node'][$node->id()])) {
           $file_usage->delete($file, 'file');
           $file->delete();
           $delete_node = TRUE;
         }
         else {
-          if (count($list) == 1 && count($list['file']) == 2 && count($list['file']['node']) == 1 && isset($list['file']['node'][$node->id()]) && count($list['file']['media']) == 1) {
-            $media_id = array_keys($list['file']['media']);
-            $media_id = reset($media_id);
+          if (count($list) == 1 && count($list['file']) >= 1 && isset($list['file']['node']) && isset($list['file']['node'][$node->id()])) {
+            $media_id = NULL;
+            if (isset($list['file']['media'])) {
+              $media_id = array_keys($list['file']['media']);
+              $media_id = reset($media_id);
 
-            // Check if media is in use on nodes.
-            $query = \Drupal::entityQuery('node');
-            $query->exists('field_media_files');
-            $query->condition('field_media_files.entity.mid', $media_id);
-            $ids = $query->execute();
-dpm(count($ids), 'count 1');
-            if (count($ids) <= 1) {
-              continue;
+              // Check if media is in use on nodes.
+              $query = \Drupal::entityQuery('node');
+              $query->exists('field_media_files');
+              $query->condition('field_media_files.entity.mid', $media_id);
+              $ids = $query->execute();
+
+              if (count($ids) > 1) {
+                continue;
+              }
+
+              // Check if media is in use on paragraphs.
+              $query = \Drupal::entityQuery('paragraph');
+              $query->exists('field_media');
+              $query->condition('field_media.entity.mid', $media_id);
+              $ids = $query->execute();
+
+              if (count($ids) > 1) {
+                continue;
+              }
+
+              // If used on multiple media delete them.
+              if (isset(($list['file']['media'])) && count($list['file']['media']) > 1) {
+                $media_ids = array_keys($list['file']['media']);
+                $medias = Media::loadMultiple($media_ids);
+
+                // Delete others.
+                foreach ($medias as $m) {
+                  if ($m->id() != $media_id) {
+                    $m->delete();
+                  }
+                }
+              }
             }
 
-            // Check if media is in use on paragraphs.
-            $query = \Drupal::entityQuery('paragraph');
-            $query->exists('field_media');
-            $query->condition('field_media.entity.mid', $media_id);
-            $ids = $query->execute();
-            dpm(count($ids), 'count 2');
-            if (count($ids) <= 1) {
-              continue;
+            // If used on multiple nodes as file, check type.
+            if (count($list['file']['node']) > 1) {
+              $nids = array_keys($list['file']['node']);
+
+              $nodes = Node::loadMultiple($nids);
+              $can_be_deleted = TRUE;
+              foreach ($nodes as $n) {
+                if ($n->getType() !== 'oa_wiki_page') {
+                  $can_be_deleted = FALSE;
+                }
+              }
+
+              if (!$can_be_deleted) {
+                continue;
+              }
+
+              // Delete other nodes.
+              foreach ($nodes as $n) {
+                if ($n->id() != $node->id()) {
+                  $deleted_nids[] = $n->id();
+                  $n->delete();
+                }
+              }
             }
 
             // Delete it.
@@ -1775,7 +1814,9 @@ dpm(count($ids), 'count 1');
       }
     }
 
-    if ($node->hasField('field_media_files')) {
+    if ($node->hasField('field_media_files') && count($node->field_media_files->referencedEntities()) > 0) {
+      $delete_node = FALSE;
+
       /** @var \Drupal\media\Entity\Media $media */
       foreach ($node->field_media_files->referencedEntities() as $media) {
         if ($media->hasField('field_media_file')) {
@@ -1798,7 +1839,10 @@ dpm(count($ids), 'count 1');
     }
 
     if ($delete_node) {
+      $deleted_nids[] = $node->id();
       $node->delete();
     }
   }
+
+  return $deleted_nids;
 }
