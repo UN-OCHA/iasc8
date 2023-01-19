@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "981d99c6f561f125775563e91bfe1f12",
+    "content-hash": "92ff2578111ef3f1e627db621f6dee0d",
     "packages": [
         {
             "name": "algolia/places",
@@ -3854,17 +3854,17 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.48.0",
+            "version": "1.49.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.48"
+                "reference": "8.x-1.49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.48.zip",
-                "reference": "8.x-1.48",
-                "shasum": "1dbbf8aa3f55fe2e1814a96d1025a0ff83ec1969"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.49.zip",
+                "reference": "8.x-1.49",
+                "shasum": "c67a3f3163f19089de5c2bd1d21ae30ebc9f4a5e"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10",
@@ -3873,8 +3873,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.48",
-                    "datestamp": "1672684493",
+                    "version": "8.x-1.49",
+                    "datestamp": "1673111274",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9518,16 +9518,16 @@
         },
         {
             "name": "rlanvin/php-rrule",
-            "version": "v2.3.2",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rlanvin/php-rrule.git",
-                "reference": "2221e8cdac037f3ead5bd17a8e19b0771534d4e7"
+                "reference": "2acd9950e803ea65514d6440212d39096df9c528"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rlanvin/php-rrule/zipball/2221e8cdac037f3ead5bd17a8e19b0771534d4e7",
-                "reference": "2221e8cdac037f3ead5bd17a8e19b0771534d4e7",
+                "url": "https://api.github.com/repos/rlanvin/php-rrule/zipball/2acd9950e803ea65514d6440212d39096df9c528",
+                "reference": "2acd9950e803ea65514d6440212d39096df9c528",
                 "shasum": ""
             },
             "require": {
@@ -9561,9 +9561,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rlanvin/php-rrule/issues",
-                "source": "https://github.com/rlanvin/php-rrule/tree/v2.3.2"
+                "source": "https://github.com/rlanvin/php-rrule/tree/v2.4.0"
             },
-            "time": "2022-05-03T13:11:22+00:00"
+            "time": "2023-01-06T10:19:10+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -12866,38 +12866,6 @@
             "time": "2022-12-13T11:42:20+00:00"
         },
         {
-            "name": "unocha/ocha_security",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/UN-OCHA/ocha_security.git",
-                "reference": "7d254cc87cf6ef1973a472dfad2c37e763ed0879"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_security/zipball/7d254cc87cf6ef1973a472dfad2c37e763ed0879",
-                "reference": "7d254cc87cf6ef1973a472dfad2c37e763ed0879",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.2"
-            },
-            "require-dev": {
-                "drupal/coder": "^8.3",
-                "sebastian/phpcpd": "^6.0"
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-only"
-            ],
-            "support": {
-                "issues": "https://github.com/UN-OCHA/ocha_security/issues",
-                "source": "https://github.com/UN-OCHA/ocha_security/tree/v1.0.1"
-            },
-            "time": "2022-06-01T09:48:10+00:00"
-        },
-        {
             "name": "unocha/un_date",
             "version": "1.0.1",
             "source": {
@@ -13532,16 +13500,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.3.4",
+            "version": "1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "69098eca243998b53eed7a48d82dedd28b447cd5"
+                "reference": "74780ccf8c19d6acb8d65c5f39cd72110e132bbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/69098eca243998b53eed7a48d82dedd28b447cd5",
-                "reference": "69098eca243998b53eed7a48d82dedd28b447cd5",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/74780ccf8c19d6acb8d65c5f39cd72110e132bbd",
+                "reference": "74780ccf8c19d6acb8d65c5f39cd72110e132bbd",
                 "shasum": ""
             },
             "require": {
@@ -13588,7 +13556,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.3.4"
+                "source": "https://github.com/composer/ca-bundle/tree/1.3.5"
             },
             "funding": [
                 {
@@ -13604,7 +13572,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-12T12:08:29+00:00"
+            "time": "2023-01-11T08:27:00+00:00"
         },
         {
             "name": "composer/composer",
@@ -14989,17 +14957,17 @@
         },
         {
             "name": "drupal/dev_mode",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dev_mode.git",
-                "reference": "8.x-2.5"
+                "reference": "8.x-2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dev_mode-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "29a2a0ff21d767737744c1b1f79767f65bfdcf31"
+                "url": "https://ftp.drupal.org/files/projects/dev_mode-8.x-2.6.zip",
+                "reference": "8.x-2.6",
+                "shasum": "7dfa949130c4add242a91604c4f0fd8e75317c54"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10"
@@ -15007,8 +14975,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1666895477",
+                    "version": "8.x-2.6",
+                    "datestamp": "1673374613",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16174,20 +16142,20 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.13.1",
+            "version": "0.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "4814ad9fa7d19be068f75558220383967c258d10"
+                "reference": "09d3dc6a422483de4c7c9b17692a48252b6b0af3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/4814ad9fa7d19be068f75558220383967c258d10",
-                "reference": "4814ad9fa7d19be068f75558220383967c258d10",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/09d3dc6a422483de4c7c9b17692a48252b6b0af3",
+                "reference": "09d3dc6a422483de4c7c9b17692a48252b6b0af3",
                 "shasum": ""
             },
             "require": {
-                "rector/rector": "~0.13.8",
+                "rector/rector": "~0.15.2",
                 "webflo/drupal-finder": "^1.2"
             },
             "replace": {
@@ -16196,7 +16164,7 @@
             },
             "require-dev": {
                 "cweagans/composer-patches": "^1.7.2",
-                "php": "^8.0",
+                "php": "^8.1",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
@@ -16245,9 +16213,9 @@
                 "rector"
             ],
             "support": {
-                "source": "https://github.com/palantirnet/drupal-rector/tree/0.13.1"
+                "source": "https://github.com/palantirnet/drupal-rector/tree/0.15.0"
             },
-            "time": "2022-08-05T19:55:37+00:00"
+            "time": "2023-01-11T16:46:06+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -16831,16 +16799,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.7",
+            "version": "1.9.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "0501435cd342eac7664bd62155b1ef907fc60b6f"
+                "reference": "f68d7cc3d0638a01bc6321cb826e4cae7fa6884d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0501435cd342eac7664bd62155b1ef907fc60b6f",
-                "reference": "0501435cd342eac7664bd62155b1ef907fc60b6f",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f68d7cc3d0638a01bc6321cb826e4cae7fa6884d",
+                "reference": "f68d7cc3d0638a01bc6321cb826e4cae7fa6884d",
                 "shasum": ""
             },
             "require": {
@@ -16870,7 +16838,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.7"
+                "source": "https://github.com/phpstan/phpstan/tree/1.9.9"
             },
             "funding": [
                 {
@@ -16886,7 +16854,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-04T21:59:57+00:00"
+            "time": "2023-01-11T14:39:22+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -17434,31 +17402,27 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.13.10",
+            "version": "0.15.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "d1e069db8ad3b4aea2b968248370c21415e4c180"
+                "reference": "1dcdf54ebf502d9f7cf9b5f89df613da1774d050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/d1e069db8ad3b4aea2b968248370c21415e4c180",
-                "reference": "d1e069db8ad3b4aea2b968248370c21415e4c180",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/1dcdf54ebf502d9f7cf9b5f89df613da1774d050",
+                "reference": "1dcdf54ebf502d9f7cf9b5f89df613da1774d050",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.8.2"
+                "phpstan/phpstan": "^1.9.7"
             },
             "conflict": {
-                "phpstan/phpdoc-parser": "<1.6.2",
-                "rector/rector-cakephp": "*",
                 "rector/rector-doctrine": "*",
-                "rector/rector-laravel": "*",
-                "rector/rector-nette": "*",
-                "rector/rector-phpoffice": "*",
+                "rector/rector-downgrade-php": "*",
+                "rector/rector-php-parser": "*",
                 "rector/rector-phpunit": "*",
-                "rector/rector-prefixed": "*",
                 "rector/rector-symfony": "*"
             },
             "bin": [
@@ -17467,7 +17431,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.13-dev"
+                    "dev-main": "0.14-dev"
                 }
             },
             "autoload": {
@@ -17482,7 +17446,7 @@
             "description": "Instant Upgrade and Automated Refactoring of any PHP code",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.13.10"
+                "source": "https://github.com/rectorphp/rector/tree/0.15.4"
             },
             "funding": [
                 {
@@ -17490,7 +17454,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-03T12:48:10+00:00"
+            "time": "2023-01-10T11:09:49+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -18570,16 +18534,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.11.9",
+            "version": "v2.11.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "62730888d225d55a613854b6a76fb1f9f57d1618"
+                "reference": "0f25a3766f26df91d6bdda0c8931303fc85499d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/62730888d225d55a613854b6a76fb1f9f57d1618",
-                "reference": "62730888d225d55a613854b6a76fb1f9f57d1618",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/0f25a3766f26df91d6bdda0c8931303fc85499d7",
+                "reference": "0f25a3766f26df91d6bdda0c8931303fc85499d7",
                 "shasum": ""
             },
             "require": {
@@ -18587,7 +18551,7 @@
                 "squizlabs/php_codesniffer": "^3.5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
                 "phpcsstandards/phpcsdevcs": "^1.1",
                 "phpstan/phpstan": "^1.7",
                 "phpunit/phpunit": "^4.8.36 || ^5.7.21 || ^6.5 || ^7.0 || ^8.0 || ^9.0",
@@ -18624,7 +18588,7 @@
                 "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
-            "time": "2022-10-05T23:31:46+00:00"
+            "time": "2023-01-05T18:45:16+00:00"
         },
         {
             "name": "slevomat/coding-standard",
