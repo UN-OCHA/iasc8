@@ -1756,8 +1756,7 @@ function iasc_content_remove_private_files_2() {
             // Check if media is in use on paragraphs.
             $query = \Drupal::entityQuery('paragraph');
             $query->exists('field_media');
-            $query->condition('field_media.entity.mid', );
-            $query->exists('field_media');
+            $query->condition('field_media.entity.mid');
             $ids = $query->execute();
 
             if (count($ids) != 0) {
