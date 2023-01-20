@@ -205,7 +205,7 @@ class GroupMeetings extends ControllerBase {
         '#cache' => [
           'tags' => $cache_tags,
           'contexts' => [
-            'url.query_args.pagers',
+            'url.query_args:future',
           ],
         ],
         '#attributes' => [
@@ -328,7 +328,7 @@ class GroupMeetings extends ControllerBase {
         '#cache' => [
           'tags' => $cache_tags,
           'contexts' => [
-            'url.query_args.pagers',
+            'url.query_args:past',
           ],
         ],
         '#attributes' => [
