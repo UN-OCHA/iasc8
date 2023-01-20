@@ -203,10 +203,9 @@ class GroupMeetings extends ControllerBase {
       $build['meetings_wrapper']['meetings_wrapper_future'] = [
         '#type' => 'container',
         '#cache' => [
-          'max-age' => 0,
           'tags' => $cache_tags,
           'contexts' => [
-            'url.query_args.pagers',
+            'url.query_args:future',
           ],
         ],
         '#attributes' => [
@@ -327,10 +326,9 @@ class GroupMeetings extends ControllerBase {
       $build['meetings_wrapper']['meetings_wrapper_past'] = [
         '#type' => 'container',
         '#cache' => [
-          'max-age' => 0,
           'tags' => $cache_tags,
           'contexts' => [
-            'url.query_args.pagers',
+            'url.query_args:past',
           ],
         ],
         '#attributes' => [
