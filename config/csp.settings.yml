@@ -6,8 +6,10 @@ report-only:
     connect-src:
       base: self
       sources:
-        - www.google-analytics.com
-        - '*.analytics.google.com'
+        - 'https://*.google-analytics.com'
+        - 'https://analytics.google.com'
+        - 'https://*.analytics.google.com'
+        - 'https://*.googletagmanager.com'
     font-src:
       base: self
       sources:
@@ -20,8 +22,8 @@ report-only:
         - 'data:'
         - '*.twimg.com'
         - '*.twitter.com'
-        - '*.google-analytics.com'
-        - www.googletagmanager.com
+        - 'https://*.google-analytics.com'
+        - 'https://*.googletagmanager.com'
         - '*.ytimg.com'
         - '*.google.com'
         - mcusercontent.com
@@ -36,10 +38,10 @@ report-only:
       sources:
         - fonts.googleapis.com
         - www.gstatic.com
-        - www.google.com
-        - www.googletagmanager.com
         - cdn.jsdelivr.net
         - platform.twitter.com
+        - 'https://*.googletagmanager.com'
+        - 'https://*.google.com'
         - '*.google-analytics.com'
         - '*.twimg.com'
     script-src-attr:
@@ -49,7 +51,10 @@ report-only:
       flags:
         - unsafe-inline
       sources:
-        - www.googletagmanager.com
+        - fonts.googleapis.com
+        - www.gstatic.com
+        - 'https://*.googletagmanager.com'
+        - 'https://*.google.com'
         - '*.google-analytics.com'
         - '*.twimg.com'
         - '*.twitter.com'
@@ -70,7 +75,6 @@ report-only:
         - unsafe-inline
       sources:
         - fonts.googleapis.com
-        - 'https://fonts.googleapis.com'
         - '*.twimg.com'
         - '*.twitter.com'
     frame-ancestors:

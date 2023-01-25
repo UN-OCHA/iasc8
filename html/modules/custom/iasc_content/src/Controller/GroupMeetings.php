@@ -131,9 +131,14 @@ class GroupMeetings extends ControllerBase {
       $events = $this->entityTypeManager->getStorage('node')->loadMultiple($ids);
       $view_builder = $this->entityTypeManager->getViewBuilder('node');
       $meetings = [];
+      $cache_tags = ['group:' . $group->id()];
+
+      /** @var \Drupal\node\Entity\Node $event */
       foreach ($events as $event) {
         foreach ($event->field_oa_date as $date_item) {
           foreach ($this->getFutureReccurrences($date_item, $future_start->getTimestamp()) as $date) {
+            $cache_tags[] = 'node:' . $event->id();
+
             if ($date->getStart()->getTimestamp() >= $future_start->getTimestamp() && $date->getStart()->getTimestamp() <= $future_end->getTimestamp()) {
               $new_event = clone $event;
               $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
@@ -197,6 +202,12 @@ class GroupMeetings extends ControllerBase {
 
       $build['meetings_wrapper']['meetings_wrapper_future'] = [
         '#type' => 'container',
+        '#cache' => [
+          'tags' => $cache_tags,
+          'contexts' => [
+            'url.query_args:future',
+          ],
+        ],
         '#attributes' => [
           'class' => [
             'meetings_wrapper__future [ cd-flow ]',
@@ -243,10 +254,15 @@ class GroupMeetings extends ControllerBase {
       $events = $this->entityTypeManager->getStorage('node')->loadMultiple($ids);
       $view_builder = $this->entityTypeManager->getViewBuilder('node');
       $meetings = [];
+      $cache_tags = ['group:' . $group->id()];
+
+      /** @var \Drupal\Node\Entity\Node $event */
       foreach ($events as $event) {
         foreach ($event->field_oa_date as $date_item) {
           foreach ($this->getPastReccurrences($date_item, $past_end->getTimestamp()) as $date) {
             if ($date->getStart()->getTimestamp() >= $past_start->getTimestamp() && $date->getStart()->getTimestamp() < $past_end->getTimestamp()) {
+              $cache_tags[] = 'node:' . $event->id();
+
               $new_event = clone $event;
               $new_event->nid = $event->id() . $date->getStart()->getTimestamp();
               $new_event->original_nid = $event->id();
@@ -309,6 +325,12 @@ class GroupMeetings extends ControllerBase {
 
       $build['meetings_wrapper']['meetings_wrapper_past'] = [
         '#type' => 'container',
+        '#cache' => [
+          'tags' => $cache_tags,
+          'contexts' => [
+            'url.query_args:past',
+          ],
+        ],
         '#attributes' => [
           'class' => [
             'meetings_wrapper__past [ cd-flow ]',
