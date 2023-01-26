@@ -25,8 +25,8 @@
       "Patch the contrib v1.0.1 module so the code matches what used to be in custom": "PATCHES/select_a11ly.patch"
     },
     "drupal/user_expire": {
-      "Allow the notification email to be customised": "https://git.drupalcode.org/project/user_expire/-/merge_requests/5.diff",
-      "Reset expiration when user is reactivated": "https://git.drupalcode.org/project/user_expire/-/merge_requests/6.diff"
+      "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
+      "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
     },
     "drupal/views_data_export": {
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"

@@ -27,7 +27,7 @@
         "php": ">=8.0",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/address": "^1.6",
-        "drupal/admin_denied": "^1.0",
+        "drupal/admin_denied": "^2",
         "drupal/chosen": "^3.0",
         "drupal/colors": "1.x-dev",
         "drupal/components": "^2.4",
