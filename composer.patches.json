@@ -16,7 +16,7 @@
       "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
     },
     "drupal/search_api": {
-      "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "https://git.drupalcode.org/project/search_api/-/merge_requests/8.diff"
+      "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "PATCHES/search_api-facets-query-part.patch"
     },
     "drupal/search_api_attachments": {
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
