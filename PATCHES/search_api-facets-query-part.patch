@@ -1,0 +1,61 @@
+diff --git a/search_api.module b/search_api.module
+index c68c16f0dc7806c124d497469122ab2fc9258678..06780bd89aef19ac600a4332108a8da7637e632d 100644
+--- a/search_api.module
++++ b/search_api.module
+@@ -583,11 +583,8 @@ function search_api_form_views_exposed_form_alter(&$form, FormStateInterface $fo
+     // not always actually saved in the storage, if the admin didn't change
+     // their settings.)
+     $query = $query_plugin->getSearchApiQuery();
+-    $display_id = $query->getSearchId(FALSE);
+-    $facet_source_id = str_replace(':', '__', 'search_api:' . $display_id);
+-    $facet_source = \Drupal::entityTypeManager()
+-      ->getStorage('facets_facet_source')
+-      ->load($facet_source_id);
++    $facet_source = _search_api_get_facet_source($query->getSearchId(FALSE));
++
+     if ($facet_source) {
+       $filter_key = $facet_source->getFilterKey() ?: 'f';
+     }
+@@ -654,3 +651,42 @@ function search_api_entity_view(array &$build, EntityInterface $entity, EntityVi
+     ];
+   }
+ }
++
++/**
++ * Searchs for the facets source of a given Search API views display.
++ *
++ * @param $display_id
++ *   The ID of the Search API views display.
++ *
++ * @return null|\Drupal\facets\FacetSourceInterface
++ *   The facets source, NULL if not found.
++ */
++function _search_api_get_facet_source($display_id) {
++  $facet_source_base_id = str_replace(':', '__', $display_id);
++  $facet_source_plugin_id = 'search_api:' . $facet_source_base_id;
++  $facet_source_id = 'search_api__' . $facet_source_base_id;
++
++  /** @var \Drupal\facets\FacetSource\FacetSourcePluginManager $facet_source_plugin_manager */
++  $facet_source_plugin_manager = \Drupal::service('plugin.manager.facets.facet_source');
++  $facet_source_definitions = $facet_source_plugin_manager->getDefinitions();
++  // Ensure that the facets source exists.
++  if (!isset($facet_source_definitions[$facet_source_plugin_id])) {
++    return NULL;
++  }
++  $facet_plugin = $facet_source_definitions[$facet_source_plugin_id];
++
++  $facet_source_storage = \Drupal::entityTypeManager()
++    ->getStorage('facets_facet_source');
++  // Tries to load the facets source from config.
++  $facet_source = $facet_source_storage->load($facet_source_id);
++  if (!$facet_source) {
++    // We didn't have a facet source config entity yet for this facet source
++    // plugin, so we create it on the fly.
++    $facet_source = $facet_source_storage->create([
++      'id' => $facet_source_id,
++      'name' => (string) $facet_plugin['label'],
++    ]);
++  }
++
++  return $facet_source;
++}
