@@ -25,3 +25,63 @@ function iasc_content_update_8030() {
 function iasc_content_update_8031() {
   iasc_content_migrate_all_meetings_paragraphs();
 }
+
+/**
+ * Remove private files 1.
+ */
+function iasc_content_update_8032() {
+  iasc_content_remove_private_files_1();
+}
+
+/**
+ * Remove private files2.
+ */
+function iasc_content_update_8033(&$sandbox) {
+  if (!isset($sandbox['total'])) {
+    $query = \Drupal::entityQuery('node');
+    $query->accessCheck(FALSE);
+
+    $or = $query->orConditionGroup();
+    $or->condition('oa_section_ref.entity.title', '%iasc%', 'like');
+    $or->condition('oa_section_ref.entity.title', '%Donor%', 'like');
+    $query->condition($or);
+
+    $ids = $query->execute();
+
+    $sandbox['total'] = count($ids);
+    $sandbox['current'] = 0;
+
+    if (empty($sandbox['total'])) {
+      $sandbox['#finished'] = 1;
+      return;
+    }
+  }
+
+  $query = \Drupal::entityQuery('node');
+  $query->accessCheck(FALSE);
+
+  $or = $query->orConditionGroup();
+  $or->condition('oa_section_ref.entity.title', '%iasc%', 'like');
+  $or->condition('oa_section_ref.entity.title', '%Donor%', 'like');
+  $query->condition($or);
+
+  $query->range(0, 50);
+  $ids = $query->execute();
+
+  if (count($ids) == 0) {
+    $sandbox['#finished'] = 1;
+    return;
+  }
+
+  $deleted_nids = iasc_content_remove_private_files_2($ids);
+  $sandbox['current'] += count($deleted_nids);
+
+  if ($sandbox['current'] >= $sandbox['total']) {
+    $sandbox['#finished'] = 1;
+  }
+  else {
+    $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+  }
+
+  \Drupal::messenger()->addMessage(count($deleted_nids) . ' nodes deleted out of ' . $sandbox['total']);
+}
