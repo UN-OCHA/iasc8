@@ -1802,13 +1802,17 @@ function iasc_content_remove_private_files_2($ids = []) {
             }
 
             // Delete it.
-            $file_usage->delete($file, 'file');
-            $file->delete();
+            if ($file) {
+              $file_usage->delete($file, 'file');
+              $file->delete();
+            }
             $delete_node = TRUE;
 
             // Delete media as well.
             $media = Media::load($media_id);
-            $media->delete();
+            if ($media) {
+              $media->delete();
+            }
           }
         }
       }
