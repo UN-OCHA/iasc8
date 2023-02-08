@@ -45,12 +45,6 @@ before_script:
   - cd $TRAVIS_BUILD_DIR
   - composer install
 
-  # LightHouseBot
-  # - npm i --save-dev https://github.com/GoogleChromeLabs/lighthousebot
-
-  # PWMetrics
-  - npm i --verbose
-
 script:
   # PHP linting
   - set -e
@@ -86,9 +80,6 @@ script:
   - DTT_BASE_URL=http://127.0.0.1:8080 ./vendor/bin/phpunit --debug --colors --testsuite=existing-site,existing-site-javascript
 
 after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - # npm run lh -- http://127.0.0.1:8080
-  - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
