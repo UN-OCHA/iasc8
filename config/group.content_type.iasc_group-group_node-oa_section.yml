@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: iasc_group-group_node-oa_section
-label: 'Group: Group node (Section Page)'
-description: 'Adds <em class="placeholder">Section Page</em> content to groups both publicly and privately.'
 group_type: iasc_group
 content_plugin: 'group_node:oa_section'
 plugin_config:
