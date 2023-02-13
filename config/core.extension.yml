@@ -39,6 +39,7 @@ module:
   file: 0
   file_checker: 0
   filter: 0
+  flexible_permissions: 0
   geocoder: 0
   geocoder_address: 0
   geocoder_field: 0
