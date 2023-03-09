@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6bcfbf58f19b55816314b926ec13a32",
+    "content-hash": "9674a66333f53feb9e1551ec520c61df",
     "packages": [
         {
             "name": "algolia/places",
@@ -4189,6 +4189,10 @@
                     "name": "Kristiaan Van den Eynde",
                     "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "kristiaanvandeneynde",
+                    "homepage": "https://www.drupal.org/user/1345130"
                 }
             ],
             "description": "This module allows you to group users, content and other entities",
@@ -4312,6 +4316,10 @@
                 {
                     "name": "johnwebdev",
                     "homepage": "https://www.drupal.org/user/3331569"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
                 }
             ],
             "description": "Linkit - Enriched linking experience",
@@ -13061,16 +13069,16 @@
         },
         {
             "name": "unocha/ocha_search",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_search.git",
-                "reference": "09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8"
+                "reference": "8bb1108a1db2955886ab5a3a20423c0c02276f80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_search/zipball/09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8",
-                "reference": "09beb11d8cfd4ec5a92e507fb6fdd83943cb97b8",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_search/zipball/8bb1108a1db2955886ab5a3a20423c0c02276f80",
+                "reference": "8bb1108a1db2955886ab5a3a20423c0c02276f80",
                 "shasum": ""
             },
             "require": {
@@ -13081,14 +13089,15 @@
                 "sebastian/phpcpd": "^6.0"
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "support": {
-                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.6",
-                "issues": "https://github.com/UN-OCHA/ocha_search/issues"
+                "issues": "https://github.com/UN-OCHA/ocha_search/issues",
+                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.7"
             },
-            "time": "2022-12-13T11:42:20+00:00"
+            "time": "2023-02-09T14:22:52+00:00"
         },
         {
             "name": "unocha/un_date",
@@ -14735,8 +14744,14 @@
             "version": "8.3.17",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
+                "url": "https://github.com/pfrenssen/coder.git",
                 "reference": "1c4662337418ab88c9ddf40348f0638e35d49182"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/1c4662337418ab88c9ddf40348f0638e35d49182",
+                "reference": "1c4662337418ab88c9ddf40348f0638e35d49182",
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1 || ^1.0.0",
@@ -19927,5 +19942,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
