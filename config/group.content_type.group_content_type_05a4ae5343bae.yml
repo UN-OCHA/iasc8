@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group_content_type_05a4ae5343bae
-label: 'Space: Group node (Announcement)'
-description: 'Adds <em class="placeholder">Announcement</em> content to groups both publicly and privately.'
 group_type: iasc_space
 content_plugin: 'group_node:announcement'
 plugin_config:
