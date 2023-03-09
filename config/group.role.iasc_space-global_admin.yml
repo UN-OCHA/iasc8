@@ -1,0 +1,15 @@
+uuid: 0e44632c-5456-4a93-bc37-4a8b7ec6dbfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.iasc_space
+    - user.role.administrator
+id: iasc_space-global_admin
+label: 'Global admin'
+weight: 102
+admin: true
+scope: outsider
+global_role: administrator
+group_type: iasc_space
+permissions: {  }

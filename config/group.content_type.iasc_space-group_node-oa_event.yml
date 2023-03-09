@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: iasc_space-group_node-oa_event
-label: 'Space: Group node (Event)'
-description: 'Adds <em class="placeholder">Event</em> content to groups both publicly and privately.'
 group_type: iasc_space
 content_plugin: 'group_node:oa_event'
 plugin_config:

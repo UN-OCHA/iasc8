@@ -7,10 +7,7 @@ dependencies:
 id: iasc_space-anonymous
 label: Anonymous
 weight: -102
-internal: true
-audience: anonymous
 group_type: iasc_space
-permissions_ui: true
 permissions:
   - 'view group'
   - 'view group_node:announcement entity'
@@ -18,3 +15,6 @@ permissions:
   - 'view group_node:oa_section entity'
   - 'view group_node:oa_wiki_page entity'
   - 'view group_node:oa_worktracker_task entity'
+admin: false
+scope: outsider
+global_role: anonymous

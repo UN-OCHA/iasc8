@@ -7,8 +7,6 @@ dependencies:
   module:
     - user
 id: iasc_space-group_membership
-label: 'Space: Group membership'
-description: 'Adds users to groups as members.'
 group_type: iasc_space
 content_plugin: group_membership
 plugin_config:

@@ -52,7 +52,7 @@
         "drupal/geofield_map": "^2.38",
         "drupal/geophp": "^1.0@beta",
         "drupal/google_tag": "^1.2",
-        "drupal/group": "^1.0.0",
+        "drupal/group": "^2.0.0-rc1",
         "drupal/honeypot": "^2.0",
         "drupal/linkit": "^6.0@beta",
         "drupal/maintenance200": "^1.0",
