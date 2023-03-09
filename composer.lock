@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ac62677897248b4374dd030531d7e49",
+    "content-hash": "83c57e4f278739dcd2174240a133bef4",
     "packages": [
         {
             "name": "algolia/places",
@@ -5064,153 +5064,6 @@
             }
         },
         {
-            "name": "drupal/search_api_attachments",
-            "version": "9.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/search_api_attachments.git",
-                "reference": "9.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-9.0.1.zip",
-                "reference": "9.0.1",
-                "shasum": "cd0a7fa3062f3396ee95d9fdc5c6545e6f2c52f9"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/search_api": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "9.0.1",
-                    "datestamp": "1676994670",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "izus",
-                    "homepage": "https://www.drupal.org/user/514568"
-                }
-            ],
-            "description": "Extract and index file fields content.",
-            "homepage": "https://www.drupal.org/project/search_api_attachments",
-            "support": {
-                "source": "https://git.drupalcode.org/project/search_api_attachments"
-            }
-        },
-        {
-            "name": "drupal/search_api_solr",
-            "version": "4.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "4.2.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.10.zip",
-                "reference": "4.2.10",
-                "shasum": "28b1ccd5c462db92af3561103e9a33569a674387"
-            },
-            "require": {
-                "composer/semver": "^1.0|^3.0",
-                "consolidation/annotated-command": "^2.12|^4.1",
-                "drupal/core": "^9.3 || ^10.0",
-                "drupal/search_api": "~1.28",
-                "ext-dom": "*",
-                "ext-json": "*",
-                "ext-simplexml": "*",
-                "laminas/laminas-stdlib": "^3.2",
-                "maennchen/zipstream-php": "^2.2.1",
-                "php": ">=7.4",
-                "solarium/solarium": "^6.2.8"
-            },
-            "conflict": {
-                "drupal/acquia_search_solr": "<1.0.0-beta8",
-                "drupal/search_api_autocomplete": "<1.6.0",
-                "drupal/search_api_solr_multilingual": "<3.0.0"
-            },
-            "require-dev": {
-                "drupal/devel": "^4.0|^5.0",
-                "drupal/facets": "^3.0.x-dev",
-                "drupal/geofield": "1.x-dev",
-                "drupal/search_api_autocomplete": "1.x-dev",
-                "drupal/search_api_location": "1.x-dev",
-                "drupal/search_api_spellcheck": "3.x-dev",
-                "monolog/monolog": "^1.25|^3"
-            },
-            "suggest": {
-                "drupal/facets": "Provides facetted search.",
-                "drupal/search_api_autocomplete": "Provides auto complete for search boxes.",
-                "drupal/search_api_location": "Provides location searches.",
-                "drupal/search_api_solr_nlp": "Highly recommended! Provides Solr field types based on natural language processing (NLP).",
-                "drupal/search_api_spellcheck": "Provides spell checking and 'Did You Mean?'."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.2.10",
-                    "datestamp": "1671442326",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": ">=9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Markus Kalkbrenner",
-                    "homepage": "https://www.drupal.org/u/mkalkbrenner"
-                },
-                {
-                    "name": "Other contributors",
-                    "homepage": "https://www.drupal.org/node/982682/committers"
-                },
-                {
-                    "name": "cspitzlay",
-                    "homepage": "https://www.drupal.org/user/419305"
-                },
-                {
-                    "name": "drunken monkey",
-                    "homepage": "https://www.drupal.org/user/205582"
-                },
-                {
-                    "name": "mkalkbrenner",
-                    "homepage": "https://www.drupal.org/user/124705"
-                },
-                {
-                    "name": "Nick_vh",
-                    "homepage": "https://www.drupal.org/user/122682"
-                }
-            ],
-            "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
-            "homepage": "https://www.drupal.org/project/search_api_solr",
-            "support": {
-                "source": "http://git.drupal.org/project/search_api_solr.git",
-                "issues": "https://www.drupal.org/project/issues/search_api_solr",
-                "chat": "https://drupalchat.me/channel/search"
-            }
-        },
-        {
             "name": "drupal/seckit",
             "version": "2.0.1",
             "source": {
@@ -9296,56 +9149,6 @@
             "time": "2021-11-05T16:50:12+00:00"
         },
         {
-            "name": "psr/event-dispatcher",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/event-dispatcher.git",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\EventDispatcher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Standard interfaces for event handling.",
-            "keywords": [
-                "events",
-                "psr",
-                "psr-14"
-            ],
-            "support": {
-                "issues": "https://github.com/php-fig/event-dispatcher/issues",
-                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
-            },
-            "time": "2019-01-08T18:20:26+00:00"
-        },
-        {
             "name": "psr/http-client",
             "version": "1.0.1",
             "source": {
@@ -9789,72 +9592,6 @@
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "solarium/solarium",
-            "version": "6.2.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "0bca4fdcd53e86dea19754b0081f91fe17248a9d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/0bca4fdcd53e86dea19754b0081f91fe17248a9d",
-                "reference": "0bca4fdcd53e86dea19754b0081f91fe17248a9d",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": ">=2.0",
-                "ext-json": "*",
-                "php": "^7.3 || ^8.0",
-                "psr/event-dispatcher": "^1.0",
-                "psr/http-client": "^1.0",
-                "psr/http-factory": "^1.0",
-                "symfony/event-dispatcher-contracts": "^1.0 || ^2.0 || ^3.0"
-            },
-            "require-dev": {
-                "escapestudios/symfony2-coding-standard": "^3.11",
-                "ext-iconv": "*",
-                "guzzlehttp/guzzle": "^7.2",
-                "nyholm/psr7": "^1.2",
-                "php-http/guzzle7-adapter": "^0.1",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^9.5",
-                "roave/security-advisories": "dev-master",
-                "symfony/event-dispatcher": "^4.3 || ^5.0 || ^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Solarium\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "See GitHub contributors",
-                    "homepage": "https://github.com/solariumphp/solarium/contributors"
-                }
-            ],
-            "description": "PHP Solr client",
-            "homepage": "http://www.solarium-project.org",
-            "keywords": [
-                "php",
-                "search",
-                "solr"
-            ],
-            "support": {
-                "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/6.2.8"
-            },
-            "time": "2022-12-06T10:22:19+00:00"
         },
         {
             "name": "stack/builder",
@@ -19926,5 +19663,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
