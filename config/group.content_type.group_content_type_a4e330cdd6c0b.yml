@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group_content_type_a4e330cdd6c0b
-label: 'Group: Group node (Task)'
-description: 'Adds <em class="placeholder">Task</em> content to groups both publicly and privately.'
 group_type: iasc_group
 content_plugin: 'group_node:oa_worktracker_task'
 plugin_config:

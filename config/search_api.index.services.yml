@@ -17,54 +17,9 @@ dependencies:
     - search_api.server.local
     - core.entity_view_mode.node.full
   module:
-    - search_api_solr
     - node
     - search_api
     - iasc_content
-third_party_settings:
-  search_api_solr:
-    finalize: false
-    commit_before_finalize: false
-    commit_after_finalize: false
-    debug_finalize: false
-    highlighter:
-      maxAnalyzedChars: 51200
-      fragmenter: gap
-      usePhraseHighlighter: true
-      highlightMultiTerm: true
-      preserveMulti: false
-      regex:
-        slop: 0.5
-        pattern: blank
-        maxAnalyzedChars: 10000
-      highlight:
-        mergeContiguous: false
-        requireFieldMatch: false
-        snippets: 3
-        fragsize: 0
-    mlt:
-      mintf: 1
-      mindf: 1
-      maxdf: 0
-      maxdfpct: 0
-      minwl: 0
-      maxwl: 0
-      maxqt: 100
-      maxntp: 2000
-      boost: false
-      interestingTerms: none
-    term_modifiers:
-      slop: 3
-      fuzzy: 1
-    advanced:
-      index_prefix: ''
-      collection: ''
-      timezone: ''
-    multilingual:
-      limit_to_content_language: false
-      include_language_independent: true
-      specific_languages:
-        en: '0'
 id: services
 name: Services
 description: ''
@@ -188,12 +143,10 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
-  auto_aggregated_fulltext_field: {  }
   entity_type: {  }
   iasc_content_store_all_dates: {  }
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range: {  }
 tracker_settings:
   default:
     indexing_order: fifo

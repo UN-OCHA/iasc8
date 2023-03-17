@@ -9,8 +9,6 @@ dependencies:
     - gnode
     - node
 id: group_content_type_4bb9b49c6c4f1
-label: 'Space: Group node (Action Point)'
-description: 'Adds <em class="placeholder">Action Point</em> content to groups both publicly and privately.'
 group_type: iasc_space
 content_plugin: 'group_node:action_point'
 plugin_config:
