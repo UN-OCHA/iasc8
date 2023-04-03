@@ -884,14 +884,10 @@ function iasc_content_node_field_group_add_custom_callback_group($form, FormStat
     }
 
     $group = Group::load($gid['target_id']);
-    $group_content = GroupRelationship::create([
-      'type' => 'group_node:' . $node->bundle(),
-      'gid' => $group->id(),
-      'entity_id' => $node->id(),
-    ]);
-    $group_content->save();
+    if (!$group->getRelationshipsByEntity($node)) {
+      $group->addRelationship($node, 'group_node:' . $node->bundle());
+    }
   }
-
 }
 
 /**
@@ -932,6 +928,7 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
   // Gnodes to delete.
   $gids_delete = array_diff($gids_union, $gids_wanted);
 
+  // Create.
   foreach ($gids_create as $gid) {
     // Skip -none- option.
     if ($gid == '_none') {
@@ -939,14 +936,12 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
     }
 
     $group = Group::load($gid);
-    $group_content = GroupRelationship::create([
-      'type' => 'group_node:' . $node->bundle(),
-      'gid' => $group->id(),
-      'entity_id' => $node->id(),
-    ]);
-    $group_content->save();
+    if (!$group->getRelationshipsByEntity($node)) {
+      $group->addRelationship($node, 'group_node:' . $node->bundle());
+    }
   }
 
+  // Delete.
   foreach ($gids_delete as $gid) {
     // Skip -none- option.
     if ($gid == '_none') {
@@ -955,7 +950,6 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
 
     $gnodes_existing[$gid]->delete();
   }
-
 }
 
 /**
