@@ -884,10 +884,8 @@ function iasc_content_node_field_group_add_custom_callback_group($form, FormStat
     }
 
     $group = Group::load($gid['target_id']);
-    /** @var \Drupal\group\Plugin\GroupContentEnablerInterface $plugin */
-    $plugin = $group->getGroupType()->getContentPlugin('group_node:' . $node->bundle());
     $group_content = GroupRelationship::create([
-      'type' => $plugin->getContentTypeConfigId(),
+      'type' => 'group_node:' . $node->bundle(),
       'gid' => $group->id(),
       'entity_id' => $node->id(),
     ]);
@@ -941,9 +939,8 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
     }
 
     $group = Group::load($gid);
-    $plugin = $group->getGroupType()->getContentPlugin('group_node:' . $node->bundle());
     $group_content = GroupRelationship::create([
-      'type' => $plugin->getContentTypeConfigId(),
+      'type' => 'group_node:' . $node->bundle(),
       'gid' => $group->id(),
       'entity_id' => $node->id(),
     ]);
