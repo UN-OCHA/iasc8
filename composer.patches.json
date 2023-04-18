@@ -1,5 +1,8 @@
 {
   "patches": {
+    "drupal/dream_block_manager": {
+      "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
+    },
     "drupal/core": {
       "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
       "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch",
