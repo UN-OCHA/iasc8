@@ -9,4 +9,3 @@
     loginLink.href += '?destination=' + location.pathname + location.search + location.hash;
   }
 }());
-
