@@ -1,0 +1,15 @@
+diff --git a/dream_block_manager.module b/dream_block_manager.module
+index 4363040..ace6c30 100644
+--- a/dream_block_manager.module
++++ b/dream_block_manager.module
+@@ -9,6 +9,8 @@
+  * Implements hook_entity_type_alter().
+  */
+ function dream_block_manager_entity_type_alter(array &$entity_types) {
+-  $block_type = $entity_types['block'];
+-  $block_type->setHandlerClass('list_builder', 'Drupal\dream_block_manager\BlockFilterListBuilder');
++  if (isset($entity_types['block'])) {
++    $block_type = $entity_types['block'];
++    $block_type->setHandlerClass('list_builder', 'Drupal\dream_block_manager\BlockFilterListBuilder');
++  }
+ }
