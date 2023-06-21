@@ -1,4 +1,0 @@
-type: module
-name: 'Disabled - Search API Attachments'
-core_version_requirement: ^9 || ^10
-package: Search

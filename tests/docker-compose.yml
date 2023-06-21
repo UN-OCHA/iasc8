@@ -1,0 +1,59 @@
+version: "2.2"
+
+networks:
+  default:
+
+volumes:
+  iasc-test-site-database:
+  iasc-test-site-public:
+  iasc-test-site-private:
+
+services:
+  mysql:
+    image: public.ecr.aws/unocha/mysql:10.6
+    hostname: iasc-test-mysql
+    container_name: iasc-test-mysql
+    environment:
+      - MYSQL_DB=iasc
+      - MYSQL_USER=iasc
+      - MYSQL_PASS=iasc
+    volumes:
+      - "iasc-test-site-database:/var/lib/mysql:rw"
+    networks:
+      - default
+
+  drupal:
+    image: public.ecr.aws/unocha/iasc-site:local
+    hostname: iasc-test-site
+    container_name: iasc-test-site
+    depends_on:
+      - mysql
+    volumes:
+      - "./settings:/srv/www/shared/settings:ro"
+      # Mount volumes for the private and public files.
+      - "iasc-test-site-public:/srv/www/html/sites/default/files:rw"
+      - "iasc-test-site-private:/srv/www/html/sites/default/private:rw"
+      # Mount the folders needed for the tests.
+      - "../phpcs.xml:/srv/www/phpcs.xml:ro"
+      - "../phpunit.xml:/srv/www/phpunit.xml:ro"
+      # Mount local custom code.
+      - "../html/modules/custom:/srv/www/html/modules/custom:ro"
+      - "../html/themes/custom:/srv/www/html/themes/custom:ro"
+    environment:
+      - TERM=xterm
+      - ENVIRONMENT=dev
+      - NGINX_SERVERNAME=iasc-test-site,localhost,127.0.0.1
+      - NGINX_OVERRIDE_PROTOCOL=HTTP,iasc-test-site,localhost,127.0.0.1
+      - DRUSH_OPTIONS_URI=http://iasc-test-site
+      - DRUPAL_DB_DATABASE=iasc
+      - DRUPAL_DB_USERNAME=iasc
+      - DRUPAL_DB_PASSWORD=iasc
+      - DRUPAL_DB_HOST=mysql
+      - DRUPAL_DB_DRIVER=mysql
+      - PHP_ENVIRONMENT=dev
+      - PHP_XDEBUG=true
+      - XDEBUG_MODE=coverage
+      - BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output
+      - DTT_BASE_URL=http://127.0.0.1
+    networks:
+      - default

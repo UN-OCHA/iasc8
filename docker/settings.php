@@ -18,32 +18,18 @@
  * Yay!
  */
 
-// The _ENV prefix for all database settings.
-define('DRUPAL_DB', 'DRUPAL_DB_');
-
-// A default (empty) database connection for filling.
-$databases['default']['default'] = [
-  'database'  => '',
-  'username'  => '',
-  'password'  => '',
-  'host'      => '',
-  'port'      => '',
-  'driver'    => '',
-  'prefix'    => '',
-  'charset'   => '',
-  'collation' => '',
-];
-
-// Populate the default database credentials and remove any unset elements.
-foreach (array_keys($databases['default']['default']) as $key) {
-  $value = getenv(strtoupper(DRUPAL_DB . $key));
-  if (!empty($value)) {
-    $databases['default']['default'][$key] = $value;
-  }
-  else {
-    unset($databases['default']['default'][$key]);
-  }
-}
+// Populate the database settings with the environment variables if defined.
+$databases['default']['default'] = array_filter([
+  'database'  => getenv('DRUPAL_DB_DATABASE'),
+  'username'  => getenv('DRUPAL_DB_USERNAME'),
+  'password'  => getenv('DRUPAL_DB_PASSWORD'),
+  'host'      => getenv('DRUPAL_DB_HOST'),
+  'port'      => getenv('DRUPAL_DB_PORT'),
+  'driver'    => getenv('DRUPAL_DB_DRIVER'),
+  'prefix'    => getenv('DRUPAL_DB_PREFIX'),
+  'charset'   => getenv('DRUPAL_DB_CHARSET'),
+  'collation' => getenv('DRUPAL_DB_COLLATION'),
+]);
 
 // Set deployment identifier to git_sha.
 $settings['deployment_identifier'] = getenv('GIT_SHA');
@@ -55,3 +41,5 @@ if (file_exists('/srv/www/shared/settings')) {
     include_once $filename;
   }
 }
+
+$settings['config_sync_directory'] = dirname($app_root) . '/config';
