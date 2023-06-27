@@ -132,21 +132,40 @@ jobs:
             docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
             docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
             docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
-            # docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
-            docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --debug
-            # docker cp "$(docker compose -f tests/docker-compose.yml ps -q drupal)":/srv/www/html/build/logs/clover.xml .
+            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/sites/default/files/browser_output
+            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files/browser_output
+            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/coverage
+            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/coverage
+            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/sites/simpletest
+            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/simpletest
+            docker compose -f tests/docker-compose.yml exec -u appuser -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 -e SIMPLETEST_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
         env:
           fail-fast: true
 
-      # - name: Monitor coverage
-      #   uses: slavcodev/coverage-monitor-action@v1
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     coverage_path: "clover.xml"
-      #     threshold_alert: 10
-      #     threshold_warning: 50
-      #     threshold_metric: "lines"
-      #     comment_footer: false
+      - name: Copy Coveralls
+        id: copy_coveralls
+        if: success()
+        run: docker cp "$(docker compose -f tests/docker-compose.yml ps -q drupal)":/srv/www/html/build/logs/clover.xml . || echo "skip=true" >> "$GITHUB_OUTPUT"
+
+      - name: Monitor coverage
+        id: coveralls
+        if: ${{ steps.copy_coveralls.outputs.skip != 'true' }}
+        uses: slavcodev/coverage-monitor-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          coverage_path: "clover.xml"
+          threshold_alert: 0
+          threshold_warning: 50
+          threshold_metric: "lines"
+          comment_footer: false
+
+      - name: DB Logs
+        id: dblog
+        if: failure()
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -T drupal drush watchdog:show
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
@@ -244,6 +263,6 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml down
+            docker compose -f tests/docker-compose.yml down --rmi local -v
         env:
           fail-fast: true
