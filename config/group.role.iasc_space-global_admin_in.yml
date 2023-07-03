@@ -1,15 +1,15 @@
-uuid: 0e44632c-5456-4a93-bc37-4a8b7ec6dbfb
+uuid: 5cccf818-6c60-41df-afb8-4c52f3d23199
 langcode: en
 status: true
 dependencies:
   config:
     - group.type.iasc_space
     - user.role.administrator
-id: iasc_space-global_admin
-label: 'Global admin (out)'
-weight: 102
+id: iasc_space-global_admin_in
+label: 'Global admin (in)'
+weight: 103
 admin: true
-scope: outsider
+scope: insider
 global_role: administrator
 group_type: iasc_space
 permissions: {  }
