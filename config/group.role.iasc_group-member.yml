@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - group.type.iasc_group
+    - user.role.authenticated
 id: iasc_group-member
 label: Member
-weight: -100
+weight: -7
+admin: false
+scope: insider
+global_role: authenticated
 group_type: iasc_group
 permissions:
   - 'view group_node:announcement entity'
@@ -14,6 +18,3 @@ permissions:
   - 'view group_node:oa_section entity'
   - 'view group_node:oa_wiki_page entity'
   - 'view group_node:oa_worktracker_task entity'
-admin: false
-scope: insider
-global_role: authenticated

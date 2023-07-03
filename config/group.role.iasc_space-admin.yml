@@ -6,8 +6,9 @@ dependencies:
     - group.type.iasc_space
 id: iasc_space-admin
 label: Admin
-weight: 100
-group_type: iasc_space
-permissions: {  }
+weight: -10
 admin: true
 scope: individual
+global_role: null
+group_type: iasc_space
+permissions: {  }
