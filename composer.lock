@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e801e512091c61da45a165bbe917478",
+    "content-hash": "4004da420e998a5b52a04d4b55c48fbc",
     "packages": [
         {
             "name": "algolia/places",
@@ -1999,26 +1999,29 @@
         },
         {
             "name": "drupal/colors",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/colors.git",
-                "reference": "3d64b1d44f96836ff8a52fb68b1f7d17f95ab161"
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/colors-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "42f306d4aa05d6e2d145bb20de7fcdaa71f04b30"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1587391409",
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1587410367",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -19717,7 +19720,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drupal/colors": 20,
+        "drupal/colors": 10,
         "drupal/conditional_fields": 15,
         "drupal/config_split": 10,
         "drupal/diff": 5,
@@ -19742,5 +19745,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
