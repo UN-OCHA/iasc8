@@ -1,7 +1,9 @@
 uuid: 70784a10-4489-4c02-b32d-a6f2360e4f58
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - iasc_content
 id: viewer
 label: viewer
 weight: 5

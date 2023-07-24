@@ -1,7 +1,19 @@
 uuid: f4294202-4f60-48b3-8f49-78741a6bb93c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.announcement
+    - node.type.oa_event
+    - node.type.oa_wiki_page
+    - node.type.panopoly_landing_page
+    - node.type.panopoly_page
+  module:
+    - iasc_content
+    - iasc_hero
+    - node
+    - system
+    - taxonomy
 id: editor
 label: editor
 weight: 3

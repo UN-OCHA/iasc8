@@ -1,7 +1,9 @@
 uuid: 566093f5-18c0-4807-9e3f-cfb668a2655f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - iasc_content
 id: iasc
 label: IASC
 weight: 9

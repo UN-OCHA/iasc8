@@ -1,7 +1,18 @@
 uuid: 9a49230e-2758-47d8-b260-604ffc21f8f2
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.iasc_wysiwyg
+    - node.type.action_point
+  module:
+    - filter
+    - iasc_content
+    - iasc_hero
+    - media
+    - node
+    - node_view_permissions
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated

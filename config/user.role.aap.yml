@@ -1,7 +1,14 @@
 uuid: b037c9ab-ddda-4f82-83c9-b99ffaab64e1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.image
+    - node.type.service
+  module:
+    - iasc_service
+    - media
+    - node
 id: aap
 label: AAP
 weight: 10

@@ -1,7 +1,9 @@
 uuid: 18b1a3a0-0819-4139-9a9c-7d9b0064f56c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - iasc_hero
 id: group_login
 label: 'group login'
 weight: 4

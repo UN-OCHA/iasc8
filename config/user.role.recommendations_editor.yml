@@ -1,7 +1,16 @@
 uuid: 61357d18-6617-4a4c-806d-93ce099faed6
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.announcement
+    - node.type.oa_wiki_page
+    - node.type.oa_worktracker_task
+    - node.type.panopoly_page
+  module:
+    - node
+    - system
+    - taxonomy
 id: recommendations_editor
 label: 'recommendations editor'
 weight: 6
