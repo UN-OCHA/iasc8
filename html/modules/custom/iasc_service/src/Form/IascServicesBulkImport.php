@@ -521,7 +521,7 @@ class IascServicesBulkImport extends FormBase {
       ->getQuery()
       ->condition('type', 'contact')
       ->condition('field_email', $email);
-    $entity_ids = $query->execute();
+    $entity_ids = $query->accessCheck(FALSE)->execute();
 
     if (empty($entity_ids)) {
       return FALSE;
