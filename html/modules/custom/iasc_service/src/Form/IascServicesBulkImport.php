@@ -440,7 +440,7 @@ class IascServicesBulkImport extends FormBase {
 
     $existing = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties([
       'name' => $short_name,
-      'vid' => $vocabulary
+      'vid' => $vocabulary,
     ]);
 
     if (!empty($existing)) {
