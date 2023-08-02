@@ -23,7 +23,6 @@ module:
   datetime: 0
   datetime_range: 0
   diff: 0
-  dream_block_manager: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
@@ -38,7 +37,6 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
-  file_checker: 0
   filter: 0
   flexible_permissions: 0
   geocoder: 0
@@ -71,7 +69,6 @@ module:
   mysql: 0
   node: 0
   node_view_permissions: 0
-  ocha_integrations: 0
   ocha_search: 0
   ocha_viewsreference_filter: 0
   options: 0

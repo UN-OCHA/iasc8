@@ -1,0 +1,8 @@
+name: ocha_integrations
+type: module
+description: 'ocha_integrations.'
+package: DISABLED
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - group:group
+  - paragraphs:paragraphs

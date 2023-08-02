@@ -1,0 +1,8 @@
+name: dream_block_manager
+type: module
+description: 'dream_block_manager.'
+package: DISABLED
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - group:group
+  - paragraphs:paragraphs
