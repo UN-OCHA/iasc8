@@ -3,6 +3,7 @@
 namespace Drupal\iasc_service\Form;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Extension\ExtensionPathResolver;
 use Drupal\Core\File\FileSystem;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -24,16 +25,23 @@ class IascServicesCreateTemplate extends FormBase {
   /**
    * File system.
    *
-   * @var Drupal\Core\File\FileSystem
+   * @var \Drupal\Core\File\FileSystem
    */
   protected $fileSystem;
 
   /**
    * Entity query.
    *
-   * @var Drupal\Core\Entity\EntityTypeManagerInterface
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $entityQuery;
+  protected $entityTypeManager;
+
+  /**
+   * Entity query.
+   *
+   * @var \Drupal\Core\Extension\ExtensionPathResolver
+   */
+  protected $extensionPathResolver;
 
   /**
    * {@inheritdoc}
@@ -45,9 +53,10 @@ class IascServicesCreateTemplate extends FormBase {
   /**
    * Class constructor.
    */
-  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityTypeManager) {
+  public function __construct(FileSystem $fileSystem, EntityTypeManagerInterface $entityTypeManager, ExtensionPathResolver $extensionPathResolver) {
     $this->fileSystem = $fileSystem;
     $this->entityTypeManager = $entityTypeManager;
+    $this->extensionPathResolver = $extensionPathResolver;
   }
 
   /**
@@ -56,7 +65,8 @@ class IascServicesCreateTemplate extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('file_system'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('extension.path.resolver'),
     );
   }
 
@@ -95,7 +105,7 @@ class IascServicesCreateTemplate extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Set paths.
     $destination_name = 'template_' . date('Ymdhni') . '.xlsx';
-    $source = drupal_get_path('module', 'iasc_service') . '/bulk_template.xlsx';
+    $source = $this->extensionPathResolver->getPath('module', 'iasc_service') . '/bulk_template.xlsx';
     $filename = $this->fileSystem->realpath($source);
 
     $reader = new Xlsx();
