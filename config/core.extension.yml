@@ -81,7 +81,6 @@ module:
   paragraphs_viewmode: 0
   path: 0
   path_alias: 0
-  quickedit: 0
   rdf: 0
   realname: 0
   redirect: 0
@@ -128,8 +127,8 @@ module:
   minimal: 1000
 theme:
   stable: 0
-  bartik: 0
   seven: 0
   common_design: 0
   iasc_common_design: 0
+  claro: 0
 profile: minimal
