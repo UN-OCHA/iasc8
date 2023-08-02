@@ -1,12 +1,12 @@
-uuid: af72e52c-24c8-44d5-9a80-50dd8b73da2b
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.iasc_wysiwyg
+    - filter.format.webform_default
   module:
     - ckeditor
-format: iasc_wysiwyg
+    - webform
+format: webform_default
 editor: ckeditor
 settings:
   toolbar:
@@ -15,36 +15,38 @@ settings:
         -
           name: Formatting
           items:
+            - Format
             - Bold
             - Italic
+            - Superscript
+            - Subscript
         -
-          name: Links
+          name: Media
+          items:
+            - SpecialChar
+            - ImceImage
+        -
+          name: Linking
           items:
             - DrupalLink
             - DrupalUnlink
         -
           name: Lists
           items:
-            - BulletedList
             - NumberedList
+            - BulletedList
         -
-          name: Media
+          name: Indentation
+          items:
+            - Outdent
+            - Indent
+        -
+          name: 'Block Formatting'
           items:
             - Blockquote
-            - DrupalImage
         -
           name: Tools
           items:
             - Source
-  plugins:
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: content
-image_upload:
-  status: false
-  scheme: public
-  directory: inline-images
-  max_size: ''
-  max_dimensions:
-    width: null
-    height: null
+            - Maximize
+  plugins: {  }
