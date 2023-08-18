@@ -7,7 +7,7 @@
   height: auto;
 }
 
-/* Override the generic .cd-layout-sidebar-first ul */
-.cd-layout-sidebar-first .cd-styled-list li {
+/* Override the generic .cd-layout__sidebar--first ul */
+.cd-layout__sidebar--first .cd-styled-list li {
   margin-top: 0;
 }

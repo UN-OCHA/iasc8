@@ -57,20 +57,20 @@
   margin-bottom: 1rem;
 }
 
-.cd-layout-sidebar-first .cd-location,
-.cd-layout-sidebar-first .field--name-field-meeting-notes,
-.cd-layout-sidebar-first .field--name-field-meeting-agendas,
-.cd-layout-sidebar-first .field--name-field-oa-section,
-.cd-layout-sidebar-first .field--name-field-iasc-audience,
-.cd-layout-sidebar-first .field--name-field-links,
-.cd-layout-sidebar-first .field--name-field-membership,
-.cd-layout-sidebar-first .field--name-field-date-closed,
-.cd-layout-sidebar-first .field--name-field-external-link,
-.cd-layout-sidebar-first .field--name-group-content-access,
-.cd-layout-sidebar-first .field--name-field-ap-responsibility,
-.cd-layout-sidebar-first .field--name-field-referenced-docs,
-.cd-layout-sidebar-first .field--name-field-host,
-.cd-layout-sidebar-first .field--name-field-category {
+.cd-layout__sidebar--first .cd-location,
+.cd-layout__sidebar--first .field--name-field-meeting-notes,
+.cd-layout__sidebar--first .field--name-field-meeting-agendas,
+.cd-layout__sidebar--first .field--name-field-oa-section,
+.cd-layout__sidebar--first .field--name-field-iasc-audience,
+.cd-layout__sidebar--first .field--name-field-links,
+.cd-layout__sidebar--first .field--name-field-membership,
+.cd-layout__sidebar--first .field--name-field-date-closed,
+.cd-layout__sidebar--first .field--name-field-external-link,
+.cd-layout__sidebar--first .field--name-group-content-access,
+.cd-layout__sidebar--first .field--name-field-ap-responsibility,
+.cd-layout__sidebar--first .field--name-field-referenced-docs,
+.cd-layout__sidebar--first .field--name-field-host,
+.cd-layout__sidebar--first .field--name-field-category {
   margin-bottom: 2rem !important;
 }
 
@@ -89,7 +89,7 @@
   margin-bottom: 0;
 }
 
-.cd-layout-sidebar-first > .cd-sidebar {
+.cd-layout__sidebar--first > .cd-sidebar {
   margin-bottom: 1rem !important;
 }
 
@@ -152,11 +152,11 @@
 }
 
 /* AAP Services fields in sidebar */
-.cd-layout-sidebar-first .field--name-field-updated,
-.cd-layout-sidebar-first .field--name-field-agency-initiative-or-group,
-.cd-layout-sidebar-first .field--name-field-type-of-entity,
-.cd-layout-sidebar-first .field--name-field-focal-point,
-.cd-layout-sidebar-first .field--name-field-featured-categories {
+.cd-layout__sidebar--first .field--name-field-updated,
+.cd-layout__sidebar--first .field--name-field-agency-initiative-or-group,
+.cd-layout__sidebar--first .field--name-field-type-of-entity,
+.cd-layout__sidebar--first .field--name-field-focal-point,
+.cd-layout__sidebar--first .field--name-field-featured-categories {
   margin-bottom: 2rem;
 }
 

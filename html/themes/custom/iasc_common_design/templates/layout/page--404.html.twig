@@ -3,13 +3,13 @@
   {% block main %}
     {{ attach_library('common_design/cd-form') }}
     {# Link to skip to the main content is in html.html.twig #}
-    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
+    <main aria-label="{{ 'Page content'|t }}" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
       {{ page.page_title }}
 
-      <div class="cd-layout-content-wrapper">
+      <div class="cd-layout">
 
-        <div class="cd-layout-content">
+        <div class="cd-layout__content">
           <p>{% trans %}Sorry, the page you are looking for cannot be found.{% endtrans %}</p>
 
           <form action="/search" method="get" accept-charset="UTF-8">
@@ -24,7 +24,7 @@
             </div>
           </form>
 
-        </div>{# /.cd-layout-content #}
+        </div>{# /.cd-layout__content #}
 
       </div>
     </main>
