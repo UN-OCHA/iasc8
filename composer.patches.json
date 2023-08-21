@@ -12,9 +12,6 @@
     "drupal/csp": {
       "Simplify log format": "PATCHES/csp-log-format.patch"
     },
-    "drupal/geophp": {
-      "D10 - https://www.drupal.org/project/geophp/issues/3287733": "https://www.drupal.org/files/issues/2023-04-26/geophp_d10-3287733-6.patch"
-    },
     "drupal/maintenance200": {
       "Drupal 10 compatibility": "PATCHES/maintenance200-drupal-10-compatibility.patch"
     },
