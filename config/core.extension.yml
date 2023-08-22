@@ -106,7 +106,6 @@ module:
   twig_tweak: 0
   un_date: 0
   update: 0
-  upgrade_status: 0
   user: 0
   user_expire: 0
   username_enumeration_prevention: 0
