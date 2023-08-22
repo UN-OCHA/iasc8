@@ -11,4 +11,3 @@ is_admin: null
 permissions:
   - 'access iasc content'
   - 'change own username'
-  - 'view private files'

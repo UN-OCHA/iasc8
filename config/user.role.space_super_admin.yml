@@ -9,5 +9,4 @@ label: 'space super admin'
 weight: 7
 is_admin: null
 permissions:
-  - 'access IPE revert button'
   - 'access iasc content'

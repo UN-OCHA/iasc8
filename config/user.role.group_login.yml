@@ -9,5 +9,4 @@ label: 'group login'
 weight: 4
 is_admin: null
 permissions:
-  - 'view private files'
   - 'view unpublished hero entities'

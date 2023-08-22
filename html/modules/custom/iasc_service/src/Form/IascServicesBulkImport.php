@@ -19,16 +19,16 @@ class IascServicesBulkImport extends FormBase {
   /**
    * File system.
    *
-   * @var Drupal\Core\File\FileSystem
+   * @var \Drupal\Core\File\FileSystem
    */
   protected $fileSystem;
 
   /**
    * Entity query.
    *
-   * @var Drupal\Core\Entity\EntityTypeManagerInterface
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $entityQuery;
+  protected $entityTypeManager;
 
   /**
    * {@inheritdoc}
@@ -438,7 +438,10 @@ class IascServicesBulkImport extends FormBase {
       $short_name = Unicode::truncate($input, 250, TRUE, TRUE);
     }
 
-    $existing = taxonomy_term_load_multiple_by_name($short_name, $vocabulary);
+    $existing = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties([
+      'name' => $short_name,
+      'vid' => $vocabulary,
+    ]);
 
     if (!empty($existing)) {
       $term = reset($existing);
@@ -518,7 +521,7 @@ class IascServicesBulkImport extends FormBase {
       ->getQuery()
       ->condition('type', 'contact')
       ->condition('field_email', $email);
-    $entity_ids = $query->execute();
+    $entity_ids = $query->accessCheck(FALSE)->execute();
 
     if (empty($entity_ids)) {
       return FALSE;
