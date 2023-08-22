@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b9f143a394a9e93708b1a7f8e4cca61",
+    "content-hash": "86773fa38c35933bd1d4bd2fcfe19454",
     "packages": [
         {
             "name": "algolia/places",
@@ -3029,23 +3029,24 @@
         },
         {
             "name": "drupal/dynamic_entity_reference",
-            "version": "4.0.0-alpha1",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dynamic_entity_reference.git",
-                "reference": "4.0.0-alpha1"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-4.0.0-alpha1.zip",
-                "reference": "4.0.0-alpha1",
-                "shasum": "4248dc45ec1597504903e67d7d7e441e909bf7b8"
+                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "4155c11eac17ccd485888e6e5c52858358726415"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
-                "php": ">=8.0"
+                "drupal/core": "^9.3",
+                "php": ">=7.4"
             },
             "require-dev": {
+                "drupal/diff": "1.x-dev",
                 "mglaman/phpstan-drupal": "^1.1",
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-deprecation-rules": "^1.0"
@@ -3053,11 +3054,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0-alpha1",
-                    "datestamp": "1663511667",
+                    "version": "8.x-1.16",
+                    "datestamp": "1644273068",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -19984,7 +19985,6 @@
         "drupal/conditional_fields": 15,
         "drupal/config_split": 10,
         "drupal/diff": 5,
-        "drupal/dynamic_entity_reference": 15,
         "drupal/field_permissions": 5,
         "drupal/file_entity": 10,
         "drupal/flag": 15,

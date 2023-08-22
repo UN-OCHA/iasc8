@@ -38,7 +38,7 @@
         "drupal/date_recur": "^3.0",
         "drupal/date_recur_modular": "^3.0",
         "drupal/diff": "^1.0@RC",
-        "drupal/dynamic_entity_reference": "^4.0@alpha",
+        "drupal/dynamic_entity_reference": "^1.16",
         "drupal/entityqueue": "^1.0",
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
