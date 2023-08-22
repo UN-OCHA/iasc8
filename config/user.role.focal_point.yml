@@ -6,12 +6,4 @@ id: focal_point
 label: 'Focal Point'
 weight: 8
 is_admin: null
-permissions:
-  - 'create field_ap_progress_overview'
-  - 'create field_ap_status'
-  - 'edit field_ap_progress_overview'
-  - 'edit field_ap_status'
-  - 'edit own field_ap_progress_overview'
-  - 'edit own field_ap_status'
-  - 'view field_ap_status'
-  - 'view own field_ap_status'
+permissions: {  }

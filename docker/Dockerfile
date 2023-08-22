@@ -1,4 +1,5 @@
-FROM public.ecr.aws/unocha/php-k8s:8.0-stable as builder
+FROM public.ecr.aws/unocha/php-k8s:8.1-stable as builder
+
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
@@ -7,7 +8,7 @@ RUN export COMPOSER_ALLOW_SUPERUSER=1 && \
     composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml docker/memcache.services.yml html/sites/default
 
-FROM public.ecr.aws/unocha/php-k8s:8.0-stable
+FROM public.ecr.aws/unocha/php-k8s:8.1-stable
 
 ARG VCS_REF
 ARG VCS_URL

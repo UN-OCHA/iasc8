@@ -1,0 +1,8 @@
+name: file_checker
+type: module
+description: 'file_checker.'
+package: DISABLED
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - group:group
+  - paragraphs:paragraphs

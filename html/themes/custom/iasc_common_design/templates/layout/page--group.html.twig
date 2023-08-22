@@ -83,22 +83,22 @@
 
   {% block main %}
     {# Link to skip to the main content is in html.html.twig #}
-    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(group_layout_classes) }}>
+    <main aria-label="{{ 'Page content'|t }}" {{ attributes.setAttribute('id', 'main-content').addClass(group_layout_classes) }}>
 
       {{ page.page_title }}
 
-      <div class="cd-layout-content-wrapper">
+      <div class="cd-layout">
+        {% if page.sidebar_first|render|striptags|trim %}
+          <aside class="cd-layout-sidebar-first">{{ page.sidebar_first }}</aside>
+        {% endif %}
 
-      {% if page.sidebar_first|render|striptags|trim %}
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.sidebar_first }}</aside>
-      {% endif %}
+        <div class="cd-layout__content">
+          {{ page.content }}
+        </div>{# /.cd-layout__content #}
 
-      <div class="cd-layout-content">
-        {{ page.content }}
-      </div>{# /.cd-layout-content #}
-
-      {% if page.sidebar_second|render|striptags|trim %}<aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>{% endif %}
-
+        {% if page.sidebar_second|render|striptags|trim %}
+          <aside class="cd-layout__sidebar cd-layout__sidebar--second">{{ page.sidebar_second }}</aside>
+        {% endif %}
       </div>
 
     </main>

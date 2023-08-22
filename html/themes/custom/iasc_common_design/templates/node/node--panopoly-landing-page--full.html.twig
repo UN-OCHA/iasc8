@@ -133,15 +133,13 @@
     {{ content|without('body', 'field_content', 'field_sidebar', 'field_footer', 'field_featured_image') }}
 
     {% block section %}
-      <div class="cd-layout-two-col">
-
-        <div class="cd-layout-main-content">
+      <div class="cd-layout">
+        <div class="cd-layout__content">
           {{ content.body }}
           {{ content.field_content }}
         </div>
 
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_sidebar }}</aside>
-
+        <aside class="cd-layout__sidebar">{{ content.field_sidebar }}</aside>
       </div>
     {% endblock %}
 

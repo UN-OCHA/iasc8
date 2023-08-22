@@ -485,7 +485,7 @@ function iasc_content_file_field_to_media() {
           $query->condition('type', $bundle);
         }
 
-        $ids = $query->execute();
+        $ids = $query->accessCheck(FALSE)->execute();
         $entities = \Drupal::entityTypeManager()
           ->getStorage($entity_type)
           ->loadMultiple($ids);
@@ -588,7 +588,7 @@ function iasc_content_membership_position_to_list() {
   $query->exists('field_position');
   $query->notExists('field_member_position');
   $query->condition('type', 'membership');
-  $ids = $query->execute();
+  $ids = $query->accessCheck(FALSE)->execute();
 
   $entities = \Drupal::entityTypeManager()
     ->getStorage('paragraph')
@@ -621,7 +621,7 @@ function iasc_content_convert_oa_section_ref() {
     $query->condition('type', $bundle);
     $query->exists('oa_section_ref');
     $query->notExists('field_section');
-    $ids = $query->execute();
+    $ids = $query->accessCheck(FALSE)->execute();
 
     $entities = \Drupal::entityTypeManager()
       ->getStorage('node')
@@ -1033,7 +1033,7 @@ function iasc_content_file_download($uri) {
                 $field_name = reset($fields);
                 $query->condition($field_name . '.%delta.target_id', $media_id);
               }
-              $ids = $query->execute();
+              $ids = $query->accessCheck(FALSE)->execute();
 
               $entities = \Drupal::entityTypeManager()
                 ->getStorage($entity_type_to_check)
@@ -1482,7 +1482,7 @@ function iasc_content_migrate_meetings_paragraphs() {
   $query->condition('type', 'view');
   $query->exists('field_view');
   $query->condition('field_view', 'iasc_events');
-  $ids = $query->execute();
+  $ids = $query->accessCheck(FALSE)->execute();
 
   $paragraphs = \Drupal::entityTypeManager()
     ->getStorage('paragraph')
@@ -1515,7 +1515,7 @@ function iasc_content_migrate_all_meetings_paragraphs() {
   $query->condition('type', 'view');
   $query->exists('field_view');
   $query->condition('field_view', 'iasc_events');
-  $ids = $query->execute();
+  $ids = $query->accessCheck(FALSE)->execute();
 
   $paragraphs = \Drupal::entityTypeManager()
     ->getStorage('paragraph')
@@ -1668,7 +1668,7 @@ function iasc_content_remove_private_files_1() {
   $query->exists('field_section_audience');
   $query->condition('field_section_audience', ['iasc', 'donor', 'member'], 'in');
   $query->exists('field_media_files');
-  $ids = $query->execute();
+  $ids = $query->accessCheck(FALSE)->execute();
 
   $nodes = \Drupal::entityTypeManager()
     ->getStorage('node')
@@ -1738,7 +1738,7 @@ function iasc_content_remove_private_files_2($ids = []) {
               $query = \Drupal::entityQuery('node');
               $query->exists('field_media_files');
               $query->condition('field_media_files.entity.mid', $media_id);
-              $ids = $query->execute();
+              $ids = $query->accessCheck(FALSE)->accessCheck(FALSE)->execute();
 
               if (count($ids) > 1) {
                 continue;
@@ -1748,7 +1748,7 @@ function iasc_content_remove_private_files_2($ids = []) {
               $query = \Drupal::entityQuery('paragraph');
               $query->exists('field_media');
               $query->condition('field_media.entity.mid', $media_id);
-              $ids = $query->execute();
+              $ids = $query->accessCheck(FALSE)->execute();
 
               if (count($ids) > 1) {
                 continue;

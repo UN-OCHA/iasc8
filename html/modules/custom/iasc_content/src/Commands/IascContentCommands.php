@@ -52,7 +52,7 @@ class IascContentCommands extends DrushCommands {
       ->condition('field_date_closed', $today, '<')
       ->condition($orGroup);
     $query->condition($andGroup);
-    $archived_groups = $query->execute();
+    $archived_groups = $query->accessCheck(FALSE)->execute();
     $counter = 0;
 
     if (empty($archived_groups)) {

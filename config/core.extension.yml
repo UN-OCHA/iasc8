@@ -13,7 +13,6 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
-  config_split: 0
   contextual: 0
   csp: 0
   csv_serialization: 0
@@ -23,14 +22,12 @@ module:
   datetime: 0
   datetime_range: 0
   diff: 0
-  dream_block_manager: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
   entity_reference_revisions: 0
   entityqueue: 0
-  environment_indicator: 0
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
@@ -38,7 +35,6 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
-  file_checker: 0
   filter: 0
   flexible_permissions: 0
   geocoder: 0
@@ -71,7 +67,6 @@ module:
   mysql: 0
   node: 0
   node_view_permissions: 0
-  ocha_integrations: 0
   ocha_search: 0
   ocha_viewsreference_filter: 0
   options: 0
@@ -81,7 +76,6 @@ module:
   paragraphs_viewmode: 0
   path: 0
   path_alias: 0
-  quickedit: 0
   rdf: 0
   realname: 0
   redirect: 0
@@ -107,7 +101,6 @@ module:
   token: 0
   token_filter: 0
   toolbar: 0
-  tour: 0
   twig_tweak: 0
   un_date: 0
   update: 0
@@ -116,6 +109,7 @@ module:
   username_enumeration_prevention: 0
   variationcache: 0
   views_data_export: 0
+  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0
@@ -128,8 +122,8 @@ module:
   minimal: 1000
 theme:
   stable: 0
-  bartik: 0
   seven: 0
   common_design: 0
   iasc_common_design: 0
+  claro: 0
 profile: minimal

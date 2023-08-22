@@ -1,8 +1,10 @@
-{# Displays the site header #}
-
-{{ attach_library('common_design/cd-dropdown') }}
-
-<header class="cd-header">
+{#
+/**
+ * @file
+ * Top-level template for CD Header.
+ */
+#}
+<header class="cd-header" aria-label="{{ 'Site header'|t }}">
 
   {% block header_content %}
     {% include '@iasc_common_design/cd/cd-header/cd-global-header.html.twig' %}
