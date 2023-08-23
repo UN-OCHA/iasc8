@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - linkit
-    - media
+    - spamspan
     - token_filter
 name: 'IASC wysiwyg'
 format: iasc_wysiwyg
@@ -16,7 +16,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt data-entity-type data-entity-uuid data-entity-substitution data-align data-caption width height>'
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type start> <img data-entity-type data-entity-uuid data-entity-substitution data-align data-caption src alt height width> <strong> <em> <code> <li>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:
@@ -26,15 +26,6 @@ filters:
     weight: -11
     settings:
       title: true
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }
   token_filter:
     id: token_filter
     provider: token_filter
@@ -42,3 +33,17 @@ filters:
     weight: 0
     settings:
       replace_empty: '0'
+  filter_spamspan:
+    id: filter_spamspan
+    provider: spamspan
+    status: false
+    weight: 0
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: '0'
+      spamspan_dot_enable: '0'
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: '0'
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
