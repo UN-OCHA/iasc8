@@ -176,10 +176,6 @@
       "merge-extra-deep": true,
       "merge-scripts": true
     },
-    "preserve-paths": [
-      "html/modules/custom",
-      "html/themes/custom"
-    ],
     "drupal-scaffold": {
       "initial": {
         ".editorconfig": "../.editorconfig",
