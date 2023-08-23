@@ -114,7 +114,6 @@
     "drupal/devel": "^5.0.2",
     "drupal/devel_php": "^1.5",
     "drupal/upgrade_rector": "1.x-dev@dev",
-    "drupal/upgrade_status": "^4.0",
     "kint-php/kint": "^3.3",
     "phpmd/phpmd": "^2.6",
     "phpspec/prophecy-phpunit": "^2",
@@ -128,7 +127,7 @@
   "minimum-stability": "stable",
   "prefer-stable": true,
   "config": {
-  "bin-dir": "vendor/bin/",
+    "bin-dir": "vendor/bin/",
     "sort-packages": true,
     "allow-plugins": {
       "composer/installers": true,
@@ -165,7 +164,9 @@
       "html/modules/contrib/{$name}": ["type:drupal-module"],
       "html/profiles/contrib/{$name}": ["type:drupal-profile"],
       "html/themes/contrib/{$name}": ["type:drupal-theme"],
-      "drush/Commands/{$name}": ["type:drupal-drush"]
+      "drush/Commands/{$name}": ["type:drupal-drush"],
+      "html/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "html/themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
     "merge-plugin": {
       "include": [
