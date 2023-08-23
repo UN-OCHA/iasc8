@@ -13,6 +13,7 @@ module:
   components: 0
   conditional_fields: 0
   config: 0
+  config_split: 0
   contextual: 0
   csp: 0
   csv_serialization: 0
@@ -28,6 +29,7 @@ module:
   entity: 0
   entity_reference_revisions: 0
   entityqueue: 0
+  environment_indicator: 0
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
@@ -109,7 +111,6 @@ module:
   username_enumeration_prevention: 0
   variationcache: 0
   views_data_export: 0
-  views_ui: 0
   viewsreference: 0
   webform: 0
   webform_submission_log: 0
