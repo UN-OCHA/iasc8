@@ -38,7 +38,7 @@ $settings['deployment_identifier'] = getenv('GIT_SHA');
 // @TODO: Use some sort of key/value store.
 if (file_exists('/srv/www/shared/settings')) {
   foreach (glob('/srv/www/shared/settings/settings.*.php') as $filename) {
-    include_once $filename;
+    include $filename;
   }
 }
 

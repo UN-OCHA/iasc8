@@ -10,6 +10,11 @@
 # Ignore sensitive information
 /html/sites/*/settings.php
 /html/sites/*/settings.local.php
+/html/sites/*/services.yml
+
+# Ignore local development files.
+/local/.env
+/local/shared/settings/settings.site.php
 
 # Ignore Drupal's file directory
 /html/sites/*/files/
