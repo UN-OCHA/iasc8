@@ -29,7 +29,7 @@
     "drupal/ckeditor": "^1.0",
     "drupal/components": "^3.0@beta",
     "drupal/conditional_fields": "^4.0@alpha",
-    "drupal/config_filter": "^2.2",
+    "drupal/config_filter": "^2.4",
     "drupal/config_split": "^2.0.0-beta4",
     "drupal/core-composer-scaffold": "^9.5",
     "drupal/core-project-message": "^9.5",
