@@ -1,6 +1,8 @@
 # Variables. Yes.
 DOCKER=docker
 DOCKER_BUILDKIT=0
+IMAGE_NAME=iasc-site
+IMAGE_TAG=local
 
 # The main build recipe.
 build:	clean
@@ -12,9 +14,9 @@ build:	clean
 				--build-arg GITHUB_ACTOR=`whoami` \
 				--build-arg GITHUB_REPOSITORY=`git config --get remote.origin.url` \
 				--build-arg GITHUB_SHA=`git rev-parse --short HEAD` \
-		. --file docker/Dockerfile --tag public.ecr.aws/unocha/iasc-site:local \
+		. --file docker/Dockerfile --tag public.ecr.aws/unocha/${IMAGE_NAME}:${IMAGE_TAG} \
 		2>&1 | tee buildlog.txt
-	@echo "Built a shiny new public.ecr.aws/unocha/iasc-site:local for you."
+	@echo "Built a shiny new public.ecr.aws/unocha/${IMAGE_NAME}:${IMAGE_TAG} for you."
 
 clean:
 	rm -rf ./buildlog.txt

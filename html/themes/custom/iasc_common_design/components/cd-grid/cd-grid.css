@@ -13,7 +13,7 @@
   background-color: var(--cd-blue-grey--dark);
 }
 
-.cd-layout-content .cd-grid--3-col .views-row,
+.cd-layout__content .cd-grid--3-col .views-row,
 .cd-layout-highlighted .cd-grid--3-col .views-row {
   background-color: var(--cd-blue-grey);
 }

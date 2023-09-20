@@ -74,14 +74,12 @@
   @extend .block--type-block-with-text-and-link;
 } */
 
-.cd-layout-content .block--type-block-with-text-and-link,
-.cd-layout-main-content .block--type-block-with-text-and-link {
+.cd-layout__content .block--type-block-with-text-and-link {
   margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  .cd-layout-content .block--type-block-with-text-and-link,
-  .cd-layout-main-content .block--type-block-with-text-and-link {
+  .cd-layout__content .block--type-block-with-text-and-link {
     float: left;
     max-width: 50%;
     margin-bottom: 1rem;

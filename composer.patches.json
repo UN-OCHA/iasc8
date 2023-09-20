@@ -12,6 +12,9 @@
     "drupal/csp": {
       "Simplify log format": "PATCHES/csp-log-format.patch"
     },
+    "drupal/maintenance200": {
+      "Drupal 10 compatibility": "PATCHES/maintenance200-drupal-10-compatibility.patch"
+    },
     "drupal/paragraphs": {
       "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
     },

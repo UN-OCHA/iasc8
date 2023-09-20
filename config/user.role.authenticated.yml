@@ -1,7 +1,18 @@
 uuid: 9a49230e-2758-47d8-b260-604ffc21f8f2
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.iasc_wysiwyg
+    - node.type.action_point
+  module:
+    - filter
+    - iasc_content
+    - iasc_hero
+    - media
+    - node
+    - node_view_permissions
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
@@ -9,88 +20,21 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access donor content'
-  - 'access media browser'
   - 'access user profiles'
-  - 'administer own event registration'
-  - 'administer panelizer node oa_group content'
-  - 'administer panelizer node oa_group layout'
-  - 'administer panelizer node oa_section content'
-  - 'administer panelizer node oa_section layout'
-  - 'administer panelizer node oa_space content'
-  - 'administer panelizer node oa_space layout'
-  - 'administer panelizer user user content'
-  - 'administer panelizer user user layout'
-  - 'create event registration'
-  - 'create event registration self'
-  - 'create fieldable basic_file'
-  - 'create fieldable image'
-  - 'create fieldable map'
-  - 'create fieldable quick_links'
-  - 'create fieldable spotlight'
-  - 'create fieldable table'
-  - 'create fieldable text'
-  - 'create fieldable video'
-  - 'create files'
-  - 'create messages'
-  - 'delete own event registration'
-  - 'diff view changes'
-  - 'download any document files'
-  - 'download any image files'
-  - 'download any video files'
-  - 'download own document files'
-  - 'download own image files'
-  - 'download own video files'
   - 'edit own action_point content'
-  - 'edit own comments'
-  - 'edit own document files'
-  - 'edit own image files'
-  - 'edit own video files'
-  - 'flag bookmarks'
-  - 'flag favorite_space'
-  - 'flag subscribe_section_content'
-  - 'grant own node permissions'
-  - 'post comments'
-  - 'save draft'
-  - 'search content'
-  - 'skip comment approval'
-  - 'unflag bookmarks'
-  - 'unflag favorite_space'
-  - 'unflag subscribe_section_content'
-  - 'update own event registration'
-  - 'use hybridauth'
-  - 'use media wysiwyg'
   - 'use text format iasc_wysiwyg'
-  - 'use text format panopoly_wysiwyg_text'
   - 'view any action_point content'
   - 'view any announcement content'
-  - 'view any article content'
   - 'view any contact content'
-  - 'view any oa_discussion_post content'
   - 'view any oa_event content'
-  - 'view any oa_group content'
-  - 'view any oa_ical_importer content'
   - 'view any oa_section content'
-  - 'view any oa_space content'
-  - 'view any oa_team content'
   - 'view any oa_wiki_page content'
   - 'view any oa_worktracker_task content'
-  - 'view any page content'
   - 'view any panopoly_landing_page content'
   - 'view any panopoly_page content'
   - 'view any service content'
-  - 'view comment alterations in oa_worktracker_task'
-  - 'view field_ap_progress_overview'
-  - 'view field_ap_status'
-  - 'view files'
   - 'view media'
-  - 'view own event registration'
-  - 'view own field_ap_progress_overview'
-  - 'view own field_ap_status'
-  - 'view own files'
-  - 'view own private files'
   - 'view own unpublished content'
-  - 'view private files'
   - 'view published hero entities'

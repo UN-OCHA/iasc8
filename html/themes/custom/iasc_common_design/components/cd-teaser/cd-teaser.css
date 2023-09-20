@@ -1,8 +1,8 @@
-.cd-layout-sidebar-first .cd-teaser__image {
+.cd-layout__sidebar--first .cd-teaser__image {
   float: none;
 }
 
-.cd-layout-sidebar-first .cd-teaser__image + .cd-teaser__container {
+.cd-layout__sidebar--first .cd-teaser__image + .cd-teaser__container {
   padding: 0;
 }
 

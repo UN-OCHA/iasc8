@@ -5,15 +5,15 @@
   }
 }
 
-.cd-layout-content .view-header {
+.cd-layout__content .view-header {
   margin-bottom: 2rem;
 }
 
-.cd-layout-sidebar-first .views-exposed-form .form--inline {
+.cd-layout__sidebar .views-exposed-form .form--inline {
   margin-bottom: 1rem;
 }
 
-.cd-layout-sidebar-first .views-exposed-form label {
+.cd-layout__sidebar .views-exposed-form label {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   color: var(--brand-primary);
@@ -179,7 +179,7 @@
   }
 }
 
-.cd-layout-sidebar-first .more-link {
+.cd-layout__sidebar .more-link {
   margin: -1rem 0 2rem;
 }
 
