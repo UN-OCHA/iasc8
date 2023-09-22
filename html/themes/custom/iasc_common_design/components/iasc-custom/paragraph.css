@@ -76,14 +76,14 @@
   order: 2;
 }
 
-.cd-layout-main-content .paragraph--type--paragraph-content,
-.cd-layout-main-content .paragraph--type--paragraph-text {
+.cd-layout__content .paragraph--type--paragraph-content,
+.cd-layout__content .paragraph--type--paragraph-text {
   display: flex;
   flex-wrap: wrap;
 }
 
-.cd-layout-main-content .paragraph--type--paragraph-content .field--name-field-para-title,
-.cd-layout-main-content .paragraph--type--paragraph-text .field--name-field-para-title {
+.cd-layout__content .paragraph--type--paragraph-content .field--name-field-para-title,
+.cd-layout__content .paragraph--type--paragraph-text .field--name-field-para-title {
   flex: 1 0 100%;
   /* margin-bottom: 0; */
 }
@@ -136,7 +136,7 @@
   text-decoration: underline;
 }
 
-.cd-layout-main-content > .field__items > .field__item {
+.cd-layout__content > .field__items > .field__item {
   margin-bottom: 2rem;
 }
 

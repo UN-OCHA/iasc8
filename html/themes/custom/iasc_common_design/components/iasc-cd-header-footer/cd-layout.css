@@ -6,6 +6,6 @@
   }
 }
 
-.path-frontpage:not(.user-logged-in) .cd-layout-container main.cd-container .cd-layout-two-col .cd-layout-main-content iframe {
+.path-frontpage:not(.user-logged-in) .cd-layout-container main.cd-container .cd-layout .cd-layout__content iframe {
   max-width: 100%;
 }

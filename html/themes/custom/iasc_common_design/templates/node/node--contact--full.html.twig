@@ -1,17 +1,17 @@
 {% embed '@iasc_common_design/node/node--full.html.twig' %}
 
   {% block section %}
-    <div class="cd-layout-two-col">
+    <div class="cd-layout">
 
       {% if user.hasPermission('edit any contact content') %}
-      <div class="cd-layout-main-content">
+      <div class="cd-layout__content">
         {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_membership', 'field_organisation') }}
         {{ content.field_content }}
       </div>
 
-      <aside class="cd-layout-sidebar-first" role="complementary">{{ content.field_membership }}{{ content.field_organisation }}{{ content.field_sidebar }}</aside>
+      <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-layout__sidebar--wide" role="complementary">{{ content.field_membership }}{{ content.field_organisation }}{{ content.field_sidebar }}</aside>
       {% else %}
-      <div class="cd-layout-main-content">
+      <div class="cd-layout__content">
         <p>To view more details, please login.</p>
       </div>
       {% endif %}
