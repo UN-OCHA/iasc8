@@ -16,10 +16,10 @@
 .field--name-field-description {
   margin-bottom: 2rem;
 }
-.cd-layout-main-content .field--type-text-with-summary {
+.cd-layout__content .field--type-text-with-summary {
   margin-bottom: 2rem;
 }
-.cd-layout-main-content > .field {
+.cd-layout__content > .field {
   margin-bottom: 1rem;
 }
 .group--view-mode-search-result .field--name-field-description {

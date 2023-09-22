@@ -1,14 +1,14 @@
 {% embed 'node--full.html.twig' %}
 
     {% block section %}
-      <div class="cd-layout-two-col">
+      <div class="cd-layout">
 
-        <div class="cd-layout-main-content">
+        <div class="cd-layout__content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer',  'og_group_ref', 'group_content_access', 'field_iasc_audience', 'field_contact', 'field_ap_responsibility') }}
           {{ content.field_content }}
         </div>
 
-        <aside class="cd-layout-sidebar-first" role="complementary">
+        <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-layout__sidebar--wide" role="complementary">
           {{ content.og_group_ref }}
           {{ content.group_content_access }}
           {{ content.field_iasc_audience }}

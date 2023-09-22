@@ -53,7 +53,7 @@
 {% block attach %}
 {% endblock %}
 
-<div class="cd-layout-container">
+<div class="cd-page-layout-container">
 
   {% block header %}
     {% include '@iasc_common_design/cd/cd-header/cd-header.html.twig' %}
@@ -89,7 +89,7 @@
 
       <div class="cd-layout">
         {% if page.sidebar_first|render|striptags|trim %}
-          <aside class="cd-layout-sidebar-first">{{ page.sidebar_first }}</aside>
+          <aside class="cd-layout__sidebar cd-layout__sidebar--first cd-layout__sidebar--wide">{{ page.sidebar_first }}</aside>
         {% endif %}
 
         <div class="cd-layout__content">
@@ -114,4 +114,4 @@
   {% endblock %}
 
 
-</div>{# /.cd-layout-container #}
+</div>{# /.cd-page-layout-container #}
