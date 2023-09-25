@@ -12,3 +12,7 @@
     padding-right: 0;
   }
 }
+
+.block-facets .cd-block-title {
+  display: none;
+}

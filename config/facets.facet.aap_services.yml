@@ -31,7 +31,7 @@ hierarchy:
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
-  type: select_a11y_dropdown
+  type: dropdown
   config:
     show_numbers: true
     default_option_label: Choose

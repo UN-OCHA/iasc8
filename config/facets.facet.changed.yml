@@ -27,7 +27,7 @@ hierarchy:
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
-  type: select_a11y_dropdown
+  type: dropdown
   config:
     show_numbers: true
     default_option_label: Choose
@@ -45,6 +45,12 @@ processor_configs:
       date_display: actual_date
       granularity: 5
       date_format: ''
+      hierarchy: false
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   raw_value_widget_order:
     processor_id: raw_value_widget_order
     weights:
