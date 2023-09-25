@@ -61,7 +61,7 @@
   margin-bottom: 2rem;
 }
 
-.path-frontpage .cd-layout__sidebar--first .viewsreference--view-title {
+.path-frontpage .cd-layout__sidebar .viewsreference--view-title {
   margin-top: 1rem;
 }
 
@@ -97,6 +97,6 @@
   margin-bottom: 0.5rem;
 }
 
-.node--type-service.node--view-mode-full .cd-layout__sidebar--first textarea {
+.node--type-service.node--view-mode-full .cd-layout__sidebar textarea {
   width: 100%;
 }
