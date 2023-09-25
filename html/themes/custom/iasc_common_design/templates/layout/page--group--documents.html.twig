@@ -12,7 +12,7 @@
 
       <div class="cd-layout">
         {% if page.sidebar_first|render or page.facets|render %}
-          <aside class="cd-layout__sidebar cd-layout__sidebar--second">{{ page.sidebar_first }}</aside>
+          <aside class="cd-layout__sidebar cd-layout__sidebar--first">{{ page.facets }}{{ page.sidebar_first }}</aside>
         {% endif %}
 
         <div class="cd-layout__content">
