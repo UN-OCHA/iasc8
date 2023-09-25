@@ -86,23 +86,23 @@
   <div{{ content_attributes.addClass('node__content') }}>
 
     {% block section %}
-      <div class="cd-layout-two-col">
+      <div class="cd-layout">
 
-        <div class="cd-layout-main-content">
+        <div class="cd-layout__content">
           {{ content|without('field_content', 'field_sidebar', 'field_footer', 'field_date_closed', 'field_external_link') }}
           {{ content.field_content }}
         </div>
 
-        <aside class="cd-layout-sidebar-first" role="complementary">
+        <aside class="cd-layout__sidebar cd-layout__sidebar--second">
           {% if user.hasPermission('administer nodes') %}
           <div class="paragraph-quick-links paragraph--type--section-menu">
             <h2 class="cd-sidebar__label cd-block-title cd-block-title--underline">Quick links</h2>
-              <ul class="content-links">
-                <li>{{ link('Add new content', 'internal:/group/' ~ group.id.value ~ '/content/create') }}</li>
-                <li>{{ link('Add existing content', 'internal:/group/' ~ group.id.value ~ '/node/add') }}</li>
-                <li>{{ link('List all content', 'internal:/group/' ~ group.id.value ~ '/content') }}</li>
-                <li>{{ link('Add member', 'internal:/group/' ~ group.id.value ~ '/content/add/group_membership') }}</li>
-              </ul>
+            <ul class="content-links">
+              <li>{{ link('Add new content', 'internal:/group/' ~ group.id.value ~ '/content/create') }}</li>
+              <li>{{ link('Add existing content', 'internal:/group/' ~ group.id.value ~ '/node/add') }}</li>
+              <li>{{ link('List all content', 'internal:/group/' ~ group.id.value ~ '/content') }}</li>
+              <li>{{ link('Add member', 'internal:/group/' ~ group.id.value ~ '/content/add/group_membership') }}</li>
+            </ul>
           </div>
           {% endif %}
 

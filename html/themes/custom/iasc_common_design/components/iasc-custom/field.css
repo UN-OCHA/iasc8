@@ -16,10 +16,10 @@
 .field--name-field-description {
   margin-bottom: 2rem;
 }
-.cd-layout-main-content .field--type-text-with-summary {
+.cd-layout__content .field--type-text-with-summary {
   margin-bottom: 2rem;
 }
-.cd-layout-main-content > .field {
+.cd-layout__content > .field {
   margin-bottom: 1rem;
 }
 .group--view-mode-search-result .field--name-field-description {
@@ -57,20 +57,20 @@
   margin-bottom: 1rem;
 }
 
-.cd-layout__sidebar--first .cd-location,
-.cd-layout__sidebar--first .field--name-field-meeting-notes,
-.cd-layout__sidebar--first .field--name-field-meeting-agendas,
-.cd-layout__sidebar--first .field--name-field-oa-section,
-.cd-layout__sidebar--first .field--name-field-iasc-audience,
-.cd-layout__sidebar--first .field--name-field-links,
-.cd-layout__sidebar--first .field--name-field-membership,
-.cd-layout__sidebar--first .field--name-field-date-closed,
-.cd-layout__sidebar--first .field--name-field-external-link,
-.cd-layout__sidebar--first .field--name-group-content-access,
-.cd-layout__sidebar--first .field--name-field-ap-responsibility,
-.cd-layout__sidebar--first .field--name-field-referenced-docs,
-.cd-layout__sidebar--first .field--name-field-host,
-.cd-layout__sidebar--first .field--name-field-category {
+.cd-layout__sidebar .cd-location,
+.cd-layout__sidebar .field--name-field-meeting-notes,
+.cd-layout__sidebar .field--name-field-meeting-agendas,
+.cd-layout__sidebar .field--name-field-oa-section,
+.cd-layout__sidebar .field--name-field-iasc-audience,
+.cd-layout__sidebar .field--name-field-links,
+.cd-layout__sidebar .field--name-field-membership,
+.cd-layout__sidebar .field--name-field-date-closed,
+.cd-layout__sidebar .field--name-field-external-link,
+.cd-layout__sidebar .field--name-group-content-access,
+.cd-layout__sidebar .field--name-field-ap-responsibility,
+.cd-layout__sidebar .field--name-field-referenced-docs,
+.cd-layout__sidebar .field--name-field-host,
+.cd-layout__sidebar .field--name-field-category {
   margin-bottom: 2rem !important;
 }
 
@@ -89,7 +89,7 @@
   margin-bottom: 0;
 }
 
-.cd-layout__sidebar--first > .cd-sidebar {
+.cd-layout__sidebar > .cd-sidebar {
   margin-bottom: 1rem !important;
 }
 
@@ -152,11 +152,11 @@
 }
 
 /* AAP Services fields in sidebar */
-.cd-layout__sidebar--first .field--name-field-updated,
-.cd-layout__sidebar--first .field--name-field-agency-initiative-or-group,
-.cd-layout__sidebar--first .field--name-field-type-of-entity,
-.cd-layout__sidebar--first .field--name-field-focal-point,
-.cd-layout__sidebar--first .field--name-field-featured-categories {
+.cd-layout__sidebar .field--name-field-updated,
+.cd-layout__sidebar .field--name-field-agency-initiative-or-group,
+.cd-layout__sidebar .field--name-field-type-of-entity,
+.cd-layout__sidebar .field--name-field-focal-point,
+.cd-layout__sidebar .field--name-field-featured-categories {
   margin-bottom: 2rem;
 }
 

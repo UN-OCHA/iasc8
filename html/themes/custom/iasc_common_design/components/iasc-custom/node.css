@@ -61,7 +61,7 @@
   margin-bottom: 2rem;
 }
 
-.path-frontpage .cd-layout__sidebar--first .viewsreference--view-title {
+.path-frontpage .cd-layout__sidebar .viewsreference--view-title {
   margin-top: 1rem;
 }
 
@@ -87,16 +87,16 @@
 }
 
 /* Services node type. */
-.node--type-service.node--view-mode-full .cd-layout-main-content > .field,
+.node--type-service.node--view-mode-full .cd-layout__content > .field,
 .node--type-service.node--view-mode-teaser .node__content > .field {
   margin-bottom: 2rem;
 }
 
-.node--type-service.node--view-mode-full .cd-layout-main-content > .field .field__label,
+.node--type-service.node--view-mode-full .cd-layout__content > .field .field__label,
 .node--type-service.node--view-mode-teaser .node__content > .field .field__label {
   margin-bottom: 0.5rem;
 }
 
-.node--type-service.node--view-mode-full .cd-layout__sidebar--first textarea {
+.node--type-service.node--view-mode-full .cd-layout__sidebar textarea {
   width: 100%;
 }
