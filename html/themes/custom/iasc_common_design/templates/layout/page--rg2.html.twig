@@ -22,7 +22,7 @@
       <div class="cd-layout-content-wrapper">
 
           {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
-            <aside class="cd-layout__sidebar cd-layout__sidebar--second" role="complementary">{{ page.facets }}{{ page.sidebar_first }}</aside>
+            <aside class="cd-layout__sidebar cd-layout__sidebar--second" aria-label="{{ 'Sidebar'| }}">{{ page.facets }}{{ page.sidebar_first }}</aside>
           {% endif %}
 
           <div class="cd-layout-content">
