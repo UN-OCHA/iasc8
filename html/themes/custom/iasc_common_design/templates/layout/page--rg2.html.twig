@@ -19,18 +19,18 @@
 
       {{ page.page_title }}
 
-      <div class="cd-layout-content-wrapper">
+      <div class="cd-layout">
 
           {% if (page.sidebar_first|render|striptags|trim) or page.facets %}
-            <aside class="cd-layout__sidebar cd-layout__sidebar--second" aria-label="{{ 'Sidebar'|t }}">{{ page.facets }}{{ page.sidebar_first }}</aside>
+            <aside class="cd-layout__sidebar cd-layout__sidebar--first" aria-label="{{ 'First Sidebar'|t }}">{{ page.facets }}{{ page.sidebar_first }}</aside>
           {% endif %}
 
-          <div class="cd-layout-content">
+          <div class="cd-layout__content">
             {{ page.content }}
           </div>{# /.cd-layout-content #}
 
           {% if page.sidebar_second  %}
-            <aside class="cd-layout-sidebar-second" role="complementary">{{ page.sidebar_second }}</aside>
+            <aside class="cd-layout__sidebar cd-layout__sidebar--second" aria-label="{{ 'Second Sidebar'|t }}">{{ page.sidebar_second }}</aside>
           {% endif %}
 
       </div>
