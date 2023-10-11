@@ -3,7 +3,6 @@
 namespace Drupal\iasc_content\EventSubscriber;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
 use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -33,7 +32,6 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
-      ParagraphSummaryAlterEvent::ALTER => 'onSummaryAlter',
     ];
   }
 

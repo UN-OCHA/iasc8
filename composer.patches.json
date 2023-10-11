@@ -6,7 +6,6 @@
     "drupal/core": {
       "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
       "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch",
-      "https://www.drupal.org/project/drupal/issues/2628230#comment-13213379 - Adding File Usage 'File' relationship results in broken/missing handler": "https://www.drupal.org/files/issues/2019-08-08/2628230-53.patch",
       "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
     },
     "drupal/csp": {
@@ -15,17 +14,14 @@
     "drupal/maintenance200": {
       "Drupal 10 compatibility": "PATCHES/maintenance200-drupal-10-compatibility.patch"
     },
-    "drupal/paragraphs": {
-      "https://www.drupal.org/project/paragraphs/issues/2868252#comment-13622986": "https://www.drupal.org/files/issues/2020-05-20/i2868252-28.patch"
+    "drupal/paragraphs_viewmode": {
+      "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
     },
     "drupal/search_api": {
       "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "PATCHES/search_api-facets-query-part.patch"
     },
     "drupal/search_api_attachments": {
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
-    },
-    "drupal/select_a11y": {
-      "Patch the contrib v1.0.1 module so the code matches what used to be in custom": "PATCHES/select_a11ly.patch"
     },
     "drupal/user_expire": {
       "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
