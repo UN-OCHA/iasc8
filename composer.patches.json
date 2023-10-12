@@ -14,6 +14,9 @@
     "drupal/maintenance200": {
       "Drupal 10 compatibility": "PATCHES/maintenance200-drupal-10-compatibility.patch"
     },
+    "drupal/paragraphs": {
+      "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-15131744": "https://www.drupal.org/files/issues/2023-06-30/2868252-paragraph-summary-alter-42.patch"
+    },
     "drupal/paragraphs_viewmode": {
       "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
     },
