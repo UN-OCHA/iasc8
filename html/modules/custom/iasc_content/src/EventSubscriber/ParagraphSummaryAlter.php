@@ -117,4 +117,5 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
       }
     }
   }
+
 }
