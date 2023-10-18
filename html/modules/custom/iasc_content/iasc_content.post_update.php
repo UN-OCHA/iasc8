@@ -31,7 +31,7 @@ function iasc_content_post_update_grand_bargain_for_announcements() {
 /**
  * Convert private files to public.
  */
-function iasc_content_post_update_private_files_to_public(array $sandbox) {
+function iasc_content_post_update_private_files_to_public(array &$sandbox) {
   $new_file_dir = 'public://private/';
 
   if (!isset($sandbox['total'])) {
@@ -43,6 +43,7 @@ function iasc_content_post_update_private_files_to_public(array $sandbox) {
       ->count()->execute();
 
     $sandbox['current'] = 0;
+    $sandbox['last_fid'] = 0;
 
     if (empty($sandbox['total'])) {
       $sandbox['#finished'] = 1;
@@ -56,10 +57,12 @@ function iasc_content_post_update_private_files_to_public(array $sandbox) {
     ->getQuery()
     ->accessCheck(FALSE)
     ->condition('uri', 'private://', 'STARTS_WITH')
+    ->condition('fid', $sandbox['last_fid'], '>')
     ->range(0, 50)
+    ->sort('fid')
     ->execute();
 
-  if (empty($file_entities)) {
+  if (empty($file_entity_ids)) {
     $sandbox['#finished'] = 1;
     return;
   }
@@ -72,6 +75,15 @@ function iasc_content_post_update_private_files_to_public(array $sandbox) {
   // Move the files associated with the file entities.
   /** @var \Drupal\file\Entity\File $file */
   foreach ($file_entities as $file) {
+    $sandbox['current']++;
+
+    // Check if file exists on disk.
+    if (!is_file($file->getFileUri())) {
+      \Drupal::logger('iasc_content')->notice($file->getFilename() . ' not found :: ' . $file->getFileUri());
+      $sandbox['last_fid'] = $file->id();
+      continue;
+    }
+
     $new_file_dir = 'public://migrated/' . date('Y-m', $file->getCreatedTime()) . '/';
     \Drupal::service('file_system')->prepareDirectory($new_file_dir, FileSystemInterface::CREATE_DIRECTORY);
 
@@ -89,5 +101,9 @@ function iasc_content_post_update_private_files_to_public(array $sandbox) {
       'language' => 'und',
       'status_code' => '301',
     ])->save();
+
+    $sandbox['last_fid'] = $file->id();
   }
+
+  $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
 }
