@@ -132,10 +132,6 @@ class StageFileProxyPrivateSubscriber implements EventSubscriberInterface {
 
       $query = $this->requestStack->getCurrentRequest()->query->all();
       $query_parameters = UrlHelper::filterQueryParameters($query, ['itok']);
-      $options = [
-        'verify' => $config->get('verify'),
-        'query' => $query_parameters,
-      ];
 
       // Alway hotlink.
       $location = Url::fromUri("$server/$relative_path", [
