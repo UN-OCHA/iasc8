@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "sass": "^1.56.1",
     "stylelint": "^15.10.1",
