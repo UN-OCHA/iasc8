@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\Language\Language;
 use Drupal\redirect\Entity\Redirect;
 
 /**
@@ -94,13 +95,19 @@ function iasc_content_post_update_private_files_to_public(array &$sandbox) {
     // Avoid double encode.
     $destination = 'internal:' . urldecode($file->createFileUrl());
 
-    // Add a redirect.
-    Redirect::create([
-      'redirect_source' => $source_url,
-      'redirect_redirect' => $destination,
-      'language' => 'und',
-      'status_code' => '301',
-    ])->save();
+    // Add a redirect if it doesn't exist.
+    /** @var \Drupal\redirect\RedirectRepository $redirect_repository */
+    $redirect_repository = \Drupal::service('redirect.repository');
+    $redirect = $redirect_repository->findMatchingRedirect($source_url);
+
+    if (!$redirect) {
+      Redirect::create([
+        'redirect_source' => $source_url,
+        'redirect_redirect' => $destination,
+        'language' => Language::LANGCODE_NOT_SPECIFIED,
+        'status_code' => '301',
+      ])->save();
+    }
 
     $sandbox['last_fid'] = $file->id();
   }
