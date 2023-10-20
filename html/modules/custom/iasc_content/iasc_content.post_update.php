@@ -89,7 +89,7 @@ function iasc_content_post_update_private_files_to_public(array &$sandbox) {
 
     // No slash at the start.
     $source_url = ltrim($file->createFileUrl(), '/');
-    $file = \Drupal::service('file.repository')->move($file, $new_file_dir . $file->getFilename());
+    $file = \Drupal::service('file.repository')->move($file, $new_file_dir . basename($file->getFileUri()));
 
     // Avoid double encode.
     $destination = 'internal:' . urldecode($file->createFileUrl());
