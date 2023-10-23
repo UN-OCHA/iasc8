@@ -5372,17 +5372,17 @@
         },
         {
             "name": "drupal/select_a11y",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select_a11y.git",
-                "reference": "2.0.0"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select_a11y-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "c0a604be04da17598891b680723f60444737e6c1"
+                "url": "https://ftp.drupal.org/files/projects/select_a11y-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "eee4c39c1f22cfa42328bede5f58c5ed32dd6f23"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
@@ -5391,8 +5391,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1695106660",
+                    "version": "2.0.2",
+                    "datestamp": "1698068124",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
