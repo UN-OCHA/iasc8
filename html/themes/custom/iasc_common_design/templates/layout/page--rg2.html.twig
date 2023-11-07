@@ -6,7 +6,7 @@
   page.sidebar_first|render and page.sidebar_second|render ? 'cd-layout-with-sidebar-both',
 ]
 %}
-
+{{ attach_library('select_a11y/select_a11y_facets.widget') }}
 {% embed 'page.html.twig' %}
 
   {% block attach %}

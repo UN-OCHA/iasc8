@@ -4,6 +4,7 @@ namespace Drupal\iasc_content\EventSubscriber;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
+use Drupal\paragraphs\Event\ParagraphSummaryEvents;
 use Drupal\views\Views;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -33,7 +34,7 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents() {
     return [
-      ParagraphSummaryAlterEvent::ALTER => 'onSummaryAlter',
+      ParagraphSummaryEvents::ALTER => 'onSummaryAlter',
     ];
   }
 
@@ -44,9 +45,9 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
    *   Event object.
    */
   public function onSummaryAlter(ParagraphSummaryAlterEvent $event) {
-    if ($event->getFieldType() == 'viewsreference') {
-      $paragraph = $event->getParagraph();
-      $item = $paragraph->get($event->getFieldName())->first();
+    $paragraph = $event->getParagraph();
+    if ($paragraph->bundle() == 'view') {
+      $item = $paragraph->get('field_view')->first();
       if (!$item) {
         return;
       }
@@ -66,9 +67,14 @@ class ParagraphSummaryAlter implements EventSubscriberInterface {
 
       $event->appendTextToSummary($view_label . ' -- ' . $display_label);
 
+      if (!isset($item->getValue()['data']) || empty($item->getValue()['data'])) {
+        return;
+      }
+
       $data = unserialize($item->getValue()['data'], [
         'allowed_classes' => FALSE,
       ]);
+
       if (is_array($data)) {
         foreach ($data as $key => $value) {
           if (!empty($value)) {

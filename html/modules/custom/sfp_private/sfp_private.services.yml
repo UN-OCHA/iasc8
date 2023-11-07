@@ -1,0 +1,6 @@
+services:
+  sfp_private.proxy_subscriber:
+    class: Drupal\sfp_private\EventSubscriber\StageFileProxyPrivateSubscriber
+    tags:
+      - { name: event_subscriber }
+    arguments: ['@stage_file_proxy.download_manager', '@logger.channel.stage_file_proxy', '@event_dispatcher', '@config.factory', '@request_stack']
