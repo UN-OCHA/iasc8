@@ -50,10 +50,9 @@ services:
       # Mount local custom code.
       - "../html/modules/custom:/srv/www/html/modules/custom:rw"
       - "../html/themes/custom:/srv/www/html/themes/custom:rw"
-      # Mount contrib code.
-      - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
-      - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
-      - "../vendor:/srv/www/vendor:rw"
+      # # Mount contrib code.
+      # - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
+      # - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
       # Mount configuration and allow overriding it.
       - "../config:/srv/www/config:rw"
       - "../config_dev:/srv/www/config_dev:rw"
