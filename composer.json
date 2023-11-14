@@ -26,7 +26,6 @@
     "drupal/admin_denied": "^2",
     "drupal/bartik": "^1.0",
     "drupal/chosen": "^3.0",
-    "drupal/ckeditor": "^1.0",
     "drupal/components": "^3.0@beta",
     "drupal/conditional_fields": "^4.0@alpha",
     "drupal/config_filter": "^2.4",
