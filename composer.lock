@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9aa84427ce8b5d291eea873ba3ac2f71",
+    "content-hash": "92a7baf72a1f18cf14474361c3ae1939",
     "packages": [
         {
             "name": "algolia/places",
@@ -12889,20 +12889,20 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "v1.0.8",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
-                "reference": "fe5f6569fa1fa289eb14955f26dce3ef201e8fe5"
+                "reference": "c7ccf56f9508dac4a7ca8662e1d6c58301fb447d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/fe5f6569fa1fa289eb14955f26dce3ef201e8fe5",
-                "reference": "fe5f6569fa1fa289eb14955f26dce3ef201e8fe5",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/c7ccf56f9508dac4a7ca8662e1d6c58301fb447d",
+                "reference": "c7ccf56f9508dac4a7ca8662e1d6c58301fb447d",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1 || ^2"
             },
             "require-dev": {
                 "drupal/coder": "^8.3",
@@ -12915,9 +12915,9 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_integrations/issues",
-                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v1.0.8"
+                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v2.0.4"
             },
-            "time": "2023-06-21T13:19:48+00:00"
+            "time": "2023-11-01T13:43:13+00:00"
         },
         {
             "name": "unocha/ocha_search",
