@@ -98,7 +98,7 @@
     "orakili/composer-drupal-info-file-patch-helper": "^1.0",
     "phpoffice/phpspreadsheet": "^1.16",
     "symfony/flex": "^1.17",
-    "unocha/common_design": "^8",
+    "unocha/common_design": "^9.2",
     "unocha/file_checker": "dev-8.x-1.x",
     "unocha/ocha_integrations": "^2",
     "unocha/ocha_search": "^1.0",
