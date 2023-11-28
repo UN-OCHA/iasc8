@@ -1,0 +1,20 @@
+uuid: 79f7a3a4-3060-4a69-ac12-5776718d8e81
+langcode: en
+status: false
+dependencies:
+  module:
+    - geophp
+id: core_requirements_geophp
+label: 'Module geophp'
+description: 'Requirements of the geophp module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: geophp
+  exclude_keys: {  }
+thresholds:
+  type: none

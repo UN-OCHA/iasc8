@@ -1,0 +1,19 @@
+uuid: 9f406335-0046-4eb7-abd4-1041bb251cad
+langcode: en
+status: false
+dependencies:
+  module:
+    - search_api
+id: search_api_default_solr_index
+label: 'Search index queue size of Default Solr content index'
+description: ''
+category: 'Search API'
+plugin_id: search_api_unindexed
+result_class: null
+value_label: 'Unindexed items'
+value_type: number
+caching_time: 900
+settings:
+  index_id: default_solr_index
+thresholds:
+  type: none
