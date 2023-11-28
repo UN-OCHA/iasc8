@@ -66,9 +66,11 @@ module:
   media_library: 0
   memcache: 0
   menu_ui: 0
+  monitoring: 0
   mysql: 0
   node: 0
   node_view_permissions: 0
+  ocha_monitoring: 0
   ocha_search: 0
   ocha_viewsreference_filter: 0
   options: 0

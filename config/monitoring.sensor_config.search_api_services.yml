@@ -1,0 +1,19 @@
+uuid: 3a657656-71e1-436d-866d-183a973fa755
+langcode: en
+status: false
+dependencies:
+  module:
+    - search_api
+id: search_api_services
+label: 'Search index queue size of Services'
+description: ''
+category: 'Search API'
+plugin_id: search_api_unindexed
+result_class: null
+value_label: 'Unindexed items'
+value_type: number
+caching_time: 900
+settings:
+  index_id: services
+thresholds:
+  type: none

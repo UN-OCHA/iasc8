@@ -1,0 +1,20 @@
+uuid: 771969b4-9785-4b02-bb06-fb5545531f6d
+langcode: en
+status: false
+dependencies:
+  module:
+    - diff
+id: core_requirements_diff
+label: 'Module diff'
+description: 'Requirements of the diff module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: diff
+  exclude_keys: {  }
+thresholds:
+  type: none
