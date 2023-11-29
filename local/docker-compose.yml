@@ -9,6 +9,7 @@ networks:
 
 volumes:
   site-database:
+  site-database-log:
   site-public:
   site-private:
 
@@ -23,6 +24,7 @@ services:
       MYSQL_PASS:
     volumes:
       - "site-database:/var/lib/mysql:rw"
+      - "site-database-log:/var/log/mysql:rw"
     networks:
       - default
 
@@ -34,28 +36,28 @@ services:
       - mysql
     volumes:
       - "./shared/settings:/srv/www/shared/settings:ro"
-      # Mount the composer files and patches.
-      - "../composer.json:/srv/www/composer.json:rw"
-      - "../composer.patches.json:/srv/www/composer.patches.json:rw"
-      - "../composer.lock:/srv/www/composer.lock:rw"
-      - "../PATCHES:/srv/www/PATCHES:rw"
-      # Mount a database directory for import.
-      - "../database:/srv/www/database:rw"
       # Mount volumes for the private and public files.
       - "site-public:/srv/www/html/sites/default/files:rw"
       - "site-private:/srv/www/html/sites/default/private:rw"
+      # A place for database backups to be installed.
+      - "../database:/srv/www/database:ro"
       # Mount the folders needed for the tests.
       - "../phpcs.xml:/srv/www/phpcs.xml:ro"
       - "../phpunit.xml:/srv/www/phpunit.xml:ro"
       # Mount local custom code.
       - "../html/modules/custom:/srv/www/html/modules/custom:rw"
       - "../html/themes/custom:/srv/www/html/themes/custom:rw"
-      # # Mount contrib code.
-      # - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
-      # - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
       # Mount configuration and allow overriding it.
       - "../config:/srv/www/config:rw"
       - "../config_dev:/srv/www/config_dev:rw"
+      # Mount the composer files and patches.
+      - "../composer.json:/srv/www/composer.json:rw"
+      - "../composer.patches.json:/srv/www/composer.patches.json:rw"
+      - "../composer.lock:/srv/www/composer.lock:rw"
+      - "../PATCHES:/srv/www/PATCHES:rw"
+      # # Mount contrib modules and themes.
+      # - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
+      # - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
     environment:
       TERM: xterm
       ENVIRONMENT: local
