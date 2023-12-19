@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.medium
     - core.entity_view_mode.node.teaser
     - field.field.node.oa_event.body
     - field.field.node.oa_event.field_additional_locations
@@ -28,7 +27,7 @@ dependencies:
     - field.field.node.oa_event.og_vocabulary
     - node.type.oa_event
   module:
-    - date_recur
+    - un_date
     - user
 id: node.oa_event.teaser
 targetEntityType: node
@@ -44,17 +43,15 @@ content:
     weight: 2
     region: content
   field_oa_date:
-    type: date_recur_basic_formatter
+    type: un_data_date_recur_basic
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
-      show_next: 5
-      count_per_item: true
-      occurrence_format_type: medium
-      same_end_date_format_type: medium
+      display_timezone: true
+      month_format: numeric
+      show_next: '5'
+      count_per_item: '1'
       interpreter: ''
+      template: un_date_date_block
     third_party_settings: {  }
     weight: 0
     region: content
