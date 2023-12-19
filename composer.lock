@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "893b3a946c3811aab1d1c6b4d7d5399f",
+    "content-hash": "017c1fff78b3984b132f8825f4702d81",
     "packages": [
         {
             "name": "algolia/places",
@@ -13058,16 +13058,16 @@
         },
         {
             "name": "unocha/un_date",
-            "version": "1.0.2",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/un_date.git",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d"
+                "reference": "13e69d48f5662526505af950282148265585a46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/315e872794026417fdf2813ef061a75c101f2f5d",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/13e69d48f5662526505af950282148265585a46f",
+                "reference": "13e69d48f5662526505af950282148265585a46f",
                 "shasum": ""
             },
             "require": {
@@ -13081,9 +13081,9 @@
             "description": "UN date and time twig filters for Drupal 8",
             "support": {
                 "issues": "https://github.com/UN-OCHA/un_date/issues",
-                "source": "https://github.com/UN-OCHA/un_date/tree/1.0.2"
+                "source": "https://github.com/UN-OCHA/un_date/tree/2.0.6"
             },
-            "time": "2023-08-02T10:45:13+00:00"
+            "time": "2023-12-19T14:33:45+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -18640,5 +18640,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
