@@ -222,7 +222,6 @@ function iasc_common_design_preprocess_node(&$variables) {
 
     /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date_item */
     $date_item = $node->field_oa_date->first();
-    $timezone = $date_item->timezone;
 
     /** @var \Drupal\date_recur\DateRange $daterange */
     $daterange = iasc_content_first_upcoming_as_daterange($date_item);

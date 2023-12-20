@@ -13058,16 +13058,16 @@
         },
         {
             "name": "unocha/un_date",
-            "version": "2.0.6",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/un_date.git",
-                "reference": "13e69d48f5662526505af950282148265585a46f"
+                "reference": "07c3d03b179020596bb34e6b12457bff5f26622d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/13e69d48f5662526505af950282148265585a46f",
-                "reference": "13e69d48f5662526505af950282148265585a46f",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/07c3d03b179020596bb34e6b12457bff5f26622d",
+                "reference": "07c3d03b179020596bb34e6b12457bff5f26622d",
                 "shasum": ""
             },
             "require": {
@@ -13081,9 +13081,9 @@
             "description": "UN date and time twig filters for Drupal 8",
             "support": {
                 "issues": "https://github.com/UN-OCHA/un_date/issues",
-                "source": "https://github.com/UN-OCHA/un_date/tree/2.0.6"
+                "source": "https://github.com/UN-OCHA/un_date/tree/2.0.8"
             },
-            "time": "2023-12-19T14:33:45+00:00"
+            "time": "2023-12-20T08:31:37+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
