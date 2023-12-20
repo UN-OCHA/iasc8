@@ -24,10 +24,10 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - datetime
     - file
     - image
     - text
+    - un_date
     - user
 id: node.oa_wiki_page.default
 targetEntityType: node
@@ -112,11 +112,12 @@ content:
     weight: 1
     region: content
   field_published_date:
-    type: datetime_default
+    type: un_date_datetime
     label: above
     settings:
-      timezone_override: ''
-      format_type: medium
+      display_timezone: true
+      month_format: abbreviation
+      template: default
     third_party_settings: {  }
     weight: 8
     region: content

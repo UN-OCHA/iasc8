@@ -17,9 +17,9 @@ dependencies:
     - field.field.node.action_point.og_group_ref
     - node.type.action_point
   module:
-    - datetime
     - options
     - text
+    - un_date
     - user
 id: node.action_point.full
 targetEntityType: node
@@ -34,11 +34,12 @@ content:
     weight: 0
     region: content
   field_ap_date:
-    type: datetime_default
+    type: un_date_datetime
     label: above
     settings:
-      timezone_override: ''
-      format_type: medium
+      display_timezone: true
+      month_format: numeric
+      template: default
     third_party_settings: {  }
     weight: 2
     region: content
@@ -81,11 +82,12 @@ content:
     weight: 5
     region: content
   field_date:
-    type: datetime_default
+    type: un_date_datetime
     label: above
     settings:
-      timezone_override: ''
-      format_type: medium
+      display_timezone: true
+      month_format: numeric
+      template: default
     third_party_settings: {  }
     weight: 1
     region: content
