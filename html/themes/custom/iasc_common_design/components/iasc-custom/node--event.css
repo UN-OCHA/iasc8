@@ -106,5 +106,6 @@
   .cd-teaser__date__time-only {
     flex: 1 0 25%;
     padding: 0;
+    margin-inline-start: 1rem;
   }
 }
