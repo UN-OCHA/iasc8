@@ -24,6 +24,7 @@
     "cweagans/composer-patches": "^1.6.5",
     "drupal/address": "^1.6",
     "drupal/admin_denied": "^2",
+    "drupal/amazon_ses": "^3.0",
     "drupal/bartik": "^1.0",
     "drupal/chosen": "^3.0",
     "drupal/components": "^3.0@beta",
@@ -57,6 +58,7 @@
     "drupal/group": "^2.0.0-rc1",
     "drupal/honeypot": "^2.0",
     "drupal/linkit": "^6.0@beta",
+    "drupal/mailsystem": "^4.4",
     "drupal/maintenance200": "^2",
     "drupal/media_entity_file_replace": "^1.0",
     "drupal/memcache": "^2.4",
@@ -142,7 +144,8 @@
       "wikimedia/composer-merge-plugin": true,
       "mglaman/composer-drupal-lenient": true,
       "orakili/composer-drupal-info-file-patch-helper": true,
-      "phpstan/extension-installer": true
+      "phpstan/extension-installer": true,
+      "php-http/discovery": true
     }
   },
   "extra": {
