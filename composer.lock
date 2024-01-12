@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "893b3a946c3811aab1d1c6b4d7d5399f",
+    "content-hash": "d5f371c07c9936e8862222640b7e9a09",
     "packages": [
         {
             "name": "algolia/places",
@@ -13089,16 +13089,16 @@
         },
         {
             "name": "unocha/ocha_monitoring",
-            "version": "1.0.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_monitoring.git",
-                "reference": "62c4b8acc1f5bdf974b095c6e7dc927f9660d3cf"
+                "reference": "f2542aeb5f702ab1e39d73caf730ba5620598728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_monitoring/zipball/62c4b8acc1f5bdf974b095c6e7dc927f9660d3cf",
-                "reference": "62c4b8acc1f5bdf974b095c6e7dc927f9660d3cf",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_monitoring/zipball/f2542aeb5f702ab1e39d73caf730ba5620598728",
+                "reference": "f2542aeb5f702ab1e39d73caf730ba5620598728",
                 "shasum": ""
             },
             "require": {
@@ -13113,9 +13113,9 @@
             "description": "UNOCHA Monitoring",
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_monitoring/issues",
-                "source": "https://github.com/UN-OCHA/ocha_monitoring/tree/1.0.0"
+                "source": "https://github.com/UN-OCHA/ocha_monitoring/tree/1.0.3"
             },
-            "time": "2023-11-21T10:32:25+00:00"
+            "time": "2023-12-21T13:23:29+00:00"
         },
         {
             "name": "unocha/ocha_search",
@@ -13151,20 +13151,21 @@
         },
         {
             "name": "unocha/un_date",
-            "version": "1.0.2",
+            "version": "2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/un_date.git",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d"
+                "reference": "0b4f847cd656f91d09b650fef7166d6d451bb377"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/315e872794026417fdf2813ef061a75c101f2f5d",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/0b4f847cd656f91d09b650fef7166d6d451bb377",
+                "reference": "0b4f847cd656f91d09b650fef7166d6d451bb377",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2",
+                "php": ">=8.0"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -13174,9 +13175,9 @@
             "description": "UN date and time twig filters for Drupal 8",
             "support": {
                 "issues": "https://github.com/UN-OCHA/un_date/issues",
-                "source": "https://github.com/UN-OCHA/un_date/tree/1.0.2"
+                "source": "https://github.com/UN-OCHA/un_date/tree/2.0.14"
             },
-            "time": "2023-08-02T10:45:13+00:00"
+            "time": "2024-01-10T13:04:16+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -19383,5 +19384,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
