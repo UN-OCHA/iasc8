@@ -222,7 +222,6 @@ function iasc_common_design_preprocess_node(&$variables) {
 
     /** @var \Drupal\date_recur\Plugin\Field\FieldType\DateRecurItem $date_item */
     $date_item = $node->field_oa_date->first();
-    $timezone = $date_item->timezone;
 
     /** @var \Drupal\date_recur\DateRange $daterange */
     $daterange = iasc_content_first_upcoming_as_daterange($date_item);
@@ -230,31 +229,11 @@ function iasc_common_design_preprocess_node(&$variables) {
     $start = $daterange->getStart();
     $end = $daterange->getEnd();
 
+    // Needed to link from teasere to full.
     $variables['event_time'] = [
-      'start' => iasc_content_format_time($start, $timezone),
-      'end' => iasc_content_format_time($end, $timezone),
-      'start_day' => iasc_content_format_date($start, $timezone),
-      'end_day' => iasc_content_format_date($end, $timezone),
-      'all_day' => FALSE,
-      'multiple_days' => iasc_content_is_multiple_days($start, $end, $timezone),
-      'timezone' => $timezone,
       'timestamp_start' => $start->getTimestamp(),
       'timestamp_end' => $end->getTimestamp(),
-      'output' => '',
     ];
-
-    $variables['event_time']['output'] = '';
-    if ($variables['event_time']['start'] == $variables['event_time']['end']) {
-      $variables['event_time']['all_day'] = TRUE;
-      $variables['event_time']['output'] .= 'All day';
-    }
-    elseif ($variables['event_time']['start'] == '12 a.m.' && $variables['event_time']['end'] == '11.59 p.m.') {
-      $variables['event_time']['all_day'] = TRUE;
-      $variables['event_time']['output'] .= 'All day';
-    }
-    else {
-      $variables['event_time']['output'] .= $variables['event_time']['start'] . ' — ' . $variables['event_time']['end'] . ' (' . $variables['event_time']['timezone'] . ')';
-    }
   }
 
   if ($bundle == 'oa_wiki_page' && ($variables['elements']['#view_mode'] == 'teaser' || $variables['elements']['#view_mode'] == 'title')) {

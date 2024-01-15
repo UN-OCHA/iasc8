@@ -22,10 +22,10 @@ dependencies:
     - field.field.group.iasc_space.field_sidebar
     - group.type.iasc_space
   module:
-    - datetime
     - entity_reference_revisions
     - link
     - text
+    - un_date
 id: group.iasc_space.default
 targetEntityType: group
 bundle: iasc_space
@@ -49,11 +49,12 @@ content:
     weight: 6
     region: content
   field_date_closed:
-    type: datetime_default
+    type: un_date_datetime
     label: above
     settings:
-      timezone_override: ''
-      format_type: teaser
+      display_timezone: false
+      month_format: full
+      template: default
     third_party_settings: {  }
     weight: 7
     region: content

@@ -22,9 +22,9 @@ dependencies:
     - field.field.node.service.field_updated
     - node.type.service
   module:
-    - datetime
     - link
     - text
+    - un_date
     - user
 id: node.service.default
 targetEntityType: node
@@ -161,11 +161,12 @@ content:
     weight: 103
     region: content
   field_updated:
-    type: datetime_default
+    type: un_date_datetime
     label: above
     settings:
-      timezone_override: ''
-      format_type: published_date
+      display_timezone: true
+      month_format: full
+      template: default
     third_party_settings: {  }
     weight: 101
     region: content

@@ -26,10 +26,10 @@ dependencies:
     - field.field.node.oa_worktracker_task.og_vocabulary
     - node.type.oa_worktracker_task
   module:
-    - datetime
     - file
     - options
     - text
+    - un_date
     - user
 id: node.oa_worktracker_task.default
 targetEntityType: node
@@ -51,11 +51,12 @@ content:
     weight: 11
     region: content
   field_date:
-    type: datetime_default
+    type: un_date_datetime
     label: inline
     settings:
-      timezone_override: ''
-      format_type: medium
+      display_timezone: true
+      month_format: abbreviation
+      template: default
     third_party_settings: {  }
     weight: 5
     region: content

@@ -25,8 +25,8 @@ dependencies:
     - field.field.node.oa_wiki_page.og_vocabulary
     - node.type.oa_wiki_page
   module:
-    - datetime
     - text
+    - un_date
     - user
 id: node.oa_wiki_page.full
 targetEntityType: node
@@ -58,11 +58,12 @@ content:
     weight: 2
     region: content
   field_published_date:
-    type: datetime_default
+    type: un_date_datetime
     label: inline
     settings:
-      timezone_override: ''
-      format_type: teaser
+      display_timezone: true
+      month_format: full
+      template: default
     third_party_settings: {  }
     weight: 0
     region: content

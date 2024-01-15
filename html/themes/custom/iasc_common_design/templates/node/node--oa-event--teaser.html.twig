@@ -115,8 +115,9 @@
       {{ contentBody|striptags }}
 
       <div class="cd-date-time">
-        {{ event_time.output }}
-        <span class="cd-teaser__date__time-user" data-all-day="{{ event_time.all_day }}" data-timestamp-start="{{ event_time.timestamp_start }}" data-timestamp-end="{{ event_time.timestamp_end }}"></span>
+        <time class="cd-teaser__date__time-user" datetime="{{ node.field_oa_date|un_html_datetime }}">
+          {{ node.field_oa_date|un_timerange }}
+        </time>
       </div>
     </div>
 

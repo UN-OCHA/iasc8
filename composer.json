@@ -103,7 +103,7 @@
     "unocha/ocha_integrations": "^2",
     "unocha/ocha_monitoring": "^1.0",
     "unocha/ocha_search": "^1.0",
-    "unocha/un_date": "^1.0.1",
+    "unocha/un_date": "^2.0",
     "vlucas/phpdotenv": "^2.4",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
