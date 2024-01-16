@@ -13,6 +13,10 @@
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
         <!-- Specify the default directory screenshots should be placed. -->
         <!--<env name="DTT_SCREENSHOT_REPORT_DIRECTORY" value=""/>-->
+
+        <!-- ###+ symfony/mailer ### -->
+        <!-- MAILER_DSN=null://null -->
+        <!-- ###- symfony/mailer ### -->
     </php>
 
     <testsuites>
