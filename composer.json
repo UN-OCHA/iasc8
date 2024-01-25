@@ -22,7 +22,7 @@
   "require": {
     "php": ">=8.0",
     "cweagans/composer-patches": "^1.6.5",
-    "drupal/address": "^1.6",
+    "drupal/address": "^2",
     "drupal/admin_denied": "^2",
     "drupal/amazon_ses": "^3.0",
     "drupal/bartik": "^1.0",
@@ -44,7 +44,7 @@
     "drupal/entityqueue": "^1.0",
     "drupal/environment_indicator": "^4.0",
     "drupal/facets": "^2.0",
-    "drupal/facets_pretty_paths": "^1.2",
+    "drupal/facets_pretty_paths": "^2",
     "drupal/field_group": "^3.0",
     "drupal/field_permissions": "^1.0@RC",
     "drupal/file_entity": "^2.0@beta",
