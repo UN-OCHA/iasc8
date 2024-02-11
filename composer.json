@@ -20,7 +20,7 @@
     }
   ],
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.2",
     "cweagans/composer-patches": "^1.6.5",
     "drupal/address": "^2",
     "drupal/admin_denied": "^2",
