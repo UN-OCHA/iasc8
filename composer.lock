@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5948f34cbbf66fa70acd787ca62fb96",
+    "content-hash": "4de8833b51b8281c21361f433308cad5",
     "packages": [
         {
             "name": "algolia/places",
@@ -13478,20 +13478,21 @@
         },
         {
             "name": "unocha/un_date",
-            "version": "1.0.2",
+            "version": "2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/un_date.git",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d"
+                "reference": "162a5a212256565db8bcf1d2ad9722b9be501dfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/315e872794026417fdf2813ef061a75c101f2f5d",
-                "reference": "315e872794026417fdf2813ef061a75c101f2f5d",
+                "url": "https://api.github.com/repos/UN-OCHA/un_date/zipball/162a5a212256565db8bcf1d2ad9722b9be501dfa",
+                "reference": "162a5a212256565db8bcf1d2ad9722b9be501dfa",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2"
+                "composer/installers": "^1.2",
+                "php": ">=8.0"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -13501,9 +13502,9 @@
             "description": "UN date and time twig filters for Drupal 8",
             "support": {
                 "issues": "https://github.com/UN-OCHA/un_date/issues",
-                "source": "https://github.com/UN-OCHA/un_date/tree/1.0.2"
+                "source": "https://github.com/UN-OCHA/un_date/tree/2.0.15"
             },
-            "time": "2023-08-02T10:45:13+00:00"
+            "time": "2024-01-15T10:31:24+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
