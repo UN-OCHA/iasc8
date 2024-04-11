@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4de8833b51b8281c21361f433308cad5",
+    "content-hash": "ca0197854fcec959d6ddeee82c65e513",
     "packages": [
         {
             "name": "algolia/places",
@@ -1887,17 +1887,11 @@
         },
         {
             "name": "drupal/aws",
-            "version": "2.0.3",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/aws.git",
-                "reference": "2.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/aws-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "683b5ed0698bb6c64db8a34b42fff2571807becc"
+                "reference": "5c8371feefd3ea641cca486925e3db9e628b07ba"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.54",
@@ -1905,12 +1899,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1671308573",
+                    "version": "2.0.3+4-dev",
+                    "datestamp": "1690752016",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4612,7 +4609,7 @@
                 "shasum": "fc8ea60619b6b4682bade340e13fb4565d3a7e0c"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
@@ -7875,19 +7872,6 @@
                 "source": "https://github.com/itamair/geoPHP/tree/1.6"
             },
             "time": "2023-12-23T23:28:59+00:00"
-        },
-        {
-            "name": "jjj/chosen",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JJJ/chosen.git",
-                "reference": "2.2.1"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "chosen"
-            }
         },
         {
             "name": "jquery/chosen",
@@ -19642,6 +19626,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/aws": 20,
         "drupal/components": 10,
         "drupal/conditional_fields": 15,
         "drupal/config_split": 10,
