@@ -103,6 +103,7 @@
     "symfony/flex": "^1.17",
     "unocha/common_design": "^9",
     "unocha/file_checker": "dev-8.x-1.x",
+    "unocha/gtm_barebones": "^1.0",
     "unocha/ocha_integrations": "^2",
     "unocha/ocha_monitoring": "^1.0",
     "unocha/ocha_search": "^1.0",

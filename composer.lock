@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca0197854fcec959d6ddeee82c65e513",
+    "content-hash": "61cb25cec6e75bed5d0f85d03ce3b782",
     "packages": [
         {
             "name": "algolia/places",
@@ -13417,6 +13417,33 @@
             "time": "2022-01-18T02:18:28+00:00"
         },
         {
+            "name": "unocha/gtm_barebones",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/gtm_barebones.git",
+                "reference": "80f58df7e9169d531bd840f0ecbcc72184d19bf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/gtm_barebones/zipball/80f58df7e9169d531bd840f0ecbcc72184d19bf6",
+                "reference": "80f58df7e9169d531bd840f0ecbcc72184d19bf6",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "OCHA fork of GTM Barebones.",
+            "support": {
+                "issues": "https://github.com/UN-OCHA/gtm_barebones/issues",
+                "source": "https://github.com/UN-OCHA/gtm_barebones/tree/1.1.2"
+            },
+            "time": "2024-04-12T06:49:31+00:00"
+        },
+        {
             "name": "unocha/ocha_integrations",
             "version": "v2.0.4",
             "source": {
@@ -19682,5 +19709,5 @@
         "php": ">=8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
