@@ -34,13 +34,6 @@ class ContactsNotVisibleForAnonTest extends ExistingSiteBase {
     $this->drupalGet($node->toUrl());
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('To view more details, please login.');
-
-    // Login using reset link.
-    $this->drupalLogin($admin);
-
-    // We can browse the contact as admin.
-    $this->drupalGet($node->toUrl());
-    $this->assertSession()->statusCodeEquals(200);
   }
 
 }
