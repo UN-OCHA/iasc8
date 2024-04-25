@@ -23,8 +23,8 @@ class IascContentCommands extends DrushCommands {
    * {@inheritdoc}
    */
   public function __construct(
-      EntityTypeManagerInterface $entity_type_manager,
-    ) {
+    EntityTypeManagerInterface $entity_type_manager,
+  ) {
     $this->entityTypeManager = $entity_type_manager;
   }
 

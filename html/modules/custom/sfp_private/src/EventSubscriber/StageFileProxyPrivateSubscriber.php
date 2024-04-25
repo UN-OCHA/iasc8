@@ -78,12 +78,10 @@ class StageFileProxyPrivateSubscriber implements EventSubscriberInterface {
   /**
    * Fetch the file from it's origin.
    *
-   * @param \Symfony\Component\HttpKernel\Event\ResponseEvent $event
+   * @param \Symfony\Component\HttpKernel\Event\RequestEvent $event
    *   The event to process.
-   *
-   * @todo Drop GetRequestEvent typehint when dropping Drupal 9 support.
    */
-  public function checkFileOrigin(RequestEvent|GetRequestEvent $event) {
+  public function checkFileOrigin(RequestEvent $event) {
     $config = $this->configFactory->get('stage_file_proxy.settings');
 
     // Get the origin server.
