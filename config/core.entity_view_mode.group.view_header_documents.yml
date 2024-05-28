@@ -6,5 +6,6 @@ dependencies:
     - group
 id: group.view_header_documents
 label: 'View header - documents'
+description: ''
 targetEntityType: group
 cache: true

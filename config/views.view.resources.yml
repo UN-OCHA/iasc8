@@ -135,7 +135,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: search_api_none
         options: {  }
       empty: {  }
       sorts:
@@ -326,7 +326,7 @@ display:
     display_options:
       title: 'IASC Newsletters'
       cache:
-        type: none
+        type: search_api_none
       sorts:
         field_published_date:
           id: field_published_date
@@ -474,7 +474,7 @@ display:
     position: 1
     display_options:
       cache:
-        type: none
+        type: search_api_none
       sorts:
         field_oa_date:
           id: field_oa_date
@@ -672,7 +672,7 @@ display:
     display_options:
       title: 'Meeting Documents'
       cache:
-        type: none
+        type: search_api_none
       sorts:
         field_published_date:
           id: field_published_date
@@ -822,7 +822,7 @@ display:
     display_options:
       title: 'IASC Products'
       cache:
-        type: none
+        type: search_api_none
       filters:
         type:
           id: type
@@ -958,7 +958,7 @@ display:
       enabled: false
       title: 'IASC Statements'
       cache:
-        type: none
+        type: search_api_none
       sorts:
         field_published_date:
           id: field_published_date
@@ -1108,7 +1108,7 @@ display:
       enabled: false
       title: 'Statements IASC Principals'
       cache:
-        type: none
+        type: search_api_none
       filters:
         type:
           id: type
