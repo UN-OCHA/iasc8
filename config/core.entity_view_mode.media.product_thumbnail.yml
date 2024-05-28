@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.product_thumbnail
 label: 'Product thumbnail'
+description: ''
 targetEntityType: media
 cache: true

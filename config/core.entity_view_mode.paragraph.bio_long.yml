@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.bio_long
 label: 'Bio long'
+description: ''
 targetEntityType: paragraph
 cache: true

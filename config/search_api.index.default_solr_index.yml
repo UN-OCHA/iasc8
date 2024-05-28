@@ -93,7 +93,7 @@ field_settings:
     datasource_id: 'entity:group'
     property_path: field_description
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.group.field_description
@@ -134,7 +134,7 @@ field_settings:
     datasource_id: 'entity:group'
     property_path: label
     type: text
-    boost: !!float 5
+    boost: 5.0
     dependencies:
       module:
         - group
@@ -189,7 +189,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 3
+    boost: 3.0
     dependencies:
       module:
         - node
@@ -273,18 +273,18 @@ processor_settings:
       preprocess_index: 0
     boosts:
       'entity:group':
-        datasource_boost: !!float 0
+        datasource_boost: 0.0
         bundle_boosts:
-          iasc_group: !!float 0
-          iasc_space: !!float 0
+          iasc_group: 0.0
+          iasc_space: 0.0
       'entity:node':
-        datasource_boost: !!float 0
+        datasource_boost: 0.0
         bundle_boosts:
-          announcement: !!float 3
-          oa_event: !!float 0
-          oa_wiki_page: !!float 5
-          panopoly_landing_page: !!float 8
-          panopoly_page: !!float 5
+          announcement: 3.0
+          oa_event: 0.0
+          oa_wiki_page: 5.0
+          panopoly_landing_page: 8.0
+          panopoly_page: 5.0
 tracker_settings:
   default:
     indexing_order: fifo

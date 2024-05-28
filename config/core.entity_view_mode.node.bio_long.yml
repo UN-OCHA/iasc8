@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.bio_long
 label: bio_long
+description: ''
 targetEntityType: node
 cache: true

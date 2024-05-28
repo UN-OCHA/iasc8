@@ -6,5 +6,6 @@ dependencies:
     - group
 id: group.title
 label: Title
+description: ''
 targetEntityType: group
 cache: true
