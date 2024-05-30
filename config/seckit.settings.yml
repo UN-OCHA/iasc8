@@ -13,7 +13,7 @@ seckit_xss:
     style-src: "'self' 'unsafe-inline' fonts.googleapis.com"
     img-src: "'self' data: https://*.google-analytics.com https://*.googletagmanager.com gstatic.com *ytimg.com mcusercontent.com *.mailchimp.com *.google.com"
     media-src: "'none'"
-    frame-src: "'self' *.youtube.com view.genial.ly"
+    frame-src: "'self' *.youtube.com platform.twitter.com view.genial.ly"
     frame-ancestors: "'self'"
     child-src: "'self'"
     font-src: "'self' data: fonts.gstatic.com interagencystandingcommittee.org"
