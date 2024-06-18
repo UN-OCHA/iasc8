@@ -12,7 +12,7 @@ dependencies:
 id: iasc_organizations
 label: 'IASC Organizations'
 module: views
-description: 'Lists Member and Invitee organizations'' logos (linked to their homepage urls)'
+description: "Lists Member and Invitee organizations' logos (linked to their homepage urls)"
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid

@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.paragraphs_editor_preview
 label: paragraphs_editor_preview
+description: ''
 targetEntityType: paragraph
 cache: true

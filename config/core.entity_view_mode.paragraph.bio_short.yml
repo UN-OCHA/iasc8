@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.bio_short
 label: 'Bio short'
+description: ''
 targetEntityType: paragraph
 cache: true

@@ -6,5 +6,6 @@ dependencies:
     - group
 id: group.view_header_meetings
 label: 'View header - meetings'
+description: ''
 targetEntityType: group
 cache: true

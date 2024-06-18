@@ -6,5 +6,6 @@ dependencies:
     - group
 id: group.view_header_news
 label: 'View header - news'
+description: ''
 targetEntityType: group
 cache: true

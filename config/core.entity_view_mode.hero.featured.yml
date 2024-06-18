@@ -6,5 +6,6 @@ dependencies:
     - iasc_hero
 id: hero.featured
 label: Featured
+description: ''
 targetEntityType: hero
 cache: true
