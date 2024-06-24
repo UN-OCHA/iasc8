@@ -6,3 +6,4 @@ name: 'Product Categories'
 vid: product_categories
 description: 'A list of terms that a user can associate with a particular Product (document).'
 weight: 0
+new_revision: false

@@ -10,7 +10,7 @@ third_party_settings:
 name: Task
 type: oa_worktracker_task
 description: 'A unit of work to be performed.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

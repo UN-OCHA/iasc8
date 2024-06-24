@@ -6,3 +6,4 @@ name: 'Section Type'
 vid: section_type
 description: 'Allow selection of Open Atrium sections'
 weight: 0
+new_revision: false

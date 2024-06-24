@@ -6,3 +6,4 @@ name: 'Document Types'
 vid: document_types
 description: 'Types of Documents.'
 weight: 0
+new_revision: false

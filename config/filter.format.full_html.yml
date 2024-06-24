@@ -54,4 +54,4 @@ filters:
     status: true
     weight: 0
     settings:
-      replace_empty: '1'
+      replace_empty: true
