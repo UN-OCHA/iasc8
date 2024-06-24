@@ -6,3 +6,4 @@ name: Organizations
 vid: hosts
 description: 'The name of the organization hosting a Meeting or associated with a Contact.'
 weight: 0
+new_revision: false

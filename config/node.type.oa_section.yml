@@ -12,7 +12,7 @@ third_party_settings:
 name: 'Section Page'
 type: oa_section
 description: 'A landing page and collection of content within a Space.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

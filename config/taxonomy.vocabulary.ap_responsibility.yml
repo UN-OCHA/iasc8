@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Action Point Responsibility'
 vid: ap_responsibility
-description: ''
+description: null
 weight: 0
+new_revision: false

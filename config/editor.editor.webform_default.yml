@@ -1,4 +1,4 @@
-uuid: null
+uuid: 40902968-1693-4fc9-8947-f2d35bcb2632
 langcode: en
 status: true
 dependencies:
@@ -51,4 +51,5 @@ settings:
             - Source
             - Maximize
   plugins: {  }
-image_upload: {  }
+image_upload:
+  status: false

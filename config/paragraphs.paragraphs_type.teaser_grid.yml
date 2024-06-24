@@ -5,5 +5,6 @@ dependencies: {  }
 id: teaser_grid
 label: 'Teaser grid'
 icon_uuid: null
+icon_default: null
 description: 'Multiple teaser items displayed in a grid'
 behavior_plugins: {  }

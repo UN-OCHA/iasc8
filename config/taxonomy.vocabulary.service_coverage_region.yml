@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Service Coverage Region'
 vid: service_coverage_region
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Type of Entity'
 vid: type_of_entity
-description: ''
+description: null
 weight: 0
+new_revision: false
