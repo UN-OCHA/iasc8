@@ -7,6 +7,7 @@ dependencies:
 id: reliefweb_feed
 label: 'Reliefweb feed'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins:
   paragraphs_viewmode_behavior:

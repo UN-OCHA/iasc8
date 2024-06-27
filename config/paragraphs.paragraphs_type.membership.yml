@@ -5,5 +5,6 @@ dependencies: {  }
 id: membership
 label: Membership
 icon_uuid: null
+icon_default: null
 description: 'Migrated from field_collection field_membership'
 behavior_plugins: {  }
