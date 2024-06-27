@@ -14,6 +14,9 @@
     "drupal/csp": {
       "Simplify log format": "PATCHES/csp-log-format.patch"
     },
+    "drupal/geofield_map": {
+      "polyfill.io Library is no longer considered safe to use": "PATCHES/geofield_map_3456704_16.patch"
+    },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-15131744": "https://www.drupal.org/files/issues/2023-06-30/2868252-paragraph-summary-alter-42.patch"
     },
