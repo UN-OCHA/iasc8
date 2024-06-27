@@ -7,6 +7,7 @@ dependencies:
 id: section_menu
 label: 'Section menu'
 icon_uuid: null
+icon_default: null
 description: 'Displays a list of links to Documents, Meetings, News and Events if the visitor has access to at least one of them.'
 behavior_plugins:
   paragraphs_viewmode_behavior:
