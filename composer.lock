@@ -7712,6 +7712,19 @@
             "time": "2023-12-23T23:28:59+00:00"
         },
         {
+            "name": "jjj/chosen",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JJJ/chosen.git",
+                "reference": "2.2.1"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "chosen"
+            }
+        },
+        {
             "name": "jquery/chosen",
             "version": "1.8.7",
             "dist": {
@@ -19484,5 +19497,5 @@
         "php": ">=8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
