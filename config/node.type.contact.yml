@@ -12,7 +12,7 @@ third_party_settings:
 name: Contact
 type: contact
 description: 'Create a Contact to aggregate information about a person in the Contacts Database.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

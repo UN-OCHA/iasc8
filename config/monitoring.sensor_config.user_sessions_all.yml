@@ -1,9 +1,7 @@
 uuid: 14bad616-c6e9-4956-8cb3-b3beff796f44
 langcode: en
 status: false
-dependencies:
-  module:
-    - system
+dependencies: {  }
 _core:
   default_config_hash: CgjKrimMTwQLluUztd3QSleqDmulTMOuotcztsnZgbw
 id: user_sessions_all

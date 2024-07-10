@@ -6,3 +6,4 @@ name: Categories
 vid: panopoly_categories
 description: 'This is a sitewide taxonomy of categories to organize the content on your site!'
 weight: 0
+new_revision: false

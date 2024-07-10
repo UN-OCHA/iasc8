@@ -61,9 +61,6 @@ settings:
   file:
     handler: 'default:file'
     handler_settings: {  }
-  flagging:
-    handler: 'default:flagging'
-    handler_settings: {  }
   group_content:
     handler: 'default:group_content'
     handler_settings: {  }
@@ -102,5 +99,11 @@ settings:
     handler_settings: {  }
   webform_submission:
     handler: 'default:webform_submission'
+    handler_settings: {  }
+  group_config_wrapper:
+    handler: 'default:group_config_wrapper'
+    handler_settings: {  }
+  monitoring_sensor_result:
+    handler: 'default:monitoring_sensor_result'
     handler_settings: {  }
 field_type: dynamic_entity_reference
