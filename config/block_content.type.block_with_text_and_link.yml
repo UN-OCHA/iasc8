@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: block_with_text_and_link
 label: 'Block with text and link'
-revision: 0
+revision: false
 description: ''

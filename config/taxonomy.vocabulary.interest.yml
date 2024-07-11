@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: Interest
 vid: interest
-description: ''
+description: null
 weight: 0
+new_revision: false

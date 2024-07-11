@@ -16,7 +16,6 @@ module:
   config: 0
   config_split: 0
   contextual: 0
-  csp: 0
   csv_serialization: 0
   ctools: 0
   date_recur: 0
@@ -40,12 +39,6 @@ module:
   file: 0
   filter: 0
   flexible_permissions: 0
-  geocoder: 0
-  geocoder_address: 0
-  geocoder_field: 0
-  geocoder_geofield: 0
-  geofield: 0
-  geophp: 0
   gnode: 0
   group: 0
   gtm_barebones: 0
@@ -88,6 +81,7 @@ module:
   rest: 0
   search_api: 0
   search_api_db: 0
+  seckit: 0
   select2: 0
   select2_facets: 0
   select_a11y: 0

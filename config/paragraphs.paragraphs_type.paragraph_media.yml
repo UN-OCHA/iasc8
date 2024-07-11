@@ -5,5 +5,6 @@ dependencies: {  }
 id: paragraph_media
 label: 'Media Gallery'
 icon_uuid: null
+icon_default: null
 description: 'Migrated from paragraph bundle Media Gallery'
 behavior_plugins: {  }

@@ -12,7 +12,7 @@ third_party_settings:
 name: 'Document Page'
 type: oa_wiki_page
 description: 'An Open Atrium Document/Wiki page'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

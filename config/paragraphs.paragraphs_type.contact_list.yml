@@ -7,6 +7,7 @@ dependencies:
 id: contact_list
 label: 'Contact list'
 icon_uuid: null
+icon_default: null
 description: 'A manual curated list of contacts'
 behavior_plugins:
   paragraphs_viewmode_behavior:
