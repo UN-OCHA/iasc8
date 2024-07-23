@@ -93,6 +93,7 @@
     "drupal/webform": "^6.2@beta",
     "drupal/xmlsitemap": "^1.4",
     "drush/drush": "^12",
+    "jjj/chosen": "^2.2",
     "mglaman/composer-drupal-lenient": "^1.0",
     "npm-asset/select2": "^4.0",
     "oomphinc/composer-installers-extender": "^2.0",
