@@ -80,7 +80,7 @@
     "drupal/social_auth_hid": "^3.1",
     "drupal/spamspan": "^3.1",
     "drupal/stable": "^2.0",
-    "drupal/stage_file_proxy": "^2.0",
+    "drupal/stage_file_proxy": "^3",
     "drupal/tablefield": "^2.1",
     "drupal/token": "^1.5",
     "drupal/token_filter": "^2.0",
