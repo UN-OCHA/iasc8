@@ -38,6 +38,9 @@
     },
     "drupal/viewsreference": {
       "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "https://www.drupal.org/files/issues/2020-09-02/viewsreference-ajax_after_display_selection-3166490-3.patch"
+    },
+    "drupal/webform": {
+      "Disable webform vide": "./PATCHES/disable-webform-help-video.patch"
     }
   }
 }
