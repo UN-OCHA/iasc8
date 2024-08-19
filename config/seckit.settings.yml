@@ -16,7 +16,7 @@ seckit_xss:
     frame-src: "'self' https://www.googletagmanager.com *.youtube.com platform.twitter.com view.genial.ly interactive.unocha.org https://bid.g.doubleclick.net https://td.doubleclick.net https://syndication.twitter.com"
     frame-ancestors: "'self'"
     child-src: "'self' blob:"
-    font-src: "'self' data: fonts.gstatic.com interagencystandingcommittee.org"
+    font-src: "'self' data: fonts.gstatic.com https://use.typekit.net interagencystandingcommittee.org"
     connect-src: "'self' https://*"
     report-uri: /report-csp-violation
     upgrade-req: false
