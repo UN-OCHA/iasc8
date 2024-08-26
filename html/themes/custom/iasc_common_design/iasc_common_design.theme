@@ -108,6 +108,7 @@ function iasc_common_design_preprocess_field(&$variables, $hook) {
             $parser = new RRuleHumanReadable($rule);
             $variables['human_readable'] = $parser->humanReadable([
               'use_intl' => FALSE,
+              'locale' => 'en',
               'explicit_inifite' => FALSE,
               'dtstart' => FALSE,
               'include_start' => FALSE,
