@@ -1,7 +1,9 @@
+_core:
+  default_config_hash: wB2h-QBawANCiCVEXy6bJjiDfvZY6EONZ6-wRB_RYQc
 hotlink: false
 origin: 'https://interagencystandingcommittee.org'
 origin_dir: sites/default/files
+proxy_headers: ''
 use_imagecache_root: true
 verify: true
-_core:
-  default_config_hash: wB2h-QBawANCiCVEXy6bJjiDfvZY6EONZ6-wRB_RYQc
+excluded_extensions: ''
