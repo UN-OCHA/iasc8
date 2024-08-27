@@ -4,32 +4,34 @@
  */
 
 (function () {
+  'use strict';
+
   // Check query string.
   if (window.location.search.length > 0) {
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('ts')) {
-      const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const monthNamesShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
       let container = document.querySelector('.node__content .cd-date');
       let date = new Date(parseInt(searchParams.get('ts'), 10) * 1000);
-      let date_end = date;
+      let dateEnd = date;
       if (searchParams.has('tse')) {
-        date_end = new Date(parseInt(searchParams.get('tse'), 10) * 1000);
+        dateEnd = new Date(parseInt(searchParams.get('tse'), 10) * 1000);
       }
 
       let day = date.getUTCDate();
-      if (date.getUTCDate() != date_end.getUTCDate()) {
-        day = day + ' - ' + date_end.getUTCDate();
+      if (date.getUTCDate() != dateEnd.getUTCDate()) {
+        day = day + ' - ' + dateEnd.getUTCDate();
       }
 
-      let month = month_names_short[date.getUTCMonth()];
-      if (date.getUTCMonth() != date_end.getUTCMonth()) {
-        month = month + ' - ' + month_names_short[date_end.getDate()];
+      let month = monthNamesShort[date.getUTCMonth()];
+      if (date.getUTCMonth() != dateEnd.getUTCMonth()) {
+        month = month + ' - ' + monthNamesShort[dateEnd.getDate()];
       }
 
       let year = date.getUTCFullYear();
-      if (date.getUTCFullYear() != date_end.getUTCFullYear()) {
-        year = year + ' - ' + date_end.getUTCFullYear();
+      if (date.getUTCFullYear() != dateEnd.getUTCFullYear()) {
+        year = year + ' - ' + dateEnd.getUTCFullYear();
       }
 
       container.querySelector('.cd-date__day').innerHTML = day;
@@ -37,4 +39,4 @@
       container.querySelector('.cd-date__year').innerHTML = year;
     }
   }
-}());
+})();
