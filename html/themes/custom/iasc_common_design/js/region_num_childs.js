@@ -4,6 +4,8 @@
  */
 
 (function (Drupal) {
+  'use strict';
+
   Drupal.behaviors.addNumChildsToRegion = {
     attach: function (context, settings) {
       // Fill on initial load.
