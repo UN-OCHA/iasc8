@@ -15,6 +15,9 @@
     "drupal/csp": {
       "Simplify log format": "PATCHES/csp-log-format.patch"
     },
+    "drupal/facets" : {
+      "https://www.drupal.org/project/facets/issues/3466886": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch"
+    },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-15131744": "https://www.drupal.org/files/issues/2023-06-30/2868252-paragraph-summary-alter-42.patch"
     },
