@@ -3,17 +3,17 @@
     "drupal/amazon_ses": {
       "Cron fails on amazon_ses when not configured": "PATCHES/amazon_ses-3417090-cron-queue-14.patch"
     },
-    "drupal/dream_block_manager": {
-      "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
-    },
     "drupal/core": {
       "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
       "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch",
       "Js optimize error https://www.drupal.org/project/drupal/issues/3416508": "PATCHES/core_js_optimizer.patch",
       "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
     },
-    "drupal/csp": {
-      "Simplify log format": "PATCHES/csp-log-format.patch"
+    "drupal/dream_block_manager": {
+      "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
+    },
+    "drupal/facets" : {
+      "https://www.drupal.org/project/facets/issues/3466886": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch"
     },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-15131744": "https://www.drupal.org/files/issues/2023-06-30/2868252-paragraph-summary-alter-42.patch"
