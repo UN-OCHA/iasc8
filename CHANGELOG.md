@@ -4,6 +4,27 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.3](https://github.com/UN-OCHA/iasc8/compare/v15.1.2...v15.1.3) (2024-09-17)
+
+### Bug Fixes
+
+* Add patch for facets issue ([7cf1bb](https://github.com/UN-OCHA/iasc8/commit/7cf1bb197716313b288f1c10761e6a9352bee8c0))
+* Capitalization change ([c0db04](https://github.com/UN-OCHA/iasc8/commit/c0db04f5d3ac87c641bfc0e881801d209d0fa642))
+* Include core patch for aggregation error ([95edf3](https://github.com/UN-OCHA/iasc8/commit/95edf3f6ba72c9eae397dcebb6f2cc2288952ca6))
+
+### Chores
+
+* Add tools [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867), [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867), [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867) ([c2d308](https://github.com/UN-OCHA/iasc8/commit/c2d3080f22006b243ba03dd26851ebe9abf5dcd2), [40ae59](https://github.com/UN-OCHA/iasc8/commit/40ae5968f23ed322ed50821bc73afd472e6cd1dd), [54590b](https://github.com/UN-OCHA/iasc8/commit/54590bb3f8c8b6c6e4672381f7380f3d66db3e36))
+* Include php logs if tests fail ([71e85d](https://github.com/UN-OCHA/iasc8/commit/71e85defb797936771ec018b5bcb3018a66f2078))
+* Pass on credentials to action ([68b9b5](https://github.com/UN-OCHA/iasc8/commit/68b9b5cf68862594238e1fd42f243b9f8999b7c9))
+* Remove patch which is blocking core update ([931f6d](https://github.com/UN-OCHA/iasc8/commit/931f6d8f79dc354e308e94933aaead2d216c191a))
+* Update all outdated drupal/* unocha/* drush/* packages. ([f516f8](https://github.com/UN-OCHA/iasc8/commit/f516f8cb1af756b0fb19c1b7a2acfe4213b11deb), [411318](https://github.com/UN-OCHA/iasc8/commit/4113182bc691d9e25db6d6e413e30f929a9463dc), [b21a3b](https://github.com/UN-OCHA/iasc8/commit/b21a3b1c16caa44c2181f92ed167c0a9d0d93aae))
+* Update phpspreadsheet package ([022870](https://github.com/UN-OCHA/iasc8/commit/022870c2bdc61d8598307239468711f805716445))
+
+##### Deps
+
+* Bump micromatch in /html/themes/custom/iasc_common_design ([58b465](https://github.com/UN-OCHA/iasc8/commit/58b46503c4e1c8752d031135b072cd160c09af5f))
+
 ## [15.0.8](https://github.com/UN-OCHA/iasc8/compare/v15.0.7...v15.0.8) (2024-04-16)
 
 
