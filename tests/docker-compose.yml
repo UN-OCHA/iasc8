@@ -46,6 +46,8 @@ services:
       - ENVIRONMENT=dev
       - NGINX_SERVERNAME=iasc-test-site,localhost,127.0.0.1
       - NGINX_OVERRIDE_PROTOCOL=HTTP,iasc-test-site,localhost,127.0.0.1
+      - NGINX_LIMIT_BOTS=64r/s
+      - NGINX_BURST_BOTS=256 nodelay
       - DRUSH_OPTIONS_URI=http://iasc-test-site
       - DRUPAL_DB_DATABASE=iasc
       - DRUPAL_DB_USERNAME=iasc
