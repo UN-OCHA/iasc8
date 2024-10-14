@@ -11,6 +11,7 @@
 /html/sites/*/settings.php
 /html/sites/*/settings.local.php
 /html/sites/*/services.yml
+/database/*.sql
 
 # Ignore local development files.
 /local/.env

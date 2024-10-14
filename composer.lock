@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4743ca0d798fbe38a6dc50fb3bbc5a43",
+    "content-hash": "05beb0a852338fa5b3068e538a65ed2b",
     "packages": [
         {
             "name": "algolia/places",
@@ -2635,55 +2635,6 @@
                 "source": "https://github.com/drupal/core-recommended/tree/10.3.6"
             },
             "time": "2024-10-03T08:58:13+00:00"
-        },
-        {
-            "name": "drupal/csp",
-            "version": "1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/csp.git",
-                "reference": "8.x-1.33"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/csp-8.x-1.33.zip",
-                "reference": "8.x-1.33",
-                "shasum": "c923468c3cf077bbc89967ee7fa6c6e48c7254df"
-            },
-            "require": {
-                "drupal/core": "~10.0.0 || ^10.1.3 || ^11",
-                "ext-json": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.33",
-                    "datestamp": "1721292907",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "gapple",
-                    "homepage": "https://www.drupal.org/user/490940"
-                }
-            ],
-            "description": "Provide Content-Security-Policy headers",
-            "homepage": "https://www.drupal.org/project/csp",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/csp",
-                "issues": "https://www.drupal.org/project/issues/csp"
-            }
         },
         {
             "name": "drupal/csv_serialization",
