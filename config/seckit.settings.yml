@@ -13,7 +13,7 @@ seckit_xss:
     style-src: "'self' 'unsafe-inline' https://googletagmanager.com https://tagmanager.google.com fonts.googleapis.com https://www.google.com"
     img-src: "'self' data: https://*"
     media-src: "'self' data:"
-    frame-src: "'self' https://www.googletagmanager.com *.youtube.com platform.twitter.com view.genial.ly interactive.unocha.org https://bid.g.doubleclick.net https://td.doubleclick.net https://syndication.twitter.com"
+    frame-src: "'self' https://www.googletagmanager.com *.youtube.com platform.twitter.com view.genial.ly interactive.unocha.org https://bid.g.doubleclick.net https://td.doubleclick.net https://syndication.twitter.com *.un.org https://cdnapisec.kaltura.com"
     frame-ancestors: "'self'"
     child-src: "'self' blob:"
     font-src: "'self' data: fonts.gstatic.com https://use.typekit.net interagencystandingcommittee.org"
