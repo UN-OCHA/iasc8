@@ -3,8 +3,8 @@
 namespace Drupal\Tests\iasc_content\Unit;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
-use Drupal\iasc_content\RRuleHumanReadable;
 use Drupal\Tests\UnitTestCase;
+use Drupal\iasc_content\RRuleHumanReadable;
 
 /**
  * Tests RRule text output.

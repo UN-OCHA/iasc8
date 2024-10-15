@@ -729,7 +729,7 @@ function _iasc_content_section_audience_present($entity_type, $bundle, $field_na
 /**
  * Legacy command from Drupal 7 version.
  */
-function iasc_content_oa_buttons_get_command_buttons_options(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function iasc_content_oa_buttons_get_command_buttons_options(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     '_legacy' => 'do not use - oa_buttons_get_command_buttons_options',
     'debug' => $definition->getName(),
@@ -739,7 +739,7 @@ function iasc_content_oa_buttons_get_command_buttons_options(FieldStorageConfig 
 /**
  * Legacy command from Drupal 7 version.
  */
-function iasc_content_oa_related_paragraphs_field_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function iasc_content_oa_related_paragraphs_field_allowed_values(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     '_legacy' => 'do not use - oa_related_paragraphs_field_allowed_values',
     'debug' => $definition->getName(),
@@ -749,7 +749,7 @@ function iasc_content_oa_related_paragraphs_field_allowed_values(FieldStorageCon
 /**
  * Legacy command from Drupal 7 version.
  */
-function iasc_content_oa_sections_field_oa_section_type_menu_allowed_values(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function iasc_content_oa_sections_field_oa_section_type_menu_allowed_values(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   return [
     0 => 'do not use - oa_sections_field_oa_section_type_menu_allowed_values',
     999 => $definition->getName(),
@@ -759,7 +759,7 @@ function iasc_content_oa_sections_field_oa_section_type_menu_allowed_values(Fiel
 /**
  * Allowed values for task content type.
  */
-function iasc_content_oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
+function iasc_content_oa_worktracker_allowed_values_callback(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL, &$cacheable = TRUE) {
   $field_name = $definition->getName();
 
   // Priority values.
