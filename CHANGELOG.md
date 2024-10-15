@@ -4,6 +4,27 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.4](https://github.com/UN-OCHA/iasc8/compare/v15.1.3...v15.1.4) (2024-10-15)
+
+### Bug Fixes
+
+
+##### Tests
+
+* Set a higher rate limit for bots, so the test bot does not get limited because of its UA string. ([b8c9d1](https://github.com/UN-OCHA/iasc8/commit/b8c9d1f73537b4d8ca4011d3847cc7d45c30e794))
+
+### Chores
+
+* Csp config for UNTV ([77c5e6](https://github.com/UN-OCHA/iasc8/commit/77c5e613b46dd074325bb45b7fa3689d025a92af))
+* Fix CS ([b318f0](https://github.com/UN-OCHA/iasc8/commit/b318f09acc68018c350b06f71da70683c65c4f72))
+* Ignore audit warning that doesn't affect us ([650f3e](https://github.com/UN-OCHA/iasc8/commit/650f3e7f3cb087b30e43d77cf8dbac1f8a7d68d9))
+* Update all outdated drupal/* unocha/* drush/* packages. ([b7143e](https://github.com/UN-OCHA/iasc8/commit/b7143e23fb3d3f8f84816285f6a2476a24542708), [e893ce](https://github.com/UN-OCHA/iasc8/commit/e893ce8aecb3a71e3f81bdd7e26a10309ce22865), [917e74](https://github.com/UN-OCHA/iasc8/commit/917e743f1c9373b7b861942732fafffbdb5a42ea), [06f20c](https://github.com/UN-OCHA/iasc8/commit/06f20c4edf293db78440b3ce84b07ab1ec2dd9f7))
+
+##### Deps
+
+* Bump drupal/core-recommended from 10.3.5 to 10.3.6 ([8fe915](https://github.com/UN-OCHA/iasc8/commit/8fe915c6b889f09177718c249c5728f205affc3e))
+* Bump phpoffice/phpspreadsheet from 2.2.2 to 2.3.0 ([880dc9](https://github.com/UN-OCHA/iasc8/commit/880dc96ba1e698a3a86f0827d504dfbf4056611e))
+
 ## [15.1.3](https://github.com/UN-OCHA/iasc8/compare/v15.1.2...v15.1.3) (2024-09-17)
 
 ### Bug Fixes
