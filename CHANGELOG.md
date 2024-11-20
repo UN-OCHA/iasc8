@@ -4,6 +4,13 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.5](https://github.com/UN-OCHA/iasc8/compare/v15.1.4...v15.1.5) (2024-11-18)
+
+### Chores
+
+* Add csp for vimeo iframes ([792f7c](https://github.com/UN-OCHA/iasc8/commit/792f7c475c4345469be3322663e1ddd60ffd09d2))
+* Update all outdated drupal/* unocha/* drush/* packages. ([a19046](https://github.com/UN-OCHA/iasc8/commit/a1904691e124d9996a93a59ea2f7446c2028f610), [f01414](https://github.com/UN-OCHA/iasc8/commit/f014145c94a08c55576d7599aa67ee14c5a15de0), [6b280a](https://github.com/UN-OCHA/iasc8/commit/6b280afa5e242d33c5b829f767985558b35ffaa5), [e555dc](https://github.com/UN-OCHA/iasc8/commit/e555dc4261a9e3ae0ea1e7d93fa495be428f9327), [f32023](https://github.com/UN-OCHA/iasc8/commit/f32023cc8c3fc7af61affdfb511d695b7e64476b))
+
 ## [15.1.4](https://github.com/UN-OCHA/iasc8/compare/v15.1.3...v15.1.4) (2024-10-15)
 
 ### Bug Fixes
