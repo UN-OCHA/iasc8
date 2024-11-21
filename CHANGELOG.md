@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.6](https://github.com/UN-OCHA/iasc8/compare/v15.1.5...v15.1.6) (2024-11-21)
+
+### Chores
+
+* Update all outdated drupal/* unocha/* drush/* packages. ([8cf3ac](https://github.com/UN-OCHA/iasc8/commit/8cf3ac6de2af4a3a7e51ab8fa86e44a04bee9735))
+
 ## [15.1.5](https://github.com/UN-OCHA/iasc8/compare/v15.1.4...v15.1.5) (2024-11-18)
 
 ### Chores
