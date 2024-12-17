@@ -4,6 +4,17 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.7](https://github.com/UN-OCHA/iasc8/compare/v15.1.6...v15.1.7) (2024-12-16)
+
+### Chores
+
+* Add csp config for powerbi ([692fd1](https://github.com/UN-OCHA/iasc8/commit/692fd15d81a26cc9ac503d614d88734df76b09b2))
+* Update all outdated drupal/* unocha/* drush/* packages. ([206d09](https://github.com/UN-OCHA/iasc8/commit/206d094ce8c65aba02cdef00db824cd95e76284c), [4125ac](https://github.com/UN-OCHA/iasc8/commit/4125aca920df6fc79a15bfa1a38bc6e3ed6af7be), [aabee4](https://github.com/UN-OCHA/iasc8/commit/aabee413bacdcd3247a0f8aac64443d4c580f99c))
+
+##### Deps
+
+* Bump nanoid in /html/themes/custom/iasc_common_design ([dfd00f](https://github.com/UN-OCHA/iasc8/commit/dfd00fc2727baf750c8ec1e45f2315a2466147d4))
+
 ## [15.1.6](https://github.com/UN-OCHA/iasc8/compare/v15.1.5...v15.1.6) (2024-11-21)
 
 ### Chores
