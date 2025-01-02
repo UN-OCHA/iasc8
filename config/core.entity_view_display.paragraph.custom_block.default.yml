@@ -37,7 +37,7 @@ content:
       group:
         view_mode: default
         link: false
-      group_content:
+      group_relationship:
         view_mode: default
         link: false
       hero:

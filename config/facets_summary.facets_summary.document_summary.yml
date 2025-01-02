@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - search_api.index.default_solr_index
-    - views.view.iasc_group_content
+    - views.view.iasc_group_relationship
   module:
     - search_api
 id: document_summary
 name: 'Document summary'
-facet_source_id: 'search_api:views_page__iasc_group_content__page_documents'
+facet_source_id: 'search_api:views_page__iasc_group_relationship__page_documents'
 processor_configs:
   hide_when_not_rendered:
     processor_id: hide_when_not_rendered

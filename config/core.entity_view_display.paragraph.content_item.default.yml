@@ -44,7 +44,7 @@ content:
       flagging:
         view_mode: default
         link: false
-      group_content:
+      group_relationship:
         view_mode: default
         link: false
       media:

@@ -13,7 +13,7 @@ dependencies:
     - field.field.node.action_point.field_contact
     - field.field.node.action_point.field_date
     - field.field.node.action_point.field_iasc_audience
-    - field.field.node.action_point.group_content_access
+    - field.field.node.action_point.group_relationship_access
     - field.field.node.action_point.og_group_ref
     - node.type.action_point
   module:
@@ -46,7 +46,7 @@ hidden:
   field_contact: true
   field_date: true
   field_iasc_audience: true
-  group_content_access: true
+  group_relationship_access: true
   langcode: true
   og_group_ref: true
   search_api_excerpt: true
