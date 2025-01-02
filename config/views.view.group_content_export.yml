@@ -11,7 +11,7 @@ dependencies:
     - serialization
     - user
     - views_data_export
-id: group_content_export
+id: group_relationship_export
 label: 'Group Content Export'
 module: views
 description: ''
@@ -320,10 +320,10 @@ display:
           id: gid
           table: group_relationship_field_data
           field: gid
-          relationship: group_content
+          relationship: group_relationship
           group_type: group
           admin_label: ''
-          entity_type: group_content
+          entity_type: group_relationship
           entity_field: gid
           plugin_id: numeric
           operator: '='
@@ -491,17 +491,17 @@ display:
           group_type: group
           admin_label: Content
           required: true
-        group_content:
-          id: group_content
+        group_relationship:
+          id: group_relationship
           table: node_field_data
-          field: group_content
+          field: group_relationship
           relationship: file_to_node
           group_type: group
           admin_label: 'Content group content'
           entity_type: node
-          plugin_id: group_content_to_entity_reverse
+          plugin_id: group_relationship_to_entity_reverse
           required: true
-          group_content_plugins:
+          group_relation_plugins:
             'group_node:action_point': '0'
             'group_node:announcement': '0'
             'group_node:contact': '0'
