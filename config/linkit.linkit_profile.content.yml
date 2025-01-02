@@ -41,7 +41,7 @@ matchers:
       limit: 20
     weight: 0
   86c33064-df3a-44d7-b931-3479ea10b411:
-    id: 'entity:group_content'
+    id: 'entity:group_relationship'
     uuid: 86c33064-df3a-44d7-b931-3479ea10b411
     settings:
       metadata: ''
