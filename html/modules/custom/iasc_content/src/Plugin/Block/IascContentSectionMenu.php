@@ -66,7 +66,7 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
     $parameters = $this->routeMatch->getParameters();
     $needed = FALSE;
 
-    if ($parameters->get('view_id', '') == 'iasc_group_content') {
+    if ($parameters->get('view_id', '') == 'iasc_group_relationship') {
       $needed = TRUE;
       $group_id = $parameters->get('group', '');
     }
@@ -100,7 +100,7 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
             'user',
           ],
           'tags' => [
-            'group_content_list:group:' . $group_id,
+            'group_relationship_list:group:' . $group_id,
           ],
         ],
       ];
