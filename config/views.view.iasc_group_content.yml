@@ -6,7 +6,7 @@ dependencies:
     - search_api.index.default_solr_index
   module:
     - search_api
-id: iasc_group_relationship
+id: iasc_group_content
 label: 'IASC Group Content'
 module: views
 description: ''
