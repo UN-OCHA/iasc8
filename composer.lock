@@ -4197,8 +4197,13 @@
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
                 "GPL-2.0-or-later"
             ],
+            "authors": [
+                {
+                    "name": "Kristiaan Van den Eynde",
+                    "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
                     "role": "Maintainer"
                 },
                 {
