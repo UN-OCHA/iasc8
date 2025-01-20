@@ -28,7 +28,6 @@
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
     },
     "drupal/user_expire": {
-      "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
       "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
     },
     "drupal/username_enumeration_prevention": {
