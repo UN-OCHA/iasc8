@@ -4,6 +4,21 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.8](https://github.com/UN-OCHA/iasc8/compare/v15.1.7...v15.1.8) (2025-01-14)
+
+### Chores
+
+* Bump version of mariadb for local development ([2d64ea](https://github.com/UN-OCHA/iasc8/commit/2d64ea8556ea9f56ed6272899d6a0d1c2cefa27d))
+* Update all outdated drupal/* unocha/* drush/* packages. ([60db71](https://github.com/UN-OCHA/iasc8/commit/60db713dbfa772eca0372d7b24742cfa436165f9), [63aa90](https://github.com/UN-OCHA/iasc8/commit/63aa909170845c5af8db41ec9d6a97c7ea749b93), [9e774c](https://github.com/UN-OCHA/iasc8/commit/9e774cc54231e6955af28cc3d220963b9e9778ce), [a1399c](https://github.com/UN-OCHA/iasc8/commit/a1399c2c0645414bd671a48016273022aab364d6))
+
+##### Deps
+
+* Bump phpoffice/phpspreadsheet from 2.3.2 to 2.3.5 ([b0233e](https://github.com/UN-OCHA/iasc8/commit/b0233e94504854ca9c4227796e088ae57e439ee3))
+
+##### Tests
+
+* Bump the test MariaDB to match what the dev sites will use soon. ([39398c](https://github.com/UN-OCHA/iasc8/commit/39398cf2e659ad2fe7d2cbc5745be1d29dcdcc9a))
+
 ## [15.1.7](https://github.com/UN-OCHA/iasc8/compare/v15.1.6...v15.1.7) (2024-12-16)
 
 ### Chores
