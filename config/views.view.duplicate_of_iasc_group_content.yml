@@ -10,7 +10,7 @@ dependencies:
     - node
 _core:
   default_config_hash: ZSKjHkl45YTbsYHiq_H7py04GDuX95t-GOHAAb8ZFbk
-id: duplicate_of_iasc_group_relationship
+id: duplicate_of_iasc_group_content
 label: 'Duplicate of IASC Group Content'
 module: gnode
 description: 'Lists all of the nodes that have been added to a group.'
