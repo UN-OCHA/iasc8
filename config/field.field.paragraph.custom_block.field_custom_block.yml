@@ -45,8 +45,8 @@ settings:
   group:
     handler: 'default:group'
     handler_settings: {  }
-  group_content:
-    handler: 'default:group_content'
+  group_relationship:
+    handler: 'default:group_relationship'
     handler_settings: {  }
   hero:
     handler: 'default:hero'

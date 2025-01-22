@@ -61,8 +61,8 @@ settings:
   file:
     handler: 'default:file'
     handler_settings: {  }
-  group_content:
-    handler: 'default:group_content'
+  group_relationship:
+    handler: 'default:group_relationship'
     handler_settings: {  }
   media:
     handler: 'default:media'
