@@ -11,7 +11,7 @@ dependencies:
     - serialization
     - user
     - views_data_export
-id: group_relationship_export
+id: group_content_export
 label: 'Group Content Export'
 module: views
 description: ''

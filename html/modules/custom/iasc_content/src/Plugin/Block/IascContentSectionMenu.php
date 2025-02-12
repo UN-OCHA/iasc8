@@ -66,7 +66,7 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
     $parameters = $this->routeMatch->getParameters();
     $needed = FALSE;
 
-    if ($parameters->get('view_id', '') == 'iasc_group_relationship') {
+    if ($parameters->get('view_id', '') == 'iasc_group_content') {
       $needed = TRUE;
       $group_id = $parameters->get('group', '');
     }

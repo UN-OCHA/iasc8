@@ -1085,7 +1085,7 @@ function iasc_content_fix_entities($entity_type, $bundle, $field_name) {
  * Implemtents hook_views_pre_render().
  */
 function iasc_content_views_pre_render(ViewExecutable $view) {
-  if ($view->id() === 'iasc_group_relationship') {
+  if ($view->id() === 'iasc_group_content') {
     $group_id = $view->args[0];
     if ($group_id) {
       if ($group = $group = \Drupal::entityTypeManager()->getStorage('group')->load($group_id)) {
