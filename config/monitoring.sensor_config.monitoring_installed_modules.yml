@@ -27,7 +27,6 @@ settings:
     components: components
     conditional_fields: conditional_fields
     config: config
-    config_filter: config_filter
     config_split: config_split
     contextual: contextual
     csv_serialization: csv_serialization
