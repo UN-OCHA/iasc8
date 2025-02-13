@@ -12,7 +12,7 @@ dependencies:
     - field.field.node.action_point.field_contact
     - field.field.node.action_point.field_date
     - field.field.node.action_point.field_iasc_audience
-    - field.field.node.action_point.group_content_access
+    - field.field.node.action_point.group_relationship_access
     - field.field.node.action_point.og_group_ref
     - node.type.action_point
   module:
@@ -88,7 +88,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  group_content_access:
+  group_relationship_access:
     type: list_default
     label: above
     settings: {  }
