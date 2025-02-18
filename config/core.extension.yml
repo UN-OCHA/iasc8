@@ -121,7 +121,6 @@ module:
   minimal: 1000
 theme:
   stable: 0
-  seven: 0
   common_design: 0
   iasc_common_design: 0
   claro: 0
