@@ -44,6 +44,9 @@ LABEL info.humanitarianresponse.build.date=$BUILD_DATE \
       info.humanitarianresponse.build.vcs-url=$VCS_URL \
       info.humanitarianresponse.build.vcs-ref=$VCS_REF
 
+# Add PHP Intl extension.
+RUN apk add php83-intl
+
 COPY --from=builder /srv/www/config /srv/www/config/
 COPY --from=builder /srv/www/config_dev /srv/www/config_dev/
 COPY --from=builder /srv/www/html /srv/www/html/

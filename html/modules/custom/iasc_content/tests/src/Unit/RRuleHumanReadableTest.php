@@ -49,7 +49,7 @@ class RRuleHumanReadableTest extends UnitTestCase {
   /**
    * Provides test strings.
    */
-  public function providerTests() {
+  protected static function providerTests() {
     $tests = [
       'FREQ=MONTHLY;BYDAY=TU' => [
         'FREQ=MONTHLY;BYDAY=TU',
