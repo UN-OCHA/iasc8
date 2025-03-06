@@ -34,6 +34,7 @@ class RRuleHumanReadableTest extends UnitTestCase {
     $parser = new RRuleHumanReadable($rule);
     $output = $parser->humanReadable([
       'use_intl' => FALSE,
+      'locale' => 'en',
       'explicit_inifite' => TRUE,
       'dtstart' => FALSE,
       'include_start' => FALSE,
