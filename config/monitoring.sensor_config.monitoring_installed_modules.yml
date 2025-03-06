@@ -90,7 +90,6 @@ settings:
     paragraphs_viewmode: paragraphs_viewmode
     path: path
     path_alias: path_alias
-    rdf: rdf
     realname: realname
     redirect: redirect
     rest: rest
@@ -123,7 +122,6 @@ settings:
     user: user
     user_expire: user_expire
     username_enumeration_prevention: username_enumeration_prevention
-    variationcache: variationcache
     views_data_export: views_data_export
     views_ui: views_ui
     viewsreference: viewsreference

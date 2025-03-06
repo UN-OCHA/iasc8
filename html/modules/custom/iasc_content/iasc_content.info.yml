@@ -2,7 +2,7 @@ name: IASC Content tweaks
 type: module
 description: 'IASC Content tweaks.'
 package: IASC
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - group:group
   - paragraphs:paragraphs

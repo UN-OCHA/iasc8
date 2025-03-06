@@ -1,0 +1,13 @@
+diff --git a/paragraphs_modal_edit.info.yml b/paragraphs_modal_edit.info.yml
+index 6d60c5512978670fc215fb4d6bd1582eec6f2a41..52f493b23624a1a582f18701573b88f473280d7a 100644
+--- a/paragraphs_modal_edit.info.yml
++++ b/paragraphs_modal_edit.info.yml
+@@ -2,7 +2,7 @@ type: module
+ name: Paragraphs Modal Edit
+ package: paragraphs
+ description: Functionality for the editing paragraphs in a Drupal modal/dialog
+-core_version_requirement: ^8 || ^9 || ^10
++core_version_requirement: ^8 || ^9 || ^10 || ^11
+ dependencies:
+   - paragraphs:paragraphs
+   - paragraphs_edit:paragraphs_edit

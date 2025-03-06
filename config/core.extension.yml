@@ -75,7 +75,6 @@ module:
   paragraphs_viewmode: 0
   path: 0
   path_alias: 0
-  rdf: 0
   realname: 0
   redirect: 0
   rest: 0
@@ -107,7 +106,6 @@ module:
   user: 0
   user_expire: 0
   username_enumeration_prevention: 0
-  variationcache: 0
   views_data_export: 0
   viewsreference: 0
   webform: 0

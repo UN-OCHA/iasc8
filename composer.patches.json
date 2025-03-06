@@ -9,16 +9,29 @@
       "Js optimize error https://www.drupal.org/project/drupal/issues/3416508": "PATCHES/core_js_optimizer.patch",
       "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
     },
+    "drupal/dev_mode": {
+      "D11 compatibility - #3429839": "PATCHES/dev_mode-D11-compatibility-3429839.patch"
+    },
     "drupal/dream_block_manager": {
       "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
     },
     "drupal/facets" : {
       "https://www.drupal.org/project/facets/issues/3466886": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch"
     },
+    "drupal/maintenance200": {
+      "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
+    },
+    "drupal/node_view_permissions": {
+      "D11 compatibility - #3433611": "PATCHES/node_view_permissions-D11-compatibility-3433611.patch"
+    },
     "drupal/paragraphs": {
-      "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-15131744": "https://www.drupal.org/files/issues/2023-06-30/2868252-paragraph-summary-alter-42.patch"
+      "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252": "https://www.drupal.org/files/issues/2025-03-03/2868252-paragraph-summary-alter-51.patch"
+    },
+    "drupal/paragraphs_modal_edit": {
+      "D11 compatibility - #3483762": "PATCHES/paragraphs_modal_edit-D11-compatibility-3483762.patch"
     },
     "drupal/paragraphs_viewmode": {
+      "D11 compatibility - #3433848": "PATCHES/paragraphs_viewmode-D11-compatibility-3433848.patch",
       "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
     },
     "drupal/search_api": {
@@ -26,6 +39,9 @@
     },
     "drupal/search_api_attachments": {
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
+    },
+    "drupal/social_auth": {
+      "Type Error - #3496656": "PATCHES/social_auth-type-error-3496656.patch"
     },
     "drupal/user_expire": {
       "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
