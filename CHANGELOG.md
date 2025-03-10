@@ -4,6 +4,21 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.10](https://github.com/UN-OCHA/iasc8/compare/v15.1.9...v15.1.10) (2025-02-20)
+
+### Chores
+
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([21bba1](https://github.com/UN-OCHA/iasc8/commit/21bba1690c5fb332cdca8d296af6809c4de2d268))
+
+## [15.1.9](https://github.com/UN-OCHA/iasc8/compare/v15.1.8...v15.1.9) (2025-02-18)
+
+### Chores
+
+* Remove config_filter module ([5c1fed](https://github.com/UN-OCHA/iasc8/commit/5c1fedc4e2a28ea9bffe9d2ba9320cb562cd440b))
+* Remove patch and update user_expire module ([c3dd35](https://github.com/UN-OCHA/iasc8/commit/c3dd35d484afe2f660084ae9ef9409a59365a459))
+* Remove unused theme ([f87f8b](https://github.com/UN-OCHA/iasc8/commit/f87f8baadcfbe69c2678e7b2459bb5f431b2266b))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([9b5d55](https://github.com/UN-OCHA/iasc8/commit/9b5d55a3c23da905c982d69dee00eb1004a4d832), [c95528](https://github.com/UN-OCHA/iasc8/commit/c955285e44aba198fc5564cb6bff03442596cc3e), [537805](https://github.com/UN-OCHA/iasc8/commit/537805ea9366545ed9d1202c2df74082a4056427), [9a5db7](https://github.com/UN-OCHA/iasc8/commit/9a5db71eb3ec02bfed704f30cf65d036882e2304))
+
 ## [15.1.8](https://github.com/UN-OCHA/iasc8/compare/v15.1.7...v15.1.8) (2025-01-14)
 
 ### Chores
