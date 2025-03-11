@@ -7,7 +7,7 @@ index 7cc6d56183e..cde29aa832c 100644
        [$view_id, $display_id] = explode('.', $pair);
        $view = $this->viewStorage->load($view_id);
 +      if (empty($view)) {
-+        \Drupal::logger('routesubscriber')->info('View is null for @view', ['@view' => $view_id]);
++        \Drupal::logger('routesubscriber')->error('View is null for @view', ['@view' => $view_id]);
 +      }
        // @todo This should have an executable factory injected.
        if (($view = $view->getExecutable()) && $view instanceof ViewExecutable) {
