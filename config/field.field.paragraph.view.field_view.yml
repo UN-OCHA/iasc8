@@ -45,7 +45,7 @@ settings:
     group_members: '0'
     group_nodes: '0'
     iasc_content: '0'
-    iasc_group_relationship: '0'
+    iasc_group_content: '0'
     iasc_tasks: '0'
     media: '0'
     media_library: '0'
