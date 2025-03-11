@@ -1,0 +1,14 @@
+diff --git a/core/modules/views/src/EventSubscriber/RouteSubscriber.php b/core/modules/views/src/EventSubscriber/RouteSubscriber.php
+index 7cc6d56183e..cde29aa832c 100644
+--- a/core/modules/views/src/EventSubscriber/RouteSubscriber.php
++++ b/core/modules/views/src/EventSubscriber/RouteSubscriber.php
+@@ -113,6 +113,9 @@ public function routes() {
+     foreach ($this->getViewsDisplayIDsWithRoute() as $pair) {
+       [$view_id, $display_id] = explode('.', $pair);
+       $view = $this->viewStorage->load($view_id);
++      if (empty($view)) {
++        \Drupal::logger('routesubscriber')->info('View is null for @view', ['@view' => $view_id]);
++      }
+       // @todo This should have an executable factory injected.
+       if (($view = $view->getExecutable()) && $view instanceof ViewExecutable) {
+         if ($view->setDisplay($display_id) && $display = $view->displayHandlers->get($display_id)) {
