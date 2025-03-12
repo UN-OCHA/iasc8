@@ -5,8 +5,8 @@ dependencies:
   module:
     - node
     - options
-id: node.group_relationship_access
-field_name: group_relationship_access
+id: node.group_content_access
+field_name: group_content_access
 entity_type: node
 type: list_integer
 settings:
