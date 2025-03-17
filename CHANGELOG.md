@@ -4,6 +4,17 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.11](https://github.com/UN-OCHA/iasc8/compare/v15.1.10...v15.1.11) (2025-03-17)
+
+### Chores
+
+* Fix typo ([9e8d30](https://github.com/UN-OCHA/iasc8/commit/9e8d30810cc581457c4c8bb13ac7119ce43fcdac))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([8a21cb](https://github.com/UN-OCHA/iasc8/commit/8a21cb8f6ad8b5d7c94af3aebeeb3dfa73f37b80), [cb30b0](https://github.com/UN-OCHA/iasc8/commit/cb30b0cba1de1c3cca7d11f83b3a5c3ce2f31b41), [32e587](https://github.com/UN-OCHA/iasc8/commit/32e587c4266fb814ba0ded51425bed2d24e723d4))
+
+##### Deps-dev
+
+* Bump axios in /html/themes/custom/iasc_common_design ([2c7a3f](https://github.com/UN-OCHA/iasc8/commit/2c7a3fbec2163f3532d96aee5cbb9bf9aef6cbdd))
+
 ## [15.1.10](https://github.com/UN-OCHA/iasc8/compare/v15.1.9...v15.1.10) (2025-02-20)
 
 ### Chores
