@@ -100,7 +100,7 @@ class IascContentSectionMenu extends BlockBase implements ContainerFactoryPlugin
             'user',
           ],
           'tags' => [
-            'group_content_list:group:' . $group_id,
+            'group_relationship_list:group:' . $group_id,
           ],
         ],
       ];

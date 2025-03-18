@@ -4,6 +4,7 @@
       "Cron fails on amazon_ses when not configured": "PATCHES/amazon_ses-cron-queue-3417090-8.patch"
     },
     "drupal/core": {
+      "Debugging": "PATCHES/routesubscriber-debug.patch",
       "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
       "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch",
       "Js optimize error https://www.drupal.org/project/drupal/issues/3416508": "PATCHES/core_js_optimizer.patch",

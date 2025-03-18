@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.group_content_access
+    - field.storage.node.group_relationship_access
     - node.type.action_point
   module:
     - options
-id: node.action_point.group_content_access
-field_name: group_content_access
+id: node.action_point.group_relationship_access
+field_name: group_relationship_access
 entity_type: node
 bundle: action_point
 label: 'Group content visibility'

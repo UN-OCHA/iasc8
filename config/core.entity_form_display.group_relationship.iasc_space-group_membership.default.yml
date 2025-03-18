@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_content.iasc_space-group_membership.group_roles
-    - group.content_type.iasc_space-group_membership
+    - field.field.group_relationship.iasc_space-group_membership.group_roles
+    - group.relationship_type.iasc_space-group_membership
   module:
     - path
-id: group_content.iasc_space-group_membership.default
-targetEntityType: group_content
+id: group_relationship.iasc_space-group_membership.default
+targetEntityType: group_relationship
 bundle: iasc_space-group_membership
 mode: default
 content:
