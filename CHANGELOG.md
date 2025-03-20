@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.12](https://github.com/UN-OCHA/iasc8/compare/v15.1.11...v15.1.12) (2025-03-20)
+
+### Chores
+
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([446dd6](https://github.com/UN-OCHA/iasc8/commit/446dd6dcd6fa65cc238aad966b2415e3e0fe307a))
+
 ## [15.1.11](https://github.com/UN-OCHA/iasc8/compare/v15.1.10...v15.1.11) (2025-03-17)
 
 ### Chores
