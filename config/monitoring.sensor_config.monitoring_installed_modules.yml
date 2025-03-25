@@ -1,4 +1,4 @@
-uuid: c716f7bf-feb8-43b1-a90d-2623327d7d88
+uuid: null
 langcode: en
 status: true
 dependencies: {  }
@@ -35,7 +35,6 @@ settings:
     date_recur_modular: date_recur_modular
     datetime: datetime
     datetime_range: datetime_range
-    dblog: dblog
     diff: diff
     dynamic_entity_reference: dynamic_entity_reference
     dynamic_page_cache: dynamic_page_cache
@@ -44,7 +43,6 @@ settings:
     entity_reference_revisions: entity_reference_revisions
     entityqueue: entityqueue
     environment_indicator: environment_indicator
-    environment_indicator_ui: environment_indicator_ui
     facets: facets
     facets_pretty_paths: facets_pretty_paths
     facets_summary: facets_summary
@@ -107,7 +105,6 @@ settings:
     social_auth: social_auth
     social_auth_hid: social_auth_hid
     spamspan: spamspan
-    stage_file_proxy: stage_file_proxy
     syslog: syslog
     system: system
     tablefield: tablefield
@@ -125,7 +122,6 @@ settings:
     username_enumeration_prevention: username_enumeration_prevention
     variationcache: variationcache
     views_data_export: views_data_export
-    views_ui: views_ui
     viewsreference: viewsreference
     webform: webform
     webform_submission_log: webform_submission_log
