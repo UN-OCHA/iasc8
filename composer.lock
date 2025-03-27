@@ -4,23 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bb7a2bad2eaa54d1f03847613847dfc",
+    "content-hash": "c908e71b08e050eeae3b02cfb24a205b",
     "packages": [
-        {
-            "name": "algolia/places",
-            "version": "1.19.0",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/places.js/-/places.js-1.19.0.tgz"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "algolia.places"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.2.0",
@@ -350,21 +335,6 @@
             "time": "2024-06-06T17:36:37+00:00"
         },
         {
-            "name": "choices/choices",
-            "version": "9.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/Choices-js/Choices/archive/refs/tags/v9.0.1.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "choices"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
             "name": "clue/stream-filter",
             "version": "v1.7.0",
             "source": {
@@ -429,21 +399,6 @@
                 }
             ],
             "time": "2023-12-20T15:40:13+00:00"
-        },
-        {
-            "name": "codemirror/codemirror",
-            "version": "5.65.12",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/components/codemirror/archive/refs/tags/5.65.12.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "codemirror"
-            },
-            "license": [
-                "MIT"
-            ]
         },
         {
             "name": "commerceguys/addressing",
@@ -3305,6 +3260,60 @@
             }
         },
         {
+            "name": "drupal/externalauth",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/externalauth.git",
+                "reference": "2.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/externalauth-2.0.7.zip",
+                "reference": "2.0.7",
+                "shasum": "93c2b15f21172f931bb81cc365c828c12be377c3"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.7",
+                    "datestamp": "1735897906",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Decabooter",
+                    "homepage": "https://www.drupal.org/u/svendecabooter",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "snufkin",
+                    "homepage": "https://www.drupal.org/user/58645"
+                },
+                {
+                    "name": "svendecabooter",
+                    "homepage": "https://www.drupal.org/user/35369"
+                }
+            ],
+            "description": "Helper module to authenticate users using an external site / service and storing identification details",
+            "homepage": "https://drupal.org/project/externalauth",
+            "support": {
+                "source": "https://git.drupalcode.org/project/externalauth",
+                "issues": "https://www.drupal.org/project/issues/externalauth"
+            }
+        },
+        {
             "name": "drupal/facets",
             "version": "2.0.9",
             "source": {
@@ -4246,6 +4255,77 @@
             }
         },
         {
+            "name": "drupal/key",
+            "version": "1.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/key.git",
+                "reference": "8.x-1.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/key-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "ee8f7b8f8babd381f1e4423dccede94b4eb5985c"
+            },
+            "require": {
+                "drupal/core": ">=8.9 <12"
+            },
+            "require-dev": {
+                "drush/drush": ">=9"
+            },
+            "suggest": {
+                "drush/drush": ">=11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.19",
+                    "datestamp": "1720053341",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cellar door",
+                    "homepage": "https://www.drupal.org/user/658076"
+                },
+                {
+                    "name": "crashtest_",
+                    "homepage": "https://www.drupal.org/user/261457"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Provides the ability to manage site-wide keys",
+            "homepage": "http://drupal.org/project/key",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/key",
+                "issues": "http://drupal.org/project/key"
+            }
+        },
+        {
             "name": "drupal/linkit",
             "version": "6.1.6",
             "source": {
@@ -4399,7 +4479,7 @@
                 "shasum": "fc8ea60619b6b4682bade340e13fb4565d3a7e0c"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11 || ^12"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
@@ -4682,6 +4762,149 @@
             "homepage": "http://drupal.org/project/node_view_permissions",
             "support": {
                 "source": "https://git.drupalcode.org/project/node_view_permissions"
+            }
+        },
+        {
+            "name": "drupal/openid_connect",
+            "version": "3.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/openid_connect.git",
+                "reference": "3.0.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha6.zip",
+                "reference": "3.0.0-alpha6",
+                "shasum": "ae9b7a24d8ad2534756e5b2689fad6688e6b3cb0"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11",
+                "drupal/externalauth": "^2.0",
+                "ext-json": "*",
+                "php": ">=8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha6",
+                    "datestamp": "1739445531",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jcnventura",
+                    "homepage": "https://www.drupal.org/user/122464"
+                },
+                {
+                    "name": "mstrelan",
+                    "homepage": "https://www.drupal.org/user/314289"
+                },
+                {
+                    "name": "pfrilling",
+                    "homepage": "https://www.drupal.org/user/169695"
+                },
+                {
+                    "name": "pjcdawkins",
+                    "homepage": "https://www.drupal.org/user/1025236"
+                },
+                {
+                    "name": "sanduhrs",
+                    "homepage": "https://www.drupal.org/user/28074"
+                }
+            ],
+            "description": "A pluggable client implementation for the OpenID Connect protocol.",
+            "homepage": "https://www.drupal.org/project/openid_connect",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/openid_connect",
+                "issues": "https://www.drupal.org/project/issues/openid_connect"
+            }
+        },
+        {
+            "name": "drupal/openid_connect_windows_aad",
+            "version": "2.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/openid_connect_windows_aad.git",
+                "reference": "2.0.0-beta9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/openid_connect_windows_aad-2.0.0-beta9.zip",
+                "reference": "2.0.0-beta9",
+                "shasum": "77bc3ba2272876b1890adce22396c9c5638459c0"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/key": "^1.0",
+                "drupal/openid_connect": "^3.0",
+                "lcobucci/jwt": "^4.3.0 || ^5.3.0",
+                "php": ">=8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta9",
+                    "datestamp": "1740753682",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "acrazyanimal",
+                    "homepage": "https://www.drupal.org/user/696648"
+                },
+                {
+                    "name": "ajaynimbolkar",
+                    "homepage": "https://www.drupal.org/user/2876727"
+                },
+                {
+                    "name": "batigolix",
+                    "homepage": "https://www.drupal.org/user/22175"
+                },
+                {
+                    "name": "fabianderijk",
+                    "homepage": "https://www.drupal.org/user/278745"
+                },
+                {
+                    "name": "tomvv",
+                    "homepage": "https://www.drupal.org/user/2748021"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "A CTools plugin that adds a Windows Azure AD client to OpenID Connect.",
+            "homepage": "https://www.drupal.org/project/openid_connect_windows_aad",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/openid_connect_windows_aad",
+                "issues": "https://www.drupal.org/project/issues/openid_connect_windows_aad"
             }
         },
         {
@@ -7664,184 +7887,77 @@
             }
         },
         {
-            "name": "jquery/chosen",
-            "version": "1.8.7",
+            "name": "lcobucci/jwt",
+            "version": "5.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "a835af59b030d3f2967725697cf88300f579088e"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip"
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/a835af59b030d3f2967725697cf88300f579088e",
+                "reference": "a835af59b030d3f2967725697cf88300f579088e",
+                "shasum": ""
             },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.chosen"
+            "require": {
+                "ext-openssl": "*",
+                "ext-sodium": "*",
+                "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+                "psr/clock": "^1.0"
             },
+            "require-dev": {
+                "infection/infection": "^0.29",
+                "lcobucci/clock": "^3.2",
+                "lcobucci/coding-standard": "^11.0",
+                "phpbench/phpbench": "^1.2",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.10.7",
+                "phpstan/phpstan-deprecation-rules": "^1.1.3",
+                "phpstan/phpstan-phpunit": "^1.3.10",
+                "phpstan/phpstan-strict-rules": "^1.5.0",
+                "phpunit/phpunit": "^11.1"
+            },
+            "suggest": {
+                "lcobucci/clock": ">= 3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/geocomplete",
-            "version": "1.7.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/ubilabs/geocomplete/archive/refs/tags/1.7.0.zip"
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Cobucci",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "support": {
+                "issues": "https://github.com/lcobucci/jwt/issues",
+                "source": "https://github.com/lcobucci/jwt/tree/5.5.0"
             },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.geocomplete"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/hotkeys",
-            "version": "0.2.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/jeresig/jquery.hotkeys/archive/refs/tags/0.2.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.hotkeys"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/icheck",
-            "version": "1.0.2 ",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drgullin/icheck/zipball/8a6eb37bd7dab1e843c1b630c91c6398ff409d05"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.icheck"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/image-picker",
-            "version": "0.3.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/rvera/image-picker/archive/refs/tags/0.3.1.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.image-picker"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/inputmask",
-            "version": "5.0.8",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/refs/tags/5.0.8.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.inputmask"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/intl-tel-input",
-            "version": "17.0.19",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/jackocnr/intl-tel-input/archive/refs/tags/v17.0.19.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.intl-tel-input"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/rateit",
-            "version": "1.1.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/gjunge/rateit.js/archive/refs/tags/1.1.5.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.rateit"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/select2",
-            "version": "4.0.13",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/select2/select2/archive/refs/tags/4.0.13.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.select2"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/textcounter",
-            "version": "0.9.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/refs/tags/0.9.1.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.textcounter"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/timepicker",
-            "version": "1.14.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/jonthornton/jquery-timepicker/archive/refs/tags/1.14.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.timepicker"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "jquery/toggles",
-            "version": "4.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/simontabor/jquery-toggles/archive/refs/tags/v4.0.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "jquery.toggles"
-            },
-            "license": [
-                "MIT"
-            ]
+            "funding": [
+                {
+                    "url": "https://github.com/lcobucci",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/lcobucci",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2025-01-26T21:29:45+00:00"
         },
         {
             "name": "league/container",
@@ -9445,36 +9561,6 @@
             "time": "2021-09-22T16:57:06+00:00"
         },
         {
-            "name": "popperjs/popperjs",
-            "version": "2.11.6",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "popperjs"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "progress-tracker/progress-tracker",
-            "version": "2.0.7",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/NigelOToole/progress-tracker/archive/refs/tags/2.0.7.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "progress-tracker"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -9522,6 +9608,54 @@
                 "source": "https://github.com/php-fig/cache/tree/3.0.0"
             },
             "time": "2021-02-03T23:26:27+00:00"
+        },
+        {
+            "name": "psr/clock",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/clock.git",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/clock/zipball/e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Clock\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for reading the clock.",
+            "homepage": "https://github.com/php-fig/clock",
+            "keywords": [
+                "clock",
+                "now",
+                "psr",
+                "psr-20",
+                "time"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/clock/issues",
+                "source": "https://github.com/php-fig/clock/tree/1.0.0"
+            },
+            "time": "2022-11-25T14:36:26+00:00"
         },
         {
             "name": "psr/container",
@@ -10124,36 +10258,6 @@
                 }
             ],
             "time": "2024-03-02T06:30:58+00:00"
-        },
-        {
-            "name": "signature_pad/signature_pad",
-            "version": "2.3.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/szimek/signature_pad/archive/refs/tags/v2.3.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "signature_pad"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "svg-pan-zoom/svg-pan-zoom",
-            "version": "3.6.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/ariutta/svg-pan-zoom/archive/refs/tags/3.6.1.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "svg-pan-zoom"
-            },
-            "license": [
-                "BSD-2-Clause"
-            ]
         },
         {
             "name": "symfony/console",
@@ -12719,36 +12823,6 @@
             "time": "2025-01-07T09:44:41+00:00"
         },
         {
-            "name": "tabby/tabby",
-            "version": "12.0.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/cferdinandi/tabby/archive/refs/tags/v12.0.3.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "tabby"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "tippyjs/tippyjs",
-            "version": "6.3.7",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "tippyjs"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
             "name": "twig/twig",
             "version": "v3.19.0",
             "source": {
@@ -12976,6 +13050,49 @@
                 "source": "https://github.com/UN-OCHA/gtm_barebones/tree/1.1.3"
             },
             "time": "2024-07-17T12:52:34+00:00"
+        },
+        {
+            "name": "unocha/ocha_entraid",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UN-OCHA/ocha_entraid.git",
+                "reference": "45995d46194af782e0eed31ad75fb35886a646a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_entraid/zipball/45995d46194af782e0eed31ad75fb35886a646a7",
+                "reference": "45995d46194af782e0eed31ad75fb35886a646a7",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^10",
+                "drupal/honeypot": "^2",
+                "drupal/openid_connect": "^3.0",
+                "drupal/openid_connect_windows_aad": "^2.0@beta",
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "UNOCHA"
+                }
+            ],
+            "description": "OCHA Entra ID module",
+            "support": {
+                "issues": "https://github.com/UN-OCHA/ocha_entraid/issues",
+                "source": "https://github.com/UN-OCHA/ocha_entraid/tree/v1.0.1"
+            },
+            "time": "2025-01-10T03:21:27+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -19704,12 +19821,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "drupal/aws": 20,
         "drupal/components": 10,
         "drupal/conditional_fields": 15,
-        "drupal/config_split": 10,
         "drupal/diff": 5,
         "drupal/field_permissions": 5,
         "drupal/file_entity": 10,
@@ -19728,6 +19844,6 @@
     "platform": {
         "php": ">=8.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

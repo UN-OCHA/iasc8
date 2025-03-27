@@ -59,6 +59,8 @@
         "drupal/media_entity_file_replace": "^1.0",
         "drupal/memcache": "^2.4",
         "drupal/node_view_permissions": "^1.4",
+        "drupal/openid_connect": "^3",
+        "drupal/openid_connect_windows_aad": "^2",
         "drupal/paragraphs": "^1.8",
         "drupal/paragraphs_edit": "^3",
         "drupal/paragraphs_modal_edit": "^1.0@alpha",
@@ -99,6 +101,7 @@
         "unocha/common_design": "^9",
         "unocha/file_checker": "dev-8.x-1.x",
         "unocha/gtm_barebones": "^1.0",
+        "unocha/ocha_entraid": "^1",
         "unocha/ocha_integrations": "^2",
         "unocha/ocha_monitoring": "^1.0",
         "unocha/ocha_search": "^1.0",
@@ -125,7 +128,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "bin-dir": "vendor/bin/",
