@@ -61,9 +61,6 @@ settings:
   file:
     handler: 'default:file'
     handler_settings: {  }
-  group_content:
-    handler: 'default:group_content'
-    handler_settings: {  }
   media:
     handler: 'default:media'
     handler_settings: {  }
@@ -105,5 +102,8 @@ settings:
     handler_settings: {  }
   monitoring_sensor_result:
     handler: 'default:monitoring_sensor_result'
+    handler_settings: {  }
+  group_relationship:
+    handler: 'default:group_relationship'
     handler_settings: {  }
 field_type: dynamic_entity_reference
