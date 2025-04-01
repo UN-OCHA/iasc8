@@ -50,6 +50,7 @@ function iasc_content_form_alter(&$form, &$form_state, $form_id) {
  */
 function iasc_content_space_sidebar_defaults($id) {
   $group = \Drupal::entityTypeManager()->getStorage('group')->load($id);
+  assert($group instanceof Group);
   $current = $group->get('field_sidebar')->getValue();
 
   // Bail out if we already have some blocks.
@@ -113,6 +114,7 @@ function iasc_content_space_sidebar_defaults($id) {
  */
 function iasc_content_space_content_defaults($id) {
   $group = \Drupal::entityTypeManager()->getStorage('group')->load($id);
+  assert($group instanceof Group);
   $current = $group->get('field_content')->getValue();
 
   // Bail out if we already have some blocks.
@@ -317,21 +319,21 @@ function iasc_content_preprocess_paragraph_iasc_space_section_menu(&$vars) {
  */
 function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $account) {
   // Only check view mode for anonymous users.
-  if ($node->isPublished() && isset($node->group_content_access) && $op === 'view') {
+  if ($node->isPublished() && isset($node->group_relationship_access) && $op === 'view') {
     // Check group settings.
-    if ($node->group_content_access->value == 0) {
+    if ($node->group_relationship_access->value == 0) {
       return AccessResult::neutral();
     }
 
     // Allow access to nodes marked as being public.
-    if ($node->group_content_access->value == 1) {
+    if ($node->group_relationship_access->value == 1) {
       return AccessResult::allowed();
     }
 
     // Check membership for private content.
-    if ($node->group_content_access->value == 2) {
-      foreach (GroupRelationship::loadByEntity($node) as $group_content) {
-        if ($group_content->getGroup()->getMember($account)) {
+    if ($node->group_relationship_access->value == 2) {
+      foreach (GroupRelationship::loadByEntity($node) as $group_relationship) {
+        if ($group_relationship->getGroup()->getMember($account)) {
           return AccessResult::allowed();
         }
       }
@@ -368,8 +370,8 @@ function iasc_content_node_access(NodeInterface $node, $op, AccountInterface $ac
 
     // Check Member only access.
     if ($node->field_section_audience->value == 'member') {
-      foreach (GroupRelationship::loadByEntity($node) as $group_content) {
-        if ($group_content->getGroup()->getMember($account)) {
+      foreach (GroupRelationship::loadByEntity($node) as $group_relationship) {
+        if ($group_relationship->getGroup()->getMember($account)) {
           return AccessResult::allowed();
         }
       }
@@ -525,7 +527,7 @@ function iasc_content_file_field_to_media() {
  * @param string $alt
  *   The image alt text.
  *
- * @return \Drupal\media_entity\Entity\Media
+ * @return \Drupal\media\Entity\Media
  *   The media entity.
  *
  * @see https://chromatichq.com/blog/migrating-drupal-file-fields-media-entities-without-migrate-module
@@ -595,6 +597,7 @@ function iasc_content_membership_position_to_list() {
     ->loadMultiple($ids);
 
   foreach ($entities as $entity) {
+    assert($entity instanceof Paragraph);
     $entity->field_member_position->value = strtolower($entity->field_position->value);
     $entity->save();
   }
@@ -850,7 +853,7 @@ function iasc_content_node_field_group_form_alter(&$form, FormStateInterface $fo
     // Prefill dropdown.
     if ($form_state->getFormObject()->getEntity()) {
       $node = $form_state->getFormObject()->getEntity();
-      $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+      $storage = \Drupal::entityTypeManager()->getStorage('group_relationship');
       $activeGroupListEntity = $storage->loadByEntity($node);
       $gids_existing = [];
       foreach ($activeGroupListEntity as $groupContent) {
@@ -912,7 +915,7 @@ function iasc_content_node_field_group_edit_custom_callback_group($form, FormSta
   $gnodes_existing = [];
 
   // Loads all groups with a relation to the node.
-  $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+  $storage = \Drupal::entityTypeManager()->getStorage('group_relationship');
   $activeGroupListEntity = $storage->loadByEntity($node);
   foreach ($activeGroupListEntity as $groupContent) {
     $gids_existing[$groupContent->getGroup()->id()] = $groupContent->getGroup()->id();
@@ -1112,18 +1115,18 @@ function iasc_content_views_pre_build(ViewExecutable $view) {
 }
 
 /**
- * Implements hook_group_content_insert().
+ * Implements hook_group_relationship_insert().
  */
-function iasc_content_group_content_insert(GroupRelationship $entity) {
-  iasc_content_group_content_update($entity);
+function iasc_content_group_relationship_insert(GroupRelationship $entity) {
+  iasc_content_group_relationship_update($entity);
 }
 
 /**
- * Implements hook_group_content_insert().
+ * Implements hook_group_relationship_insert().
  */
-function iasc_content_group_content_update(GroupRelationship $entity) {
-  $group_content_type = $entity->getRelationshipType();
-  if ($group_content_type->getPluginId() !== 'group_node:announcement') {
+function iasc_content_group_relationship_update(GroupRelationship $entity) {
+  $group_relationship_type = $entity->getRelationshipType();
+  if ($group_relationship_type->getPluginId() !== 'group_node:announcement') {
     return;
   }
 
@@ -1144,11 +1147,11 @@ function iasc_content_group_content_update(GroupRelationship $entity) {
 }
 
 /**
- * Implements hook_group_content_delete().
+ * Implements hook_group_relationship_delete().
  */
-function iasc_content_group_content_delete(GroupRelationship $entity) {
-  $group_content_type = $entity->getRelationshipType();
-  if ($group_content_type->getPluginId() !== 'group_node:announcement') {
+function iasc_content_group_relationship_delete(GroupRelationship $entity) {
+  $group_relationship_type = $entity->getRelationshipType();
+  if ($group_relationship_type->getPluginId() !== 'group_node:announcement') {
     return;
   }
 
@@ -1204,7 +1207,6 @@ function iasc_content_preprocess_node(&$vars) {
     return;
   }
 
-  /** @var \Drupal\node\Entity\Node $node */
   if (isset($node->original_nid)) {
     // Restore original nid and url.
     $node->nid = $node->original_nid;
@@ -1219,7 +1221,7 @@ function iasc_content_preprocess_node(&$vars) {
   }
 
   $vars['is_archived'] = FALSE;
-  $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+  $storage = \Drupal::entityTypeManager()->getStorage('group_relationship');
   $activeGroupListEntity = $storage->loadByEntity($node);
 
   // Not a group node.
