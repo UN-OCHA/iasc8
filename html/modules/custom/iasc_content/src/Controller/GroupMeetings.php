@@ -241,7 +241,7 @@ class GroupMeetings extends ControllerBase {
     // Execute the search.
     $results = $query->execute();
 
-    // Extratc Ids.
+    // Extract Ids.
     $ids = [];
     foreach ($results as $item) {
       $data = explode(':', $item->getId());
@@ -256,7 +256,7 @@ class GroupMeetings extends ControllerBase {
       $meetings = [];
       $cache_tags = ['group:' . $group->id()];
 
-      /** @var \Drupal\Node\Entity\Node $event */
+      /** @var \Drupal\node\Entity\Node $event */
       foreach ($events as $event) {
         foreach ($event->field_oa_date as $date_item) {
           foreach ($this->getPastReccurrences($date_item, $past_end->getTimestamp()) as $date) {

@@ -4,6 +4,34 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.1.13](https://github.com/UN-OCHA/iasc8/compare/v15.1.12...v15.1.13) (2025-04-01)
+
+### Bug Fixes
+
+* Remove group related facet blocks ([612525](https://github.com/UN-OCHA/iasc8/commit/6125258e6c84a7333505f9806ea448e4362e1a71))
+
+### Chores
+
+* Remove more blocking config ([e46132](https://github.com/UN-OCHA/iasc8/commit/e461325a5d490f171c1a4b6ed9864e467c102d33))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([3b86d6](https://github.com/UN-OCHA/iasc8/commit/3b86d6c1eb49a6a27c8362af2b5cf5002f8fe06b))
+
+## [15.1.12](https://github.com/UN-OCHA/iasc8/compare/v15.1.11...v15.1.12) (2025-03-20)
+
+### Chores
+
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([446dd6](https://github.com/UN-OCHA/iasc8/commit/446dd6dcd6fa65cc238aad966b2415e3e0fe307a))
+
+## [15.1.11](https://github.com/UN-OCHA/iasc8/compare/v15.1.10...v15.1.11) (2025-03-17)
+
+### Chores
+
+* Fix typo ([9e8d30](https://github.com/UN-OCHA/iasc8/commit/9e8d30810cc581457c4c8bb13ac7119ce43fcdac))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([8a21cb](https://github.com/UN-OCHA/iasc8/commit/8a21cb8f6ad8b5d7c94af3aebeeb3dfa73f37b80), [cb30b0](https://github.com/UN-OCHA/iasc8/commit/cb30b0cba1de1c3cca7d11f83b3a5c3ce2f31b41), [32e587](https://github.com/UN-OCHA/iasc8/commit/32e587c4266fb814ba0ded51425bed2d24e723d4))
+
+##### Deps-dev
+
+* Bump axios in /html/themes/custom/iasc_common_design ([2c7a3f](https://github.com/UN-OCHA/iasc8/commit/2c7a3fbec2163f3532d96aee5cbb9bf9aef6cbdd))
+
 ## [15.1.10](https://github.com/UN-OCHA/iasc8/compare/v15.1.9...v15.1.10) (2025-02-20)
 
 ### Chores
