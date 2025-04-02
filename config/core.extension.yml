@@ -93,6 +93,8 @@ module:
   select_or_other: 0
   serialization: 0
   shortcut: 0
+  social_api: 0
+  social_auth: 0
   spamspan: 0
   syslog: 0
   system: 0
