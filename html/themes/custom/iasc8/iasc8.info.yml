@@ -13,4 +13,4 @@ regions:
   sidebar_second: Second sidebar
   footer: Footer
 
-core_version_requirement: 10
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,29 @@
+diff --git a/paragraphs_viewmode.info.yml b/paragraphs_viewmode.info.yml
+index c1d526c9bb5462cb08c1717c05056a4c7a15f902..982eff32adce8dfb83beed4812aa6c6cd3188911 100644
+--- a/paragraphs_viewmode.info.yml
++++ b/paragraphs_viewmode.info.yml
+@@ -1,7 +1,7 @@
+ name: Paragraphs View Modes
+ type: module
+ description: Allows you to select the paragraph view mode on a per paragraph basis.
+-core_version_requirement: ^8.8 || ^9 || ^10
++core_version_requirement: ^10.1 || ^11
+ package: Paragraphs
+ dependencies:
+   - paragraphs:paragraphs
+diff --git a/tests/src/Functional/LoadTest.php b/tests/src/Functional/LoadTest.php
+index 2151ff1841ca280e4cd71a4982efca280293f826..345e0609ecee1276baab8ebab96a9e6607b85723 100644
+--- a/tests/src/Functional/LoadTest.php
++++ b/tests/src/Functional/LoadTest.php
+@@ -12,6 +12,11 @@ use Drupal\Tests\BrowserTestBase;
+  */
+ class LoadTest extends BrowserTestBase {
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected $defaultTheme = 'stark';
++
+   /**
+    * Modules to enable.
+    *
