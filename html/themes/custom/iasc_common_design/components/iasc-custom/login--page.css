@@ -1,0 +1,16 @@
+.node--type-panopoly-landing-page a[href^="/user/login/"] {
+  padding: 10px 12px;
+  text-transform: uppercase;
+  color: var(--cd-white);
+  background: var(--iasc-primary);
+  font-weight: 700;
+}
+
+.node--type-panopoly-landing-page a[href^="/user/login/"]:hover,
+.node--type-panopoly-landing-page a[href^="/user/login/"]:focus {
+  background: var(--iasc-secondary);
+}
+
+.node--type-panopoly-landing-page a[href^="/user/login/"]:active {
+  background: var(--iasc-red);
+}
