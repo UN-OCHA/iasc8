@@ -12,9 +12,9 @@
 
 .node--type-panopoly-landing-page a[href^="/user/login/"]:hover,
 .node--type-panopoly-landing-page a[href^="/user/login/"]:focus {
-  background: var(--iasc-secondary);
+  background: var(--iasc-highlight);
 }
 
 .node--type-panopoly-landing-page a[href^="/user/login/"]:active {
-  background: var(--iasc-red);
+  background: var(--iasc-secondary);
 }
