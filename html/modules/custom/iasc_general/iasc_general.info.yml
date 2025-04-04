@@ -2,4 +2,4 @@ name: IASC General
 type: module
 description: 'General functionality.'
 package: IASC
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11

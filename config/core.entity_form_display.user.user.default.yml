@@ -97,6 +97,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  social_auth:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 9
     region: content

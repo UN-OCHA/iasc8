@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.iasc_wysiwyg
+    - filter.format.webform_default
     - node.type.action_point
   module:
     - filter
@@ -25,6 +26,7 @@ permissions:
   - 'access user profiles'
   - 'edit own action_point content'
   - 'use text format iasc_wysiwyg'
+  - 'use text format webform_default'
   - 'view any action_point content'
   - 'view any announcement content'
   - 'view any contact content'

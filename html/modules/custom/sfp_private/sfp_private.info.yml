@@ -2,6 +2,6 @@ name: Stage File Proxy - Private
 type: module
 description: 'Proxies private files from production server so you do not have to transfer them manually'
 package: Development
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - stage_file_proxy:stage_file_proxy
