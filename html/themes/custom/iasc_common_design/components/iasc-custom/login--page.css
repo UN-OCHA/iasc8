@@ -1,9 +1,13 @@
 .node--type-panopoly-landing-page a[href^="/user/login/"] {
-  padding: 10px 12px;
-  text-transform: uppercase;
+  display: inline-block;
+  margin: 1rem 0 0 0;
+  padding: 12px 18px;
   color: var(--cd-white);
+  border: none;
+  border-radius: 3px;
   background: var(--iasc-primary);
-  font-weight: 700;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .node--type-panopoly-landing-page a[href^="/user/login/"]:hover,
