@@ -30,6 +30,7 @@ module:
   entity_reference_revisions: 0
   entityqueue: 0
   environment_indicator: 0
+  externalauth: 0
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
@@ -50,6 +51,7 @@ module:
   iasc_reliefweb: 0
   iasc_service: 0
   image: 0
+  key: 0
   language: 0
   layout_discovery: 0
   link: 0
@@ -65,9 +67,12 @@ module:
   mysql: 0
   node: 0
   node_view_permissions: 0
+  ocha_entraid: 0
   ocha_monitoring: 0
   ocha_search: 0
   ocha_viewsreference_filter: 0
+  openid_connect: 0
+  openid_connect_windows_aad: 0
   options: 0
   page_cache: 0
   paragraphs_edit: 0
@@ -89,7 +94,6 @@ module:
   shortcut: 0
   social_api: 0
   social_auth: 0
-  social_auth_hid: 0
   spamspan: 0
   syslog: 0
   system: 0
