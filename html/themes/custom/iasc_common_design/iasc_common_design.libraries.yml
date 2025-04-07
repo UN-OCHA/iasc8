@@ -35,6 +35,7 @@ iasc-custom:
       components/iasc-custom/field.css: {}
       components/iasc-custom/group.css: {}
       components/iasc-custom/landing-page.css: {}
+      components/iasc-custom/login--page.css: {}
       components/iasc-custom/media.css: {}
       components/iasc-custom/more-link.css: {}
       components/iasc-custom/node--event.css: {}

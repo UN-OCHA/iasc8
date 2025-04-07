@@ -6,6 +6,7 @@ dependencies:
     - iasc_hero
     - media
     - node_view_permissions
+    - ocha_entraid
     - system
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
@@ -15,6 +16,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'access ocha entraid direct login'
   - 'view any action_point content'
   - 'view any announcement content'
   - 'view any contact content'
