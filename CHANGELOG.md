@@ -4,6 +4,26 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.2.0](https://github.com/UN-OCHA/iasc8/compare/v15.1.13...v15.2.0) (2025-04-15)
+
+### Features
+
+* Add the required moduels for openid_connect and Entra ID. ([268a67](https://github.com/UN-OCHA/iasc8/commit/268a67724004dbd7c557d9bf17026424823debe2))
+* Enable the required modules for Entra ID and disable the HID ones. ([fded42](https://github.com/UN-OCHA/iasc8/commit/fded4267482d07fe5c200634f309bd05175a18ca))
+* Style the login link as a button on landing pages. ([d1dbc0](https://github.com/UN-OCHA/iasc8/commit/d1dbc0afa276e010401c9d0067ac9b71fdca2819))
+
+### Bug Fixes
+
+* Do not uninstall social_auth, as there are entities that need manual intervention. ([c197e9](https://github.com/UN-OCHA/iasc8/commit/c197e9b5c3c06f5100ebae3a81ccde2da71ea713))
+* Tweak the login-button look to match the css styles RW uses. ([bd5ee1](https://github.com/UN-OCHA/iasc8/commit/bd5ee1a59b895c5a18db970d369362279da5f0e7))
+
+### Chores
+
+* Actually, iasc-highlight and not red eh. ([9fbaed](https://github.com/UN-OCHA/iasc8/commit/9fbaed425fe91d258d8c1147acc85163742d8c34))
+* Drop in config for Entra ID. ([aad9a4](https://github.com/UN-OCHA/iasc8/commit/aad9a4f6b65f149e42ddaa7a5baf227cdcf7c147))
+* Drop the config for HID. ([928f8f](https://github.com/UN-OCHA/iasc8/commit/928f8fe95bc3f7b3423bdd25b9ff59fcd58a2f66))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([1800b2](https://github.com/UN-OCHA/iasc8/commit/1800b2193d0014142e2d7aefbb26888e5ebc4372), [337858](https://github.com/UN-OCHA/iasc8/commit/3378580d934670f140b0d63d9cf46f47a2839d44))
+
 ## [15.1.13](https://github.com/UN-OCHA/iasc8/compare/v15.1.12...v15.1.13) (2025-04-01)
 
 ### Bug Fixes
