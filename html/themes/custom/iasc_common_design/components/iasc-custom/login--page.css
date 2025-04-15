@@ -1,0 +1,20 @@
+.node--type-panopoly-landing-page a[href^="/user/login/"] {
+  display: inline-block;
+  margin: 1rem 0 0 0;
+  padding: 12px 18px;
+  color: var(--cd-white);
+  border: none;
+  border-radius: 3px;
+  background: var(--iasc-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.node--type-panopoly-landing-page a[href^="/user/login/"]:hover,
+.node--type-panopoly-landing-page a[href^="/user/login/"]:focus {
+  background: var(--iasc-highlight);
+}
+
+.node--type-panopoly-landing-page a[href^="/user/login/"]:active {
+  background: var(--iasc-secondary);
+}
