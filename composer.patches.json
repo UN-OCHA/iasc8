@@ -9,9 +9,6 @@
       "Js optimize error https://www.drupal.org/project/drupal/issues/3416508": "PATCHES/core_js_optimizer.patch",
       "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
     },
-    "drupal/dev_mode": {
-      "D11 compatibility - #3429839": "PATCHES/dev_mode-D11-compatibility-3429839.patch"
-    },
     "drupal/dream_block_manager": {
       "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
     },
