@@ -42,7 +42,7 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
         "drupal/facets_pretty_paths": "^2",
-        "drupal/field_group": "^3.0",
+        "drupal/field_group": "^4",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/file_entity": "^2.0@beta",
         "drupal/flag": "^4.0@alpha",
@@ -233,5 +233,5 @@
             }
         }
     },
-    "version": "15.2.0"
+    "version": "15.2.2"
 }

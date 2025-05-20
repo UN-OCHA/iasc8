@@ -8,9 +8,9 @@ seckit_xss:
       webkit: false
     report-only: false
     default-src: "'self'"
-    script-src: "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com www.gstatic.com https://*.google.com https://*.googletagmanager.com *.google-analytics.com https://tagmanager.google.com platform.twitter.com https://www.googleadservices.com  https://googleads.g.doubleclick.net https://partner.googleadservices.com https://connect.facebook.net"
+    script-src: "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com www.gstatic.com https://*.google.com https://*.googletagmanager.com *.google-analytics.com https://tagmanager.google.com platform.twitter.com https://www.googleadservices.com  https://googleads.g.doubleclick.net https://partner.googleadservices.com https://connect.facebook.net https://*.clarity.ms https://c.bing.com"
     object-src: "'none'"
-    style-src: "'self' 'unsafe-inline' https://googletagmanager.com https://tagmanager.google.com fonts.googleapis.com https://www.google.com"
+    style-src: "'self' 'unsafe-inline' https://googletagmanager.com https://tagmanager.google.com fonts.googleapis.com https://www.google.com https://*.clarity.ms https://c.bing.com"
     img-src: "'self' data: https://*"
     media-src: "'self' data:"
     frame-src: "'self' https://www.googletagmanager.com *.youtube.com platform.twitter.com view.genial.ly interactive.unocha.org https://bid.g.doubleclick.net https://td.doubleclick.net https://syndication.twitter.com *.un.org https://cdnapisec.kaltura.com https://vimeo.com https://player.vimeo.com https://app.powerbi.com"

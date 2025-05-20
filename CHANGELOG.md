@@ -4,6 +4,19 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [15.2.2](https://github.com/UN-OCHA/iasc8/compare/v15.2.1...v15.2.2) (2025-05-20)
+
+### Bug Fixes
+
+* Patch Select2 for jQuery 4 / Drupal 11 compat. ([a7e38c](https://github.com/UN-OCHA/iasc8/commit/a7e38cd0966faa54bc6f56910297f87f65c17fdf))
+
+### Chores
+
+* Add csp exception for clarity ([b102c7](https://github.com/UN-OCHA/iasc8/commit/b102c7012ad8440c0c9e88578a565a4f22d3d791))
+* Dev mode was fixed upstream, we can drop the patch. ([bc9607](https://github.com/UN-OCHA/iasc8/commit/bc9607532e82eae4cb84615eb6fceed009718d9f))
+* Run the composer update at a more convenient time. ([74f1a6](https://github.com/UN-OCHA/iasc8/commit/74f1a6a023e22f2fe221e19ae739457939439aa9))
+* Update all outdated drupal/* unocha/* drush/* weitzman/drupal-test-traits packages. ([568a07](https://github.com/UN-OCHA/iasc8/commit/568a07d677fada4bd7274cb5a623cf76a7641fe2), [10579e](https://github.com/UN-OCHA/iasc8/commit/10579eb5492b7bb87a7b67f2c4fd912ac061453b), [bc46e9](https://github.com/UN-OCHA/iasc8/commit/bc46e9e7b109960ba64240aa12506cd180ed9bde), [f25ad7](https://github.com/UN-OCHA/iasc8/commit/f25ad7297e44a64afd25c1cf887a8155556d2870))
+
 ## [15.2.0](https://github.com/UN-OCHA/iasc8/compare/v15.1.13...v15.2.0) (2025-04-15)
 
 ### Features
