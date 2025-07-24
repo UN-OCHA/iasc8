@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7b27efa88a0ed2684ce878d36d0eaed",
+    "content-hash": "08a91ababb8ddab00174b06e3929b92c",
     "packages": [
         {
             "name": "algolia/places",
@@ -5498,17 +5498,11 @@
         },
         {
             "name": "drupal/select2",
-            "version": "2.0.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select2.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select2-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "0a2eeb56ad26504a026bfbbed7a384dae6c1f46d"
+                "reference": "e8f8393a459504a74d7948772da2fc5dcfbe4efa"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -5523,12 +5517,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1736434228",
+                    "version": "2.x-dev",
+                    "datestamp": "1736433521",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -8743,10 +8740,10 @@
         },
         {
             "name": "npm-asset/select2",
-            "version": "4.0.13",
+            "version": "4.1.0-RC.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz"
+                "url": "https://registry.npmjs.org/select2/-/select2-4.1.0-rc.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -20150,8 +20147,10 @@
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 10,
+        "drupal/select2": 20,
         "drupal/viewsreference": 10,
         "drupal/webform": 10,
+        "npm-asset/select2": 5,
         "unocha/file_checker": 20
     },
     "prefer-stable": true,
