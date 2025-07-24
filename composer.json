@@ -90,7 +90,7 @@
         "drush/drush": "^13",
         "jjj/chosen": "^2.2",
         "mglaman/composer-drupal-lenient": "^1.0",
-        "npm-asset/select2": "^4.0",
+        "npm-asset/select2": "^4.1@RC",
         "oomphinc/composer-installers-extender": "^2.0",
         "orakili/composer-drupal-info-file-patch-helper": "^1.0",
         "phpoffice/phpspreadsheet": "^2",

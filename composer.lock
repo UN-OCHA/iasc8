@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92a887138f0327a5184ad91483fec255",
+    "content-hash": "08a91ababb8ddab00174b06e3929b92c",
     "packages": [
         {
             "name": "algolia/places",
@@ -8740,10 +8740,10 @@
         },
         {
             "name": "npm-asset/select2",
-            "version": "4.0.13",
+            "version": "4.1.0-RC.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.13.tgz"
+                "url": "https://registry.npmjs.org/select2/-/select2-4.1.0-rc.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -20150,6 +20150,7 @@
         "drupal/select2": 20,
         "drupal/viewsreference": 10,
         "drupal/webform": 10,
+        "npm-asset/select2": 5,
         "unocha/file_checker": 20
     },
     "prefer-stable": true,
