@@ -36,14 +36,11 @@
     "drupal/search_api_attachments": {
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
     },
-    "drupal/select2": {
-      "jQuery 4 compatibility": "PATCHES/3509122-jquery4-compatibility-1.patch"
-    },
     "drupal/social_auth": {
       "Type Error - #3496656": "PATCHES/social_auth-type-error-3496656.patch"
     },
     "drupal/user_expire": {
-      "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
+      "$entity->getOriginal() is only available in D11": "https://git.drupalcode.org/project/user_expire/-/merge_requests/44.diff"
     },
     "drupal/username_enumeration_prevention": {
       "Avoid leaking the path via Drupal.settings json": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch"
