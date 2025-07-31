@@ -1,7 +1,4 @@
 {
-    "algolia/places": {
-        "version": "1.19.0"
-    },
     "choices/choices": {
         "version": "9.0.1"
     },
@@ -92,14 +89,8 @@
     "jquery/chosen": {
         "version": "1.8.7"
     },
-    "jquery/geocomplete": {
-        "version": "1.7.0"
-    },
     "jquery/hotkeys": {
         "version": "0.2.0"
-    },
-    "jquery/icheck": {
-        "version": "1.0.2 "
     },
     "jquery/image-picker": {
         "version": "0.3.1"
@@ -121,9 +112,6 @@
     },
     "jquery/timepicker": {
         "version": "1.13.18"
-    },
-    "jquery/toggles": {
-        "version": "4.0.0"
     },
     "kint-php/kint": {
         "version": "3.3"
