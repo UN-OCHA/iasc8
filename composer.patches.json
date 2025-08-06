@@ -39,9 +39,6 @@
     "drupal/social_auth": {
       "Type Error - #3496656": "PATCHES/social_auth-type-error-3496656.patch"
     },
-    "drupal/user_expire": {
-      "$entity->getOriginal() is only available in D11": "https://git.drupalcode.org/project/user_expire/-/merge_requests/44.diff"
-    },
     "drupal/username_enumeration_prevention": {
       "Avoid leaking the path via Drupal.settings json": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch"
     },
