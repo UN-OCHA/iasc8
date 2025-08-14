@@ -243,14 +243,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
-              group_login: '0'
-              viewer: '0'
-              recommendations_editor: '0'
-              space_super_admin: '0'
-              focal_point: '0'
             placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
@@ -603,14 +595,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
-              group_login: '0'
-              viewer: '0'
-              recommendations_editor: '0'
-              space_super_admin: '0'
-              focal_point: '0'
             placeholder: 'Enter keywords'
           is_grouped: false
           group_info:
