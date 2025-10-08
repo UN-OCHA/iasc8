@@ -1,28 +1,26 @@
 diff --git a/search_api.module b/search_api.module
-index c68c16f0dc7806c124d497469122ab2fc9258678..06780bd89aef19ac600a4332108a8da7637e632d 100644
+index e9b48d4d..75fef44d 100644
 --- a/search_api.module
 +++ b/search_api.module
-@@ -583,11 +583,8 @@ function search_api_form_views_exposed_form_alter(&$form, FormStateInterface $fo
-     // not always actually saved in the storage, if the admin didn't change
-     // their settings.)
-     $query = $query_plugin->getSearchApiQuery();
+@@ -606,11 +606,7 @@ function search_api_form_views_exposed_form_alter(&$form, FormStateInterface $fo
+     if (empty($query)) {
+       return;
+     }
 -    $display_id = $query->getSearchId(FALSE);
 -    $facet_source_id = str_replace(':', '__', 'search_api:' . $display_id);
 -    $facet_source = \Drupal::entityTypeManager()
 -      ->getStorage('facets_facet_source')
 -      ->load($facet_source_id);
 +    $facet_source = _search_api_get_facet_source($query->getSearchId(FALSE));
-+
      if ($facet_source) {
        $filter_key = $facet_source->getFilterKey() ?: 'f';
      }
-@@ -654,3 +651,42 @@ function search_api_entity_view(array &$build, EntityInterface $entity, EntityVi
-     ];
+@@ -638,6 +634,45 @@ function search_api_form_views_exposed_form_alter(&$form, FormStateInterface $fo
    }
  }
-+
+ 
 +/**
-+ * Searchs for the facets source of a given Search API views display.
++ * Searches for the facets source of a given Search API views display.
 + *
 + * @param $display_id
 + *   The ID of the Search API views display.
@@ -59,3 +57,7 @@ index c68c16f0dc7806c124d497469122ab2fc9258678..06780bd89aef19ac600a4332108a8da7
 +
 +  return $facet_source;
 +}
++
+ /**
+  * Implements hook_entity_extra_field_info().
+  */
