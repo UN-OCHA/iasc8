@@ -71,7 +71,7 @@
         "drupal/search_api": "^1.14",
         "drupal/seckit": "^2.0",
         "drupal/select2": "dev-2.x",
-        "drupal/select_a11y": "^1.0 || ^2.0",
+        "drupal/select_a11y": "^3",
         "drupal/select_or_other": "^4.0",
         "drupal/social_auth_hid": "^5",
         "drupal/spamspan": "^3.1",

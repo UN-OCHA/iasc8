@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c455ab4145883c1ad7ca4bb7a0acfd66",
+    "content-hash": "38f89e7c77238b0addb3851fe11f0e7b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5549,27 +5549,29 @@
         },
         {
             "name": "drupal/select_a11y",
-            "version": "2.0.3",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/select_a11y.git",
-                "reference": "2.0.3"
+                "reference": "3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/select_a11y-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "688403372c66e27af10d7307a0f74c1717982b1b"
+                "url": "https://ftp.drupal.org/files/projects/select_a11y-3.0.3.zip",
+                "reference": "3.0.3",
+                "shasum": "0df5934a53f978f16a5afc690ed21d30ff5c1769"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10 || ^11",
+                "drupal/core": "^9.2 || ^10 || ^11"
+            },
+            "require-dev": {
                 "drupal/facets": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1738673646",
+                    "version": "3.0.3",
+                    "datestamp": "1738673718",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
