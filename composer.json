@@ -58,7 +58,7 @@
         "drupal/maintenance200": "^2",
         "drupal/media_entity_file_replace": "^1.0",
         "drupal/memcache": "^2.4",
-        "drupal/node_view_permissions": "^1.4",
+        "drupal/node_view_permissions": "^2",
         "drupal/openid_connect": "^3",
         "drupal/openid_connect_windows_aad": "^2",
         "drupal/paragraphs": "^1.8",
