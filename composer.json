@@ -63,7 +63,7 @@
         "drupal/openid_connect_windows_aad": "^2",
         "drupal/paragraphs": "^1.8",
         "drupal/paragraphs_edit": "^3",
-        "drupal/paragraphs_modal_edit": "^1.0@alpha",
+        "drupal/paragraphs_modal_edit": "^2",
         "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/pathauto": "^1.4",
         "drupal/realname": "^2.0@beta",

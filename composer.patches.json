@@ -21,9 +21,6 @@
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "https://www.drupal.org/files/issues/2025-03-03/2868252-paragraph-summary-alter-51.patch"
     },
-    "drupal/paragraphs_modal_edit": {
-      "D11 compatibility - #3483762": "PATCHES/paragraphs_modal_edit-D11-compatibility-3483762.patch"
-    },
     "drupal/paragraphs_viewmode": {
       "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
     },
