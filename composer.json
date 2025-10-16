@@ -45,7 +45,7 @@
         "drupal/field_group": "^4",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/file_entity": "^2.0@beta",
-        "drupal/flag": "^4.0@alpha",
+        "drupal/flag": "^5",
         "drupal/flexible_permissions": "^2",
         "drupal/geocoder": "^3.2 || ^4.9",
         "drupal/geofield": "^1.3",
