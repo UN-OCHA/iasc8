@@ -94,7 +94,7 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "orakili/composer-drupal-info-file-patch-helper": "^1.0",
         "phpoffice/phpspreadsheet": "^2",
-        "symfony/flex": "^1.17",
+        "symfony/flex": "^2",
         "unocha/common_design": "^9",
         "unocha/file_checker": "dev-8.x-1.x",
         "unocha/gtm_barebones": "^1.0",
