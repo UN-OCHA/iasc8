@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.356.35",
+            "version": "3.356.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "09f1e434cbeed5b916f572369b9f09389b13a5c0"
+                "reference": "3c1d71932ed962810316930b327b3b71a7517cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/09f1e434cbeed5b916f572369b9f09389b13a5c0",
-                "reference": "09f1e434cbeed5b916f572369b9f09389b13a5c0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3c1d71932ed962810316930b327b3b71a7517cff",
+                "reference": "3c1d71932ed962810316930b327b3b71a7517cff",
                 "shasum": ""
             },
             "require": {
@@ -209,9 +209,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.356.35"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.356.40"
             },
-            "time": "2025-10-08T18:06:42+00:00"
+            "time": "2025-10-15T18:13:33+00:00"
         },
         {
             "name": "caxy/php-htmldiff",
@@ -3361,17 +3361,17 @@
         },
         {
             "name": "drupal/facets_pretty_paths",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/facets_pretty_paths.git",
-                "reference": "2.0.3"
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets_pretty_paths-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "c894ba28c9044ed8d37b349e6ab5d517efca4617"
+                "url": "https://ftp.drupal.org/files/projects/facets_pretty_paths-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "fd34756f83be9e3e01efa98ee80026ee801f0fe7"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -3379,13 +3379,14 @@
                 "drupal/pathauto": "^1"
             },
             "require-dev": {
+                "drupal/better_exposed_filters": "~7.0",
                 "drupal/search_api": "^1.29"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1727110224",
+                    "version": "2.0.4",
+                    "datestamp": "1760530785",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15399,16 +15400,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.32.1",
+            "version": "v4.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb"
+                "reference": "b50269e23204e5ae859a326ec3d90f09efe3047d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb",
-                "reference": "c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/b50269e23204e5ae859a326ec3d90f09efe3047d",
+                "reference": "b50269e23204e5ae859a326ec3d90f09efe3047d",
                 "shasum": ""
             },
             "require": {
@@ -15437,9 +15438,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.32.1"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.0"
             },
-            "time": "2025-09-14T05:14:52+00:00"
+            "time": "2025-10-15T20:10:28+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
