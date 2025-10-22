@@ -10,6 +10,7 @@ dependencies:
 id: resources_summary
 name: 'Resources summary'
 facet_source_id: 'search_api:views_page__resources__page_resources'
+only_visible_when_facet_source_is_visible: false
 processor_configs:
   hide_when_not_rendered:
     processor_id: hide_when_not_rendered
