@@ -13,25 +13,16 @@
       "Fix unusual missing entity type for tests": "PATCHES/dream_block_manager-check.patch"
     },
     "drupal/facets" : {
-      "https://www.drupal.org/project/facets/issues/3466886": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch"
+      "https://www.drupal.org/project/facets/issues/3480004": "https://git.drupalcode.org/project/facets/-/merge_requests/320.diff"
     },
     "drupal/maintenance200": {
       "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
     },
-    "drupal/node_view_permissions": {
-      "D11 compatibility - #3433611": "PATCHES/node_view_permissions-D11-compatibility-3433611.patch"
-    },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "https://www.drupal.org/files/issues/2025-03-03/2868252-paragraph-summary-alter-51.patch"
     },
-    "drupal/paragraphs_modal_edit": {
-      "D11 compatibility - #3483762": "PATCHES/paragraphs_modal_edit-D11-compatibility-3483762.patch"
-    },
     "drupal/paragraphs_viewmode": {
       "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
-    },
-    "drupal/search_api": {
-      "https://www.drupal.org/project/search_api/issues/3130004 - Facets query part is lost in views": "PATCHES/search_api-facets-query-part.patch"
     },
     "drupal/search_api_attachments": {
       "#3084967-41: Don't store full extracted file content data in the database": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch"
