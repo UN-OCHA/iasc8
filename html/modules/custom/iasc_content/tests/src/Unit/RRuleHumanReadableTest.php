@@ -5,6 +5,7 @@ namespace Drupal\Tests\iasc_content\Unit;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Tests\UnitTestCase;
 use Drupal\iasc_content\RRuleHumanReadable;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * Tests RRule text output.
@@ -27,10 +28,9 @@ class RRuleHumanReadableTest extends UnitTestCase {
    * Tests RRule text output.
    *
    * @covers ::humanReadable
-   *
-   * @dataProvider providerTests
    */
-  public function testHumanText($rule, $result) {
+  #[DataProvider('providerTests')]
+  public static function testHumanText($rule, $result) {
     $parser = new RRuleHumanReadable($rule);
     $output = $parser->humanReadable([
       'use_intl' => FALSE,
@@ -50,7 +50,7 @@ class RRuleHumanReadableTest extends UnitTestCase {
   /**
    * Provides test strings.
    */
-  protected static function providerTests() {
+  public static function providerTests() {
     $tests = [
       'FREQ=MONTHLY;BYDAY=TU' => [
         'FREQ=MONTHLY;BYDAY=TU',
