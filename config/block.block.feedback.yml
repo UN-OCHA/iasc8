@@ -20,8 +20,6 @@ settings:
   label: 'Have feedback on the Service Directory?'
   label_display: '0'
   provider: block_content
-  status: true
-  info: ''
   view_mode: full
 visibility:
   request_path:
