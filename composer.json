@@ -119,8 +119,6 @@
         "marcocesarato/php-conventional-changelog": "^1.17",
         "phpmd/phpmd": "^2.6",
         "phpspec/prophecy-phpunit": "^2",
-        "phpunit/php-code-coverage": "^10",
-        "phpunit/phpunit": "^10",
         "slevomat/coding-standard": "^8",
         "weitzman/drupal-test-traits": "^2.1",
         "weitzman/logintrait": "^1.1"
