@@ -1,0 +1,179 @@
+{
+    "_hash": "f6d4eca2a16ca3378cb6b584acc0ecb1d1e3a7dda6e31112fb787bfb0035c34e",
+    "patches": {
+        "drupal/core": [
+            {
+                "package": "drupal/core",
+                "description": "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled",
+                "url": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
+                "sha256": "ce5750c295ea3388617971618affd274976491a55f8aeda35d0e4836b2563136",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options",
+                "url": "PATCHES/core-allow-attachment-pager-2833734-42.patch",
+                "sha256": "47782aba288ffe8866b45f4e63f534e4bf724ac6d8ad707863a8063ebef6449f",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "Js optimize error https://www.drupal.org/project/drupal/issues/3416508",
+                "url": "PATCHES/core_js_optimizer.patch",
+                "sha256": "e75de4941bcf9329f5b6dddcbb83e43e3593089b4826ef0309eccf3b4b2ca74b",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "https://www.drupal.org/project/drupal/issues/3143617",
+                "url": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch",
+                "sha256": "1af4063f6958cfe6c397789cdd32b4ba5aef6e932197951ca3aed6c2a5d0b794",
+                "depth": 2,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/dream_block_manager": [
+            {
+                "package": "drupal/dream_block_manager",
+                "description": "Fix unusual missing entity type for tests",
+                "url": "PATCHES/dream_block_manager-check.patch",
+                "sha256": "234375ecd38e2037ab8bcaabe938158660f6dfbe95a6e3c92379d813967b86e1",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/facets": [
+            {
+                "package": "drupal/facets",
+                "description": "https://www.drupal.org/project/facets/issues/3480004",
+                "url": "https://git.drupalcode.org/project/facets/-/merge_requests/320.diff",
+                "sha256": "96f47778fcb9a12474c2154060c654d2cc898cea4fb8d82fe5b6984612f51ecd",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/maintenance200": [
+            {
+                "package": "drupal/maintenance200",
+                "description": "D11 compatibility - #3431791",
+                "url": "PATCHES/maintenance200-D11-compatibility-3431791.patch",
+                "sha256": "a18c917b199168ded802407a11e2d9eb75b1933c75aea4e60701c3ba0f6ea623",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/paragraphs": [
+            {
+                "package": "drupal/paragraphs",
+                "description": "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347",
+                "url": "PATCHES/paragraph-paragraph-summary-alter-2868252-51.patch",
+                "sha256": "1c59f96720c5037fc1b28ad1dabda41729ec1d8404f0f2e0949c327d6a45bfbb",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/paragraphs_viewmode": [
+            {
+                "package": "drupal/paragraphs_viewmode",
+                "description": "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123",
+                "url": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch",
+                "sha256": "746551a691127fd7ef7d7e597608baaced642d2b0603c581596f656d5088f886",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/search_api_attachments": [
+            {
+                "package": "drupal/search_api_attachments",
+                "description": "#3084967-41: Don't store full extracted file content data in the database",
+                "url": "https://www.drupal.org/files/issues/2021-08-10/search_api_attachments_files_cache-3084967-41.patch",
+                "sha256": "8782a3ed34b5e02a6884f3ff297b9107f71cceb97dd5a1158456945eb696ba9d",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/social_auth": [
+            {
+                "package": "drupal/social_auth",
+                "description": "Type Error - #3496656",
+                "url": "PATCHES/social_auth-type-error-3496656.patch",
+                "sha256": "3640ab58ebe8cc368dd9945ad38ee42ce09cfa5873167778e28fc19c4d16572d",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/username_enumeration_prevention": [
+            {
+                "package": "drupal/username_enumeration_prevention",
+                "description": "Avoid leaking the path via Drupal.settings json",
+                "url": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch",
+                "sha256": "d69c3af6d81a028ee001324682c5ddce14124632b4a83e240cd2f838905ede87",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/views_data_export": [
+            {
+                "package": "drupal/views_data_export",
+                "description": "https://www.drupal.org/project/views_data_export/issues/3173296",
+                "url": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch",
+                "sha256": "4a0d5cc4e59ea384532532e51d82c9af26230f0c0abf267be878c5f8ec65bba7",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/viewsreference": [
+            {
+                "package": "drupal/viewsreference",
+                "description": "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed",
+                "url": "PATCHES/viewsreference-ajax_after_display_selection-3166490-3.patch",
+                "sha256": "7e52c556c30ef492ead29a909c30e089ad38a6905741056c37ade34aba99d75c",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/webform": [
+            {
+                "package": "drupal/webform",
+                "description": "Disable webform vide",
+                "url": "PATCHES/disable-webform-help-video.patch",
+                "sha256": "b2dad070727339e7e110db1252dc315116eaa0beffb11023d2f85dd4c80c681e",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+diff --git a/src/Plugin/Field/FieldWidget/ViewsReferenceTrait.php b/src/Plugin/Field/FieldWidget/ViewsReferenceTrait.php
+index 94f4728..0291651 100644
+--- a/src/Plugin/Field/FieldWidget/ViewsReferenceTrait.php
++++ b/src/Plugin/Field/FieldWidget/ViewsReferenceTrait.php
+@@ -136,8 +136,18 @@ trait ViewsReferenceTrait {
+           'message' => $this->t('Getting options...'),
+         ],
+       ],
++      '#ajax' => [
++        'callback' => [$class, 'itemAjaxRefresh'],
++        'event' => $ajax_event,
++        'wrapper' => $html_wrapper_id,
++        'progress' => [
++          'type' => 'throbber',
++          'message' => $this->t('Getting options...'),
++        ],
++      ],
+     ];
+ 
++
+     $field_data = [];
+     if (!empty($field_value['data'])) {
+       $field_data = unserialize($field_value['data'], ['allowed_classes' => FALSE]);
