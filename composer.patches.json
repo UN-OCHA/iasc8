@@ -1,11 +1,8 @@
 {
   "patches": {
-    "drupal/amazon_ses": {
-      "Cron fails on amazon_ses when not configured": "PATCHES/amazon_ses-cron-queue-3417090-8.patch"
-    },
     "drupal/core": {
       "https://www.drupal.org/project/drupal/issues/1819538#comment-14019597 - More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/2021-03-05/1819538-57-D9.patch",
-      "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "https://www.drupal.org/files/issues/2020-11-29/2833734-allow-attachment-pager-42.patch",
+      "https://www.drupal.org/project/drupal/issues/2833734 - Allow views attachment display use own pager options": "PATCHES/core-allow-attachment-pager-2833734-42.patch",
       "Js optimize error https://www.drupal.org/project/drupal/issues/3416508": "PATCHES/core_js_optimizer.patch",
       "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
     },
@@ -19,7 +16,7 @@
       "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
     },
     "drupal/paragraphs": {
-      "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "https://www.drupal.org/files/issues/2025-03-03/2868252-paragraph-summary-alter-51.patch"
+      "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "PATCHES/paragraph-paragraph-summary-alter-2868252-51.patch"
     },
     "drupal/paragraphs_viewmode": {
       "https://www.drupal.org/project/paragraphs_viewmode/issues/3345123": "https://www.drupal.org/files/issues/2023-03-01/paragraphs_viewmode-remove-context-parameter-3345123-2.patch"
@@ -37,10 +34,10 @@
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"
     },
     "drupal/viewsreference": {
-      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "https://www.drupal.org/files/issues/2020-09-02/viewsreference-ajax_after_display_selection-3166490-3.patch"
+      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "PATCHES/viewsreference-ajax_after_display_selection-3166490-3.patch"
     },
     "drupal/webform": {
-      "Disable webform vide": "./PATCHES/disable-webform-help-video.patch"
+      "Disable webform vide": "PATCHES/disable-webform-help-video.patch"
     }
   }
 }

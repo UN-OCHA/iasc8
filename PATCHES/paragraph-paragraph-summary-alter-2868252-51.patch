@@ -1,0 +1,241 @@
+diff --git a/src/Entity/Paragraph.php b/src/Entity/Paragraph.php
+index 8b2e24a..bf40c45 100644
+--- a/src/Entity/Paragraph.php
++++ b/src/Entity/Paragraph.php
+@@ -23,6 +23,9 @@ use Drupal\Core\TypedData\TranslatableInterface;
+ use Drupal\field\Entity\FieldStorageConfig;
+ use Drupal\entity_reference_revisions\EntityNeedsSaveTrait;
+ use Drupal\field\FieldConfigInterface;
++use Drupal\paragraphs\Event\ParagraphSummaryAlterEvent;
++use Drupal\paragraphs\Event\ParagraphSummaryEvents;
++use Drupal\paragraphs\Event\ParagraphSummaryExcludeFieldsEvent;
+ use Drupal\paragraphs\ParagraphAccessControlHandler;
+ use Drupal\paragraphs\ParagraphInterface;
+ use Drupal\paragraphs\ParagraphsStorage;
+@@ -545,11 +548,20 @@ class Paragraph extends ContentEntityBase implements ParagraphInterface {
+     $this->summaryCount = 0;
+     $components = \Drupal::service('entity_display.repository')->getFormDisplay('paragraph', $this->getType())->getComponents();
+     uasort($components, 'Drupal\Component\Utility\SortArray::sortByWeightElement');
++    /** @var \Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher */
++    $dispatcher = \Drupal::service('event_dispatcher');
++    // Allow other modules to exclude the fields from summary.
++    $event = new ParagraphSummaryExcludeFieldsEvent($this);
++    $dispatcher->dispatch($event, ParagraphSummaryEvents::EXCLUDE_FIELDS);
++    $fields_to_exclude = $event->getExcludedFields();
+     foreach (array_keys($components) as $field_name) {
+       // Components can be extra fields, check if the field really exists.
+       if (!$this->hasField($field_name)) {
+         continue;
+       }
++      if (in_array($field_name, $fields_to_exclude)) {
++        continue;
++      }
+       $field_definition = $this->getFieldDefinition($field_name);
+       // We do not add content to the summary from base fields, skip them
+       // keeps performance while building the paragraph summary.
+@@ -628,7 +640,11 @@ class Paragraph extends ContentEntityBase implements ParagraphInterface {
+       }
+     }
+ 
+-    return $summary;
++    // Allow other modules to modify the paragraph's summary.
++    $event = new ParagraphSummaryAlterEvent($this, $summary);
++    $dispatcher->dispatch($event, ParagraphSummaryEvents::ALTER);
++
++    return $event->getSummary();
+   }
+ 
+   /**
+diff --git a/src/Event/ParagraphSummaryAlterEvent.php b/src/Event/ParagraphSummaryAlterEvent.php
+new file mode 100644
+index 0000000..434dcd8
+--- /dev/null
++++ b/src/Event/ParagraphSummaryAlterEvent.php
+@@ -0,0 +1,87 @@
++<?php
++
++namespace Drupal\paragraphs\Event;
++
++use Drupal\Component\EventDispatcher\Event;
++use Drupal\paragraphs\ParagraphInterface;
++
++/**
++ * Class ParagraphSummaryAlterEvent.
++ *
++ * Contains the event for paragraph summary alteration.
++ */
++class ParagraphSummaryAlterEvent extends Event {
++
++    /**
++     * The given paragraph.
++     *
++     * @var \Drupal\paragraphs\ParagraphInterface
++     */
++    protected $paragraph;
++
++    /**
++     * Paragraph's summary.
++     *
++     * @var array
++     */
++    protected $summary;
++
++  /**
++   * ParagraphSummaryAlterEvent class constructor.
++   *
++   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
++   *   The given paragraph.
++   * @param array $summary
++   *   The summary.
++   */
++    public function __construct(ParagraphInterface $paragraph, array $summary) {
++        $this->paragraph = $paragraph;
++        $this->summary = $summary;
++    }
++
++  /**
++   * Gets the paragraph object.
++   *
++   * @return \Drupal\paragraphs\ParagraphInterface
++   *   The paragraph to be summarized.
++   */
++  public function getParagraph() {
++    return $this->paragraph;
++  }
++
++  /**
++   * Gets the summary array.
++   *
++   * @return array
++   *   The summary.
++   */
++  public function getSummary() {
++    return $this->summary;
++  }
++
++  /**
++   * Append string to the summary array.
++   */
++  public function appendTextToSummary($text, $type = 'content') {
++    if (!empty($this->summary[$type])) {
++      array_push($this->summary[$type], $text);
++    }
++  }
++
++  /**
++   * Prepend string to the summary array.
++   */
++  public function prependTextToSummary($text, $type = 'content') {
++    if (!empty($this->summary[$type])) {
++      array_unshift($this->summary[$type], $text);
++    }
++  }
++
++  /**
++   * Set new summary.
++   */
++  public function setSummary(array $summary) {
++    $this->summary = $summary;
++  }
++
++}
+diff --git a/src/Event/ParagraphSummaryEvents.php b/src/Event/ParagraphSummaryEvents.php
+new file mode 100644
+index 0000000..1cbd52a
+--- /dev/null
++++ b/src/Event/ParagraphSummaryEvents.php
+@@ -0,0 +1,22 @@
++<?php
++
++namespace Drupal\paragraphs\Event;
++
++/**
++ * Class ParagraphSummaryEvents.
++ *
++ * Contains constants with event names for paragraph's summary.
++ */
++final class ParagraphSummaryEvents {
++
++  /**
++   * Name of the event for paragraph alter.
++   */
++  const ALTER = 'paragraph_summary.alter';
++
++  /**
++   * Name of the event for exclude fields from paragraph summary.
++   */
++  const EXCLUDE_FIELDS = 'paragraph_summary.exclude_fields';
++
++}
+diff --git a/src/Event/ParagraphSummaryExcludeFieldsEvent.php b/src/Event/ParagraphSummaryExcludeFieldsEvent.php
+new file mode 100644
+index 0000000..e25cc09
+--- /dev/null
++++ b/src/Event/ParagraphSummaryExcludeFieldsEvent.php
+@@ -0,0 +1,66 @@
++<?php
++
++namespace Drupal\paragraphs\Event;
++
++use Drupal\Component\EventDispatcher\Event;
++use Drupal\paragraphs\ParagraphInterface;
++
++/**
++ * Class ParagraphSummaryExcludeFieldsEvent.
++ *
++ * Contains the event for paragraph summary alteration.
++ */
++class ParagraphSummaryExcludeFieldsEvent extends Event {
++
++  /**
++   * The given paragraph.
++   *
++   * @var \Drupal\paragraphs\ParagraphInterface
++   */
++  protected $paragraph;
++
++  /**
++   * The list of fields to exclude.
++   *
++   * @var array
++   */
++  protected $fields = [];
++
++  /**
++   * ParagraphSummaryExcludeFieldsEvent class constructor.
++   *
++   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
++   *   The given paragraph.
++   */
++  public function __construct(ParagraphInterface $paragraph) {
++    $this->paragraph = $paragraph;
++  }
++
++  /**
++   * Gets the paragraph object.
++   *
++   * @return \Drupal\paragraphs\ParagraphInterface
++   *   The paragraph to be summarized.
++   */
++  public function getParagraph() {
++    return $this->paragraph;
++  }
++
++  /**
++   * Gets the excluded fields array.
++   *
++   * @return array
++   *   The array of excluded field names.
++   */
++  public function getExcludedFields() {
++    return $this->fields;
++  }
++
++  /**
++   * Append field names to exclude array.
++   */
++  public function excludeFields(array $fields_to_exclude) {
++    $this->fields = array_merge($this->fields, $fields_to_exclude);
++  }
++
++}
