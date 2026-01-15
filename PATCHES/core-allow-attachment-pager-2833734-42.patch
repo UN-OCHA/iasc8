@@ -1,0 +1,38 @@
+diff --git a/core/modules/views/src/Plugin/views/display/Attachment.php b/core/modules/views/src/Plugin/views/display/Attachment.php
+index 6ab8d646abe..693ba4af3de 100644
+--- a/core/modules/views/src/Plugin/views/display/Attachment.php
++++ b/core/modules/views/src/Plugin/views/display/Attachment.php
+@@ -185,7 +185,7 @@ public function buildOptionsForm(&$form, FormStateInterface $form_state) {
+         $form['render_pager'] = [
+           '#type' => 'checkbox',
+           '#title' => $this->t('Render'),
+-          '#description' => $this->t('Should this display render the pager values? This is only meaningful if inheriting a pager.'),
++          '#description' => $this->t('Should this display render the pager values?'),
+           '#default_value' => $this->getOption('render_pager'),
+         ];
+         break;
+@@ -263,6 +263,10 @@ public function attachTo(ViewExecutable $view, $display_id, array &$build) {
+       $view->display_handler->usesPager = $this->view->displayHandlers->get($display_id)->usesPager();
+       $view->display_handler->setOption('pager', $this->view->displayHandlers->get($display_id)->getOption('pager'));
+     }
++    elseif ($this->getOption('render_pager')) {
++      $view->display_handler->usesPager = TRUE;
++      $view->display_handler->setOption('pager', $view->displayHandlers->get($view->current_display)->getOption('pager'));
++    }
+ 
+     $attachment = $view->buildRenderable($this->display['id'], $args);
+ 
+@@ -295,6 +299,13 @@ public function usesExposed() {
+     return FALSE;
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function usesPager() {
++    return $this->getOption('render_pager');
++  }
++
+   /**
+    * {@inheritdoc}
+    */

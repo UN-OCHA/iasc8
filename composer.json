@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": ">=8.3",
-        "cweagans/composer-patches": "^1.6.5",
+        "cweagans/composer-patches": "^2.0",
         "drupal/address": "^2",
         "drupal/admin_denied": "^2",
         "drupal/amazon_ses": "^3",
@@ -92,7 +92,7 @@
         "mglaman/composer-drupal-lenient": "^1.0",
         "npm-asset/select2": "^4.1@RC",
         "oomphinc/composer-installers-extender": "^2.0",
-        "orakili/composer-drupal-info-file-patch-helper": "^1.0",
+        "orakili/composer-drupal-info-file-patch-helper": "^2",
         "phpoffice/phpspreadsheet": "^2",
         "symfony/flex": "^2",
         "unocha/common_design": "^9",
@@ -119,8 +119,6 @@
         "marcocesarato/php-conventional-changelog": "^1.17",
         "phpmd/phpmd": "^2.6",
         "phpspec/prophecy-phpunit": "^2",
-        "phpunit/php-code-coverage": "^10",
-        "phpunit/phpunit": "^10",
         "slevomat/coding-standard": "^8",
         "weitzman/drupal-test-traits": "^2.1",
         "weitzman/logintrait": "^1.1"
@@ -171,12 +169,13 @@
                 "drush.services.yml": "^10"
             }
         },
-        "enable-patching": true,
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
+        "composer-patches": {
+            "patches-file": "composer.patches.json",
+            "exit-on-patch-failure": true,
+            "package-depths": {
+                "drupal/core": 2
+            }
         },
-        "patches-file": "composer.patches.json",
         "installer-types": [
             "bower-asset",
             "npm-asset"
