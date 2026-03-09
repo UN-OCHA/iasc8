@@ -15,6 +15,12 @@
     "drupal/maintenance200": {
       "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
     },
+    "drupal/openid_connect": {
+      "Incorrect context in hook_redirect_logout_alter": "PATCHES/openid_connect-3577436-mr191.patch"
+    },
+    "drupal/openid_connect_windows_aad": {
+      "Prompt schema mismatch with parent plugin": "PATCHES/openid_connect_windows_aad-3577142-mr46.patch"
+    },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "PATCHES/paragraph-paragraph-summary-alter-2868252-51.patch"
     },
