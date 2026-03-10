@@ -1,5 +1,5 @@
 {
-    "_hash": "f6d4eca2a16ca3378cb6b584acc0ecb1d1e3a7dda6e31112fb787bfb0035c34e",
+    "_hash": "206906862020b0feb1e7837a793764b79695cefc33563f869958c99468e2762c",
     "patches": {
         "drupal/core": [
             {
@@ -73,6 +73,30 @@
                 "description": "D11 compatibility - #3431791",
                 "url": "PATCHES/maintenance200-D11-compatibility-3431791.patch",
                 "sha256": "a18c917b199168ded802407a11e2d9eb75b1933c75aea4e60701c3ba0f6ea623",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/openid_connect": [
+            {
+                "package": "drupal/openid_connect",
+                "description": "Incorrect context in hook_redirect_logout_alter",
+                "url": "PATCHES/openid_connect-3577436-mr191.patch",
+                "sha256": "3ab9ffcd23bcaf4f12c1e657a15f349e703ef56694c25bfd13a7b28be4cad42d",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/openid_connect_windows_aad": [
+            {
+                "package": "drupal/openid_connect_windows_aad",
+                "description": "Prompt schema mismatch with parent plugin",
+                "url": "PATCHES/openid_connect_windows_aad-3577142-mr46.patch",
+                "sha256": "6b4bd440d50bc5cbe1f60ec835652aaec7d2dabc5e9836b478f1085a95fe12c8",
                 "depth": 1,
                 "extra": {
                     "provenance": "patches-file:composer.patches.json"
