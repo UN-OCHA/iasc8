@@ -15,9 +15,10 @@ jobs:
     steps:
     - name: Checkout code
       id: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
+
     - name: Build The Thing
       id: build-action
       uses: UN-OCHA/actions/drupal-docker-build@main
