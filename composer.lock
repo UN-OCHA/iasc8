@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d86593aa87ca791f96236046c1c17b46",
+    "content-hash": "de63ddad5219dd9ea84ff41e71fb40d6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6612,20 +6612,20 @@
         },
         {
             "name": "drupal/viewsreference",
-            "version": "2.0.0-beta11",
+            "version": "2.0.0-beta10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/viewsreference.git",
-                "reference": "8.x-2.0-beta11"
+                "reference": "8.x-2.0-beta10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-beta11.zip",
-                "reference": "8.x-2.0-beta11",
-                "shasum": "c6594716fd0867f38f5c19a3c39763c1b5aaa7ee"
+                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-beta10.zip",
+                "reference": "8.x-2.0-beta10",
+                "shasum": "699c3f790d3dbe6ebcd890916409c66562a04eb4"
             },
             "require": {
-                "drupal/core": "^10 || ^11 || ^12"
+                "drupal/core": "^10 || ^11"
             },
             "conflict": {
                 "drupal/viewsreferennce": "*"
@@ -6636,8 +6636,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta11",
-                    "datestamp": "1776403330",
+                    "version": "8.x-2.0-beta10",
+                    "datestamp": "1725510905",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -20604,7 +20604,6 @@
         "drupal/paragraphs_viewmode": 15,
         "drupal/realname": 10,
         "drupal/select2": 20,
-        "drupal/viewsreference": 10,
         "drupal/webform": 10,
         "npm-asset/select2": 5,
         "unocha/file_checker": 20
