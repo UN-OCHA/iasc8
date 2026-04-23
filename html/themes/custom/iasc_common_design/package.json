@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
-    "@xmldom/xmldom": "^0.8.6",
+    "@xmldom/xmldom": "^0.8.13",
     "babel-jest": "^29.3.1",
     "core-js": "^3.26.1",
     "css-what": ">=6.1.0",
