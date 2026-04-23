@@ -1,5 +1,5 @@
 {
-    "_hash": "f708882ecb112116eb678a424a9d15ec19b240ef7cbcced3acca9df57363d908",
+    "_hash": "7b03da7a27a1e47c140e5080253b461aa7139dea45efc0d5f577c4e3bbfbe25b",
     "patches": {
         "drupal/core": [
             {
@@ -166,9 +166,9 @@
         "drupal/viewsreference": [
             {
                 "package": "drupal/viewsreference",
-                "description": "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed",
-                "url": "PATCHES/viewsreference-ajax_after_display_selection-3166490-3.patch",
-                "sha256": "7e52c556c30ef492ead29a909c30e089ad38a6905741056c37ade34aba99d75c",
+                "description": "Block titles have disappeared",
+                "url": "PATCHES/viewsreference-titles-disappeared-3585918-104.patch",
+                "sha256": "2255ffef28b8c020a10f0866cf773df7001b387b980f6a4287c61d43205b311b",
                 "depth": 1,
                 "extra": {
                     "provenance": "patches-file:composer.patches.json"
