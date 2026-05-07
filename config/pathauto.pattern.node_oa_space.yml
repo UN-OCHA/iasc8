@@ -7,7 +7,7 @@ dependencies:
 id: node_oa_space
 label: 'Content - Space'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   -
     id: 'entity_bundle:node'
