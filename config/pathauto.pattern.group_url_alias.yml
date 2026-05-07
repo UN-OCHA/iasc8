@@ -8,7 +8,7 @@ dependencies:
 id: group_url_alias
 label: 'Group URL alias'
 type: 'canonical_entities:group'
-pattern: 'group/[group:title]'
+pattern: '/group/[group:title]'
 selection_criteria:
   430b23ba-cc0a-414b-b1b5-5ced738fa25e:
     id: 'entity_bundle:group'

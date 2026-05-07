@@ -8,7 +8,7 @@ dependencies:
 id: taxonomy_term_panopoly_categories
 label: 'Taxonomy term - Categories'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'categories/[term:name]'
+pattern: '/categories/[term:name]'
 selection_criteria:
   -
     id: 'entity_bundle:taxonomy_term'

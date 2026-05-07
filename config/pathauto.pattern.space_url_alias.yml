@@ -8,7 +8,7 @@ dependencies:
 id: space_url_alias
 label: 'Space URL alias'
 type: 'canonical_entities:group'
-pattern: '[group:title]'
+pattern: '/[group:title]'
 selection_criteria:
   17f66e41-bf49-4c24-b494-31e47479bc70:
     id: 'entity_bundle:group'

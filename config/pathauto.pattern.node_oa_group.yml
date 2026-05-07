@@ -7,7 +7,7 @@ dependencies:
 id: node_oa_group
 label: 'Content - Group'
 type: 'canonical_entities:node'
-pattern: 'group/[node:title]'
+pattern: '/group/[node:title]'
 selection_criteria:
   -
     id: 'entity_bundle:node'
