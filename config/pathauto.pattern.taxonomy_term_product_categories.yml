@@ -8,7 +8,7 @@ dependencies:
 id: taxonomy_term_product_categories
 label: 'Taxonomy term - Product Categories'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'product-categories/[term:name]'
+pattern: '/product-categories/[term:name]'
 selection_criteria:
   -
     id: 'entity_bundle:taxonomy_term'

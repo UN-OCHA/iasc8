@@ -7,7 +7,7 @@ dependencies:
 id: node_panopoly_landing_page
 label: 'Content - Landing Page'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '/[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5:
     id: 'entity_bundle:node'

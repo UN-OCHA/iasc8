@@ -7,7 +7,7 @@ dependencies:
 id: content_contacts
 label: 'Content - Contacts'
 type: 'canonical_entities:node'
-pattern: 'contacts/[node:title]'
+pattern: '/contacts/[node:title]'
 selection_criteria:
   0207d4de-1cef-494b-9629-5a14785d8548:
     id: 'entity_bundle:node'

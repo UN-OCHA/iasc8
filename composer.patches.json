@@ -37,7 +37,7 @@
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"
     },
     "drupal/viewsreference": {
-      "https://dgo.to/3166490 - Trigger ajax refresh when display ID is changed": "PATCHES/viewsreference-ajax_after_display_selection-3166490-3.patch"
+      "Block titles have disappeared": "PATCHES/viewsreference-titles-disappeared-3585918-104.patch"
     },
     "drupal/webform": {
       "Disable webform vide": "PATCHES/disable-webform-help-video.patch"

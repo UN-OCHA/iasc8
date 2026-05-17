@@ -7,7 +7,7 @@ dependencies:
 id: node
 label: 'Content - default'
 type: 'canonical_entities:node'
-pattern: '[node:field_iasc_audience:0:entity]/[node:title]'
+pattern: '/[node:field_iasc_audience:0:entity]/[node:title]'
 selection_criteria: {  }
 selection_logic: and
 weight: -4
