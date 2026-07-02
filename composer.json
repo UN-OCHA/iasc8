@@ -145,7 +145,8 @@
             "phpstan/extension-installer": true,
             "symfony/flex": true,
             "tbachert/spi": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "symfony/runtime": true
         },
         "policy": {
             "advisories": {
