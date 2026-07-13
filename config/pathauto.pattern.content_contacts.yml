@@ -12,11 +12,11 @@ selection_criteria:
   0207d4de-1cef-494b-9629-5a14785d8548:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0207d4de-1cef-494b-9629-5a14785d8548
     context_mapping:
       node: node
     bundles:
       contact: contact
+    uuid: 0207d4de-1cef-494b-9629-5a14785d8548
 selection_logic: and
 weight: -9
 relationships: {  }
