@@ -6,6 +6,7 @@ dependencies:
     - node
 id: featured
 label: Featured
+description: null
 handler: simple
 handler_configuration: {  }
 entity_settings:
