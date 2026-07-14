@@ -13,11 +13,11 @@ selection_criteria:
   17f66e41-bf49-4c24-b494-31e47479bc70:
     id: 'entity_bundle:group'
     negate: false
+    uuid: 17f66e41-bf49-4c24-b494-31e47479bc70
     context_mapping:
       group: group
     bundles:
       iasc_space: iasc_space
-    uuid: 17f66e41-bf49-4c24-b494-31e47479bc70
 selection_logic: and
 weight: -7
 relationships: {  }

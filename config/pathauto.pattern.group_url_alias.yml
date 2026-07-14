@@ -13,11 +13,11 @@ selection_criteria:
   430b23ba-cc0a-414b-b1b5-5ced738fa25e:
     id: 'entity_bundle:group'
     negate: false
+    uuid: 430b23ba-cc0a-414b-b1b5-5ced738fa25e
     context_mapping:
       group: group
     bundles:
       iasc_group: iasc_group
-    uuid: 430b23ba-cc0a-414b-b1b5-5ced738fa25e
 selection_logic: and
 weight: -6
 relationships: {  }

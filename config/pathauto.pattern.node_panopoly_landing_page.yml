@@ -12,11 +12,11 @@ selection_criteria:
   7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5:
     id: 'entity_bundle:node'
     negate: false
+    uuid: 7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5
     context_mapping:
       node: node
     bundles:
       panopoly_landing_page: panopoly_landing_page
-    uuid: 7c1cc36b-0bbd-498a-8e2e-d71c6d01bae5
 selection_logic: and
 weight: -5
 relationships: {  }
