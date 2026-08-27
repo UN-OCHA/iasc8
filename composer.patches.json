@@ -37,7 +37,7 @@
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"
     },
     "drupal/viewsreference": {
-      "Block titles have disappeared": "PATCHES/viewsreference-titles-disappeared-3585918-104.patch"
+      "[#3585918] Block titles have disappeared": "https://git.drupalcode.org/project/viewsreference/-/merge_requests/104.diff"
     },
     "drupal/webform": {
       "Disable webform vide": "PATCHES/disable-webform-help-video.patch"

@@ -1,5 +1,5 @@
 {
-    "_hash": "21696a6f60de12b3577b26c640cc829204a75af35c1d0c5d77b9550eb6970df0",
+    "_hash": "1759c82cfdc0e1a3b3d354e283b3af0a6eb6b65bb01acfa83983c7c4331f6777",
     "patches": {
         "drupal/core": [
             {
@@ -166,9 +166,9 @@
         "drupal/viewsreference": [
             {
                 "package": "drupal/viewsreference",
-                "description": "Block titles have disappeared",
-                "url": "PATCHES/viewsreference-titles-disappeared-3585918-104.patch",
-                "sha256": "c8d54d7772aabfdb3e4cb58cd047a84d64d8a2a42ac251bfb3f310d03c7f0e9b",
+                "description": "[#3585918] Block titles have disappeared",
+                "url": "https://git.drupalcode.org/project/viewsreference/-/merge_requests/104.diff",
+                "sha256": "7b38ed616d9d97fd313dabb4732204a118e3e9872bc9f650ef253472d13a9102",
                 "depth": 1,
                 "extra": {
                     "provenance": "patches-file:composer.patches.json"
