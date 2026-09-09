@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.394.7",
+            "version": "3.394.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "40a8717706fd789cd3e8c72a2e8e93ee4455b391"
+                "reference": "0a16c43453b30b5ec4025293f33028e299cf448e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/40a8717706fd789cd3e8c72a2e8e93ee4455b391",
-                "reference": "40a8717706fd789cd3e8c72a2e8e93ee4455b391",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0a16c43453b30b5ec4025293f33028e299cf448e",
+                "reference": "0a16c43453b30b5ec4025293f33028e299cf448e",
                 "shasum": ""
             },
             "require": {
@@ -209,9 +209,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.394.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.394.11"
             },
-            "time": "2026-09-02T18:07:40+00:00"
+            "time": "2026-09-09T18:06:19+00:00"
         },
         {
             "name": "caxy/php-htmldiff",
@@ -1927,6 +1927,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "davisben",
+                    "homepage": "https://www.drupal.org/user/1204214"
+                },
+                {
                     "name": "dragonwize",
                     "homepage": "https://www.drupal.org/user/137882"
                 },
@@ -3296,17 +3300,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/facets.git",
-                "reference": "3.0.6"
+                "reference": "3.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets-3.0.6.zip",
-                "reference": "3.0.6",
-                "shasum": "5b69ab135686320df28db5bab34c0f3c536f1df7"
+                "url": "https://ftp.drupal.org/files/projects/facets-3.0.7.zip",
+                "reference": "3.0.7",
+                "shasum": "a301cd8bc12afdcf130be5704da33bb505146d58"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
@@ -3334,8 +3338,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.6",
-                    "datestamp": "1788265557",
+                    "version": "3.0.7",
+                    "datestamp": "1788649823",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6895,16 +6899,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.7.6",
+            "version": "13.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "051f6b4909728e0d3363aedab19d393f64438de4"
+                "reference": "a5529118232c722c052ad6ae3be587df43c7d6fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/051f6b4909728e0d3363aedab19d393f64438de4",
-                "reference": "051f6b4909728e0d3363aedab19d393f64438de4",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/a5529118232c722c052ad6ae3be587df43c7d6fa",
+                "reference": "a5529118232c722c052ad6ae3be587df43c7d6fa",
                 "shasum": ""
             },
             "require": {
@@ -7032,7 +7036,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.7.6"
+                "source": "https://github.com/drush-ops/drush/tree/13.8.0"
             },
             "funding": [
                 {
@@ -7040,7 +7044,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-07-08T10:43:20+00:00"
+            "time": "2026-09-08T18:24:55+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -15764,16 +15768,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "6.11.0",
+            "version": "6.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "7e420a943a6fbc95e60e3cf67acfbee85b3b4da7"
+                "reference": "8ef236a1a37df364b518b7411a4b5bb95b040d79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
-                "reference": "7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/8ef236a1a37df364b518b7411a4b5bb95b040d79",
+                "reference": "8ef236a1a37df364b518b7411a4b5bb95b040d79",
                 "shasum": ""
             },
             "require": {
@@ -15823,9 +15827,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/6.11.0"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/6.12.0"
             },
-            "time": "2026-08-21T10:30:42+00:00"
+            "time": "2026-09-04T12:54:20+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -16165,16 +16169,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "6b4fd0485597d34903efd6a66a6516b659461d2c"
+                "reference": "d5b72bea7b8c8b2c21599b890af030f335a97395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/6b4fd0485597d34903efd6a66a6516b659461d2c",
-                "reference": "6b4fd0485597d34903efd6a66a6516b659461d2c",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/d5b72bea7b8c8b2c21599b890af030f335a97395",
+                "reference": "d5b72bea7b8c8b2c21599b890af030f335a97395",
                 "shasum": ""
             },
             "require": {
@@ -16246,7 +16250,7 @@
             "description": "Drupal extension and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/mglaman/phpstan-drupal/issues",
-                "source": "https://github.com/mglaman/phpstan-drupal/tree/2.1.2"
+                "source": "https://github.com/mglaman/phpstan-drupal/tree/2.2.0"
             },
             "funding": [
                 {
@@ -16262,7 +16266,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-13T15:38:26+00:00"
+            "time": "2026-09-09T14:50:40+00:00"
         },
         {
             "name": "micheh/phpcs-gitlab",
@@ -17650,11 +17654,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.2.12",
+            "version": "2.2.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/174b0d88710f00a42598886504dd7a146f91ace5",
-                "reference": "174b0d88710f00a42598886504dd7a146f91ace5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9ba9ac76ee9c5cf5b56d58eb5deec6315b7a0260",
+                "reference": "9ba9ac76ee9c5cf5b56d58eb5deec6315b7a0260",
                 "shasum": ""
             },
             "require": {
@@ -17710,7 +17714,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-31T19:09:43+00:00"
+            "time": "2026-09-03T20:38:19+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
