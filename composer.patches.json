@@ -15,9 +15,6 @@
     "drupal/maintenance200": {
       "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
     },
-    "drupal/openid_connect": {
-      "Incorrect context in hook_redirect_logout_alter": "PATCHES/openid_connect-3577436-mr191.patch"
-    },
     "drupal/paragraphs": {
       "Alter summary - https://www.drupal.org/project/paragraphs/issues/2868252#comment-16012347": "PATCHES/paragraph-paragraph-summary-alter-2868252-51.patch"
     },
@@ -37,7 +34,7 @@
       "https://www.drupal.org/project/views_data_export/issues/3173296": "https://www.drupal.org/files/issues/2021-02-12/3173296-9-batch-query-alter.patch"
     },
     "drupal/viewsreference": {
-      "Block titles have disappeared": "PATCHES/viewsreference-titles-disappeared-3585918-104.patch"
+      "[#3585918] Block titles have disappeared": "https://git.drupalcode.org/project/viewsreference/-/merge_requests/104.diff"
     },
     "drupal/webform": {
       "Disable webform vide": "PATCHES/disable-webform-help-video.patch"
