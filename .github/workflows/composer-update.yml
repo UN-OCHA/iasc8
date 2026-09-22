@@ -21,6 +21,7 @@ jobs:
         aws_region: ${{ vars.AWS_REGION }}
         aws_account: ${{ vars.AWS_ACCOUNT }}
         github_access_token: ${{ secrets.PAT }}
+        patch_packages: "drupal/* unocha/* drush/* phpoffice/* weitzman/drupal-test-traits"
         patch_branch: ${{ github.head_ref || github.ref_name }}
         patch_maintainers: ${{ vars.DRUPAL_MAINTAINERS }}
         slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
